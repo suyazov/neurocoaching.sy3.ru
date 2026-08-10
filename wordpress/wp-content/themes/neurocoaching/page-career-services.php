@@ -1,9 +1,15 @@
-<?php
-/** Career Services page, reproduced from the client 1440/320 PSD artboards. @package Neurocoaching */
-get_header();
-neurocoaching_psd_page(
-	'career',
-	'Stop postponing your life',
-	array( 'Services | Career', 'FAQs' )
-);
-get_footer();
+<?php /** Career Services page. @package Neurocoaching */
+get_header(); neurocoaching_header( 'career' );
+?>
+<article class="page page--career">
+	<section class="hero"><img src="<?php echo esc_url( get_template_directory_uri() . '/assets/images/career-hero.webp' ); ?>" alt="Ksenia Belousova"><div class="hero__content"><h1>Stop postponing your life</h1><p class="lead">Your time is limited, so don’t waste it living someone else’s life.</p><ul><li>You are ready for more, but your next step feels unclear.</li><li>You want to move into the UN, an international organisation, or a global role.</li><li>You have strong experience, but your CV does not fully show your value.</li></ul><p>There often comes a moment when change feels necessary, but the route forward is still uncertain. Together we make it visible and manageable.</p><a class="button" href="<?php echo esc_url( neurocoaching_mod( 'booking_url', 'mailto:hello@example.com' ) ); ?>">Book a consultation</a></div></section>
+	<?php neurocoaching_education(); ?>
+	<section class="split-band section-inner"><div><h3>Stand out.<br>Get shortlisted.<br>Get hired.</h3><p>I help professionals access roles in international organisations and build a career story that is clear, credible and memorable.</p></div><div><h2>How can<br>I help you</h2><ul><li>Strategic career positioning</li><li>CV / UN application / LinkedIn optimisation</li><li>Competency-based interview preparation</li><li>Communication of strengths with clarity</li></ul><a class="button button--light" href="<?php echo esc_url( neurocoaching_mod( 'booking_url', 'mailto:hello@example.com' ) ); ?>">Book a free call</a></div></section>
+	<?php neurocoaching_services( 'Services | Career', array(
+		array( 'title' => 'Consultation Session 90 min', 'text' => 'One focused 90 min session to identify what’s really going on and build your next practical step.', 'items' => array( 'Pre-session questionnaire', '90-minute deep-dive strategy session', 'Personal one-page action summary', 'Personalised next-step plan' ), 'price' => '150 €', 'button' => 'Book a session' ),
+		array( 'title' => 'Career Accelerator 4 × 60 min', 'tag' => 'Flagship', 'featured' => true, 'text' => 'Four focused sessions to get from stuck and unclear to a confident career direction.', 'items' => array( 'Positioning & job search strategy', 'CV, LinkedIn & cover letter refinement', 'Interview preparation & techniques', 'Follow-up support' ), 'price' => '650 €   450 €', 'button' => 'Book premium package' ),
+	) ); ?>
+	<section class="image-band"><div class="section-inner"><div><h2>This is for you if...</h2><ul><li>You are ready for more, but your next step feels unclear.</li><li>You want to move into an international organisation.</li><li>Your CV does not reflect your real value.</li><li>You are changing direction and need a plan.</li></ul><a class="button button--light" href="<?php echo esc_url( neurocoaching_mod( 'booking_url', 'mailto:hello@example.com' ) ); ?>">Book a free call</a></div><img src="<?php echo esc_url( get_template_directory_uri() . '/assets/images/career-portrait.webp' ); ?>" alt="Ksenia in a blue beret"></div></section>
+	<?php neurocoaching_reviews(); neurocoaching_life( 'career-life.webp', 'Ksenia at an international flags installation' ); neurocoaching_cta( true ); neurocoaching_faqs( true ); ?>
+</article>
+<?php get_footer();

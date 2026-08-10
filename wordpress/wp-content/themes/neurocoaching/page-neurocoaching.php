@@ -1,9 +1,16 @@
-<?php
-/** Neurocoaching page, reproduced from the client 1440/320 PSD artboards. @package Neurocoaching */
-get_header();
-neurocoaching_psd_page(
-	'neurocoaching',
-	'Burned out, overwhelmed, or know something needs to change?',
-	array( 'Services | Neurointegration', 'FAQs' )
-);
-get_footer();
+<?php /** Neurocoaching page. @package Neurocoaching */
+get_header(); neurocoaching_header( 'neuro' );
+?>
+<article class="page page--neuro">
+	<section class="hero"><img src="<?php echo esc_url( get_template_directory_uri() . '/assets/images/neuro-hero.webp' ); ?>" alt="Ksenia Belousova with flowers"><div class="hero__content"><p class="eyebrow">Neurointegration coaching</p><h1>Burned out, overwhelmed, or know something needs to change?</h1><p class="lead">I get the feeling there must be another way — but you’re not sure what it is yet.</p><p>If something needs to change but you don’t know where to start, I’m here to help.</p><a class="button" href="<?php echo esc_url( neurocoaching_mod( 'booking_url', 'mailto:hello@example.com' ) ); ?>">Book a free call</a></div></section>
+	<?php neurocoaching_education(); ?>
+	<section class="split-band section-inner"><div><h3>Why this is<br>different</h3><p>Most coaching changes what you think. Neurointegration changes how your brain responds so change becomes easier to sustain.</p></div><div><h2>We work with<br>your brain —<br>not against it</h2><p>We combine neuroscience-informed tools with coaching to create practical shifts in attention, patterns and behaviour.</p></div></section>
+	<?php neurocoaching_services( 'Services | Neurointegration', array(
+		array( 'title' => 'Individual NeuroSprint Coaching', 'text' => 'A personalised 3-week coaching experience designed to help you build sustainable habits, reduce stress and create clear results.', 'items' => array( 'Strategy session', 'Three focused coaching sessions', 'Personalised learning materials', 'Individual support between sessions', 'Tools and techniques' ), 'price' => '350 €', 'button' => 'Book NeuroSprint' ),
+		array( 'title' => 'Integrated Transformation', 'tag' => 'Flagship', 'featured' => true, 'text' => 'The deep-dive six-week format for lasting shifts in beliefs, patterns, decisions and everyday behaviour.', 'items' => array( 'Career strategy & action plan', 'Neurointegration coaching', 'Personalised support tools', 'Accountability and reflection', 'Sustainable wellbeing plan' ), 'price' => '800 €   700 €', 'button' => 'Book flagship programme' ),
+	) ); ?>
+	<section class="story"><img src="<?php echo esc_url( get_template_directory_uri() . '/assets/images/neuro-story.webp' ); ?>" alt="Ksenia among spring flowers"><div><h2>I didn’t find this in a book.<br>I found it in the hardest years of my life.</h2><p>I built a successful international career, achieved ambitious goals and kept moving. Yet underneath the achievements I was exhausted.</p><p>That experience led me to NeuroIntegration: a method that works with the brain, body and real patterns of daily life.</p><h3>I was doing everything right. And I still felt completely lost.</h3><p>Change became possible when I stopped pushing harder and learned to work with my brain rather than against it.</p></div></section>
+	<section class="method section-inner"><h2>The method based on the NeuroIntegration method by Katerina Lengold</h2><p>The NeuroIntegration method combines practical coaching, neuroscience-informed tools and repeatable experiments.</p><div class="pyramid" aria-label="Method stages"><span>Act</span><span>Notice</span><span>Choose</span><span>Integrate</span></div><h2>Is this you?<br>You might be in the right place if...</h2><div class="prompt-grid"><p>You’re successful — but still feel stuck.</p><p>You know what you want, but can’t make yourself start.</p><p>You’re living on autopilot.</p><p>You want change without burning yourself out.</p><p>You feel ready, but don’t know why.</p><p>You’re doing everything right — but feel empty.</p></div></section>
+	<?php neurocoaching_reviews(); neurocoaching_life( 'neuro-life.webp', 'Neurointegration Institute gathering' ); neurocoaching_cta(); neurocoaching_faqs(); ?>
+</article>
+<?php get_footer();
