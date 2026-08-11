@@ -35,7 +35,7 @@ $faqs = array(
 ?>
 <article class="neuro-psd">
 	<section class="neuro-hero">
-		<div class="neuro-hero__photo"><picture><source media="(max-width: 850px)" srcset="<?php echo esc_url( $mobile_source . 'mobile-320-11729-img-9921.png' ); ?>"><img src="<?php echo esc_url( $images . 'neuro-hero.webp' ); ?>" alt="Ksenia Belousova holding hydrangeas"></picture></div>
+		<div class="neuro-hero__photo"><img src="<?php echo esc_url( $images . 'neuro-hero.webp' ); ?>" alt="Ksenia Belousova holding hydrangeas"></div>
 		<div class="neuro-hero__copy">
 			<p class="neuro-kicker">Neurointegration coaching</p>
 			<h1>Burned out, overwhelmed, or know something needs to change?</h1>

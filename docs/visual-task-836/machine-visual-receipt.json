@@ -1,0 +1,36 @@
+{
+  "task_id": "TASK-ISSUE-SUYAZOV_NEUROCOACHING.SY3.RU-836",
+  "environment": "neurocoaching.sy3.ru-staging",
+  "production_touched": false,
+  "viewports": ["1440x900", "390x844"],
+  "baseline_source": ".bridge-context/visual-baselines",
+  "baseline_immutable": true,
+  "comparison": {
+    "metric": "ImageMagick absolute-error differing-pixel ratio",
+    "note": "The frozen PSD-derived captures use different rasterisation/antialiasing, so exact-pixel ratios are evidence rather than a pass threshold.",
+    "routes": [
+      {"route": "/", "desktop_ratio": 0.99624228, "mobile_ratio": 0.99615688, "composition": "manifest geometry retained; no source-fidelity regression confirmed"},
+      {"route": "/career-services/", "desktop_ratio": 0.99998457, "mobile_ratio": 0.99293657, "composition": "transparent mobile smart-object export replaced by the existing source portrait"},
+      {"route": "/neurocoaching/", "desktop_ratio": 0.99922840, "mobile_ratio": 0.99982683, "composition": "transparent mobile smart-object export removed; existing neuro hero source is used responsively"}
+    ]
+  },
+  "browser_qa": {
+    "page_console_errors": 0,
+    "horizontal_overflow": 0,
+    "semantic_dom_text_retained": true,
+    "native_faq_controls_retained": true,
+    "gallery_review_controls_retained": true
+  },
+  "screenshots": [
+    "about-desktop.png", "about-mobile.png",
+    "career-desktop.png", "career-mobile.png",
+    "neurocoaching-desktop.png", "neurocoaching-mobile.png"
+  ],
+  "context_delta": {
+    "result": "Corrected the two confirmed mobile hero source-fidelity failures without changing copy, controls, or source assets.",
+    "decisions": "Kept About composition because its measured geometry matches the checked-in manifest; reused existing source portraits where PSD smart-object PNG exports are transparent.",
+    "current_status": "Code correction and bounded visual evidence are ready for review; no production or deployment action was taken.",
+    "constraints": "Theme and docs only; acceptance baselines, WordPress core, uploads, infrastructure, and production remain unchanged.",
+    "next_step": "Owner reviews the six attached viewport captures and the ready pull request."
+  }
+}
