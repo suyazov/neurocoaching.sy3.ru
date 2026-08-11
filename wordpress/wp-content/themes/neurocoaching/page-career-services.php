@@ -111,11 +111,11 @@ $instagram_url = neurocoaching_mod( 'instagram_url', 'https://www.instagram.com/
 
 	<section class="career-life career-wrap" aria-labelledby="career-life-title">
 		<h2 id="career-life-title">In real life</h2><a href="<?php echo esc_url( $instagram_url ); ?>">Follow on Instagram</a>
-		<div class="career-life__gallery nc-gallery" role="region" aria-roledescription="carousel" aria-label="In real life photo gallery">
-			<button type="button" aria-label="Previous photo" disabled>←</button>
-			<div class="nc-gallery__viewport"><figure class="nc-gallery__slide"><picture><source media="(max-width: 700px)" srcset="<?php echo esc_url( get_theme_file_uri( '/assets/images/career-source/mobile-11362-img-2842.png' ) ); ?>"><img src="<?php echo esc_url( get_theme_file_uri( '/assets/images/career-source/desktop-9230-img-2842.png' ) ); ?>" alt="Ksenia at an international flags installation"></picture></figure></div>
-			<button type="button" aria-label="Next photo" disabled>→</button>
-			<div class="nc-gallery__pagination" aria-label="Photo 1 of 1"><button type="button" aria-label="Show photo 1" aria-current="true" disabled></button></div>
+		<div class="career-life__gallery nc-gallery" data-carousel tabindex="0" role="region" aria-roledescription="carousel" aria-label="In real life photo gallery">
+			<button type="button" data-carousel-previous aria-label="Previous photo" disabled>←</button>
+			<div class="nc-gallery__viewport" aria-live="polite"><figure class="nc-gallery__slide" data-carousel-slide aria-label="Photo 1 of 1"><picture><source media="(max-width: 700px)" srcset="<?php echo esc_url( get_theme_file_uri( '/assets/images/career-source/mobile-11362-img-2842.png' ) ); ?>"><img src="<?php echo esc_url( get_theme_file_uri( '/assets/images/career-source/desktop-9230-img-2842.png' ) ); ?>" alt="Ksenia at an international flags installation"></picture></figure></div>
+			<button type="button" data-carousel-next aria-label="Next photo" disabled>→</button>
+			<div class="nc-gallery__pagination" data-carousel-pagination aria-label="Choose a photo"><button type="button" data-carousel-dot="0" aria-label="Show photo 1" aria-current="true" disabled></button></div>
 		</div>
 	</section>
 
