@@ -33,8 +33,8 @@ $questions = array(
 	<section class="nc-about__hero" aria-labelledby="nc-about-name">
 		<div class="nc-about__hero-photo"><img src="<?php echo esc_url( $images . 'about-hero.webp' ); ?>" alt="Ksenia Belousova"></div>
 		<div class="nc-about__hero-copy">
-			<p class="nc-about__eyebrow">UN PROFESSIONAL <span>|</span> CAREER STRATEGIST <span>|</span> NEURO COACH</p>
-			<h1 id="nc-about-name">Ksenia Belousova</h1>
+			<p class="nc-about__eyebrow">UN PROFESSIONAL <span>|</span><br class="nc-about__mobile-break"> CAREER STRATEGIST <span>|</span><br class="nc-about__mobile-break"> NEURO COACH</p>
+			<h1 id="nc-about-name">Ksenia<span class="nc-about__mobile-break"><br></span> Belousova</h1>
 			<p class="nc-about__lead">15+ years in the UN &amp; international organisations</p>
 			<div class="nc-about__intro">
 				<p>That combination — insider knowledge of international organisations and the lived experience of navigating change — is exactly what I bring to every client.</p>
