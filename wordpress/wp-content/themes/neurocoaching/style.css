@@ -159,6 +159,7 @@ details p { padding:0 45px 18px 0; }
 .neuro-button:hover,.neuro-button:focus-visible { color:#fff; background:var(--neuro-purple); outline:3px solid #c8a6dd; outline-offset:2px; }
 .neuro-hero { height:909px; display:grid; grid-template-columns:555px 1fr; }
 .neuro-hero__photo { height:909px; overflow:hidden; }
+.neuro-hero__photo picture,.neuro-story__photo picture,.neuro-faq aside picture { display:block; width:100%; height:100%; }
 .neuro-hero__photo img { width:100%; height:100%; object-fit:cover; object-position:center top; }
 .neuro-hero__copy { width:680px; padding:211px 0 60px 52px; font-size:17px; line-height:1.4; }
 .neuro-kicker { margin-bottom:26px; color:var(--neuro-violet); font-size:14px; font-weight:900; text-transform:uppercase; letter-spacing:.05em; }
@@ -222,6 +223,7 @@ details p { padding:0 45px 18px 0; }
 .neuro-method p { font-size:15px; line-height:1.4; }
 .neuro-method a { color:var(--neuro-violet); font-weight:900; text-decoration:none; }
 .neuro-method img { width:728px; max-width:100%; }
+.neuro-method>picture { display:block; width:100%; }
 .neuro-suitable { padding:45px 0 132px; }
 .neuro-suitable h2 { margin-bottom:49px; font-size:50px; line-height:1.05; }
 .neuro-suitable__grid { display:grid; grid-template-columns:1fr 1fr; gap:20px 44px; }
