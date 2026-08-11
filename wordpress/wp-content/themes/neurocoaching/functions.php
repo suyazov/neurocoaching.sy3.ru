@@ -64,14 +64,15 @@ function neurocoaching_page_url( $slug ) {
 }
 
 function neurocoaching_header( $active ) {
+	$about_images = get_template_directory_uri() . '/assets/images/';
 	?>
 	<header class="site-header" data-site-header>
-		<a class="brand" href="<?php echo esc_url( home_url( '/' ) ); ?>" aria-label="Digital Belka home"><img src="<?php echo esc_url( get_theme_file_uri( '/assets/images/logo.png' ) ); ?>" alt="Digital Belka"></a>
+		<a class="brand" href="<?php echo esc_url( home_url( '/' ) ); ?>" aria-label="Digital Belka home"><img src="<?php echo esc_url( get_theme_file_uri( 'about' === $active ? '/assets/images/about-logo.png' : '/assets/images/logo.png' ) ); ?>" alt="Digital Belka"></a>
 		<?php if ( 'about' === $active ) : ?>
 		<div class="about-socials" aria-label="Social links">
-			<a href="<?php echo esc_url( neurocoaching_mod( 'contact_url', 'https://www.linkedin.com/' ) ); ?>" aria-label="LinkedIn"><svg aria-hidden="true" viewBox="0 0 28 28"><rect x="1" y="1" width="26" height="26" rx="2"/><path d="M8 12v9M8 8.5v.1M12 21v-9m0 4c1.1-2.5 7-3.2 7 1.7V21"/></svg></a>
-			<a href="<?php echo esc_url( neurocoaching_mod( 'booking_url', 'mailto:hello@example.com' ) ); ?>" aria-label="Email"><svg aria-hidden="true" viewBox="0 0 28 28"><rect x="1" y="4" width="26" height="20" rx="1"/><path d="m2 6 12 10L26 6"/></svg></a>
-			<a href="https://t.me/" aria-label="Telegram"><svg aria-hidden="true" viewBox="0 0 30 30"><path d="M27 3 3 13l9 3.4L22 8l-7.6 9.8V26l4.8-5.2 5.8 4.3z"/></svg></a>
+			<a href="<?php echo esc_url( neurocoaching_mod( 'contact_url', 'https://www.linkedin.com/' ) ); ?>" aria-label="LinkedIn"><img src="<?php echo esc_url( $about_images . 'about-linkedin.svg' ); ?>" alt=""></a>
+			<a href="<?php echo esc_url( neurocoaching_mod( 'booking_url', 'mailto:hello@example.com' ) ); ?>" aria-label="Email"><img src="<?php echo esc_url( $about_images . 'about-email.png' ); ?>" alt=""></a>
+			<a href="https://t.me/" aria-label="Telegram"><img src="<?php echo esc_url( $about_images . 'about-telegram.svg' ); ?>" alt=""></a>
 		</div>
 		<?php endif; ?>
 		<button class="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-navigation" data-menu-toggle><span class="screen-reader-text">Open menu</span><i></i><i></i><i></i></button>
@@ -81,7 +82,7 @@ function neurocoaching_header( $active ) {
 			<a<?php echo 'neuro' === $active ? ' aria-current="page"' : ''; ?> href="<?php echo esc_url( neurocoaching_page_url( 'neurocoaching' ) ); ?>">Neurocoaching</a>
 			<a href="#faqs">FAQs</a>
 		</nav>
-		<a class="button button--small" href="<?php echo esc_url( neurocoaching_mod( 'contact_url', 'https://www.linkedin.com/' ) ); ?>">Connect on LinkedIn</a>
+		<a class="button button--small" href="<?php echo esc_url( neurocoaching_mod( 'contact_url', 'https://www.linkedin.com/' ) ); ?>"><?php echo 'about' === $active ? 'Connect on Linkedin' : 'Connect on LinkedIn'; ?></a>
 	</header>
 	<?php
 }
