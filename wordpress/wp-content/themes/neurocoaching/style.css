@@ -267,7 +267,7 @@ details p { padding:0 45px 18px 0; }
 
 @media (max-width:850px) {
 	.neuro-wrap { width:auto; max-width:none; margin-inline:16px; }
-	.neurocoaching-route .site-header { position:absolute; top:0; right:0; width:100%; min-height:53px; padding:4px 16px; align-items:center; background:var(--neuro-purple); }
+	.neurocoaching-route .site-header { position:absolute; top:0; right:0; width:100%; min-height:53px; padding:4px 16px; align-items:center; background:var(--purple); }
 	.neurocoaching-route .brand { width:90px; height:45px; }
 	.neurocoaching-route .brand img { width:90px; height:45px; filter:none; }
 	.neurocoaching-route .site-header>.button { display:none; }
@@ -278,8 +278,8 @@ details p { padding:0 45px 18px 0; }
 	.neurocoaching-route .primary-nav a { width:auto; height:auto; padding:3px 0; border:0; border-radius:0; color:#fff; }
 	.neuro-button { min-height:53px; padding:11px 29px; font-size:14px; }
 	.neuro-hero { height:1045px; display:block; padding-top:53px; }
-	.neuro-hero__photo { width:320px; height:488px; }
-	.neuro-hero__photo img { width:325px; max-width:none; height:488px; object-fit:cover; object-position:center top; }
+	.neuro-hero__photo { width:100%; height:456px; }
+	.neuro-hero__photo img { width:100%; max-width:none; height:456px; object-fit:fill; object-position:center top; }
 	.neuro-hero__copy { width:auto; padding:37px 16px 20px; font-size:14px; line-height:1.38; }
 	.neuro-kicker { margin-bottom:21px; font-size:11px; }
 	.neuro-hero h1 { width:275px; margin-bottom:24px; font-size:40px; line-height:1.02; }
@@ -474,7 +474,7 @@ details p { padding:0 45px 18px 0; }
 
 @media (max-width:850px) {
 	.career-wrap { width:auto; max-width:none; margin-inline:18px; }
-	.career-services-route .site-header { position:absolute; top:0; right:0; width:100%; min-height:53px; padding:4px 16px; align-items:center; background:var(--career-purple); }
+	.career-services-route .site-header { position:absolute; top:0; right:0; width:100%; min-height:53px; padding:4px 16px; align-items:center; background:var(--purple); }
 	.career-services-route .brand { width:90px; height:45px; }
 	.career-services-route .brand img { width:90px; height:45px; filter:none; }
 	.career-services-route .site-header>.button { display:none; }
@@ -486,7 +486,7 @@ details p { padding:0 45px 18px 0; }
 	.career-hero { height:1525px; display:block; padding-top:53px; }
 	.career-hero__photo { height:438px; background:#f7d7c6; }
 	.career-hero__photo picture { display:block; width:100%; height:100%; }
-	.career-hero__photo img { width:79.375%; max-width:none; height:auto; margin-left:11.5625%; object-fit:initial; object-position:initial; }
+	.career-hero__photo img { width:254px; max-width:none; height:433px; margin:5px 0 0 37px; object-fit:fill; object-position:initial; }
 	.career-hero__copy { width:auto; padding:44px 18px 30px; font-size:14px; line-height:1.42; }
 	.career-hero h1 { margin-bottom:22px; font-size:40px; line-height:1; }
 	.career-quote { width:260px; margin-bottom:29px; }
@@ -663,7 +663,7 @@ body.home:not(.career-services-route):not(.neurocoaching-route) .menu-toggle { d
 
 @media (max-width:850px) {
 	.nc-about__frame { width:auto; max-width:none; margin-inline:15px; }
-	body.home:not(.career-services-route):not(.neurocoaching-route) .site-header { position:absolute; top:0; right:0; left:0; width:100%; height:53px; min-height:53px; padding:0; background:var(--nc-about-purple); }
+	body.home:not(.career-services-route):not(.neurocoaching-route) .site-header { position:absolute; top:0; right:0; left:0; width:100%; height:53px; min-height:53px; padding:0; background:var(--purple); }
 	body.home:not(.career-services-route):not(.neurocoaching-route) .brand { top:4px; left:16px; width:89px; height:45px; }
 	body.home:not(.career-services-route):not(.neurocoaching-route) .brand img { width:90px; height:45px; filter:none; }
 	body.home:not(.career-services-route):not(.neurocoaching-route) .about-socials { top:15px; left:145px; width:90px; height:22px; }
@@ -745,6 +745,19 @@ body.home:not(.career-services-route):not(.neurocoaching-route) .menu-toggle { d
 .nc-gallery__slide[hidden] { display:none; }
 .nc-gallery__slide img { display:block; width:100%; height:100%; object-fit:cover; }
 .nc-gallery>button { display:grid; place-items:center; cursor:pointer; }
+
+/* The supplied About desktop artboard is 1320px, while acceptance is captured
+   at 1440px. Scale the semantic layout as one artboard so every measured PSD
+   coordinate (including header and type) lands on the 1440px baseline. */
+@media (min-width:851px) and (max-width:1440px) {
+	.home { overflow-x:hidden; }
+	.home .site-header,.home .nc-about { zoom:calc(100vw / 1320px); }
+}
+
+/* Bound source-sized mobile galleries and decoration to the device viewport. */
+@media (max-width:850px) {
+	.home,.career-services-route,.neurocoaching-route { overflow-x:hidden; }
+}
 .nc-gallery>button:disabled { cursor:default; opacity:.42; }
 .nc-gallery__pagination { position:absolute; top:calc(100% + 54px); left:50%; display:flex; width:max-content; max-width:100%; gap:22px; transform:translateX(-50%); }
 .nc-gallery__pagination button { width:12px; height:12px; padding:0; border:2px solid currentColor; border-radius:50%; color:inherit; background:transparent; cursor:pointer; }
