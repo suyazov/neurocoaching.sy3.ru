@@ -149,7 +149,7 @@ details p { padding:0 45px 18px 0; }
 .neuro-psd { --neuro-purple:#3d2863; --neuro-violet:#8d58b4; --neuro-paper:#faf2ed; --neuro-ink:#282429; overflow:hidden; color:var(--neuro-ink); background:var(--neuro-paper); font-family:Lato,Arial,sans-serif; }
 .neuro-psd h1,.neuro-psd h2,.neuro-psd h3,.neuro-psd h4 { font-family:"IBM Plex Sans",Arial,sans-serif; font-weight:700; letter-spacing:-.045em; }
 .neuro-wrap { width:1220px; max-width:calc(100% - 64px); margin-inline:auto; }
-.neurocoaching-route .site-header { top:30px; right:max(32px,calc((100% - 1220px)/2)); width:722px; min-height:118px; align-items:flex-start; gap:28px; font-family:Lato,Arial,sans-serif; }
+.neurocoaching-route .site-header { z-index:10; top:30px; right:max(32px,calc((100% - 1220px)/2)); width:722px; min-height:118px; align-items:flex-start; gap:28px; font-family:Lato,Arial,sans-serif; }
 .neurocoaching-route .brand { width:110px; height:55px; margin-right:auto; transform:none; }
 .neurocoaching-route .brand img { width:110px; height:55px; object-fit:contain; filter:brightness(0) saturate(100%) invert(22%) sepia(13%) saturate(3631%) hue-rotate(223deg) brightness(85%) contrast(89%); }
 .neurocoaching-route .primary-nav { padding-top:80px; gap:54px; font-size:14px; }
@@ -369,7 +369,7 @@ details p { padding:0 45px 18px 0; }
 .career-psd { --career-purple:#3c2d60; --career-violet:#865cac; --career-paper:#f8efea; --career-peach:#d88a5c; --career-ink:#252525; overflow:hidden; color:var(--career-ink); background:var(--career-paper); font-family:Lato,Arial,sans-serif; }
 .career-psd h1,.career-psd h2,.career-psd h3,.career-psd h4 { font-family:"IBM Plex Sans",Arial,sans-serif; font-weight:700; letter-spacing:-.035em; }
 .career-wrap { width:1084px; max-width:calc(100% - 64px); margin-inline:auto; }
-.career-services-route .site-header { top:29px; right:max(32px,calc((100% - 1219px)/2)); width:722px; min-height:118px; align-items:flex-start; padding-top:0; gap:28px; font-family:Lato,Arial,sans-serif; }
+.career-services-route .site-header { z-index:10; top:29px; right:max(32px,calc((100% - 1219px)/2)); width:722px; min-height:118px; align-items:flex-start; padding-top:0; gap:28px; font-family:Lato,Arial,sans-serif; }
 .career-services-route .brand { width:110px; height:55px; margin-right:auto; transform:none; }
 .career-services-route .brand img { width:110px; height:55px; object-fit:contain; filter:brightness(0) saturate(100%) invert(22%) sepia(13%) saturate(3631%) hue-rotate(223deg) brightness(85%) contrast(89%); }
 .career-services-route .primary-nav { padding-top:80px; gap:54px; font-size:14px; }
@@ -577,7 +577,7 @@ details p { padding:0 45px 18px 0; }
 .nc-about { --nc-about-purple:#3f2961; --nc-about-violet:#855cac; --nc-about-lilac:#e9e1f3; --nc-about-paper:#f8f1ee; --nc-about-ink:#252525; overflow:hidden; color:var(--nc-about-ink); background:var(--nc-about-paper); font-family:Lato,Arial,sans-serif; }
 .nc-about h1,.nc-about h2,.nc-about h3 { font-family:"IBM Plex Sans",Arial,sans-serif; font-weight:700; letter-spacing:-.035em; }
 .nc-about__frame { width:930px; max-width:calc(100% - 64px); margin-inline:auto; }
-.home .site-header { top:30px; right:auto; left:563px; width:564px; height:115px; min-height:0; display:block; font-family:Lato,Arial,sans-serif; }
+.home .site-header { z-index:10; top:30px; right:auto; left:563px; width:564px; height:115px; min-height:0; display:block; font-family:Lato,Arial,sans-serif; }
 .home .brand { position:absolute; top:0; left:2px; width:110px; height:55px; margin:0; transform:none; }
 .home .brand img { width:110px; height:55px; object-fit:contain; filter:brightness(0) saturate(100%) invert(23%) sepia(17%) saturate(3572%) hue-rotate(247deg) brightness(83%) contrast(90%); }
 .home .about-socials { position:absolute; top:8px; left:444px; width:119px; height:29px; display:flex; align-items:start; justify-content:space-between; }
