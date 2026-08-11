@@ -8,7 +8,7 @@ Text Domain: neurocoaching
 */
 @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@700&family=Lato:ital,wght@0,400;0,500;0,700;0,900;1,600&display=swap');
 :root { --purple:#422468; --violet:#9658bc; --lilac:#e6dcf2; --paper:#faf3ee; --peach:#e9a783; --ink:#211d21; --line:#a66dca; }
-.home { --purple:#5b296f; --violet:#855bae; --paper:#f8efea; --ink:#252525; --line:#855bae; }
+.home { --purple:#3f2961; --violet:#855cac; --paper:#f8f1ee; --ink:#252525; --line:#855cac; }
 .career-services-route { --purple:#3c2d60; --violet:#865cac; --paper:#f8efea; --peach:#d88a5c; --ink:#252525; --line:#865cac; }
 .neurocoaching-route { --purple:#3d2863; --violet:#8d58b4; --paper:#faf2ed; --ink:#282429; --line:#8d58b4; }
 * { box-sizing:border-box; }
@@ -565,7 +565,7 @@ details p { padding:0 45px 18px 0; }
 }
 
 /* About page: measurements follow the PSD 1320 px and 320 px artboards. */
-.about-psd { --about-purple:#5b296f; --about-violet:#855bae; --about-paper:#f8efea; --about-ink:#252525; overflow:hidden; color:var(--about-ink); background:var(--about-paper); font-family:Lato,Arial,sans-serif; }
+.about-psd { --about-purple:#3f2961; --about-violet:#855cac; --about-lilac:#e9e1f3; --about-paper:#f8f1ee; --about-ink:#252525; overflow:hidden; color:var(--about-ink); background:var(--about-paper); font-family:Lato,Arial,sans-serif; }
 .about-psd h1,.about-psd h2,.about-psd h3 { font-family:"IBM Plex Sans",Arial,sans-serif; font-weight:700; letter-spacing:-.035em; }
 .about-frame { width:930px; max-width:calc(100% - 64px); margin-inline:auto; }
 .home .site-header { top:30px; right:max(32px,calc((100% - 930px)/2)); width:563px; min-height:101px; align-items:flex-start; padding-top:0; gap:29px; font-family:Lato,Arial,sans-serif; }
@@ -597,22 +597,23 @@ details p { padding:0 45px 18px 0; }
 .about-credentials li::before { content:'✓'; position:absolute; left:0; top:-5px; color:var(--about-violet); font-size:25px; }
 .about-services { width:1037px; padding-bottom:146px; }
 .about-services>h2 { width:max-content; margin:0 auto 80px; color:var(--about-purple); font-size:65px; line-height:.92; }
-.about-service-card { min-height:597px; display:grid; grid-template-columns:530px 507px; color:#fff; background:var(--about-purple); }
-.about-service-card>div { padding:59px 49px; }
-.about-service-summary { border-right:1px solid rgba(255,255,255,.8); }
+.about-service-card { height:597px; display:grid; grid-template-columns:527px 504px; color:var(--about-ink); background:#fff; border:3px solid var(--about-violet); }
+.about-service-card>div { padding:56px 46px; }
+.about-service-summary { position:relative; border-right:0; }
+.about-service-summary::after { content:''; position:absolute; top:283px; left:45px; width:374px; height:3px; background:var(--about-violet); }
 .about-service-heading { position:relative; display:flex; align-items:flex-start; }
-.about-service-heading h3,.about-programmes h3 { margin:0; color:#fff; font-size:45px; line-height:1.08; }
-.about-service-heading span { margin:5px 0 0 11px; padding:3px 14px; background:#fff; color:var(--about-purple); font:700 21px/1.1 "IBM Plex Sans",sans-serif; }
+.about-service-heading h3,.about-programmes h3 { margin:0; color:var(--about-purple); font-size:45px; line-height:1.08; }
+.about-service-heading span { margin:5px 0 0 11px; padding:3px 14px; color:#fff; background:var(--about-violet); font:700 21px/1.1 "IBM Plex Sans",sans-serif; }
 .about-scope { margin:52px 0 55px; font-weight:900; }
 .about-service-summary>p:last-child { width:356px; max-width:100%; font-size:18px; line-height:20px; }
 .about-programmes ul { margin:34px 0 25px; padding:0 0 0 31px; list-style:none; }
-.about-programmes { padding-left:35px!important; }
+.about-programmes { padding-left:0!important; }
 .about-programmes li { position:relative; margin-bottom:20px; font-size:18px; line-height:21px; }
-.about-programmes li::before { content:'✓'; position:absolute; left:-31px; color:#fff; font-size:22px; }
+.about-programmes li::before { content:'✓'; position:absolute; left:-31px; color:var(--about-violet); font-size:22px; }
 .about-programmes>p { margin:0 0 36px; font-size:18px; font-weight:600; }
-.about-programmes .about-button { color:#fff; border-color:#fff; }
-.about-life { position:relative; height:944px; padding-top:143px; text-align:center; }
-.about-life h2 { margin:0; color:var(--about-purple); font-size:65px; line-height:1; }
+.about-programmes .about-button { color:var(--about-purple); border-color:var(--about-violet); }
+.about-life { position:relative; width:100%; max-width:none; height:944px; margin:0; padding-top:143px; text-align:center; background:var(--about-lilac); }
+.about-life h2 { margin:0; color:var(--about-ink); font-size:65px; line-height:1; }
 .about-instagram { display:inline-block; margin-top:25px; color:var(--about-purple); font-size:18px; font-weight:900; text-decoration:none; }
 .about-life__photo { display:grid; grid-template-columns:86px 674px 86px; gap:31px; align-items:center; justify-content:center; margin-top:49px; }
 .about-life__photo img { width:674px; height:479px; object-fit:cover; object-position:center 50%; }
@@ -666,22 +667,24 @@ details p { padding:0 45px 18px 0; }
 	.about-credentials ul { grid-template-columns:1fr; gap:26px; }
 	.about-credentials li { min-height:39px; padding-left:24px; font-size:14px; line-height:18px; }
 	.about-credentials li::before { top:-3px; font-size:19px; }
-	.about-services { margin:0 15px; padding-bottom:41px; }
+	.about-services { margin:0 15px; padding-bottom:0; }
 	.about-services>h2 { width:220px; margin:0 0 24px; font-size:40px; line-height:42px; }
-	.about-service-card { min-height:727px; display:block; }
-	.about-service-card>div { padding:34px 24px; }
+	.about-service-card { position:relative; width:295px; height:727px; display:block; margin-left:-3px; border-width:2px; }
+	.about-service-card>div { padding:0; }
+	.about-service-summary { position:absolute; top:25px; left:24px; width:237px; }
 	.about-service-summary { border-right:0; border-bottom:0; }
-	.about-service-heading h3,.about-programmes h3 { font-size:36px; line-height:38px; }
-	.about-service-heading span { margin-left:auto; font-size:18px; }
-	.about-scope { margin:35px 0 19px; }
+	.about-service-heading h3,.about-programmes h3 { font-size:29px; line-height:32px; }
+	.about-service-heading span { position:absolute; top:75px; right:0; margin:0; font-size:18px; }
+	.about-scope { margin:65px 0 19px; }
 	.about-service-summary>p:last-child { font-size:14px; line-height:16px; }
-	.about-programmes { position:relative; padding-left:24px!important; }
+	.about-programmes { position:absolute; top:363px; left:24px; width:237px; padding-left:0!important; }
+	.about-service-summary::after { top:126px; left:0; width:246px; height:2px; }
 	.about-programmes ul { margin:19px 0 10px; padding-left:23px; }
 	.about-programmes li { margin-bottom:8px; font-size:14px; line-height:16px; }
 	.about-programmes li::before { left:-23px; }
 	.about-programmes>p { margin:7px 0 0; font-size:14px; }
 	.about-programmes .about-button { margin-top:29px; }
-	.about-life { height:473px; margin:0; padding-top:28px; }
+	.about-life { height:434px; margin:0; padding-top:28px; background:var(--about-paper); }
 	.about-life h2 { font-size:36px; }
 	.about-instagram { margin-top:13px; font-size:16px; }
 	.about-life__photo { grid-template-columns:1fr; margin-top:15px; }
