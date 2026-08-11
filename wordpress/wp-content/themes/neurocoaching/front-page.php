@@ -31,7 +31,7 @@ $questions = array(
 ?>
 <article class="nc-about">
 	<section class="nc-about__hero" aria-labelledby="nc-about-name">
-		<div class="nc-about__hero-photo"><img src="<?php echo esc_url( $images . 'about-hero.webp' ); ?>" alt="Ksenia Belousova"></div>
+		<div class="nc-about__hero-photo"><img src="<?php echo esc_url( $images . 'about-hero-source.webp' ); ?>" alt="Ksenia Belousova"></div>
 		<div class="nc-about__hero-copy">
 			<p class="nc-about__eyebrow">UN PROFESSIONAL <span>|</span><br class="nc-about__mobile-break"> CAREER STRATEGIST <span>|</span><br class="nc-about__mobile-break"> NEURO COACH</p>
 			<h1 id="nc-about-name">Ksenia<span class="nc-about__mobile-break"><br></span> Belousova</h1>
@@ -51,7 +51,7 @@ $questions = array(
 			<h2 id="nc-about-education-title">Education &amp; Experience</h2>
 			<div class="nc-about__certificates" aria-label="Certificates">
 				<?php for ( $i = 1; $i <= 5; $i++ ) : ?>
-					<figure><img src="<?php echo esc_url( $images . 'about-certificate-' . $i . '.webp' ); ?>" alt="Certificate <?php echo esc_attr( (string) $i ); ?>"></figure>
+					<figure><img src="<?php echo esc_url( $images . 'about-certificate-' . $i . '-source.png' ); ?>" alt="Certificate <?php echo esc_attr( (string) $i ); ?>"></figure>
 				<?php endfor; ?>
 			</div>
 			<a class="nc-about__more" href="#nc-about-credentials">View more <span aria-hidden="true">→</span></a>
@@ -59,24 +59,25 @@ $questions = array(
 	</section>
 
 	<section id="nc-about-credentials" class="nc-about__credentials nc-about__frame" aria-label="Credentials">
-		<ul><?php foreach ( $credentials as $item ) : ?><li><?php echo esc_html( $item ); ?></li><?php endforeach; ?></ul>
+		<ul><?php foreach ( $credentials as $item ) : ?><li><img src="<?php echo esc_url( $images . 'about-check.svg' ); ?>" alt=""><?php echo esc_html( $item ); ?></li><?php endforeach; ?></ul>
 	</section>
 
 	<section class="nc-about__services" aria-labelledby="nc-about-services-title">
 		<h2 id="nc-about-services-title">Services | B2B format</h2>
 		<article class="nc-about__service-card">
 			<div class="nc-about__service-summary">
-				<div class="nc-about__service-heading"><h3>Team<br>Workshops</h3><span>Corporate</span></div>
+				<div class="nc-about__service-heading"><h3>Team<br>Workshops</h3><span><img src="<?php echo esc_url( $images . 'about-corporate-flag.svg' ); ?>" alt=""><b>Corporate</b></span></div>
+				<img class="nc-about__zigzag" src="<?php echo esc_url( $images . 'about-zigzag.svg' ); ?>" alt="">
 				<p class="nc-about__scope">On request &nbsp;×&nbsp; Custom scope</p>
 				<p>Practical, tailored workshops for teams covering stress management, burnout prevention, time management, and overall wellbeing. Delivered online or in-person, fully customised context around your team's specific needs.</p>
 			</div>
 			<div class="nc-about__programmes">
 				<h3>Programmes:</h3>
 				<ul>
-					<li><strong>From Surviving to Thriving —</strong><br>Stress &amp; Energy Management</li>
-					<li><strong>Burnout-Proof —</strong><br>Recognise It Before It Hits</li>
-					<li><strong>Work Smarter —</strong><br>Time, Focus &amp; Productivity</li>
-					<li><strong>Building Resilience —</strong> Wellbeing That Actually Lasts</li>
+					<li><img src="<?php echo esc_url( $images . 'about-check.svg' ); ?>" alt=""><strong>From Surviving to Thriving —</strong><br>Stress &amp; Energy Management</li>
+					<li><img src="<?php echo esc_url( $images . 'about-check.svg' ); ?>" alt=""><strong>Burnout-Proof —</strong><br>Recognise It Before It Hits</li>
+					<li><img src="<?php echo esc_url( $images . 'about-check.svg' ); ?>" alt=""><strong>Work Smarter —</strong><br>Time, Focus &amp; Productivity</li>
+					<li><img src="<?php echo esc_url( $images . 'about-check.svg' ); ?>" alt=""><strong>Building Resilience —</strong> Wellbeing That Actually Lasts</li>
 				</ul>
 				<p><em>A team that feels better, works better</em></p>
 				<a class="nc-about__button" href="<?php echo esc_url( $booking ); ?>">Book a call</a>
@@ -87,8 +88,8 @@ $questions = array(
 	<section class="nc-about__life" aria-labelledby="nc-about-life-title">
 		<h2 id="nc-about-life-title">In real life</h2>
 		<a class="nc-about__instagram" href="<?php echo esc_url( $contact ); ?>">Follow on Instagram</a>
-		<div class="nc-about__life-photo"><a href="<?php echo esc_url( $contact ); ?>" aria-label="Previous photo">←</a><img src="<?php echo esc_url( $images . 'about-life.webp' ); ?>" alt="Ksenia by the sea at sunset"><a href="<?php echo esc_url( $contact ); ?>" aria-label="Next photo">→</a></div>
-		<p class="nc-about__dots" aria-hidden="true">● ○ ○ ○ ○ ○ ○ ○ ○ ○ ○ ○ ○ ○ ○</p>
+		<div class="nc-about__life-photo"><a href="<?php echo esc_url( $contact ); ?>" aria-label="Previous photo"><img src="<?php echo esc_url( $images . 'about-arrow-previous.png' ); ?>" alt=""></a><img src="<?php echo esc_url( $images . 'about-life-source.webp' ); ?>" alt="Ksenia by the sea at sunset"><a href="<?php echo esc_url( $contact ); ?>" aria-label="Next photo"><img src="<?php echo esc_url( $images . 'about-arrow-next.png' ); ?>" alt=""></a></div>
+		<img class="nc-about__dots" src="<?php echo esc_url( $images . 'about-gallery-dots.png' ); ?>" alt="">
 	</section>
 
 	<section class="nc-about__cta">
@@ -101,7 +102,7 @@ $questions = array(
 			<?php foreach ( $questions as $question => $answer ) : ?><details><summary><?php echo esc_html( $question ); ?></summary><p><?php echo esc_html( $answer ); ?></p></details><?php endforeach; ?>
 			<details open><summary>What's the first step?</summary><p>Start with a conversation. You don't need a perfect plan — just the willingness to change something. Book a Discovery Session: free 30 minutes that will give you clarity on where you are, what's holding you back, and exactly what your next step looks like. From there, we build everything together.</p></details>
 		</div>
-		<aside><img src="<?php echo esc_url( $images . 'about-faq.webp' ); ?>" alt="Ksenia outdoors"><h2>Ready to take the first step?</h2><p>Leave with clarity, a defined direction, and a concrete next step.</p><a class="nc-about__button" href="<?php echo esc_url( $booking ); ?>">Book a call</a></aside>
+		<aside><img src="<?php echo esc_url( $images . 'about-faq-source.webp' ); ?>" alt="Ksenia outdoors"><h2>Ready to take the first step?</h2><p>Leave with clarity, a defined direction, and a concrete next step.</p><a class="nc-about__button" href="<?php echo esc_url( $booking ); ?>">Book a call</a></aside>
 	</section>
 </article>
 <?php get_footer();

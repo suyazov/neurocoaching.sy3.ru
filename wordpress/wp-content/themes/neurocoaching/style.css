@@ -575,8 +575,7 @@ details p { padding:0 45px 18px 0; }
 .home .about-socials { position:absolute; top:8px; left:444px; width:119px; height:29px; display:flex; align-items:start; justify-content:space-between; }
 .home .about-socials a { width:28px; height:28px; color:var(--nc-about-purple); }
 .home .about-socials a:last-child { width:30px; height:30px; }
-.home .about-socials svg { width:100%; height:100%; overflow:visible; fill:none; stroke:currentColor; stroke-width:2; stroke-linecap:round; stroke-linejoin:round; }
-.home .about-socials a:last-child svg { fill:currentColor; stroke:none; }
+.home .about-socials img { width:100%; height:100%; object-fit:contain; }
 .home .primary-nav { position:absolute; top:77px; left:2px; width:350px; height:20px; display:block; padding:0; font-size:14px; }
 .home .primary-nav a { position:absolute; top:0; }
 .home .primary-nav a:nth-child(1) { left:0; }
@@ -585,7 +584,7 @@ details p { padding:0 45px 18px 0; }
 .home .primary-nav a:nth-child(4) { left:315px; }
 .home .site-header>.button { position:absolute; top:56px; left:370px; width:194px; min-height:59px; padding:10px 12px; font-size:14px; letter-spacing:.08em; }
 .home .menu-toggle { display:none; }
-.nc-about__hero { height:852px; display:grid; grid-template-columns:516px minmax(0,804px); }
+.nc-about__hero { width:1320px; max-width:100%; height:852px; display:grid; grid-template-columns:516px minmax(0,804px); margin-inline:auto; }
 .nc-about__hero-photo { position:relative; height:852px; overflow:hidden; }
 .nc-about__hero-photo img { position:absolute; top:-130px; left:-87px; width:711px; max-width:none; height:1064px; object-fit:fill; }
 .nc-about__hero-copy { padding:200px 0 0 49px; }
@@ -609,30 +608,34 @@ details p { padding:0 45px 18px 0; }
 .nc-about__credentials { padding:142px 0 139px; }
 .nc-about__credentials ul { display:grid; grid-template-columns:1fr 1fr; gap:33px 110px; margin:0; padding:0; list-style:none; }
 .nc-about__credentials li { position:relative; min-height:41px; padding-left:32px; font-size:18px; line-height:22px; font-weight:900; }
-.nc-about__credentials li::before { content:'✓'; position:absolute; left:0; top:-5px; color:var(--nc-about-violet); font-size:25px; }
+.nc-about__credentials li>img { position:absolute; top:0; left:0; width:20px; height:18px; }
 .nc-about__services { width:1037px; max-width:calc(100% - 64px); margin-inline:auto; padding-bottom:146px; }
 .nc-about__services>h2 { width:max-content; margin:0 auto 80px; color:var(--nc-about-purple); font-size:65px; line-height:.92; }
 .nc-about__service-card { height:597px; display:grid; grid-template-columns:527px 504px; border:3px solid var(--nc-about-violet); color:var(--nc-about-ink); background:#fff; }
 .nc-about__service-card>div { padding:56px 46px; }
 .nc-about__service-summary { position:relative; }
-.nc-about__service-summary::after { content:''; position:absolute; top:283px; left:45px; width:374px; height:3px; background:var(--nc-about-violet); }
+.nc-about__service-summary::after { content:''; position:absolute; top:283px; left:45px; width:374px; height:6px; background:var(--nc-about-violet); }
 .nc-about__service-heading { position:relative; display:flex; align-items:flex-start; }
 .nc-about__service-heading h3,.nc-about__programmes h3 { margin:0; color:var(--nc-about-purple); font-size:45px; line-height:1.08; }
-.nc-about__service-heading span { margin:5px 0 0 11px; padding:3px 14px; color:#fff; background:var(--nc-about-violet); font:700 21px/1.1 "IBM Plex Sans",sans-serif; }
-.nc-about__scope { margin:52px 0 55px; font-weight:900; }
+.nc-about__service-heading span { position:relative; width:158px; height:34px; margin:-3px 0 0 -22px; color:#fff; font:700 21px/1.1 "IBM Plex Sans",sans-serif; }
+.nc-about__service-heading span img { position:absolute; inset:0; width:158px; height:34px; }
+.nc-about__service-heading span b { position:relative; z-index:1; display:block; padding:4px 17px; font:inherit; text-align:center; }
+.nc-about__zigzag { width:110px; height:71px; margin:23px 0 0; }
+.nc-about__scope { margin:94px 0 55px; font-weight:900; }
 .nc-about__service-summary>p:last-child { width:356px; max-width:100%; font-size:18px; line-height:20px; }
 .nc-about__programmes { padding-left:0!important; }
 .nc-about__programmes ul { margin:34px 0 25px; padding:0 0 0 31px; list-style:none; }
 .nc-about__programmes li { position:relative; margin-bottom:20px; font-size:18px; line-height:21px; }
-.nc-about__programmes li::before { content:'✓'; position:absolute; left:-31px; color:var(--nc-about-violet); font-size:22px; }
+.nc-about__programmes li>img { position:absolute; top:0; left:-31px; width:20px; height:18px; }
 .nc-about__programmes>p { margin:0 0 36px; font-size:18px; font-weight:600; }
 .nc-about__life { position:relative; height:944px; padding-top:143px; text-align:center; background:var(--nc-about-lilac); }
 .nc-about__life h2 { margin:0; font-size:65px; line-height:1; }
 .nc-about__instagram { display:inline-block; margin-top:25px; color:var(--nc-about-purple); font-size:18px; font-weight:900; text-decoration:none; }
 .nc-about__life-photo { display:grid; grid-template-columns:86px 674px 86px; gap:31px; align-items:center; justify-content:center; margin-top:49px; }
-.nc-about__life-photo img { width:674px; height:479px; object-fit:cover; object-position:center 50%; }
+.nc-about__life-photo>img { width:674px; height:479px; object-fit:cover; object-position:center 50%; }
 .nc-about__life-photo a { display:grid; width:86px; height:86px; place-items:center; border:2px solid var(--nc-about-violet); border-radius:50%; color:var(--nc-about-violet); font-size:36px; text-decoration:none; }
-.nc-about__dots { position:absolute; right:0; bottom:88px; left:0; color:var(--nc-about-violet); letter-spacing:10px; }
+.nc-about__life-photo a img { width:86px; height:86px; margin:-2px; max-width:none; }
+.nc-about__dots { position:absolute; right:0; bottom:99px; left:0; width:834px; height:18px; margin:auto; }
 .nc-about__cta { height:401px; padding-top:142px; color:#fff; background:var(--nc-about-purple); }
 .nc-about__cta h2 { margin:0 0 25px; color:#fff; font-size:50px; line-height:1; }
 .nc-about__cta p { margin-bottom:30px; font-size:18px; font-weight:500; }
@@ -664,7 +667,7 @@ details p { padding:0 45px 18px 0; }
 	.home .primary-nav { position:absolute; top:53px; left:0; width:100%; display:none; margin:0; padding:18px 15px 22px; flex-direction:column; gap:7px; background:var(--nc-about-purple); font-size:14px; }
 	.home .site-header.is-open .primary-nav { display:flex; }
 	.home .primary-nav a { position:relative; top:auto; left:auto!important; width:auto; height:auto; padding:3px 0; border:0; border-radius:0; color:#fff; }
-	.nc-about__hero { height:1391px; display:block; padding-top:53px; }
+	.nc-about__hero { width:320px; height:1391px; display:block; padding-top:53px; }
 	.nc-about__hero-photo { height:399px; }
 	.nc-about__hero-photo img { top:-55px; left:-13px; width:356px; height:530px; }
 	.nc-about__hero-copy { padding:34px 15px 24px; }
@@ -685,30 +688,31 @@ details p { padding:0 45px 18px 0; }
 	.nc-about__credentials { padding:54px 15px 58px; }
 	.nc-about__credentials ul { grid-template-columns:1fr; gap:26px; }
 	.nc-about__credentials li { min-height:39px; padding-left:24px; font-size:14px; line-height:18px; }
-	.nc-about__credentials li::before { top:-3px; font-size:19px; }
+	.nc-about__credentials li>img { top:0; width:16px; height:14px; }
 	.nc-about__services { width:auto; max-width:none; margin-inline:15px; padding-bottom:0; }
 	.nc-about__services>h2 { width:220px; margin:0 0 24px; font-size:40px; line-height:42px; }
 	.nc-about__service-card { position:relative; width:295px; height:727px; display:block; margin-left:-3px; border-width:2px; }
 	.nc-about__service-card>div { padding:0; }
 	.nc-about__service-summary { position:absolute; top:25px; left:24px; width:237px; }
 	.nc-about__service-heading h3,.nc-about__programmes h3 { font-size:29px; line-height:32px; }
-	.nc-about__service-heading span { position:absolute; top:75px; right:0; margin:0; font-size:18px; }
-	.nc-about__scope { margin:65px 0 19px; }
+	.nc-about__service-heading span { position:absolute; top:63px; left:107px; width:158px; height:34px; margin:0; font-size:18px; }
+	.nc-about__zigzag { width:53px; height:35px; margin-top:20px; }
+	.nc-about__scope { margin:40px 0 19px; }
 	.nc-about__service-summary>p:last-child { font-size:14px; line-height:16px; }
-	.nc-about__service-summary::after { top:126px; left:0; width:246px; height:2px; }
+	.nc-about__service-summary::after { top:101px; left:0; width:246px; height:6px; }
 	.nc-about__programmes { position:absolute; top:363px; left:24px; width:237px; }
 	.nc-about__programmes ul { margin:19px 0 10px; padding-left:23px; }
 	.nc-about__programmes li { margin-bottom:8px; font-size:14px; line-height:16px; }
-	.nc-about__programmes li::before { left:-23px; }
+	.nc-about__programmes li>img { left:-23px; width:16px; height:14px; }
 	.nc-about__programmes>p { margin:7px 0 0; font-size:14px; }
 	.nc-about__programmes .nc-about__button { margin-top:29px; }
 	.nc-about__life { height:434px; padding-top:28px; background:var(--nc-about-paper); }
 	.nc-about__life h2 { font-size:36px; }
 	.nc-about__instagram { margin-top:13px; font-size:16px; }
 	.nc-about__life-photo { display:block; margin-top:15px; }
-	.nc-about__life-photo img { width:323px; height:223px; max-width:none; margin-inline:auto; object-position:center 52%; }
+	.nc-about__life-photo>img { width:323px; height:223px; max-width:none; margin-inline:auto; object-position:center 52%; }
 	.nc-about__life-photo a { display:none; }
-	.nc-about__dots { bottom:101px; font-size:12px; letter-spacing:5px; }
+	.nc-about__dots { right:auto; bottom:51px; left:14px; width:298px; height:auto; margin:0; }
 	.nc-about__cta { height:250px; padding-top:37px; }
 	.nc-about__cta h2 { width:250px; margin-bottom:17px; font-size:36px; line-height:40px; }
 	.nc-about__cta p { margin-bottom:20px; font-size:16px; }
@@ -719,7 +723,7 @@ details p { padding:0 45px 18px 0; }
 	.nc-about__faq summary { min-height:64px; padding:14px 39px 14px 1px; font-size:14px; line-height:18px; }
 	.nc-about__faq details p { padding:0 0 20px 1px; font-size:14px; line-height:20px; }
 	.nc-about__faq aside { margin-top:55px; }
-	.nc-about__faq aside img { width:calc(100% + 28px); height:239px; margin-left:-14px; object-position:center 49%; }
+	.nc-about__faq aside>img { width:288px; height:239px; margin-left:1px; object-position:center 49%; }
 	.nc-about__faq aside h2 { width:255px; margin:42px 0 17px; font-size:36px; line-height:40px; }
 	.nc-about__faq aside p { width:auto; margin:0 0 30px; font-size:14px; line-height:20px; }
 	.nc-about__faq aside .nc-about__button { margin-left:0; }
