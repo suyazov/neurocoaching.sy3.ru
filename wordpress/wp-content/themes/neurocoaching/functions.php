@@ -67,6 +67,13 @@ function neurocoaching_header( $active ) {
 	?>
 	<header class="site-header" data-site-header>
 		<a class="brand" href="<?php echo esc_url( home_url( '/' ) ); ?>" aria-label="Digital Belka home"><img src="<?php echo esc_url( get_theme_file_uri( '/assets/images/logo.png' ) ); ?>" alt="Digital Belka"></a>
+		<?php if ( 'about' === $active ) : ?>
+		<div class="about-socials" aria-label="Social links">
+			<a href="<?php echo esc_url( neurocoaching_mod( 'contact_url', 'https://www.linkedin.com/' ) ); ?>" aria-label="LinkedIn"><svg aria-hidden="true" viewBox="0 0 28 28"><rect x="1" y="1" width="26" height="26" rx="2"/><path d="M8 12v9M8 8.5v.1M12 21v-9m0 4c1.1-2.5 7-3.2 7 1.7V21"/></svg></a>
+			<a href="<?php echo esc_url( neurocoaching_mod( 'booking_url', 'mailto:hello@example.com' ) ); ?>" aria-label="Email"><svg aria-hidden="true" viewBox="0 0 28 28"><rect x="1" y="4" width="26" height="20" rx="1"/><path d="m2 6 12 10L26 6"/></svg></a>
+			<a href="https://t.me/" aria-label="Telegram"><svg aria-hidden="true" viewBox="0 0 30 30"><path d="M27 3 3 13l9 3.4L22 8l-7.6 9.8V26l4.8-5.2 5.8 4.3z"/></svg></a>
+		</div>
+		<?php endif; ?>
 		<button class="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-navigation" data-menu-toggle><span class="screen-reader-text">Open menu</span><i></i><i></i><i></i></button>
 		<nav id="primary-navigation" class="primary-nav nc-nav" aria-label="Primary navigation">
 			<a<?php echo 'about' === $active ? ' aria-current="page"' : ''; ?> href="<?php echo esc_url( home_url( '/' ) ); ?>">About</a>
