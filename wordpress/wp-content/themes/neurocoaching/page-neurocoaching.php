@@ -1,16 +1,138 @@
-<?php /** Neurocoaching page. @package Neurocoaching */
-get_header(); neurocoaching_header( 'neuro' );
+<?php
+/** Neurocoaching page rebuilt from the supplied 1440 px and 320 px PSD artboards. @package Neurocoaching */
+get_header();
+neurocoaching_header( 'neuro' );
+$images  = get_template_directory_uri() . '/assets/images/';
+$booking = neurocoaching_mod( 'booking_url', 'mailto:hello@example.com' );
+$social  = neurocoaching_mod( 'contact_url', 'https://www.linkedin.com/' );
+$credentials = array(
+	'15+ years in the UN & international organisations — HR, project management, organisational development',
+	'Managed multi-million dollar international projects across UN missions',
+	'MBA, Webster University, USA',
+	'ICF Certified Neurointegration Coach, Neurointegration Institute, USA',
+	'Worked with diplomats, senior UN officials, and international teams across the world',
+	'Human Resources Management Certificate, Cornell University, USA',
+	'Works with clients in English, Russian & Italian',
+	'200+ hours of individual coaching practice',
+);
+$faqs = array(
+	'Who are you and what do you do?' => 'I am a career and neurointegration coach with international leadership and HR experience. I help people find clarity and turn it into practical action.',
+	'What is neurointegration and how is it different from regular coaching?' => 'It combines coaching with practical, brain-friendly tools for attention, emotions, habits and sustainable change.',
+	'Who is this for?' => 'For people who feel stuck, overloaded, at a crossroads, or ready to make a thoughtful professional or personal change.',
+	'Do I need to know what I want before working with you?' => 'No. Creating a clear direction can be the first part of our work together.',
+	'How is your approach different from typical career coaching?' => 'We work with the whole person: goals, context, energy, patterns and the next realistic experiment.',
+	'What results can I expect?' => 'Greater clarity, a defined direction, practical decisions and a concrete next step.',
+	'How long does it take to see results?' => 'Many clients gain useful clarity in the first session; deeper change depends on your goals and chosen format.',
+	'Is this more about career or personal development?' => 'It can be either or both. The work follows the change that matters most in your life right now.',
+	'How is working with you different from just reading self-help books or watching videos?' => 'We turn insight into a personalised process, supported practice and decisions you can use in real life.',
+	'Do I need to choose between career coaching and neurointegration — or can I do both?' => 'You can combine them. Career strategy gives direction while neurointegration helps you move with sustainable energy.',
+	'Why should I choose to work with you?' => 'I combine lived international experience, structured coaching and a practical understanding of how change actually feels.',
+	"What's the first step?" => "Start with a conversation. You don't need a perfect plan — just the willingness to change something.",
+);
 ?>
-<article class="page page--neuro">
-	<section class="hero"><img src="<?php echo esc_url( get_template_directory_uri() . '/assets/images/neuro-hero.webp' ); ?>" alt="Ksenia Belousova with flowers"><div class="hero__content"><p class="eyebrow">Neurointegration coaching</p><h1>Burned out, overwhelmed, or know something needs to change?</h1><p class="lead">I get the feeling there must be another way — but you’re not sure what it is yet.</p><p>If something needs to change but you don’t know where to start, I’m here to help.</p><a class="button" href="<?php echo esc_url( neurocoaching_mod( 'booking_url', 'mailto:hello@example.com' ) ); ?>">Book a free call</a></div></section>
-	<?php neurocoaching_education(); ?>
-	<section class="split-band section-inner"><div><h3>Why this is<br>different</h3><p>Most coaching changes what you think. Neurointegration changes how your brain responds so change becomes easier to sustain.</p></div><div><h2>We work with<br>your brain —<br>not against it</h2><p>We combine neuroscience-informed tools with coaching to create practical shifts in attention, patterns and behaviour.</p></div></section>
-	<?php neurocoaching_services( 'Services | Neurointegration', array(
-		array( 'title' => 'Individual NeuroSprint Coaching', 'text' => 'A personalised 3-week coaching experience designed to help you build sustainable habits, reduce stress and create clear results.', 'items' => array( 'Strategy session', 'Three focused coaching sessions', 'Personalised learning materials', 'Individual support between sessions', 'Tools and techniques' ), 'price' => '350 €', 'button' => 'Book NeuroSprint' ),
-		array( 'title' => 'Integrated Transformation', 'tag' => 'Flagship', 'featured' => true, 'text' => 'The deep-dive six-week format for lasting shifts in beliefs, patterns, decisions and everyday behaviour.', 'items' => array( 'Career strategy & action plan', 'Neurointegration coaching', 'Personalised support tools', 'Accountability and reflection', 'Sustainable wellbeing plan' ), 'price' => '800 €   700 €', 'button' => 'Book flagship programme' ),
-	) ); ?>
-	<section class="story"><img src="<?php echo esc_url( get_template_directory_uri() . '/assets/images/neuro-story.webp' ); ?>" alt="Ksenia among spring flowers"><div><h2>I didn’t find this in a book.<br>I found it in the hardest years of my life.</h2><p>I built a successful international career, achieved ambitious goals and kept moving. Yet underneath the achievements I was exhausted.</p><p>That experience led me to NeuroIntegration: a method that works with the brain, body and real patterns of daily life.</p><h3>I was doing everything right. And I still felt completely lost.</h3><p>Change became possible when I stopped pushing harder and learned to work with my brain rather than against it.</p></div></section>
-	<section class="method section-inner"><h2>The method based on the NeuroIntegration method by Katerina Lengold</h2><p>The NeuroIntegration method combines practical coaching, neuroscience-informed tools and repeatable experiments.</p><div class="pyramid" aria-label="Method stages"><span>Act</span><span>Notice</span><span>Choose</span><span>Integrate</span></div><h2>Is this you?<br>You might be in the right place if...</h2><div class="prompt-grid"><p>You’re successful — but still feel stuck.</p><p>You know what you want, but can’t make yourself start.</p><p>You’re living on autopilot.</p><p>You want change without burning yourself out.</p><p>You feel ready, but don’t know why.</p><p>You’re doing everything right — but feel empty.</p></div></section>
-	<?php neurocoaching_reviews(); neurocoaching_life( 'neuro-life.webp', 'Neurointegration Institute gathering' ); neurocoaching_cta(); neurocoaching_faqs(); ?>
+<article class="neuro-psd">
+	<section class="neuro-hero">
+		<div class="neuro-hero__photo"><img src="<?php echo esc_url( $images . 'neuro-hero.webp' ); ?>" alt="Ksenia Belousova holding hydrangeas"></div>
+		<div class="neuro-hero__copy">
+			<p class="neuro-kicker">Neurointegration coaching</p>
+			<h1>Burned out, overwhelmed, or know something needs to change?</h1>
+			<p>I had the United Nations career, four countries, the life that looked like a dream from the outside. Then I hit a wall — and what I discovered on the other side is what I now teach.</p>
+			<p class="neuro-lead">If something needs to change but you don't know where to start — I'm here to help.</p>
+			<a class="neuro-button" href="<?php echo esc_url( $booking ); ?>">Book a free call</a>
+		</div>
+	</section>
+
+	<section class="neuro-education" aria-labelledby="neuro-education-title">
+		<div class="neuro-wrap">
+			<h2 id="neuro-education-title">Education &amp; Experience</h2>
+			<div class="neuro-certificates">
+				<?php for ( $certificate = 1; $certificate <= 5; $certificate++ ) : ?>
+					<figure><img src="<?php echo esc_url( $images . 'about-certificate-' . $certificate . '.webp' ); ?>" alt="Professional certificate <?php echo esc_attr( (string) $certificate ); ?>"></figure>
+				<?php endfor; ?>
+			</div>
+			<a class="neuro-more" href="#neuro-credentials">View more <span aria-hidden="true">→</span></a>
+		</div>
+	</section>
+	<section id="neuro-credentials" class="neuro-credentials neuro-wrap" aria-label="Qualifications and experience">
+		<ul><?php foreach ( $credentials as $credential ) : ?><li><?php echo esc_html( $credential ); ?></li><?php endforeach; ?></ul>
+	</section>
+
+	<section class="neuro-difference neuro-wrap" aria-labelledby="neuro-difference-title">
+		<div class="neuro-difference__intro">
+			<h2 id="neuro-difference-title">Why this is<br>different</h2><span class="neuro-waves" aria-hidden="true">≋</span>
+			<p>Most coaching changes what you think. NeuroIntegration changes how your brain responds to stress and change. That's why the results last.</p>
+			<p>This isn't therapy. It's a structured, science-based process personalised to your needs and your pace.</p>
+		</div>
+		<div class="neuro-difference__process">
+			<h2>We work with<br>your brain —<br>not against it</h2>
+			<dl>
+				<div><dt>Understand your patterns</dt><dd>We identify what's driving your reactions — not through theory, but through what's actually happening in your life right now.</dd></div>
+				<div><dt>Stabilise your internal state</dt><dd>Before any plan, we restore your energy and clarity. You can't think straight when your nervous system is overloaded.</dd></div>
+				<div><dt>Build from there</dt><dd>With a clear head and real capacity, we create a direction and plan your brain can actually sustain.</dd></div>
+			</dl>
+			<strong>No pressure. No overnight overhaul. Just real, lasting change.</strong>
+		</div>
+	</section>
+
+	<section class="neuro-services neuro-wrap" aria-labelledby="neuro-services-title">
+		<h2 id="neuro-services-title">Services | Neurointegration</h2>
+		<div class="neuro-service-grid">
+			<article class="neuro-card">
+				<p class="neuro-card__label">3 weeks (21 days) · 4 sessions</p><h3>Individual<br>NeuroSprint<br>Coaching</h3><span class="neuro-waves" aria-hidden="true">≋</span>
+				<p>A personalised 3-week coaching programme designed to help you build sustainable habits, achieve the goals you set for the sprint, and create lasting change — at a pace your brain can actually absorb.</p>
+				<h4>Includes:</h4>
+				<ul><li><strong>Strategy Session (90 min)</strong><br>Assess your current state, needs, challenges, and goals. Together, we create your personalised strategy and sprint plan.</li><li><strong>Week 2: Check-in (45 min)</strong><br>Fine-tune your approach and maintain momentum.</li><li><strong>Sprint Integration Session (60–90 min)</strong><br>Reflect on achievements, consolidate new habits, and plan your next steps.</li><li>Personalised learning materials and exercises</li><li>Individual chat support between sessions</li><li>Templates, worksheets, and progress trackers</li><li>Full confidentiality</li></ul>
+				<p class="neuro-price">350 €</p><a class="neuro-button" href="<?php echo esc_url( $booking ); ?>">Book NeuroSprint</a>
+			</article>
+			<article class="neuro-card neuro-card--featured">
+				<span class="neuro-card__flag">Flagship</span><p class="neuro-card__label">Career strategy + NeuroSprint in parallel<br>3 weeks · 8 sessions · personalised support</p><h3>Integrated<br>Transformation</h3><span class="neuro-waves" aria-hidden="true">≋</span>
+				<p>For those who are ready to move forward in their career with clarity, confidence, and sustainable energy — and turn their goals into realistic, achievable steps.</p><p>The programme combines strategic career work with NeuroSprint coaching, helping you build the focus, emotional balance, and resilience needed to move forward without falling back into chronic stress or burnout.</p>
+				<h4>Includes:</h4>
+				<ul><li><strong>Career strategy &amp; action plan</strong><br>Clarify your value, strengths, positioning, and next career direction.</li><li><strong>Individual NeuroSprint coaching</strong><br>A personalised sprint to strengthen focus, balance, and resilience.</li><li><strong>NeuroIntegration practices</strong><br>Practical tools for focus, emotional balance, and stress regulation.</li><li><strong>Worksheets and templates</strong><br>Structured materials to support reflection and action.</li><li><strong>Individual chat support and full confidentiality</strong></li></ul>
+				<p class="neuro-card__outcome">Clear direction, stronger positioning, renewed energy, and a realistic plan you can actually follow.</p>
+				<p class="neuro-price"><s>800 €</s> <strong>700 €</strong></p><span class="neuro-card__offer">Special Offer</span><a class="neuro-button" href="<?php echo esc_url( $booking ); ?>">Book Combo Package</a>
+			</article>
+		</div>
+	</section>
+
+	<section class="neuro-story">
+		<div class="neuro-story__photo"><img src="<?php echo esc_url( $images . 'neuro-story.webp' ); ?>" alt="Ksenia Belousova beside flowering trees"></div>
+		<div class="neuro-story__copy">
+			<h2>I didn't find this in a book.<br>I found it in the hardest years of my life.</h2>
+			<p>I built a successful international career at the United Nations — working alongside diplomats, leading people across different cultures, and changing my career path several times along the way. I relocated to four countries, travelled constantly, and lived a life that, from the outside, looked extraordinary.</p>
+			<p>And it was. I also had a husband I love, two children growing up too fast, and aging parents who needed me. Every role I played, I gave it everything. What I didn't realise was how far I had overstretched — until the day I simply couldn't go on anymore. Not because something broke. Because I had nothing left.</p>
+			<p>That's when I stopped looking for a better strategy and started understanding how my brain actually works. That search led me to neuroscience — and changed everything.</p>
+			<h3>I was doing everything right. And I still felt completely lost.</h3>
+			<p>That's the moment I understand better than any theory. It's not about not trying hard enough. It's about running a system that was never designed for this much — and not knowing how to reset it.</p>
+		</div>
+	</section>
+
+	<section class="neuro-method neuro-wrap" aria-labelledby="neuro-method-title">
+		<div class="neuro-method__copy"><h2 id="neuro-method-title">The method based on the NeuroIntegration method by Katerina Lengold</h2><p>The NeuroIntegration method was developed by Katerina Lengold, founder of the California Institute of Neurointegration.</p><p>It combines neuroscience, psychology, and behavioural science into a practical coaching framework that works with how your brain is actually wired. NeuroSprints apply this in focused 21-day cycles — structured enough to create real change, flexible enough to fit a full life.</p><a href="https://neurointegration.org/">Learn more about the science: neurointegration.org</a></div>
+		<img src="<?php echo esc_url( $images . 'neuro-method.webp' ); ?>" alt="Three-stage NeuroIntegration method diagram">
+	</section>
+
+	<section class="neuro-suitable neuro-wrap" aria-labelledby="neuro-suitable-title">
+		<h2 id="neuro-suitable-title">Is this you?<br>You might be in the right place if...</h2>
+		<div class="neuro-suitable__grid">
+			<p><strong>You're exhausted but can't slow down</strong><span>You keep pushing through — but the energy just isn't there anymore.</span></p><p><strong>You're facing a big change</strong><span>New country, new role, new chapter — and you don't know where to start.</span></p><p><strong>You feel stuck but don't know why</strong><span>You've tried changing things — jobs, habits, routines. Nothing fully clicks.</span></p><p><strong>You've been putting yourself last</strong><span>Everyone else comes first. You've lost track of what you actually want.</span></p><p><strong>You're doing everything right — still feel empty</strong><span>On paper it looks good. Inside, something is missing.</span></p><p><strong>You know you're capable of more</strong><span>But something keeps getting in the way — and you're ready to find out what.</span></p>
+		</div>
+	</section>
+
+	<section class="neuro-reviews" aria-labelledby="neuro-reviews-title"><div class="neuro-wrap"><h2 id="neuro-reviews-title">Reviews</h2><div class="neuro-review-track">
+		<blockquote><header><strong>Elena P.</strong><a href="<?php echo esc_url( $social ); ?>">View profile on LinkedIn</a></header><p>Working with Ksenia helped me understand the real reasons behind my procrastination. I became more self-aware and grateful. I feel calmer now, and my anxiety has noticeably decreased.<br><br>I am very grateful to Ksenia for her openness, her genuine desire to support, and her ability to help me see and acknowledge my own progress.</p></blockquote>
+		<blockquote><header><strong>Olesya K.</strong><a href="<?php echo esc_url( $social ); ?>">View profile on LinkedIn</a></header><p>I am truly grateful to Ksenia for the results I achieved, and for her professionalism, warmth, and thoughtful feedback. I learned to give myself more rest and to assess my energy and resources more realistically, so I can distribute them more harmoniously across different areas of my life.</p></blockquote>
+		<blockquote><header><strong>Olga R.</strong><a href="<?php echo esc_url( $social ); ?>">View profile on LinkedIn</a></header><p>The sessions with Ksenia had a very warm, light, and supportive atmosphere. I felt truly seen, heard, and cared for throughout the process.<br><br>Ksenia brings a very positive energy. What I especially appreciated was the combination of lightness and depth in her work, as well as her sincere understanding and strong empathy.</p></blockquote>
+	</div></div></section>
+
+	<section class="neuro-life neuro-wrap" aria-labelledby="neuro-life-title"><h2 id="neuro-life-title">In real life</h2><a href="<?php echo esc_url( $social ); ?>">Follow on Instagram</a><div><button type="button" aria-label="Previous photo">←</button><img src="<?php echo esc_url( $images . 'neuro-life.webp' ); ?>" alt="Neurointegration Institute gathering"><button type="button" aria-label="Next photo">→</button></div><p aria-hidden="true">● ○ ○ ○ ○ ○ ○ ○ ○ ○ ○ ○ ○ ○ ○ ○ ○ ○ ○ ○ ○ ○</p></section>
+
+	<section class="neuro-cta"><div class="neuro-wrap"><h2>Ready to stop waiting for "someday"?</h2><p>Free 30-min intro call · No commitment</p><a class="neuro-button neuro-button--light" href="<?php echo esc_url( $booking ); ?>">Book a free call</a></div></section>
+
+	<section id="faqs" class="neuro-faq neuro-wrap" aria-labelledby="neuro-faq-title">
+		<header><h2 id="neuro-faq-title">FAQs</h2><p>(Frequently Asked Questions)</p></header>
+		<div class="neuro-faq__questions"><?php foreach ( $faqs as $question => $answer ) : ?><details><summary><?php echo esc_html( $question ); ?></summary><p><?php echo esc_html( $answer ); ?></p></details><?php endforeach; ?><p class="neuro-faq__closing">Start with a conversation. You don't need a perfect plan — just the willingness to change something. Book a Discovery Session: free 30 minutes that will give you clarity on where you are, what's holding you back, and exactly what your next step looks like. From there, we build everything together.</p></div>
+		<aside><img src="<?php echo esc_url( $images . 'about-faq.webp' ); ?>" alt="Ksenia in the mountains"><h2>Ready to take the first step?</h2><p>Leave with clarity, a defined direction, and a concrete next step.</p><a class="neuro-button" href="<?php echo esc_url( $booking ); ?>">Book a free call</a></aside>
+	</section>
 </article>
 <?php get_footer();

@@ -52,6 +52,9 @@ function neurocoaching_route_body_class( $classes ) {
 	if ( '/career-services/' === trailingslashit( '/' . ltrim( (string) $path, '/' ) ) ) {
 		$classes[] = 'career-services-route';
 	}
+	if ( '/neurocoaching/' === trailingslashit( '/' . ltrim( (string) $path, '/' ) ) ) {
+		$classes[] = 'neurocoaching-route';
+	}
 	return $classes;
 }
 add_filter( 'body_class', 'neurocoaching_route_body_class' );
