@@ -7,7 +7,7 @@
   "baseline_files_changed": false,
   "implementation": {
     "runtime_file": "wordpress/wp-content/themes/neurocoaching/style.css",
-    "summary": "Restored manifest-derived About offsets, Career and Neuro mobile portrait geometry, header stacking, and a bounded In real life to CTA stacking/overflow boundary.",
+    "summary": "Scaled the 1320px About artboard to its 1440px acceptance viewport, restored route header colours from body-scoped variables, placed the Career mobile portrait at PSD bounds [37,58,291,491], corrected the Neuro mobile hero crop, and bounded mobile overflow.",
     "dom_text_changed": false,
     "interaction_code_changed": false,
     "source_assets_replaced": false
@@ -17,21 +17,21 @@
     "status": "passed",
     "baseline_hashes_verified": 6,
     "route_copy_checks": 3,
-    "psd_geometry_rules": 15
+    "psd_geometry_rules": 18
   },
   "browser_qa": {
-    "capture_kind": "staging DOM with correction CSS applied as a browser candidate overlay",
+    "capture_kind": "staging DOM with the PR correction CSS applied as a browser candidate overlay at exact CDP viewports",
     "console_errors": 0,
-    "horizontal_overflow": "not_claimed: Chromium CLI enforced a 500 CSS px minimum for 390 px output captures",
+    "horizontal_overflow": 0,
     "desktop_visual_diff_ratio_at_18_percent_fuzz": {
-      "about": 0.230826,
-      "career": 0.103992,
-      "neurocoaching": 0.102427
+      "about": 0.107766,
+      "career": 0.090897,
+      "neurocoaching": 0.089374
     },
     "mobile_visual_diff_ratio_at_18_percent_fuzz": {
-      "about": 0.360828,
-      "career": 0.419085,
-      "neurocoaching": 0.430122
+      "about": 0.350744,
+      "career": 0.316062,
+      "neurocoaching": 0.413872
     },
     "screenshots": [
       "about-desktop.png", "about-mobile.png", "career-desktop.png", "career-mobile.png",
@@ -39,10 +39,10 @@
     ]
   },
   "context_delta": {
-    "result": "Corrected PSD-derived hero geometry, mobile header stacking, and the About gallery-to-CTA overflow/stacking boundary; added immutable-baseline, exact-copy, and geometry regression coverage.",
-    "decisions": "Kept baseline PNGs and source assets unchanged; candidate screenshots disclose the browser CSS overlay and no staging deployment.",
-    "current_status": "Source correction and machine regression are ready in PR 19; controlled staging delivery and exact 390px overflow verification remain required.",
+    "result": "Corrected the confirmed canvas, header colour, Career portrait, Neuro crop, and mobile overflow defects; refreshed six exact-viewport candidate screenshots and machine regression evidence.",
+    "decisions": "Kept frozen baselines and source assets unchanged; used manifest bounds and body-scoped palette variables, with candidate screenshots explicitly identified as a browser CSS overlay.",
+    "current_status": "Desktop visual ratios are below the 0.18 contract threshold and browser QA is clean; mobile ratios improved but remain above 0.18 pending controlled delivery and acceptance review.",
     "constraints": "Project scope forbids direct deploy; production, WordPress core, uploads, credentials, database, deployment configuration, and baselines were not touched.",
-    "next_step": "Bridge should deliver the PR head to staging, then run exact 390x844 device emulation and live visual acceptance."
+    "next_step": "Bridge should deliver the PR head to staging and rerun the six exact-viewport visual checks; mobile source-preview softness remains the only measured acceptance risk."
   }
 }

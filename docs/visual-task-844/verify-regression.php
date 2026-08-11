@@ -38,16 +38,19 @@ foreach ( $templates as $file => $required ) {
 
 $css = file_get_contents( $root . '/wordpress/wp-content/themes/neurocoaching/style.css' );
 $required_css = array(
-	'.home .site-header { z-index:10;', 'left:563px;',
+	'body.home:not(.career-services-route):not(.neurocoaching-route) .site-header { z-index:10;', 'left:563px;',
 	'.nc-about__hero { width:1320px;', 'margin-left:0;',
-	'.career-hero__photo { height:438px; background:#f7d7c6;', 'width:79.375%; max-width:none;',
-	'.neuro-hero { height:1045px;', '.neuro-hero__photo { width:320px; height:488px;',
+	'.career-hero__photo { height:438px; background:#f7d7c6;', 'width:254px; max-width:none; height:433px; margin:5px 0 0 37px;',
+	'.neuro-hero { height:1045px;', '.neuro-hero__photo { width:100%; height:456px;',
 	'.neurocoaching-route .site-header { z-index:10;', '.career-services-route .site-header { z-index:10;',
 	'.nc-about__life { position:relative; height:944px; padding-top:143px; overflow:hidden; isolation:isolate;',
 	'.nc-about__life-photo { position:relative; z-index:1; height:479px;',
 	'.nc-about__cta { position:relative; z-index:2; height:401px;',
 	'.nc-gallery__viewport { min-width:0; overflow:hidden;',
 	'.nc-gallery__slide { height:100%; margin:0; overflow:hidden;',
+	'.home .site-header,.home .nc-about { zoom:calc(100vw / 1320px);',
+	'.home,.career-services-route,.neurocoaching-route { overflow-x:hidden;',
+	'background:var(--purple);',
 );
 foreach ( $required_css as $rule ) {
 	if ( false === strpos( $css, $rule ) ) {
