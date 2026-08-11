@@ -3,6 +3,8 @@
 get_header();
 neurocoaching_header( 'neuro' );
 $images  = get_template_directory_uri() . '/assets/images/';
+$desktop_source = $images . 'neurocoaching-source/desktop-1440/';
+$mobile_source  = $images . 'neurocoaching-source/mobile-320/';
 $booking = neurocoaching_mod( 'booking_url', 'mailto:hello@example.com' );
 $social    = neurocoaching_mod( 'contact_url', 'https://www.linkedin.com/' );
 $instagram = neurocoaching_mod( 'instagram_url', 'https://www.instagram.com/' );
@@ -33,7 +35,7 @@ $faqs = array(
 ?>
 <article class="neuro-psd">
 	<section class="neuro-hero">
-		<div class="neuro-hero__photo"><img src="<?php echo esc_url( $images . 'neuro-hero.webp' ); ?>" alt="Ksenia Belousova holding hydrangeas"></div>
+		<div class="neuro-hero__photo"><picture><source media="(max-width: 850px)" srcset="<?php echo esc_url( $mobile_source . 'mobile-320-11729-img-9921.png' ); ?>"><img src="<?php echo esc_url( $images . 'neuro-hero.webp' ); ?>" alt="Ksenia Belousova holding hydrangeas"></picture></div>
 		<div class="neuro-hero__copy">
 			<p class="neuro-kicker">Neurointegration coaching</p>
 			<h1>Burned out, overwhelmed, or know something needs to change?</h1>
@@ -48,7 +50,8 @@ $faqs = array(
 			<h2 id="neuro-education-title">Education &amp; Experience</h2>
 			<div class="neuro-certificates">
 				<?php for ( $certificate = 1; $certificate <= 5; $certificate++ ) : ?>
-					<figure><img src="<?php echo esc_url( $images . 'about-certificate-' . $certificate . '-source.png' ); ?>" alt="Professional certificate <?php echo esc_attr( (string) $certificate ); ?>"></figure>
+					<?php $certificate_assets = array( 1 => 'desktop-1440-9732-layer-3-copy.png', 2 => 'desktop-1440-9736-2-copy-2.png', 3 => 'desktop-1440-9740-1-copy.png', 4 => 'desktop-1440-9734-layer-7-copy.png', 5 => 'desktop-1440-9738-2-copy-2.png' ); ?>
+					<figure><img src="<?php echo esc_url( $desktop_source . $certificate_assets[ $certificate ] ); ?>" alt="Professional certificate <?php echo esc_attr( (string) $certificate ); ?>"></figure>
 				<?php endfor; ?>
 			</div>
 			<a class="neuro-more" href="#neuro-credentials">View more <span aria-hidden="true">→</span></a>
@@ -97,7 +100,7 @@ $faqs = array(
 	</section>
 
 	<section class="neuro-story">
-		<div class="neuro-story__photo"><img src="<?php echo esc_url( $images . 'neuro-story.webp' ); ?>" alt="Ksenia Belousova beside flowering trees"></div>
+		<div class="neuro-story__photo"><picture><source media="(max-width: 850px)" srcset="<?php echo esc_url( $mobile_source . 'mobile-320-11783-img-6482.png' ); ?>"><img src="<?php echo esc_url( $images . 'neuro-story.webp' ); ?>" alt="Ksenia Belousova beside flowering trees"></picture></div>
 		<div class="neuro-story__copy">
 			<h2>I didn't find this in a book.<br>I found it in the hardest years of my life.</h2>
 			<p>I built a successful international career at the United Nations — working alongside diplomats, leading people across different cultures, and changing my career path several times along the way. I relocated to four countries, travelled constantly, and lived a life that, from the outside, looked extraordinary.</p>
@@ -110,7 +113,7 @@ $faqs = array(
 
 	<section class="neuro-method neuro-wrap" aria-labelledby="neuro-method-title">
 		<div class="neuro-method__copy"><h2 id="neuro-method-title">The method based on the NeuroIntegration method by Katerina Lengold</h2><p>The NeuroIntegration method was developed by Katerina Lengold, founder of the California Institute of Neurointegration.</p><p>It combines neuroscience, psychology, and behavioural science into a practical coaching framework that works with how your brain is actually wired. NeuroSprints apply this in focused 21-day cycles — structured enough to create real change, flexible enough to fit a full life.</p><a href="https://neurointegration.org/">Learn more about the science: neurointegration.org</a></div>
-		<img src="<?php echo esc_url( $images . 'neuro-method.webp' ); ?>" alt="Three-stage NeuroIntegration method diagram">
+		<picture><source media="(max-width: 850px)" srcset="<?php echo esc_url( $mobile_source . 'mobile-320-12195-neuro-pyramid-web-transparent-copy.png' ); ?>"><img src="<?php echo esc_url( $desktop_source . 'desktop-1440-11037-neuro-pyramid-web-transparent-copy.png' ); ?>" alt="Three-stage NeuroIntegration method diagram"></picture>
 	</section>
 
 	<section class="neuro-suitable neuro-wrap" aria-labelledby="neuro-suitable-title">
@@ -133,7 +136,7 @@ $faqs = array(
 	<section id="faqs" class="neuro-faq neuro-wrap" aria-labelledby="neuro-faq-title">
 		<header><h2 id="neuro-faq-title">FAQs</h2><p>(Frequently Asked Questions)</p></header>
 		<div class="neuro-faq__questions"><?php foreach ( $faqs as $question => $answer ) : ?><details><summary><?php echo esc_html( $question ); ?></summary><p><?php echo esc_html( $answer ); ?></p></details><?php endforeach; ?><p class="neuro-faq__closing">Start with a conversation. You don't need a perfect plan — just the willingness to change something. Book a Discovery Session: free 30 minutes that will give you clarity on where you are, what's holding you back, and exactly what your next step looks like. From there, we build everything together.</p></div>
-		<aside><img src="<?php echo esc_url( $images . 'about-faq-source.webp' ); ?>" alt="Ksenia in the mountains"><h2>Ready to take the first step?</h2><p>Leave with clarity, a defined direction, and a concrete next step.</p><a class="neuro-button" href="<?php echo esc_url( $booking ); ?>">Book a free call</a></aside>
+		<aside><picture><source media="(max-width: 850px)" srcset="<?php echo esc_url( $mobile_source . 'mobile-320-12287-img-2146.png' ); ?>"><img src="<?php echo esc_url( $images . 'about-faq-source.webp' ); ?>" alt="Ksenia in the mountains"></picture><h2>Ready to take the first step?</h2><p>Leave with clarity, a defined direction, and a concrete next step.</p><a class="neuro-button" href="<?php echo esc_url( $booking ); ?>">Book a free call</a></aside>
 	</section>
 </article>
 <?php get_footer();
