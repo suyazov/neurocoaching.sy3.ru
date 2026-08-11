@@ -8,7 +8,7 @@ $instagram_url = neurocoaching_mod( 'instagram_url', 'https://www.instagram.com/
 ?>
 <article class="career-psd">
 	<section class="career-hero">
-		<div class="career-hero__photo"><img src="<?php echo esc_url( get_theme_file_uri( '/assets/images/career-hero.webp' ) ); ?>" alt="Ksenia Belousova"></div>
+		<div class="career-hero__photo"><picture><source media="(max-width: 700px)" srcset="<?php echo esc_url( get_theme_file_uri( '/assets/images/career-source/mobile-11371-layer.png' ) ); ?>"><img src="<?php echo esc_url( get_theme_file_uri( '/assets/images/career-source/desktop-8539-place-your-image-here-double-click-to-edit.png' ) ); ?>" alt="Ksenia Belousova"></picture></div>
 		<div class="career-hero__copy">
 			<h1>Stop postponing <span>your life</span></h1>
 			<p class="career-quote">Your time is limited, so don’t waste it living someone else’s life.”<br>– Steve Jobs</p>
@@ -97,19 +97,27 @@ $instagram_url = neurocoaching_mod( 'instagram_url', 'https://www.instagram.com/
 			<p>You do not have to figure this out alone. Together, we will clarify your direction, make your experience visible, and create a clear plan for your next move. My approach combines international HR expertise, career strategy, and nervous-system-aware guidance – so you can move forward with clarity and confidence.</p>
 			<a class="career-button career-button--light" href="<?php echo esc_url( $booking_url ); ?>">Book a free call</a>
 		</div>
-		<img src="<?php echo esc_url( get_theme_file_uri( '/assets/images/career-portrait.webp' ) ); ?>" alt="Ksenia Belousova in a blue beret">
+		<picture><source media="(max-width: 700px)" srcset="<?php echo esc_url( get_theme_file_uri( '/assets/images/career-source/mobile-11325-layer.png' ) ); ?>"><img src="<?php echo esc_url( get_theme_file_uri( '/assets/images/career-source/desktop-10951-layer.png' ) ); ?>" alt="Ksenia Belousova in a blue beret"></picture>
 	</section>
 
 	<section class="career-reviews" aria-labelledby="career-reviews-title"><div class="career-wrap">
 		<h2 id="career-reviews-title">Reviews</h2>
 		<div class="career-review-track" tabindex="0" role="region" aria-label="Career reviews; use left and right arrow keys to browse" data-horizontal-track>
-			<blockquote><header><strong>Andrea Scherer</strong><span>Logistics Engineer</span><a href="<?php echo esc_url( $social_url ); ?>">View profile on LinkedIn</a></header><p>I had the pleasure of connecting with Ksenia during my job search, and I was truly impressed by her dedication and support. She is incredibly empathetic, open-hearted, and genuinely cares about helping others. Conversations with Ksenia are not only productive but also leave you with a real sense of comfort and encouragement. Her efforts go above and beyond, and I can wholeheartedly recommend her to anyone seeking guidance or support in their professional journey!</p></blockquote>
-			<blockquote><header><strong>Sayazhan Tuyakova</strong><span>Erasmus Mundus<br>Master of Arts in European Studies</span><a href="<?php echo esc_url( $social_url ); ?>">View profile on LinkedIn</a></header><p>I would like to share my impressions of Ksenia’s professional expertise in preparing candidates for vacancies at international organizations and navigating their hiring systems. I learned valuable new tips on improving my CV, profile, and motivation letters. She helped me narrow down the range of vacancies that best align with my career path, and she highlighted my strengths while helping me structure a strong cover letter. I greatly appreciate her guidance, encouragement, and optimism.</p></blockquote>
-			<blockquote><header><strong>Fernand Gouveia</strong><span>Building Innovation Ecosystems<br>Princeton University</span><a href="<?php echo esc_url( $social_url ); ?>">View profile on LinkedIn</a></header><p>I highly recommend Ksenia for senior HR or project management roles. She is a dedicated mentor with a great deal of perspective and a great communicator who inspires those around her to do their best. She’s a natural leader who combines strategic vision with hands-on execution, always delivering excellent results in challenging international settings.</p></blockquote>
+			<blockquote><header><strong>Andrea Scherer</strong><span>Logistics Enginee</span><a href="<?php echo esc_url( $social_url ); ?>">View profile on LinkedIn</a></header><p>I had the pleasure of connecting with Ksenia during my job search, and I was truly impressed by her dedication and support. She is incredibly empathetic, open-hearted, and genuinely cares about helping others. Conversations with Ksenia are not only productive but also leave you with a real sense of comfort and encouragement. Her efforts go above and beyond, and I can wholeheartedly recommend her to anyone seeking guidance or support in their professional journey!</p><button class="career-review-more" type="button" aria-expanded="false">View full version</button></blockquote>
+			<blockquote><header><strong>Sayazhan Tuyakova</strong><span>Erasmus Mundus<br>Master of Arts in European Studies</span><a href="<?php echo esc_url( $social_url ); ?>">View profile on LinkedIn</a></header><p>I would like to share my impressions of Ksenia’s professional expertise in preparing candidates for vacancies at international organizations and navigating their hiring systems. I learned valuable new tips on improving my CV, profile, and motivation letters. She helped me narrow down the range of vacancies that best align with my career path, and she highlighted my strengths while helping me structure a strong cover letter. I greatly appreciate her guidance, encouragement, and optimism.</p><button class="career-review-more" type="button" aria-expanded="false">View full version</button></blockquote>
+			<blockquote><header><strong>Fernand Gouveia</strong><span>Building Innovation Ecosystems<br>Princeton University</span><a href="<?php echo esc_url( $social_url ); ?>">View profile on LinkedIn</a></header><p>I highly recommend Ksenia for senior HR or project management roles. She is a dedicated mentor with a great deal of perspective and great communicator who inspires those around her to do their best, bringing out the best in both people and by extension the projects they work on. She’s a natural leader who combines strategic vision with hands-on execution, always delivering excellent results, even in challenging international settings where her perspective is an obvious asset. Ksenia’s mix of technical skills, cultural understanding, and data-driven thinking makes her a valuable addition to any global team.</p><button class="career-review-more" type="button" aria-expanded="false">View full version</button></blockquote>
 		</div>
 	</div></section>
 
-	<section class="career-life career-wrap" aria-labelledby="career-life-title"><h2 id="career-life-title">In real life</h2><a href="<?php echo esc_url( $instagram_url ); ?>">Follow on Instagram</a><?php neurocoaching_gallery( 'career_gallery_urls', get_theme_file_uri( '/assets/images/career-life.webp' ), 'Ksenia at an international flags installation', 'career-life__gallery' ); ?></section>
+	<section class="career-life career-wrap" aria-labelledby="career-life-title">
+		<h2 id="career-life-title">In real life</h2><a href="<?php echo esc_url( $instagram_url ); ?>">Follow on Instagram</a>
+		<div class="career-life__gallery nc-gallery" role="region" aria-roledescription="carousel" aria-label="In real life photo gallery">
+			<button type="button" aria-label="Previous photo" disabled>←</button>
+			<div class="nc-gallery__viewport"><figure class="nc-gallery__slide"><picture><source media="(max-width: 700px)" srcset="<?php echo esc_url( get_theme_file_uri( '/assets/images/career-source/mobile-11362-img-2842.png' ) ); ?>"><img src="<?php echo esc_url( get_theme_file_uri( '/assets/images/career-source/desktop-9230-img-2842.png' ) ); ?>" alt="Ksenia at an international flags installation"></picture></figure></div>
+			<button type="button" aria-label="Next photo" disabled>→</button>
+			<div class="nc-gallery__pagination" aria-label="Photo 1 of 1"><button type="button" aria-label="Show photo 1" aria-current="true" disabled></button></div>
+		</div>
+	</section>
 
 	<section class="career-cta"><div class="career-wrap"><h2>Ready to take the first step?</h2><p>Free 30-min intro call · No commitment</p><a class="career-button career-button--light" href="<?php echo esc_url( $booking_url ); ?>">Book a Consultation Session</a></div></section>
 
@@ -135,7 +143,7 @@ $instagram_url = neurocoaching_mod( 'instagram_url', 'https://www.instagram.com/
 			<details><summary><?php echo esc_html( $question ); ?></summary><p><?php echo esc_html( $answer ); ?></p></details>
 		<?php endforeach; ?>
 		</div>
-		<aside><img src="<?php echo esc_url( get_theme_file_uri( '/assets/images/about-faq-source.webp' ) ); ?>" alt="Ksenia Belousova"><h2>Ready to take the first step?</h2><p>Leave with clarity, a defined direction, and a concrete next step.</p><a class="career-button" href="<?php echo esc_url( $booking_url ); ?>">Book a Consultation Session</a></aside>
+		<aside><picture><source media="(max-width: 700px)" srcset="<?php echo esc_url( get_theme_file_uri( '/assets/images/career-source/mobile-10521-place-your-image-here-copy.png' ) ); ?>"><img src="<?php echo esc_url( get_theme_file_uri( '/assets/images/career-source/desktop-10532-place-your-image-here-double-click-to-edit.png' ) ); ?>" alt="Ksenia Belousova sailing"></picture><h2>Ready to take the first step?</h2><p>Leave with clarity, a defined direction, and a concrete next step.</p><a class="career-button" href="<?php echo esc_url( $booking_url ); ?>">Book a Consultation Session</a></aside>
 	</section>
 </article>
 <?php get_footer();

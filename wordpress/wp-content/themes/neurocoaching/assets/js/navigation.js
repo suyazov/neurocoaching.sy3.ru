@@ -64,4 +64,14 @@
       track.scrollBy({ left: (event.key === 'ArrowRight' ? 1 : -1) * Math.max(260, track.clientWidth * 0.8), behavior: 'smooth' });
     });
   });
+
+  document.querySelectorAll('.career-review-more').forEach(function (button) {
+    button.addEventListener('click', function () {
+      const card = button.closest('blockquote');
+      const expanded = button.getAttribute('aria-expanded') === 'true';
+      button.setAttribute('aria-expanded', String(!expanded));
+      button.textContent = expanded ? 'View full version' : 'Show less';
+      if (card) card.classList.toggle('is-expanded', !expanded);
+    });
+  });
 }());
