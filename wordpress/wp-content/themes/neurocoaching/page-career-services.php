@@ -10,7 +10,7 @@ $instagram_url = neurocoaching_mod( 'instagram_url', 'https://www.instagram.com/
 	<section class="career-hero">
 		<div class="career-hero__photo"><picture><source media="(max-width: 700px)" srcset="<?php echo esc_url( get_theme_file_uri( '/assets/images/career-hero.webp' ) ); ?>"><img src="<?php echo esc_url( get_theme_file_uri( '/assets/images/career-source/desktop-8539-place-your-image-here-double-click-to-edit.png' ) ); ?>" alt="Ksenia Belousova"></picture></div>
 		<div class="career-hero__copy">
-			<h1>Stop postponing <span>your life</span></h1>
+			<h1>Stop postponing your life</h1>
 			<p class="career-quote">Your time is limited, so don’t waste it living someone else’s life.”<br>– Steve Jobs</p>
 			<p class="career-intro"><strong>You are ready for more, but your next step feels unclear.</strong></p>
 			<p>You want to move into the UN, an international organisation, or a global role, but you are not sure how to position yourself. You have been applying and hearing nothing back. You have strong experience, but your CV does not fully show your value.</p>
