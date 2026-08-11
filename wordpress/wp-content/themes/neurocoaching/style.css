@@ -277,9 +277,9 @@ details p { padding:0 45px 18px 0; }
 	.neurocoaching-route .site-header.is-open .primary-nav { display:flex; }
 	.neurocoaching-route .primary-nav a { width:auto; height:auto; padding:3px 0; border:0; border-radius:0; color:#fff; }
 	.neuro-button { min-height:53px; padding:11px 29px; font-size:14px; }
-	.neuro-hero { height:994px; display:block; padding-top:53px; }
-	.neuro-hero__photo { height:385px; }
-	.neuro-hero__photo img { object-position:center 8%; }
+	.neuro-hero { height:1045px; display:block; padding-top:53px; }
+	.neuro-hero__photo { width:320px; height:488px; }
+	.neuro-hero__photo img { width:325px; max-width:none; height:488px; object-fit:cover; object-position:center top; }
 	.neuro-hero__copy { width:auto; padding:37px 16px 20px; font-size:14px; line-height:1.38; }
 	.neuro-kicker { margin-bottom:21px; font-size:11px; }
 	.neuro-hero h1 { width:275px; margin-bottom:24px; font-size:40px; line-height:1.02; }
@@ -485,8 +485,9 @@ details p { padding:0 45px 18px 0; }
 	.career-services-route .site-header.is-open .primary-nav { display:flex; }
 	.career-services-route .primary-nav a { width:auto; height:auto; padding:3px 0; border:0; border-radius:0; color:#fff; }
 	.career-hero { height:1525px; display:block; padding-top:53px; }
-	.career-hero__photo { height:402px; }
-	.career-hero__photo img { object-position:center 9%; }
+	.career-hero__photo { height:438px; background:#f7d7c6; }
+	.career-hero__photo picture { display:block; width:100%; height:100%; }
+	.career-hero__photo img { width:79.375%; max-width:none; height:auto; margin-left:11.5625%; object-fit:initial; object-position:initial; }
 	.career-hero__copy { width:auto; padding:44px 18px 30px; font-size:14px; line-height:1.42; }
 	.career-hero h1 { margin-bottom:22px; font-size:40px; line-height:1; }
 	.career-quote { width:260px; margin-bottom:29px; }
@@ -576,7 +577,7 @@ details p { padding:0 45px 18px 0; }
 .nc-about { --nc-about-purple:#3f2961; --nc-about-violet:#855cac; --nc-about-lilac:#e9e1f3; --nc-about-paper:#f8f1ee; --nc-about-ink:#252525; overflow:hidden; color:var(--nc-about-ink); background:var(--nc-about-paper); font-family:Lato,Arial,sans-serif; }
 .nc-about h1,.nc-about h2,.nc-about h3 { font-family:"IBM Plex Sans",Arial,sans-serif; font-weight:700; letter-spacing:-.035em; }
 .nc-about__frame { width:930px; max-width:calc(100% - 64px); margin-inline:auto; }
-.home .site-header { top:30px; right:max(0px,calc((100% - 1320px)/2 + 193px)); width:564px; height:115px; min-height:0; display:block; font-family:Lato,Arial,sans-serif; }
+.home .site-header { top:30px; right:auto; left:563px; width:564px; height:115px; min-height:0; display:block; font-family:Lato,Arial,sans-serif; }
 .home .brand { position:absolute; top:0; left:2px; width:110px; height:55px; margin:0; transform:none; }
 .home .brand img { width:110px; height:55px; object-fit:contain; filter:brightness(0) saturate(100%) invert(23%) sepia(17%) saturate(3572%) hue-rotate(247deg) brightness(83%) contrast(90%); }
 .home .about-socials { position:absolute; top:8px; left:444px; width:119px; height:29px; display:flex; align-items:start; justify-content:space-between; }
@@ -591,7 +592,7 @@ details p { padding:0 45px 18px 0; }
 .home .primary-nav a:nth-child(4) { left:315px; }
 .home .site-header>.button { position:absolute; top:56px; left:370px; width:194px; min-height:59px; padding:10px 12px; font-size:14px; letter-spacing:.08em; }
 .home .menu-toggle { display:none; }
-.nc-about__hero { width:1320px; max-width:100%; height:852px; display:grid; grid-template-columns:516px minmax(0,804px); margin-inline:auto; }
+.nc-about__hero { width:1320px; max-width:100%; height:852px; display:grid; grid-template-columns:516px minmax(0,804px); margin-left:0; }
 .nc-about__hero-photo { position:relative; height:852px; overflow:hidden; }
 .nc-about__hero-photo img { position:absolute; top:-130px; left:-87px; width:711px; max-width:none; height:1064px; object-fit:fill; }
 .nc-about__hero-copy { padding:200px 0 0 49px; }
@@ -674,7 +675,7 @@ details p { padding:0 45px 18px 0; }
 	.home .primary-nav { position:absolute; top:53px; left:0; width:100%; display:none; margin:0; padding:18px 15px 22px; flex-direction:column; gap:7px; background:var(--nc-about-purple); font-size:14px; }
 	.home .site-header.is-open .primary-nav { display:flex; }
 	.home .primary-nav a { position:relative; top:auto; left:auto!important; width:auto; height:auto; padding:3px 0; border:0; border-radius:0; color:#fff; }
-	.nc-about__hero { width:320px; height:1391px; display:block; padding-top:53px; }
+	.nc-about__hero { width:320px; height:1391px; display:block; margin-left:0; padding-top:53px; }
 	.nc-about__hero-photo { height:399px; }
 	.nc-about__hero-photo img { top:-55px; left:-13px; width:356px; height:530px; }
 	.nc-about__hero-copy { padding:34px 15px 24px; }

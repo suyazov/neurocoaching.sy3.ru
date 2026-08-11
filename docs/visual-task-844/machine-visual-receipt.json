@@ -1,0 +1,37 @@
+{
+  "task_id": "TASK-ISSUE-SUYAZOV_NEUROCOACHING.SY3.RU-844",
+  "environment": "neurocoaching.sy3.ru-staging",
+  "production_touched": false,
+  "baseline_immutable": true,
+  "baseline_files_changed": false,
+  "localization": {
+    "metric": "ImageMagick AE with 18% fuzz against task 836 actual captures",
+    "about_desktop": "About 1320px artboard was centered 60px right of its PSD origin; header inherited the same offset.",
+    "about_mobile": "The fixed 320px artboard was centered inside the 390px viewport instead of retaining its PSD left origin.",
+    "career_mobile": "The source portrait was stretched to the viewport and cover-cropped instead of using PSD bounds x=37..291, y=58..491.",
+    "neurocoaching_mobile": "The replacement source portrait used a 385px crop instead of the PSD hero image bounds y=48..536."
+  },
+  "implementation": {
+    "changed_file": "wordpress/wp-content/themes/neurocoaching/style.css",
+    "desktop": "Anchored the About 1320px artboard and header at the PSD x coordinates.",
+    "mobile": "Anchored the About artboard at x=0 and restored Career and Neuro portrait geometry from their mobile layer manifests.",
+    "dom_text_changed": false,
+    "interaction_code_changed": false,
+    "source_assets_replaced": false
+  },
+  "browser_qa": {
+    "status": "blocked_before_capture",
+    "reason": "Local Chromium aborted because the managed worktree path exceeds its Unix SingletonSocket path limit.",
+    "staging_mutated": false,
+    "console_errors": null,
+    "horizontal_overflow": null,
+    "new_screenshots": []
+  },
+  "context_delta": {
+    "result": "Corrected the manifest-confirmed desktop About offset and mobile hero geometry without changing baselines, copy, controls, or assets.",
+    "decisions": "Used exact PSD artboard and layer bounds; did not regenerate baselines or claim pre-change captures as new evidence.",
+    "current_status": "Theme correction is ready for review; post-deploy browser evidence remains required.",
+    "constraints": "Staging was not mutated directly; production, baselines, WordPress core, uploads, credentials, database, and deployment configuration remain untouched.",
+    "next_step": "After controlled staging delivery, capture all six viewports and record console_errors=0 and horizontal_overflow=0."
+  }
+}
