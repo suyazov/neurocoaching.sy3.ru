@@ -1,0 +1,63 @@
+{
+  "task_id": "CODEX-TASK-TASK-ISSUE-SUYAZOV_NEUROCOACHING.SY3.RU-836-G2",
+  "environment": "neurocoaching.sy3.ru-staging",
+  "production_touched": false,
+  "staging_mutated": false,
+  "baseline_immutable": true,
+  "baseline_files_changed": false,
+  "implementation": {
+    "runtime_files": [
+      "wordpress/wp-content/themes/neurocoaching/style.css",
+      "wordpress/wp-content/themes/neurocoaching/front-page.php",
+      "wordpress/wp-content/themes/neurocoaching/page-career-services.php"
+    ],
+    "summary": "Scoped About header composition away from Career and Neurocoaching despite WordPress exposing home on every route, reset service-route header geometry, and preserved required headings as uninterrupted visible DOM phrases.",
+    "source_assets_replaced": false,
+    "forbidden_raster_or_canvas": false
+  },
+  "machine_regression": {
+    "command": "php docs/visual-task-836-g2/verify-regression.php",
+    "status": "passed",
+    "baseline_hashes_verified": 6,
+    "route_copy_checks": 3,
+    "route_scope_regression": "passed"
+  },
+  "browser_qa": {
+    "capture_kind": "staging DOM with PR candidate CSS and the two exact heading text nodes applied as a non-persistent browser overlay",
+    "viewports": ["1440x900", "390x844"],
+    "console_errors": 0,
+    "horizontal_overflow": {
+      "about": false,
+      "career": false,
+      "neurocoaching": false
+    },
+    "controls": {
+      "about": {"details": 12, "buttons": 4, "links": 16},
+      "career": {"details": 12, "buttons": 7, "links": 19},
+      "neurocoaching": {"details": 12, "buttons": 4, "links": 18}
+    },
+    "visual_diff_ratio_at_18_percent_fuzz": {
+      "about_desktop": 0.230826,
+      "about_mobile": 0.358169,
+      "career_desktop": 0.099906,
+      "career_mobile": 0.414750,
+      "neurocoaching_desktop": 0.098340,
+      "neurocoaching_mobile": 0.430225
+    },
+    "screenshots": [
+      "about-desktop.png",
+      "about-mobile.png",
+      "career-desktop.png",
+      "career-mobile.png",
+      "neurocoaching-desktop.png",
+      "neurocoaching-mobile.png"
+    ]
+  },
+  "context_delta": {
+    "result": "Removed the cross-route About header cascade that caused 938px-wide mobile documents and preserved the required About/Career headings as exact visible text.",
+    "decisions": "Kept all PSD baselines and source assets unchanged; used route-exclusive CSS because WordPress currently emits the home class on all three routes.",
+    "current_status": "Source correction, six candidate screenshots, exact 390px overflow checks, and machine regression evidence are ready for PR review.",
+    "constraints": "No staging deployment, production, WordPress core/plugins/uploads, credentials, database, DNS, nginx, or deployment configuration was touched.",
+    "next_step": "Bridge should deliver the PR head to staging and obtain a non-negative owner visual verdict before completion."
+  }
+}
