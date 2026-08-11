@@ -10,6 +10,7 @@ add_action( 'after_setup_theme', 'neurocoaching_setup' );
 
 function neurocoaching_assets() {
 	wp_enqueue_style( 'neurocoaching', get_stylesheet_uri(), array(), wp_get_theme()->get( 'Version' ) );
+	wp_enqueue_script( 'neurocoaching-navigation', get_theme_file_uri( '/assets/js/navigation.js' ), array(), wp_get_theme()->get( 'Version' ), true );
 }
 add_action( 'wp_enqueue_scripts', 'neurocoaching_assets' );
 
@@ -52,9 +53,10 @@ function neurocoaching_page_url( $slug ) {
 
 function neurocoaching_header( $active ) {
 	?>
-	<header class="site-header">
-		<a class="brand" href="<?php echo esc_url( home_url( '/' ) ); ?>" aria-label="Digital Belka home"><span>Digital</span> Belka</a>
-		<nav class="primary-nav" aria-label="Primary navigation">
+	<header class="site-header" data-site-header>
+		<a class="brand" href="<?php echo esc_url( home_url( '/' ) ); ?>" aria-label="Digital Belka home"><img src="<?php echo esc_url( get_theme_file_uri( '/assets/images/logo.png' ) ); ?>" alt="Digital Belka"></a>
+		<button class="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-navigation" data-menu-toggle><span class="screen-reader-text">Open menu</span><i></i><i></i><i></i></button>
+		<nav id="primary-navigation" class="primary-nav nc-nav" aria-label="Primary navigation">
 			<a<?php echo 'about' === $active ? ' aria-current="page"' : ''; ?> href="<?php echo esc_url( home_url( '/' ) ); ?>">About</a>
 			<a<?php echo 'career' === $active ? ' aria-current="page"' : ''; ?> href="<?php echo esc_url( neurocoaching_page_url( 'career-services' ) ); ?>">Career services</a>
 			<a<?php echo 'neuro' === $active ? ' aria-current="page"' : ''; ?> href="<?php echo esc_url( neurocoaching_page_url( 'neurocoaching' ) ); ?>">Neurocoaching</a>
