@@ -6,6 +6,7 @@ Description: Semantic custom WordPress theme for Ksenia Belousova.
 Version: 1.0.0
 Text Domain: neurocoaching
 */
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@700&family=Lato:ital,wght@0,400;0,500;0,700;0,900;1,600&display=swap');
 :root { --purple:#422468; --violet:#9658bc; --lilac:#e6dcf2; --paper:#faf3ee; --peach:#e9a783; --ink:#211d21; --line:#a66dca; }
 * { box-sizing:border-box; }
 html { scroll-behavior:smooth; }
@@ -139,4 +140,142 @@ details p { padding:0 45px 18px 0; }
 	.method { padding-block:60px; }
 	.pyramid { width:270px; }
 	.prompt-grid { grid-template-columns:1fr; }
+}
+
+/* About page: measurements follow the PSD 1320 px and 320 px artboards. */
+.about-psd { --about-purple:#5b296f; --about-violet:#855bae; --about-paper:#f8efea; --about-ink:#252525; overflow:hidden; color:var(--about-ink); background:var(--about-paper); font-family:Lato,Arial,sans-serif; }
+.about-psd h1,.about-psd h2,.about-psd h3 { font-family:"IBM Plex Sans",Arial,sans-serif; font-weight:700; letter-spacing:-.035em; }
+.about-frame { width:930px; max-width:calc(100% - 64px); margin-inline:auto; }
+.home .site-header { top:30px; right:calc((100% - 930px)/2); width:563px; min-height:101px; align-items:flex-start; padding-top:0; gap:29px; font-family:Lato,Arial,sans-serif; }
+.home .brand { width:110px; height:55px; margin-right:auto; transform:none; }
+.home .brand img { width:110px; height:55px; object-fit:contain; filter:brightness(0) saturate(100%) invert(23%) sepia(17%) saturate(3572%) hue-rotate(247deg) brightness(83%) contrast(90%); }
+.home .primary-nav { padding-top:77px; gap:30px; font-size:14px; }
+.home .site-header>.button { position:absolute; top:59px; right:29px; min-height:36px; padding:8px 20px; }
+.home .menu-toggle { display:none; }
+.about-hero { height:852px; display:grid; grid-template-columns:516px minmax(0,804px); }
+.about-hero__photo { height:852px; overflow:hidden; }
+.about-hero__photo img { width:100%; height:100%; object-fit:cover; object-position:51% 18%; }
+.about-hero__copy { padding:200px 45px 50px 49px; }
+.about-kicker { margin:0 0 18px; color:var(--about-purple); font-size:18px; line-height:1; font-weight:900; white-space:nowrap; }
+.about-hero h1 { margin:0 0 20px; color:var(--about-purple); font-size:65px; line-height:.93; }
+.about-lead { margin:0 0 45px; color:var(--about-purple); font-size:18px; line-height:1.2; font-weight:900; }
+.about-intro { width:550px; max-width:100%; font-size:14px; line-height:20px; }
+.about-intro p { margin-bottom:19px; }
+.about-button { min-width:186px; min-height:64px; border:2px solid var(--about-violet); color:var(--about-purple); background:transparent; font-size:18px; font-weight:900; }
+.about-education { height:481px; padding-top:91px; color:#fff; background:var(--about-purple); }
+.about-education h2 { margin:0 0 55px; color:#fff; font-size:50px; line-height:1.06; text-decoration:underline; text-decoration-thickness:3px; text-underline-offset:10px; }
+.about-certificates { display:flex; width:1172px; gap:27px; }
+.about-certificates figure { width:212px; height:155px; margin:0; flex:0 0 212px; padding:16px; border:1px solid rgba(255,255,255,.8); background:#fff; }
+.about-certificates img { width:100%; height:100%; object-fit:contain; }
+.about-more { display:block; width:max-content; margin:27px 0 0 auto; font-size:18px; font-weight:900; text-decoration:none; }
+.about-more span { display:inline-block; margin-left:24px; font-size:28px; vertical-align:-2px; }
+.about-credentials { padding:142px 0 139px; }
+.about-credentials ul { display:grid; grid-template-columns:1fr 1fr; gap:33px 110px; margin:0; padding:0; list-style:none; }
+.about-credentials li { position:relative; min-height:41px; padding-left:32px; font-size:18px; line-height:22px; font-weight:900; }
+.about-credentials li::before { content:'✓'; position:absolute; left:0; top:-5px; color:var(--about-violet); font-size:25px; }
+.about-services { width:1037px; padding-bottom:146px; }
+.about-services>h2 { width:max-content; margin:0 auto 80px; color:var(--about-purple); font-size:65px; line-height:.92; }
+.about-service-card { min-height:597px; display:grid; grid-template-columns:530px 507px; color:#fff; background:var(--about-purple); }
+.about-service-card>div { padding:59px 49px; }
+.about-service-summary { border-right:1px solid rgba(255,255,255,.8); }
+.about-service-heading { position:relative; display:flex; align-items:flex-start; }
+.about-service-heading h3,.about-programmes h3 { margin:0; color:#fff; font-size:45px; line-height:1.08; }
+.about-service-heading span { margin:5px 0 0 11px; padding:3px 14px; background:#fff; color:var(--about-purple); font:700 21px/1.1 "IBM Plex Sans",sans-serif; }
+.about-scope { margin:52px 0 55px; font-weight:900; }
+.about-service-summary>p:last-child { width:356px; max-width:100%; font-size:18px; line-height:20px; }
+.about-programmes ul { margin:34px 0 25px; padding:0 0 0 31px; list-style:none; }
+.about-programmes { padding-left:35px!important; }
+.about-programmes li { position:relative; margin-bottom:20px; font-size:18px; line-height:21px; }
+.about-programmes li::before { content:'✓'; position:absolute; left:-31px; color:#fff; font-size:22px; }
+.about-programmes>p { margin:0 0 36px; font-size:18px; font-weight:600; }
+.about-programmes .about-button { color:#fff; border-color:#fff; }
+.about-life { position:relative; height:944px; padding-top:143px; text-align:center; }
+.about-life h2 { margin:0; color:var(--about-purple); font-size:65px; line-height:1; }
+.about-instagram { display:inline-block; margin-top:25px; color:var(--about-purple); font-size:18px; font-weight:900; text-decoration:none; }
+.about-life__photo { display:grid; grid-template-columns:86px 685px 86px; gap:31px; align-items:center; justify-content:center; margin-top:-166px; }
+.about-life__photo img { width:685px; height:907px; object-fit:cover; object-position:center 50%; }
+.about-life__photo a { display:grid; width:86px; height:86px; place-items:center; border:2px solid var(--about-violet); border-radius:50%; color:var(--about-violet); background:transparent; font-size:36px; text-decoration:none; }
+.about-dots { position:absolute; bottom:88px; left:0; right:0; color:var(--about-violet); letter-spacing:10px; }
+.about-cta { height:401px; padding-top:142px; color:#fff; background:var(--about-purple); }
+.about-cta h2 { margin:0 0 25px; color:#fff; font-size:50px; line-height:1; }
+.about-cta p { margin-bottom:30px; font-size:18px; font-weight:500; }
+.about-cta .about-button { min-height:64px; color:#fff; border-color:#fff; }
+.about-faq { width:1091px; display:grid; grid-template-columns:663px 428px; column-gap:0; padding:147px 0 586px; }
+.about-faq>header { grid-column:1/-1; display:flex; align-items:end; gap:25px; margin-bottom:45px; }
+.about-faq>header h2 { margin:0; font-size:65px; line-height:.9; }
+.about-faq>header p { margin:0 0 2px; color:var(--about-violet); font:700 18px/1 "IBM Plex Sans",sans-serif; }
+.about-faq details { border-top:2px solid var(--about-violet); }
+.about-faq details:last-child { border-bottom:2px solid var(--about-violet); }
+.about-faq summary { min-height:81px; display:flex; align-items:center; padding:17px 50px 17px 0; font-size:18px; line-height:22px; font-weight:900; }
+.about-faq details p { max-width:530px; padding:0 0 25px; font-size:14px; line-height:20px; }
+.about-faq aside { margin-top:-39px; padding-left:28px; }
+.about-faq aside img { width:294px; height:559px; object-fit:cover; object-position:center 48%; }
+.about-faq aside h2 { margin:31px 0 24px; font-size:45px; line-height:50px; }
+.about-faq aside p { margin-bottom:69px; font-size:18px; line-height:20px; }
+
+@media (max-width:850px) {
+	.about-frame { width:auto; max-width:none; margin:0 15px; }
+	.home .site-header { position:absolute; top:0; right:0; width:100%; min-height:53px; padding:4px 15px; align-items:center; background:var(--about-purple); }
+	.home .brand { width:90px; height:45px; }
+	.home .brand img { width:90px; height:45px; filter:none; }
+	.home .site-header>.button { display:none; }
+	.home .menu-toggle { position:absolute; top:15px; right:15px; display:grid; width:25px; height:24px; padding:2px 0; border:0; background:transparent; cursor:pointer; }
+	.home .menu-toggle i { display:block; height:2px; background:#fff; }
+	.home .primary-nav { position:absolute; top:53px; left:0; width:100%; display:none; margin:0; padding:18px 15px 22px; flex-direction:column; gap:7px; background:var(--about-purple); font-size:14px; }
+	.home .site-header.is-open .primary-nav { display:flex; }
+	.home .primary-nav a { width:auto; height:auto; padding:3px 0; border:0; border-radius:0; color:#fff; }
+	.about-hero { height:1391px; display:block; padding-top:53px; }
+	.about-hero__photo { height:399px; }
+	.about-hero__photo img { height:100%; object-position:50% 17%; }
+	.about-hero__copy { padding:34px 15px 24px; }
+	.about-kicker { width:190px; margin-bottom:24px; white-space:normal; font-size:14px; line-height:23px; }
+	.about-hero h1 { width:190px; margin-bottom:25px; font-size:40px; line-height:1.02; }
+	.about-lead { width:260px; margin-bottom:28px; font-size:16px; line-height:22px; }
+	.about-intro { width:auto; font-size:14px; line-height:20px; }
+	.about-intro p { margin-bottom:19px; }
+	.about-button { min-width:183px; min-height:53px; font-size:14px; }
+	.about-education { height:389px; padding-top:56px; overflow:hidden; }
+	.about-education h2 { width:240px; margin-bottom:41px; font-size:36px; line-height:40px; }
+	.about-certificates { width:max-content; gap:22px; }
+	.about-certificates figure { width:213px; height:156px; flex-basis:213px; padding:9px; }
+	.about-more { display:none; }
+	.about-credentials { padding:54px 15px 58px; }
+	.about-credentials ul { grid-template-columns:1fr; gap:26px; }
+	.about-credentials li { min-height:39px; padding-left:24px; font-size:14px; line-height:18px; }
+	.about-credentials li::before { top:-3px; font-size:19px; }
+	.about-services { margin:0 15px; padding-bottom:41px; }
+	.about-services>h2 { width:220px; margin:0 0 60px; font-size:40px; line-height:42px; }
+	.about-service-card { min-height:676px; display:block; }
+	.about-service-card>div { padding:34px 24px; }
+	.about-service-summary { border-right:0; border-bottom:1px solid rgba(255,255,255,.8); }
+	.about-service-heading h3,.about-programmes h3 { font-size:36px; line-height:38px; }
+	.about-service-heading span { margin-left:auto; font-size:18px; }
+	.about-scope { margin:35px 0 19px; }
+	.about-service-summary>p:last-child { font-size:14px; line-height:16px; }
+	.about-programmes { position:relative; padding-left:24px!important; }
+	.about-programmes ul { margin:19px 0 10px; padding-left:23px; }
+	.about-programmes li { margin-bottom:8px; font-size:14px; line-height:16px; }
+	.about-programmes li::before { left:-23px; }
+	.about-programmes>p { margin:7px 0 0; font-size:14px; }
+	.about-programmes .about-button { margin-top:29px; }
+	.about-life { height:473px; margin:0; padding-top:28px; }
+	.about-life h2 { font-size:36px; }
+	.about-instagram { margin-top:13px; font-size:16px; }
+	.about-life__photo { grid-template-columns:1fr; margin-top:-91px; }
+	.about-life__photo img { width:354px; height:473px; max-width:none; justify-self:center; object-position:center 52%; }
+	.about-life__photo a { display:none; }
+	.about-dots { bottom:101px; font-size:12px; letter-spacing:5px; }
+	.about-cta { height:250px; padding-top:37px; }
+	.about-cta h2 { width:250px; margin-bottom:17px; font-size:36px; line-height:40px; }
+	.about-cta p { margin-bottom:20px; font-size:16px; }
+	.about-faq { display:block; margin:0 14px; padding:56px 0 58px; }
+	.about-faq>header { display:block; margin-bottom:29px; }
+	.about-faq>header h2 { font-size:36px; line-height:1; }
+	.about-faq>header p { margin-top:5px; font-size:16px; }
+	.about-faq summary { min-height:64px; padding:14px 39px 14px 1px; font-size:14px; line-height:18px; }
+	.about-faq details p { padding:0 0 20px 1px; font-size:14px; line-height:20px; }
+	.about-faq aside { margin-top:-77px; padding:0; }
+	.about-faq aside img { width:calc(100% + 28px); height:559px; margin-left:-14px; object-position:center 49%; }
+	.about-faq aside h2 { width:255px; margin:42px 0 17px; font-size:36px; line-height:40px; }
+	.about-faq aside p { margin-bottom:30px; font-size:14px; line-height:20px; }
 }
