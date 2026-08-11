@@ -728,3 +728,37 @@ details p { padding:0 45px 18px 0; }
 	.nc-about__faq aside p { width:auto; margin:0 0 30px; font-size:14px; line-height:20px; }
 	.nc-about__faq aside .nc-about__button { margin-left:0; }
 }
+
+/* Source-faithful interactive galleries. The PSD bundle contains one usable photo per route;
+   additional WordPress-configured slides inherit the same measured crop. */
+.nc-gallery { position:relative; display:grid; grid-template-columns:auto minmax(0,1fr) auto; align-items:center; justify-content:center; }
+.nc-gallery:focus-visible,[data-horizontal-track]:focus-visible { outline:3px solid currentColor; outline-offset:5px; }
+.nc-gallery__viewport { min-width:0; }
+.nc-gallery__slide { margin:0; }
+.nc-gallery__slide[hidden] { display:none; }
+.nc-gallery__slide img { display:block; width:100%; height:100%; object-fit:cover; }
+.nc-gallery>button { display:grid; place-items:center; cursor:pointer; }
+.nc-gallery>button:disabled { cursor:default; opacity:.42; }
+.nc-gallery__pagination { position:absolute; top:calc(100% + 54px); left:50%; display:flex; width:max-content; max-width:100%; gap:22px; transform:translateX(-50%); }
+.nc-gallery__pagination button { width:12px; height:12px; padding:0; border:2px solid currentColor; border-radius:50%; color:inherit; background:transparent; cursor:pointer; }
+.nc-gallery__pagination button[aria-current="true"] { background:currentColor; }
+.nc-about__life-photo { color:var(--nc-about-violet); }
+.nc-about__life-photo .nc-gallery__viewport { width:674px; height:479px; }
+.nc-about__life-photo>button { width:86px; height:86px; border:2px solid var(--nc-about-violet); border-radius:50%; color:var(--nc-about-violet); background:transparent; font-size:36px; }
+.career-life__gallery { grid-template-columns:88px 666px 88px; gap:33px; margin-top:38px; color:var(--career-violet); }
+.career-life__gallery .nc-gallery__viewport { width:666px; height:735px; }
+.career-life__gallery>button,.neuro-life__gallery>button { width:88px; height:88px; border:2px solid currentColor; border-radius:50%; color:inherit; background:transparent; font-size:34px; }
+.neuro-life__gallery { grid-template-columns:88px 700px 88px; gap:33px; margin-top:55px; color:var(--neuro-violet); }
+.neuro-life__gallery .nc-gallery__viewport { width:700px; height:700px; }
+.career-review-track,.neuro-review-track { width:100%; overflow-x:auto; overscroll-behavior-inline:contain; scroll-snap-type:x proximity; scrollbar-width:thin; }
+.career-review-track blockquote,.neuro-review-track blockquote { scroll-snap-align:start; }
+
+@media (max-width:850px) {
+	.nc-about__life-photo,.career-life__gallery,.neuro-life__gallery { display:block; margin-top:15px; }
+	.nc-about__life-photo .nc-gallery__viewport { width:323px; height:223px; margin:auto; }
+	.career-life__gallery .nc-gallery__viewport { width:184px; height:222px; margin:auto; }
+	.neuro-life__gallery .nc-gallery__viewport { width:278px; height:278px; margin:auto; }
+	.nc-gallery>button { display:none; }
+	.nc-gallery__pagination { top:calc(100% + 10px); gap:9px; }
+	.nc-gallery__pagination button { width:8px; height:8px; border-width:1px; }
+}

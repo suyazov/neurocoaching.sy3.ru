@@ -23,12 +23,24 @@ function neurocoaching_customize_register( $customizer ) {
 	$customizer->add_section( 'neurocoaching_content', array( 'title' => __( 'Neurocoaching content', 'neurocoaching' ) ) );
 	$fields = array(
 		'contact_url' => array( 'LinkedIn CTA URL', 'https://www.linkedin.com/', 'url', 'esc_url_raw' ),
+		'instagram_url' => array( 'Instagram URL', 'https://www.instagram.com/', 'url', 'esc_url_raw' ),
+		'telegram_url' => array( 'Telegram URL', 'https://t.me/', 'url', 'esc_url_raw' ),
+		'email_url' => array( 'Email URL', 'mailto:hello@example.com', 'url', 'esc_url_raw' ),
 		'booking_url' => array( 'Booking CTA URL', 'mailto:hello@example.com', 'url', 'esc_url_raw' ),
 		'about_name'  => array( 'About page name', 'Ksenia Belousova', 'text', 'sanitize_text_field' ),
 	);
 	foreach ( $fields as $key => $field ) {
 		$customizer->add_setting( $key, array( 'default' => $field[1], 'sanitize_callback' => $field[3] ) );
 		$customizer->add_control( $key, array( 'label' => $field[0], 'section' => 'neurocoaching_content', 'type' => $field[2] ) );
+	}
+	$gallery_fields = array(
+		'about_gallery_urls'  => array( 'About: In real life image URLs', get_theme_file_uri( '/assets/images/about-life-source.webp' ) ),
+		'career_gallery_urls' => array( 'Career: In real life image URLs', get_theme_file_uri( '/assets/images/career-life.webp' ) ),
+		'neuro_gallery_urls'  => array( 'Neurocoaching: In real life image URLs', get_theme_file_uri( '/assets/images/neuro-life.webp' ) ),
+	);
+	foreach ( $gallery_fields as $key => $field ) {
+		$customizer->add_setting( $key, array( 'default' => $field[1], 'sanitize_callback' => 'sanitize_textarea_field' ) );
+		$customizer->add_control( $key, array( 'label' => $field[0], 'description' => __( 'One Media Library image URL per line.', 'neurocoaching' ), 'section' => 'neurocoaching_content', 'type' => 'textarea' ) );
 	}
 }
 add_action( 'customize_register', 'neurocoaching_customize_register' );
@@ -63,6 +75,33 @@ function neurocoaching_page_url( $slug ) {
 	return 'about' === $slug ? home_url( '/' ) : home_url( '/' . trim( $slug, '/' ) . '/' );
 }
 
+function neurocoaching_gallery_urls( $setting, $fallback ) {
+	$urls = preg_split( '/\R+/', neurocoaching_mod( $setting, $fallback ) );
+	$urls = array_values( array_filter( array_map( 'esc_url_raw', array_map( 'trim', $urls ) ) ) );
+	return array_slice( $urls ? $urls : array( $fallback ), 0, 24 );
+}
+
+function neurocoaching_gallery( $setting, $fallback, $alt, $class_name ) {
+	$slides = neurocoaching_gallery_urls( $setting, $fallback );
+	$count  = count( $slides );
+	?>
+	<div class="<?php echo esc_attr( $class_name ); ?> nc-gallery" data-carousel tabindex="0" role="region" aria-roledescription="carousel" aria-label="In real life photo gallery">
+		<button class="nc-gallery__previous" type="button" data-carousel-previous aria-label="Previous photo"<?php echo 1 === $count ? ' disabled' : ''; ?>>←</button>
+		<div class="nc-gallery__viewport" aria-live="polite">
+		<?php foreach ( $slides as $index => $url ) : ?>
+			<figure class="nc-gallery__slide" data-carousel-slide<?php echo 0 !== $index ? ' hidden' : ''; ?> aria-label="Photo <?php echo esc_attr( (string) ( $index + 1 ) ); ?> of <?php echo esc_attr( (string) $count ); ?>"><img src="<?php echo esc_url( $url ); ?>" alt="<?php echo esc_attr( 0 === $index ? $alt : sprintf( 'Ksenia Belousova, gallery photo %d', $index + 1 ) ); ?>"></figure>
+		<?php endforeach; ?>
+		</div>
+		<button class="nc-gallery__next" type="button" data-carousel-next aria-label="Next photo"<?php echo 1 === $count ? ' disabled' : ''; ?>>→</button>
+		<div class="nc-gallery__pagination" data-carousel-pagination aria-label="Choose a photo">
+		<?php foreach ( $slides as $index => $url ) : ?>
+			<button type="button" data-carousel-dot="<?php echo esc_attr( (string) $index ); ?>" aria-label="Show photo <?php echo esc_attr( (string) ( $index + 1 ) ); ?>" aria-current="<?php echo 0 === $index ? 'true' : 'false'; ?>"></button>
+		<?php endforeach; ?>
+		</div>
+	</div>
+	<?php
+}
+
 function neurocoaching_header( $active ) {
 	$about_images = get_template_directory_uri() . '/assets/images/';
 	?>
@@ -71,8 +110,8 @@ function neurocoaching_header( $active ) {
 		<?php if ( 'about' === $active ) : ?>
 		<div class="about-socials" aria-label="Social links">
 			<a href="<?php echo esc_url( neurocoaching_mod( 'contact_url', 'https://www.linkedin.com/' ) ); ?>" aria-label="LinkedIn"><img src="<?php echo esc_url( $about_images . 'about-linkedin.svg' ); ?>" alt=""></a>
-			<a href="<?php echo esc_url( neurocoaching_mod( 'booking_url', 'mailto:hello@example.com' ) ); ?>" aria-label="Email"><img src="<?php echo esc_url( $about_images . 'about-email.png' ); ?>" alt=""></a>
-			<a href="https://t.me/" aria-label="Telegram"><img src="<?php echo esc_url( $about_images . 'about-telegram.svg' ); ?>" alt=""></a>
+			<a href="<?php echo esc_url( neurocoaching_mod( 'email_url', 'mailto:hello@example.com' ) ); ?>" aria-label="Email"><img src="<?php echo esc_url( $about_images . 'about-email.png' ); ?>" alt=""></a>
+			<a href="<?php echo esc_url( neurocoaching_mod( 'telegram_url', 'https://t.me/' ) ); ?>" aria-label="Telegram"><img src="<?php echo esc_url( $about_images . 'about-telegram.svg' ); ?>" alt=""></a>
 		</div>
 		<?php endif; ?>
 		<button class="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-navigation" data-menu-toggle><span class="screen-reader-text">Open menu</span><i></i><i></i><i></i></button>
