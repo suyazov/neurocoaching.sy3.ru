@@ -636,15 +636,15 @@ details p { padding:0 45px 18px 0; }
 .nc-about__programmes li { position:relative; margin-bottom:20px; font-size:18px; line-height:21px; }
 .nc-about__programmes li>img { position:absolute; top:0; left:-31px; width:20px; height:18px; }
 .nc-about__programmes>p { margin:0 0 36px; font-size:18px; font-weight:600; }
-.nc-about__life { position:relative; height:944px; padding-top:143px; text-align:center; background:var(--nc-about-lilac); }
+.nc-about__life { position:relative; height:944px; padding-top:143px; overflow:hidden; isolation:isolate; text-align:center; background:var(--nc-about-lilac); }
 .nc-about__life h2 { margin:0; font-size:65px; line-height:1; }
 .nc-about__instagram { display:inline-block; margin-top:25px; color:var(--nc-about-purple); font-size:18px; font-weight:900; text-decoration:none; }
-.nc-about__life-photo { display:grid; grid-template-columns:86px 674px 86px; gap:31px; align-items:center; justify-content:center; margin-top:49px; }
+.nc-about__life-photo { position:relative; z-index:1; height:479px; display:grid; grid-template-columns:86px 674px 86px; gap:31px; align-items:center; justify-content:center; margin-top:49px; }
 .nc-about__life-photo>img { width:674px; height:479px; object-fit:cover; object-position:center 50%; }
 .nc-about__life-photo a { display:grid; width:86px; height:86px; place-items:center; border:2px solid var(--nc-about-violet); border-radius:50%; color:var(--nc-about-violet); font-size:36px; text-decoration:none; }
 .nc-about__life-photo a img { width:86px; height:86px; margin:-2px; max-width:none; }
 .nc-about__dots { position:absolute; right:0; bottom:99px; left:0; width:834px; height:18px; margin:auto; }
-.nc-about__cta { height:401px; padding-top:142px; color:#fff; background:var(--nc-about-purple); }
+.nc-about__cta { position:relative; z-index:2; height:401px; padding-top:142px; overflow:hidden; color:#fff; background:var(--nc-about-purple); }
 .nc-about__cta h2 { margin:0 0 25px; color:#fff; font-size:50px; line-height:1; }
 .nc-about__cta p { margin-bottom:30px; font-size:18px; font-weight:500; }
 .nc-about__cta .nc-about__button { color:#fff; border-color:#fff; }
@@ -717,7 +717,7 @@ details p { padding:0 45px 18px 0; }
 	.nc-about__life { height:434px; padding-top:28px; background:var(--nc-about-paper); }
 	.nc-about__life h2 { font-size:36px; }
 	.nc-about__instagram { margin-top:13px; font-size:16px; }
-	.nc-about__life-photo { display:block; margin-top:15px; }
+	.nc-about__life-photo { height:223px; display:block; margin-top:15px; }
 	.nc-about__life-photo>img { width:323px; height:223px; max-width:none; margin-inline:auto; object-position:center 52%; }
 	.nc-about__life-photo a { display:none; }
 	.nc-about__dots { right:auto; bottom:51px; left:14px; width:298px; height:auto; margin:0; }
@@ -741,8 +741,8 @@ details p { padding:0 45px 18px 0; }
    additional WordPress-configured slides inherit the same measured crop. */
 .nc-gallery { position:relative; display:grid; grid-template-columns:auto minmax(0,1fr) auto; align-items:center; justify-content:center; }
 .nc-gallery:focus-visible,[data-horizontal-track]:focus-visible { outline:3px solid currentColor; outline-offset:5px; }
-.nc-gallery__viewport { min-width:0; }
-.nc-gallery__slide { margin:0; }
+.nc-gallery__viewport { min-width:0; overflow:hidden; }
+.nc-gallery__slide { height:100%; margin:0; overflow:hidden; }
 .nc-gallery__slide[hidden] { display:none; }
 .nc-gallery__slide img { display:block; width:100%; height:100%; object-fit:cover; }
 .nc-gallery>button { display:grid; place-items:center; cursor:pointer; }

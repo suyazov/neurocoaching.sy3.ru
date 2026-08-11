@@ -7,7 +7,7 @@
   "baseline_files_changed": false,
   "implementation": {
     "runtime_file": "wordpress/wp-content/themes/neurocoaching/style.css",
-    "summary": "Restored manifest-derived About offsets, Career and Neuro mobile portrait geometry, and header stacking on all three routes.",
+    "summary": "Restored manifest-derived About offsets, Career and Neuro mobile portrait geometry, header stacking, and a bounded In real life to CTA stacking/overflow boundary.",
     "dom_text_changed": false,
     "interaction_code_changed": false,
     "source_assets_replaced": false
@@ -17,7 +17,7 @@
     "status": "passed",
     "baseline_hashes_verified": 6,
     "route_copy_checks": 3,
-    "psd_geometry_rules": 10
+    "psd_geometry_rules": 15
   },
   "browser_qa": {
     "capture_kind": "staging DOM with correction CSS applied as a browser candidate overlay",
@@ -39,7 +39,7 @@
     ]
   },
   "context_delta": {
-    "result": "Corrected PSD-derived hero geometry and mobile header stacking; added immutable-baseline, exact-copy, and geometry regression coverage.",
+    "result": "Corrected PSD-derived hero geometry, mobile header stacking, and the About gallery-to-CTA overflow/stacking boundary; added immutable-baseline, exact-copy, and geometry regression coverage.",
     "decisions": "Kept baseline PNGs and source assets unchanged; candidate screenshots disclose the browser CSS overlay and no staging deployment.",
     "current_status": "Source correction and machine regression are ready in PR 19; controlled staging delivery and exact 390px overflow verification remain required.",
     "constraints": "Project scope forbids direct deploy; production, WordPress core, uploads, credentials, database, deployment configuration, and baselines were not touched.",

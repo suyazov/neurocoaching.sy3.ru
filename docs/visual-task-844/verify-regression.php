@@ -43,6 +43,11 @@ $required_css = array(
 	'.career-hero__photo { height:438px; background:#f7d7c6;', 'width:79.375%; max-width:none;',
 	'.neuro-hero { height:1045px;', '.neuro-hero__photo { width:320px; height:488px;',
 	'.neurocoaching-route .site-header { z-index:10;', '.career-services-route .site-header { z-index:10;',
+	'.nc-about__life { position:relative; height:944px; padding-top:143px; overflow:hidden; isolation:isolate;',
+	'.nc-about__life-photo { position:relative; z-index:1; height:479px;',
+	'.nc-about__cta { position:relative; z-index:2; height:401px;',
+	'.nc-gallery__viewport { min-width:0; overflow:hidden;',
+	'.nc-gallery__slide { height:100%; margin:0; overflow:hidden;',
 );
 foreach ( $required_css as $rule ) {
 	if ( false === strpos( $css, $rule ) ) {
