@@ -1,0 +1,48 @@
+{
+  "task_id": "TASK-ISSUE-SUYAZOV_NEUROCOACHING.SY3.RU-844",
+  "environment": "neurocoaching.sy3.ru-staging",
+  "production_touched": false,
+  "staging_mutated": false,
+  "baseline_immutable": true,
+  "baseline_files_changed": false,
+  "implementation": {
+    "runtime_file": "wordpress/wp-content/themes/neurocoaching/style.css",
+    "summary": "Restored manifest-derived About offsets, Career and Neuro mobile portrait geometry, header stacking, and a bounded In real life to CTA stacking/overflow boundary.",
+    "dom_text_changed": false,
+    "interaction_code_changed": false,
+    "source_assets_replaced": false
+  },
+  "machine_regression": {
+    "command": "php docs/visual-task-844/verify-regression.php",
+    "status": "passed",
+    "baseline_hashes_verified": 6,
+    "route_copy_checks": 3,
+    "psd_geometry_rules": 15
+  },
+  "browser_qa": {
+    "capture_kind": "staging DOM with correction CSS applied as a browser candidate overlay",
+    "console_errors": 0,
+    "horizontal_overflow": "not_claimed: Chromium CLI enforced a 500 CSS px minimum for 390 px output captures",
+    "desktop_visual_diff_ratio_at_18_percent_fuzz": {
+      "about": 0.230826,
+      "career": 0.103992,
+      "neurocoaching": 0.102427
+    },
+    "mobile_visual_diff_ratio_at_18_percent_fuzz": {
+      "about": 0.360828,
+      "career": 0.419085,
+      "neurocoaching": 0.430122
+    },
+    "screenshots": [
+      "about-desktop.png", "about-mobile.png", "career-desktop.png", "career-mobile.png",
+      "neurocoaching-desktop.png", "neurocoaching-mobile.png"
+    ]
+  },
+  "context_delta": {
+    "result": "Corrected PSD-derived hero geometry, mobile header stacking, and the About gallery-to-CTA overflow/stacking boundary; added immutable-baseline, exact-copy, and geometry regression coverage.",
+    "decisions": "Kept baseline PNGs and source assets unchanged; candidate screenshots disclose the browser CSS overlay and no staging deployment.",
+    "current_status": "Source correction and machine regression are ready in PR 19; controlled staging delivery and exact 390px overflow verification remain required.",
+    "constraints": "Project scope forbids direct deploy; production, WordPress core, uploads, credentials, database, deployment configuration, and baselines were not touched.",
+    "next_step": "Bridge should deliver the PR head to staging, then run exact 390x844 device emulation and live visual acceptance."
+  }
+}
