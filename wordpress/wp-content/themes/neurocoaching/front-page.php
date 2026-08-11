@@ -3,7 +3,7 @@
 get_header();
 neurocoaching_header( 'about' );
 $booking = neurocoaching_mod( 'booking_url', 'mailto:hello@example.com' );
-$contact = neurocoaching_mod( 'contact_url', 'https://www.linkedin.com/' );
+$instagram = neurocoaching_mod( 'instagram_url', 'https://www.instagram.com/' );
 $images  = get_template_directory_uri() . '/assets/images/';
 $credentials = array(
 	'15+ years in the UN & international organisations — HR, project management, organisational development',
@@ -87,9 +87,8 @@ $questions = array(
 
 	<section class="nc-about__life" aria-labelledby="nc-about-life-title">
 		<h2 id="nc-about-life-title">In real life</h2>
-		<a class="nc-about__instagram" href="<?php echo esc_url( $contact ); ?>">Follow on Instagram</a>
-		<div class="nc-about__life-photo"><a href="<?php echo esc_url( $contact ); ?>" aria-label="Previous photo"><img src="<?php echo esc_url( $images . 'about-arrow-previous.png' ); ?>" alt=""></a><img src="<?php echo esc_url( $images . 'about-life-source.webp' ); ?>" alt="Ksenia by the sea at sunset"><a href="<?php echo esc_url( $contact ); ?>" aria-label="Next photo"><img src="<?php echo esc_url( $images . 'about-arrow-next.png' ); ?>" alt=""></a></div>
-		<img class="nc-about__dots" src="<?php echo esc_url( $images . 'about-gallery-dots.png' ); ?>" alt="">
+		<a class="nc-about__instagram" href="<?php echo esc_url( $instagram ); ?>">Follow on Instagram</a>
+		<?php neurocoaching_gallery( 'about_gallery_urls', $images . 'about-life-source.webp', 'Ksenia by the sea at sunset', 'nc-about__life-photo' ); ?>
 	</section>
 
 	<section class="nc-about__cta">
