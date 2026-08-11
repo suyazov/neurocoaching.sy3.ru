@@ -47,6 +47,15 @@ function neurocoaching_route_templates( $template ) {
 }
 add_filter( 'template_include', 'neurocoaching_route_templates', 99 );
 
+function neurocoaching_route_body_class( $classes ) {
+	$path = wp_parse_url( isset( $_SERVER['REQUEST_URI'] ) ? sanitize_text_field( wp_unslash( $_SERVER['REQUEST_URI'] ) ) : '/', PHP_URL_PATH );
+	if ( '/career-services/' === trailingslashit( '/' . ltrim( (string) $path, '/' ) ) ) {
+		$classes[] = 'career-services-route';
+	}
+	return $classes;
+}
+add_filter( 'body_class', 'neurocoaching_route_body_class' );
+
 function neurocoaching_page_url( $slug ) {
 	return 'about' === $slug ? home_url( '/' ) : home_url( '/' . trim( $slug, '/' ) . '/' );
 }
