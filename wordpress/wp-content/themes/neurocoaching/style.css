@@ -572,7 +572,7 @@ details p { padding:0 45px 18px 0; }
 .home .brand { width:110px; height:55px; margin-right:auto; transform:none; }
 .home .brand img { width:110px; height:55px; object-fit:contain; filter:brightness(0) saturate(100%) invert(23%) sepia(17%) saturate(3572%) hue-rotate(247deg) brightness(83%) contrast(90%); }
 .home .primary-nav { padding-top:77px; gap:30px; font-size:14px; }
-.home .site-header>.button { position:absolute; top:59px; right:29px; min-height:36px; padding:8px 20px; }
+.home .site-header>.button { position:absolute; top:56px; right:0; min-height:59px; padding:10px 19px; }
 .home .menu-toggle { display:none; }
 .about-hero { height:852px; display:grid; grid-template-columns:516px minmax(0,804px); }
 .about-hero__photo { height:852px; overflow:hidden; }
@@ -614,8 +614,8 @@ details p { padding:0 45px 18px 0; }
 .about-life { position:relative; height:944px; padding-top:143px; text-align:center; }
 .about-life h2 { margin:0; color:var(--about-purple); font-size:65px; line-height:1; }
 .about-instagram { display:inline-block; margin-top:25px; color:var(--about-purple); font-size:18px; font-weight:900; text-decoration:none; }
-.about-life__photo { display:grid; grid-template-columns:86px 685px 86px; gap:31px; align-items:center; justify-content:center; margin-top:-166px; }
-.about-life__photo img { width:685px; height:907px; object-fit:cover; object-position:center 50%; }
+.about-life__photo { display:grid; grid-template-columns:86px 674px 86px; gap:31px; align-items:center; justify-content:center; margin-top:49px; }
+.about-life__photo img { width:674px; height:479px; object-fit:cover; object-position:center 50%; }
 .about-life__photo a { display:grid; width:86px; height:86px; place-items:center; border:2px solid var(--about-violet); border-radius:50%; color:var(--about-violet); background:transparent; font-size:36px; text-decoration:none; }
 .about-dots { position:absolute; bottom:88px; left:0; right:0; color:var(--about-violet); letter-spacing:10px; }
 .about-cta { height:401px; padding-top:142px; color:#fff; background:var(--about-purple); }
@@ -630,10 +630,11 @@ details p { padding:0 45px 18px 0; }
 .about-faq details:last-child { border-bottom:2px solid var(--about-violet); }
 .about-faq summary { min-height:81px; display:flex; align-items:center; padding:17px 50px 17px 0; font-size:18px; line-height:22px; font-weight:900; }
 .about-faq details p { max-width:530px; padding:0 0 25px; font-size:14px; line-height:20px; }
-.about-faq aside { margin-top:-39px; padding-left:28px; }
-.about-faq aside img { width:294px; height:559px; object-fit:cover; object-position:center 48%; }
-.about-faq aside h2 { margin:31px 0 24px; font-size:45px; line-height:50px; }
-.about-faq aside p { margin-bottom:69px; font-size:18px; line-height:20px; }
+.about-faq aside { margin-top:-39px; }
+.about-faq aside img { width:428px; height:559px; object-fit:cover; object-position:center 48%; }
+.about-faq aside h2 { width:290px; margin:31px 0 24px 28px; font-size:45px; line-height:50px; }
+.about-faq aside p { width:290px; margin:0 0 69px 28px; font-size:18px; line-height:20px; }
+.about-faq aside .about-button { margin-left:28px; }
 
 @media (max-width:850px) {
 	.about-frame { width:auto; max-width:none; margin:0 15px; }
@@ -666,10 +667,10 @@ details p { padding:0 45px 18px 0; }
 	.about-credentials li { min-height:39px; padding-left:24px; font-size:14px; line-height:18px; }
 	.about-credentials li::before { top:-3px; font-size:19px; }
 	.about-services { margin:0 15px; padding-bottom:41px; }
-	.about-services>h2 { width:220px; margin:0 0 60px; font-size:40px; line-height:42px; }
-	.about-service-card { min-height:676px; display:block; }
+	.about-services>h2 { width:220px; margin:0 0 24px; font-size:40px; line-height:42px; }
+	.about-service-card { min-height:727px; display:block; }
 	.about-service-card>div { padding:34px 24px; }
-	.about-service-summary { border-right:0; border-bottom:1px solid rgba(255,255,255,.8); }
+	.about-service-summary { border-right:0; border-bottom:0; }
 	.about-service-heading h3,.about-programmes h3 { font-size:36px; line-height:38px; }
 	.about-service-heading span { margin-left:auto; font-size:18px; }
 	.about-scope { margin:35px 0 19px; }
@@ -683,8 +684,8 @@ details p { padding:0 45px 18px 0; }
 	.about-life { height:473px; margin:0; padding-top:28px; }
 	.about-life h2 { font-size:36px; }
 	.about-instagram { margin-top:13px; font-size:16px; }
-	.about-life__photo { grid-template-columns:1fr; margin-top:-91px; }
-	.about-life__photo img { width:354px; height:473px; max-width:none; justify-self:center; object-position:center 52%; }
+	.about-life__photo { grid-template-columns:1fr; margin-top:15px; }
+	.about-life__photo img { width:323px; height:223px; max-width:none; justify-self:center; object-position:center 52%; }
 	.about-life__photo a { display:none; }
 	.about-dots { bottom:101px; font-size:12px; letter-spacing:5px; }
 	.about-cta { height:250px; padding-top:37px; }
@@ -699,5 +700,6 @@ details p { padding:0 45px 18px 0; }
 	.about-faq aside { margin-top:-77px; padding:0; }
 	.about-faq aside img { width:calc(100% + 28px); height:559px; margin-left:-14px; object-position:center 49%; }
 	.about-faq aside h2 { width:255px; margin:42px 0 17px; font-size:36px; line-height:40px; }
-	.about-faq aside p { margin-bottom:30px; font-size:14px; line-height:20px; }
+	.about-faq aside p { width:auto; margin:0 0 30px; font-size:14px; line-height:20px; }
+	.about-faq aside .about-button { margin-left:0; }
 }
