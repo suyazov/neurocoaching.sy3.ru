@@ -376,6 +376,7 @@ details p { padding:0 45px 18px 0; }
 .career-hero { height:1125px; display:grid; grid-template-columns:510px 1fr; }
 .career-hero__photo { height:1125px; overflow:hidden; }
 .career-hero__photo img { width:100%; height:100%; object-fit:cover; object-position:center top; }
+.career-hero__photo picture,.career-suitable>picture { display:contents; }
 .career-hero__copy { width:610px; padding:199px 0 60px 99px; font-size:18px; line-height:1.35; }
 .career-hero h1 { margin:0 0 31px; color:var(--career-ink); font-size:71px; line-height:.9; }
 .career-hero h1 span { display:block; }
@@ -444,6 +445,7 @@ details p { padding:0 45px 18px 0; }
 .career-review-track span { margin-top:12px; color:var(--career-violet); font-weight:900; }
 .career-review-track a { margin-top:42px; font-size:14px; }
 .career-review-track blockquote p { font-size:14px; line-height:1.45; }
+.career-review-more { display:none; }
 .career-life { height:1090px; padding-top:118px; text-align:center; }
 .career-life h2 { margin:0; font-size:57px; }
 .career-life>a { display:inline-block; margin-top:24px; color:var(--career-violet); font-size:18px; font-weight:900; text-decoration:none; }
@@ -533,14 +535,17 @@ details p { padding:0 45px 18px 0; }
 	.career-suitable li { padding-left:24px; }
 	.career-suitable .career-button { margin:24px 0 0 43px; }
 	.career-suitable img { height:471px; object-position:center top; }
-	.career-reviews { height:1017px; padding-top:60px; }
+	.career-reviews { height:594px; padding-top:60px; }
 	.career-reviews h2 { margin-bottom:39px; text-align:left; font-size:36px; }
 	.career-review-track { width:max-content; gap:19px; }
-	.career-review-track blockquote { width:271px; min-height:573px; grid-template-columns:92px 1fr; gap:18px; flex-basis:271px; padding:32px 22px; }
+	.career-review-track blockquote { position:relative; width:271px; min-height:390px; grid-template-columns:92px 1fr; gap:18px; flex-basis:271px; padding:32px 22px 55px; }
 	.career-review-track strong { font-size:16px; }
 	.career-review-track span { font-size:14px; }
 	.career-review-track a,.career-review-track blockquote p { font-size:12px; }
 	.career-review-track a { margin-top:20px; }
+	.career-review-track blockquote p { max-height:228px; overflow:hidden; }
+	.career-review-track blockquote.is-expanded p { max-height:none; }
+	.career-review-more { position:absolute; bottom:22px; left:22px; display:block; padding:0; border:0; color:var(--career-violet); background:transparent; font-size:12px; text-decoration:underline; }
 	.career-life { height:392px; padding-top:27px; }
 	.career-life h2 { font-size:36px; }
 	.career-life>a { margin-top:11px; font-size:16px; }
