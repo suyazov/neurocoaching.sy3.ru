@@ -8,6 +8,9 @@ Text Domain: neurocoaching
 */
 @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@700&family=Lato:ital,wght@0,400;0,500;0,700;0,900;1,600&display=swap');
 :root { --purple:#422468; --violet:#9658bc; --lilac:#e6dcf2; --paper:#faf3ee; --peach:#e9a783; --ink:#211d21; --line:#a66dca; }
+.home { --purple:#5b296f; --violet:#855bae; --paper:#f8efea; --ink:#252525; --line:#855bae; }
+.career-services-route { --purple:#3c2d60; --violet:#865cac; --paper:#f8efea; --peach:#d88a5c; --ink:#252525; --line:#865cac; }
+.neurocoaching-route { --purple:#3d2863; --violet:#8d58b4; --paper:#faf2ed; --ink:#282429; --line:#8d58b4; }
 * { box-sizing:border-box; }
 html { scroll-behavior:smooth; }
 body { min-width:320px; margin:0; color:var(--ink); background:var(--paper); font:16px/1.55 Arial, Helvetica, sans-serif; }
@@ -146,7 +149,7 @@ details p { padding:0 45px 18px 0; }
 .neuro-psd { --neuro-purple:#3d2863; --neuro-violet:#8d58b4; --neuro-paper:#faf2ed; --neuro-ink:#282429; overflow:hidden; color:var(--neuro-ink); background:var(--neuro-paper); font-family:Lato,Arial,sans-serif; }
 .neuro-psd h1,.neuro-psd h2,.neuro-psd h3,.neuro-psd h4 { font-family:"IBM Plex Sans",Arial,sans-serif; font-weight:700; letter-spacing:-.045em; }
 .neuro-wrap { width:1220px; max-width:calc(100% - 64px); margin-inline:auto; }
-.neurocoaching-route .site-header { top:30px; right:110px; width:722px; min-height:118px; align-items:flex-start; gap:28px; font-family:Lato,Arial,sans-serif; }
+.neurocoaching-route .site-header { top:30px; right:max(32px,calc((100% - 1220px)/2)); width:722px; min-height:118px; align-items:flex-start; gap:28px; font-family:Lato,Arial,sans-serif; }
 .neurocoaching-route .brand { width:110px; height:55px; margin-right:auto; transform:none; }
 .neurocoaching-route .brand img { width:110px; height:55px; object-fit:contain; filter:brightness(0) saturate(100%) invert(22%) sepia(13%) saturate(3631%) hue-rotate(223deg) brightness(85%) contrast(89%); }
 .neurocoaching-route .primary-nav { padding-top:80px; gap:54px; font-size:14px; }
@@ -364,7 +367,7 @@ details p { padding:0 45px 18px 0; }
 .career-psd { --career-purple:#3c2d60; --career-violet:#865cac; --career-paper:#f8efea; --career-peach:#d88a5c; --career-ink:#252525; overflow:hidden; color:var(--career-ink); background:var(--career-paper); font-family:Lato,Arial,sans-serif; }
 .career-psd h1,.career-psd h2,.career-psd h3,.career-psd h4 { font-family:"IBM Plex Sans",Arial,sans-serif; font-weight:700; letter-spacing:-.035em; }
 .career-wrap { width:1084px; max-width:calc(100% - 64px); margin-inline:auto; }
-.career-services-route .site-header { top:29px; right:111px; width:722px; min-height:118px; align-items:flex-start; padding-top:0; gap:28px; font-family:Lato,Arial,sans-serif; }
+.career-services-route .site-header { top:29px; right:max(32px,calc((100% - 1219px)/2)); width:722px; min-height:118px; align-items:flex-start; padding-top:0; gap:28px; font-family:Lato,Arial,sans-serif; }
 .career-services-route .brand { width:110px; height:55px; margin-right:auto; transform:none; }
 .career-services-route .brand img { width:110px; height:55px; object-fit:contain; filter:brightness(0) saturate(100%) invert(22%) sepia(13%) saturate(3631%) hue-rotate(223deg) brightness(85%) contrast(89%); }
 .career-services-route .primary-nav { padding-top:80px; gap:54px; font-size:14px; }
@@ -375,6 +378,7 @@ details p { padding:0 45px 18px 0; }
 .career-hero__photo img { width:100%; height:100%; object-fit:cover; object-position:center top; }
 .career-hero__copy { width:610px; padding:199px 0 60px 99px; font-size:18px; line-height:1.35; }
 .career-hero h1 { margin:0 0 31px; color:var(--career-ink); font-size:71px; line-height:.9; }
+.career-hero h1 span { display:block; }
 .career-quote { margin-bottom:27px; font-weight:900; }
 .career-hero__copy p { max-width:485px; margin-bottom:21px; }
 .career-hero__copy .career-intro { margin-bottom:20px; font-size:18px; }
@@ -564,7 +568,7 @@ details p { padding:0 45px 18px 0; }
 .about-psd { --about-purple:#5b296f; --about-violet:#855bae; --about-paper:#f8efea; --about-ink:#252525; overflow:hidden; color:var(--about-ink); background:var(--about-paper); font-family:Lato,Arial,sans-serif; }
 .about-psd h1,.about-psd h2,.about-psd h3 { font-family:"IBM Plex Sans",Arial,sans-serif; font-weight:700; letter-spacing:-.035em; }
 .about-frame { width:930px; max-width:calc(100% - 64px); margin-inline:auto; }
-.home .site-header { top:30px; right:calc((100% - 930px)/2); width:563px; min-height:101px; align-items:flex-start; padding-top:0; gap:29px; font-family:Lato,Arial,sans-serif; }
+.home .site-header { top:30px; right:max(32px,calc((100% - 930px)/2)); width:563px; min-height:101px; align-items:flex-start; padding-top:0; gap:29px; font-family:Lato,Arial,sans-serif; }
 .home .brand { width:110px; height:55px; margin-right:auto; transform:none; }
 .home .brand img { width:110px; height:55px; object-fit:contain; filter:brightness(0) saturate(100%) invert(23%) sepia(17%) saturate(3572%) hue-rotate(247deg) brightness(83%) contrast(90%); }
 .home .primary-nav { padding-top:77px; gap:30px; font-size:14px; }

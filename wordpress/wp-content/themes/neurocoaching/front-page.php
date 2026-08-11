@@ -34,7 +34,7 @@ $questions = array(
 		<div class="about-hero__photo"><img src="<?php echo esc_url( $images . 'about-hero.webp' ); ?>" alt="Ksenia Belousova"></div>
 		<div class="about-hero__copy">
 			<p class="about-kicker">UN PROFESSIONAL &nbsp; | &nbsp; CAREER STRATEGIST &nbsp; | &nbsp; NEURO COACH</p>
-			<h1 id="about-name"><?php echo esc_html( neurocoaching_mod( 'about_name', 'Ksenia Belousova' ) ); ?></h1>
+			<h1 id="about-name">Ksenia Belousova</h1>
 			<p class="about-lead">15+ years in the UN &amp; international organisations</p>
 			<div class="about-intro">
 				<p>That combination — insider knowledge of international organisations and the lived experience of navigating change — is exactly what I bring to every client.</p>
