@@ -1,0 +1,215 @@
+{
+  "url": "https://neurocoaching.sy3.ru/?codex913=qa",
+  "desktop": {
+    "bounds": {
+      "services": {
+        "x": 141.5,
+        "y": 1911,
+        "width": 1037,
+        "height": 882.8
+      },
+      "service_heading": {
+        "x": 352.12,
+        "y": 1911,
+        "width": 615.75,
+        "height": 59.8
+      },
+      "service_card": {
+        "x": 141.5,
+        "y": 2050.8,
+        "width": 1037,
+        "height": 597
+      },
+      "life": {
+        "x": 0,
+        "y": 2793.8,
+        "width": 1320,
+        "height": 944
+      },
+      "life_heading": {
+        "x": 0,
+        "y": 2936.8,
+        "width": 1320,
+        "height": 65
+      },
+      "instagram": {
+        "x": 555,
+        "y": 3026.8,
+        "width": 209.98,
+        "height": 29
+      },
+      "photo": {
+        "x": 323,
+        "y": 3104.8,
+        "width": 674,
+        "height": 479
+      },
+      "previous": {
+        "x": 192,
+        "y": 3301.3,
+        "width": 86,
+        "height": 86
+      },
+      "next": {
+        "x": 1042,
+        "y": 3301.3,
+        "width": 86,
+        "height": 86
+      },
+      "cta": {
+        "x": 0,
+        "y": 3737.8,
+        "width": 1320,
+        "height": 401
+      },
+      "cta_heading": {
+        "x": 195,
+        "y": 3887.8,
+        "width": 930,
+        "height": 48
+      },
+      "cta_subtitle": {
+        "x": 196,
+        "y": 3971.8,
+        "width": 929,
+        "height": 18
+      },
+      "cta_button": {
+        "x": 195,
+        "y": 4018.8,
+        "width": 186,
+        "height": 63
+      }
+    },
+    "overflow_x": 0,
+    "console_errors": [],
+    "cta_button_computed": {
+      "backgroundColor": "rgb(248, 241, 238)",
+      "color": "rgb(63, 41, 97)",
+      "borderColor": "rgb(248, 241, 238)",
+      "borderWidth": "1px",
+      "borderStyle": "solid",
+      "width": "186px",
+      "height": "63px"
+    }
+  },
+  "mobile": {
+    "bounds": {
+      "services": {
+        "x": 15,
+        "y": 2515,
+        "width": 290,
+        "height": 835
+      },
+      "service_heading": {
+        "x": 15,
+        "y": 2515,
+        "width": 220,
+        "height": 84
+      },
+      "service_card": {
+        "x": 12,
+        "y": 2623,
+        "width": 295,
+        "height": 727
+      },
+      "life": {
+        "x": 0,
+        "y": 3350,
+        "width": 320,
+        "height": 434
+      },
+      "life_heading": {
+        "x": 0,
+        "y": 3378,
+        "width": 320,
+        "height": 36
+      },
+      "instagram": {
+        "x": 67.72,
+        "y": 3427,
+        "width": 184.55,
+        "height": 24.8
+      },
+      "photo": {
+        "x": -1,
+        "y": 3466.8,
+        "width": 323,
+        "height": 223
+      },
+      "previous": null,
+      "next": null,
+      "cta": {
+        "x": 0,
+        "y": 3784,
+        "width": 320,
+        "height": 250
+      },
+      "cta_heading": {
+        "x": 15,
+        "y": 3821,
+        "width": 277,
+        "height": 80
+      },
+      "cta_subtitle": {
+        "x": 16,
+        "y": 3912,
+        "width": 289,
+        "height": 16
+      },
+      "cta_button": {
+        "x": 15,
+        "y": 3946,
+        "width": 183,
+        "height": 53
+      }
+    },
+    "overflow_x": 0,
+    "console_errors": [],
+    "cta_button_computed": {
+      "backgroundColor": "rgb(248, 241, 238)",
+      "color": "rgb(63, 41, 97)",
+      "borderColor": "rgb(248, 241, 238)",
+      "borderWidth": "1px",
+      "borderStyle": "solid",
+      "width": "183px",
+      "height": "53px"
+    }
+  },
+  "functional": {
+    "single_slide": {
+      "count": "1",
+      "previous_disabled": true,
+      "next_disabled": true,
+      "dot_count": 0,
+      "shell_present": true
+    },
+    "multi_slide_fixture": {
+      "legitimate_assets": [
+        "career-life.webp",
+        "neuro-life.webp"
+      ],
+      "active_sequence": [
+        "0",
+        "1",
+        "0",
+        "2",
+        "0",
+        "2",
+        "1",
+        "2"
+      ],
+      "expected_sequence": [
+        "0",
+        "1",
+        "0",
+        "2",
+        "0",
+        "2",
+        "1",
+        "2"
+      ],
+      "passed": true
+    }
+  }
+}

@@ -87,12 +87,12 @@ $questions = array(
 
 	<section class="nc-about__life" aria-labelledby="nc-about-life-title">
 		<h2 id="nc-about-life-title">In real life</h2>
-		<a class="nc-about__instagram" href="<?php echo esc_url( $instagram ); ?>">Follow on Instagram</a>
+		<a class="nc-about__instagram" href="<?php echo esc_url( $instagram ); ?>">Follow on Instagram <img src="<?php echo esc_url( $images . 'about-instagram.svg' ); ?>" alt=""></a>
 		<?php neurocoaching_gallery( 'about_gallery_urls', $images . 'about-life-source.webp', 'Ksenia by the sea at sunset', 'nc-about__life-photo' ); ?>
 	</section>
 
 	<section class="nc-about__cta">
-		<div class="nc-about__frame"><h2>Ready to take the first step?</h2><p>Free 30-min intro call · No commitment</p><a class="nc-about__button" href="<?php echo esc_url( $booking ); ?>">Book a call</a></div>
+		<div class="nc-about__frame"><h2>Ready to take the first step?</h2><p>Free 30-min intro call · No commitment</p><a class="nc-about__button nc-about__cta-button" href="<?php echo esc_url( $booking ); ?>">Book a call</a></div>
 	</section>
 
 	<section id="faqs" class="nc-about__faq" aria-labelledby="nc-about-faq-title">
