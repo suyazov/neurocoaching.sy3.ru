@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "task_id": "CODEX-TASK-TASK-ISSUE-SUYAZOV_NEUROCOACHING.SY3.RU-919-G4",
+  "source_psd_sha256": "3a01b085418b0d919e84879adf19b585eb40568ad98c5cc92d748f770f1e334d",
+  "frozen_baseline_sha256": "a2c036a2b4bb3e4cceac4713fb77fe8bf4e52fe2b22b400dc50ef3ce5170679d",
+  "requested_visual_receipt_sha256": "d8dc7cc82b0862056f0eed54e6bf8cc8d29885a5156dc85bc3913f75d7e10012",
+  "observed_visual_receipt_sha256": "d97154fec797ed5b83c8c54fd075ec26cbb360f52611f0a6960e854c28d31616",
+  "measured_mobile_hero": {
+    "mask_at_320": "320x405",
+    "placed_object_at_320": "356x530",
+    "placed_origin_at_320": "-17,-55"
+  },
+  "checks": {
+    "fresh_main_read": true,
+    "fresh_live_http_status": 200,
+    "required_live_text_present": true,
+    "internal_server_error_absent": true,
+    "php_lint": true,
+    "machine_regression": true,
+    "git_diff_check": true,
+    "production_touched": false,
+    "post_delivery_browser_acceptance": "pending_bridge_delivery"
+  },
+  "context_delta": {
+    "result": "Restored the About mobile hero crop to the PSD-measured mask, placed-object bounds and origin while retaining the full-resolution responsive source.",
+    "decisions": "Changed only the remaining mobile hero transform and added a machine guard for the frozen baseline hash, source candidates and measured crop geometry.",
+    "current_status": "The scoped source correction passes lint and regression checks; fresh browser acceptance remains required after Bridge delivers the exact PR commit to staging.",
+    "constraints": "Production, staging services, DNS, nginx, WordPress core, plugins, uploads, database, credentials and acceptance baselines were not changed.",
+    "next_step": "Bridge should review and merge the single pull request, deliver its exact commit to staging, then run the mandated no-cache visual and interaction acceptance."
+  }
+}
