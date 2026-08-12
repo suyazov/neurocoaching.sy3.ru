@@ -92,13 +92,17 @@ function neurocoaching_gallery_urls( $setting, $fallback ) {
 	return array_slice( $urls ? $urls : array( $fallback ), 0, 24 );
 }
 
-function neurocoaching_gallery( $setting, $fallback, $alt, $class_name ) {
+function neurocoaching_gallery( $setting, $fallback, $alt, $class_name, $mobile_fallback = '' ) {
 	$slides = neurocoaching_gallery_urls( $setting, $fallback );
 	$count  = count( $slides );
 	if ( 1 === $count ) {
 		?>
 		<div class="<?php echo esc_attr( $class_name ); ?> nc-gallery nc-gallery--single">
-			<div class="nc-gallery__viewport"><figure class="nc-gallery__slide"><img src="<?php echo esc_url( $slides[0] ); ?>" alt="<?php echo esc_attr( $alt ); ?>"></figure></div>
+			<div class="nc-gallery__viewport"><figure class="nc-gallery__slide">
+				<?php if ( $mobile_fallback && $fallback === $slides[0] ) : ?><picture><source media="(max-width: 700px)" srcset="<?php echo esc_url( $mobile_fallback ); ?>"><?php endif; ?>
+				<img src="<?php echo esc_url( $slides[0] ); ?>" alt="<?php echo esc_attr( $alt ); ?>">
+				<?php if ( $mobile_fallback && $fallback === $slides[0] ) : ?></picture><?php endif; ?>
+			</figure></div>
 		</div>
 		<?php
 		return;
@@ -108,7 +112,11 @@ function neurocoaching_gallery( $setting, $fallback, $alt, $class_name ) {
 		<button class="nc-gallery__previous" type="button" data-carousel-previous aria-label="Previous photo"<?php echo 1 === $count ? ' disabled' : ''; ?>>←</button>
 		<div class="nc-gallery__viewport" aria-live="polite">
 		<?php foreach ( $slides as $index => $url ) : ?>
-			<figure class="nc-gallery__slide" data-carousel-slide<?php echo 0 !== $index ? ' hidden' : ''; ?> aria-label="Photo <?php echo esc_attr( (string) ( $index + 1 ) ); ?> of <?php echo esc_attr( (string) $count ); ?>"><img src="<?php echo esc_url( $url ); ?>" alt="<?php echo esc_attr( 0 === $index ? $alt : sprintf( 'Ksenia Belousova, gallery photo %d', $index + 1 ) ); ?>"></figure>
+			<figure class="nc-gallery__slide" data-carousel-slide<?php echo 0 !== $index ? ' hidden' : ''; ?> aria-label="Photo <?php echo esc_attr( (string) ( $index + 1 ) ); ?> of <?php echo esc_attr( (string) $count ); ?>">
+				<?php if ( 0 === $index && $mobile_fallback && $fallback === $url ) : ?><picture><source media="(max-width: 700px)" srcset="<?php echo esc_url( $mobile_fallback ); ?>"><?php endif; ?>
+				<img src="<?php echo esc_url( $url ); ?>" alt="<?php echo esc_attr( 0 === $index ? $alt : sprintf( 'Ksenia Belousova, gallery photo %d', $index + 1 ) ); ?>">
+				<?php if ( 0 === $index && $mobile_fallback && $fallback === $url ) : ?></picture><?php endif; ?>
+			</figure>
 		<?php endforeach; ?>
 		</div>
 		<button class="nc-gallery__next" type="button" data-carousel-next aria-label="Next photo"<?php echo 1 === $count ? ' disabled' : ''; ?>>→</button>

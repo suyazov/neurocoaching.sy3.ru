@@ -643,7 +643,6 @@ body.home:not(.career-services-route):not(.neurocoaching-route) .menu-toggle { d
 .nc-about__life-photo a { display:grid; width:86px; height:86px; place-items:center; border:0; border-radius:0; color:transparent; font-size:0; text-decoration:none; }
 .nc-about__life-photo a:first-child { background:url('assets/images/about-arrow-previous.png') center/86px 86px no-repeat; }
 .nc-about__life-photo a:last-of-type { background:url('assets/images/about-arrow-next.png') center/86px 86px no-repeat; }
-.nc-about__dots { position:absolute; right:0; bottom:99px; left:0; width:834px; height:18px; margin:auto; }
 .nc-about__cta { position:relative; z-index:2; height:401px; padding-top:142px; overflow:hidden; color:#fff; background:var(--nc-about-purple); }
 .nc-about__cta h2 { margin:0 0 25px; color:#fff; font-size:50px; line-height:1; }
 .nc-about__cta p { margin-bottom:30px; font-size:18px; font-weight:500; }
@@ -720,7 +719,6 @@ body.home:not(.career-services-route):not(.neurocoaching-route) .menu-toggle { d
 	.nc-about__life-photo { height:223px; display:block; margin-top:15px; }
 	.nc-about__life-photo>img { width:323px; height:223px; max-width:none; margin-inline:auto; object-position:center 52%; }
 	.nc-about__life-photo a { display:none; }
-	.nc-about__dots { right:auto; bottom:51px; left:14px; width:298px; height:auto; margin:0; }
 	.nc-about__cta { height:250px; padding-top:37px; }
 	.nc-about__cta h2 { width:250px; margin-bottom:17px; font-size:36px; line-height:40px; }
 	.nc-about__cta p { margin-bottom:20px; font-size:16px; }
@@ -743,17 +741,10 @@ body.home:not(.career-services-route):not(.neurocoaching-route) .menu-toggle { d
 .nc-gallery:focus-visible,[data-horizontal-track]:focus-visible { outline:3px solid currentColor; outline-offset:5px; }
 .nc-gallery__viewport { min-width:0; overflow:hidden; }
 .nc-gallery__slide { height:100%; margin:0; overflow:hidden; }
+.nc-gallery__slide picture { display:block; width:100%; height:100%; }
 .nc-gallery__slide[hidden] { display:none; }
 .nc-gallery__slide img { display:block; width:100%; height:100%; object-fit:cover; }
 .nc-gallery>button { display:grid; place-items:center; cursor:pointer; }
-
-/* The supplied About desktop artboard is 1320px, while acceptance is captured
-   at 1440px. Scale the semantic layout as one artboard so every measured PSD
-   coordinate (including header and type) lands on the 1440px baseline. */
-@media (min-width:851px) and (max-width:1440px) {
-	.home { overflow-x:hidden; }
-	.home .site-header,.home .nc-about { zoom:calc(100vw / 1320px); }
-}
 
 /* Bound source-sized mobile galleries and decoration to the device viewport. */
 @media (max-width:850px) {

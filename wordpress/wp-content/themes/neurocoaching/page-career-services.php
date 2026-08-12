@@ -111,9 +111,7 @@ $instagram_url = neurocoaching_mod( 'instagram_url', 'https://www.instagram.com/
 
 	<section class="career-life career-wrap" aria-labelledby="career-life-title">
 		<h2 id="career-life-title">In real life</h2><a href="<?php echo esc_url( $instagram_url ); ?>">Follow on Instagram</a>
-		<div class="career-life__gallery nc-gallery nc-gallery--single">
-			<div class="nc-gallery__viewport"><figure class="nc-gallery__slide"><picture><source media="(max-width: 700px)" srcset="<?php echo esc_url( get_theme_file_uri( '/assets/images/career-source/mobile-11362-img-2842.png' ) ); ?>"><img src="<?php echo esc_url( get_theme_file_uri( '/assets/images/career-source/desktop-9230-img-2842.png' ) ); ?>" alt="Ksenia at an international flags installation"></picture></figure></div>
-		</div>
+		<?php neurocoaching_gallery( 'career_gallery_urls', get_theme_file_uri( '/assets/images/career-source/desktop-9230-img-2842.png' ), 'Ksenia at an international flags installation', 'career-life__gallery', get_theme_file_uri( '/assets/images/career-source/mobile-11362-img-2842.png' ) ); ?>
 	</section>
 
 	<section class="career-cta"><div class="career-wrap"><h2>Ready to take the first step?</h2><p>Free 30-min intro call · No commitment</p><a class="career-button career-button--light" href="<?php echo esc_url( $booking_url ); ?>">Book a Consultation Session</a></div></section>
