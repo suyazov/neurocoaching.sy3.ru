@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "task_id": "CODEX-TASK-TASK-ISSUE-SUYAZOV_NEUROCOACHING.SY3.RU-910-G1",
+  "status": "completed",
+  "delivery": {
+    "environment": "neurocoaching.sy3.ru-staging",
+    "persistent_theme_file_sha256": "93ab974302dcef3ae3ac623f6625e838633e1332dbe1d04c6f59b8f7ecdb8efb",
+    "routes": ["/", "/career-services/", "/neurocoaching/"],
+    "desktop_mobile_http_status": [200, 200, 200, 200, 200, 200],
+    "production_touched": false
+  },
+  "checks": {
+    "psd_source_sha256_verified": true,
+    "computed_style_exact_rgb": true,
+    "interior_pixel_samples_exact_rgb": true,
+    "fresh_no_cache_screenshots": 6,
+    "required_live_text_present": true,
+    "internal_server_error_absent": true,
+    "git_diff_check": "passed"
+  },
+  "context_delta": {
+    "result": "Corrected source colour fidelity across About, Career and Neurocoaching desktop/mobile compositions and added auditable evidence.",
+    "decisions": "Split shared route colours into semantic hero, heading, body, accent, action, stroke, paper and section tokens with dedicated mobile values read from PSD metadata.",
+    "current_status": "Exact computed RGB and interior screenshot pixels pass on all six staging views; required route text remains present.",
+    "constraints": "Geometry, typography, copy, interactions and gallery structure were preserved; production and Bridge configuration were not touched.",
+    "next_step": "Review and merge the single pull request; Bridge can then reconcile the accepted commit with its normal staging finalization flow."
+  }
+}
