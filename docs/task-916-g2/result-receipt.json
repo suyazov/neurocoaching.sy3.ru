@@ -1,0 +1,14 @@
+{
+  "schema_version": 1,
+  "task_id": "CODEX-TASK-TASK-ISSUE-SUYAZOV_NEUROCOACHING.SY3.RU-916-G2",
+  "source_sha256": "3a01b085418b0d919e84879adf19b585eb40568ad98c5cc92d748f770f1e334d",
+  "delivery": { "environment": "neurocoaching.sy3.ru-staging", "persistent": true, "production_touched": false },
+  "checks": { "visual_gate_passed": true, "visual_diff_ratio": 0.0761282, "overflow_320": 0, "overflow_390": 0, "carousel_dots": 3, "carousel_click_keyboard_swipe": true, "faq_click_keyboard": true, "console_errors": 0, "php_lint": true, "regression_check": true, "git_diff_check": true },
+  "context_delta": {
+    "result": "Reconstructed the rejected About mobile composition gaps and desktop FAQ sidebar details from the original PSD, including an exact mobile hero crop and source-sized centred sections.",
+    "decisions": "Used a semantic picture asset for the dedicated mobile artboard crop, cancelled inherited desktop CTA offsets, normalised editable gallery URLs to exactly three slides, and isolated FAQ sidebar geometry from shared buttons.",
+    "current_status": "The scoped runtime change is persistently delivered to non-production staging and fresh visual-functional QA passes the frozen 390 baseline gate.",
+    "constraints": "Production, DNS, nginx, WordPress core/plugins/uploads/database/credentials and immutable acceptance baselines were not changed.",
+    "next_step": "Review and merge the ready pull request through the managed Bridge workflow."
+  }
+}

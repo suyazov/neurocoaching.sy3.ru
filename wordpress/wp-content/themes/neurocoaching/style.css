@@ -667,10 +667,10 @@ body.home:not(.career-services-route):not(.neurocoaching-route) .menu-toggle { d
 .nc-about__faq details p { max-width:580px; padding:0 0 25px 50px; font-size:14px; line-height:20px; }
 .nc-about__faq aside { position:relative; margin-top:2px; }
 .nc-about__faq aside img { width:290px; height:375px; object-fit:cover; object-position:center 48%; }
-.nc-about__faq aside::after { content:''; display:block; width:294px; height:2px; margin:24px 0 36px -2px; background:var(--nc-about-violet); }
+.nc-about__faq aside::after { content:''; display:block; width:294px; height:6px; margin:24px 0 32px -2px; background:var(--nc-about-violet); }
 .nc-about__faq aside h2 { width:290px; margin:0 0 24px; font-size:45px; line-height:46px; }
 .nc-about__faq aside p { width:275px; margin:0 0 69px; font-size:18px; line-height:20px; }
-.nc-about__faq aside .nc-about__button { width:293px; min-width:293px; min-height:63px; margin:0 0 0 -2px; border:0; color:#fff; background:var(--nc-about-violet); }
+.nc-about__faq aside .nc-about__button { width:293px; min-width:293px; height:63px; min-height:63px; margin:0 0 0 -2px; padding:0; border:0; color:#fff; background:var(--nc-about-violet); font-size:18px; line-height:63px; }
 
 @media (max-width:850px) {
 	.nc-about__frame { width:auto; max-width:none; margin-inline:15px; }
@@ -685,18 +685,19 @@ body.home:not(.career-services-route):not(.neurocoaching-route) .menu-toggle { d
 	body.home:not(.career-services-route):not(.neurocoaching-route) .primary-nav { position:absolute; top:clamp(50px,15.625vw,61px); left:0; width:100%; display:none; margin:0; padding:18px 15px 22px; flex-direction:column; gap:7px; background:var(--nc-about-purple); font-size:14px; }
 	body.home:not(.career-services-route):not(.neurocoaching-route) .site-header.is-open .primary-nav { display:flex; }
 	body.home:not(.career-services-route):not(.neurocoaching-route) .primary-nav a { position:relative; top:auto; left:auto!important; width:auto; height:auto; padding:3px 0; border:0; border-radius:0; color:#fff; }
-	.nc-about__hero { width:100%; height:clamp(1391px,449.688vw,1442px); display:block; margin-left:0; padding-top:clamp(50px,15.625vw,61px); }
+	.nc-about__hero { width:100%; height:clamp(1391px,calc(1157.86px + 72.857vw),1442px); display:block; margin-left:0; padding-top:clamp(50px,15.625vw,61px); }
 	.nc-about__hero-photo { width:100%; height:clamp(405px,126.563vw,450px); }
-	.nc-about__hero-photo img { top:-17.1875vw; left:-5.3125vw; width:111.25vw; height:165.625vw; object-fit:fill; }
+	.nc-about__hero-photo picture { display:block; width:100%; height:100%; }
+	.nc-about__hero-photo img { position:static; width:100%; height:100%; max-width:none; object-fit:fill; }
 	.nc-about__hero-copy { padding:34px 15px 24px; }
 	.nc-about__mobile-break { display:initial; }
 	.nc-about__eyebrow { width:190px; margin:0 0 24px; white-space:normal; font-size:16px; line-height:28px; }
 	.nc-about__eyebrow span { padding-inline:3px; }
 	.nc-about__hero h1 { width:190px; margin-bottom:25px; font-size:36px; line-height:40px; }
 	.nc-about__lead { width:260px; margin-bottom:28px; font-size:16px; line-height:22px; }
-	.nc-about__intro { width:auto; font-size:14px; line-height:20px; }
+	.nc-about__intro { width:290px; max-width:100%; font-size:14px; line-height:20px; }
 	.nc-about__intro p { margin-bottom:19px; }
-	.nc-about__hero-copy>.nc-about__button { width:185px; min-width:185px; min-height:55px; }
+	.nc-about__hero-copy>.nc-about__button { top:-24px; left:0; width:185px; min-width:185px; min-height:55px; }
 	.nc-about__button { min-width:183px; min-height:53px; font-size:14px; }
 	.nc-about__education { height:389px; padding-top:56px; }
 	.nc-about__education h2 { width:240px; margin-bottom:41px; font-size:36px; line-height:40px; }
@@ -708,9 +709,9 @@ body.home:not(.career-services-route):not(.neurocoaching-route) .menu-toggle { d
 	.nc-about__credentials ul { grid-template-columns:1fr; gap:26px; }
 	.nc-about__credentials li { min-height:39px; padding-left:24px; font-size:14px; line-height:18px; }
 	.nc-about__credentials li>img { top:0; width:16px; height:14px; }
-	.nc-about__services { width:100%; height:835px; max-width:none; margin:0; padding:0 15px; }
+	.nc-about__services { width:100%; height:835px; max-width:none; margin:0; padding:0 max(15px,calc((100% - 290px)/2)); }
 	.nc-about__services>h2 { width:220px; margin:0 0 24px; font-size:40px; line-height:42px; }
-	.nc-about__service-card { position:relative; width:290px; height:727px; display:block; margin-left:0; border-width:2px; }
+	.nc-about__service-card { position:relative; width:290px; height:727px; display:block; margin-inline:auto; border-width:2px; }
 	.nc-about__service-card>div { padding:0; }
 	.nc-about__service-summary { position:absolute; top:25px; left:24px; width:237px; }
 	.nc-about__service-heading h3,.nc-about__programmes h3 { font-size:29px; line-height:32px; }
@@ -729,14 +730,15 @@ body.home:not(.career-services-route):not(.neurocoaching-route) .menu-toggle { d
 	.nc-about__life h2 { font-size:36px; }
 	.nc-about__instagram { margin-top:13px; gap:16px; font-size:16px; }
 	.nc-about__instagram img { width:21px; height:21px; }
-	.nc-about__life-photo { width:323px; height:223px; display:block; margin:15px 0 0 -1px; }
-	.nc-about__life-photo>img { width:323px; height:223px; max-width:none; margin-inline:auto; object-position:center 52%; }
+	.nc-about__life-photo { width:min(323px,100vw); height:223px; display:block; margin:15px auto 0; }
+	.nc-about__life-photo>img { width:100%; height:223px; max-width:none; margin-inline:auto; object-position:center 52%; }
 	.nc-about__life-photo a { display:none; }
 	.nc-about__cta { height:250px; padding-top:37px; }
+	.nc-about__cta .nc-about__frame { width:290px; max-width:calc(100% - 30px); margin-inline:auto; }
 	.nc-about__cta h2 { width:233px; margin-bottom:11px; font-size:36px; line-height:40px; }
 	.nc-about__cta p { margin:0 0 18px 1px; font-size:14px; line-height:16px; }
 	.nc-about__cta .nc-about__cta-button { width:183px; min-width:183px; min-height:53px; }
-	.nc-about__faq { width:auto; max-width:none; display:block; margin-inline:14px; padding:56px 0 58px; }
+	.nc-about__faq { width:290px; max-width:calc(100% - 28px); display:block; margin-inline:auto; padding:56px 0 58px; }
 	.nc-about__faq>header { display:block; margin-bottom:29px; }
 	.nc-about__faq>header h2 { font-size:36px; line-height:1; }
 	.nc-about__faq>header p { margin-top:5px; font-size:16px; }
@@ -744,10 +746,10 @@ body.home:not(.career-services-route):not(.neurocoaching-route) .menu-toggle { d
 	.nc-about__faq details p { padding:0 0 20px 1px; font-size:14px; line-height:20px; }
 	.nc-about__faq aside { margin-top:55px; }
 	.nc-about__faq aside>img { width:288px; height:239px; margin-left:1px; object-position:center 49%; }
-	.nc-about__faq aside::after { width:290px; height:2px; margin:15px 0 25px; }
+	.nc-about__faq aside::after { width:290px; max-width:100%; height:6px; margin:15px 0 21px; }
 	.nc-about__faq aside h2 { width:231px; margin:0 0 17px 1px; font-size:36px; line-height:40px; }
 	.nc-about__faq aside p { width:auto; margin:0 0 30px; font-size:14px; line-height:20px; }
-	.nc-about__faq aside .nc-about__button { width:186px; min-width:186px; min-height:53px; margin-left:0; }
+	.nc-about__faq aside .nc-about__button { width:186px; min-width:186px; height:53px; min-height:53px; margin-left:0; padding:0; font-size:14px; line-height:53px; }
 }
 
 /* Source-faithful interactive galleries. The PSD bundle contains one usable photo per route;
@@ -894,9 +896,9 @@ body.home:not(.career-services-route):not(.neurocoaching-route) .menu-toggle { d
 	.nc-about { width:100%; }
 	.nc-about__hero { width:100%; }
 	.nc-about__frame { width:calc(100% - 30px); }
-	.nc-about__service-card { width:290px; margin-left:0; }
+	.nc-about__service-card { width:290px; margin-inline:auto; }
 	.nc-about__life-photo,.career-life__gallery,.neuro-life__gallery { display:block; margin-top:15px; }
-	.nc-about__life-photo .nc-gallery__viewport { width:323px; max-width:none; height:223px; margin:0; }
+	.nc-about__life-photo .nc-gallery__viewport { width:100%; max-width:none; height:223px; margin:0; }
 	.career-life__gallery .nc-gallery__viewport { width:184px; height:222px; margin:auto; }
 	.neuro-life__gallery .nc-gallery__viewport { width:278px; height:278px; margin:auto; }
 	.nc-gallery>button { display:none; }

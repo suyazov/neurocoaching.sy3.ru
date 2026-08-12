@@ -1,0 +1,13 @@
+{
+  "url": "https://neurocoaching.sy3.ru/?task916g2=final",
+  "visual_gate": { "viewport": "390x844", "normalized_rmse": 0.0761282, "threshold": 0.08, "passed": true },
+  "viewports": {
+    "320": { "scrollWidth": 320, "clientWidth": 320, "hero": [0, 0, 320, 1391], "heroButton": [15, 1306, 185, 55], "educationY": 1391, "b2b": [15, 2473, 290, 727], "life": [0, 3200, 320, 434], "cta": [0, 3634, 320, 250], "faq": [15, 3884, 290, 1760], "dots": 3 },
+    "390": { "scrollWidth": 390, "clientWidth": 390, "hero": [0, 0, 390, 1442], "heroButton": [15, 1361.94, 185, 55], "b2b": [50, 2524, 290, 727], "gallery": [33.5, 3382.8, 323, 223], "cta": [0, 3685, 390, 250], "faq": [50, 3935, 290, 1760], "dots": 3 },
+    "1440": { "faq": [205, 4135.8, 1030, 1499.5], "faqSidebarImage": [894, 4388.3, 290, 375], "faqSidebarButton": [892, 4988.3, 293, 63] }
+  },
+  "interactions": { "carouselClickActive": 1, "carouselKeyboardActive": 2, "carouselSwipeActive": 0, "faqClickOpened": true, "faqKeyboardClosed": true },
+  "faqButtonComputed": { "mobile": { "width": "186px", "height": "53px", "padding": "0px", "border": "0px none", "background": "rgb(133, 92, 172)", "color": "rgb(255, 255, 255)", "fontSize": "14px", "lineHeight": "53px" }, "desktop": { "width": "293px", "height": "63px", "padding": "0px", "border": "0px none", "background": "rgb(133, 92, 172)", "color": "rgb(255, 255, 255)", "fontSize": "18px", "lineHeight": "63px" } },
+  "console_errors": 0,
+  "production_touched": false
+}

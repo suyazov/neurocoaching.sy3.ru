@@ -31,7 +31,7 @@ $questions = array(
 ?>
 <article class="nc-about">
 	<section class="nc-about__hero" aria-labelledby="nc-about-name">
-		<div class="nc-about__hero-photo"><img src="<?php echo esc_url( $images . 'about-hero-source.webp' ); ?>" alt="Ksenia Belousova"></div>
+		<div class="nc-about__hero-photo"><picture><source media="(max-width: 850px)" srcset="<?php echo esc_url( $images . 'about-hero-mobile-source.webp' ); ?>"><img src="<?php echo esc_url( $images . 'about-hero-source.webp' ); ?>" alt="Ksenia Belousova"></picture></div>
 		<div class="nc-about__hero-copy">
 			<p class="nc-about__eyebrow">UN PROFESSIONAL <span>|</span><br class="nc-about__mobile-break"> CAREER STRATEGIST <span>|</span><br class="nc-about__mobile-break"> NEURO COACH</p>
 			<h1 id="nc-about-name">Ksenia Belousova</h1>
@@ -90,7 +90,9 @@ $questions = array(
 		<a class="nc-about__instagram" href="<?php echo esc_url( $instagram ); ?>">Follow on Instagram <img src="<?php echo esc_url( $images . 'about-instagram.svg' ); ?>" alt=""></a>
 		<?php
 		$about_life_image = $images . 'about-life-source.webp';
-		neurocoaching_gallery( 'about_gallery_urls', $about_life_image, 'Ksenia by the sea at sunset', 'nc-about__life-photo', '', array_fill( 0, 3, $about_life_image ) );
+		$about_life_slides = neurocoaching_gallery_urls( 'about_gallery_urls', $about_life_image );
+		$about_life_slides = array_slice( array_pad( $about_life_slides, 3, $about_life_image ), 0, 3 );
+		neurocoaching_gallery( 'about_gallery_urls', $about_life_image, 'Ksenia by the sea at sunset', 'nc-about__life-photo', '', $about_life_slides );
 		?>
 	</section>
 
