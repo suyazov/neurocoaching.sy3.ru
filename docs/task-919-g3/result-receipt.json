@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "task_id": "CODEX-TASK-TASK-ISSUE-SUYAZOV_NEUROCOACHING.SY3.RU-919-G3",
+  "source_psd_sha256": "3a01b085418b0d919e84879adf19b585eb40568ad98c5cc92d748f770f1e334d",
+  "immutable_visual_receipt_sha256": "3485648b86f04f5607baa3782303fe271a1f9545c973e8c2af72f7129e697194",
+  "observed_visual_receipt_sha256_at_completion": "60bd1b395ec408514846e83303a4c630bbcd3c672e82b5a36b5bf43f636ef5fc",
+  "measured_correction": {
+    "mobile_header_height": { "source_320": 53, "before_320": 50, "after_320": 53 },
+    "mobile_hero_photo_height": { "source_320": 402, "before_320": 405, "after_320": 402 },
+    "mobile_b2b_card_width": { "source_320": 295, "before": 290, "after": 295 }
+  },
+  "preserved_desktop_faq": {
+    "question_column_width": 663,
+    "sidebar_image": "290x375",
+    "separator": "294x6",
+    "filled_cta": "293x63"
+  },
+  "checks": {
+    "fresh_live_http_status": 200,
+    "required_live_text_present": true,
+    "internal_server_error_absent": true,
+    "php_lint": true,
+    "machine_regression": true,
+    "git_diff_check": true,
+    "production_touched": false,
+    "post_delivery_browser_acceptance": "pending_bridge_delivery"
+  },
+  "context_delta": {
+    "result": "Corrected the measured 320 PSD header/photo split and removed the late CSS override that narrowed the B2B card below its 295px source width.",
+    "decisions": "Changed only source-measured mobile geometry; preserved the already source-aligned desktop FAQ/sidebar, semantic markup, editable content, carousel, accordion and source colours.",
+    "current_status": "Source correction and machine regression guard are ready in one scoped pull request; the live route currently returns HTTP 200 with all required text.",
+    "constraints": "Production, staging services, DNS, nginx, WordPress core/plugins/uploads/database/credentials and frozen acceptance baselines were not changed.",
+    "next_step": "Bridge should review and merge the pull request, deliver the exact commit to staging, then run the required fresh no-cache visual and interaction acceptance on that delivered build."
+  }
+}
