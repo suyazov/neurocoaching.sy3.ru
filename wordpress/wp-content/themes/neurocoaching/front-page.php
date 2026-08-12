@@ -31,7 +31,7 @@ $questions = array(
 ?>
 <article class="nc-about">
 	<section class="nc-about__hero" aria-labelledby="nc-about-name">
-		<div class="nc-about__hero-photo"><picture><source media="(max-width: 850px)" srcset="<?php echo esc_url( $images . 'about-hero-mobile-source.webp' ); ?>"><img src="<?php echo esc_url( $images . 'about-hero-source.webp' ); ?>" alt="Ksenia Belousova"></picture></div>
+		<div class="nc-about__hero-photo"><picture><source media="(max-width: 850px)" srcset="<?php echo esc_url( $images . 'about-hero-psd-768.webp' ); ?> 768w, <?php echo esc_url( $images . 'about-hero-source.webp' ); ?> 1537w" sizes="100vw"><img src="<?php echo esc_url( $images . 'about-hero-source.webp' ); ?>" srcset="<?php echo esc_url( $images . 'about-hero-psd-768.webp' ); ?> 768w, <?php echo esc_url( $images . 'about-hero-source.webp' ); ?> 1537w" sizes="(max-width: 850px) 100vw, 50vw" width="1537" height="2305" alt="Ksenia Belousova"></picture></div>
 		<div class="nc-about__hero-copy">
 			<p class="nc-about__eyebrow">UN PROFESSIONAL <span>|</span><br class="nc-about__mobile-break"> CAREER STRATEGIST <span>|</span><br class="nc-about__mobile-break"> NEURO COACH</p>
 			<h1 id="nc-about-name">Ksenia Belousova</h1>
@@ -92,7 +92,8 @@ $questions = array(
 		$about_life_image = $images . 'about-life-source.webp';
 		$about_life_slides = neurocoaching_gallery_urls( 'about_gallery_urls', $about_life_image );
 		$about_life_slides = array_slice( array_pad( $about_life_slides, 3, $about_life_image ), 0, 3 );
-		neurocoaching_gallery( 'about_gallery_urls', $about_life_image, 'Ksenia by the sea at sunset', 'nc-about__life-photo', '', $about_life_slides );
+		$about_life_srcset = $images . 'about-life-psd-300.webp 300w, ' . $about_life_image . ' 600w';
+		neurocoaching_gallery( 'about_gallery_urls', $about_life_image, 'Ksenia by the sea at sunset', 'nc-about__life-photo', '', $about_life_slides, $about_life_srcset );
 		?>
 	</section>
 
@@ -106,7 +107,7 @@ $questions = array(
 			<?php foreach ( $questions as $question => $answer ) : ?><details><summary><?php echo esc_html( $question ); ?></summary><p><?php echo esc_html( $answer ); ?></p></details><?php endforeach; ?>
 			<details open><summary>What's the first step?</summary><p>Start with a conversation. You don't need a perfect plan — just the willingness to change something. Book a Discovery Session: free 30 minutes that will give you clarity on where you are, what's holding you back, and exactly what your next step looks like. From there, we build everything together.</p></details>
 		</div>
-		<aside><img src="<?php echo esc_url( $images . 'about-faq-source.webp' ); ?>" alt="Ksenia outdoors"><h2>Ready to take the first step?</h2><p>Leave with clarity, a defined direction, and a concrete next step.</p><a class="nc-about__button" href="<?php echo esc_url( $booking ); ?>">Book a call</a></aside>
+		<aside><img src="<?php echo esc_url( $images . 'about-faq-source.webp' ); ?>" srcset="<?php echo esc_url( $images . 'about-faq-psd-300.webp' ); ?> 300w, <?php echo esc_url( $images . 'about-faq-source.webp' ); ?> 600w" sizes="290px" width="600" height="800" alt="Ksenia outdoors"><h2>Ready to take the first step?</h2><p>Leave with clarity, a defined direction, and a concrete next step.</p><a class="nc-about__button" href="<?php echo esc_url( $booking ); ?>">Book a call</a></aside>
 	</section>
 </article>
 <?php get_footer();

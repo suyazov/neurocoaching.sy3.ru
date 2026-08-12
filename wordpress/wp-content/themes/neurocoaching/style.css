@@ -688,7 +688,7 @@ body.home:not(.career-services-route):not(.neurocoaching-route) .menu-toggle { d
 	.nc-about__hero { width:100%; height:clamp(1391px,calc(1157.86px + 72.857vw),1442px); display:block; margin-left:0; padding-top:clamp(53px,calc(16.43px + 11.429vw),61px); }
 	.nc-about__hero-photo { width:100%; height:clamp(402px,calc(182.57px + 68.571vw),450px); }
 	.nc-about__hero-photo picture { display:block; width:100%; height:100%; }
-	.nc-about__hero-photo img { position:static; width:100%; height:100%; max-width:none; object-fit:fill; }
+	.nc-about__hero-photo img { position:static; width:100%; height:100%; max-width:none; object-fit:cover; object-position:center top; }
 	.nc-about__hero-copy { padding:34px 15px 24px; }
 	.nc-about__mobile-break { display:initial; }
 	.nc-about__eyebrow { width:190px; margin:0 0 24px; white-space:normal; font-size:16px; line-height:28px; }

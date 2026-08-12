@@ -15,6 +15,12 @@
     "separator": "294x6",
     "filled_cta": "293x63"
   },
+  "psd_photography": {
+    "hero_source": "1537x2305 embedded IMG_9893.JPG; 768w responsive derivative plus original 1537w candidate",
+    "life_source": "600x800 embedded IMG_1099.jpeg; 300w responsive derivative plus original 600w candidate",
+    "faq_source": "600x800 embedded IMG_8770.jpeg; 300w responsive derivative plus original 600w candidate",
+    "crop_policy": "CSS object-fit/object-position; no upscale or sharpening"
+  },
   "checks": {
     "fresh_live_http_status": 200,
     "required_live_text_present": true,
@@ -26,8 +32,8 @@
     "post_delivery_browser_acceptance": "pending_bridge_delivery"
   },
   "context_delta": {
-    "result": "Corrected the measured 320 PSD header/photo split and removed the late CSS override that narrowed the B2B card below its 295px source width.",
-    "decisions": "Changed only source-measured mobile geometry; preserved the already source-aligned desktop FAQ/sidebar, semantic markup, editable content, carousel, accordion and source colours.",
+    "result": "Corrected the measured 320 PSD header/photo split, removed the late B2B width override, and replaced the 320px mobile hero path with responsive candidates derived from the embedded full-resolution PSD photography.",
+    "decisions": "Use the embedded 1537x2305 hero and 600x800 life/FAQ sources at their legitimate resolution, with smaller derivatives and CSS crop/mask; never upscale or sharpen the old low-resolution exports.",
     "current_status": "Source correction and machine regression guard are ready in one scoped pull request; the live route currently returns HTTP 200 with all required text.",
     "constraints": "Production, staging services, DNS, nginx, WordPress core/plugins/uploads/database/credentials and frozen acceptance baselines were not changed.",
     "next_step": "Bridge should review and merge the pull request, deliver the exact commit to staging, then run the required fresh no-cache visual and interaction acceptance on that delivered build."
