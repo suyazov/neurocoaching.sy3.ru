@@ -1,0 +1,27 @@
+{
+  "schema_version": 1,
+  "task_id": "CODEX-TASK-TASK-ISSUE-SUYAZOV_NEUROCOACHING.SY3.RU-916-G1",
+  "source": {
+    "file": "1_About me_1320 и 320.psd",
+    "sha256": "3a01b085418b0d919e84879adf19b585eb40568ad98c5cc92d748f770f1e334d"
+  },
+  "delivery": {
+    "environment": "neurocoaching.sy3.ru-staging",
+    "url": "https://neurocoaching.sy3.ru/",
+    "persistent_theme_files": ["style.css"],
+    "production_touched": false
+  },
+  "checks": {
+    "staging_http_status": 200,
+    "staging_css_sha_matches_worktree": true,
+    "browser_qa": "blocked_by_managed_worktree_browser_runtime",
+    "browser_blocker": "Chromium Unix socket path exceeds the platform limit inside the required worktree; isolated Firefox headless framebuffer initialization fails. The prohibited external temporary-directory workaround was not used."
+  },
+  "context_delta": {
+    "result": "Reconstructed the dedicated About mobile composition and desktop FAQ/sidebar geometry from the original PSD layer bounds.",
+    "decisions": "Used the independent 320 artboard composition with a fluid header/photo crop through 390 px, preserved semantic WordPress content and the real three-slide carousel, and gave the FAQ sidebar its source-specific image, separator and filled CTA.",
+    "current_status": "Code is persistently present on non-production staging and static checks pass; fresh browser visual-functional readback remains blocked by the managed browser runtime.",
+    "constraints": "No production, DNS, nginx, WordPress core/plugins/uploads/database/credentials, immutable acceptance baseline, or external temporary directory was changed.",
+    "next_step": "Run the required fresh Chromium screenshot, bounds, overflow, carousel and FAQ acceptance in a browser worker with a short profile path before merge."
+  }
+}
