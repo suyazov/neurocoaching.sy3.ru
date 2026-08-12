@@ -1,0 +1,48 @@
+{
+  "task_id": "TASK-ISSUE-SUYAZOV_NEUROCOACHING.SY3.RU-871",
+  "environment": "neurocoaching.sy3.ru-staging",
+  "production_touched": false,
+  "staging_mutated": false,
+  "baseline_immutable": true,
+  "baseline_files_changed": false,
+  "source_evidence": {
+    "psd_sha256": "3a01b085418b0d919e84879adf19b585eb40568ad98c5cc92d748f770f1e334d",
+    "desktop_artboard": "1320x6101",
+    "logo_layer_bbox": "565,30,675,85",
+    "headline_bbox": "566,243,1099,293",
+    "lead_bbox": "568,323,964,340",
+    "intro_bbox": "565,395,1115,692",
+    "hero_button_bbox": "564,734,802,798"
+  },
+  "implementation": {
+    "runtime_files": [
+      "wordpress/wp-content/themes/neurocoaching/style.css",
+      "wordpress/wp-content/themes/neurocoaching/assets/images/about-logo.png"
+    ],
+    "summary": "Cropped the transparent logo canvas to its actual 1493x741 artwork, rendered it at the PSD 110x55 geometry, restored the H1 width and left edge, tightened lead tracking, and corrected paragraph and hero-button rhythm.",
+    "dom_text_changed": false,
+    "interaction_code_changed": false,
+    "source_asset_replaced": true
+  },
+  "browser_qa": {
+    "capture_kind": "fresh no-cache staging DOM with PR candidate CSS and logo applied as a non-persistent browser overlay at 1440x900",
+    "screenshot": "about-desktop-1440x900.png",
+    "console_errors": 0,
+    "horizontal_overflow": 0,
+    "visual_diff_ratio_at_18_percent_fuzz": 0.111171,
+    "threshold": 0.18,
+    "exact_visible_text": [
+      "Ksenia Belousova",
+      "15+ years in the UN & international organisations",
+      "Book a free call"
+    ],
+    "forbidden_text_absent": "Internal Server Error"
+  },
+  "context_delta": {
+    "result": "Re-audited the complete desktop About header and hero against PSD layers, replaced the padded logo asset, and corrected headline, lead, paragraph, and call-button geometry.",
+    "decisions": "Kept the already-close photo, social icons, navigation, underline, LinkedIn CTA, and eyebrow geometry stable; used PSD layer bounds and actual alpha bounds as source truth.",
+    "current_status": "The PR candidate passes the 0.18 visual threshold at 0.111171 and preserves the required route text; controlled staging delivery remains pending.",
+    "constraints": "No production, deployment configuration, WordPress core, plugins, uploads, database, credentials, DNS, nginx, or immutable baseline was changed.",
+    "next_step": "Review the ready PR and let Bridge deliver its exact head to staging for persistent no-cache acceptance."
+  }
+}
