@@ -1,0 +1,19 @@
+{
+  "task_id": "CODEX-TASK-TASK-ISSUE-SUYAZOV_NEUROCOACHING.SY3.RU-876-G1",
+  "affine_task_id": "TASK-ISSUE-SUYAZOV_NEUROCOACHING.SY3.RU-876",
+  "environment": "neurocoaching.sy3.ru-staging",
+  "production_touched": false,
+  "staging_mutated": false,
+  "baseline_immutable": true,
+  "source_sha256": "3a01b085418b0d919e84879adf19b585eb40568ad98c5cc92d748f770f1e334d",
+  "manifest_coverage": "444/444",
+  "desktop_baseline_diff_ratio_at_18_percent_fuzz": 0.110267,
+  "desktop_baseline_threshold": 0.18,
+  "context_delta": {
+    "result": "Completed the full About source reconstruction audit and corrected the systemic mobile scale, B2B field, gallery arrows, and pagination mismatches.",
+    "decisions": "Used the original PSD merged preview and complete layer manifest as source truth while preserving semantic WordPress DOM, carousel controls, FAQs, links, and admin-editable gallery URLs.",
+    "current_status": "The PR candidate matches every material About section in fresh desktop and mobile audit captures and passes the immutable 1440x900 threshold.",
+    "constraints": "No production, staging persistence, DNS, nginx, WordPress core, plugins, uploads, database, credentials, or immutable acceptance baselines were changed.",
+    "next_step": "Review the ready pull request; Bridge may deliver the exact approved head to staging and run persistent live acceptance."
+  }
+}

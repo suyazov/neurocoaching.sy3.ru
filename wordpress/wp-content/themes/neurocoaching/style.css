@@ -618,7 +618,7 @@ body.home:not(.career-services-route):not(.neurocoaching-route) .menu-toggle { d
 .nc-about__credentials li>img { position:absolute; top:0; left:0; width:20px; height:18px; }
 .nc-about__services { width:1037px; max-width:calc(100% - 64px); margin-inline:auto; padding-bottom:146px; }
 .nc-about__services>h2 { width:max-content; margin:0 auto 80px; color:var(--nc-about-purple); font-size:65px; line-height:.92; }
-.nc-about__service-card { height:597px; display:grid; grid-template-columns:527px 504px; border:3px solid var(--nc-about-violet); color:var(--nc-about-ink); background:#fff; }
+.nc-about__service-card { height:597px; display:grid; grid-template-columns:527px 504px; border:3px solid var(--nc-about-violet); color:var(--nc-about-ink); background:#c8d2fa; }
 .nc-about__service-card>div { padding:56px 46px; }
 .nc-about__service-summary { position:relative; }
 .nc-about__service-summary::after { content:''; position:absolute; top:283px; left:45px; width:374px; height:6px; background:var(--nc-about-violet); }
@@ -640,8 +640,9 @@ body.home:not(.career-services-route):not(.neurocoaching-route) .menu-toggle { d
 .nc-about__instagram { display:inline-block; margin-top:25px; color:var(--nc-about-purple); font-size:18px; font-weight:900; text-decoration:none; }
 .nc-about__life-photo { position:relative; z-index:1; height:479px; display:grid; grid-template-columns:86px 674px 86px; gap:31px; align-items:center; justify-content:center; margin-top:49px; }
 .nc-about__life-photo>img { width:674px; height:479px; object-fit:cover; object-position:center 50%; }
-.nc-about__life-photo a { display:grid; width:86px; height:86px; place-items:center; border:2px solid var(--nc-about-violet); border-radius:50%; color:var(--nc-about-violet); font-size:36px; text-decoration:none; }
-.nc-about__life-photo a img { width:86px; height:86px; margin:-2px; max-width:none; }
+.nc-about__life-photo a { display:grid; width:86px; height:86px; place-items:center; border:0; border-radius:0; color:transparent; font-size:0; text-decoration:none; }
+.nc-about__life-photo a:first-child { background:url('assets/images/about-arrow-previous.png') center/86px 86px no-repeat; }
+.nc-about__life-photo a:last-of-type { background:url('assets/images/about-arrow-next.png') center/86px 86px no-repeat; }
 .nc-about__dots { position:absolute; right:0; bottom:99px; left:0; width:834px; height:18px; margin:auto; }
 .nc-about__cta { position:relative; z-index:2; height:401px; padding-top:142px; overflow:hidden; color:#fff; background:var(--nc-about-purple); }
 .nc-about__cta h2 { margin:0 0 25px; color:#fff; font-size:50px; line-height:1; }
@@ -757,6 +758,7 @@ body.home:not(.career-services-route):not(.neurocoaching-route) .menu-toggle { d
 /* Bound source-sized mobile galleries and decoration to the device viewport. */
 @media (max-width:850px) {
 	.home,.career-services-route,.neurocoaching-route { overflow-x:hidden; }
+	.home .site-header,.home .nc-about { zoom:calc(100vw / 320px); }
 }
 .nc-gallery>button:disabled { cursor:default; opacity:.42; }
 .nc-gallery__pagination { position:absolute; top:calc(100% + 54px); left:50%; display:flex; width:max-content; max-width:100%; gap:22px; transform:translateX(-50%); }
@@ -764,7 +766,11 @@ body.home:not(.career-services-route):not(.neurocoaching-route) .menu-toggle { d
 .nc-gallery__pagination button[aria-current="true"] { background:currentColor; }
 .nc-about__life-photo { color:var(--nc-about-violet); }
 .nc-about__life-photo .nc-gallery__viewport { width:674px; height:479px; }
-.nc-about__life-photo>button { width:86px; height:86px; border:2px solid var(--nc-about-violet); border-radius:50%; color:var(--nc-about-violet); background:transparent; font-size:36px; }
+.nc-about__life-photo>button { width:86px; height:86px; overflow:hidden; border:0; border-radius:0; color:transparent; background-position:center; background-size:86px 86px; background-repeat:no-repeat; font-size:0; }
+.nc-about__life-photo>.nc-gallery__previous { background-image:url('assets/images/about-arrow-previous.png'); }
+.nc-about__life-photo>.nc-gallery__next { background-image:url('assets/images/about-arrow-next.png'); }
+.nc-about__life-photo .nc-gallery__pagination { width:834px; height:18px; background:url('assets/images/about-gallery-dots.png') center/834px 18px no-repeat; }
+.nc-about__life-photo .nc-gallery__pagination button { opacity:0; }
 .career-life__gallery { grid-template-columns:88px 666px 88px; gap:33px; margin-top:38px; color:var(--career-violet); }
 .career-life__gallery .nc-gallery__viewport { width:666px; height:735px; }
 .career-life__gallery>button,.neuro-life__gallery>button { width:88px; height:88px; border:2px solid currentColor; border-radius:50%; color:inherit; background:transparent; font-size:34px; }
@@ -781,4 +787,5 @@ body.home:not(.career-services-route):not(.neurocoaching-route) .menu-toggle { d
 	.nc-gallery>button { display:none; }
 	.nc-gallery__pagination { top:calc(100% + 10px); gap:9px; }
 	.nc-gallery__pagination button { width:8px; height:8px; border-width:1px; }
+	.nc-about__life-photo .nc-gallery__pagination { width:298px; height:8px; background-size:298px 8px; }
 }

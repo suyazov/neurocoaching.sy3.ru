@@ -1,0 +1,21 @@
+{
+  "source_file": "1_About me_1320 и 320.psd",
+  "source_sha256": "3a01b085418b0d919e84879adf19b585eb40568ad98c5cc92d748f770f1e334d",
+  "archive_sha256": "ab254fa107e8bc89c2123ac275d672c98a344b7a1c6855bd4370a9f97a0b9875",
+  "manifest": "acceptance/visual/about-psd-layer-manifest.json",
+  "visible_elements": 444,
+  "manifest_elements": 444,
+  "coverage_ratio": 1,
+  "artboards": {
+    "Desktop 1320 px": 236,
+    "Tablet 320 px": 208
+  },
+  "implementation_types": {
+    "asset": 56,
+    "css_or_semantic_container": 274,
+    "semantic_dom_text": 106,
+    "source_reference": 8
+  },
+  "source_preview_method": "Embedded merged PSD preview only; no recursive layer compositing.",
+  "status": "covered"
+}
