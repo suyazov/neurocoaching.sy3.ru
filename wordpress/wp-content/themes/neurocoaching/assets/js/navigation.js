@@ -58,6 +58,12 @@
   });
 
   document.querySelectorAll('[data-horizontal-track]').forEach(function (track) {
+    const mobileTrack = window.matchMedia('(max-width: 850px)');
+    const updateTrackFocus = function () {
+      track.tabIndex = mobileTrack.matches ? 0 : -1;
+    };
+    updateTrackFocus();
+    mobileTrack.addEventListener('change', updateTrackFocus);
     track.addEventListener('keydown', function (event) {
       if (event.key !== 'ArrowLeft' && event.key !== 'ArrowRight') return;
       event.preventDefault();

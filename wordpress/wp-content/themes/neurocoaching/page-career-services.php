@@ -24,18 +24,18 @@ $instagram_url = neurocoaching_mod( 'instagram_url', 'https://www.instagram.com/
 	<section class="career-education" aria-labelledby="career-education-title">
 		<div class="career-wrap">
 			<h2 id="career-education-title">Education &amp; Experience</h2>
-			<div class="career-certificates" aria-label="Selected certificates">
+			<div class="career-certificates" tabindex="0" role="region" aria-label="Selected certificates; swipe or use left and right arrow keys to browse" data-horizontal-track>
 				<figure><img src="<?php echo esc_url( get_theme_file_uri( '/assets/images/about-certificate-1-source.png' ) ); ?>" alt="Webster University certificate"></figure>
 				<figure><img src="<?php echo esc_url( get_theme_file_uri( '/assets/images/about-certificate-2-source.png' ) ); ?>" alt="Neurointegration Institute certificate"></figure>
 				<figure><img src="<?php echo esc_url( get_theme_file_uri( '/assets/images/about-certificate-3-source.png' ) ); ?>" alt="Cornell University certificate"></figure>
 				<figure><img src="<?php echo esc_url( get_theme_file_uri( '/assets/images/about-certificate-4-source.png' ) ); ?>" alt="Professional qualification certificate"></figure>
 				<figure><img src="<?php echo esc_url( get_theme_file_uri( '/assets/images/about-certificate-5-source.png' ) ); ?>" alt="Coaching qualification certificate"></figure>
 			</div>
-			<a class="career-view-more" href="#career-credentials">View more <span aria-hidden="true">→</span></a>
+			<a class="career-view-more" href="#career-credentials">View more <svg class="education-more-arrow" aria-hidden="true" viewBox="0 0 81 27" width="81" height="27"><path d="M0 13.5H77M63 1L80 13.5 63 26" /></svg></a>
 		</div>
 	</section>
 
-	<section id="career-credentials" class="career-credentials career-wrap" aria-label="Career credentials">
+	<section id="career-credentials" class="career-credentials career-wrap" aria-label="Career credentials" tabindex="-1">
 		<ul>
 			<li>15+ years in the UN &amp; international organisations — HR, project management, organisational development</li>
 			<li>Worked with diplomats, senior UN officials, and international teams across the world</li>

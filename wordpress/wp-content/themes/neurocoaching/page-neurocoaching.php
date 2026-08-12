@@ -48,16 +48,16 @@ $faqs = array(
 	<section class="neuro-education" aria-labelledby="neuro-education-title">
 		<div class="neuro-wrap">
 			<h2 id="neuro-education-title">Education &amp; Experience</h2>
-			<div class="neuro-certificates">
+			<div class="neuro-certificates" tabindex="0" role="region" aria-label="Professional certificates; swipe or use left and right arrow keys to browse" data-horizontal-track>
 				<?php for ( $certificate = 1; $certificate <= 5; $certificate++ ) : ?>
 					<?php $certificate_assets = array( 1 => 'desktop-1440-9732-layer-3-copy.png', 2 => 'desktop-1440-9736-2-copy-2.png', 3 => 'desktop-1440-9740-1-copy.png', 4 => 'desktop-1440-9734-layer-7-copy.png', 5 => 'desktop-1440-9738-2-copy-2.png' ); ?>
 					<figure><img src="<?php echo esc_url( $desktop_source . $certificate_assets[ $certificate ] ); ?>" alt="Professional certificate <?php echo esc_attr( (string) $certificate ); ?>"></figure>
 				<?php endfor; ?>
 			</div>
-			<a class="neuro-more" href="#neuro-credentials">View more <span aria-hidden="true">→</span></a>
+			<a class="neuro-more" href="#neuro-credentials">View more <svg class="education-more-arrow" aria-hidden="true" viewBox="0 0 81 27" width="81" height="27"><path d="M0 13.5H77M63 1L80 13.5 63 26" /></svg></a>
 		</div>
 	</section>
-	<section id="neuro-credentials" class="neuro-credentials neuro-wrap" aria-label="Qualifications and experience">
+	<section id="neuro-credentials" class="neuro-credentials neuro-wrap" aria-label="Qualifications and experience" tabindex="-1">
 		<ul><?php foreach ( $credentials as $credential ) : ?><li><?php echo esc_html( $credential ); ?></li><?php endforeach; ?></ul>
 	</section>
 
