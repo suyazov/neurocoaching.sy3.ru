@@ -1,0 +1,19 @@
+{
+  "schema_version": 1,
+  "task_id": "CODEX-TASK-TASK-ISSUE-SUYAZOV_NEUROCOACHING.SY3.RU-919-G5",
+  "source_psd_sha256": "3a01b085418b0d919e84879adf19b585eb40568ad98c5cc92d748f770f1e334d",
+  "frozen_baseline_sha256": "a2c036a2b4bb3e4cceac4713fb77fe8bf4e52fe2b22b400dc50ef3ce5170679d",
+  "requested_visual_receipt_sha256": "d8dc7cc82b0862056f0eed54e6bf8cc8d29885a5156dc85bc3913f75d7e10012",
+  "observed_visual_receipt_sha256": "241c59ccabd36056921b45a5b3c0bfdf125f4230ae7c3cc64968dab18185989c",
+  "mobile_hero_bounds": {
+    "320": "356x530 at -17,-55",
+    "390": "402x603 at -6,-68"
+  },
+  "context_delta": {
+    "result": "Corrected the About mobile hero image transform to the two PSD-derived endpoint geometries.",
+    "decisions": "Used one bounded linear interpolation for position and size; retained the high-resolution assets and all other page behavior.",
+    "current_status": "The scoped runtime correction and machine regression are ready for review; delivered-build browser acceptance remains pending Bridge delivery.",
+    "constraints": "No baseline, production, platform, WordPress core, plugin, upload, database, credential or unrelated source was changed.",
+    "next_step": "Review and merge the PR through Bridge, deliver its exact commit to staging, then repeat the required no-cache visual and interaction acceptance."
+  }
+}
