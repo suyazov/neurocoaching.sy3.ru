@@ -92,7 +92,7 @@ function neurocoaching_gallery_urls( $setting, $fallback ) {
 	return array_slice( $urls ? $urls : array( $fallback ), 0, 24 );
 }
 
-function neurocoaching_gallery( $setting, $fallback, $alt, $class_name, $mobile_fallback = '', $slides_override = array() ) {
+function neurocoaching_gallery( $setting, $fallback, $alt, $class_name, $mobile_fallback = '', $slides_override = array(), $fallback_srcset = '' ) {
 	$slides = $slides_override ? array_values( array_filter( array_map( 'esc_url_raw', $slides_override ) ) ) : neurocoaching_gallery_urls( $setting, $fallback );
 	$count  = count( $slides );
 	?>
@@ -102,7 +102,7 @@ function neurocoaching_gallery( $setting, $fallback, $alt, $class_name, $mobile_
 		<?php foreach ( $slides as $index => $url ) : ?>
 			<figure class="nc-gallery__slide" data-carousel-slide<?php echo 0 !== $index ? ' hidden' : ''; ?> aria-label="Photo <?php echo esc_attr( (string) ( $index + 1 ) ); ?> of <?php echo esc_attr( (string) $count ); ?>">
 				<?php if ( 0 === $index && $mobile_fallback && $fallback === $url ) : ?><picture><source media="(max-width: 700px)" srcset="<?php echo esc_url( $mobile_fallback ); ?>"><?php endif; ?>
-				<img src="<?php echo esc_url( $url ); ?>" alt="<?php echo esc_attr( 0 === $index ? $alt : sprintf( 'Ksenia Belousova, gallery photo %d', $index + 1 ) ); ?>">
+				<img src="<?php echo esc_url( $url ); ?>"<?php echo 0 === $index && $fallback === $url && $fallback_srcset ? ' srcset="' . esc_attr( $fallback_srcset ) . '" sizes="(max-width: 700px) 290px, 600px"' : ''; ?> alt="<?php echo esc_attr( 0 === $index ? $alt : sprintf( 'Ksenia Belousova, gallery photo %d', $index + 1 ) ); ?>">
 				<?php if ( 0 === $index && $mobile_fallback && $fallback === $url ) : ?></picture><?php endif; ?>
 			</figure>
 		<?php endforeach; ?>
