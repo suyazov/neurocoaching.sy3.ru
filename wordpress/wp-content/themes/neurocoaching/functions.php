@@ -8,9 +8,20 @@ function neurocoaching_setup() {
 }
 add_action( 'after_setup_theme', 'neurocoaching_setup' );
 
+function neurocoaching_asset_version( $path, $fallback ) {
+	$modified = is_file( $path ) ? filemtime( $path ) : false;
+	return false !== $modified ? (string) $modified : $fallback;
+}
+
 function neurocoaching_assets() {
-	wp_enqueue_style( 'neurocoaching', get_stylesheet_uri(), array(), wp_get_theme()->get( 'Version' ) );
-	wp_enqueue_script( 'neurocoaching-navigation', get_theme_file_uri( '/assets/js/navigation.js' ), array(), wp_get_theme()->get( 'Version' ), true );
+	$theme_version      = wp_get_theme()->get( 'Version' );
+	$stylesheet_path    = get_stylesheet_directory() . '/style.css';
+	$navigation_path    = get_theme_file_path( '/assets/js/navigation.js' );
+	$stylesheet_version = neurocoaching_asset_version( $stylesheet_path, $theme_version );
+	$navigation_version = neurocoaching_asset_version( $navigation_path, $theme_version );
+
+	wp_enqueue_style( 'neurocoaching', get_stylesheet_uri(), array(), $stylesheet_version );
+	wp_enqueue_script( 'neurocoaching-navigation', get_theme_file_uri( '/assets/js/navigation.js' ), array(), $navigation_version, true );
 }
 add_action( 'wp_enqueue_scripts', 'neurocoaching_assets' );
 
