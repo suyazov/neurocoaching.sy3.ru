@@ -1,0 +1,45 @@
+{
+  "schema_version": 1,
+  "task_id": "TASK-ISSUE-SUYAZOV_NEUROCOACHING.SY3.RU-910",
+  "method": "PSD text StyleRun FillColor and solid-fill descriptors; no full-document composite",
+  "source_palette_inventory": {
+    "about_desktop": ["#000000", "#262626", "#3C2764", "#5C5467", "#643D90", "#855CAC", "#8D5EBC", "#F5EDE9", "#F8F1EE", "#FFFFFF"],
+    "about_mobile": ["#262626", "#3C2764", "#5C5467", "#643D90", "#855CAC", "#8D5EBC", "#F8F1EE", "#FFFFFF"],
+    "career_desktop": ["#000000", "#2A2A2A", "#2E1F4A", "#3A2B62", "#3C2D60", "#4012CB", "#5A5566", "#5B3F8C", "#7A5CA8", "#C1B4ED", "#F2ECE8", "#F6F1EE", "#F7F0E8", "#FFFFFF"],
+    "career_mobile": ["#000000", "#262626", "#3C2764", "#5C5467", "#643D90", "#855CAC", "#8D5EBC", "#C1B4ED", "#F5EDE9", "#F8F1EE", "#FAF0E8", "#FFFFFF"],
+    "neurocoaching_desktop": ["#000000", "#282828", "#2A2A2A", "#3A2B62", "#3C2D60", "#4012CB", "#5A5566", "#5B3F8C", "#7A5CA8", "#815EB8", "#F2ECE8", "#F6F1EE", "#F7F0E8", "#FFFFFF"],
+    "neurocoaching_mobile": ["#000000", "#232323", "#262626", "#3C2764", "#5A5566", "#5C5467", "#643D90", "#7A5CA8", "#7C6BD6", "#855CAC", "#8D5EBC", "#F5EDE9", "#F8F1EE", "#FAF0E8", "#FFFFFF"]
+  },
+  "mappings": [
+    {"route":"/","viewport":"desktop+mobile","source_layer":"9478/9554 Ksenia Belousova","source_hex":"#3C2764","source_rgb":[60,39,100],"selector":".nc-about__hero h1","token":"--nc-about-hero-title","computed":"rgb(60, 39, 100)"},
+    {"route":"/","viewport":"desktop+mobile","source_layer":"9479/9555 hero eyebrow","source_hex":"#8D5EBC","source_rgb":[141,94,188],"selector":".nc-about__eyebrow","token":"--nc-about-accent","computed":"rgb(141, 94, 188)"},
+    {"route":"/","viewport":"desktop+mobile","source_layer":"9480/9556 hero lead","source_hex":"#8D5EBC","source_rgb":[141,94,188],"selector":".nc-about__lead","token":"--nc-about-accent","computed":"rgb(141, 94, 188)"},
+    {"route":"/","viewport":"desktop+mobile","source_layer":"9482/9558 hero body copy","source_hex":"#5C5467","source_rgb":[92,84,103],"selector":".nc-about__intro","token":"--nc-about-body","computed":"rgb(92, 84, 103)"},
+    {"route":"/","viewport":"desktop+mobile","source_layer":"8678/9618 Services heading","source_hex":"#262626","source_rgb":[38,38,38],"selector":".nc-about__services>h2","token":"--nc-about-heading","computed":"rgb(38, 38, 38)"},
+    {"route":"/","viewport":"desktop+mobile","source_layer":"8627/10014 FAQ subtitle","source_hex":"#855CAC","source_rgb":[133,92,172],"selector":".nc-about__faq>header p","token":"--nc-about-stroke","computed":"rgb(133, 92, 172)"},
+    {"route":"/career-services/","viewport":"desktop","source_layer":"8544 Stop postponing your life","source_hex":"#2A2A2A","source_rgb":[42,42,42],"selector":".career-hero h1","token":"--career-hero-title","computed":"rgb(42, 42, 42)"},
+    {"route":"/career-services/","viewport":"desktop","source_layer":"hero/body text StyleRuns","source_hex":"#5A5566","source_rgb":[90,85,102],"selector":".career-hero__copy","token":"--career-body","computed":"rgb(90, 85, 102)"},
+    {"route":"/career-services/","viewport":"desktop","source_layer":"8615 hero accent","source_hex":"#7A5CA8","source_rgb":[122,92,168],"selector":".career-accent","token":"--career-accent","computed":"rgb(122, 92, 168)"},
+    {"route":"/career-services/","viewport":"mobile","source_layer":"9554 Stop postponing your life","source_hex":"#3C2764","source_rgb":[60,39,100],"selector":".career-hero h1","token":"--career-hero-title","computed":"rgb(60, 39, 100)"},
+    {"route":"/career-services/","viewport":"mobile","source_layer":"hero/body text StyleRuns","source_hex":"#5C5467","source_rgb":[92,84,103],"selector":".career-hero__copy","token":"--career-body","computed":"rgb(92, 84, 103)"},
+    {"route":"/career-services/","viewport":"mobile","source_layer":"9556 hero accent","source_hex":"#8D5EBC","source_rgb":[141,94,188],"selector":".career-accent","token":"--career-accent","computed":"rgb(141, 94, 188)"},
+    {"route":"/neurocoaching/","viewport":"desktop","source_layer":"6042 hero H1","source_hex":"#2A2A2A","source_rgb":[42,42,42],"selector":".neuro-hero h1","token":"--neuro-hero-title","computed":"rgb(42, 42, 42)"},
+    {"route":"/neurocoaching/","viewport":"desktop","source_layer":"9716 kicker","source_hex":"#815EB8","source_rgb":[129,94,184],"selector":".neuro-kicker","token":"--neuro-kicker-source","computed":"rgb(129, 94, 184)"},
+    {"route":"/neurocoaching/","viewport":"desktop","source_layer":"hero/body text StyleRuns","source_hex":"#5A5566","source_rgb":[90,85,102],"selector":".neuro-hero__copy>p:not(.neuro-kicker)","token":"--neuro-body","computed":"rgb(90, 85, 102)"},
+    {"route":"/neurocoaching/","viewport":"mobile","source_layer":"9554 hero H1","source_hex":"#3C2764","source_rgb":[60,39,100],"selector":".neuro-hero h1","token":"--neuro-hero-title","computed":"rgb(60, 39, 100)"},
+    {"route":"/neurocoaching/","viewport":"mobile","source_layer":"11725 kicker","source_hex":"#8D5EBC","source_rgb":[141,94,188],"selector":".neuro-kicker","token":"--neuro-kicker-source","computed":"rgb(141, 94, 188)"},
+    {"route":"/neurocoaching/","viewport":"mobile","source_layer":"9558 hero/body copy","source_hex":"#5C5467","source_rgb":[92,84,103],"selector":".neuro-hero__copy>p:not(.neuro-kicker)","token":"--neuro-body","computed":"rgb(92, 84, 103)"}
+  ],
+  "surface_and_stroke_readback": [
+    {"route":"/","viewport":"desktop","selector":".nc-about","source_hex":"#F8F1EE","computed":"rgb(248, 241, 238)","pixel":{"x":568,"y":8,"rgb":[248,241,238]}},
+    {"route":"/","viewport":"desktop","selector":".nc-about__education","source_hex":"#3F2961","computed":"rgb(63, 41, 97)","pixel":{"x":8,"y":937,"rgb":[63,41,97]}},
+    {"route":"/","viewport":"mobile","selector":".nc-about__education","source_hex":"#3F2961","computed":"rgb(63, 41, 97)","pixel":{"x":8,"y":1450,"rgb":[63,41,97]}},
+    {"route":"/career-services/","viewport":"desktop","selector":".career-psd","source_hex":"#F6F1EE","computed":"rgb(246, 241, 238)","pixel":{"x":512,"y":8,"rgb":[246,241,238]}},
+    {"route":"/career-services/","viewport":"desktop","selector":".career-education","source_hex":"#3C2D60","computed":"rgb(60, 45, 96)","pixel":{"x":8,"y":1133,"rgb":[60,45,96]}},
+    {"route":"/career-services/","viewport":"mobile","selector":".career-education","source_hex":"#3F2961","computed":"rgb(63, 41, 97)","pixel":{"x":8,"y":1581,"rgb":[63,41,97]}},
+    {"route":"/neurocoaching/","viewport":"desktop","selector":".neuro-psd","source_hex":"#F6F1EE","computed":"rgb(246, 241, 238)","pixel":{"x":568,"y":8,"rgb":[246,241,238]}},
+    {"route":"/neurocoaching/","viewport":"desktop","selector":".neuro-story","source_hex":"#3C2D60","computed":"rgb(60, 45, 96)","pixel":{"x":722,"y":4615,"rgb":[60,45,96]}},
+    {"route":"/neurocoaching/","viewport":"mobile","selector":".neuro-story","source_hex":"#3F2961","computed":"rgb(63, 41, 97)","pixel":{"x":8,"y":5345,"rgb":[63,41,97]}}
+  ],
+  "browser": {"base_url":"https://neurocoaching.sy3.ru/","cache":"disabled via CDP","http_statuses":[200,200,200,200,200,200],"internal_server_error_present":false}
+}
