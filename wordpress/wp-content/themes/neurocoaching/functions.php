@@ -95,21 +95,9 @@ function neurocoaching_gallery_urls( $setting, $fallback ) {
 function neurocoaching_gallery( $setting, $fallback, $alt, $class_name, $mobile_fallback = '' ) {
 	$slides = neurocoaching_gallery_urls( $setting, $fallback );
 	$count  = count( $slides );
-	if ( 1 === $count ) {
-		?>
-		<div class="<?php echo esc_attr( $class_name ); ?> nc-gallery nc-gallery--single">
-			<div class="nc-gallery__viewport"><figure class="nc-gallery__slide">
-				<?php if ( $mobile_fallback && $fallback === $slides[0] ) : ?><picture><source media="(max-width: 700px)" srcset="<?php echo esc_url( $mobile_fallback ); ?>"><?php endif; ?>
-				<img src="<?php echo esc_url( $slides[0] ); ?>" alt="<?php echo esc_attr( $alt ); ?>">
-				<?php if ( $mobile_fallback && $fallback === $slides[0] ) : ?></picture><?php endif; ?>
-			</figure></div>
-		</div>
-		<?php
-		return;
-	}
 	?>
-	<div class="<?php echo esc_attr( $class_name ); ?> nc-gallery" data-carousel tabindex="0" role="region" aria-roledescription="carousel" aria-label="In real life photo gallery">
-		<button class="nc-gallery__previous" type="button" data-carousel-previous aria-label="Previous photo"<?php echo 1 === $count ? ' disabled' : ''; ?>>←</button>
+	<div class="<?php echo esc_attr( $class_name ); ?> nc-gallery<?php echo 1 === $count ? ' nc-gallery--single' : ''; ?>" data-carousel tabindex="0" role="region" aria-roledescription="carousel" aria-label="In real life photo gallery" data-slide-count="<?php echo esc_attr( (string) $count ); ?>">
+		<button class="nc-gallery__previous" type="button" data-carousel-previous aria-label="Previous photo"<?php echo 1 === $count ? ' disabled aria-disabled="true"' : ''; ?>>←</button>
 		<div class="nc-gallery__viewport" aria-live="polite">
 		<?php foreach ( $slides as $index => $url ) : ?>
 			<figure class="nc-gallery__slide" data-carousel-slide<?php echo 0 !== $index ? ' hidden' : ''; ?> aria-label="Photo <?php echo esc_attr( (string) ( $index + 1 ) ); ?> of <?php echo esc_attr( (string) $count ); ?>">
@@ -119,12 +107,14 @@ function neurocoaching_gallery( $setting, $fallback, $alt, $class_name, $mobile_
 			</figure>
 		<?php endforeach; ?>
 		</div>
-		<button class="nc-gallery__next" type="button" data-carousel-next aria-label="Next photo"<?php echo 1 === $count ? ' disabled' : ''; ?>>→</button>
+		<button class="nc-gallery__next" type="button" data-carousel-next aria-label="Next photo"<?php echo 1 === $count ? ' disabled aria-disabled="true"' : ''; ?>>→</button>
+		<?php if ( $count > 1 ) : ?>
 		<div class="nc-gallery__pagination" data-carousel-pagination aria-label="Choose a photo">
 		<?php foreach ( $slides as $index => $url ) : ?>
 			<button type="button" data-carousel-dot="<?php echo esc_attr( (string) $index ); ?>" aria-label="Show photo <?php echo esc_attr( (string) ( $index + 1 ) ); ?>" aria-current="<?php echo 0 === $index ? 'true' : 'false'; ?>"></button>
 		<?php endforeach; ?>
 		</div>
+		<?php endif; ?>
 	</div>
 	<?php
 }

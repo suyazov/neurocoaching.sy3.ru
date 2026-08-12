@@ -1,0 +1,38 @@
+{
+  "schema_version": 1,
+  "task_id": "CODEX-TASK-TASK-ISSUE-SUYAZOV_NEUROCOACHING.SY3.RU-913-G1",
+  "source": {
+    "file": "1_About me_1320 и 320.psd",
+    "sha256": "3a01b085418b0d919e84879adf19b585eb40568ad98c5cc92d748f770f1e334d"
+  },
+  "delivery": {
+    "environment": "neurocoaching.sy3.ru-staging",
+    "url": "https://neurocoaching.sy3.ru/",
+    "persistent_theme_files": [
+      "functions.php",
+      "front-page.php",
+      "style.css"
+    ],
+    "production_touched": false
+  },
+  "checks": {
+    "php_lint": "pass",
+    "git_diff_check": "pass",
+    "required_text": "pass",
+    "internal_server_error_absent": true,
+    "desktop_console_errors": 0,
+    "mobile_console_errors": 0,
+    "desktop_horizontal_overflow": 0,
+    "mobile_horizontal_overflow": 0,
+    "single_slide_truthful_state": "pass",
+    "multi_slide_fixture": "pass",
+    "viewport_1440_pre_post_ae": 0
+  },
+  "context_delta": {
+    "result": "Reconstructed the lower About B2B, real-life slider shell, and CTA from the original PSD.",
+    "decisions": "Kept the single legitimate About photo, exposed disabled source arrows without fake dots, and made B2B and CTA buttons section-specific.",
+    "current_status": "Implemented, verified on persistent non-production staging, committed, and ready for PR review.",
+    "constraints": "No hero, Education, credentials, FAQ, production, WordPress data, plugins, credentials, DNS, nginx, or Bridge changes.",
+    "next_step": "Review and merge the single PR through the managed Bridge workflow."
+  }
+}
