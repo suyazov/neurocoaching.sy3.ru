@@ -134,13 +134,11 @@ function neurocoaching_header( $active ) {
 	?>
 	<header class="site-header" data-site-header>
 		<a class="brand" href="<?php echo esc_url( home_url( '/' ) ); ?>" aria-label="Digital Belka home"><img src="<?php echo esc_url( get_theme_file_uri( 'about' === $active ? '/assets/images/about-logo.png' : '/assets/images/logo.png' ) ); ?>" alt="Digital Belka"></a>
-		<?php if ( 'about' === $active ) : ?>
 		<div class="about-socials" aria-label="Social links">
 			<a href="<?php echo esc_url( neurocoaching_mod( 'contact_url', 'https://www.linkedin.com/' ) ); ?>" aria-label="LinkedIn"><img src="<?php echo esc_url( $about_images . 'about-linkedin.svg' ); ?>" alt=""></a>
 			<a href="<?php echo esc_url( neurocoaching_mod( 'email_url', 'mailto:hello@example.com' ) ); ?>" aria-label="Email"><img src="<?php echo esc_url( $about_images . 'about-email.png' ); ?>" alt=""></a>
 			<a href="<?php echo esc_url( neurocoaching_mod( 'telegram_url', 'https://t.me/' ) ); ?>" aria-label="Telegram"><img src="<?php echo esc_url( $about_images . 'about-telegram.svg' ); ?>" alt=""></a>
 		</div>
-		<?php endif; ?>
 		<button class="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-navigation" data-menu-toggle><span class="screen-reader-text">Open menu</span><i></i><i></i><i></i></button>
 		<nav id="primary-navigation" class="primary-nav nc-nav" aria-label="Primary navigation">
 			<a<?php echo 'about' === $active ? ' aria-current="page"' : ''; ?> href="<?php echo esc_url( home_url( '/' ) ); ?>">About</a>
