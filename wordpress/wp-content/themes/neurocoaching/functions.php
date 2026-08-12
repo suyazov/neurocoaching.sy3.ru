@@ -95,6 +95,14 @@ function neurocoaching_gallery_urls( $setting, $fallback ) {
 function neurocoaching_gallery( $setting, $fallback, $alt, $class_name ) {
 	$slides = neurocoaching_gallery_urls( $setting, $fallback );
 	$count  = count( $slides );
+	if ( 1 === $count ) {
+		?>
+		<div class="<?php echo esc_attr( $class_name ); ?> nc-gallery nc-gallery--single">
+			<div class="nc-gallery__viewport"><figure class="nc-gallery__slide"><img src="<?php echo esc_url( $slides[0] ); ?>" alt="<?php echo esc_attr( $alt ); ?>"></figure></div>
+		</div>
+		<?php
+		return;
+	}
 	?>
 	<div class="<?php echo esc_attr( $class_name ); ?> nc-gallery" data-carousel tabindex="0" role="region" aria-roledescription="carousel" aria-label="In real life photo gallery">
 		<button class="nc-gallery__previous" type="button" data-carousel-previous aria-label="Previous photo"<?php echo 1 === $count ? ' disabled' : ''; ?>>←</button>
