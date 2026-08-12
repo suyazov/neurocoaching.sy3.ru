@@ -49,16 +49,16 @@ $questions = array(
 	<section class="nc-about__education" aria-labelledby="nc-about-education-title">
 		<div class="nc-about__frame">
 			<h2 id="nc-about-education-title">Education &amp; Experience</h2>
-			<div class="nc-about__certificates" aria-label="Certificates">
+			<div class="nc-about__certificates" tabindex="0" role="region" aria-label="Certificates; swipe or use left and right arrow keys to browse" data-horizontal-track>
 				<?php for ( $i = 1; $i <= 5; $i++ ) : ?>
 					<figure><img src="<?php echo esc_url( $images . 'about-certificate-' . $i . '-source.png' ); ?>" alt="Certificate <?php echo esc_attr( (string) $i ); ?>"></figure>
 				<?php endfor; ?>
 			</div>
-			<a class="nc-about__more" href="#nc-about-credentials">View more <span aria-hidden="true">→</span></a>
+			<a class="nc-about__more" href="#nc-about-credentials">View more <svg class="education-more-arrow" aria-hidden="true" viewBox="0 0 71 28" width="71" height="28"><path d="M0 14H70M56 1L70 14 56 27" /></svg></a>
 		</div>
 	</section>
 
-	<section id="nc-about-credentials" class="nc-about__credentials nc-about__frame" aria-label="Credentials">
+	<section id="nc-about-credentials" class="nc-about__credentials nc-about__frame" aria-label="Credentials" tabindex="-1">
 		<ul><?php foreach ( $credentials as $item ) : ?><li><img src="<?php echo esc_url( $images . 'about-check.svg' ); ?>" alt=""><?php echo esc_html( $item ); ?></li><?php endforeach; ?></ul>
 	</section>
 
