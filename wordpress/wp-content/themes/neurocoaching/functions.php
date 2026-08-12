@@ -92,8 +92,8 @@ function neurocoaching_gallery_urls( $setting, $fallback ) {
 	return array_slice( $urls ? $urls : array( $fallback ), 0, 24 );
 }
 
-function neurocoaching_gallery( $setting, $fallback, $alt, $class_name, $mobile_fallback = '' ) {
-	$slides = neurocoaching_gallery_urls( $setting, $fallback );
+function neurocoaching_gallery( $setting, $fallback, $alt, $class_name, $mobile_fallback = '', $slides_override = array() ) {
+	$slides = $slides_override ? array_values( array_filter( array_map( 'esc_url_raw', $slides_override ) ) ) : neurocoaching_gallery_urls( $setting, $fallback );
 	$count  = count( $slides );
 	?>
 	<div class="<?php echo esc_attr( $class_name ); ?> nc-gallery<?php echo 1 === $count ? ' nc-gallery--single' : ''; ?>" data-carousel tabindex="0" role="region" aria-roledescription="carousel" aria-label="In real life photo gallery" data-slide-count="<?php echo esc_attr( (string) $count ); ?>">

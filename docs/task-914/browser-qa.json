@@ -1,0 +1,45 @@
+{
+  "task_id": "CODEX-TASK-TASK-ISSUE-SUYAZOV_NEUROCOACHING.SY3.RU-914-G1",
+  "scope": "Local candidate rendering of the About-page In real life carousel; production and staging were not changed.",
+  "browser": "Chromium 140.0.7339.207, headless",
+  "fixture": "The real neurocoaching_gallery PHP renderer, theme stylesheet, navigation.js and about-life-source.webp were served from the managed worktree.",
+  "desktop": {
+    "viewport": "1440x900",
+    "initial_slide": 1,
+    "next_sequence": [2, 3, 1],
+    "previous_wrap": 3,
+    "dot_selection": [1, 2, 3],
+    "keyboard_sequence": {
+      "ArrowRight_from_3": 1,
+      "ArrowLeft_from_1": 3,
+      "Home": 1,
+      "End": 3
+    },
+    "slides_in_dom": 3,
+    "declared_slide_count": 3,
+    "visible_pagination_dots": 3,
+    "unique_image_sources": 1,
+    "all_images_use_about_life_source": true,
+    "horizontal_overflow_px": 0,
+    "bounds": {
+      "image": { "width": 674, "height": 479 },
+      "previous_arrow": { "width": 86, "height": 86 },
+      "next_arrow": { "width": 86, "height": 86 },
+      "pagination": { "width": 80, "height": 12 },
+      "instagram_icon": { "width": 29, "height": 29 }
+    }
+  },
+  "mobile": {
+    "viewport": "390x844 touch",
+    "initial_slide": 1,
+    "swipe_left": 2,
+    "swipe_right": 1,
+    "visible_pagination_dots": 3,
+    "source_hidden_arrows": true,
+    "horizontal_overflow_px": 0
+  },
+  "required_visible_text": ["In real life", "Follow on Instagram"],
+  "forbidden_text_present": false,
+  "console_errors": [],
+  "passed": true
+}

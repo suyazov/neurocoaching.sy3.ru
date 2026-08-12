@@ -88,7 +88,10 @@ $questions = array(
 	<section class="nc-about__life" aria-labelledby="nc-about-life-title">
 		<h2 id="nc-about-life-title">In real life</h2>
 		<a class="nc-about__instagram" href="<?php echo esc_url( $instagram ); ?>">Follow on Instagram <img src="<?php echo esc_url( $images . 'about-instagram.svg' ); ?>" alt=""></a>
-		<?php neurocoaching_gallery( 'about_gallery_urls', $images . 'about-life-source.webp', 'Ksenia by the sea at sunset', 'nc-about__life-photo' ); ?>
+		<?php
+		$about_life_image = $images . 'about-life-source.webp';
+		neurocoaching_gallery( 'about_gallery_urls', $about_life_image, 'Ksenia by the sea at sunset', 'nc-about__life-photo', '', array_fill( 0, 3, $about_life_image ) );
+		?>
 	</section>
 
 	<section class="nc-about__cta">

@@ -1,0 +1,20 @@
+{
+  "task_id": "CODEX-TASK-TASK-ISSUE-SUYAZOV_NEUROCOACHING.SY3.RU-914-G1",
+  "result": "passed",
+  "production": false,
+  "production_touched": false,
+  "changed_scope": "About-page In real life carousel only",
+  "evidence": "docs/task-914/browser-qa.json",
+  "visual_contract": {
+    "baseline": "acceptance/visual/about-desktop-1440x900.png",
+    "baseline_modified": false,
+    "reason": "The 1440x900 baseline covers the unchanged top of the route; the scoped carousel begins below that viewport and no preceding layout or styling was changed."
+  },
+  "context_delta": {
+    "result": "The About route now renders three independently indexed slides using the approved about-life source image.",
+    "decisions": "Used an explicit three-item override at the About call site so identical URLs remain three real slides without changing the Career or Neurocoaching galleries.",
+    "current_status": "Candidate code and focused desktop/mobile browser QA pass; production and staging remain untouched.",
+    "constraints": "Only the WordPress theme and task evidence were changed; no uploads, database, credentials, platform, DNS, plugin, core, deployment, or visual baseline changes.",
+    "next_step": "Review and deliver the ready PR through the controlled non-production Bridge flow."
+  }
+}
