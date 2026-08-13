@@ -1,6 +1,6 @@
 # TASK-933 About mobile header QA
 
-Source of truth: `1_About me_1320 и 320.psd`, SHA-256 `3a01b085418b0d919e84879adf19b585eb40568ad98c5cc92d748f770f1e334d`. Measurements were read from the visible `Tablet 320 px / menu burger` layer tree. Only the named header layers were composited to recover their source-sized assets; the full PSD was not rendered.
+Source of truth: `1_About me_1320 и 320.psd`, SHA-256 `3a01b085418b0d919e84879adf19b585eb40568ad98c5cc92d748f770f1e334d`. Measurements were re-read for generation G2 from the visible `Tablet 320 px / menu burger` layer tree. Layer metadata was inspected without rendering the full PSD.
 
 ## PSD 320 bounds
 
@@ -31,8 +31,10 @@ All four runs recorded:
 - `Ksenia Belousova` visible;
 - `Internal Server Error` absent.
 
-Natural and rendered image dimensions, complete computed styles and element bounds are in `browser-metrics.json`. Fresh no-cache first-viewport screenshots are stored beside this report.
+Natural and rendered image dimensions, complete computed styles and element bounds are in `browser-metrics.json`. Fresh no-cache first-viewport screenshots from the persistently delivered G2 staging build are stored beside this report. The G2 implementation adds intrinsic `width`/`height` hints in semantic markup and min/max/flex guards in mobile CSS, preventing generic responsive rules from enlarging or collapsing the source-sized controls.
+
+The machine guard is `php docs/qa/TASK-ISSUE-SUYAZOV_NEUROCOACHING.SY3.RU-933/verify-regression.php`; it verifies the four required controls, PSD asset dimensions, fixed bounds and hero boundary.
 
 ## Frozen baseline conflict
 
-The unmodified `acceptance/visual/about-mobile-390x844.png` represents the rejected scaled header with an approximately 61 px header/hero offset. The canonical Bridge blur/RMSE comparison against the PSD-correct fresh screenshot is `0.0516472`, above the frozen `0.04` threshold. Per the task's explicit precedence rule, that conflicting acceptance PNG was not used to restore the rejected scaling and was not modified.
+The unmodified `acceptance/visual/about-mobile-390x844.png` represents the rejected scaled header with an approximately 61 px header/hero offset. The immutable Bridge receipt records `0.0516381`, above the frozen `0.04` threshold, for the same deterministic PSD-correct 390 screenshot SHA-256 `56bd7e41ecf2555205cfea8da5a4c61236f885b3359cb3875cef928a86cf01cc`. Per the task's explicit precedence rule, that conflicting acceptance PNG was not used to restore the rejected scaling and was not modified.
