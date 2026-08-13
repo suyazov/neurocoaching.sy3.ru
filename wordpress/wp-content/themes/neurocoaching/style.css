@@ -684,6 +684,26 @@ body.home:not(.career-services-route):not(.neurocoaching-route) .menu-toggle { d
 .neuro-card,.neuro-review-track header,.neuro-faq details { border-color:var(--neuro-accent); }
 .neuro-card__label,.neuro-price strong,.neuro-method a,.neuro-review-track a,.neuro-faq>header p { color:var(--neuro-accent); }
 
+/* PSD button roles: outline CTAs use the route action colour; buttons on dark
+   sections are light filled; premium packages use a solid action fill. */
+.career-card--featured .career-button,
+.neuro-card--featured .neuro-button {
+	border-color:var(--career-action,var(--neuro-action));
+	color:#fff;
+	background:var(--career-action,var(--neuro-action));
+}
+.career-cta .career-button,
+.neuro-cta .neuro-button {
+	border-color:var(--career-on-section,var(--neuro-on-section));
+	color:var(--career-section,var(--neuro-section));
+	background:var(--career-on-section,var(--neuro-on-section));
+}
+.career-positioning .career-button { border-color:#fff; color:var(--career-section); background:#fff; }
+.career-suitable .career-button { border-color:#fff; color:#fff; background:transparent; }
+.career-card__flag,.career-card__free { background:var(--career-section); }
+.career-offer { background:#f1264b; }
+.neuro-card__flag { background:var(--neuro-section); }
+
 @media (max-width:850px) {
 	.career-psd {
 		--career-section:#3f2961;
