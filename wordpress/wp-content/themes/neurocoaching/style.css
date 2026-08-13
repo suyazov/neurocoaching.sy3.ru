@@ -927,3 +927,27 @@ body.home:not(.career-services-route):not(.neurocoaching-route) .menu-toggle { d
 	.nc-gallery__pagination button { width:8px; height:8px; border-width:1px; }
 	.nc-about__life-photo .nc-gallery__pagination { width:max-content; height:8px; }
 }
+
+/* Source-safe photo rendering: never stretch a PSD smart-object export. */
+.nc-about__certificates img,.career-certificates img,.neuro-certificates img {
+	display:block;
+	width:auto;
+	max-width:100%;
+	height:auto;
+	max-height:132px;
+	margin-inline:auto;
+	object-fit:contain;
+}
+.career-faq aside img { height:279px; }
+
+@media (min-width:851px) {
+	.neuro-hero { grid-template-columns:511px minmax(0,1fr); }
+	.neuro-hero__photo { width:511px; }
+	.neuro-story { grid-template-columns:600px minmax(0,1fr); }
+	.neuro-story__photo { width:600px; height:800px; }
+	.neuro-life { height:990px; }
+	.neuro-life__gallery .nc-gallery__viewport { height:632px; }
+	.neuro-life__gallery img { height:632px; }
+	.nc-about__life-photo { width:862px; grid-template-columns:86px 600px 86px; }
+	.nc-about__life-photo .nc-gallery__viewport { width:600px; }
+}

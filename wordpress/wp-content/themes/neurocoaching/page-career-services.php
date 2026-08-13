@@ -8,7 +8,7 @@ $instagram_url = neurocoaching_mod( 'instagram_url', 'https://www.instagram.com/
 ?>
 <article class="career-psd">
 	<section class="career-hero">
-		<div class="career-hero__photo"><picture><source media="(max-width: 768px)" srcset="<?php echo esc_url( get_theme_file_uri( '/assets/images/career-source/mobile-11371-career-photo.png' ) ); ?>" width="600" height="900"><img src="<?php echo esc_url( get_theme_file_uri( '/assets/images/career-source/desktop-8539-place-your-image-here-double-click-to-edit.png' ) ); ?>" width="511" height="1192" alt="Ksenia Belousova"></picture></div>
+		<div class="career-hero__photo"><img src="<?php echo esc_url( get_theme_file_uri( '/assets/images/career-source/mobile-11371-career-photo.png' ) ); ?>" width="600" height="900" alt="Ksenia Belousova"></div>
 		<div class="career-hero__copy">
 			<h1>Stop postponing your life</h1>
 			<p class="career-quote">Your time is limited, so don’t waste it living someone else’s life.”<br>– Steve Jobs</p>
@@ -97,7 +97,7 @@ $instagram_url = neurocoaching_mod( 'instagram_url', 'https://www.instagram.com/
 			<p>You do not have to figure this out alone. Together, we will clarify your direction, make your experience visible, and create a clear plan for your next move. My approach combines international HR expertise, career strategy, and nervous-system-aware guidance – so you can move forward with clarity and confidence.</p>
 			<a class="career-button career-button--light" href="<?php echo esc_url( $booking_url ); ?>">Book a free call</a>
 		</div>
-		<picture><source media="(max-width: 700px)" srcset="<?php echo esc_url( get_theme_file_uri( '/assets/images/career-source/mobile-11325-layer.png' ) ); ?>"><img src="<?php echo esc_url( get_theme_file_uri( '/assets/images/career-source/desktop-10951-layer.png' ) ); ?>" alt="Ksenia Belousova in a blue beret"></picture>
+		<img src="<?php echo esc_url( get_theme_file_uri( '/assets/images/career-suitable-hires.webp' ) ); ?>" width="1800" height="2400" alt="Ksenia Belousova in a blue beret">
 	</section>
 
 	<section class="career-reviews" aria-labelledby="career-reviews-title"><div class="career-wrap">
@@ -111,7 +111,7 @@ $instagram_url = neurocoaching_mod( 'instagram_url', 'https://www.instagram.com/
 
 	<section class="career-life career-wrap" aria-labelledby="career-life-title">
 		<h2 id="career-life-title">In real life</h2><a href="<?php echo esc_url( $instagram_url ); ?>">Follow on Instagram</a>
-		<?php neurocoaching_gallery( 'career_gallery_urls', get_theme_file_uri( '/assets/images/career-life.webp' ), 'Ksenia at an international flags installation', 'career-life__gallery', get_theme_file_uri( '/assets/images/career-life.webp' ) ); ?>
+		<?php neurocoaching_gallery( 'career_gallery_urls', get_theme_file_uri( '/assets/images/career-life-hires.jpg' ), 'Ksenia at an international flags installation', 'career-life__gallery' ); ?>
 	</section>
 
 	<section class="career-cta"><div class="career-wrap"><h2>Ready to take the first step?</h2><p>Free 30-min intro call · No commitment</p><a class="career-button career-button--light" href="<?php echo esc_url( $booking_url ); ?>">Book a Consultation Session</a></div></section>
@@ -138,7 +138,7 @@ $instagram_url = neurocoaching_mod( 'instagram_url', 'https://www.instagram.com/
 			<details><summary><?php echo esc_html( $question ); ?></summary><p><?php echo esc_html( $answer ); ?></p></details>
 		<?php endforeach; ?>
 		</div>
-		<aside><picture><source media="(max-width: 700px)" srcset="<?php echo esc_url( get_theme_file_uri( '/assets/images/career-source/mobile-10521-place-your-image-here-copy.png' ) ); ?>"><img src="<?php echo esc_url( get_theme_file_uri( '/assets/images/career-source/desktop-10532-place-your-image-here-double-click-to-edit.png' ) ); ?>" alt="Ksenia Belousova sailing"></picture><h2>Ready to take the first step?</h2><p>Leave with clarity, a defined direction, and a concrete next step.</p><a class="career-button" href="<?php echo esc_url( $booking_url ); ?>">Book a Consultation Session</a></aside>
+		<aside><img src="<?php echo esc_url( get_theme_file_uri( '/assets/images/career-source/desktop-10532-place-your-image-here-double-click-to-edit.png' ) ); ?>" width="373" height="279" alt="Ksenia Belousova sailing"><h2>Ready to take the first step?</h2><p>Leave with clarity, a defined direction, and a concrete next step.</p><a class="career-button" href="<?php echo esc_url( $booking_url ); ?>">Book a Consultation Session</a></aside>
 	</section>
 </article>
 <?php get_footer();

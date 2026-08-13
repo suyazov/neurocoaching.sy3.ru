@@ -35,7 +35,7 @@ $faqs = array(
 ?>
 <article class="neuro-psd">
 	<section class="neuro-hero">
-		<div class="neuro-hero__photo"><img src="<?php echo esc_url( $images . 'neuro-hero.webp' ); ?>" alt="Ksenia Belousova holding hydrangeas"></div>
+		<div class="neuro-hero__photo"><img src="<?php echo esc_url( $desktop_source . 'desktop-1440-6037-place-your-image-here-double-click-to-edit-copy-2.png' ); ?>" width="511" height="911" alt="Ksenia Belousova holding hydrangeas"></div>
 		<div class="neuro-hero__copy">
 			<p class="neuro-kicker">Neurointegration coaching</p>
 			<h1>Burned out, overwhelmed, or know something needs to change?</h1>
@@ -99,7 +99,7 @@ $faqs = array(
 	</section>
 
 	<section class="neuro-story">
-		<div class="neuro-story__photo"><picture><source media="(max-width: 850px)" srcset="<?php echo esc_url( $mobile_source . 'mobile-320-11783-img-6482.png' ); ?>"><img src="<?php echo esc_url( $images . 'neuro-story.webp' ); ?>" alt="Ksenia Belousova beside flowering trees"></picture></div>
+		<div class="neuro-story__photo"><img src="<?php echo esc_url( $images . 'neuro-story-hires.jpg' ); ?>" width="600" height="800" alt="Ksenia Belousova beside flowering trees"></div>
 		<div class="neuro-story__copy">
 			<h2>I didn't find this in a book.<br>I found it in the hardest years of my life.</h2>
 			<p>I built a successful international career at the United Nations — working alongside diplomats, leading people across different cultures, and changing my career path several times along the way. I relocated to four countries, travelled constantly, and lived a life that, from the outside, looked extraordinary.</p>
@@ -135,7 +135,7 @@ $faqs = array(
 	<section id="faqs" class="neuro-faq neuro-wrap" aria-labelledby="neuro-faq-title">
 		<header><h2 id="neuro-faq-title">FAQs</h2><p>(Frequently Asked Questions)</p></header>
 		<div class="neuro-faq__questions"><?php foreach ( $faqs as $question => $answer ) : ?><details><summary><?php echo esc_html( $question ); ?></summary><p><?php echo esc_html( $answer ); ?></p></details><?php endforeach; ?><p class="neuro-faq__closing">Start with a conversation. You don't need a perfect plan — just the willingness to change something. Book a Discovery Session: free 30 minutes that will give you clarity on where you are, what's holding you back, and exactly what your next step looks like. From there, we build everything together.</p></div>
-		<aside><picture><source media="(max-width: 850px)" srcset="<?php echo esc_url( $mobile_source . 'mobile-320-12287-img-2146.png' ); ?>"><img src="<?php echo esc_url( $images . 'about-faq-source.webp' ); ?>" alt="Ksenia in the mountains"></picture><h2>Ready to take the first step?</h2><p>Leave with clarity, a defined direction, and a concrete next step.</p><a class="neuro-button" href="<?php echo esc_url( $booking ); ?>">Book a free call</a></aside>
+		<aside><img src="<?php echo esc_url( $images . 'about-faq-hires.jpg' ); ?>" width="600" height="800" alt="Ksenia in the mountains"><h2>Ready to take the first step?</h2><p>Leave with clarity, a defined direction, and a concrete next step.</p><a class="neuro-button" href="<?php echo esc_url( $booking ); ?>">Book a free call</a></aside>
 	</section>
 </article>
 <?php get_footer();
