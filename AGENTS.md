@@ -6,9 +6,3 @@
 - Do not configure DNS, deploy, publish, or touch production.
 - Never store raw secrets in this repository.
 - Use controlled `codex/*` branches and pull requests.
-
-## Current visual system
-
-- `/`, `/career-services/`, and `/neurocoaching/` share the Digital Belka cross-route design-system layer at the end of `wordpress/wp-content/themes/neurocoaching/style.css`.
-- Keep the shared header geometry, 1220 px desktop grid, typography scale, purple/paper palette, buttons, cards, CTA, FAQ rhythm, and 60 px mobile header consistent across all three routes.
-- Route-specific PSD composition may remain inside individual sections, but must not reintroduce a separate site-wide header, palette, component language, or breakpoint system.
