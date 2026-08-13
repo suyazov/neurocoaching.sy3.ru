@@ -90,8 +90,13 @@ $questions = array(
 		<a class="nc-about__instagram" href="<?php echo esc_url( $instagram ); ?>">Follow on Instagram <img src="<?php echo esc_url( $images . 'about-instagram.svg' ); ?>" alt=""></a>
 		<?php
 		$about_life_image = $images . 'about-life-source.webp';
-		$about_life_slides = neurocoaching_gallery_urls( 'about_gallery_urls', $about_life_image );
-		$about_life_slides = array_slice( array_pad( $about_life_slides, 3, $about_life_image ), 0, 3 );
+		$about_life_defaults = array(
+			$about_life_image,
+			$images . 'about-hero-source.webp',
+			$images . 'about-faq-source.webp',
+		);
+		$about_life_slides = neurocoaching_gallery_urls( 'about_gallery_urls', implode( "\n", $about_life_defaults ) );
+		$about_life_slides = array_slice( array_merge( $about_life_slides, $about_life_defaults ), 0, 3 );
 		$about_life_srcset = $images . 'about-life-psd-300.webp 300w, ' . $about_life_image . ' 600w';
 		neurocoaching_gallery( 'about_gallery_urls', $about_life_image, 'Ksenia by the sea at sunset', 'nc-about__life-photo', '', $about_life_slides, $about_life_srcset );
 		?>
