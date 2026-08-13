@@ -128,7 +128,18 @@ $faqs = array(
 		<blockquote><header><strong>Olga R.</strong><a href="<?php echo esc_url( $social ); ?>">View profile on LinkedIn</a></header><p>The sessions with Ksenia had a very warm, light, and supportive atmosphere. I felt truly seen, heard, and cared for throughout the process.<br><br>Ksenia brings a very positive energy. What I especially appreciated was the combination of lightness and depth in her work, as well as her sincere understanding and strong empathy.</p></blockquote>
 	</div></div></section>
 
-	<?php neurocoaching_real_life_section( 'neuro-life-title', $instagram, 'neuro_gallery_urls', $desktop_source . 'desktop-1440-8139-place-your-image-here-double-click-to-edit.png', 'Neurointegration Institute gathering' ); ?>
+	<?php
+	$neuro_life_image = $desktop_source . 'desktop-1440-8139-place-your-image-here-double-click-to-edit.png';
+	$neuro_life_defaults = array(
+		$neuro_life_image,
+		$desktop_source . 'desktop-1440-10825-place-your-image-here-double-click-to-edit-copy-3.png',
+		$desktop_source . 'desktop-1440-6037-place-your-image-here-double-click-to-edit-copy-2.png',
+		$desktop_source . 'desktop-1440-5230-place-your-image-here-double-click-to-edit.png',
+	);
+	$neuro_life_slides = neurocoaching_gallery_urls( 'neuro_gallery_urls', implode( "\n", $neuro_life_defaults ) );
+	$neuro_life_slides = array_slice( array_values( array_unique( array_merge( $neuro_life_slides, $neuro_life_defaults ) ) ), 0, 4 );
+	neurocoaching_real_life_section( 'neuro-life-title', $instagram, 'neuro_gallery_urls', $neuro_life_image, 'Neurointegration Institute gathering', $neuro_life_slides );
+	?>
 
 	<section class="neuro-cta"><div class="neuro-wrap"><h2>Ready to stop waiting for "someday"?</h2><p>Free 30-min intro call · No commitment</p><a class="neuro-button neuro-button--light" href="<?php echo esc_url( $booking ); ?>">Book a free call</a></div></section>
 
