@@ -1,0 +1,23 @@
+{
+  "task_id": "TASK-QUEUE-SUYAZOV_NEUROCOACHING.SY3.RU-937-01",
+  "result": "blocked",
+  "production_touched": false,
+  "changed_surface": "Career route-specific header source assets",
+  "checks": {
+    "task_935_serialized_sha": "17c29ab80b36e770103f97e51b68226ef97cff99",
+    "required_text_present": true,
+    "forbidden_text_absent": true,
+    "php_lint": "passed",
+    "git_diff_check": "passed",
+    "baseline_sha256_unchanged": "7039c7cd431b44b017205cae3a7fb7fb806aa1ce3e698456843b4d8ebb0f626c",
+    "visual_390_differing_pixel_ratio_at_15_percent_fuzz": 0.366814,
+    "visual_threshold": 0.15
+  },
+  "context_delta": {
+    "result": "Career header now uses its PSD logo and social exports; TASK-935 hero remains intact.",
+    "decisions": "Preserved semantic WordPress controls and refused to revert the serialized source-faithful TASK-935 hero to match a stale immutable baseline.",
+    "current_status": "Code correction and source audit complete; visual acceptance blocked by the pre-TASK-935 baseline conflict.",
+    "constraints": "Production false, no deployment, no acceptance baseline edits, no Kimi or other executor, allowed paths only.",
+    "next_step": "Bridge should reconcile the immutable 390 baseline with serialized TASK-935, then rerun the same visual gate on this PR."
+  }
+}
