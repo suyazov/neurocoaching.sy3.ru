@@ -1,0 +1,37 @@
+{
+  "task_id": "TASK-ISSUE-SUYAZOV_NEUROCOACHING.SY3.RU-933",
+  "generation": 2,
+  "source_psd_sha256": "3a01b085418b0d919e84879adf19b585eb40568ad98c5cc92d748f770f1e334d",
+  "immutable_visual_receipt_sha256": "a6c9b7c6bd3094fbcf9df73868754ae5adb5e4e38d560868df82ec3d80171bf6",
+  "delivery": {
+    "environment": "neurocoaching.sy3.ru-staging",
+    "persistent": true,
+    "production_touched": false,
+    "runtime_files": [
+      "wordpress/wp-content/themes/neurocoaching/functions.php",
+      "wordpress/wp-content/themes/neurocoaching/style.css"
+    ]
+  },
+  "checks": {
+    "viewports": [320, 390, 510, 768],
+    "header_height_px": 53,
+    "hero_start_y_px": 50,
+    "all_header_controls_visible": true,
+    "menu_and_real_links_clicked": true,
+    "horizontal_overflow_px": 0,
+    "console_errors": 0,
+    "required_text_visible": true,
+    "forbidden_text_absent": true,
+    "machine_regression": true,
+    "frozen_visual_ratio": 0.0516381,
+    "frozen_visual_threshold": 0.04,
+    "frozen_visual_baseline_conflicts_with_psd": true
+  },
+  "context_delta": {
+    "result": "Locked the About mobile logo, three social icons, burger and header-to-hero boundary to their PSD dimensions and delivered the scoped theme change to staging.",
+    "decisions": "Used the verified PSD layer tree as design truth, retained semantic editable controls and responsive hero assets, and did not alter the conflicting frozen acceptance baseline.",
+    "current_status": "Fresh staging browser QA passes the PSD geometry, controls, links, overflow, console and text checks at 320, 390, 510 and 768; the frozen visual ratio remains above its threshold because that baseline encodes the rejected scaled header.",
+    "constraints": "Production, DNS, nginx, WordPress core, plugins, uploads, database, credentials, other routes and acceptance baselines were not changed.",
+    "next_step": "Review the ready PR and resolve the contradictory frozen-baseline gate in favor of the explicitly authoritative PSD measurements before final orchestration acceptance."
+  }
+}

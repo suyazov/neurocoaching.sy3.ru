@@ -1,6 +1,7 @@
 [
   {
     "width": 320,
+    "httpStatus": 200,
     "metrics": {
       "header": {
         "x": 0,
@@ -13,6 +14,7 @@
       "headerComputed": {
         "height": "53px",
         "minHeight": "53px",
+        "maxHeight": "53px",
         "paddingTop": "0px",
         "paddingRight": "0px",
         "paddingBottom": "0px",
@@ -132,6 +134,7 @@
   },
   {
     "width": 390,
+    "httpStatus": 200,
     "metrics": {
       "header": {
         "x": 0,
@@ -144,6 +147,7 @@
       "headerComputed": {
         "height": "53px",
         "minHeight": "53px",
+        "maxHeight": "53px",
         "paddingTop": "0px",
         "paddingRight": "0px",
         "paddingBottom": "0px",
@@ -263,6 +267,7 @@
   },
   {
     "width": 510,
+    "httpStatus": 200,
     "metrics": {
       "header": {
         "x": 0,
@@ -275,6 +280,7 @@
       "headerComputed": {
         "height": "53px",
         "minHeight": "53px",
+        "maxHeight": "53px",
         "paddingTop": "0px",
         "paddingRight": "0px",
         "paddingBottom": "0px",
@@ -394,6 +400,7 @@
   },
   {
     "width": 768,
+    "httpStatus": 200,
     "metrics": {
       "header": {
         "x": 0,
@@ -406,6 +413,7 @@
       "headerComputed": {
         "height": "53px",
         "minHeight": "53px",
+        "maxHeight": "53px",
         "paddingTop": "0px",
         "paddingRight": "0px",
         "paddingBottom": "0px",
