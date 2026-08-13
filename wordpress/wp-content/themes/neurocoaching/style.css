@@ -885,6 +885,19 @@ body.home:not(.career-services-route):not(.neurocoaching-route) .menu-toggle { d
 .nc-gallery__pagination { position:absolute; top:calc(100% + 54px); left:50%; display:flex; width:max-content; max-width:100%; gap:22px; transform:translateX(-50%); }
 .nc-gallery__pagination button { width:12px; height:12px; padding:0; border:2px solid currentColor; border-radius:50%; color:inherit; background:transparent; cursor:pointer; }
 .nc-gallery__pagination button[aria-current="true"] { background:currentColor; }
+
+/* One desktop header system across all three routes. */
+@media (min-width:851px) {
+	body.home:not(.career-services-route):not(.neurocoaching-route) .site-header { top:29px; right:max(32px,calc((100% - 1219px)/2)); left:auto; width:722px; height:118px; min-height:118px; display:flex; align-items:flex-start; gap:28px; }
+	body.home:not(.career-services-route):not(.neurocoaching-route) .brand { position:static; width:110px; height:55px; margin-right:auto; }
+	body.home:not(.career-services-route):not(.neurocoaching-route) .brand img { object-fit:contain; }
+	body.home:not(.career-services-route):not(.neurocoaching-route) .about-socials { top:5px; right:81px; left:auto; width:auto; height:28px; gap:12px; }
+	body.home:not(.career-services-route):not(.neurocoaching-route) .about-socials a,
+	body.home:not(.career-services-route):not(.neurocoaching-route) .about-socials a:last-child { width:28px; height:28px; }
+	body.home:not(.career-services-route):not(.neurocoaching-route) .primary-nav { top:80px; left:0; width:auto; display:flex; gap:54px; }
+	body.home:not(.career-services-route):not(.neurocoaching-route) .primary-nav a { position:static; }
+	body.home:not(.career-services-route):not(.neurocoaching-route) .site-header>.button { top:58px; right:0; left:auto; width:auto; min-height:37px; padding:8px 20px; letter-spacing:normal; }
+}
 .nc-about__life-photo { color:var(--nc-about-violet); }
 .nc-about__life-photo .nc-gallery__viewport { width:674px; height:479px; }
 .nc-about__life-photo>button { width:86px; height:86px; overflow:hidden; border:0; border-radius:0; color:transparent; background-position:center; background-size:86px 86px; background-repeat:no-repeat; font-size:0; }

@@ -51,7 +51,7 @@ function neurocoaching_customize_register( $customizer ) {
 			get_theme_file_uri( '/assets/images/about-faq-source.webp' ),
 		) ) ),
 		'career_gallery_urls' => array( 'Career: In real life image URLs', get_theme_file_uri( '/assets/images/career-life.webp' ) ),
-		'neuro_gallery_urls'  => array( 'Neurocoaching: In real life image URLs', get_theme_file_uri( '/assets/images/neuro-life.webp' ) ),
+		'neuro_gallery_urls'  => array( 'Neurocoaching: In real life image URLs', get_theme_file_uri( '/assets/images/neurocoaching-source/desktop-1440/desktop-1440-8139-place-your-image-here-double-click-to-edit.png' ) ),
 	);
 	foreach ( $gallery_fields as $key => $field ) {
 		$customizer->add_setting( $key, array( 'default' => $field[1], 'sanitize_callback' => 'sanitize_textarea_field' ) );
@@ -93,6 +93,17 @@ function neurocoaching_page_url( $slug ) {
 function neurocoaching_gallery_urls( $setting, $fallback ) {
 	$urls = preg_split( '/\R+/', neurocoaching_mod( $setting, $fallback ) );
 	$urls = array_values( array_filter( array_map( 'esc_url_raw', array_map( 'trim', $urls ) ) ) );
+	$legacy_blank_assets = array( 'desktop-9230-img-2842.png', 'mobile-11362-img-2842.png' );
+	if ( 'career_gallery_urls' === $setting ) {
+		$urls = array_map( static function ( $url ) use ( $fallback, $legacy_blank_assets ) {
+			return in_array( wp_basename( wp_parse_url( $url, PHP_URL_PATH ) ), $legacy_blank_assets, true ) ? $fallback : $url;
+		}, $urls );
+	}
+	if ( 'neuro_gallery_urls' === $setting ) {
+		$urls = array_map( static function ( $url ) use ( $fallback ) {
+			return 'neuro-life.webp' === wp_basename( wp_parse_url( $url, PHP_URL_PATH ) ) ? $fallback : $url;
+		}, $urls );
+	}
 	return array_slice( $urls ? $urls : array( $fallback ), 0, 24 );
 }
 
@@ -130,11 +141,11 @@ function neurocoaching_header( $active ) {
 	$is_neuro     = 'neuro' === $active;
 	?>
 	<header class="site-header" data-site-header>
-		<a class="brand" href="<?php echo esc_url( home_url( '/' ) ); ?>" aria-label="Digital Belka home"><?php if ( $is_about ) : ?><picture><source media="(max-width: 850px)" srcset="<?php echo esc_url( $about_images . 'about-header-logo-psd.png' ); ?>"><img src="<?php echo esc_url( $about_images . 'about-logo.png' ); ?>" width="110" height="55" alt="Digital Belka"></picture><?php elseif ( $is_career ) : ?><picture><source media="(max-width: 850px)" srcset="<?php echo esc_url( $about_images . 'career-source/mobile-9542-d-belka-logo-copy.png' ); ?>"><img src="<?php echo esc_url( $about_images . 'career-source/desktop-5573-d-belka-alternative-social-web-04.png' ); ?>" width="119" height="59" alt="Digital Belka"></picture><?php elseif ( $is_neuro ) : ?><picture><source media="(max-width: 850px)" srcset="<?php echo esc_url( $about_images . 'neurocoaching-source/mobile-320/mobile-320-9542-d-belka-logo-copy.png' ); ?>"><img src="<?php echo esc_url( $about_images . 'neurocoaching-source/desktop-1440/desktop-1440-5573-d-belka-alternative-social-web-04.png' ); ?>" width="119" height="59" alt="Digital Belka"></picture><?php else : ?><img src="<?php echo esc_url( get_theme_file_uri( '/assets/images/logo.png' ) ); ?>" alt="Digital Belka"><?php endif; ?></a>
+		<a class="brand" href="<?php echo esc_url( home_url( '/' ) ); ?>" aria-label="Digital Belka home"><picture><source media="(max-width: 850px)" srcset="<?php echo esc_url( $about_images . 'about-header-logo-psd.png' ); ?>"><img src="<?php echo esc_url( $about_images . 'about-logo.png' ); ?>" width="110" height="55" alt="Digital Belka"></picture></a>
 		<div class="about-socials" aria-label="Social links">
-			<a href="<?php echo esc_url( neurocoaching_mod( 'contact_url', 'https://www.linkedin.com/' ) ); ?>" aria-label="LinkedIn"><?php if ( $is_about ) : ?><picture><source media="(max-width: 850px)" srcset="<?php echo esc_url( $about_images . 'about-header-linkedin-psd.png' ); ?>"><img src="<?php echo esc_url( $about_images . 'about-linkedin.svg' ); ?>" width="28" height="28" alt=""></picture><?php elseif ( $is_career ) : ?><picture><source media="(max-width: 850px)" srcset="<?php echo esc_url( $about_images . 'career-source/mobile-9546-linkedin.png' ); ?>"><img src="<?php echo esc_url( $about_images . 'about-linkedin.svg' ); ?>" alt=""></picture><?php elseif ( $is_neuro ) : ?><picture><source media="(max-width: 850px)" srcset="<?php echo esc_url( $about_images . 'neurocoaching-source/mobile-320/mobile-320-9546-linkedin.png' ); ?>"><img src="<?php echo esc_url( $about_images . 'neurocoaching-source/desktop-1440/desktop-1440-5386-layer-1.png' ); ?>" width="24" height="24" alt=""></picture><?php else : ?><img src="<?php echo esc_url( $about_images . 'about-linkedin.svg' ); ?>" alt=""><?php endif; ?></a>
-			<a href="<?php echo esc_url( neurocoaching_mod( 'instagram_url', 'https://www.instagram.com/' ) ); ?>" aria-label="Instagram"><?php if ( $is_about ) : ?><picture><source media="(max-width: 850px)" srcset="<?php echo esc_url( $about_images . 'about-header-instagram-psd.png' ); ?>"><img src="<?php echo esc_url( $about_images . 'about-instagram.svg' ); ?>" width="28" height="28" alt=""></picture><?php elseif ( $is_career ) : ?><picture><source media="(max-width: 850px)" srcset="<?php echo esc_url( $about_images . 'career-source/mobile-9545-instagram.png' ); ?>"><img src="<?php echo esc_url( $about_images . 'about-instagram.svg' ); ?>" alt=""></picture><?php elseif ( $is_neuro ) : ?><picture><source media="(max-width: 850px)" srcset="<?php echo esc_url( $about_images . 'neurocoaching-source/mobile-320/mobile-320-9545-instagram.png' ); ?>"><img src="<?php echo esc_url( $about_images . 'neurocoaching-source/desktop-1440/desktop-1440-11825-layer-13.png' ); ?>" width="24" height="24" alt=""></picture><?php else : ?><img src="<?php echo esc_url( $about_images . 'about-instagram.svg' ); ?>" alt=""><?php endif; ?></a>
-			<a href="<?php echo esc_url( neurocoaching_mod( 'telegram_url', 'https://t.me/' ) ); ?>" aria-label="Telegram"><?php if ( $is_about ) : ?><picture><source media="(max-width: 850px)" srcset="<?php echo esc_url( $about_images . 'about-header-telegram-psd.png' ); ?>"><img src="<?php echo esc_url( $about_images . 'about-telegram.svg' ); ?>" width="30" height="30" alt=""></picture><?php elseif ( $is_career ) : ?><picture><source media="(max-width: 850px)" srcset="<?php echo esc_url( $about_images . 'career-source/mobile-9547-telegram.png' ); ?>"><img src="<?php echo esc_url( $about_images . 'about-telegram.svg' ); ?>" alt=""></picture><?php elseif ( $is_neuro ) : ?><picture><source media="(max-width: 850px)" srcset="<?php echo esc_url( $about_images . 'neurocoaching-source/mobile-320/mobile-320-9547-telegram.png' ); ?>"><img src="<?php echo esc_url( $about_images . 'neurocoaching-source/desktop-1440/desktop-1440-8509-layer-3.png' ); ?>" width="24" height="24" alt=""></picture><?php else : ?><img src="<?php echo esc_url( $about_images . 'about-telegram.svg' ); ?>" alt=""><?php endif; ?></a>
+			<a href="<?php echo esc_url( neurocoaching_mod( 'contact_url', 'https://www.linkedin.com/' ) ); ?>" aria-label="LinkedIn"><img src="<?php echo esc_url( $about_images . 'about-linkedin.svg' ); ?>" width="28" height="28" alt=""></a>
+			<a href="<?php echo esc_url( neurocoaching_mod( 'instagram_url', 'https://www.instagram.com/' ) ); ?>" aria-label="Instagram"><img src="<?php echo esc_url( $about_images . 'about-instagram.svg' ); ?>" width="28" height="28" alt=""></a>
+			<a href="<?php echo esc_url( neurocoaching_mod( 'telegram_url', 'https://t.me/' ) ); ?>" aria-label="Telegram"><img src="<?php echo esc_url( $about_images . 'about-telegram.svg' ); ?>" width="28" height="28" alt=""></a>
 		</div>
 		<button class="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-navigation" data-menu-toggle><span class="screen-reader-text">Open menu</span><i></i><i></i><i></i></button>
 		<nav id="primary-navigation" class="primary-nav nc-nav" aria-label="Primary navigation">
