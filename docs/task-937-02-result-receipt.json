@@ -1,0 +1,31 @@
+{
+  "task_id": "CODEX-TASK-TASK-QUEUE-SUYAZOV_NEUROCOACHING.SY3.RU-937-02-G1",
+  "result": "blocked",
+  "production_touched": false,
+  "changed_surface": "Neurocoaching route-specific header source assets and mobile burger",
+  "checks": {
+    "desktop_psd_sha256_verified": true,
+    "mobile_psd_sha256_verified": true,
+    "visible_layers_and_groups_audited": 724,
+    "individual_source_assets_inventoried": 371,
+    "required_text_present": true,
+    "forbidden_text_absent": true,
+    "responsive_viewports": [1440, 320, 390, 510, 768],
+    "horizontal_overflow": 0,
+    "broken_images": 0,
+    "console_errors": 0,
+    "menu_faq_reviews_gallery_buttons": "passed",
+    "php_lint": "passed",
+    "git_diff_check": "passed",
+    "baseline_sha256_unchanged": "ca5e075479b1847bc82cd291abf8c419a3871cec2b4666912bf89bd950c93620",
+    "visual_390_differing_pixel_ratio_at_15_percent_fuzz": 0.489151,
+    "visual_threshold": 0.15
+  },
+  "context_delta": {
+    "result": "Neurocoaching now uses its exact PSD desktop/mobile logo, social icons, and mobile burger; the full visible layer inventory was audited.",
+    "decisions": "Preserved semantic WordPress controls, individual source assets, natural-quality route imagery, other routes, and the immutable acceptance baseline.",
+    "current_status": "Code correction and responsive interaction checks pass; final visual acceptance is blocked by the stale 390 hero baseline conflict.",
+    "constraints": "Production false, no deployment, no baseline edits, no Kimi or other executor, and allowed paths only.",
+    "next_step": "Bridge should reconcile the immutable 390 baseline with the serialized source-faithful hero, then rerun the same visual gate on this PR."
+  }
+}
