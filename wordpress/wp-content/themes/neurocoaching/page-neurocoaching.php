@@ -50,8 +50,7 @@ $faqs = array(
 			<h2 id="neuro-education-title">Education &amp; Experience</h2>
 			<div class="neuro-certificates" tabindex="0" role="region" aria-label="Professional certificates; swipe or use left and right arrow keys to browse" data-horizontal-track>
 				<?php for ( $certificate = 1; $certificate <= 5; $certificate++ ) : ?>
-					<?php $certificate_assets = array( 1 => 'desktop-1440-9732-layer-3-copy.png', 2 => 'desktop-1440-9736-2-copy-2.png', 3 => 'desktop-1440-9740-1-copy.png', 4 => 'desktop-1440-9734-layer-7-copy.png', 5 => 'desktop-1440-9738-2-copy-2.png' ); ?>
-					<figure><img src="<?php echo esc_url( $desktop_source . $certificate_assets[ $certificate ] ); ?>" alt="Professional certificate <?php echo esc_attr( (string) $certificate ); ?>"></figure>
+					<figure><img src="<?php echo esc_url( $images . 'about-certificate-' . $certificate . '-source.png' ); ?>" alt="Professional certificate <?php echo esc_attr( (string) $certificate ); ?>"></figure>
 				<?php endfor; ?>
 			</div>
 			<a class="neuro-more" href="#neuro-credentials">View more <svg class="education-more-arrow" aria-hidden="true" viewBox="0 0 81 27" width="81" height="27"><path d="M0 13.5H77M63 1L80 13.5 63 26" /></svg></a>
@@ -129,7 +128,7 @@ $faqs = array(
 		<blockquote><header><strong>Olga R.</strong><a href="<?php echo esc_url( $social ); ?>">View profile on LinkedIn</a></header><p>The sessions with Ksenia had a very warm, light, and supportive atmosphere. I felt truly seen, heard, and cared for throughout the process.<br><br>Ksenia brings a very positive energy. What I especially appreciated was the combination of lightness and depth in her work, as well as her sincere understanding and strong empathy.</p></blockquote>
 	</div></div></section>
 
-	<section class="neuro-life neuro-wrap" aria-labelledby="neuro-life-title"><h2 id="neuro-life-title">In real life</h2><a href="<?php echo esc_url( $instagram ); ?>">Follow on Instagram</a><?php neurocoaching_gallery( 'neuro_gallery_urls', $images . 'neuro-life.webp', 'Neurointegration Institute gathering', 'neuro-life__gallery' ); ?></section>
+	<section class="neuro-life neuro-wrap" aria-labelledby="neuro-life-title"><h2 id="neuro-life-title">In real life</h2><a href="<?php echo esc_url( $instagram ); ?>">Follow on Instagram</a><?php neurocoaching_gallery( 'neuro_gallery_urls', $desktop_source . 'desktop-1440-8139-place-your-image-here-double-click-to-edit.png', 'Neurointegration Institute gathering', 'neuro-life__gallery' ); ?></section>
 
 	<section class="neuro-cta"><div class="neuro-wrap"><h2>Ready to stop waiting for "someday"?</h2><p>Free 30-min intro call · No commitment</p><a class="neuro-button neuro-button--light" href="<?php echo esc_url( $booking ); ?>">Book a free call</a></div></section>
 
