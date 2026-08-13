@@ -22,68 +22,14 @@ h2 { font-size:clamp(2rem,4vw,3.45rem); line-height:1.02; }
 h3 { font-size:1.75rem; line-height:1.05; }
 .screen-reader-text { position:absolute!important; width:1px!important; height:1px!important; padding:0!important; margin:-1px!important; overflow:hidden!important; clip:rect(0,0,0,0)!important; white-space:nowrap!important; border:0!important; }
 .screen-reader-text:focus { z-index:100000; top:8px; left:8px; width:auto!important; height:auto!important; padding:12px!important; margin:0!important; clip:auto!important; background:#fff; }
-.section-inner { width:min(1180px,calc(100% - 48px)); margin-inline:auto; }
 .site-header { position:absolute; z-index:10; top:0; right:max(24px,calc((100% - 1180px)/2)); width:min(760px,54vw); min-height:112px; display:flex; align-items:center; gap:25px; }
 .brand { margin-right:auto; color:var(--purple); font:italic 700 25px Georgia,serif; text-decoration:none; transform:rotate(-4deg); }
-.brand span { display:block; font:9px Arial,sans-serif; text-transform:uppercase; letter-spacing:.2em; }
 .primary-nav { display:flex; gap:26px; font-size:13px; white-space:nowrap; }
 .primary-nav a { text-decoration:none; border-bottom:2px solid transparent; }
 .primary-nav a:hover,.primary-nav a[aria-current] { border-color:var(--purple); }
 .button { display:inline-flex; min-height:44px; padding:11px 26px; align-items:center; justify-content:center; border:2px solid var(--violet); color:var(--purple); background:#fff; font-weight:700; font-size:14px; text-decoration:none; transition:.2s; }
 .button:hover,.button:focus-visible { color:#fff; background:var(--purple); outline:3px solid #caa8e2; outline-offset:2px; }
 .button--small { padding:9px 17px; color:#fff; background:var(--violet); font-size:12px; }
-.button--light { border-color:#fff; color:var(--purple); }
-.hero { min-height:830px; display:grid; grid-template-columns:minmax(380px,42%) 1fr; background:#f9f2ed; }
-.hero>img { width:100%; height:100%; min-height:830px; object-fit:cover; object-position:center top; }
-.hero__content { max-width:720px; padding:160px 7vw 80px 6vw; }
-.hero__content h1 { color:var(--purple); }
-.hero__content p { max-width:680px; }
-.hero__content li { margin:.45em 0; }
-.eyebrow { color:var(--violet); font-size:14px; font-weight:800; text-transform:uppercase; letter-spacing:.05em; }
-.lead { color:var(--purple); font-weight:700; }
-.education { padding:70px 0 65px; color:#fff; background:var(--purple); }
-.education h2 { text-decoration:underline; text-underline-offset:7px; }
-.certificates { display:grid; grid-template-columns:repeat(4,1fr); gap:32px; margin-top:50px; }
-.certificates span { min-height:128px; padding:30px 14px; border:4px double #fff; background:#fff; color:var(--purple); text-align:center; font-family:Georgia,serif; }
-.credentials { padding-block:70px 90px; }
-.credentials ul { display:grid; grid-template-columns:1fr 1fr; gap:15px 80px; padding:0; list-style:none; }
-.credentials li::before,.service-card li::before,.image-band li::before,.split-band li::before { content:'✓'; margin-right:10px; color:var(--violet); font-weight:900; }
-.services { padding-bottom:110px; }
-.services>h2 { margin-bottom:55px; text-align:center; }
-.service-grid { display:flex; justify-content:center; gap:34px; }
-.service-card { position:relative; width:min(100%,430px); padding:40px; border:2px solid var(--violet); background:#fff; }
-.service-card--featured { background:linear-gradient(145deg,#cbd2fa,#ddb7e9); }
-.service-card h3 { padding-right:70px; font-size:2rem; }
-.service-card h4 { margin-top:35px; font-size:1.35rem; }
-.service-card ul { min-height:150px; padding:0; list-style:none; }
-.service-card li { margin:10px 0; }
-.tag { position:absolute; top:43px; right:0; padding:4px 20px; color:#fff; background:var(--purple); font-size:12px; }
-.waves { color:var(--purple); font-size:4rem; line-height:.5; }
-.price { margin:30px 0 15px; font-size:2.2rem; font-weight:900; }
-.split-band { display:grid; grid-template-columns:1fr 2fr; margin-bottom:100px; color:#fff; background:var(--purple); }
-.split-band>div { padding:55px; border-right:1px solid #fff; }
-.split-band h2,.split-band h3 { color:#fff; }
-.split-band ul,.image-band ul { padding:0; list-style:none; }
-.split-band li,.image-band li { margin:12px 0; }
-.image-band { margin-bottom:0; background:var(--peach); }
-.image-band .section-inner { display:grid; grid-template-columns:1fr 1fr; align-items:end; }
-.image-band .section-inner>div { padding:70px 50px 70px 0; color:#fff; }
-.image-band img { width:100%; height:580px; object-fit:cover; object-position:top; }
-.reviews { padding:80px 0 90px; color:#fff; background:var(--purple); }
-.reviews h2 { text-align:center; }
-.review-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:30px; }
-.review-grid blockquote { display:flex; min-height:315px; margin:0; padding:28px; flex-direction:column; color:var(--ink); background:#fff; }
-.review-grid blockquote footer { margin-top:auto; color:var(--purple); }
-.real-life { padding-block:90px; text-align:center; }
-.real-life>a { color:var(--purple); text-decoration:none; }
-.life-photo { display:grid; grid-template-columns:70px minmax(240px,650px) 70px; gap:25px; align-items:center; justify-content:center; margin-top:35px; }
-.life-photo span { border:2px solid var(--violet); color:var(--violet); font-size:2rem; }
-.life-photo img { width:100%; height:460px; object-fit:cover; }
-.dots { color:var(--violet); letter-spacing:7px; }
-.main-cta { padding:70px 0; color:#fff; background:var(--purple); }
-.main-cta h2 { margin-bottom:12px; }
-.faq { display:grid; grid-template-columns:2fr 1fr; gap:45px; padding-block:100px; }
-.faq h2 small { color:var(--violet); font-size:12px; }
 details { border-top:2px solid var(--line); }
 details:last-child { border-bottom:2px solid var(--line); }
 summary { position:relative; padding:16px 42px 16px 0; cursor:pointer; font-weight:700; list-style:none; }
@@ -91,58 +37,15 @@ summary::-webkit-details-marker { display:none; }
 summary::after { content:'+'; position:absolute; right:10px; color:var(--purple); font-size:24px; }
 details[open] summary::after { content:'−'; }
 details p { padding:0 45px 18px 0; }
-.faq aside { align-self:end; }
-.aside-art { display:grid; height:250px; place-items:center; color:#fff; background:linear-gradient(135deg,var(--peach),var(--purple)); font-size:6rem; }
-.story { display:grid; grid-template-columns:1fr 1fr; color:#fff; background:var(--purple); }
-.story img { width:100%; height:100%; object-fit:cover; }
-.story>div { padding:70px; }
-.method { padding-block:90px; }
-.pyramid { display:flex; width:390px; margin:60px auto; flex-direction:column; align-items:center; color:#fff; }
-.pyramid span { width:30%; padding:10px; background:var(--purple); text-align:center; clip-path:polygon(50% 0,100% 100%,0 100%); }
-.pyramid span+span { width:50%; clip-path:none; border-top:2px solid var(--paper); }
-.pyramid span+span+span { width:70%; }
-.pyramid span+span+span+span { width:90%; }
-.prompt-grid { display:grid; grid-template-columns:1fr 1fr; gap:16px; }
-.prompt-grid p { padding:18px; border:2px solid #cda7e5; background:#f4ebfa; }
-
 @media (max-width:850px) {
 	body { font-size:14px; }
-	.section-inner { width:min(100% - 36px,600px); }
 	.site-header { position:relative; right:auto; width:100%; min-height:62px; padding:8px 18px; color:#fff; background:var(--purple); }
 	.brand { color:#fff; font-size:18px; }
 	.primary-nav { margin-left:auto; gap:10px; font-size:0; }
 	.primary-nav a { width:12px; height:12px; border:1px solid #fff; border-radius:50%; }
 	.site-header>.button { display:none; }
-	.hero { min-height:0; grid-template-columns:1fr; }
-	.hero>img { height:420px; min-height:0; }
-	.hero__content { padding:45px 22px 60px; }
 	h1 { font-size:2.55rem; }
 	h2 { font-size:2rem; }
-	.education { padding:45px 0; }
-	.certificates { grid-template-columns:1fr 1fr; gap:15px; margin-top:30px; }
-	.certificates span { min-height:110px; padding:20px 8px; }
-	.credentials { padding-block:45px 60px; }
-	.credentials ul { grid-template-columns:1fr; gap:9px; }
-	.services { padding-bottom:65px; }
-	.services>h2 { margin-bottom:30px; text-align:left; }
-	.service-grid { flex-direction:column; }
-	.service-card { width:100%; padding:25px; }
-	.service-card h3 { font-size:1.6rem; }
-	.split-band { width:calc(100% - 36px); grid-template-columns:1fr; margin-bottom:65px; }
-	.split-band>div { padding:35px 25px; border-right:0; border-bottom:1px solid #fff; }
-	.image-band .section-inner,.story { grid-template-columns:1fr; }
-	.image-band .section-inner>div,.story>div { padding:45px 0; }
-	.image-band img { height:440px; }
-	.review-grid { grid-template-columns:1fr; }
-	.review-grid blockquote:nth-child(n+2) { display:none; }
-	.life-photo { grid-template-columns:34px minmax(180px,1fr) 34px; gap:8px; }
-	.life-photo img { height:300px; }
-	.faq { grid-template-columns:1fr; padding-block:65px; }
-	.faq aside { margin-top:20px; }
-	.story img { max-height:520px; }
-	.method { padding-block:60px; }
-	.pyramid { width:270px; }
-	.prompt-grid { grid-template-columns:1fr; }
 }
 
 /* Neurocoaching: measurements and responsive composition follow the supplied 1440 px and 320 px PSDs. */
@@ -159,7 +62,6 @@ details p { padding:0 45px 18px 0; }
 .neuro-button:hover,.neuro-button:focus-visible { color:#fff; background:var(--neuro-purple); outline:3px solid #c8a6dd; outline-offset:2px; }
 .neuro-hero { height:909px; display:grid; grid-template-columns:555px 1fr; }
 .neuro-hero__photo { height:909px; overflow:hidden; }
-.neuro-hero__photo picture,.neuro-story__photo picture,.neuro-faq aside picture { display:block; width:100%; height:100%; }
 .neuro-hero__photo img { width:100%; height:100%; object-fit:cover; object-position:center top; }
 .neuro-hero__copy { width:680px; padding:211px 0 60px 52px; font-size:17px; line-height:1.4; }
 .neuro-kicker { margin-bottom:26px; color:var(--neuro-violet); font-size:14px; font-weight:900; text-transform:uppercase; letter-spacing:.05em; }
@@ -261,18 +163,8 @@ details p { padding:0 45px 18px 0; }
 
 @media (max-width:850px) {
 	.neuro-wrap { width:auto; max-width:none; margin-inline:16px; }
-	.neurocoaching-route .site-header { position:absolute; top:0; right:0; width:100%; height:clamp(53px,calc(21px + 10vw),60px); min-height:clamp(53px,calc(21px + 10vw),60px); padding:4px 16px; align-items:center; background:var(--purple); }
-	.neurocoaching-route .brand { width:90px; height:45px; }
-	.neurocoaching-route .brand img { width:90px; height:45px; filter:none; }
-	.neurocoaching-route .site-header>.button { display:none; }
-	.neurocoaching-route .menu-toggle { position:absolute; top:15px; right:16px; display:grid; width:25px; height:24px; padding:2px 0; border:0; background:transparent; cursor:pointer; }
-	.neurocoaching-route .menu-toggle { background:url('assets/images/neurocoaching-source/mobile-320/mobile-320-2477-burger.png') center/24px 22px no-repeat; }
-	.neurocoaching-route .menu-toggle i { display:none; }
-	.neurocoaching-route .primary-nav { position:absolute; top:100%; left:0; width:100%; display:none; margin:0; padding:18px 16px 22px; flex-direction:column; gap:7px; background:var(--neuro-purple); font-size:14px; }
-	.neurocoaching-route .site-header.is-open .primary-nav { display:flex; }
-	.neurocoaching-route .primary-nav a { width:auto; height:auto; padding:3px 0; border:0; border-radius:0; color:#fff; }
 	.neuro-button { min-height:53px; padding:11px 29px; font-size:14px; }
-	.neuro-hero { height:clamp(1029px,calc(951.286px + 24.286vw),1046px); display:block; padding-top:clamp(53px,calc(21px + 10vw),60px); }
+	.neuro-hero { height:clamp(1029px,calc(951.286px + 24.286vw),1046px); display:block; padding-top:53px; }
 	.neuro-hero__photo { width:100%; height:clamp(406px,calc(204.857px + 62.857vw),450px); }
 	.neuro-hero__photo img { width:100%; max-width:none; height:100%; object-fit:cover; object-position:center 18%; }
 	.neuro-hero__copy { width:auto; padding:37px 16px 20px; font-size:14px; line-height:1.38; }
@@ -370,7 +262,6 @@ details p { padding:0 45px 18px 0; }
 .career-hero { height:1125px; display:grid; grid-template-columns:510px 1fr; }
 .career-hero__photo { height:1125px; overflow:hidden; }
 .career-hero__photo img { width:100%; height:100%; object-fit:cover; object-position:center top; }
-.career-hero__photo picture,.career-suitable>picture { display:contents; }
 .career-hero__copy { width:610px; padding:199px 0 60px 99px; font-size:18px; line-height:1.35; }
 .career-hero h1 { margin:0 0 31px; color:var(--career-ink); font-size:71px; line-height:.9; }
 .career-quote { margin-bottom:27px; font-weight:900; }
@@ -459,20 +350,8 @@ details p { padding:0 45px 18px 0; }
 
 @media (max-width:850px) {
 	.career-wrap { width:auto; max-width:none; margin-inline:18px; }
-	.career-services-route .site-header { position:absolute; top:0; right:0; width:100%; height:53px; min-height:53px; padding:4px 16px; align-items:center; background:var(--purple); }
-	.career-services-route .brand { width:90px; height:45px; }
-	.career-services-route .brand img { width:90px; height:45px; filter:none; }
-	.career-services-route .about-socials,.neurocoaching-route .about-socials { top:15px; right:auto; left:145px; gap:11px; }
-	.career-services-route .about-socials a,.neurocoaching-route .about-socials a { width:22px; height:22px; }
-	.career-services-route .site-header>.button { display:none; }
-	.career-services-route .menu-toggle { position:absolute; top:15px; right:16px; display:grid; width:25px; height:24px; padding:2px 0; border:0; background:transparent; cursor:pointer; }
-	.career-services-route .menu-toggle i { display:block; height:2px; background:#fff; }
-	.career-services-route .primary-nav { position:absolute; top:53px; left:0; width:100%; display:none; margin:0; padding:18px 16px 22px; flex-direction:column; gap:7px; background:var(--career-purple); font-size:14px; }
-	.career-services-route .site-header.is-open .primary-nav { display:flex; }
-	.career-services-route .primary-nav a { width:auto; height:auto; padding:3px 0; border:0; border-radius:0; color:#fff; }
 	.career-hero { height:1573px; display:block; padding-top:51px; overflow:hidden; }
 	.career-hero__photo { position:relative; left:-.9375vw; width:101.5625vw; height:126.25vw; background:#f7d7c6; }
-	.career-hero__photo picture { display:block; width:100%; height:100%; }
 	.career-hero__photo img { position:absolute; top:-4.6875vw; left:.3125vw; width:94.6875vw; max-width:none; height:auto; aspect-ratio:2/3; margin:0; }
 	.career-hero__copy { width:auto; padding:44px 18px 30px; font-size:14px; line-height:1.42; }
 	.career-hero h1 { margin-bottom:22px; font-size:40px; line-height:1; }
@@ -622,10 +501,6 @@ body.home:not(.career-services-route):not(.neurocoaching-route) .menu-toggle { d
 .nc-about__instagram { display:inline-flex; margin-top:25px; align-items:center; gap:15px; color:var(--nc-about-purple); font-size:18px; font-weight:900; text-decoration:none; }
 .nc-about__instagram img { width:29px; height:29px; }
 .nc-about__life-photo { position:relative; z-index:1; width:936px; height:479px; display:grid; grid-template-columns:86px 674px 86px; gap:45px; align-items:center; justify-content:center; margin:49px auto 0; }
-.nc-about__life-photo>img { width:674px; height:479px; object-fit:cover; object-position:center 50%; }
-.nc-about__life-photo a { display:grid; width:86px; height:86px; place-items:center; border:0; border-radius:0; color:transparent; font-size:0; text-decoration:none; }
-.nc-about__life-photo a:first-child { background:url('assets/images/about-arrow-previous.png') center/86px 86px no-repeat; }
-.nc-about__life-photo a:last-of-type { background:url('assets/images/about-arrow-next.png') center/86px 86px no-repeat; }
 .nc-about__cta { position:relative; z-index:2; height:401px; padding-top:150px; overflow:hidden; color:#fff; background:var(--nc-about-purple); }
 .nc-about__cta h2 { margin:0 0 36px; color:#fff; font-size:50px; line-height:48px; }
 .nc-about__cta p { margin:0 0 29px 1px; font-size:18px; line-height:18px; font-weight:500; }
@@ -647,26 +522,8 @@ body.home:not(.career-services-route):not(.neurocoaching-route) .menu-toggle { d
 
 @media (max-width:850px) {
 	.nc-about__frame { width:auto; max-width:none; margin-inline:15px; }
-	body.home:not(.career-services-route):not(.neurocoaching-route) .site-header { position:absolute; top:0; right:0; left:0; width:100%; max-width:none; height:53px; min-height:53px; max-height:53px; padding:0; overflow:visible; background:var(--nc-about-violet); transform:none; }
-	body.home:not(.career-services-route):not(.neurocoaching-route) .brand picture,body.home:not(.career-services-route):not(.neurocoaching-route) .about-socials picture { display:block; width:100%; height:100%; }
-	body.home:not(.career-services-route):not(.neurocoaching-route) .brand { top:4px; left:16px; width:89px; min-width:89px; max-width:89px; height:45px; min-height:45px; max-height:45px; margin:0; flex:none; transform:none; }
-	body.home:not(.career-services-route):not(.neurocoaching-route) .brand img { width:89px; min-width:89px; max-width:89px; height:45px; min-height:45px; max-height:45px; object-fit:fill; filter:none; }
-	body.home:not(.career-services-route):not(.neurocoaching-route) .about-socials { top:15px; left:145px; width:90px; min-width:90px; max-width:90px; height:22px; min-height:22px; max-height:22px; display:block; margin:0; flex:none; overflow:visible; transform:none; }
-	body.home:not(.career-services-route):not(.neurocoaching-route) .about-socials a,body.home:not(.career-services-route):not(.neurocoaching-route) .about-socials a:last-child { position:absolute; top:0; width:22px; height:22px; color:#fff; }
-	body.home:not(.career-services-route):not(.neurocoaching-route) .about-socials a:nth-child(1) { left:0; }
-	body.home:not(.career-services-route):not(.neurocoaching-route) .about-socials a:nth-child(2) { top:1px; left:35px; }
-	body.home:not(.career-services-route):not(.neurocoaching-route) .about-socials a:nth-child(3) { left:68px; }
-	body.home:not(.career-services-route):not(.neurocoaching-route) .about-socials a:nth-child(1),body.home:not(.career-services-route):not(.neurocoaching-route) .about-socials a:nth-child(2) { height:21px; }
-	body.home:not(.career-services-route):not(.neurocoaching-route) .about-socials img { width:100%; min-width:100%; max-width:100%; height:100%; min-height:100%; max-height:100%; object-fit:fill; }
-	body.home:not(.career-services-route):not(.neurocoaching-route) .site-header>.button { display:none; }
-	body.home:not(.career-services-route):not(.neurocoaching-route) .menu-toggle { position:absolute; top:16px; right:15px; display:grid; width:24px; min-width:24px; max-width:24px; height:22px; min-height:22px; max-height:22px; margin:0; padding:1px 0; flex:none; align-content:space-between; border:0; background:transparent; cursor:pointer; transform:none; }
-	body.home:not(.career-services-route):not(.neurocoaching-route) .menu-toggle i { display:block; width:24px; height:4px; background:#f7f1ed; }
-	body.home:not(.career-services-route):not(.neurocoaching-route) .primary-nav { position:absolute; top:53px; left:0; width:100%; display:none; margin:0; padding:18px 15px 22px; flex-direction:column; gap:7px; background:var(--nc-about-purple); font-size:14px; }
-	body.home:not(.career-services-route):not(.neurocoaching-route) .site-header.is-open .primary-nav { display:flex; }
-	body.home:not(.career-services-route):not(.neurocoaching-route) .primary-nav a { position:relative; top:auto; left:auto!important; width:auto; height:auto; padding:3px 0; border:0; border-radius:0; color:#fff; }
 	.nc-about__hero { width:100%; height:clamp(1391px,calc(1157.86px + 72.857vw),1442px); display:block; margin-left:0; padding-top:50px; }
 	.nc-about__hero-photo { width:100%; height:clamp(405px,calc(199.29px + 64.286vw),450px); overflow:hidden; }
-	.nc-about__hero-photo picture { display:block; width:100%; height:100%; }
 	.nc-about__hero-photo img { position:relative; top:clamp(-68px,calc(4.429px - 18.571vw),-55px); left:clamp(-17px,calc(-67.286px + 15.714vw),-6px); width:clamp(356px,calc(145.714px + 65.714vw),402px); height:clamp(530px,calc(196.286px + 104.286vw),603px); max-width:none; object-fit:cover; }
 	.nc-about__hero-copy { padding:34px 15px 24px; }
 	.nc-about__mobile-break { display:initial; }
@@ -710,8 +567,6 @@ body.home:not(.career-services-route):not(.neurocoaching-route) .menu-toggle { d
 	.nc-about__instagram { margin-top:13px; gap:16px; font-size:16px; }
 	.nc-about__instagram img { width:21px; height:21px; }
 	.nc-about__life-photo { width:min(323px,100vw); height:223px; display:block; margin:8px auto 0; }
-	.nc-about__life-photo>img { width:100%; height:223px; max-width:none; margin-inline:auto; object-position:center 52%; }
-	.nc-about__life-photo a { display:none; }
 	.nc-about__cta { height:250px; padding-top:37px; }
 	.nc-about__cta .nc-about__frame { width:290px; max-width:calc(100% - 30px); margin-inline:auto; }
 	.nc-about__cta h2 { width:233px; margin-bottom:11px; font-size:36px; line-height:40px; }
@@ -790,13 +645,13 @@ body.home:not(.career-services-route):not(.neurocoaching-route) .menu-toggle { d
 .career-services-route { --purple:#3c2d60; --violet:#7a5ca8; --paper:#f6f1ee; --ink:#5a5566; --line:#7a5ca8; }
 .career-psd h1,.career-psd h2,.career-psd h3,.career-psd h4 { color:var(--career-heading); }
 .career-hero h1 { color:var(--career-hero-title); }
-.career-accent,.career-card__label,.career-price strong,.career-review-track span,.career-life>a,.career-life>p,.career-faq>header p { color:var(--career-accent); }
+.career-accent,.career-card__label,.career-price strong,.career-review-track span,.career-faq>header p { color:var(--career-accent); }
 .career-button { border-color:var(--career-accent); color:var(--career-action); }
 .career-education,.career-positioning,.career-reviews,.career-cta { background:var(--career-section); }
 .career-education,.career-education h2,.career-positioning,.career-positioning h2,.career-reviews,.career-reviews h2,.career-cta,.career-cta h2 { color:var(--career-on-section); }
 .career-card,.career-review-track blockquote { color:var(--career-body); }
-.career-card h3,.career-card h4,.career-services>h2,.career-life h2,.career-faq h2 { color:var(--career-heading); }
-.career-card,.career-life button,.career-faq details { border-color:var(--career-accent); }
+.career-card h3,.career-card h4,.career-services>h2,.career-faq h2 { color:var(--career-heading); }
+.career-card,.career-faq details { border-color:var(--career-accent); }
 
 .neuro-psd {
 	--neuro-section:#3c2d60;
@@ -822,9 +677,9 @@ body.home:not(.career-services-route):not(.neurocoaching-route) .menu-toggle { d
 .neuro-education,.neuro-difference,.neuro-story,.neuro-reviews,.neuro-cta { background:var(--neuro-section); }
 .neuro-education,.neuro-education h2,.neuro-difference,.neuro-difference h2,.neuro-story,.neuro-story h2,.neuro-story h3,.neuro-reviews,.neuro-reviews h2,.neuro-cta,.neuro-cta h2 { color:var(--neuro-on-section); }
 .neuro-card,.neuro-review-track blockquote { color:var(--neuro-body); }
-.neuro-card h3,.neuro-card h4,.neuro-services>h2,.neuro-method h2,.neuro-suitable h2,.neuro-life h2,.neuro-faq h2 { color:var(--neuro-heading); }
-.neuro-card,.neuro-review-track header,.neuro-life button,.neuro-faq details { border-color:var(--neuro-accent); }
-.neuro-card__label,.neuro-price strong,.neuro-method a,.neuro-review-track a,.neuro-life>a,.neuro-life>p,.neuro-faq>header p { color:var(--neuro-accent); }
+.neuro-card h3,.neuro-card h4,.neuro-services>h2,.neuro-method h2,.neuro-suitable h2,.neuro-faq h2 { color:var(--neuro-heading); }
+.neuro-card,.neuro-review-track header,.neuro-faq details { border-color:var(--neuro-accent); }
+.neuro-card__label,.neuro-price strong,.neuro-method a,.neuro-review-track a,.neuro-faq>header p { color:var(--neuro-accent); }
 
 @media (max-width:850px) {
 	.career-psd {
@@ -851,6 +706,52 @@ body.home:not(.career-services-route):not(.neurocoaching-route) .menu-toggle { d
 	}
 	.neurocoaching-route { --purple:#3f2961; --violet:#8d5ebc; --paper:#f8f1ee; --ink:#5c5467; --line:#855cac; }
 	.neuro-hero__copy .neuro-lead { color:var(--neuro-body); }
+
+	/* One source-derived mobile header for every route. */
+	body.home .site-header[data-site-header][data-site-header] {
+		position:absolute;
+		top:0;
+		right:0;
+		left:0;
+		width:100%;
+		max-width:none;
+		height:53px;
+		min-height:53px;
+		max-height:53px;
+		padding:0;
+		align-items:center;
+		overflow:visible;
+		color:#fff;
+		background:#855cac;
+		transform:none;
+	}
+	body.home .site-header[data-site-header][data-site-header] .brand {
+		position:absolute;
+		top:4px;
+		left:16px;
+		width:89px;
+		min-width:89px;
+		max-width:89px;
+		height:45px;
+		min-height:45px;
+		max-height:45px;
+		margin:0;
+		flex:none;
+		transform:none;
+	}
+	body.home .site-header[data-site-header][data-site-header] .brand picture,body.home .site-header[data-site-header][data-site-header] .brand img { display:block; width:89px; min-width:89px; max-width:89px; height:45px; min-height:45px; max-height:45px; object-fit:fill; filter:none; }
+	body.home .site-header[data-site-header][data-site-header] .about-socials { position:absolute; top:15px; left:145px; width:90px; min-width:90px; max-width:90px; height:22px; min-height:22px; max-height:22px; display:block; margin:0; flex:none; overflow:visible; transform:none; }
+	body.home .site-header[data-site-header][data-site-header] .about-socials a,body.home .site-header[data-site-header][data-site-header] .about-socials a:last-child { position:absolute; top:0; width:22px; height:22px; color:#fff; }
+	body.home .site-header[data-site-header][data-site-header] .about-socials a:nth-child(1) { left:0; }
+	body.home .site-header[data-site-header][data-site-header] .about-socials a:nth-child(2) { top:1px; left:35px; height:21px; }
+	body.home .site-header[data-site-header][data-site-header] .about-socials a:nth-child(3) { left:68px; }
+	body.home .site-header[data-site-header][data-site-header] .about-socials img { width:100%; min-width:100%; max-width:100%; height:100%; min-height:100%; max-height:100%; object-fit:fill; }
+	body.home .site-header[data-site-header][data-site-header]>.button { display:none; }
+	body.home .site-header[data-site-header][data-site-header] .menu-toggle { position:absolute; top:16px; right:15px; display:grid; width:24px; min-width:24px; max-width:24px; height:22px; min-height:22px; max-height:22px; margin:0; padding:1px 0; flex:none; align-content:space-between; border:0; background:transparent; cursor:pointer; transform:none; }
+	body.home .site-header[data-site-header][data-site-header] .menu-toggle i { display:block; width:24px; height:4px; background:#f7f1ed; }
+	body.home .site-header[data-site-header][data-site-header] .primary-nav { position:absolute; top:53px; left:0; width:100%; display:none; margin:0; padding:18px 15px 22px; flex-direction:column; gap:7px; background:#3f2961; font-size:14px; }
+	body.home .site-header[data-site-header][data-site-header].is-open .primary-nav { display:flex; }
+	body.home .site-header[data-site-header][data-site-header] .primary-nav a { position:relative; top:auto; left:auto!important; width:auto; height:auto; padding:3px 0; border:0; border-radius:0; color:#fff; }
 }
 .nc-gallery>button:disabled { cursor:default; opacity:.42; }
 .nc-about__life .nc-gallery--single>button:disabled { opacity:1; }
@@ -869,6 +770,20 @@ body.home:not(.career-services-route):not(.neurocoaching-route) .menu-toggle { d
 	body.home:not(.career-services-route):not(.neurocoaching-route) .primary-nav { top:80px; left:0; width:auto; display:flex; gap:54px; }
 	body.home:not(.career-services-route):not(.neurocoaching-route) .primary-nav a { position:static; }
 	body.home:not(.career-services-route):not(.neurocoaching-route) .site-header>.button { top:58px; right:0; left:auto; width:auto; min-height:37px; padding:8px 20px; letter-spacing:normal; }
+}
+
+/* Tablet interpolation: preserve the 320 px PSD composition without enlarging
+   source photos far beyond their intrinsic resolution. */
+@media (min-width:601px) and (max-width:850px) {
+	.career-hero__photo img { left:50%; width:660px; transform:translateX(-50%); }
+	.neuro-hero__photo img { width:562px; margin-inline:auto; }
+	.neuro-story__photo img { width:660px; margin-inline:auto; }
+	.neuro-method>picture img { width:613px; margin-inline:auto; }
+	.neuro-faq aside img { width:660px; max-width:100%; margin-inline:auto; }
+}
+
+@media (min-width:448px) and (max-width:850px) {
+	.career-faq aside img { width:410px; max-width:100%; margin-inline:auto; }
 }
 .nc-about__life-photo { color:var(--nc-about-violet); }
 .nc-about__life-photo .nc-gallery__viewport { width:674px; height:479px; }
