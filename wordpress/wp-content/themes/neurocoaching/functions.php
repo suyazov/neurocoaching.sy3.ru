@@ -46,11 +46,11 @@ function neurocoaching_customize_register( $customizer ) {
 	}
 	$gallery_fields = array(
 		'about_gallery_urls'  => array( 'About: In real life image URLs', implode( "\n", array(
-			get_theme_file_uri( '/assets/images/about-life-source.webp' ),
-			get_theme_file_uri( '/assets/images/about-hero-source.webp' ),
-			get_theme_file_uri( '/assets/images/about-faq-source.webp' ),
+			get_theme_file_uri( '/assets/images/about-life-hires.jpg' ),
+			get_theme_file_uri( '/assets/images/about-hero-hires.jpg' ),
+			get_theme_file_uri( '/assets/images/about-faq-hires.jpg' ),
 		) ) ),
-		'career_gallery_urls' => array( 'Career: In real life image URLs', get_theme_file_uri( '/assets/images/career-life.webp' ) ),
+		'career_gallery_urls' => array( 'Career: In real life image URLs', get_theme_file_uri( '/assets/images/career-life-hires.jpg' ) ),
 		'neuro_gallery_urls'  => array( 'Neurocoaching: In real life image URLs', get_theme_file_uri( '/assets/images/neurocoaching-source/desktop-1440/desktop-1440-8139-place-your-image-here-double-click-to-edit.png' ) ),
 	);
 	foreach ( $gallery_fields as $key => $field ) {
@@ -93,7 +93,18 @@ function neurocoaching_page_url( $slug ) {
 function neurocoaching_gallery_urls( $setting, $fallback ) {
 	$urls = preg_split( '/\R+/', neurocoaching_mod( $setting, $fallback ) );
 	$urls = array_values( array_filter( array_map( 'esc_url_raw', array_map( 'trim', $urls ) ) ) );
-	$legacy_blank_assets = array( 'desktop-9230-img-2842.png', 'mobile-11362-img-2842.png' );
+	$legacy_assets = array(
+		'about-life-source.webp' => 'about-life-hires.jpg',
+		'about-hero-source.webp' => 'about-hero-hires.jpg',
+		'about-faq-source.webp'  => 'about-faq-hires.jpg',
+	);
+	if ( 'about_gallery_urls' === $setting ) {
+		$urls = array_map( static function ( $url ) use ( $legacy_assets ) {
+			$name = wp_basename( wp_parse_url( $url, PHP_URL_PATH ) );
+			return isset( $legacy_assets[ $name ] ) ? get_theme_file_uri( '/assets/images/' . $legacy_assets[ $name ] ) : $url;
+		}, $urls );
+	}
+	$legacy_blank_assets = array( 'desktop-9230-img-2842.png', 'mobile-11362-img-2842.png', 'career-life.webp' );
 	if ( 'career_gallery_urls' === $setting ) {
 		$urls = array_map( static function ( $url ) use ( $fallback, $legacy_blank_assets ) {
 			return in_array( wp_basename( wp_parse_url( $url, PHP_URL_PATH ) ), $legacy_blank_assets, true ) ? $fallback : $url;
@@ -101,7 +112,7 @@ function neurocoaching_gallery_urls( $setting, $fallback ) {
 	}
 	if ( 'neuro_gallery_urls' === $setting ) {
 		$urls = array_map( static function ( $url ) use ( $fallback ) {
-			return 'neuro-life.webp' === wp_basename( wp_parse_url( $url, PHP_URL_PATH ) ) ? $fallback : $url;
+			return in_array( wp_basename( wp_parse_url( $url, PHP_URL_PATH ) ), array( 'neuro-life.webp', 'neuro-life-hires.webp' ), true ) ? $fallback : $url;
 		}, $urls );
 	}
 	return array_slice( $urls ? $urls : array( $fallback ), 0, 24 );
