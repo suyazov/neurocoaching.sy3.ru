@@ -109,10 +109,7 @@ $instagram_url = neurocoaching_mod( 'instagram_url', 'https://www.instagram.com/
 		</div>
 	</div></section>
 
-	<section class="career-life career-wrap" aria-labelledby="career-life-title">
-		<h2 id="career-life-title">In real life</h2><a href="<?php echo esc_url( $instagram_url ); ?>">Follow on Instagram</a>
-		<?php neurocoaching_gallery( 'career_gallery_urls', get_theme_file_uri( '/assets/images/career-life-hires.jpg' ), 'Ksenia at an international flags installation', 'career-life__gallery' ); ?>
-	</section>
+	<?php neurocoaching_real_life_section( 'career-life-title', $instagram_url, 'career_gallery_urls', get_theme_file_uri( '/assets/images/career-life-hires.jpg' ), 'Ksenia at an international flags installation' ); ?>
 
 	<section class="career-cta"><div class="career-wrap"><h2>Ready to take the first step?</h2><p>Free 30-min intro call · No commitment</p><a class="career-button career-button--light" href="<?php echo esc_url( $booking_url ); ?>">Book a Consultation Session</a></div></section>
 

@@ -128,7 +128,7 @@ $faqs = array(
 		<blockquote><header><strong>Olga R.</strong><a href="<?php echo esc_url( $social ); ?>">View profile on LinkedIn</a></header><p>The sessions with Ksenia had a very warm, light, and supportive atmosphere. I felt truly seen, heard, and cared for throughout the process.<br><br>Ksenia brings a very positive energy. What I especially appreciated was the combination of lightness and depth in her work, as well as her sincere understanding and strong empathy.</p></blockquote>
 	</div></div></section>
 
-	<section class="neuro-life neuro-wrap" aria-labelledby="neuro-life-title"><h2 id="neuro-life-title">In real life</h2><a href="<?php echo esc_url( $instagram ); ?>">Follow on Instagram</a><?php neurocoaching_gallery( 'neuro_gallery_urls', $desktop_source . 'desktop-1440-8139-place-your-image-here-double-click-to-edit.png', 'Neurointegration Institute gathering', 'neuro-life__gallery' ); ?></section>
+	<?php neurocoaching_real_life_section( 'neuro-life-title', $instagram, 'neuro_gallery_urls', $desktop_source . 'desktop-1440-8139-place-your-image-here-double-click-to-edit.png', 'Neurointegration Institute gathering' ); ?>
 
 	<section class="neuro-cta"><div class="neuro-wrap"><h2>Ready to stop waiting for "someday"?</h2><p>Free 30-min intro call · No commitment</p><a class="neuro-button neuro-button--light" href="<?php echo esc_url( $booking ); ?>">Book a free call</a></div></section>
 

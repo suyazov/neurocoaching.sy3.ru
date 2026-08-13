@@ -145,6 +145,20 @@ function neurocoaching_gallery( $setting, $fallback, $alt, $class_name, $mobile_
 	<?php
 }
 
+/**
+ * Render the canonical "In real life" block used on every public route.
+ */
+function neurocoaching_real_life_section( $title_id, $instagram_url, $setting, $fallback, $alt, $slides_override = array() ) {
+	$images = get_template_directory_uri() . '/assets/images/';
+	?>
+	<section class="nc-about__life" aria-labelledby="<?php echo esc_attr( $title_id ); ?>">
+		<h2 id="<?php echo esc_attr( $title_id ); ?>">In real life</h2>
+		<a class="nc-about__instagram" href="<?php echo esc_url( $instagram_url ); ?>">Follow on Instagram <img src="<?php echo esc_url( $images . 'about-instagram.svg' ); ?>" alt=""></a>
+		<?php neurocoaching_gallery( $setting, $fallback, $alt, 'nc-about__life-photo', '', $slides_override ); ?>
+	</section>
+	<?php
+}
+
 function neurocoaching_header( $active ) {
 	$about_images = get_template_directory_uri() . '/assets/images/';
 	$is_about     = 'about' === $active;

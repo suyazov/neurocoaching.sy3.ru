@@ -85,22 +85,13 @@ $questions = array(
 		</article>
 	</section>
 
-	<section class="nc-about__life" aria-labelledby="nc-about-life-title">
-		<h2 id="nc-about-life-title">In real life</h2>
-		<a class="nc-about__instagram" href="<?php echo esc_url( $instagram ); ?>">Follow on Instagram <img src="<?php echo esc_url( $images . 'about-instagram.svg' ); ?>" alt=""></a>
-		<?php
-		$about_life_image = $images . 'about-life-hires.jpg';
-		$about_life_defaults = array(
-			$about_life_image,
-			$images . 'about-hero-hires.jpg',
-			$images . 'about-faq-hires.jpg',
-		);
-		$about_life_slides = neurocoaching_gallery_urls( 'about_gallery_urls', implode( "\n", $about_life_defaults ) );
-		$about_life_slides = array_slice( array_merge( $about_life_slides, $about_life_defaults ), 0, 3 );
-		$about_life_srcset = '';
-		neurocoaching_gallery( 'about_gallery_urls', $about_life_image, 'Ksenia by the sea at sunset', 'nc-about__life-photo', '', $about_life_slides, $about_life_srcset );
-		?>
-	</section>
+	<?php
+	$about_life_image = $images . 'about-life-hires.jpg';
+	$about_life_defaults = array( $about_life_image, $images . 'about-hero-hires.jpg', $images . 'about-faq-hires.jpg' );
+	$about_life_slides = neurocoaching_gallery_urls( 'about_gallery_urls', implode( "\n", $about_life_defaults ) );
+	$about_life_slides = array_slice( array_merge( $about_life_slides, $about_life_defaults ), 0, 3 );
+	neurocoaching_real_life_section( 'nc-about-life-title', $instagram, 'about_gallery_urls', $about_life_image, 'Ksenia by the sea at sunset', $about_life_slides );
+	?>
 
 	<section class="nc-about__cta">
 		<div class="nc-about__frame"><h2>Ready to take the first step?</h2><p>Free 30-min intro call · No commitment</p><a class="nc-about__button nc-about__cta-button" href="<?php echo esc_url( $booking ); ?>">Book a call</a></div>
