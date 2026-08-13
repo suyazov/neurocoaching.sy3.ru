@@ -50,7 +50,12 @@ function neurocoaching_customize_register( $customizer ) {
 			get_theme_file_uri( '/assets/images/about-hero-hires.jpg' ),
 			get_theme_file_uri( '/assets/images/about-faq-hires.jpg' ),
 		) ) ),
-		'career_gallery_urls' => array( 'Career: In real life image URLs', get_theme_file_uri( '/assets/images/career-life-hires.jpg' ) ),
+		'career_gallery_urls' => array( 'Career: In real life image URLs', implode( "\n", array(
+			get_theme_file_uri( '/assets/images/career-life-hires.jpg' ),
+			get_theme_file_uri( '/assets/images/about-life-hires.jpg' ),
+			get_theme_file_uri( '/assets/images/neuro-story-hires.jpg' ),
+			get_theme_file_uri( '/assets/images/about-faq-hires.jpg' ),
+		) ) ),
 		'neuro_gallery_urls'  => array( 'Neurocoaching: In real life image URLs', get_theme_file_uri( '/assets/images/neurocoaching-source/desktop-1440/desktop-1440-8139-place-your-image-here-double-click-to-edit.png' ) ),
 	);
 	foreach ( $gallery_fields as $key => $field ) {
