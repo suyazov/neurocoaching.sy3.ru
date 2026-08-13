@@ -273,7 +273,8 @@ details p { padding:0 45px 18px 0; }
 	.neurocoaching-route .brand img { width:90px; height:45px; filter:none; }
 	.neurocoaching-route .site-header>.button { display:none; }
 	.neurocoaching-route .menu-toggle { position:absolute; top:15px; right:16px; display:grid; width:25px; height:24px; padding:2px 0; border:0; background:transparent; cursor:pointer; }
-	.neurocoaching-route .menu-toggle i { display:block; height:2px; background:#fff; }
+	.neurocoaching-route .menu-toggle { background:url('assets/images/neurocoaching-source/mobile-320/mobile-320-2477-burger.png') center/24px 22px no-repeat; }
+	.neurocoaching-route .menu-toggle i { display:none; }
 	.neurocoaching-route .primary-nav { position:absolute; top:53px; left:0; width:100%; display:none; margin:0; padding:18px 16px 22px; flex-direction:column; gap:7px; background:var(--neuro-purple); font-size:14px; }
 	.neurocoaching-route .site-header.is-open .primary-nav { display:flex; }
 	.neurocoaching-route .primary-nav a { width:auto; height:auto; padding:3px 0; border:0; border-radius:0; color:#fff; }
