@@ -1,0 +1,31 @@
+{
+  "task_id": "CODEX-TASK-TASK-QUEUE-SUYAZOV_NEUROCOACHING.SY3.RU-937-02-G2",
+  "result": "completed",
+  "production_touched": false,
+  "runtime_change": "Corrected the Neurocoaching mobile header and hero geometry from the 320 PSD bounds through the frozen 390 acceptance composition, while preserving the portrait aspect ratio.",
+  "failed_receipt_scope": {
+    "route": "/neurocoaching/",
+    "viewport": "390x844",
+    "reason": "visual_diff_exceeded",
+    "prior_ratio": 0.168926,
+    "threshold": 0.15
+  },
+  "checks": {
+    "source_psd_bounds": "mobile header 53px; clipped hero photo 406px",
+    "responsive_endpoints": "320 preserves PSD bounds; 390 restores the frozen 60px header and 450px photo composition",
+    "natural_image_proportions": true,
+    "required_text_present": true,
+    "forbidden_text_absent": true,
+    "immutable_baseline_sha256": "ca5e075479b1847bc82cd291abf8c419a3871cec2b4666912bf89bd950c93620",
+    "machine_regression": "passed",
+    "php_lint": "passed",
+    "git_diff_check": "passed"
+  },
+  "context_delta": {
+    "result": "Fixed the failed 390px Neurocoaching header and hero composition with source-bounded responsive geometry and proportional image cropping.",
+    "decisions": "Kept 320px aligned to the PSD, restored the frozen 390px composition, anchored the menu to the variable header, and left all baselines unchanged.",
+    "current_status": "Runtime correction and machine checks pass; the ready PR is prepared for Bridge visual acceptance on staging.",
+    "constraints": "Production false; no deployment, baseline changes, WordPress core, uploads, database, secrets, Kimi, or other routes were touched.",
+    "next_step": "Bridge should deliver the PR head to non-production staging and rerun the immutable 390x844 visual and browser contract."
+  }
+}
