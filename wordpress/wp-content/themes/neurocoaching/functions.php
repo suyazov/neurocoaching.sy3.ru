@@ -121,13 +121,14 @@ function neurocoaching_gallery( $setting, $fallback, $alt, $class_name, $mobile_
 
 function neurocoaching_header( $active ) {
 	$about_images = get_template_directory_uri() . '/assets/images/';
+	$is_about     = 'about' === $active;
 	?>
 	<header class="site-header" data-site-header>
-		<a class="brand" href="<?php echo esc_url( home_url( '/' ) ); ?>" aria-label="Digital Belka home"><img src="<?php echo esc_url( get_theme_file_uri( 'about' === $active ? '/assets/images/about-logo.png' : '/assets/images/logo.png' ) ); ?>" alt="Digital Belka"></a>
+		<a class="brand" href="<?php echo esc_url( home_url( '/' ) ); ?>" aria-label="Digital Belka home"><?php if ( $is_about ) : ?><picture><source media="(max-width: 850px)" srcset="<?php echo esc_url( $about_images . 'about-header-logo-psd.png' ); ?>"><img src="<?php echo esc_url( $about_images . 'about-logo.png' ); ?>" alt="Digital Belka"></picture><?php else : ?><img src="<?php echo esc_url( get_theme_file_uri( '/assets/images/logo.png' ) ); ?>" alt="Digital Belka"><?php endif; ?></a>
 		<div class="about-socials" aria-label="Social links">
-			<a href="<?php echo esc_url( neurocoaching_mod( 'contact_url', 'https://www.linkedin.com/' ) ); ?>" aria-label="LinkedIn"><img src="<?php echo esc_url( $about_images . 'about-linkedin.svg' ); ?>" alt=""></a>
-			<a href="<?php echo esc_url( neurocoaching_mod( 'email_url', 'mailto:hello@example.com' ) ); ?>" aria-label="Email"><img src="<?php echo esc_url( $about_images . 'about-email.png' ); ?>" alt=""></a>
-			<a href="<?php echo esc_url( neurocoaching_mod( 'telegram_url', 'https://t.me/' ) ); ?>" aria-label="Telegram"><img src="<?php echo esc_url( $about_images . 'about-telegram.svg' ); ?>" alt=""></a>
+			<a href="<?php echo esc_url( neurocoaching_mod( 'contact_url', 'https://www.linkedin.com/' ) ); ?>" aria-label="LinkedIn"><?php if ( $is_about ) : ?><picture><source media="(max-width: 850px)" srcset="<?php echo esc_url( $about_images . 'about-header-linkedin-psd.png' ); ?>"><img src="<?php echo esc_url( $about_images . 'about-linkedin.svg' ); ?>" alt=""></picture><?php else : ?><img src="<?php echo esc_url( $about_images . 'about-linkedin.svg' ); ?>" alt=""><?php endif; ?></a>
+			<a href="<?php echo esc_url( neurocoaching_mod( 'instagram_url', 'https://www.instagram.com/' ) ); ?>" aria-label="Instagram"><?php if ( $is_about ) : ?><picture><source media="(max-width: 850px)" srcset="<?php echo esc_url( $about_images . 'about-header-instagram-psd.png' ); ?>"><img src="<?php echo esc_url( $about_images . 'about-instagram.svg' ); ?>" alt=""></picture><?php else : ?><img src="<?php echo esc_url( $about_images . 'about-instagram.svg' ); ?>" alt=""><?php endif; ?></a>
+			<a href="<?php echo esc_url( neurocoaching_mod( 'telegram_url', 'https://t.me/' ) ); ?>" aria-label="Telegram"><?php if ( $is_about ) : ?><picture><source media="(max-width: 850px)" srcset="<?php echo esc_url( $about_images . 'about-header-telegram-psd.png' ); ?>"><img src="<?php echo esc_url( $about_images . 'about-telegram.svg' ); ?>" alt=""></picture><?php else : ?><img src="<?php echo esc_url( $about_images . 'about-telegram.svg' ); ?>" alt=""><?php endif; ?></a>
 		</div>
 		<button class="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-navigation" data-menu-toggle><span class="screen-reader-text">Open menu</span><i></i><i></i><i></i></button>
 		<nav id="primary-navigation" class="primary-nav nc-nav" aria-label="Primary navigation">

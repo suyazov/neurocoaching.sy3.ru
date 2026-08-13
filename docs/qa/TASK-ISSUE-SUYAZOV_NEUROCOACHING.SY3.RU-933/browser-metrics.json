@@ -1,0 +1,526 @@
+[
+  {
+    "width": 320,
+    "metrics": {
+      "header": {
+        "x": 0,
+        "y": 0,
+        "width": 320,
+        "height": 53,
+        "right": 320,
+        "bottom": 53
+      },
+      "headerComputed": {
+        "height": "53px",
+        "minHeight": "53px",
+        "paddingTop": "0px",
+        "paddingRight": "0px",
+        "paddingBottom": "0px",
+        "paddingLeft": "0px",
+        "backgroundColor": "rgb(133, 92, 172)"
+      },
+      "logo": {
+        "x": 16,
+        "y": 4,
+        "width": 89,
+        "height": 45,
+        "right": 105,
+        "bottom": 49,
+        "naturalWidth": 89,
+        "naturalHeight": 45,
+        "currentSrc": "https://neurocoaching.sy3.ru/wp-content/themes/neurocoaching/assets/images/about-header-logo-psd.png"
+      },
+      "linkedin": {
+        "x": 145,
+        "y": 15,
+        "width": 22,
+        "height": 21,
+        "right": 167,
+        "bottom": 36,
+        "naturalWidth": 22,
+        "naturalHeight": 21,
+        "currentSrc": "https://neurocoaching.sy3.ru/wp-content/themes/neurocoaching/assets/images/about-header-linkedin-psd.png"
+      },
+      "instagram": {
+        "x": 180,
+        "y": 16,
+        "width": 22,
+        "height": 21,
+        "right": 202,
+        "bottom": 37,
+        "naturalWidth": 22,
+        "naturalHeight": 21,
+        "currentSrc": "https://neurocoaching.sy3.ru/wp-content/themes/neurocoaching/assets/images/about-header-instagram-psd.png"
+      },
+      "telegram": {
+        "x": 213,
+        "y": 15,
+        "width": 22,
+        "height": 22,
+        "right": 235,
+        "bottom": 37,
+        "naturalWidth": 22,
+        "naturalHeight": 22,
+        "currentSrc": "https://neurocoaching.sy3.ru/wp-content/themes/neurocoaching/assets/images/about-header-telegram-psd.png"
+      },
+      "burger": {
+        "x": 281,
+        "y": 16,
+        "width": 24,
+        "height": 22,
+        "right": 305,
+        "bottom": 38
+      },
+      "heroPhoto": {
+        "x": 0,
+        "y": 50,
+        "width": 320,
+        "height": 405,
+        "right": 320,
+        "bottom": 455
+      },
+      "heroImage": {
+        "x": -17,
+        "y": -5,
+        "width": 356,
+        "height": 530,
+        "right": 339,
+        "bottom": 525,
+        "naturalWidth": 320,
+        "naturalHeight": 480,
+        "currentSrc": "https://neurocoaching.sy3.ru/wp-content/themes/neurocoaching/assets/images/about-hero-psd-768.webp"
+      },
+      "scrollWidth": 320,
+      "clientWidth": 320,
+      "exactTextVisible": true,
+      "forbiddenTextAbsent": true,
+      "links": [
+        {
+          "label": "Digital Belka home",
+          "href": "https://neurocoaching.sy3.ru/",
+          "visible": true
+        },
+        {
+          "label": "LinkedIn",
+          "href": "https://www.linkedin.com/",
+          "visible": true
+        },
+        {
+          "label": "Instagram",
+          "href": "https://www.instagram.com/",
+          "visible": true
+        },
+        {
+          "label": "Telegram",
+          "href": "https://t.me/",
+          "visible": true
+        }
+      ]
+    },
+    "menuOpen": {
+      "expanded": "true",
+      "visible": "flex"
+    },
+    "menuClosed": "false",
+    "clickedLinks": [
+      "Digital Belka home",
+      "LinkedIn",
+      "Instagram",
+      "Telegram"
+    ],
+    "consoleErrors": []
+  },
+  {
+    "width": 390,
+    "metrics": {
+      "header": {
+        "x": 0,
+        "y": 0,
+        "width": 390,
+        "height": 53,
+        "right": 390,
+        "bottom": 53
+      },
+      "headerComputed": {
+        "height": "53px",
+        "minHeight": "53px",
+        "paddingTop": "0px",
+        "paddingRight": "0px",
+        "paddingBottom": "0px",
+        "paddingLeft": "0px",
+        "backgroundColor": "rgb(133, 92, 172)"
+      },
+      "logo": {
+        "x": 16,
+        "y": 4,
+        "width": 89,
+        "height": 45,
+        "right": 105,
+        "bottom": 49,
+        "naturalWidth": 89,
+        "naturalHeight": 45,
+        "currentSrc": "https://neurocoaching.sy3.ru/wp-content/themes/neurocoaching/assets/images/about-header-logo-psd.png"
+      },
+      "linkedin": {
+        "x": 145,
+        "y": 15,
+        "width": 22,
+        "height": 21,
+        "right": 167,
+        "bottom": 36,
+        "naturalWidth": 22,
+        "naturalHeight": 21,
+        "currentSrc": "https://neurocoaching.sy3.ru/wp-content/themes/neurocoaching/assets/images/about-header-linkedin-psd.png"
+      },
+      "instagram": {
+        "x": 180,
+        "y": 16,
+        "width": 22,
+        "height": 21,
+        "right": 202,
+        "bottom": 37,
+        "naturalWidth": 22,
+        "naturalHeight": 21,
+        "currentSrc": "https://neurocoaching.sy3.ru/wp-content/themes/neurocoaching/assets/images/about-header-instagram-psd.png"
+      },
+      "telegram": {
+        "x": 213,
+        "y": 15,
+        "width": 22,
+        "height": 22,
+        "right": 235,
+        "bottom": 37,
+        "naturalWidth": 22,
+        "naturalHeight": 22,
+        "currentSrc": "https://neurocoaching.sy3.ru/wp-content/themes/neurocoaching/assets/images/about-header-telegram-psd.png"
+      },
+      "burger": {
+        "x": 351,
+        "y": 16,
+        "width": 24,
+        "height": 22,
+        "right": 375,
+        "bottom": 38
+      },
+      "heroPhoto": {
+        "x": 0,
+        "y": 50,
+        "width": 390,
+        "height": 450,
+        "right": 390,
+        "bottom": 500
+      },
+      "heroImage": {
+        "x": -6,
+        "y": -17.984375,
+        "width": 401.984375,
+        "height": 603,
+        "right": 395.984375,
+        "bottom": 585.015625,
+        "naturalWidth": 390,
+        "naturalHeight": 585,
+        "currentSrc": "https://neurocoaching.sy3.ru/wp-content/themes/neurocoaching/assets/images/about-hero-psd-768.webp"
+      },
+      "scrollWidth": 390,
+      "clientWidth": 390,
+      "exactTextVisible": true,
+      "forbiddenTextAbsent": true,
+      "links": [
+        {
+          "label": "Digital Belka home",
+          "href": "https://neurocoaching.sy3.ru/",
+          "visible": true
+        },
+        {
+          "label": "LinkedIn",
+          "href": "https://www.linkedin.com/",
+          "visible": true
+        },
+        {
+          "label": "Instagram",
+          "href": "https://www.instagram.com/",
+          "visible": true
+        },
+        {
+          "label": "Telegram",
+          "href": "https://t.me/",
+          "visible": true
+        }
+      ]
+    },
+    "menuOpen": {
+      "expanded": "true",
+      "visible": "flex"
+    },
+    "menuClosed": "false",
+    "clickedLinks": [
+      "Digital Belka home",
+      "LinkedIn",
+      "Instagram",
+      "Telegram"
+    ],
+    "consoleErrors": []
+  },
+  {
+    "width": 510,
+    "metrics": {
+      "header": {
+        "x": 0,
+        "y": 0,
+        "width": 510,
+        "height": 53,
+        "right": 510,
+        "bottom": 53
+      },
+      "headerComputed": {
+        "height": "53px",
+        "minHeight": "53px",
+        "paddingTop": "0px",
+        "paddingRight": "0px",
+        "paddingBottom": "0px",
+        "paddingLeft": "0px",
+        "backgroundColor": "rgb(133, 92, 172)"
+      },
+      "logo": {
+        "x": 16,
+        "y": 4,
+        "width": 89,
+        "height": 45,
+        "right": 105,
+        "bottom": 49,
+        "naturalWidth": 89,
+        "naturalHeight": 45,
+        "currentSrc": "https://neurocoaching.sy3.ru/wp-content/themes/neurocoaching/assets/images/about-header-logo-psd.png"
+      },
+      "linkedin": {
+        "x": 145,
+        "y": 15,
+        "width": 22,
+        "height": 21,
+        "right": 167,
+        "bottom": 36,
+        "naturalWidth": 22,
+        "naturalHeight": 21,
+        "currentSrc": "https://neurocoaching.sy3.ru/wp-content/themes/neurocoaching/assets/images/about-header-linkedin-psd.png"
+      },
+      "instagram": {
+        "x": 180,
+        "y": 16,
+        "width": 22,
+        "height": 21,
+        "right": 202,
+        "bottom": 37,
+        "naturalWidth": 22,
+        "naturalHeight": 21,
+        "currentSrc": "https://neurocoaching.sy3.ru/wp-content/themes/neurocoaching/assets/images/about-header-instagram-psd.png"
+      },
+      "telegram": {
+        "x": 213,
+        "y": 15,
+        "width": 22,
+        "height": 22,
+        "right": 235,
+        "bottom": 37,
+        "naturalWidth": 22,
+        "naturalHeight": 22,
+        "currentSrc": "https://neurocoaching.sy3.ru/wp-content/themes/neurocoaching/assets/images/about-header-telegram-psd.png"
+      },
+      "burger": {
+        "x": 471,
+        "y": 16,
+        "width": 24,
+        "height": 22,
+        "right": 495,
+        "bottom": 38
+      },
+      "heroPhoto": {
+        "x": 0,
+        "y": 50,
+        "width": 510,
+        "height": 450,
+        "right": 510,
+        "bottom": 500
+      },
+      "heroImage": {
+        "x": -6,
+        "y": -18,
+        "width": 402,
+        "height": 603,
+        "right": 396,
+        "bottom": 585,
+        "naturalWidth": 510,
+        "naturalHeight": 765,
+        "currentSrc": "https://neurocoaching.sy3.ru/wp-content/themes/neurocoaching/assets/images/about-hero-psd-768.webp"
+      },
+      "scrollWidth": 510,
+      "clientWidth": 510,
+      "exactTextVisible": true,
+      "forbiddenTextAbsent": true,
+      "links": [
+        {
+          "label": "Digital Belka home",
+          "href": "https://neurocoaching.sy3.ru/",
+          "visible": true
+        },
+        {
+          "label": "LinkedIn",
+          "href": "https://www.linkedin.com/",
+          "visible": true
+        },
+        {
+          "label": "Instagram",
+          "href": "https://www.instagram.com/",
+          "visible": true
+        },
+        {
+          "label": "Telegram",
+          "href": "https://t.me/",
+          "visible": true
+        }
+      ]
+    },
+    "menuOpen": {
+      "expanded": "true",
+      "visible": "flex"
+    },
+    "menuClosed": "false",
+    "clickedLinks": [
+      "Digital Belka home",
+      "LinkedIn",
+      "Instagram",
+      "Telegram"
+    ],
+    "consoleErrors": []
+  },
+  {
+    "width": 768,
+    "metrics": {
+      "header": {
+        "x": 0,
+        "y": 0,
+        "width": 768,
+        "height": 53,
+        "right": 768,
+        "bottom": 53
+      },
+      "headerComputed": {
+        "height": "53px",
+        "minHeight": "53px",
+        "paddingTop": "0px",
+        "paddingRight": "0px",
+        "paddingBottom": "0px",
+        "paddingLeft": "0px",
+        "backgroundColor": "rgb(133, 92, 172)"
+      },
+      "logo": {
+        "x": 16,
+        "y": 4,
+        "width": 89,
+        "height": 45,
+        "right": 105,
+        "bottom": 49,
+        "naturalWidth": 89,
+        "naturalHeight": 45,
+        "currentSrc": "https://neurocoaching.sy3.ru/wp-content/themes/neurocoaching/assets/images/about-header-logo-psd.png"
+      },
+      "linkedin": {
+        "x": 145,
+        "y": 15,
+        "width": 22,
+        "height": 21,
+        "right": 167,
+        "bottom": 36,
+        "naturalWidth": 22,
+        "naturalHeight": 21,
+        "currentSrc": "https://neurocoaching.sy3.ru/wp-content/themes/neurocoaching/assets/images/about-header-linkedin-psd.png"
+      },
+      "instagram": {
+        "x": 180,
+        "y": 16,
+        "width": 22,
+        "height": 21,
+        "right": 202,
+        "bottom": 37,
+        "naturalWidth": 22,
+        "naturalHeight": 21,
+        "currentSrc": "https://neurocoaching.sy3.ru/wp-content/themes/neurocoaching/assets/images/about-header-instagram-psd.png"
+      },
+      "telegram": {
+        "x": 213,
+        "y": 15,
+        "width": 22,
+        "height": 22,
+        "right": 235,
+        "bottom": 37,
+        "naturalWidth": 22,
+        "naturalHeight": 22,
+        "currentSrc": "https://neurocoaching.sy3.ru/wp-content/themes/neurocoaching/assets/images/about-header-telegram-psd.png"
+      },
+      "burger": {
+        "x": 729,
+        "y": 16,
+        "width": 24,
+        "height": 22,
+        "right": 753,
+        "bottom": 38
+      },
+      "heroPhoto": {
+        "x": 0,
+        "y": 50,
+        "width": 768,
+        "height": 450,
+        "right": 768,
+        "bottom": 500
+      },
+      "heroImage": {
+        "x": -6,
+        "y": -18,
+        "width": 402,
+        "height": 603,
+        "right": 396,
+        "bottom": 585,
+        "naturalWidth": 768,
+        "naturalHeight": 1152,
+        "currentSrc": "https://neurocoaching.sy3.ru/wp-content/themes/neurocoaching/assets/images/about-hero-psd-768.webp"
+      },
+      "scrollWidth": 768,
+      "clientWidth": 768,
+      "exactTextVisible": true,
+      "forbiddenTextAbsent": true,
+      "links": [
+        {
+          "label": "Digital Belka home",
+          "href": "https://neurocoaching.sy3.ru/",
+          "visible": true
+        },
+        {
+          "label": "LinkedIn",
+          "href": "https://www.linkedin.com/",
+          "visible": true
+        },
+        {
+          "label": "Instagram",
+          "href": "https://www.instagram.com/",
+          "visible": true
+        },
+        {
+          "label": "Telegram",
+          "href": "https://t.me/",
+          "visible": true
+        }
+      ]
+    },
+    "menuOpen": {
+      "expanded": "true",
+      "visible": "flex"
+    },
+    "menuClosed": "false",
+    "clickedLinks": [
+      "Digital Belka home",
+      "LinkedIn",
+      "Instagram",
+      "Telegram"
+    ],
+    "consoleErrors": []
+  }
+]
