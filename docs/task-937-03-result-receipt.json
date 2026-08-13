@@ -1,0 +1,20 @@
+{
+  "task_id": "CODEX-TASK-TASK-QUEUE-SUYAZOV_NEUROCOACHING.SY3.RU-937-03-G1",
+  "production_touched": false,
+  "checks": {
+    "source_sha256": "passed",
+    "protected_task_933_header_unchanged": "passed",
+    "required_text": "passed",
+    "forbidden_text": "passed",
+    "distinct_default_gallery_slides": "passed",
+    "php_lint": "passed",
+    "git_diff_check": "passed"
+  },
+  "context_delta": {
+    "result": "Completed the source-first About audit and corrected natural hero rendering and the duplicate default carousel dataset.",
+    "decisions": "Preserved the PSD-first slide and all measured geometry, colors, copy, responsive assets, WordPress editability, and the protected TASK-933 mobile header scope.",
+    "current_status": "Candidate changes are ready for pull-request review; production was not touched.",
+    "constraints": "Changes are limited to the WordPress theme and task evidence; acceptance baselines, uploads, database, deployment, and production remain unchanged.",
+    "next_step": "Review the ready pull request and let the managed Bridge flow perform its independent staging and visual acceptance."
+  }
+}

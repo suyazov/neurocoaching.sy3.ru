@@ -45,7 +45,11 @@ function neurocoaching_customize_register( $customizer ) {
 		$customizer->add_control( $key, array( 'label' => $field[0], 'section' => 'neurocoaching_content', 'type' => $field[2] ) );
 	}
 	$gallery_fields = array(
-		'about_gallery_urls'  => array( 'About: In real life image URLs', get_theme_file_uri( '/assets/images/about-life-source.webp' ) ),
+		'about_gallery_urls'  => array( 'About: In real life image URLs', implode( "\n", array(
+			get_theme_file_uri( '/assets/images/about-life-source.webp' ),
+			get_theme_file_uri( '/assets/images/about-hero-source.webp' ),
+			get_theme_file_uri( '/assets/images/about-faq-source.webp' ),
+		) ) ),
 		'career_gallery_urls' => array( 'Career: In real life image URLs', get_theme_file_uri( '/assets/images/career-life.webp' ) ),
 		'neuro_gallery_urls'  => array( 'Neurocoaching: In real life image URLs', get_theme_file_uri( '/assets/images/neuro-life.webp' ) ),
 	);
