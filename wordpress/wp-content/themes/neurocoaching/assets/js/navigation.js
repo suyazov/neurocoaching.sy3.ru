@@ -25,6 +25,71 @@
 }());
 
 (function () {
+  const groups = Array.from(document.querySelectorAll('.nc-about__certificates,.career-certificates,.neuro-certificates'));
+  if (!groups.length) return;
+
+  const viewer = document.createElement('div');
+  viewer.className = 'certificate-lightbox';
+  viewer.hidden = true;
+  viewer.setAttribute('role', 'dialog');
+  viewer.setAttribute('aria-modal', 'true');
+  viewer.setAttribute('aria-label', 'Certificate gallery');
+  viewer.innerHTML = '<button class="certificate-lightbox__close" type="button" aria-label="Close certificate gallery">×</button>' +
+    '<button class="certificate-lightbox__previous" type="button" aria-label="Previous certificate">←</button>' +
+    '<img class="certificate-lightbox__image" src="" alt="">' +
+    '<button class="certificate-lightbox__next" type="button" aria-label="Next certificate">→</button>';
+  document.body.appendChild(viewer);
+
+  const image = viewer.querySelector('.certificate-lightbox__image');
+  const closeButton = viewer.querySelector('.certificate-lightbox__close');
+  const previousButton = viewer.querySelector('.certificate-lightbox__previous');
+  const nextButton = viewer.querySelector('.certificate-lightbox__next');
+  let activeLinks = [];
+  let activeIndex = 0;
+  let returnFocus = null;
+
+  const show = function (index) {
+    if (!activeLinks.length) return;
+    activeIndex = (index + activeLinks.length) % activeLinks.length;
+    const link = activeLinks[activeIndex];
+    const thumbnail = link.querySelector('img');
+    image.src = link.href;
+    image.alt = thumbnail ? thumbnail.alt : 'Certificate';
+  };
+  const close = function () {
+    viewer.hidden = true;
+    document.body.classList.remove('has-certificate-lightbox');
+    if (returnFocus) returnFocus.focus();
+  };
+
+  groups.forEach(function (group) {
+    const links = Array.from(group.querySelectorAll('[data-certificate-lightbox]'));
+    links.forEach(function (link, index) {
+      link.addEventListener('click', function (event) {
+        event.preventDefault();
+        activeLinks = links;
+        returnFocus = link;
+        show(index);
+        viewer.hidden = false;
+        document.body.classList.add('has-certificate-lightbox');
+        closeButton.focus();
+      });
+    });
+  });
+
+  closeButton.addEventListener('click', close);
+  previousButton.addEventListener('click', function () { show(activeIndex - 1); });
+  nextButton.addEventListener('click', function () { show(activeIndex + 1); });
+  viewer.addEventListener('click', function (event) { if (event.target === viewer) close(); });
+  document.addEventListener('keydown', function (event) {
+    if (viewer.hidden) return;
+    if (event.key === 'Escape') { event.preventDefault(); close(); }
+    if (event.key === 'ArrowLeft') { event.preventDefault(); show(activeIndex - 1); }
+    if (event.key === 'ArrowRight') { event.preventDefault(); show(activeIndex + 1); }
+  });
+}());
+
+(function () {
   document.querySelectorAll('[data-carousel]').forEach(function (carousel) {
     const slides = Array.from(carousel.querySelectorAll('[data-carousel-slide]'));
     const dots = Array.from(carousel.querySelectorAll('[data-carousel-dot]'));

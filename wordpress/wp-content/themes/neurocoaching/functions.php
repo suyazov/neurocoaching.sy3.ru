@@ -176,10 +176,10 @@ function neurocoaching_header( $active ) {
 	$is_neuro     = 'neuro' === $active;
 	?>
 	<header class="site-header" data-site-header>
-		<a class="brand" href="<?php echo esc_url( home_url( '/' ) ); ?>" aria-label="Digital Belka home"><picture><source media="(max-width: 850px)" srcset="<?php echo esc_url( $about_images . 'about-header-logo-psd.png' ); ?>"><img src="<?php echo esc_url( $about_images . 'about-logo.png' ); ?>" width="110" height="55" alt="Digital Belka"></picture></a>
+		<a class="brand" href="<?php echo esc_url( home_url( '/' ) ); ?>" aria-label="Digital Belka home"><img src="<?php echo esc_url( $about_images . 'logo-belka.svg' ); ?>" width="110" height="58" alt="Digital Belka"></a>
 		<div class="about-socials" aria-label="Social links">
 			<a href="<?php echo esc_url( neurocoaching_mod( 'contact_url', 'https://www.linkedin.com/' ) ); ?>" aria-label="LinkedIn"><img src="<?php echo esc_url( $about_images . 'about-linkedin.svg' ); ?>" width="28" height="28" alt=""></a>
-			<a href="<?php echo esc_url( neurocoaching_mod( 'instagram_url', 'https://www.instagram.com/' ) ); ?>" aria-label="Instagram"><img src="<?php echo esc_url( $about_images . 'about-instagram.svg' ); ?>" width="28" height="28" alt=""></a>
+			<a href="<?php echo esc_url( neurocoaching_mod( 'email_url', 'mailto:hello@example.com' ) ); ?>" aria-label="Email"><img src="<?php echo esc_url( $about_images . 'icon-mail.svg' ); ?>" width="28" height="28" alt=""></a>
 			<a href="<?php echo esc_url( neurocoaching_mod( 'telegram_url', 'https://t.me/' ) ); ?>" aria-label="Telegram"><img src="<?php echo esc_url( $about_images . 'about-telegram.svg' ); ?>" width="28" height="28" alt=""></a>
 		</div>
 		<button class="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-navigation" data-menu-toggle><span class="screen-reader-text">Open menu</span><i></i><i></i><i></i></button>

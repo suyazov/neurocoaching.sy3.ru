@@ -25,11 +25,19 @@ $instagram_url = neurocoaching_mod( 'instagram_url', 'https://www.instagram.com/
 		<div class="career-wrap">
 			<h2 id="career-education-title">Education &amp; Experience</h2>
 			<div class="career-certificates" tabindex="0" role="region" aria-label="Selected certificates; swipe or use left and right arrow keys to browse" data-horizontal-track>
-				<figure><img src="<?php echo esc_url( get_theme_file_uri( '/assets/images/about-certificate-1-source.png' ) ); ?>" alt="Webster University certificate"></figure>
-				<figure><img src="<?php echo esc_url( get_theme_file_uri( '/assets/images/about-certificate-2-source.png' ) ); ?>" alt="Neurointegration Institute certificate"></figure>
-				<figure><img src="<?php echo esc_url( get_theme_file_uri( '/assets/images/about-certificate-3-source.png' ) ); ?>" alt="Cornell University certificate"></figure>
-				<figure><img src="<?php echo esc_url( get_theme_file_uri( '/assets/images/about-certificate-4-source.png' ) ); ?>" alt="Professional qualification certificate"></figure>
-				<figure><img src="<?php echo esc_url( get_theme_file_uri( '/assets/images/about-certificate-5-source.png' ) ); ?>" alt="Coaching qualification certificate"></figure>
+				<?php
+				$career_certificates = array(
+					'Webster University certificate',
+					'Neurointegration Institute certificate',
+					'Cornell University certificate',
+					'Professional qualification certificate',
+					'Coaching qualification certificate',
+				);
+				foreach ( $career_certificates as $index => $certificate_alt ) :
+					$certificate_url = get_theme_file_uri( '/assets/images/about-certificate-' . ( $index + 1 ) . '-source.png' );
+					?><figure><a href="<?php echo esc_url( $certificate_url ); ?>" data-certificate-lightbox><img src="<?php echo esc_url( $certificate_url ); ?>" alt="<?php echo esc_attr( $certificate_alt ); ?>"></a></figure><?php
+				endforeach;
+				?>
 			</div>
 			<a class="career-view-more" href="#career-credentials">View more <svg class="education-more-arrow" aria-hidden="true" viewBox="0 0 81 27" width="81" height="27"><path d="M0 13.5H77M63 1L80 13.5 63 26" /></svg></a>
 		</div>

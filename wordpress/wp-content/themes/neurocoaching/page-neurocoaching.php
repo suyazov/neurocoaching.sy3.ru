@@ -10,12 +10,12 @@ $social    = neurocoaching_mod( 'contact_url', 'https://www.linkedin.com/' );
 $instagram = neurocoaching_mod( 'instagram_url', 'https://www.instagram.com/' );
 $credentials = array(
 	'15+ years in the UN & international organisations — HR, project management, organisational development',
-	'Managed multi-million dollar international projects across UN missions',
-	'MBA, Webster University, USA',
-	'ICF Certified Neurointegration Coach, Neurointegration Institute, USA',
 	'Worked with diplomats, senior UN officials, and international teams across the world',
+	'Managed multi-million dollar international projects across UN missions',
 	'Human Resources Management Certificate, Cornell University, USA',
+	'ICF Certified Neurointegration Coach, Neurointegration Institute, USA',
 	'Works with clients in English, Russian & Italian',
+	'MBA, Webster University, USA',
 	'200+ hours of individual coaching practice',
 );
 $faqs = array(
@@ -50,7 +50,7 @@ $faqs = array(
 			<h2 id="neuro-education-title">Education &amp; Experience</h2>
 			<div class="neuro-certificates" tabindex="0" role="region" aria-label="Professional certificates; swipe or use left and right arrow keys to browse" data-horizontal-track>
 				<?php for ( $certificate = 1; $certificate <= 5; $certificate++ ) : ?>
-					<figure><img src="<?php echo esc_url( $images . 'about-certificate-' . $certificate . '-source.png' ); ?>" alt="Professional certificate <?php echo esc_attr( (string) $certificate ); ?>"></figure>
+					<figure><a href="<?php echo esc_url( $images . 'about-certificate-' . $certificate . '-source.png' ); ?>" data-certificate-lightbox><img src="<?php echo esc_url( $images . 'about-certificate-' . $certificate . '-source.png' ); ?>" alt="Professional certificate <?php echo esc_attr( (string) $certificate ); ?>"></a></figure>
 				<?php endfor; ?>
 			</div>
 			<a class="neuro-more" href="#neuro-credentials">View more <svg class="education-more-arrow" aria-hidden="true" viewBox="0 0 81 27" width="81" height="27"><path d="M0 13.5H77M63 1L80 13.5 63 26" /></svg></a>
