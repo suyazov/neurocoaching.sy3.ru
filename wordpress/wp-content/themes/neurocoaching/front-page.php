@@ -7,12 +7,12 @@ $instagram = neurocoaching_mod( 'instagram_url', 'https://www.instagram.com/' );
 $images  = get_template_directory_uri() . '/assets/images/';
 $credentials = array(
 	'15+ years in the UN & international organisations — HR, project management, organisational development',
-	'Managed multi-million dollar international projects across UN missions',
-	'IСF Certified Neurointegration Сoach, Neurointegration Institute, USA',
-	'MBA, Webster University, USA',
 	'Worked with diplomats, senior UN officials, and international teams across the world',
+	'Managed multi-million dollar international projects across UN missions',
 	'Human Resources Management Certificate, Cornell University, USA',
+	'ICF Certified Neurointegration Coach, Neurointegration Institute, USA',
 	'Works with clients in English, Russian & Italian',
+	'MBA, Webster University, USA',
 	'200+ hours of individual coaching practice',
 );
 $questions = array(
@@ -51,7 +51,7 @@ $questions = array(
 			<h2 id="nc-about-education-title">Education &amp; Experience</h2>
 			<div class="nc-about__certificates" tabindex="0" role="region" aria-label="Certificates; swipe or use left and right arrow keys to browse" data-horizontal-track>
 				<?php for ( $i = 1; $i <= 5; $i++ ) : ?>
-					<figure><img src="<?php echo esc_url( $images . 'about-certificate-' . $i . '-source.png' ); ?>" alt="Certificate <?php echo esc_attr( (string) $i ); ?>"></figure>
+					<figure><a href="<?php echo esc_url( $images . 'about-certificate-' . $i . '-source.png' ); ?>" data-certificate-lightbox><img src="<?php echo esc_url( $images . 'about-certificate-' . $i . '-source.png' ); ?>" alt="Certificate <?php echo esc_attr( (string) $i ); ?>"></a></figure>
 				<?php endfor; ?>
 			</div>
 			<a class="nc-about__more" href="#nc-about-credentials">View more <svg class="education-more-arrow" aria-hidden="true" viewBox="0 0 71 28" width="71" height="28"><path d="M0 14H70M56 1L70 14 56 27" /></svg></a>
@@ -66,7 +66,7 @@ $questions = array(
 		<h2 id="nc-about-services-title">Services | B2B format</h2>
 		<article class="nc-about__service-card">
 			<div class="nc-about__service-summary">
-				<div class="nc-about__service-heading"><h3>Team<br>Workshops</h3><span><img src="<?php echo esc_url( $images . 'about-corporate-flag.svg' ); ?>" alt=""><b>Corporate</b></span></div>
+				<div class="nc-about__service-heading"><h3>Team<br>Workshops</h3><span><img src="<?php echo esc_url( $images . 'flag-corporate.svg' ); ?>" alt=""><b>Corporate</b></span></div>
 				<img class="nc-about__zigzag" src="<?php echo esc_url( $images . 'about-zigzag.svg' ); ?>" alt="">
 				<p class="nc-about__scope">On request &nbsp;×&nbsp; Custom scope</p>
 				<p>Practical, tailored workshops for teams covering stress management, burnout prevention, time management, and overall wellbeing. Delivered online or in-person, fully customised context around your team's specific needs.</p>
@@ -103,7 +103,7 @@ $questions = array(
 			<?php foreach ( $questions as $question => $answer ) : ?><details><summary><?php echo esc_html( $question ); ?></summary><p><?php echo esc_html( $answer ); ?></p></details><?php endforeach; ?>
 			<details open><summary>What's the first step?</summary><p>Start with a conversation. You don't need a perfect plan — just the willingness to change something. Book a Discovery Session: free 30 minutes that will give you clarity on where you are, what's holding you back, and exactly what your next step looks like. From there, we build everything together.</p></details>
 		</div>
-		<aside><img src="<?php echo esc_url( $images . 'about-faq-hires.jpg' ); ?>" width="600" height="800" alt="Ksenia outdoors"><h2>Ready to take the first step?</h2><p>Leave with clarity, a defined direction, and a concrete next step.</p><a class="nc-about__button" href="<?php echo esc_url( $booking ); ?>">Book a call</a></aside>
+		<aside><img src="<?php echo esc_url( $images . 'about-faq-client-crop.jpg' ); ?>" width="500" height="647" alt="Ksenia outdoors"><h2>Ready to take the first step?</h2><p>Leave with clarity, a defined direction, and a concrete next step.</p><a class="nc-about__button" href="<?php echo esc_url( $booking ); ?>">Book a call</a></aside>
 	</section>
 </article>
 <?php get_footer();
