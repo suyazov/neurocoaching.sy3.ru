@@ -872,7 +872,7 @@ body.home:not(.career-services-route):not(.neurocoaching-route) .menu-toggle { d
 /* Client correction round: shared certificate viewer. */
 .certificate-lightbox[hidden] { display:none; }
 .certificate-lightbox { position:fixed; z-index:1000; inset:0; display:grid; grid-template-columns:minmax(44px,90px) minmax(0,1000px) minmax(44px,90px); align-items:center; justify-content:center; padding:42px 24px; background:rgba(30,18,47,.92); }
-.certificate-lightbox__image { width:auto; max-width:100%; max-height:calc(100vh - 84px); margin:auto; border:2px solid #fff; border-radius:6px; background:#fff; object-fit:contain; }
+.certificate-lightbox__image { width:100%; height:calc(100vh - 84px); max-width:100%; margin:auto; border:2px solid #fff; border-radius:6px; background:#fff; object-fit:contain; }
 .certificate-lightbox__close,.certificate-lightbox__previous,.certificate-lightbox__next { border:2px solid #fff; border-radius:6px; color:#fff; background:transparent; cursor:pointer; font:900 32px/1 Lato,Arial,sans-serif; }
 .certificate-lightbox__close { position:absolute; top:20px; right:20px; width:48px; height:48px; }
 .certificate-lightbox__previous,.certificate-lightbox__next { width:58px; height:58px; justify-self:center; }
@@ -883,6 +883,7 @@ body.has-certificate-lightbox { overflow:hidden; }
 
 @media (max-width:850px) {
 	.certificate-lightbox { grid-template-columns:40px minmax(0,1fr) 40px; padding:58px 8px 20px; }
+	.certificate-lightbox__image { height:calc(100vh - 78px); }
 	.certificate-lightbox__close { top:8px; right:8px; width:40px; height:40px; }
 	.certificate-lightbox__previous,.certificate-lightbox__next { width:38px; height:48px; font-size:24px; }
 }
