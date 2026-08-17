@@ -132,7 +132,7 @@ function neurocoaching_gallery( $setting, $fallback, $alt, $class_name, $mobile_
 	$slides = $slides_override ? array_values( array_filter( array_map( 'esc_url_raw', $slides_override ) ) ) : neurocoaching_gallery_urls( $setting, $fallback );
 	$count  = count( $slides );
 	?>
-	<div class="<?php echo esc_attr( $class_name ); ?> nc-gallery<?php echo 1 === $count ? ' nc-gallery--single' : ''; ?>" data-carousel tabindex="0" role="region" aria-roledescription="carousel" aria-label="In real life photo gallery" data-slide-count="<?php echo esc_attr( (string) $count ); ?>">
+	<div class="<?php echo esc_attr( $class_name ); ?> site-gallery nc-gallery<?php echo 1 === $count ? ' nc-gallery--single' : ''; ?>" data-carousel tabindex="0" role="region" aria-roledescription="carousel" aria-label="In real life photo gallery" data-slide-count="<?php echo esc_attr( (string) $count ); ?>">
 		<button class="nc-gallery__previous" type="button" data-carousel-previous aria-label="Previous photo"<?php echo 1 === $count ? ' disabled aria-disabled="true"' : ''; ?>>←</button>
 		<div class="nc-gallery__viewport" aria-live="polite">
 		<?php foreach ( $slides as $index => $url ) : ?>
@@ -191,7 +191,7 @@ function neurocoaching_neuro_certificates() {
  */
 function neurocoaching_certificate_gallery( $class_name, $label, $certificates ) {
 	?>
-	<div class="<?php echo esc_attr( $class_name ); ?>" tabindex="0" role="region" aria-label="<?php echo esc_attr( $label ); ?>" data-horizontal-track>
+	<div class="<?php echo esc_attr( $class_name ); ?> site-certificates" tabindex="0" role="region" aria-label="<?php echo esc_attr( $label ); ?>" data-horizontal-track>
 		<?php foreach ( $certificates as $certificate ) : ?>
 			<?php $certificate_url = get_theme_file_uri( '/assets/images/' . $certificate['file'] ); ?>
 			<figure><a href="<?php echo esc_url( $certificate_url ); ?>" data-certificate-lightbox><img src="<?php echo esc_url( $certificate_url ); ?>" alt="<?php echo esc_attr( $certificate['alt'] ); ?>" loading="lazy" decoding="async"></a></figure>
@@ -201,14 +201,133 @@ function neurocoaching_certificate_gallery( $class_name, $label, $certificates )
 }
 
 /**
+ * Render the canonical education and certificate section.
+ */
+function neurocoaching_education_section( $args ) {
+	$args = wp_parse_args(
+		$args,
+		array(
+			'id'                => 'education-title',
+			'target_id'         => 'credentials',
+			'section_class'     => '',
+			'inner_class'       => '',
+			'certificates_class' => '',
+			'certificates'      => array(),
+			'label'             => 'Certificates; swipe or use left and right arrow keys to browse',
+		)
+	);
+	?>
+	<section class="site-section site-education <?php echo esc_attr( $args['section_class'] ); ?>" aria-labelledby="<?php echo esc_attr( $args['id'] ); ?>">
+		<div class="site-shell site-education__inner <?php echo esc_attr( $args['inner_class'] ); ?>">
+			<h2 class="site-section-title site-education__title" id="<?php echo esc_attr( $args['id'] ); ?>">Education &amp; Experience</h2>
+			<?php neurocoaching_certificate_gallery( $args['certificates_class'], $args['label'], $args['certificates'] ); ?>
+			<a class="site-education__more" href="#<?php echo esc_attr( $args['target_id'] ); ?>">View more <svg class="education-more-arrow" aria-hidden="true" viewBox="0 0 71 28" width="71" height="28"><path d="M0 14H70M56 1L70 14 56 27" /></svg></a>
+		</div>
+	</section>
+	<?php
+}
+
+/**
+ * Render the canonical credentials list.
+ */
+function neurocoaching_credentials_section( $args ) {
+	$args = wp_parse_args(
+		$args,
+		array(
+			'id'            => 'credentials',
+			'section_class' => '',
+			'label'         => 'Qualifications and experience',
+			'items'         => array(),
+		)
+	);
+	?>
+	<section id="<?php echo esc_attr( $args['id'] ); ?>" class="site-section site-shell site-credentials <?php echo esc_attr( $args['section_class'] ); ?>" aria-label="<?php echo esc_attr( $args['label'] ); ?>" tabindex="-1">
+		<ul>
+			<?php foreach ( $args['items'] as $item ) : ?>
+				<li><span class="site-check" aria-hidden="true">&#10003;</span><?php echo esc_html( $item ); ?></li>
+			<?php endforeach; ?>
+		</ul>
+	</section>
+	<?php
+}
+
+/**
+ * Render the canonical call-to-action band.
+ */
+function neurocoaching_cta_section( $args ) {
+	$args = wp_parse_args(
+		$args,
+		array(
+			'heading'       => 'Ready to take the first step?',
+			'text'          => 'Free 30-min intro call · No commitment',
+			'button_label'  => 'Book a free call',
+			'button_url'    => 'mailto:hello@example.com',
+			'section_class' => '',
+			'inner_class'   => '',
+		)
+	);
+	?>
+	<section class="site-section site-cta <?php echo esc_attr( $args['section_class'] ); ?>">
+		<div class="site-shell site-cta__inner <?php echo esc_attr( $args['inner_class'] ); ?>">
+			<h2 class="site-section-title"><?php echo esc_html( $args['heading'] ); ?></h2>
+			<p><?php echo esc_html( $args['text'] ); ?></p>
+			<a class="site-button site-cta__button" href="<?php echo esc_url( $args['button_url'] ); ?>"><?php echo esc_html( $args['button_label'] ); ?></a>
+		</div>
+	</section>
+	<?php
+}
+
+/**
+ * Render the canonical FAQ list and adjacent booking panel.
+ */
+function neurocoaching_faq_section( $args ) {
+	$args = wp_parse_args(
+		$args,
+		array(
+			'id'             => 'faq-title',
+			'section_class'  => '',
+			'questions_class' => '',
+			'questions'      => array(),
+			'open_question'  => '',
+			'closing'        => '',
+			'image'          => '',
+			'image_width'    => 600,
+			'image_height'   => 800,
+			'image_alt'      => 'Ksenia Belousova',
+			'aside_heading'  => 'Ready to take the first step?',
+			'aside_text'     => 'Leave with clarity, a defined direction, and a concrete next step.',
+			'button_label'   => 'Book a free call',
+			'button_url'     => 'mailto:hello@example.com',
+		)
+	);
+	?>
+	<section id="faqs" class="site-section site-shell site-faq <?php echo esc_attr( $args['section_class'] ); ?>" aria-labelledby="<?php echo esc_attr( $args['id'] ); ?>">
+		<header class="site-faq__header"><h2 class="site-section-title" id="<?php echo esc_attr( $args['id'] ); ?>">FAQs</h2><p>(Frequently Asked Questions)</p></header>
+		<div class="site-faq__questions <?php echo esc_attr( $args['questions_class'] ); ?>">
+			<?php foreach ( $args['questions'] as $question => $answer ) : ?>
+				<details<?php echo $question === $args['open_question'] ? ' open' : ''; ?>><summary><?php echo esc_html( $question ); ?></summary><p><?php echo esc_html( $answer ); ?></p></details>
+			<?php endforeach; ?>
+			<?php if ( $args['closing'] ) : ?><p class="site-faq__closing"><?php echo esc_html( $args['closing'] ); ?></p><?php endif; ?>
+		</div>
+		<aside class="site-faq__aside">
+			<img src="<?php echo esc_url( $args['image'] ); ?>" width="<?php echo esc_attr( (string) $args['image_width'] ); ?>" height="<?php echo esc_attr( (string) $args['image_height'] ); ?>" alt="<?php echo esc_attr( $args['image_alt'] ); ?>">
+			<h2><?php echo esc_html( $args['aside_heading'] ); ?></h2>
+			<p><?php echo esc_html( $args['aside_text'] ); ?></p>
+			<a class="site-button site-faq__button" href="<?php echo esc_url( $args['button_url'] ); ?>"><?php echo esc_html( $args['button_label'] ); ?></a>
+		</aside>
+	</section>
+	<?php
+}
+
+/**
  * Render the canonical "In real life" block used on every public route.
  */
 function neurocoaching_real_life_section( $title_id, $instagram_url, $setting, $fallback, $alt, $slides_override = array() ) {
 	$images = get_template_directory_uri() . '/assets/images/';
 	?>
-	<section class="nc-about__life" aria-labelledby="<?php echo esc_attr( $title_id ); ?>">
-		<h2 id="<?php echo esc_attr( $title_id ); ?>">In real life</h2>
-		<a class="nc-about__instagram" href="<?php echo esc_url( $instagram_url ); ?>">Follow on Instagram <img src="<?php echo esc_url( $images . 'about-instagram.svg' ); ?>" alt=""></a>
+	<section class="site-section site-life nc-about__life" aria-labelledby="<?php echo esc_attr( $title_id ); ?>">
+		<h2 class="site-section-title site-life__title" id="<?php echo esc_attr( $title_id ); ?>">In real life</h2>
+		<a class="site-life__social nc-about__instagram" href="<?php echo esc_url( $instagram_url ); ?>">Follow on Instagram <img src="<?php echo esc_url( $images . 'about-instagram.svg' ); ?>" alt=""></a>
 		<?php neurocoaching_gallery( $setting, $fallback, $alt, 'nc-about__life-photo', '', $slides_override ); ?>
 	</section>
 	<?php
@@ -234,7 +353,7 @@ function neurocoaching_header( $active ) {
 			<a<?php echo 'neuro' === $active ? ' aria-current="page"' : ''; ?> href="<?php echo esc_url( neurocoaching_page_url( 'neurocoaching' ) ); ?>">Neurocoaching</a>
 			<a href="#faqs">FAQs</a>
 		</nav>
-		<a class="button button--small" href="<?php echo esc_url( neurocoaching_mod( 'contact_url', 'https://www.linkedin.com/' ) ); ?>"><?php echo 'about' === $active ? 'Connect on Linkedin' : 'Connect on LinkedIn'; ?></a>
+		<a class="site-button button button--small" href="<?php echo esc_url( neurocoaching_mod( 'contact_url', 'https://www.linkedin.com/' ) ); ?>"><?php echo 'about' === $active ? 'Connect on Linkedin' : 'Connect on LinkedIn'; ?></a>
 	</header>
 	<?php
 }

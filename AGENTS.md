@@ -10,5 +10,6 @@
 
 ## Protected shared components
 
-- `/`, `/career-services/`, and `/neurocoaching/` use one shared header and one canonical `In real life` component.
+- `/`, `/career-services/`, and `/neurocoaching/` use one shared header and canonical `Education & Experience`, credentials, `In real life`, CTA, and FAQ components.
+- Shared content geometry and responsive behaviour live in the `site-*` component layer in `style.css`; route classes are content-specific modifiers only.
 - Refactoring and PSD-specific responsive corrections must not fork, duplicate, or override these shared components per route.
