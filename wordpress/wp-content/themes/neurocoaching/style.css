@@ -883,7 +883,7 @@ body.home:not(.career-services-route):not(.neurocoaching-route) .menu-toggle { d
 .certificate-lightbox__image { width:100%; height:calc(100vh - 84px); max-width:100%; margin:auto; border:2px solid #fff; border-radius:6px; background:#fff; object-fit:contain; }
 .certificate-lightbox__close,.certificate-lightbox__previous,.certificate-lightbox__next { border:2px solid #fff; border-radius:6px; color:#fff; background:transparent; cursor:pointer; font:900 32px/1 Lato,Arial,sans-serif; }
 .certificate-lightbox__close { position:absolute; top:20px; right:20px; width:48px; height:48px; }
-.certificate-lightbox__previous,.certificate-lightbox__next { width:84px; height:86px; justify-self:center; overflow:hidden; border:0; border-radius:0; color:transparent; background:url('assets/images/icon-arrow-gallery-v2.svg') center/84px 86px no-repeat; font-size:0; }
+.certificate-lightbox__previous,.certificate-lightbox__next { width:84px; height:86px; justify-self:center; overflow:hidden; border:0; border-radius:0; color:transparent; background:url('assets/images/icon-arrow-gallery-education.svg') center/84px 86px no-repeat; font-size:0; }
 .certificate-lightbox__previous { grid-column:1; transform:rotate(180deg); }
 .certificate-lightbox__image { grid-column:2; }
 .certificate-lightbox__next { grid-column:3; }

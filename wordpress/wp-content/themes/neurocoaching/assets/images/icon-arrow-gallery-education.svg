@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="_Слой_1" xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 95.1 95.3">
+  <defs>
+    <style>
+      .st0 {
+        fill: none;
+        stroke: #fff;
+        stroke-miterlimit: 10;
+        stroke-width: 3px;
+      }
+    </style>
+  </defs>
+  <rect class="st0" x="1.63" y="1.79" width="91.88" height="91.88" rx="11.06" ry="11.06"/>
+  <polyline class="st0" points="53.02 28.76 71.99 47.73 53.02 66.7"/>
+  <line class="st0" x1="24.47" y1="47.73" x2="71.99" y2="47.73"/>
+</svg>
