@@ -687,8 +687,11 @@ body.home:not(.career-services-route):not(.neurocoaching-route) .menu-toggle { d
 .career-faq aside img { height:279px; }
 
 @media (min-width:851px) {
-	.neuro-hero { grid-template-columns:511px minmax(0,1fr); }
-	.neuro-hero__photo { width:511px; }
+	/* One desktop hero grid across About, Career and Neurocoaching. */
+	.site-page .site-hero { grid-template-columns:511px minmax(0,1fr); }
+	.site-page .site-hero>.site-hero__media { width:511px; }
+	.site-page .site-hero>.site-hero__content { width:min(680px,100%); padding-top:200px; padding-left:52px; }
+	.site-page .site-hero>.site-hero__content>* { max-width:100%; }
 	.neuro-story { grid-template-columns:600px minmax(0,1fr); }
 	.neuro-story__photo { width:600px; height:800px; }
 	.nc-about__life-photo { width:1216px; grid-template-columns:98px 930px 98px; }
