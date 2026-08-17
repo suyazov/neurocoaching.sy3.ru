@@ -164,10 +164,10 @@ function neurocoaching_about_career_certificates() {
 		array( 'file' => 'about-certificate-2-source.webp', 'alt' => 'Webster University MBA degree' ),
 		array( 'file' => 'about-certificate-3-source.webp', 'alt' => 'Webster University bachelor degree' ),
 		array( 'file' => 'about-certificate-4-source.webp', 'alt' => 'International Organisations Management certificate' ),
-		array( 'file' => 'about-certificate-5-source.webp', 'alt' => 'Cornell University Human Resources Management certificate' ),
+		array( 'file' => 'about-certificate-8-source.webp', 'alt' => 'Targeted advertising certificate' ),
 		array( 'file' => 'about-certificate-6-source.webp', 'alt' => 'LVMH certificate' ),
 		array( 'file' => 'about-certificate-7-source.webp', 'alt' => 'Social media marketing diploma' ),
-		array( 'file' => 'about-certificate-8-source.webp', 'alt' => 'Targeted advertising certificate' ),
+		array( 'file' => 'about-certificate-5-source.webp', 'alt' => 'Cornell University Human Resources Management certificate' ),
 	);
 }
 
