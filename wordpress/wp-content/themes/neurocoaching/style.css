@@ -794,7 +794,7 @@ body.home:not(.career-services-route):not(.neurocoaching-route) .menu-toggle { d
 .site-page .site-faq summary::after { right:20px; }
 .site-page .site-faq details p { max-width:none; margin:0; padding:0 52px 25px; font-size:14px; line-height:1.45; }
 .site-page .site-faq__closing { margin:40px 0 0; font-size:14px; line-height:1.4; }
-.site-page .site-faq__aside { position:relative; align-self:start; margin:80px 0 0; padding:0; }
+.site-page .site-faq__aside { position:relative; align-self:start; margin:0; padding:0; }
 .site-page .site-faq__aside img { display:block; width:294px; max-width:none; height:279px; margin:0; object-fit:cover; object-position:center; }
 .site-page .site-faq__aside::before { content:''; position:absolute; top:294px; left:0; width:294px; height:2px; background:var(--site-accent); }
 .site-page .site-faq__aside h2 { width:294px; margin:47px 0 22px; color:var(--site-heading); font-size:45px; line-height:1.05; }
