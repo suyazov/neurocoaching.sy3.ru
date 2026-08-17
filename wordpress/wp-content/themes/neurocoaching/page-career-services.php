@@ -34,7 +34,7 @@ $instagram_url = neurocoaching_mod( 'instagram_url', 'https://www.instagram.com/
 					'Coaching qualification certificate',
 				);
 				foreach ( $career_certificates as $index => $certificate_alt ) :
-					$certificate_url = get_theme_file_uri( '/assets/images/about-certificate-' . ( $index + 1 ) . '-source.png' );
+					$certificate_url = get_theme_file_uri( '/assets/images/about-certificate-' . ( $index + 1 ) . '-source.webp' );
 					?><figure><a href="<?php echo esc_url( $certificate_url ); ?>" data-certificate-lightbox><img src="<?php echo esc_url( $certificate_url ); ?>" alt="<?php echo esc_attr( $certificate_alt ); ?>"></a></figure><?php
 				endforeach;
 				?>
