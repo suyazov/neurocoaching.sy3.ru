@@ -4,7 +4,7 @@
 - Current capability includes direct WordPress application-code maintenance explicitly authorized by the project owner.
 - Direct maintenance uses a scoped `codex/*` branch, reviewable pull request, staging delivery, and browser verification; Bridge orchestration is not required when the owner explicitly requests direct work.
 - Theme delivery must not preserve the repository's group-only directory permissions. Use a sync mode that does not copy owner/group/permissions, or restore public theme directories to `0755` and files to `0644`, then confirm the PHP-FPM `www-data` user can read the templates.
-- Do not configure DNS, deploy, publish, or touch production.
+- Direct staging deploy/publish to `/var/www/neurocoaching.sy3.ru` is explicitly authorized by the project owner for this project. Production DNS, unrelated production environments, privileged/destructive operations, WP core/plugins/database/credentials, and secrets remain prohibited.
 - Never store raw secrets in this repository.
 - Use controlled `codex/*` branches and pull requests.
 
