@@ -66,8 +66,8 @@ $questions = array(
 		<h2 id="nc-about-services-title">Services | B2B format</h2>
 		<article class="nc-about__service-card">
 			<div class="nc-about__service-summary">
-				<div class="nc-about__service-heading"><h3>Team<br>Workshops</h3><span><img src="<?php echo esc_url( $images . 'flag-corporate.svg' ); ?>" alt=""><b>Corporate</b></span></div>
-				<img class="nc-about__zigzag" src="<?php echo esc_url( $images . 'about-zigzag.svg' ); ?>" alt="">
+				<div class="nc-about__service-heading"><h3>Team<br>Workshops</h3><span><img src="<?php echo esc_url( $images . 'flag-corporate-v2.svg' ); ?>" alt=""><b>Corporate</b></span></div>
+				<img class="nc-about__zigzag" src="<?php echo esc_url( $images . 'about-zigzag-v2.svg' ); ?>" alt="">
 				<p class="nc-about__scope">On request &nbsp;×&nbsp; Custom scope</p>
 				<p>Practical, tailored workshops for teams covering stress management, burnout prevention, time management, and overall wellbeing. Delivered online or in-person, fully customised context around your team's specific needs.</p>
 			</div>

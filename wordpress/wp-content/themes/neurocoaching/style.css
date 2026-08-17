@@ -831,8 +831,8 @@ body.home:not(.career-services-route):not(.neurocoaching-route) .menu-toggle { d
 .nc-about__life-photo { color:var(--nc-about-violet); }
 .nc-about__life-photo .nc-gallery__viewport { width:930px; height:661px; }
 .nc-about__life-photo>button { width:84px; height:86px; overflow:hidden; justify-self:center; border:0; border-radius:0; color:transparent; background-position:center; background-size:84px 86px; background-repeat:no-repeat; font-size:0; }
-.nc-about__life-photo>.nc-gallery__previous { background-image:url('assets/images/icon-arrow-gallery.svg'); transform:rotate(180deg); }
-.nc-about__life-photo>.nc-gallery__next { background-image:url('assets/images/icon-arrow-gallery.svg'); }
+.nc-about__life-photo>.nc-gallery__previous { background-image:url('assets/images/icon-arrow-gallery-v2.svg'); transform:rotate(180deg); }
+.nc-about__life-photo>.nc-gallery__next { background-image:url('assets/images/icon-arrow-gallery-v2.svg'); }
 .nc-about__life-photo .nc-gallery__pagination { width:max-content; }
 .nc-gallery--single .nc-gallery__viewport { justify-self:center; }
 .career-review-track,.neuro-review-track { width:100%; overflow-x:auto; overscroll-behavior-inline:contain; scroll-snap-type:x proximity; scrollbar-width:thin; }
