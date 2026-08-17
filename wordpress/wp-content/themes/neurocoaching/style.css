@@ -776,11 +776,11 @@ body.home:not(.career-services-route):not(.neurocoaching-route) .menu-toggle { d
 .site-page .site-cta p { margin:0 0 33px; font-size:18px; line-height:1.2; }
 .site-page .site-cta__button { min-width:186px; min-height:59px; border-color:var(--site-on-section); color:var(--site-section); background:var(--site-on-section); }
 .site-page .site-faq {
-	width:1084px;
+	width:1220px;
 	max-width:calc(100% - 64px);
 	min-height:0;
 	display:grid;
-	grid-template-columns:minmax(0,760px) 294px;
+	grid-template-columns:repeat(2,minmax(0,1fr));
 	column-gap:30px;
 	margin-inline:auto;
 	padding:142px 0 132px;
@@ -796,7 +796,7 @@ body.home:not(.career-services-route):not(.neurocoaching-route) .menu-toggle { d
 .site-page .site-faq__closing { margin:40px 0 0; font-size:14px; line-height:1.4; }
 .site-page .site-faq__aside { position:relative; align-self:start; margin:0; padding:0; }
 .site-page .site-faq__aside img { display:block; width:294px; max-width:none; height:279px; margin:0; object-fit:cover; object-position:center; }
-.site-page .site-faq__aside::before { content:''; position:absolute; top:294px; left:0; width:294px; height:2px; background:var(--site-accent); }
+.site-page .site-faq__aside::before { content:''; position:absolute; top:294px; left:0; width:100%; height:2px; background:var(--site-accent); }
 .site-page .site-faq__aside h2 { width:294px; margin:47px 0 22px; color:var(--site-heading); font-size:45px; line-height:1.05; }
 .site-page .site-faq__aside p { width:294px; margin:0 0 58px; font-size:18px; line-height:1.2; }
 .site-page .site-faq__button { width:294px; min-height:63px; padding:0 16px; color:#fff; background:var(--site-accent); }
