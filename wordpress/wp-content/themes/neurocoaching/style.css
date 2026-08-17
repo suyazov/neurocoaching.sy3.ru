@@ -63,7 +63,7 @@ details p { padding:0 45px 18px 0; }
 .neuro-education { height:474px; padding-top:88px; overflow:hidden; color:#fff; background:var(--neuro-purple); }
 .neuro-education h2 { margin:0 0 55px 67px; color:#fff; font-size:50px; line-height:1; text-decoration:underline; text-decoration-thickness:3px; text-underline-offset:9px; }
 .neuro-certificates { display:flex; width:1305px; gap:59px; margin-left:64px; }
-.neuro-certificates figure { width:213px; height:155px; margin:0; flex:0 0 213px; padding:11px; border:2px solid #fff; border-radius:6px; background:transparent; }
+.nc-about__certificates figure,.career-certificates figure,.neuro-certificates figure { width:212px; height:155px; margin:0; flex:0 0 212px; padding:12px; border:2px solid #fff; border-radius:6px; background:transparent; }
 .neuro-certificates img { width:100%; height:100%; object-fit:contain; }
 .neuro-more { display:block; width:max-content; margin:25px 0 0 auto; color:#fff; font-size:14px; font-weight:900; text-decoration:none; }
 .education-more-arrow { display:inline-block; margin-left:24px; overflow:visible; vertical-align:middle; }
@@ -265,7 +265,6 @@ details p { padding:0 45px 18px 0; }
 .career-education { height:474px; padding-top:110px; overflow:hidden; color:#fff; background:var(--career-purple); }
 .career-education h2 { margin:0 0 58px; color:#fff; font-size:50px; line-height:1; text-decoration:underline; text-decoration-thickness:3px; text-underline-offset:9px; }
 .career-certificates { display:flex; width:1301px; gap:59px; margin-left:-3px; }
-.career-certificates figure { width:212px; height:154px; margin:0; flex:0 0 212px; padding:12px; border:2px solid #fff; border-radius:6px; background:transparent; }
 .career-certificates img { width:100%; height:100%; object-fit:contain; }
 .career-view-more { display:block; width:max-content; margin:25px -68px 0 auto; color:#fff; font-size:14px; font-weight:900; text-decoration:none; }
 .career-view-more .education-more-arrow { margin-left:22px; }
@@ -359,7 +358,7 @@ details p { padding:0 45px 18px 0; }
 	.career-education { height:389px; padding-top:55px; overflow:hidden; }
 	.career-education h2 { width:235px; margin-bottom:40px; font-size:36px; line-height:1.05; }
 	.career-certificates { width:calc(100% + 18px); gap:22px; margin-left:0; padding-right:18px; overflow-x:auto; overscroll-behavior-inline:contain; scroll-snap-type:x proximity; scrollbar-width:thin; }
-	.career-certificates figure { width:213px; height:154px; flex-basis:213px; }
+	.career-certificates figure { width:213px; height:155px; flex-basis:213px; }
 	.career-certificates figure { scroll-snap-align:start; }
 	.career-view-more { display:none; }
 	.career-credentials { padding:50px 23px 57px; }
@@ -466,7 +465,6 @@ body.home:not(.career-services-route):not(.neurocoaching-route) .menu-toggle { d
 .nc-about__education { height:481px; padding-top:91px; overflow:hidden; color:#fff; background:var(--nc-about-purple); }
 .nc-about__education h2 { margin:0 0 55px; color:#fff; font-size:50px; line-height:1.06; text-decoration:underline; text-decoration-thickness:3px; text-underline-offset:10px; }
 .nc-about__certificates { display:flex; width:1172px; gap:27px; }
-.nc-about__certificates figure { width:212px; height:155px; margin:0; flex:0 0 212px; padding:16px; border:2px solid #fff; border-radius:6px; background:transparent; }
 .nc-about__certificates img { width:100%; height:100%; object-fit:contain; }
 .nc-about__more { display:block; width:max-content; margin:27px 0 0 auto; font-size:18px; font-weight:900; text-decoration:none; }
 .nc-about__more .education-more-arrow { vertical-align:-8px; }
@@ -541,7 +539,7 @@ body.home:not(.career-services-route):not(.neurocoaching-route) .menu-toggle { d
 	.nc-about__education { height:389px; padding-top:56px; }
 	.nc-about__education h2 { width:240px; margin-bottom:41px; font-size:36px; line-height:40px; }
 	.nc-about__certificates { width:calc(100% + 15px); gap:22px; padding-right:15px; overflow-x:auto; overscroll-behavior-inline:contain; scroll-snap-type:x proximity; scrollbar-width:thin; }
-	.nc-about__certificates figure { width:213px; height:156px; flex-basis:213px; padding:9px; }
+	.nc-about__certificates figure { width:213px; height:155px; flex-basis:213px; padding:12px; }
 	.nc-about__certificates figure { scroll-snap-align:start; }
 	.nc-about__more { display:none; }
 	.nc-about__credentials { width:100%; height:585px; margin:0; padding:51px 18px 0 16px; }

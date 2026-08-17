@@ -24,21 +24,7 @@ $instagram_url = neurocoaching_mod( 'instagram_url', 'https://www.instagram.com/
 	<section class="career-education" aria-labelledby="career-education-title">
 		<div class="career-wrap">
 			<h2 id="career-education-title">Education &amp; Experience</h2>
-			<div class="career-certificates" tabindex="0" role="region" aria-label="Selected certificates; swipe or use left and right arrow keys to browse" data-horizontal-track>
-				<?php
-				$career_certificates = array(
-					'Webster University certificate',
-					'Neurointegration Institute certificate',
-					'Cornell University certificate',
-					'Professional qualification certificate',
-					'Coaching qualification certificate',
-				);
-				foreach ( $career_certificates as $index => $certificate_alt ) :
-					$certificate_url = get_theme_file_uri( '/assets/images/about-certificate-' . ( $index + 1 ) . '-source.webp' );
-					?><figure><a href="<?php echo esc_url( $certificate_url ); ?>" data-certificate-lightbox><img src="<?php echo esc_url( $certificate_url ); ?>" alt="<?php echo esc_attr( $certificate_alt ); ?>"></a></figure><?php
-				endforeach;
-				?>
-			</div>
+			<?php neurocoaching_certificate_gallery( 'career-certificates', 'Certificates; swipe or use left and right arrow keys to browse', neurocoaching_about_career_certificates() ); ?>
 			<a class="career-view-more" href="#career-credentials">View more <svg class="education-more-arrow" aria-hidden="true" viewBox="0 0 81 27" width="81" height="27"><path d="M0 13.5H77M63 1L80 13.5 63 26" /></svg></a>
 		</div>
 	</section>
