@@ -156,6 +156,51 @@ function neurocoaching_gallery( $setting, $fallback, $alt, $class_name, $mobile_
 }
 
 /**
+ * The certificate set shared by the About and Career Services pages.
+ */
+function neurocoaching_about_career_certificates() {
+	return array(
+		array( 'file' => 'about-certificate-1-source.webp', 'alt' => 'Nonproliferation Studies certificate' ),
+		array( 'file' => 'about-certificate-2-source.webp', 'alt' => 'Webster University MBA degree' ),
+		array( 'file' => 'about-certificate-3-source.webp', 'alt' => 'Webster University bachelor degree' ),
+		array( 'file' => 'about-certificate-4-source.webp', 'alt' => 'International Organisations Management certificate' ),
+		array( 'file' => 'about-certificate-5-source.webp', 'alt' => 'Cornell University Human Resources Management certificate' ),
+		array( 'file' => 'about-certificate-6-source.webp', 'alt' => 'LVMH certificate' ),
+		array( 'file' => 'about-certificate-7-source.webp', 'alt' => 'Social media marketing diploma' ),
+		array( 'file' => 'about-certificate-8-source.webp', 'alt' => 'Targeted advertising certificate' ),
+	);
+}
+
+/**
+ * Keep Neurocoaching certificates independent until its dedicated set arrives.
+ */
+function neurocoaching_neuro_certificates() {
+	return array_map(
+		static function ( $index ) {
+			return array(
+				'file' => 'neuro-certificate-' . $index . '-source.webp',
+				'alt'  => 'Neurocoaching professional certificate ' . $index,
+			);
+		},
+		range( 1, 5 )
+	);
+}
+
+/**
+ * Render the shared certificate preview and lightbox links.
+ */
+function neurocoaching_certificate_gallery( $class_name, $label, $certificates ) {
+	?>
+	<div class="<?php echo esc_attr( $class_name ); ?>" tabindex="0" role="region" aria-label="<?php echo esc_attr( $label ); ?>" data-horizontal-track>
+		<?php foreach ( $certificates as $certificate ) : ?>
+			<?php $certificate_url = get_theme_file_uri( '/assets/images/' . $certificate['file'] ); ?>
+			<figure><a href="<?php echo esc_url( $certificate_url ); ?>" data-certificate-lightbox><img src="<?php echo esc_url( $certificate_url ); ?>" alt="<?php echo esc_attr( $certificate['alt'] ); ?>" loading="lazy" decoding="async"></a></figure>
+		<?php endforeach; ?>
+	</div>
+	<?php
+}
+
+/**
  * Render the canonical "In real life" block used on every public route.
  */
 function neurocoaching_real_life_section( $title_id, $instagram_url, $setting, $fallback, $alt, $slides_override = array() ) {
