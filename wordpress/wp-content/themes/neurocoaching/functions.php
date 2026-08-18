@@ -334,11 +334,14 @@ function neurocoaching_certificate_gallery( $class_name, $label, $certificates )
 			<?php
 			$certificate_url = get_theme_file_uri( '/assets/images/' . $certificate['file'] );
 			$thumbnail_file  = str_replace( '-source.webp', '-thumb.webp', $certificate['file'] );
+			$small_file      = str_replace( '-source.webp', '-thumb-200.webp', $certificate['file'] );
 			$thumbnail_path  = get_theme_file_path( '/assets/images/' . $thumbnail_file );
+			$small_path      = get_theme_file_path( '/assets/images/' . $small_file );
 			$thumbnail_url   = is_file( $thumbnail_path ) ? get_theme_file_uri( '/assets/images/' . $thumbnail_file ) : $certificate_url;
+			$small_url       = is_file( $small_path ) ? get_theme_file_uri( '/assets/images/' . $small_file ) : '';
 			$thumbnail_size  = is_file( $thumbnail_path ) ? getimagesize( $thumbnail_path ) : false;
 			?>
-			<figure><a href="<?php echo esc_url( $certificate_url ); ?>" data-certificate-lightbox><img src="<?php echo esc_url( $thumbnail_url ); ?>"<?php echo $thumbnail_size ? ' width="' . esc_attr( (string) $thumbnail_size[0] ) . '" height="' . esc_attr( (string) $thumbnail_size[1] ) . '"' : ''; ?> alt="<?php echo esc_attr( $certificate['alt'] ); ?>" loading="lazy" decoding="async"></a></figure>
+			<figure><a href="<?php echo esc_url( $certificate_url ); ?>" data-certificate-lightbox><img src="<?php echo esc_url( $thumbnail_url ); ?>"<?php echo $small_url ? ' srcset="' . esc_url( $small_url ) . ' 200w, ' . esc_url( $thumbnail_url ) . ' 360w" sizes="(max-width: 700px) 180px, 230px"' : ''; ?><?php echo $thumbnail_size ? ' width="' . esc_attr( (string) $thumbnail_size[0] ) . '" height="' . esc_attr( (string) $thumbnail_size[1] ) . '"' : ''; ?> alt="<?php echo esc_attr( $certificate['alt'] ); ?>" loading="lazy" decoding="async"></a></figure>
 		<?php endforeach; ?>
 	</div>
 	<?php

@@ -9,7 +9,7 @@ Text Domain: neurocoaching
 @font-face { font-family:"IBM Plex Sans"; src:url('assets/fonts/ibm-plex-sans-700-latin.woff2') format('woff2'); font-style:normal; font-weight:700; font-display:swap; }
 @font-face { font-family:Lato; src:url('assets/fonts/lato-400-latin.woff2') format('woff2'); font-style:normal; font-weight:400; font-display:swap; }
 @font-face { font-family:Lato; src:url('assets/fonts/lato-700-latin.woff2') format('woff2'); font-style:normal; font-weight:700; font-display:swap; }
-@font-face { font-family:Lato; src:url('assets/fonts/lato-heavy-800.woff2') format('woff2'); font-style:normal; font-weight:800; font-display:swap; }
+@font-face { font-family:Lato; src:url('assets/fonts/lato-900-latin.woff2') format('woff2'); font-style:normal; font-weight:800; font-display:swap; }
 @font-face { font-family:Lato; src:url('assets/fonts/lato-900-latin.woff2') format('woff2'); font-style:normal; font-weight:900; font-display:swap; }
 :root { --purple:#3f2961; --violet:#855cac; --paper:#f8f1ee; --ink:#5c5467; --line:#855cac; }
 * { box-sizing:border-box; }
