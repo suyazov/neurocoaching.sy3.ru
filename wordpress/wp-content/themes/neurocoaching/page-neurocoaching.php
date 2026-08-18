@@ -5,7 +5,7 @@ neurocoaching_header( 'neuro' );
 $images  = get_template_directory_uri() . '/assets/images/';
 $desktop_source = $images . 'neurocoaching-source/desktop-1440/';
 $mobile_source  = $images . 'neurocoaching-source/mobile-320/';
-$booking = neurocoaching_mod( 'booking_url', 'mailto:hello@example.com' );
+$booking = neurocoaching_contact_url();
 $social    = neurocoaching_mod( 'contact_url', 'https://www.linkedin.com/' );
 $instagram = neurocoaching_mod( 'instagram_url', 'https://www.instagram.com/' );
 $credentials = array(
