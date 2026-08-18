@@ -37,7 +37,6 @@ function neurocoaching_customize_register( $customizer ) {
 		'instagram_url' => array( 'Instagram URL', 'https://www.instagram.com/', 'url', 'esc_url_raw' ),
 		'telegram_url' => array( 'Telegram URL', 'https://t.me/', 'url', 'esc_url_raw' ),
 		'email_url' => array( 'Email URL', 'mailto:hello@example.com', 'url', 'esc_url_raw' ),
-		'booking_url' => array( 'Booking CTA URL', 'mailto:hello@example.com', 'url', 'esc_url_raw' ),
 		'about_name'  => array( 'About page name', 'Ksenia Belousova', 'text', 'sanitize_text_field' ),
 	);
 	foreach ( $fields as $key => $field ) {
@@ -70,9 +69,39 @@ function neurocoaching_customize_register( $customizer ) {
 }
 add_action( 'customize_register', 'neurocoaching_customize_register' );
 
+/**
+ * Keep enquiries private and visible only in the WordPress dashboard.
+ */
+function neurocoaching_register_enquiry_type() {
+	register_post_type(
+		'contact_enquiry',
+		array(
+			'labels'             => array(
+				'name'          => 'Contact enquiries',
+				'singular_name' => 'Contact enquiry',
+			),
+			'public'             => false,
+			'publicly_queryable' => false,
+			'exclude_from_search' => true,
+			'show_ui'            => true,
+			'show_in_menu'       => true,
+			'show_in_rest'       => false,
+			'menu_icon'          => 'dashicons-email-alt',
+			'supports'           => array( 'title', 'editor' ),
+			'capabilities'       => array( 'create_posts' => 'do_not_allow' ),
+			'map_meta_cap'       => true,
+		)
+	);
+}
+add_action( 'init', 'neurocoaching_register_enquiry_type' );
+
 function neurocoaching_route_templates( $template ) {
 	$path = wp_parse_url( isset( $_SERVER['REQUEST_URI'] ) ? sanitize_text_field( wp_unslash( $_SERVER['REQUEST_URI'] ) ) : '/', PHP_URL_PATH );
-	$routes = array( '/career-services/' => 'page-career-services.php', '/neurocoaching/' => 'page-neurocoaching.php' );
+	$routes = array(
+		'/career-services/' => 'page-career-services.php',
+		'/neurocoaching/'    => 'page-neurocoaching.php',
+		'/contact/'          => 'page-contact.php',
+	);
 	$path = trailingslashit( '/' . ltrim( (string) $path, '/' ) );
 	if ( isset( $routes[ $path ] ) ) {
 		global $wp_query;
@@ -92,6 +121,9 @@ function neurocoaching_route_body_class( $classes ) {
 	if ( '/neurocoaching/' === trailingslashit( '/' . ltrim( (string) $path, '/' ) ) ) {
 		$classes[] = 'neurocoaching-route';
 	}
+	if ( '/contact/' === trailingslashit( '/' . ltrim( (string) $path, '/' ) ) ) {
+		$classes[] = 'contact-route';
+	}
 	return $classes;
 }
 add_filter( 'body_class', 'neurocoaching_route_body_class' );
@@ -99,6 +131,84 @@ add_filter( 'body_class', 'neurocoaching_route_body_class' );
 function neurocoaching_page_url( $slug ) {
 	return 'about' === $slug ? home_url( '/' ) : home_url( '/' . trim( $slug, '/' ) . '/' );
 }
+
+function neurocoaching_contact_url() {
+	return neurocoaching_page_url( 'contact' );
+}
+
+function neurocoaching_contact_redirect( $status ) {
+	$url = add_query_arg( 'contact_status', sanitize_key( $status ), neurocoaching_contact_url() );
+	wp_safe_redirect( $url . '#contact-form' );
+	exit;
+}
+
+/**
+ * Validate the public contact form, store it privately and send a notification
+ * when the server has a working mail transport.
+ */
+function neurocoaching_handle_contact_form() {
+	if ( 'POST' !== strtoupper( isset( $_SERVER['REQUEST_METHOD'] ) ? sanitize_text_field( wp_unslash( $_SERVER['REQUEST_METHOD'] ) ) : '' ) ) {
+		neurocoaching_contact_redirect( 'invalid' );
+	}
+
+	$nonce = isset( $_POST['neurocoaching_contact_nonce'] ) ? sanitize_text_field( wp_unslash( $_POST['neurocoaching_contact_nonce'] ) ) : '';
+	if ( ! wp_verify_nonce( $nonce, 'neurocoaching_contact' ) ) {
+		neurocoaching_contact_redirect( 'invalid' );
+	}
+
+	$website = isset( $_POST['website'] ) ? sanitize_text_field( wp_unslash( $_POST['website'] ) ) : '';
+	if ( '' !== $website ) {
+		neurocoaching_contact_redirect( 'sent' );
+	}
+
+	$name    = isset( $_POST['name'] ) ? sanitize_text_field( wp_unslash( $_POST['name'] ) ) : '';
+	$email   = isset( $_POST['email'] ) ? sanitize_email( wp_unslash( $_POST['email'] ) ) : '';
+	$phone   = isset( $_POST['phone'] ) ? sanitize_text_field( wp_unslash( $_POST['phone'] ) ) : '';
+	$message = isset( $_POST['message'] ) ? sanitize_textarea_field( wp_unslash( $_POST['message'] ) ) : '';
+	$consent = isset( $_POST['consent'] ) && '1' === sanitize_text_field( wp_unslash( $_POST['consent'] ) );
+
+	if ( '' === $name || strlen( $name ) > 120 || ! is_email( $email ) || strlen( $phone ) > 80 || strlen( $message ) < 10 || strlen( $message ) > 5000 || ! $consent ) {
+		neurocoaching_contact_redirect( 'invalid' );
+	}
+
+	$recipient = sanitize_email( get_option( 'admin_email' ) );
+	$subject = sprintf( 'Digital Belka website enquiry from %s', $name );
+	$body    = implode(
+		"\n",
+		array(
+			'Name: ' . $name,
+			'Email: ' . $email,
+			'Phone: ' . ( '' !== $phone ? $phone : 'Not provided' ),
+			'',
+			'Message:',
+			$message,
+		)
+	);
+	$headers = array(
+		'Content-Type: text/plain; charset=UTF-8',
+		sprintf( 'Reply-To: %s <%s>', $name, $email ),
+	);
+
+	$enquiry_id = wp_insert_post(
+		array(
+			'post_type'    => 'contact_enquiry',
+			'post_status'  => 'private',
+			'post_title'   => $name . ' — ' . $email,
+			'post_content' => $body,
+		),
+		true
+	);
+	if ( is_wp_error( $enquiry_id ) || ! $enquiry_id ) {
+		neurocoaching_contact_redirect( 'failed' );
+	}
+
+	if ( is_email( $recipient ) ) {
+		wp_mail( $recipient, $subject, $body, $headers );
+	}
+	neurocoaching_contact_redirect( 'sent' );
+}
+add_action( 'admin_post_neurocoaching_contact', 'neurocoaching_handle_contact_form' );
+add_action( 'admin_post_nopriv_neurocoaching_contact', 'neurocoaching_handle_contact_form' );
 
 function neurocoaching_gallery_urls( $setting, $fallback ) {
 	$urls = preg_split( '/\R+/', neurocoaching_mod( $setting, $fallback ) );
@@ -261,7 +371,7 @@ function neurocoaching_cta_section( $args ) {
 			'heading'       => 'Ready to take the first step?',
 			'text'          => 'Free 30-min intro call · No commitment',
 			'button_label'  => 'Book a free call',
-			'button_url'    => 'mailto:hello@example.com',
+			'button_url'    => neurocoaching_contact_url(),
 			'section_class' => '',
 			'inner_class'   => '',
 		)
@@ -297,7 +407,7 @@ function neurocoaching_faq_section( $args ) {
 			'aside_heading'  => 'Ready to take the first step?',
 			'aside_text'     => 'Leave with clarity, a defined direction, and a concrete next step.',
 			'button_label'   => 'Book a free call',
-			'button_url'     => 'mailto:hello@example.com',
+			'button_url'     => neurocoaching_contact_url(),
 		)
 	);
 	?>
@@ -335,9 +445,7 @@ function neurocoaching_real_life_section( $title_id, $instagram_url, $setting, $
 
 function neurocoaching_header( $active ) {
 	$about_images = get_template_directory_uri() . '/assets/images/';
-	$is_about     = 'about' === $active;
-	$is_career    = 'career' === $active;
-	$is_neuro     = 'neuro' === $active;
+	$faq_url      = 'contact' === $active ? home_url( '/#faqs' ) : '#faqs';
 	?>
 	<header class="site-header" data-site-header>
 		<a class="brand" href="<?php echo esc_url( home_url( '/' ) ); ?>" aria-label="Digital Belka home"><img src="<?php echo esc_url( $about_images . 'logo-belka.svg' ); ?>" width="110" height="58" alt="Digital Belka"></a>
@@ -351,7 +459,7 @@ function neurocoaching_header( $active ) {
 			<a<?php echo 'about' === $active ? ' aria-current="page"' : ''; ?> href="<?php echo esc_url( home_url( '/' ) ); ?>">About</a>
 			<a<?php echo 'career' === $active ? ' aria-current="page"' : ''; ?> href="<?php echo esc_url( neurocoaching_page_url( 'career-services' ) ); ?>">Career services</a>
 			<a<?php echo 'neuro' === $active ? ' aria-current="page"' : ''; ?> href="<?php echo esc_url( neurocoaching_page_url( 'neurocoaching' ) ); ?>">Neurocoaching</a>
-			<a href="#faqs">FAQs</a>
+			<a href="<?php echo esc_url( $faq_url ); ?>">FAQs</a>
 		</nav>
 		<a class="site-button button button--small" href="<?php echo esc_url( neurocoaching_mod( 'contact_url', 'https://www.linkedin.com/' ) ); ?>"><?php echo 'about' === $active ? 'Connect on Linkedin' : 'Connect on LinkedIn'; ?></a>
 	</header>

@@ -2,7 +2,7 @@
 /** Career Services page reproduced from the client 1440/320 PSD artboards. @package Neurocoaching */
 get_header();
 neurocoaching_header( 'career' );
-$booking_url = neurocoaching_mod( 'booking_url', 'mailto:hello@example.com' );
+$booking_url = neurocoaching_contact_url();
 $social_url    = neurocoaching_mod( 'contact_url', 'https://www.linkedin.com/' );
 $instagram_url = neurocoaching_mod( 'instagram_url', 'https://www.instagram.com/' );
 $credentials = array(
