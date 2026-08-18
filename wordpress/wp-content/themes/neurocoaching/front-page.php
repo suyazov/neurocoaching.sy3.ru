@@ -2,7 +2,7 @@
 /** About page reconstructed from the original 1320 px and 320 px PSD artboards. @package Neurocoaching */
 get_header();
 neurocoaching_header( 'about' );
-$booking = neurocoaching_mod( 'booking_url', 'mailto:hello@example.com' );
+$booking = neurocoaching_contact_url();
 $instagram = neurocoaching_mod( 'instagram_url', 'https://www.instagram.com/' );
 $images  = get_template_directory_uri() . '/assets/images/';
 $credentials = array(
