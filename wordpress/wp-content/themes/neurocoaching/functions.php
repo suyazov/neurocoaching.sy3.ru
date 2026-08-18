@@ -254,6 +254,17 @@ function neurocoaching_gallery_urls( $setting, $fallback ) {
 	return array_slice( $urls ? $urls : array( $fallback ), 0, 24 );
 }
 
+/**
+ * Return intrinsic dimensions for an image stored in the theme image directory.
+ */
+function neurocoaching_theme_image_dimensions( $url ) {
+	$filename = wp_basename( wp_parse_url( $url, PHP_URL_PATH ) );
+	$path     = get_theme_file_path( '/assets/images/' . $filename );
+	$size     = is_file( $path ) ? getimagesize( $path ) : false;
+
+	return $size ? array( (int) $size[0], (int) $size[1] ) : array();
+}
+
 function neurocoaching_gallery( $setting, $fallback, $alt, $class_name, $mobile_fallback = '', $slides_override = array(), $fallback_srcset = '' ) {
 	$slides = $slides_override ? array_values( array_filter( array_map( 'esc_url_raw', $slides_override ) ) ) : neurocoaching_gallery_urls( $setting, $fallback );
 	$count  = count( $slides );
@@ -262,9 +273,10 @@ function neurocoaching_gallery( $setting, $fallback, $alt, $class_name, $mobile_
 		<button class="nc-gallery__previous" type="button" data-carousel-previous aria-label="Previous photo"<?php echo 1 === $count ? ' disabled aria-disabled="true"' : ''; ?>>←</button>
 		<div class="nc-gallery__viewport" aria-live="polite">
 		<?php foreach ( $slides as $index => $url ) : ?>
+			<?php $dimensions = neurocoaching_theme_image_dimensions( $url ); ?>
 			<figure class="nc-gallery__slide" data-carousel-slide<?php echo 0 !== $index ? ' hidden' : ''; ?> aria-label="Photo <?php echo esc_attr( (string) ( $index + 1 ) ); ?> of <?php echo esc_attr( (string) $count ); ?>">
 				<?php if ( 0 === $index && $mobile_fallback && $fallback === $url ) : ?><picture><source media="(max-width: 700px)" srcset="<?php echo esc_url( $mobile_fallback ); ?>"><?php endif; ?>
-				<img src="<?php echo esc_url( $url ); ?>"<?php echo 0 === $index && $fallback === $url && $fallback_srcset ? ' srcset="' . esc_attr( $fallback_srcset ) . '" sizes="(max-width: 700px) 290px, 600px"' : ''; ?> alt="<?php echo esc_attr( 0 === $index ? $alt : sprintf( 'Ksenia Belousova, gallery photo %d', $index + 1 ) ); ?>" loading="lazy" decoding="async">
+				<img src="<?php echo esc_url( $url ); ?>"<?php echo $dimensions ? ' width="' . esc_attr( (string) $dimensions[0] ) . '" height="' . esc_attr( (string) $dimensions[1] ) . '"' : ''; ?><?php echo 0 === $index && $fallback === $url && $fallback_srcset ? ' srcset="' . esc_attr( $fallback_srcset ) . '" sizes="(max-width: 700px) 290px, 600px"' : ''; ?> alt="<?php echo esc_attr( 0 === $index ? $alt : sprintf( 'Ksenia Belousova, gallery photo %d', $index + 1 ) ); ?>" loading="lazy" decoding="async">
 				<?php if ( 0 === $index && $mobile_fallback && $fallback === $url ) : ?></picture><?php endif; ?>
 			</figure>
 		<?php endforeach; ?>
