@@ -4,7 +4,7 @@ get_header();
 neurocoaching_header( 'contact' );
 
 $status    = isset( $_GET['contact_status'] ) ? sanitize_key( wp_unslash( $_GET['contact_status'] ) ) : '';
-$email_url = neurocoaching_mod( 'email_url', 'mailto:hello@example.com' );
+$email_url = neurocoaching_email_url();
 ?>
 <article class="site-page site-page--contact">
 	<section class="site-section contact-page" aria-labelledby="contact-title">
