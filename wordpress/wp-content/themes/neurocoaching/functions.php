@@ -53,21 +53,21 @@ function neurocoaching_customize_register( $customizer ) {
 	}
 	$gallery_fields = array(
 		'about_gallery_urls'  => array( 'About: In real life image URLs', implode( "\n", array(
-			get_theme_file_uri( '/assets/images/about-life-hires.jpg' ),
-			get_theme_file_uri( '/assets/images/about-hero-hires.jpg' ),
-			get_theme_file_uri( '/assets/images/about-faq-hires.jpg' ),
+			get_theme_file_uri( '/assets/images/about-life-hires.webp' ),
+			get_theme_file_uri( '/assets/images/about-hero-hires.webp' ),
+			get_theme_file_uri( '/assets/images/about-faq-hires.webp' ),
 		) ) ),
 		'career_gallery_urls' => array( 'Career: In real life image URLs', implode( "\n", array(
-			get_theme_file_uri( '/assets/images/career-life-hires.jpg' ),
-			get_theme_file_uri( '/assets/images/about-life-hires.jpg' ),
-			get_theme_file_uri( '/assets/images/neuro-story-hires.jpg' ),
-			get_theme_file_uri( '/assets/images/about-faq-hires.jpg' ),
+			get_theme_file_uri( '/assets/images/career-life-hires.webp' ),
+			get_theme_file_uri( '/assets/images/about-life-hires.webp' ),
+			get_theme_file_uri( '/assets/images/neuro-story-hires.webp' ),
+			get_theme_file_uri( '/assets/images/about-faq-hires.webp' ),
 		) ) ),
 		'neuro_gallery_urls'  => array( 'Neurocoaching: In real life image URLs', implode( "\n", array(
-			get_theme_file_uri( '/assets/images/neurocoaching-source/desktop-1440/desktop-1440-8139-place-your-image-here-double-click-to-edit.png' ),
-			get_theme_file_uri( '/assets/images/neurocoaching-source/desktop-1440/desktop-1440-10825-place-your-image-here-double-click-to-edit-copy-3.png' ),
-			get_theme_file_uri( '/assets/images/neurocoaching-source/desktop-1440/desktop-1440-6037-place-your-image-here-double-click-to-edit-copy-2.png' ),
-			get_theme_file_uri( '/assets/images/neurocoaching-source/desktop-1440/desktop-1440-5230-place-your-image-here-double-click-to-edit.png' ),
+			get_theme_file_uri( '/assets/images/neuro-life-1-hires.webp' ),
+			get_theme_file_uri( '/assets/images/neuro-life-2-hires.webp' ),
+			get_theme_file_uri( '/assets/images/neuro-hero-hires.webp' ),
+			get_theme_file_uri( '/assets/images/neuro-life-4-hires.webp' ),
 		) ) ),
 	);
 	foreach ( $gallery_fields as $key => $field ) {
@@ -221,17 +221,25 @@ add_action( 'admin_post_nopriv_neurocoaching_contact', 'neurocoaching_handle_con
 function neurocoaching_gallery_urls( $setting, $fallback ) {
 	$urls = preg_split( '/\R+/', neurocoaching_mod( $setting, $fallback ) );
 	$urls = array_values( array_filter( array_map( 'esc_url_raw', array_map( 'trim', $urls ) ) ) );
-	$legacy_assets = array(
-		'about-life-source.webp' => 'about-life-hires.jpg',
-		'about-hero-source.webp' => 'about-hero-hires.jpg',
-		'about-faq-source.webp'  => 'about-faq-hires.jpg',
+	$optimized_assets = array(
+		'about-life-source.webp'  => 'about-life-hires.webp',
+		'about-life-hires.jpg'    => 'about-life-hires.webp',
+		'about-hero-source.webp'  => 'about-hero-hires.webp',
+		'about-hero-hires.jpg'    => 'about-hero-hires.webp',
+		'about-faq-source.webp'   => 'about-faq-hires.webp',
+		'about-faq-hires.jpg'     => 'about-faq-hires.webp',
+		'career-life-hires.jpg'   => 'career-life-hires.webp',
+		'neuro-story-hires.jpg'   => 'neuro-story-hires.webp',
+		'desktop-8139-place-your-image-here-double-click-to-edit.png'        => 'neuro-life-1-hires.webp',
+		'desktop-1440-8139-place-your-image-here-double-click-to-edit.png'   => 'neuro-life-1-hires.webp',
+		'desktop-1440-10825-place-your-image-here-double-click-to-edit-copy-3.png' => 'neuro-life-2-hires.webp',
+		'desktop-1440-6037-place-your-image-here-double-click-to-edit-copy-2.png'  => 'neuro-hero-hires.webp',
+		'desktop-1440-5230-place-your-image-here-double-click-to-edit.png'   => 'neuro-life-4-hires.webp',
 	);
-	if ( 'about_gallery_urls' === $setting ) {
-		$urls = array_map( static function ( $url ) use ( $legacy_assets ) {
-			$name = wp_basename( wp_parse_url( $url, PHP_URL_PATH ) );
-			return isset( $legacy_assets[ $name ] ) ? get_theme_file_uri( '/assets/images/' . $legacy_assets[ $name ] ) : $url;
-		}, $urls );
-	}
+	$urls = array_map( static function ( $url ) use ( $optimized_assets ) {
+		$name = wp_basename( wp_parse_url( $url, PHP_URL_PATH ) );
+		return isset( $optimized_assets[ $name ] ) ? get_theme_file_uri( '/assets/images/' . $optimized_assets[ $name ] ) : $url;
+	}, $urls );
 	$legacy_blank_assets = array( 'desktop-9230-img-2842.png', 'mobile-11362-img-2842.png', 'career-life.webp' );
 	if ( 'career_gallery_urls' === $setting ) {
 		$urls = array_map( static function ( $url ) use ( $fallback, $legacy_blank_assets ) {
@@ -256,7 +264,7 @@ function neurocoaching_gallery( $setting, $fallback, $alt, $class_name, $mobile_
 		<?php foreach ( $slides as $index => $url ) : ?>
 			<figure class="nc-gallery__slide" data-carousel-slide<?php echo 0 !== $index ? ' hidden' : ''; ?> aria-label="Photo <?php echo esc_attr( (string) ( $index + 1 ) ); ?> of <?php echo esc_attr( (string) $count ); ?>">
 				<?php if ( 0 === $index && $mobile_fallback && $fallback === $url ) : ?><picture><source media="(max-width: 700px)" srcset="<?php echo esc_url( $mobile_fallback ); ?>"><?php endif; ?>
-				<img src="<?php echo esc_url( $url ); ?>"<?php echo 0 === $index && $fallback === $url && $fallback_srcset ? ' srcset="' . esc_attr( $fallback_srcset ) . '" sizes="(max-width: 700px) 290px, 600px"' : ''; ?> alt="<?php echo esc_attr( 0 === $index ? $alt : sprintf( 'Ksenia Belousova, gallery photo %d', $index + 1 ) ); ?>">
+				<img src="<?php echo esc_url( $url ); ?>"<?php echo 0 === $index && $fallback === $url && $fallback_srcset ? ' srcset="' . esc_attr( $fallback_srcset ) . '" sizes="(max-width: 700px) 290px, 600px"' : ''; ?> alt="<?php echo esc_attr( 0 === $index ? $alt : sprintf( 'Ksenia Belousova, gallery photo %d', $index + 1 ) ); ?>" loading="lazy" decoding="async">
 				<?php if ( 0 === $index && $mobile_fallback && $fallback === $url ) : ?></picture><?php endif; ?>
 			</figure>
 		<?php endforeach; ?>
@@ -311,8 +319,14 @@ function neurocoaching_certificate_gallery( $class_name, $label, $certificates )
 	?>
 	<div class="<?php echo esc_attr( $class_name ); ?> site-certificates" tabindex="0" role="region" aria-label="<?php echo esc_attr( $label ); ?>" data-horizontal-track>
 		<?php foreach ( $certificates as $certificate ) : ?>
-			<?php $certificate_url = get_theme_file_uri( '/assets/images/' . $certificate['file'] ); ?>
-			<figure><a href="<?php echo esc_url( $certificate_url ); ?>" data-certificate-lightbox><img src="<?php echo esc_url( $certificate_url ); ?>" alt="<?php echo esc_attr( $certificate['alt'] ); ?>" loading="lazy" decoding="async"></a></figure>
+			<?php
+			$certificate_url = get_theme_file_uri( '/assets/images/' . $certificate['file'] );
+			$thumbnail_file  = str_replace( '-source.webp', '-thumb.webp', $certificate['file'] );
+			$thumbnail_path  = get_theme_file_path( '/assets/images/' . $thumbnail_file );
+			$thumbnail_url   = is_file( $thumbnail_path ) ? get_theme_file_uri( '/assets/images/' . $thumbnail_file ) : $certificate_url;
+			$thumbnail_size  = is_file( $thumbnail_path ) ? getimagesize( $thumbnail_path ) : false;
+			?>
+			<figure><a href="<?php echo esc_url( $certificate_url ); ?>" data-certificate-lightbox><img src="<?php echo esc_url( $thumbnail_url ); ?>"<?php echo $thumbnail_size ? ' width="' . esc_attr( (string) $thumbnail_size[0] ) . '" height="' . esc_attr( (string) $thumbnail_size[1] ) . '"' : ''; ?> alt="<?php echo esc_attr( $certificate['alt'] ); ?>" loading="lazy" decoding="async"></a></figure>
 		<?php endforeach; ?>
 	</div>
 	<?php
@@ -428,7 +442,7 @@ function neurocoaching_faq_section( $args ) {
 			<?php if ( $args['closing'] ) : ?><p class="site-faq__closing"><?php echo esc_html( $args['closing'] ); ?></p><?php endif; ?>
 		</div>
 		<aside class="site-faq__aside">
-			<img src="<?php echo esc_url( $args['image'] ); ?>" width="<?php echo esc_attr( (string) $args['image_width'] ); ?>" height="<?php echo esc_attr( (string) $args['image_height'] ); ?>" alt="<?php echo esc_attr( $args['image_alt'] ); ?>">
+			<img src="<?php echo esc_url( $args['image'] ); ?>" width="<?php echo esc_attr( (string) $args['image_width'] ); ?>" height="<?php echo esc_attr( (string) $args['image_height'] ); ?>" alt="<?php echo esc_attr( $args['image_alt'] ); ?>" loading="lazy" decoding="async">
 			<h2><?php echo esc_html( $args['aside_heading'] ); ?></h2>
 			<p><?php echo esc_html( $args['aside_text'] ); ?></p>
 			<a class="site-button site-faq__button" href="<?php echo esc_url( $args['button_url'] ); ?>"><?php echo esc_html( $args['button_label'] ); ?></a>
@@ -445,7 +459,7 @@ function neurocoaching_real_life_section( $title_id, $instagram_url, $setting, $
 	?>
 	<section class="site-section site-life nc-about__life" aria-labelledby="<?php echo esc_attr( $title_id ); ?>">
 		<h2 class="site-section-title site-life__title" id="<?php echo esc_attr( $title_id ); ?>">In real life</h2>
-		<a class="site-life__social nc-about__instagram" href="<?php echo esc_url( $instagram_url ); ?>">Follow on Instagram <img src="<?php echo esc_url( $images . 'about-instagram.svg' ); ?>" alt=""></a>
+		<a class="site-life__social nc-about__instagram" href="<?php echo esc_url( $instagram_url ); ?>">Follow on Instagram <img src="<?php echo esc_url( $images . 'about-instagram.svg' ); ?>" width="800" height="800" alt=""></a>
 		<?php neurocoaching_gallery( $setting, $fallback, $alt, 'nc-about__life-photo', '', $slides_override ); ?>
 	</section>
 	<?php

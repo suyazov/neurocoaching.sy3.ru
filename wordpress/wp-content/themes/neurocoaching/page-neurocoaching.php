@@ -35,7 +35,7 @@ $faqs = array(
 ?>
 <article class="site-page site-page--neuro neuro-psd">
 	<section class="site-section site-hero neuro-hero">
-		<div class="site-hero__media neuro-hero__photo"><img src="<?php echo esc_url( $desktop_source . 'desktop-1440-6037-place-your-image-here-double-click-to-edit-copy-2.png' ); ?>" width="511" height="911" alt="Ksenia Belousova holding hydrangeas"></div>
+		<div class="site-hero__media neuro-hero__photo"><img src="<?php echo esc_url( $images . 'neuro-hero-hires.webp' ); ?>" width="511" height="911" alt="Ksenia Belousova holding hydrangeas" decoding="async" fetchpriority="high"></div>
 		<div class="site-hero__content neuro-hero__copy">
 			<p class="neuro-kicker">Neurointegration coaching</p>
 			<h1>Burned out, overwhelmed, or know something needs to change?</h1>
@@ -105,7 +105,7 @@ $faqs = array(
 	</section>
 
 	<section class="neuro-story">
-		<div class="neuro-story__photo"><img src="<?php echo esc_url( $images . 'neuro-story-hires.jpg' ); ?>" width="600" height="800" alt="Ksenia Belousova beside flowering trees"></div>
+		<div class="neuro-story__photo"><img src="<?php echo esc_url( $images . 'neuro-story-hires.webp' ); ?>" width="600" height="800" alt="Ksenia Belousova beside flowering trees" loading="lazy" decoding="async"></div>
 		<div class="neuro-story__copy">
 			<h2>I didn't find this in a book.<br>I found it in the hardest years of my life.</h2>
 			<p>I built a successful international career at the United Nations — working alongside diplomats, leading people across different cultures, and changing my career path several times along the way. I relocated to four countries, travelled constantly, and lived a life that, from the outside, looked extraordinary.</p>
@@ -118,7 +118,7 @@ $faqs = array(
 
 	<section class="neuro-method neuro-wrap" aria-labelledby="neuro-method-title">
 		<div class="neuro-method__copy"><h2 id="neuro-method-title">The method based on the NeuroIntegration method by Katerina Lengold</h2><p>The NeuroIntegration method was developed by Katerina Lengold, founder of the California Institute of Neurointegration.</p><p>It combines neuroscience, psychology, and behavioural science into a practical coaching framework that works with how your brain is actually wired. NeuroSprints apply this in focused 21-day cycles — structured enough to create real change, flexible enough to fit a full life.</p><a href="https://neurointegration.org/">Learn more about the science: neurointegration.org</a></div>
-		<picture><source media="(max-width: 850px)" srcset="<?php echo esc_url( $mobile_source . 'mobile-320-12195-neuro-pyramid-web-transparent-copy.png' ); ?>"><img src="<?php echo esc_url( $desktop_source . 'desktop-1440-11037-neuro-pyramid-web-transparent-copy.png' ); ?>" alt="Three-stage NeuroIntegration method diagram"></picture>
+		<picture><source media="(max-width: 850px)" srcset="<?php echo esc_url( $mobile_source . 'mobile-320-12195-neuro-pyramid-web-transparent-copy.png' ); ?>"><img src="<?php echo esc_url( $desktop_source . 'desktop-1440-11037-neuro-pyramid-web-transparent-copy.png' ); ?>" width="728" height="398" alt="Three-stage NeuroIntegration method diagram" loading="lazy" decoding="async"></picture>
 	</section>
 
 	<section class="neuro-suitable neuro-wrap" aria-labelledby="neuro-suitable-title">
@@ -135,12 +135,12 @@ $faqs = array(
 	</div></div></section>
 
 	<?php
-	$neuro_life_image = $desktop_source . 'desktop-1440-8139-place-your-image-here-double-click-to-edit.png';
+	$neuro_life_image = $images . 'neuro-life-1-hires.webp';
 	$neuro_life_defaults = array(
 		$neuro_life_image,
-		$desktop_source . 'desktop-1440-10825-place-your-image-here-double-click-to-edit-copy-3.png',
-		$desktop_source . 'desktop-1440-6037-place-your-image-here-double-click-to-edit-copy-2.png',
-		$desktop_source . 'desktop-1440-5230-place-your-image-here-double-click-to-edit.png',
+		$images . 'neuro-life-2-hires.webp',
+		$images . 'neuro-hero-hires.webp',
+		$images . 'neuro-life-4-hires.webp',
 	);
 	$neuro_life_slides = neurocoaching_gallery_urls( 'neuro_gallery_urls', implode( "\n", $neuro_life_defaults ) );
 	$neuro_life_slides = array_slice( array_values( array_unique( array_merge( $neuro_life_slides, $neuro_life_defaults ) ) ), 0, 4 );
@@ -163,7 +163,7 @@ $faqs = array(
 			'questions_class' => 'neuro-faq__questions',
 			'questions'       => $faqs,
 			'closing'         => "Start with a conversation. You don't need a perfect plan — just the willingness to change something. Book a Discovery Session: free 30 minutes that will give you clarity on where you are, what's holding you back, and exactly what your next step looks like. From there, we build everything together.",
-			'image'           => $images . 'about-faq-hires.jpg',
+			'image'           => $images . 'about-faq-hires.webp',
 			'image_width'     => 600,
 			'image_height'    => 800,
 			'image_alt'       => 'Ksenia in the mountains',

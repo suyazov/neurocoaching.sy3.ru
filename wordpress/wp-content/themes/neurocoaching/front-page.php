@@ -32,7 +32,7 @@ $questions = array(
 ?>
 <article class="site-page site-page--about nc-about">
 	<section class="site-section site-hero nc-about__hero" aria-labelledby="nc-about-name">
-		<div class="site-hero__media nc-about__hero-photo"><img src="<?php echo esc_url( $images . 'about-hero-hires.jpg' ); ?>" width="1537" height="2305" alt="Ksenia Belousova"></div>
+		<div class="site-hero__media nc-about__hero-photo"><img src="<?php echo esc_url( $images . 'about-hero-768.webp' ); ?>" srcset="<?php echo esc_url( $images . 'about-hero-512.webp' ); ?> 512w, <?php echo esc_url( $images . 'about-hero-768.webp' ); ?> 768w, <?php echo esc_url( $images . 'about-hero-1200.webp' ); ?> 1200w, <?php echo esc_url( $images . 'about-hero-hires.webp' ); ?> 1537w" sizes="(max-width: 850px) min(100vw, 402px), 511px" width="768" height="1152" alt="Ksenia Belousova" decoding="async" fetchpriority="high"></div>
 		<div class="site-hero__content nc-about__hero-copy">
 			<p class="nc-about__eyebrow">UN PROFESSIONAL <span>|</span><br class="nc-about__mobile-break"> CAREER STRATEGIST <span>|</span><br class="nc-about__mobile-break"> NEURO COACH</p>
 			<h1 id="nc-about-name">Ksenia Belousova</h1>
@@ -72,18 +72,18 @@ $questions = array(
 		<h2 class="site-section-title" id="nc-about-services-title">Services | B2B format</h2>
 		<article class="site-service-card nc-about__service-card">
 			<div class="nc-about__service-summary">
-				<div class="nc-about__service-heading"><h3>Team<br>Workshops</h3><span><img src="<?php echo esc_url( $images . 'flag-corporate-v2.svg' ); ?>" alt=""><b>Corporate</b></span></div>
-				<img class="nc-about__zigzag" src="<?php echo esc_url( $images . 'about-zigzag-v2.svg' ); ?>" alt="">
+				<div class="nc-about__service-heading"><h3>Team<br>Workshops</h3><span><img src="<?php echo esc_url( $images . 'flag-corporate-v2.svg' ); ?>" width="138" height="39" alt=""><b>Corporate</b></span></div>
+				<img class="nc-about__zigzag" src="<?php echo esc_url( $images . 'about-zigzag-v2.svg' ); ?>" width="129" height="88" alt="">
 				<p class="nc-about__scope">On request &nbsp;×&nbsp; Custom scope</p>
 				<p>Practical, tailored workshops for teams covering stress management, burnout prevention, time management, and overall wellbeing. Delivered online or in-person, fully customised context around your team's specific needs.</p>
 			</div>
 			<div class="nc-about__programmes">
 				<h3>Programmes:</h3>
 				<ul>
-					<li><img src="<?php echo esc_url( $images . 'about-check.svg' ); ?>" alt=""><strong>From Surviving to Thriving —</strong><br>Stress &amp; Energy Management</li>
-					<li><img src="<?php echo esc_url( $images . 'about-check.svg' ); ?>" alt=""><strong>Burnout-Proof —</strong><br>Recognise It Before It Hits</li>
-					<li><img src="<?php echo esc_url( $images . 'about-check.svg' ); ?>" alt=""><strong>Work Smarter —</strong><br>Time, Focus &amp; Productivity</li>
-					<li><img src="<?php echo esc_url( $images . 'about-check.svg' ); ?>" alt=""><strong>Building Resilience —</strong> Wellbeing That Actually Lasts</li>
+					<li><img src="<?php echo esc_url( $images . 'about-check.svg' ); ?>" width="112" height="98" alt=""><strong>From Surviving to Thriving —</strong><br>Stress &amp; Energy Management</li>
+					<li><img src="<?php echo esc_url( $images . 'about-check.svg' ); ?>" width="112" height="98" alt=""><strong>Burnout-Proof —</strong><br>Recognise It Before It Hits</li>
+					<li><img src="<?php echo esc_url( $images . 'about-check.svg' ); ?>" width="112" height="98" alt=""><strong>Work Smarter —</strong><br>Time, Focus &amp; Productivity</li>
+					<li><img src="<?php echo esc_url( $images . 'about-check.svg' ); ?>" width="112" height="98" alt=""><strong>Building Resilience —</strong> Wellbeing That Actually Lasts</li>
 				</ul>
 				<p><em>A team that feels better, works better</em></p>
 				<a class="site-button nc-about__button" href="<?php echo esc_url( $booking ); ?>">Book a call</a>
@@ -92,8 +92,8 @@ $questions = array(
 	</section>
 
 	<?php
-	$about_life_image = $images . 'about-life-hires.jpg';
-	$about_life_defaults = array( $about_life_image, $images . 'about-hero-hires.jpg', $images . 'about-faq-hires.jpg' );
+	$about_life_image = $images . 'about-life-hires.webp';
+	$about_life_defaults = array( $about_life_image, $images . 'about-hero-hires.webp', $images . 'about-faq-hires.webp' );
 	$about_life_slides = neurocoaching_gallery_urls( 'about_gallery_urls', implode( "\n", $about_life_defaults ) );
 	$about_life_slides = array_slice( array_merge( $about_life_slides, $about_life_defaults ), 0, 3 );
 	neurocoaching_real_life_section( 'nc-about-life-title', $instagram, 'about_gallery_urls', $about_life_image, 'Ksenia by the sea at sunset', $about_life_slides );
@@ -115,7 +115,7 @@ $questions = array(
 			'questions_class' => 'nc-about__questions',
 			'questions'       => $questions,
 			'open_question'   => "What's the first step?",
-			'image'           => $images . 'about-faq-client-crop.jpg',
+			'image'           => $images . 'about-faq-client-crop.webp',
 			'image_width'     => 500,
 			'image_height'    => 647,
 			'image_alt'       => 'Ksenia outdoors',
