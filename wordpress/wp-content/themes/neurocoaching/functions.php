@@ -30,13 +30,21 @@ function neurocoaching_mod( $key, $fallback ) {
 	return is_string( $value ) && '' !== trim( $value ) ? $value : $fallback;
 }
 
+function neurocoaching_email_url() {
+	$admin_email = sanitize_email( get_option( 'admin_email' ) );
+	$fallback    = $admin_email ? 'mailto:' . $admin_email : 'mailto:hello@example.com';
+	$email_url   = neurocoaching_mod( 'email_url', $fallback );
+
+	return 'mailto:hello@example.com' === strtolower( trim( $email_url ) ) && $admin_email ? $fallback : $email_url;
+}
+
 function neurocoaching_customize_register( $customizer ) {
 	$customizer->add_section( 'neurocoaching_content', array( 'title' => __( 'Neurocoaching content', 'neurocoaching' ) ) );
 	$fields = array(
 		'contact_url' => array( 'LinkedIn CTA URL', 'https://www.linkedin.com/', 'url', 'esc_url_raw' ),
 		'instagram_url' => array( 'Instagram URL', 'https://www.instagram.com/', 'url', 'esc_url_raw' ),
 		'telegram_url' => array( 'Telegram URL', 'https://t.me/', 'url', 'esc_url_raw' ),
-		'email_url' => array( 'Email URL', 'mailto:hello@example.com', 'url', 'esc_url_raw' ),
+		'email_url' => array( 'Email URL', neurocoaching_email_url(), 'url', 'esc_url_raw' ),
 		'about_name'  => array( 'About page name', 'Ksenia Belousova', 'text', 'sanitize_text_field' ),
 	);
 	foreach ( $fields as $key => $field ) {
@@ -451,7 +459,7 @@ function neurocoaching_header( $active ) {
 		<a class="brand" href="<?php echo esc_url( home_url( '/' ) ); ?>" aria-label="Digital Belka home"><img src="<?php echo esc_url( $about_images . 'logo-belka.svg' ); ?>" width="110" height="58" alt="Digital Belka"></a>
 		<div class="about-socials" aria-label="Social links">
 			<a href="<?php echo esc_url( neurocoaching_mod( 'contact_url', 'https://www.linkedin.com/' ) ); ?>" aria-label="LinkedIn"><img src="<?php echo esc_url( $about_images . 'about-linkedin-v2.svg' ); ?>" width="28" height="28" alt=""></a>
-			<a href="<?php echo esc_url( neurocoaching_mod( 'email_url', 'mailto:hello@example.com' ) ); ?>" aria-label="Email"><img src="<?php echo esc_url( $about_images . 'icon-mail.svg' ); ?>" width="28" height="28" alt=""></a>
+			<a href="<?php echo esc_url( neurocoaching_email_url() ); ?>" aria-label="Email"><img src="<?php echo esc_url( $about_images . 'icon-mail.svg' ); ?>" width="28" height="28" alt=""></a>
 			<a href="<?php echo esc_url( neurocoaching_mod( 'telegram_url', 'https://t.me/' ) ); ?>" aria-label="Telegram"><img src="<?php echo esc_url( $about_images . 'about-telegram-v2.svg' ); ?>" width="28" height="28" alt=""></a>
 		</div>
 		<button class="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-navigation" data-menu-toggle><span class="screen-reader-text">Open menu</span><i></i><i></i><i></i></button>
