@@ -32,7 +32,7 @@ $faqs = array(
 ?>
 <article class="site-page site-page--career career-psd">
 	<section class="site-section site-hero career-hero">
-		<div class="site-hero__media career-hero__photo"><img src="<?php echo esc_url( get_theme_file_uri( '/assets/images/career-source/mobile-11371-career-photo.png' ) ); ?>" width="600" height="900" alt="Ksenia Belousova"></div>
+		<div class="site-hero__media career-hero__photo"><img src="<?php echo esc_url( get_theme_file_uri( '/assets/images/career-hero-hires.webp' ) ); ?>" width="600" height="900" alt="Ksenia Belousova" decoding="async" fetchpriority="high"></div>
 		<div class="site-hero__content career-hero__copy">
 			<h1>Stop postponing your life</h1>
 			<p class="career-quote">Your time is limited, so don’t waste it living someone else’s life.”<br>– Steve Jobs</p>
@@ -115,7 +115,7 @@ $faqs = array(
 			<p>You do not have to figure this out alone. Together, we will clarify your direction, make your experience visible, and create a clear plan for your next move. My approach combines international HR expertise, career strategy, and nervous-system-aware guidance – so you can move forward with clarity and confidence.</p>
 			<a class="site-button career-button career-button--light" href="<?php echo esc_url( $booking_url ); ?>">Book a free call</a>
 		</div>
-		<img src="<?php echo esc_url( get_theme_file_uri( '/assets/images/career-suitable-hires.webp' ) ); ?>" width="1800" height="2400" alt="Ksenia Belousova in a blue beret">
+		<img src="<?php echo esc_url( get_theme_file_uri( '/assets/images/career-suitable-1440.webp' ) ); ?>" width="1440" height="1920" alt="Ksenia Belousova in a blue beret" loading="lazy" decoding="async">
 	</section>
 
 	<section class="site-section site-reviews career-reviews" aria-labelledby="career-reviews-title"><div class="site-shell career-wrap">
@@ -128,12 +128,12 @@ $faqs = array(
 	</div></section>
 
 	<?php
-	$career_life_image = get_theme_file_uri( '/assets/images/career-life-hires.jpg' );
+	$career_life_image = get_theme_file_uri( '/assets/images/career-life-hires.webp' );
 	$career_life_defaults = array(
 		$career_life_image,
-		get_theme_file_uri( '/assets/images/about-life-hires.jpg' ),
-		get_theme_file_uri( '/assets/images/neuro-story-hires.jpg' ),
-		get_theme_file_uri( '/assets/images/about-faq-hires.jpg' ),
+		get_theme_file_uri( '/assets/images/about-life-hires.webp' ),
+		get_theme_file_uri( '/assets/images/neuro-story-hires.webp' ),
+		get_theme_file_uri( '/assets/images/about-faq-hires.webp' ),
 	);
 	$career_life_slides = neurocoaching_gallery_urls( 'career_gallery_urls', implode( "\n", $career_life_defaults ) );
 	$career_life_slides = array_slice( array_values( array_unique( array_merge( $career_life_slides, $career_life_defaults ) ) ), 0, 4 );
@@ -155,7 +155,7 @@ $faqs = array(
 			'section_class'   => 'career-faq career-wrap',
 			'questions_class' => 'career-faq__questions',
 			'questions'       => $faqs,
-			'image'           => get_theme_file_uri( '/assets/images/career-source/desktop-10532-place-your-image-here-double-click-to-edit.png' ),
+			'image'           => get_theme_file_uri( '/assets/images/career-faq-hires.webp' ),
 			'image_width'     => 373,
 			'image_height'    => 279,
 			'image_alt'       => 'Ksenia Belousova sailing',

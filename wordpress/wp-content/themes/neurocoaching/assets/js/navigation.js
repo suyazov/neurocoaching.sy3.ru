@@ -36,7 +36,7 @@
   viewer.setAttribute('aria-label', 'Certificate gallery');
   viewer.innerHTML = '<button class="certificate-lightbox__close" type="button" aria-label="Close certificate gallery">×</button>' +
     '<button class="certificate-lightbox__previous" type="button" aria-label="Previous certificate">←</button>' +
-    '<img class="certificate-lightbox__image" src="" alt="">' +
+    '<img class="certificate-lightbox__image" src="" width="1000" height="800" alt="">' +
     '<button class="certificate-lightbox__next" type="button" aria-label="Next certificate">→</button>';
   document.body.appendChild(viewer);
 

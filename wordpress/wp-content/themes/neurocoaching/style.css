@@ -6,8 +6,11 @@ Description: Semantic custom WordPress theme for Ksenia Belousova.
 Version: 1.0.0
 Text Domain: neurocoaching
 */
-@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@700&family=Lato:ital,wght@0,400;0,500;0,700;0,900;1,600&display=swap');
-@font-face { font-family:Lato; src:url('assets/fonts/lato-heavy-800.woff2') format('woff2'); font-style:normal; font-weight:800; font-display:swap; }
+@font-face { font-family:"IBM Plex Sans"; src:url('assets/fonts/ibm-plex-sans-700-latin.woff2') format('woff2'); font-style:normal; font-weight:700; font-display:swap; }
+@font-face { font-family:Lato; src:url('assets/fonts/lato-400-latin.woff2') format('woff2'); font-style:normal; font-weight:400; font-display:swap; }
+@font-face { font-family:Lato; src:url('assets/fonts/lato-700-latin.woff2') format('woff2'); font-style:normal; font-weight:700; font-display:swap; }
+@font-face { font-family:Lato; src:url('assets/fonts/lato-900-latin.woff2') format('woff2'); font-style:normal; font-weight:800; font-display:swap; }
+@font-face { font-family:Lato; src:url('assets/fonts/lato-900-latin.woff2') format('woff2'); font-style:normal; font-weight:900; font-display:swap; }
 :root { --purple:#3f2961; --violet:#855cac; --paper:#f8f1ee; --ink:#5c5467; --line:#855cac; }
 * { box-sizing:border-box; }
 html { scroll-behavior:smooth; }
@@ -46,7 +49,6 @@ details p { padding:0 45px 18px 0; }
 .neuro-psd { overflow:hidden; font-family:Lato,Arial,sans-serif; }
 .neuro-psd h1,.neuro-psd h2,.neuro-psd h3,.neuro-psd h4 { font-family:"IBM Plex Sans",Arial,sans-serif; font-weight:700; letter-spacing:-.045em; }
 .neuro-wrap { width:1220px; max-width:calc(100% - 64px); margin-inline:auto; }
-.neuro-button { min-height:59px; padding:13px 38px; font-size:16px; font-weight:800; }
 .neuro-hero { height:909px; display:grid; grid-template-columns:555px 1fr; }
 .neuro-hero__photo { height:909px; overflow:hidden; }
 .neuro-hero__photo img { width:100%; height:100%; object-fit:cover; object-position:center top; }
@@ -71,9 +73,6 @@ details p { padding:0 45px 18px 0; }
 .neuro-difference dt { margin-bottom:3px; font-size:17px; font-weight:900; }
 .neuro-difference dd { margin:0; }
 .neuro-difference__process>strong { display:block; margin-top:32px; font-size:17px; }
-.neuro-services { padding-bottom:145px; }
-.neuro-services>h2 { margin:0 0 76px; text-align:center; font-size:57px; }
-.neuro-service-grid { display:grid; grid-template-columns:1fr 1fr; gap:32px; }
 .neuro-card { position:relative; min-height:1650px; padding:64px 58px 50px; border:2px solid var(--neuro-violet); border-radius:6px; background:#fff; font-size:16px; line-height:1.36; }
 .neuro-card--featured { background:linear-gradient(145deg,#c8d2f5,#dfb7e3); }
 .neuro-card__label { min-height:59px; color:var(--neuro-violet); font-size:14px; font-weight:900; text-transform:uppercase; }
@@ -120,7 +119,6 @@ details p { padding:0 45px 18px 0; }
 .neuro-review-track blockquote p { margin:27px 0 0; font-size:13px; line-height:1.35; }
 @media (max-width:850px) {
 	.neuro-wrap { width:auto; max-width:none; margin-inline:16px; }
-	.neuro-button { min-height:53px; padding:11px 29px; font-size:14px; }
 	.neuro-hero { height:clamp(1029px,calc(951.286px + 24.286vw),1046px); display:block; padding-top:53px; }
 	.neuro-hero__photo { width:100%; height:clamp(406px,calc(204.857px + 62.857vw),450px); }
 	.neuro-hero__photo img { width:100%; max-width:none; height:100%; object-fit:cover; object-position:center 18%; }
@@ -141,9 +139,6 @@ details p { padding:0 45px 18px 0; }
 	.neuro-difference dl div,.neuro-difference dl div:last-child { width:auto; margin-bottom:22px; }
 	.neuro-difference dt { font-size:15px; }
 	.neuro-difference__process>strong { margin-top:17px; font-size:14px; }
-	.neuro-services { margin:0; padding:0 16px 61px; }
-	.neuro-services>h2 { width:220px; margin:0 0 57px; text-align:left; font-size:40px; line-height:1.05; }
-	.neuro-service-grid { display:block; }
 	.neuro-card { min-height:0; margin-bottom:31px; padding:36px 24px 30px; font-size:14px; }
 	.neuro-card__label { min-height:0; padding-right:35px; font-size:11px; }
 	.neuro-card h3 { font-size:29px; }
@@ -189,7 +184,6 @@ details p { padding:0 45px 18px 0; }
 .career-hero__copy p { max-width:485px; margin-bottom:21px; }
 .career-hero__copy .career-intro { margin-bottom:20px; font-size:18px; }
 .career-accent { color:var(--career-violet); font-weight:900; }
-.career-button { min-height:52px; padding:12px 35px; font-size:14px; font-weight:800; }
 .career-hero .career-button { margin-top:27px; }
 .career-positioning li::before,.career-card li::before,.career-suitable li::before { content:'✓'; position:absolute; left:0; font-size:21px; font-weight:900; }
 .career-positioning { width:1219px; max-width:calc(100% - 64px); min-height:650px; display:grid; grid-template-columns:490px 1fr; margin:0 auto 143px; color:#fff; background:var(--career-purple); }
@@ -203,9 +197,6 @@ details p { padding:0 45px 18px 0; }
 .career-positioning ul { margin:0 0 43px; padding:0; list-style:none; }
 .career-positioning li { position:relative; margin-bottom:17px; padding-left:31px; font-size:18px; line-height:1.25; }
 .career-positioning .career-button { color:var(--career-purple); background:#fff; }
-.career-services { padding-bottom:145px; }
-.career-services>h2 { margin:0 0 72px; text-align:center; font-size:57px; }
-.career-service-grid { width:1012px; max-width:100%; display:grid; grid-template-columns:repeat(2,minmax(0,482px)); gap:48px; margin-inline:auto; }
 .career-card { position:relative; height:1195px; padding:58px 28px 40px; border:2px solid var(--career-violet); border-radius:6px; background:#fff; font-size:18px; line-height:1.35; }
 .career-card--featured { color:var(--career-ink); background:linear-gradient(142deg,#cbd6fa 0%,#e6b7e4 100%); }
 .career-card h3 { margin:0 0 13px; font-size:45px; line-height:1.04; }
@@ -250,7 +241,6 @@ details p { padding:0 45px 18px 0; }
 	.career-hero__copy p { max-width:none; margin-bottom:22px; }
 	.career-hero__copy .career-intro { margin-bottom:19px; font-size:14px; }
 	.career-accent { font-size:16px; }
-	.career-button { min-height:53px; padding:11px 30px; }
 	.career-hero .career-button { margin:9px 0 0 30px; }
 	.career-positioning { min-height:829px; display:block; margin:0 16px 61px; }
 	.career-positioning>div { padding:34px 18px; }
@@ -263,9 +253,6 @@ details p { padding:0 45px 18px 0; }
 	.career-positioning ul { margin-bottom:22px; }
 	.career-positioning li { margin-bottom:8px; padding-left:24px; font-size:14px; }
 	.career-positioning .career-button { margin-left:43px; }
-	.career-services { margin:0; padding:0 16px 61px; }
-	.career-services>h2 { width:180px; margin:0 0 60px; text-align:left; font-size:40px; line-height:1.05; }
-	.career-service-grid { display:block; }
 	.career-card { height:auto; min-height:0; margin-bottom:34px; padding:40px 24px 31px; font-size:14px; }
 	.career-card h3 { font-size:28px; }
 	.career-card>p:not([class]) { min-height:0; margin:38px 0 24px; }
@@ -399,23 +386,7 @@ details p { padding:0 45px 18px 0; }
 	.home,.career-services-route,.neurocoaching-route,.contact-route { overflow-x:hidden; }
 }
 
-/* TASK-910: exact source colours, split by semantic element and dedicated PSD viewport. */
-.career-button,.neuro-button {
-	display:inline-flex;
-	align-items:center;
-	justify-content:center;
-	border:2px solid;
-	border-radius:6px;
-	background:transparent;
-	font-weight:800;
-	text-decoration:none;
-}
-.career-button:hover,.career-button:focus-visible,.neuro-button:hover,.neuro-button:focus-visible {
-	color:#fff;
-	background:var(--purple);
-	outline:3px solid #c9a8df;
-	outline-offset:2px;
-}
+/* Exact source colours, split by semantic element and dedicated PSD viewport. */
 .nc-about {
 	--nc-about-section:#3f2961;
 	--nc-about-hero-title:#3c2764;
