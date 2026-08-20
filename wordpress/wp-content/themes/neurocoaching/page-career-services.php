@@ -32,13 +32,18 @@ $faqs = array(
 ?>
 <article class="site-page site-page--career career-psd">
 	<section class="site-section site-hero career-hero">
-		<div class="site-hero__media career-hero__photo"><img src="<?php echo esc_url( get_theme_file_uri( '/assets/images/career-hero-hires.webp' ) ); ?>" width="600" height="900" alt="Ksenia Belousova" decoding="async" fetchpriority="high"></div>
+		<div class="site-hero__media career-hero__photo"><img src="<?php echo esc_url( get_theme_file_uri( '/assets/images/career-hero.webp' ) ); ?>" width="510" height="1125" alt="Ksenia Belousova" decoding="async" fetchpriority="high"></div>
 		<div class="site-hero__content career-hero__copy">
 			<h1>Stop postponing your life</h1>
-			<p class="career-quote">Your time is limited, so don’t waste it living someone else’s life.”<br>– Steve Jobs</p>
-			<p class="career-intro"><strong>You are ready for more, but your next step feels unclear.</strong></p>
-			<p>You want to move into the UN, an international organisation, or a global role, but you are not sure how to position yourself. You have been applying and hearing nothing back. You have strong experience, but your CV does not fully show your value.</p>
-			<p>This is not a talent problem. It is a clarity, positioning, and strategy problem and this is where I can help. I spent 15+ years inside the UN, intergovernmental organisations, and international environments – designing job profiles, leading hiring processes, sitting on recruitment panels, and building HR strategies from the inside. I know what gets noticed, what gets missed, and why strong candidates often never receive the call.</p>
+			<p class="career-quote">Your time is limited, so don’t waste it living someone else’s life.<br>– Steve Jobs</p>
+			<ul class="career-hero__checklist">
+				<li>You are ready for more, but your next step feels unclear.</li>
+				<li>You want to move into the UN, an international organisation, or a global role, but you are not sure how to position yourself.</li>
+				<li>You have been applying and hearing nothing back.</li>
+				<li>You have strong experience, but your CV does not fully show your value.</li>
+			</ul>
+			<p>This is not a talent problem. It is a clarity, positioning, and strategy problem and this is where I can help.</p>
+			<p>I spent 15+ years inside the UN, intergovernmental organisations, and international environments – designing job profiles, leading hiring processes, sitting on recruitment panels, and building HR strategies from the inside. I know what gets noticed, what gets missed, and why strong candidates often never receive the call.</p>
 			<p class="career-accent">I have also been on the other side: changing careers, moving countries, starting over, and rebuilding my professional identity.</p>
 			<p>You get strategic guidance from someone who understands both how international organisations work and what it feels like when your confidence is shaken and your next step is unclear.</p>
 			<a class="site-button career-button" href="<?php echo esc_url( $booking_url ); ?>">Book a consultation</a>
@@ -68,8 +73,9 @@ $faqs = array(
 
 	<section class="career-positioning">
 		<div class="career-positioning__statement">
-			<h2>Stand out.<br>Get shortlisted.<br>Get hired.</h2>
+			<h2><span>Stand out.</span><span class="career-positioning__accent">Get shortlisted.</span><span>Get hired.</span></h2>
 			<p>I help professionals secure roles in the UN, international organisations, and leading global companies through strategic career positioning, compelling applications, and interview coaching.</p>
+			<img class="career-positioning__zigzag" src="<?php echo esc_url( get_theme_file_uri( '/assets/images/career-source/desktop-8529-zigzag-copy-2.png' ) ); ?>" width="75" height="51" alt="" loading="lazy" decoding="async">
 			<p>I know exactly what recruiters look for because I’ve been on the hiring side — reviewing applications, interviewing candidates, and advising hiring managers. I know what makes an application stand out and what gets overlooked.</p>
 		</div>
 		<div class="career-positioning__help">
