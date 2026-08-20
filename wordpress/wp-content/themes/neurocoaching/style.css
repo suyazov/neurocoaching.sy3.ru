@@ -59,7 +59,7 @@ details p { padding:0 45px 18px 0; }
 .neuro-hero__copy .neuro-lead { color:var(--neuro-purple); font-weight:900; }
 .neuro-hero .neuro-button { margin-top:5px; }
 .education-more-arrow { display:inline-block; margin-left:24px; overflow:visible; vertical-align:middle; }
-.education-more-arrow path { fill:none; stroke:currentColor; stroke-width:4px; stroke-linecap:butt; stroke-linejoin:miter; }
+.education-more-arrow path { fill:none; stroke:currentColor; stroke-width:2px; stroke-linecap:butt; stroke-linejoin:miter; }
 .neuro-card li::before { content:'✓'; position:absolute; left:0; color:var(--neuro-violet); font-size:21px; font-weight:900; }
 .neuro-difference { min-height:655px; display:grid; grid-template-columns:480px 1fr; margin-bottom:142px; color:#fff; background:var(--neuro-purple); }
 .neuro-difference>div { padding:67px 52px; }
@@ -180,23 +180,30 @@ details p { padding:0 45px 18px 0; }
 .career-hero__photo img { width:100%; height:100%; object-fit:cover; object-position:center top; }
 .career-hero__copy { width:610px; padding:199px 0 60px 99px; font-size:18px; line-height:1.35; }
 .career-hero h1 { margin:0 0 31px; color:var(--career-ink); font-size:71px; line-height:.9; }
-.career-quote { margin-bottom:27px; font-weight:900; }
+.career-quote { margin-bottom:27px; font-weight:400; font-style:italic; line-height:1.55; }
 .career-hero__copy p { max-width:485px; margin-bottom:21px; }
 .career-hero__copy .career-intro { margin-bottom:20px; font-size:18px; }
+.career-hero__checklist { max-width:485px; margin:0 0 21px; padding:0; list-style:none; }
+.career-hero__checklist li { position:relative; margin:0 0 9px; padding-left:29px; line-height:1.35; }
+.career-hero__checklist li::before { content:'✓'; position:absolute; top:0; left:0; color:var(--career-violet); font-size:21px; line-height:1; font-weight:900; }
 .career-accent { color:var(--career-violet); font-weight:900; }
 .career-hero .career-button { margin-top:27px; }
 .career-positioning li::before,.career-card li::before,.career-suitable li::before { content:'✓'; position:absolute; left:0; font-size:21px; font-weight:900; }
-.career-positioning { width:1219px; max-width:calc(100% - 64px); min-height:650px; display:grid; grid-template-columns:490px 1fr; margin:0 auto 143px; color:#fff; background:var(--career-purple); }
-.career-positioning>div { padding:66px 49px; }
+.career-positioning { width:1219px; max-width:calc(100% - 64px); height:650px; display:grid; grid-template-columns:490px 1fr; margin:0 auto 143px; color:#fff; background:var(--career-purple); }
+.career-positioning>div { display:flex; flex-direction:column; padding:66px 49px; }
 .career-positioning__statement { border-right:1px solid rgba(255,255,255,.75); }
 .career-positioning h2 { margin:0 0 47px; color:#fff; font-size:62px; line-height:1.05; }
+.career-positioning__statement h2 { font-size:42px; line-height:1.08; }
+.career-positioning__statement h2 span { display:block; white-space:nowrap; }
+.career-positioning__statement h2 .career-positioning__accent { color:#c1b4ed; }
 .career-positioning__statement p { font-size:18px; line-height:1.3; }
-.career-positioning__statement p+p { margin-top:72px; }
+.career-positioning__zigzag { display:block; width:75px; height:51px; margin:24px 0; object-fit:contain; }
+.career-positioning__statement p:last-child { margin-top:auto; margin-bottom:0; }
 .career-positioning__help { padding-left:71px!important; }
 .career-positioning__help h2 { margin-bottom:29px; font-size:63px; }
 .career-positioning ul { margin:0 0 43px; padding:0; list-style:none; }
 .career-positioning li { position:relative; margin-bottom:17px; padding-left:31px; font-size:18px; line-height:1.25; }
-.career-positioning .career-button { color:var(--career-purple); background:#fff; }
+.career-positioning .career-button { margin-top:auto; color:var(--career-purple); background:#fff; }
 .career-card { position:relative; height:1195px; padding:58px 28px 40px; border:2px solid var(--career-violet); border-radius:6px; background:#fff; font-size:18px; line-height:1.35; }
 .career-card--featured { color:var(--career-ink); background:linear-gradient(142deg,#cbd6fa 0%,#e6b7e4 100%); }
 .career-card h3 { margin:0 0 13px; font-size:45px; line-height:1.04; }
@@ -240,14 +247,18 @@ details p { padding:0 45px 18px 0; }
 	.career-quote { width:260px; margin-bottom:29px; }
 	.career-hero__copy p { max-width:none; margin-bottom:22px; }
 	.career-hero__copy .career-intro { margin-bottom:19px; font-size:14px; }
+	.career-hero__checklist { max-width:none; margin-bottom:22px; }
+	.career-hero__checklist li { margin-bottom:8px; padding-left:24px; line-height:1.42; }
+	.career-hero__checklist li::before { font-size:17px; }
 	.career-accent { font-size:16px; }
 	.career-hero .career-button { margin:9px 0 0 30px; }
-	.career-positioning { min-height:829px; display:block; margin:0 16px 61px; }
+	.career-positioning { height:auto; min-height:829px; display:block; margin:0 16px 61px; }
 	.career-positioning>div { padding:34px 18px; }
 	.career-positioning__statement { min-height:415px; border-right:0; border-bottom:1px solid rgba(255,255,255,.75); }
 	.career-positioning h2 { margin-bottom:26px; font-size:36px; line-height:1.04; }
+	.career-positioning__statement h2 { font-size:30px; line-height:1.08; }
 	.career-positioning__statement p { font-size:14px; }
-	.career-positioning__statement p+p { margin-top:31px; }
+	.career-positioning__zigzag { width:53px; height:35px; margin:18px 0; }
 	.career-positioning__help { padding:31px 18px 35px!important; }
 	.career-positioning__help h2 { margin-bottom:19px; font-size:40px; }
 	.career-positioning ul { margin-bottom:22px; }
@@ -674,6 +685,18 @@ details p { padding:0 45px 18px 0; }
 	background:var(--site-section);
 	outline:3px solid #c9a8df;
 	outline-offset:2px;
+}
+.site-page .career-positioning .career-button {
+	width:auto;
+	min-width:186px;
+	align-self:flex-start;
+	border-color:#fff;
+	color:var(--site-section);
+	background:#fff;
+}
+.site-page .career-positioning .career-button:hover,.site-page .career-positioning .career-button:focus-visible {
+	color:#fff;
+	background:transparent;
 }
 .site-education {
 	height:474px;
