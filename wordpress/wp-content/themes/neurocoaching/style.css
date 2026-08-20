@@ -304,20 +304,20 @@ details p { padding:0 45px 18px 0; }
 .nc-about__services { width:1037px; max-width:calc(100% - 64px); margin-inline:auto; padding-bottom:146px; }
 .nc-about__services>h2 { width:max-content; margin:0 auto 80px; color:var(--nc-about-purple); font-size:65px; line-height:.92; }
 .nc-about__service-card { height:597px; display:grid; grid-template-columns:527px 504px; border:2px solid var(--nc-about-violet); border-radius:6px; color:var(--nc-about-ink); background:#c8d2fa; }
-.nc-about__service-card>div { padding:56px 46px; }
+.nc-about__service-card>div { min-height:0; padding:56px 46px; }
 .nc-about__service-summary { position:relative; }
 .nc-about__service-summary::after { content:''; position:absolute; top:283px; left:45px; width:374px; height:2px; background:var(--nc-about-violet); }
 .nc-about__service-heading { position:relative; display:flex; align-items:flex-start; }
 .nc-about__service-heading h3,.nc-about__programmes h3 { margin:0; color:var(--nc-about-purple); font-size:45px; line-height:1.08; }
-.nc-about__service-heading span { position:relative; width:180px; height:32.5px; margin:16px 0 0 -22px; color:#fff; font:700 21px/1.1 Lato,Arial,sans-serif; }
+.nc-about__service-heading span { position:absolute; top:16px; right:-46px; width:180px; height:32.5px; margin:0; color:#fff; font:700 21px/1.1 Lato,Arial,sans-serif; }
 .nc-about__service-heading span img { position:absolute; inset:0; width:180px; height:32.5px; }
 .nc-about__service-heading span b { position:relative; z-index:1; display:block; padding:5px 18px; font:inherit; text-align:center; }
 .nc-about__zigzag { width:110px; height:auto; margin:23px 0 0; }
-.nc-about__scope { margin:94px 0 55px; font-weight:900; }
+.nc-about__scope { margin:60px 0 22px; font-weight:900; }
 .nc-about__service-summary>p:last-child { width:356px; max-width:100%; font-size:18px; line-height:20px; }
 .nc-about__programmes { padding-left:0!important; }
-.nc-about__programmes ul { margin:34px 0 25px; padding:0 0 0 31px; list-style:none; }
-.nc-about__programmes li { position:relative; margin-bottom:20px; font-size:18px; line-height:21px; }
+.nc-about__programmes ul { margin:30px 0 21px; padding:0 0 0 31px; list-style:none; }
+.nc-about__programmes li { position:relative; margin-bottom:18px; font-size:18px; line-height:21px; }
 .nc-about__programmes li>img { position:absolute; top:0; left:-31px; width:20px; height:18px; }
 .nc-about__programmes>p { margin:0 0 36px; font-size:18px; font-weight:600; }
 .nc-about__programmes .nc-about__button { width:186px; min-width:186px; min-height:63px; border-color:var(--nc-about-violet); color:#fff; background:var(--nc-about-violet); }
@@ -352,7 +352,7 @@ details p { padding:0 45px 18px 0; }
 	.nc-about__service-card>div { padding:0; }
 	.nc-about__service-summary { position:absolute; top:25px; left:24px; width:237px; }
 	.nc-about__service-heading h3,.nc-about__programmes h3 { font-size:29px; line-height:32px; }
-	.nc-about__service-heading span { position:absolute; top:63px; left:84px; width:180px; height:34px; margin:0; font-size:18px; }
+	.nc-about__service-heading span { position:absolute; top:63px; right:auto; left:84px; width:180px; height:34px; margin:0; font-size:18px; }
 	.nc-about__zigzag { width:53px; height:auto; margin-top:20px; }
 	.nc-about__scope { margin:40px 0 19px; }
 	.nc-about__service-summary>p:last-child { font-size:14px; line-height:16px; }
@@ -562,10 +562,10 @@ details p { padding:0 45px 18px 0; }
 	.site-header[data-site-header] { top:30px; right:auto; left:max(32px,min(563px,calc(100% - 596px))); width:564px; height:115px; min-height:115px; display:block; padding:0; }
 	.site-header[data-site-header] .brand { position:absolute; top:0; left:2px; width:110px; height:55px; margin:0; transform:none; }
 	.site-header[data-site-header] .brand img { width:110px; height:58px; object-fit:contain; filter:none; }
-	.site-header[data-site-header] .about-socials { position:absolute; top:8px; right:auto; left:444px; width:119px; height:29px; display:flex; align-items:flex-start; justify-content:space-between; gap:0; }
-	.site-header[data-site-header] .about-socials a { width:28px; height:28px; }
-	.site-header[data-site-header] .about-socials a:nth-child(2) { width:28px; height:28px; }
-	.site-header[data-site-header] .about-socials a:last-child { width:30px; height:29px; }
+	.site-header[data-site-header] .about-socials { position:absolute; top:8px; right:auto; left:444px; width:120px; height:28px; display:flex; align-items:center; justify-content:space-between; gap:0; }
+	.site-header[data-site-header] .about-socials a { display:block; width:28px; height:28px; }
+	.site-header[data-site-header] .about-socials a:nth-child(2) { width:32px; height:28px; }
+	.site-header[data-site-header] .about-socials a:last-child { width:28px; height:28px; }
 	.site-header[data-site-header] .about-socials img { width:100%; height:100%; object-fit:contain; }
 	.site-header[data-site-header] .primary-nav { position:absolute; top:77px; left:2px; width:350px; height:20px; display:block; margin:0; padding:0; font-size:14px; }
 	.site-header[data-site-header] .primary-nav a { position:absolute; top:0; }
@@ -654,7 +654,8 @@ details p { padding:0 45px 18px 0; }
 }
 .site-page .site-button {
 	display:inline-flex;
-	min-height:53px;
+	height:59px;
+	min-height:59px;
 	padding:11px 30px;
 	align-items:center;
 	justify-content:center;
@@ -717,11 +718,11 @@ details p { padding:0 45px 18px 0; }
 .site-page .site-cta p { margin:0 0 33px; font-size:18px; line-height:1.2; }
 .site-page .site-cta__button { min-width:186px; min-height:59px; border-color:var(--site-on-section); color:var(--site-section); background:var(--site-on-section); }
 .site-page .site-faq {
-	width:1220px;
+	width:1084px;
 	max-width:calc(100% - 64px);
 	min-height:0;
 	display:grid;
-	grid-template-columns:repeat(2,minmax(0,1fr));
+	grid-template-columns:minmax(0,1fr) 294px;
 	column-gap:30px;
 	margin-inline:auto;
 	padding:142px 0 132px;
@@ -736,12 +737,12 @@ details p { padding:0 45px 18px 0; }
 .site-page .site-faq summary::after { right:20px; }
 .site-page .site-faq details p { max-width:none; margin:0; padding:0 52px 25px; font-size:14px; line-height:1.45; }
 .site-page .site-faq__closing { margin:40px 0 0; font-size:14px; line-height:1.4; }
-.site-page .site-faq__aside { position:relative; grid-column:2; grid-row:2; align-self:start; margin:0; padding:0; }
+.site-page .site-faq__aside { position:relative; width:294px; grid-column:2; grid-row:2; align-self:start; margin:0; padding:0; }
 .site-page .site-faq__aside img { display:block; width:290px; max-width:none; height:375px; margin:0 0 0 2px; object-fit:cover; object-position:center; }
-.site-page .site-faq__aside::before { content:''; position:absolute; top:399px; left:0; width:294px; height:2px; background:var(--site-accent); }
+.site-page .site-faq__aside::before { content:''; position:absolute; top:410px; left:0; width:294px; height:2px; background:var(--site-accent); }
 .site-page .site-faq__aside h2 { width:294px; margin:68px 0 22px; color:var(--site-heading); font-size:45px; line-height:1.05; }
 .site-page .site-faq__aside p { width:294px; margin:0 0 58px; font-size:18px; line-height:1.2; }
-.site-page .site-faq__button { width:294px; min-height:63px; padding:0 16px; color:#fff; background:var(--site-accent); }
+.site-page .site-faq__button { width:294px; min-height:59px; padding:0 16px; color:#fff; background:var(--site-accent); }
 
 /* Contact: one focused conversion page using the shared site tokens and header. */
 .contact-page { min-height:850px; padding:190px 0 110px; }
@@ -783,7 +784,7 @@ details p { padding:0 45px 18px 0; }
 .site-page .contact-form__submit:hover,.site-page .contact-form__submit:focus-visible { background:var(--site-section); }
 
 @media (max-width:850px) {
-	.site-page .site-button { min-height:53px; padding:11px 29px; font-size:14px; }
+	.site-page .site-button { height:53px; min-height:53px; padding:11px 29px; font-size:14px; }
 	.site-page .site-education { height:389px; padding-top:55px; }
 	.site-page .site-education__inner { width:auto; max-width:none; margin-inline:16px; }
 	.site-page .site-education__title { width:250px; margin:0 0 40px; font-size:36px; line-height:1.05; }
@@ -816,7 +817,7 @@ details p { padding:0 45px 18px 0; }
 	.site-page .site-faq summary::after { right:4px; }
 	.site-page .site-faq details p { padding:0 30px 20px 1px; font-size:14px; line-height:20px; }
 	.site-page .site-faq__closing { margin:34px 0 42px; font-size:14px; }
-	.site-page .site-faq__aside { margin:56px 0 0; }
+	.site-page .site-faq__aside { width:auto; margin:56px 0 0; }
 	.site-page .site-faq__aside img { width:calc(100% + 32px); height:241px; margin-left:-16px; object-position:center; }
 	.site-page .site-faq__aside::before { top:256px; left:0; width:100%; }
 	.site-page .site-faq__aside h2 { width:250px; margin:47px 0 20px; font-size:36px; line-height:40px; }
