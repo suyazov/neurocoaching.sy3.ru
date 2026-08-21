@@ -179,7 +179,7 @@ details p { padding:0 45px 18px 0; }
 .career-hero__photo { height:1125px; overflow:hidden; }
 .career-hero__photo img { width:100%; height:100%; object-fit:cover; object-position:center top; }
 .career-hero__copy { width:610px; padding:199px 0 60px 99px; font-size:18px; line-height:1.35; }
-.career-hero h1 { margin:0 0 31px; color:var(--career-ink); font-size:71px; line-height:.9; }
+.career-hero h1 { margin:0 0 31px; color:var(--career-ink); font-size:71px; line-height:1; }
 .career-quote { margin-bottom:27px; font-weight:400; font-style:italic; line-height:1.55; }
 .career-hero__copy p { max-width:485px; margin-bottom:21px; }
 .career-hero__copy .career-intro { margin-bottom:20px; font-size:18px; }
@@ -226,14 +226,14 @@ details p { padding:0 45px 18px 0; }
 .career-card li::before { background-image:url('./assets/images/career-check-violet.svg'); }
 .career-card__outcome { position:absolute; top:771px; left:36px; max-width:319px; margin:0; font-size:14px; line-height:1.2; font-weight:400; font-style:italic; }
 .career-card--featured .career-card__outcome { top:876px; left:27px; max-width:323px; }
-.career-price { position:absolute; top:987px; left:30px; margin:0; font:700 45px/1 Lato,Arial,sans-serif; }
+.career-price { position:absolute; top:987px; left:30px; margin:0; font:700 57px/1 "IBM Plex Sans",Arial,sans-serif; }
 .career-card--featured .career-price { left:27px; }
 .career-price s { margin-right:42px; text-decoration-thickness:2px; }
 .career-price strong { color:var(--career-violet); }
-.career-card__flag { position:absolute; top:116px; right:2px; width:195px; height:37px; display:flex; padding:0 24px 0 39px; align-items:center; justify-content:center; color:#fff; background:var(--career-violet); -webkit-mask:url('./assets/images/career-flag-long.svg') center/100% 100% no-repeat; mask:url('./assets/images/career-flag-long.svg') center/100% 100% no-repeat; font-size:14px; font-weight:900; }
+.career-card__flag { position:absolute; top:116px; right:-2px; width:195px; height:37px; display:flex; padding:0 24px 0 39px; align-items:center; justify-content:center; color:#fff; background:var(--career-violet); -webkit-mask:url('./assets/images/career-flag-long.svg') center/100% 100% no-repeat; mask:url('./assets/images/career-flag-long.svg') center/100% 100% no-repeat; font-size:14px; font-weight:900; }
 .career-card .career-button { position:absolute; bottom:68px; left:29px; width:238px; background:#fff; }
 .career-card--featured .career-button { bottom:69px; left:26px; }
-.career-offer { position:absolute; right:2px; bottom:78px; width:198px; height:38px; display:flex; padding:0 22px 0 38px; align-items:center; justify-content:center; color:#fff; background:#f1264b; -webkit-mask:url('./assets/images/career-flag-long.svg') center/100% 100% no-repeat; mask:url('./assets/images/career-flag-long.svg') center/100% 100% no-repeat; font-size:14px; font-weight:900; }
+.career-offer { position:absolute; right:-2px; bottom:78px; width:198px; height:38px; display:flex; padding:0 22px 0 38px; align-items:center; justify-content:center; color:#fff; background:#f1264b; -webkit-mask:url('./assets/images/career-flag-long.svg') center/100% 100% no-repeat; mask:url('./assets/images/career-flag-long.svg') center/100% 100% no-repeat; font-size:14px; font-weight:900; }
 .career-card--featured .career-button { color:#fff; border-color:#fff; }
 .career-suitable { height:814px; display:grid; grid-template-columns:50% 50%; overflow:hidden; color:#fff; background:linear-gradient(90deg,#a27760 0%,#dfb295 100%); }
 .career-suitable__copy { position:relative; z-index:1; width:590px; margin-left:auto; padding:91px 66px 50px 0; }
@@ -295,7 +295,7 @@ details p { padding:0 45px 18px 0; }
 	.career-card__outcome,.career-card--featured .career-card__outcome { position:static; max-width:none; min-height:0; margin-top:20px; }
 	.career-price,.career-card--featured .career-price { position:static; margin:20px 0 20px; font-size:40px; }
 	.career-card__flag { top:77px; width:135px; height:29px; padding:0 14px 0 27px; }
-	.career-offer { position:relative; right:auto; bottom:auto; width:150px; height:29px; margin:0 -24px 19px auto; padding:0 14px 0 27px; }
+	.career-offer { position:relative; right:auto; bottom:auto; width:150px; height:29px; margin:0 -26px 19px auto; padding:0 14px 0 27px; }
 	.career-card .career-button { position:static; width:auto; }
 	.career-card--featured .career-button { display:flex; width:218px; margin:auto; }
 	.career-suitable { height:auto; min-height:1100px; display:flex; flex-direction:column; }
