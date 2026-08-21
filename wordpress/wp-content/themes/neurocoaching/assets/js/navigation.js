@@ -136,6 +136,27 @@
     });
   });
 
+  document.querySelectorAll('.career-reviews').forEach(function (section) {
+    const track = section.querySelector('.career-review-track');
+    const previous = section.querySelector('[data-review-previous]');
+    const next = section.querySelector('[data-review-next]');
+    if (!track || !previous || !next) return;
+    const step = function () {
+      const card = track.querySelector('blockquote');
+      const gap = parseFloat(window.getComputedStyle(track).gap) || 0;
+      return card ? card.getBoundingClientRect().width + gap : Math.max(260, track.clientWidth * 0.8);
+    };
+    const update = function () {
+      previous.disabled = track.scrollLeft <= 2;
+      next.disabled = track.scrollLeft >= track.scrollWidth - track.clientWidth - 2;
+    };
+    previous.addEventListener('click', function () { track.scrollBy({ left: -step(), behavior: 'smooth' }); });
+    next.addEventListener('click', function () { track.scrollBy({ left: step(), behavior: 'smooth' }); });
+    track.addEventListener('scroll', update, { passive: true });
+    window.addEventListener('resize', update);
+    update();
+  });
+
   document.querySelectorAll('.career-review-more').forEach(function (button) {
     button.addEventListener('click', function () {
       const card = button.closest('blockquote');
