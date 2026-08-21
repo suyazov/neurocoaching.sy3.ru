@@ -32,7 +32,7 @@ $faqs = array(
 ?>
 <article class="site-page site-page--career career-psd">
 	<section class="site-section site-hero career-hero">
-		<div class="site-hero__media career-hero__photo"><img src="<?php echo esc_url( get_theme_file_uri( '/assets/images/career-hero.webp' ) ); ?>" width="510" height="1125" alt="Ksenia Belousova" decoding="async" fetchpriority="high"></div>
+		<div class="site-hero__media career-hero__photo"><img src="<?php echo esc_url( get_theme_file_uri( '/assets/images/career-hero-client.webp' ) ); ?>" width="600" height="900" alt="Ksenia Belousova" decoding="async" fetchpriority="high"></div>
 		<div class="site-hero__content career-hero__copy">
 			<h1>Stop postponing your life</h1>
 			<p class="career-quote">Your time is limited, so don’t waste it living someone else’s life.<br>– Steve Jobs</p>
@@ -75,7 +75,7 @@ $faqs = array(
 		<div class="career-positioning__statement">
 			<h2><span>Stand out.</span><span class="career-positioning__accent">Get shortlisted.</span><span>Get hired.</span></h2>
 			<p>I help professionals secure roles in the UN, international organisations, and leading global companies through strategic career positioning, compelling applications, and interview coaching.</p>
-			<img class="career-positioning__zigzag" src="<?php echo esc_url( get_theme_file_uri( '/assets/images/career-source/desktop-8529-zigzag-copy-2.png' ) ); ?>" width="75" height="51" alt="" loading="lazy" decoding="async">
+			<img class="career-positioning__zigzag" src="<?php echo esc_url( get_theme_file_uri( '/assets/images/career-zigzag-white.svg' ) ); ?>" width="75" height="51" alt="" loading="lazy" decoding="async">
 			<p>I know exactly what recruiters look for because I’ve been on the hiring side — reviewing applications, interviewing candidates, and advising hiring managers. I know what makes an application stand out and what gets overlooked.</p>
 		</div>
 		<div class="career-positioning__help">
@@ -96,6 +96,7 @@ $faqs = array(
 		<div class="site-service-grid career-service-grid">
 			<article class="site-service-card career-card">
 				<h3>Consultation Session<br>90 min</h3><p class="career-card__label">Single Session</p>
+				<div class="career-card__motif" aria-hidden="true"></div>
 				<p>One focused 90 min session to identify what’s holding you back and define your clearest next step — whether you’re applying for your first job, going through a career shift, burnout, or simply feeling stuck.</p>
 				<h4>Includes:</h4>
 				<p class="career-card__free">Free 30-min intro call</p>
@@ -105,6 +106,7 @@ $faqs = array(
 			</article>
 			<article class="site-service-card site-service-card--featured career-card career-card--featured">
 				<span class="career-card__flag">Flagship</span><h3>Career Accelerator<br>4 × 60 min</h3><p class="career-card__label">4 SESSIONS</p>
+				<div class="career-card__motif" aria-hidden="true"></div>
 				<p>Four focused sessions to go from stuck to executing. We refine your positioning, sharpen your CV and LinkedIn, prepare you for interviews and stay available between sessions for questions and application reviews.</p>
 				<h4>Includes:</h4>
 				<ul><li>Positioning &amp; job search strategy</li><li>CV, LinkedIn &amp; cover letter refinement</li><li>Interview preparation &amp; techniques</li><li>Full mock interview with written feedback</li><li>Between-session support (application reviews &amp; questions)</li><li>One-page action summary — your profile, strategy, and next steps</li></ul>
@@ -118,10 +120,11 @@ $faqs = array(
 		<div class="career-suitable__copy">
 			<h2>This is for you if…</h2>
 			<ul><li>You are ready for more, but your next step feels unclear</li><li>You want to move into the UN, an international organisation, or a global role</li><li>Your CV does not reflect your real value</li><li>You are changing direction and want to do it strategically</li><li>You feel stuck, overlooked, or unsure where to start</li></ul>
-			<p>You do not have to figure this out alone. Together, we will clarify your direction, make your experience visible, and create a clear plan for your next move. My approach combines international HR expertise, career strategy, and nervous-system-aware guidance – so you can move forward with clarity and confidence.</p>
+			<p>You do not have to figure this out alone.</p>
+			<p>Together, we will clarify your direction, make your experience visible, and create a clear plan for your next move. My approach combines international HR expertise, career strategy, and nervous-system-aware guidance – so you can move forward with clarity and confidence.</p>
 			<a class="site-button career-button career-button--light" href="<?php echo esc_url( $booking_url ); ?>">Book a free call</a>
 		</div>
-		<img src="<?php echo esc_url( get_theme_file_uri( '/assets/images/career-suitable-1440.webp' ) ); ?>" width="1440" height="1920" alt="Ksenia Belousova in a blue beret" loading="lazy" decoding="async">
+		<img src="<?php echo esc_url( get_theme_file_uri( '/assets/images/career-suitable-client.webp' ) ); ?>" width="1200" height="1782" alt="Ksenia Belousova in a blue beret" loading="lazy" decoding="async">
 	</section>
 
 	<section class="site-section site-reviews career-reviews" aria-labelledby="career-reviews-title"><div class="site-shell career-wrap">
@@ -161,9 +164,9 @@ $faqs = array(
 			'section_class'   => 'career-faq career-wrap',
 			'questions_class' => 'career-faq__questions',
 			'questions'       => $faqs,
-			'image'           => get_theme_file_uri( '/assets/images/career-faq-hires.webp' ),
-			'image_width'     => 373,
-			'image_height'    => 279,
+			'image'           => get_theme_file_uri( '/assets/images/career-faq-client.webp' ),
+			'image_width'     => 700,
+			'image_height'    => 910,
 			'image_alt'       => 'Ksenia Belousova sailing',
 			'button_label'    => 'Book a Consultation Session',
 			'button_url'      => $booking_url,
