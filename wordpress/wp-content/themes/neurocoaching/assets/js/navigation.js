@@ -97,11 +97,27 @@
     const next = carousel.querySelector('[data-carousel-next]');
     let active = 0;
     let touchStart = null;
+    const preload = function () {
+      slides.forEach(function (slide) {
+        const slideImage = slide.querySelector('img');
+        if (slideImage) slideImage.loading = 'eager';
+      });
+    };
     const show = function (index) {
       if (!slides.length) return;
-      active = (index + slides.length) % slides.length;
-      slides.forEach(function (slide, slideIndex) { slide.hidden = slideIndex !== active; });
-      dots.forEach(function (dot, dotIndex) { dot.setAttribute('aria-current', String(dotIndex === active)); });
+      const nextIndex = (index + slides.length) % slides.length;
+      const nextImage = slides[nextIndex].querySelector('img');
+      const apply = function () {
+        active = nextIndex;
+        slides.forEach(function (slide, slideIndex) { slide.hidden = slideIndex !== active; });
+        dots.forEach(function (dot, dotIndex) { dot.setAttribute('aria-current', String(dotIndex === active)); });
+      };
+      if (nextImage && !nextImage.complete) {
+        nextImage.loading = 'eager';
+        nextImage.addEventListener('load', apply, { once: true });
+        return;
+      }
+      apply();
     };
     if (previous) previous.addEventListener('click', function () { show(active - 1); });
     if (next) next.addEventListener('click', function () { show(active + 1); });
@@ -119,6 +135,14 @@
       if (Math.abs(distance) >= 40) show(active + (distance < 0 ? 1 : -1));
       touchStart = null;
     }, { passive: true });
+    if ('IntersectionObserver' in window) {
+      const observer = new IntersectionObserver(function (entries) {
+        if (!entries.some(function (entry) { return entry.isIntersecting; })) return;
+        preload();
+        observer.disconnect();
+      }, { rootMargin: '400px 0px' });
+      observer.observe(carousel);
+    }
     show(0);
   });
 

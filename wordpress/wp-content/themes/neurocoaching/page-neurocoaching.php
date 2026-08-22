@@ -23,13 +23,13 @@ $faqs = array(
 	'Who is this for?' => 'For people who feel stuck, overloaded, at a crossroads, or ready to make a thoughtful professional or personal change.',
 	'Do I need to know what I want before working with you?' => 'No. Creating a clear direction can be the first part of our work together.',
 	'How is your approach different from typical career coaching?' => 'We work with the whole person: goals, context, energy, patterns and the next realistic experiment.',
+	'How is working with you different from just reading self-help books or watching videos?' => 'We turn insight into a personalised process, supported practice and decisions you can use in real life.',
 	'What results can I expect?' => 'Greater clarity, a defined direction, practical decisions and a concrete next step.',
 	'How long does it take to see results?' => 'Many clients gain useful clarity in the first session; deeper change depends on your goals and chosen format.',
 	'Is this more about career or personal development?' => 'It can be either or both. The work follows the change that matters most in your life right now.',
-	'How is working with you different from just reading self-help books or watching videos?' => 'We turn insight into a personalised process, supported practice and decisions you can use in real life.',
 	'Do I need to choose between career coaching and neurointegration — or can I do both?' => 'You can combine them. Career strategy gives direction while neurointegration helps you move with sustainable energy.',
 	'Why should I choose to work with you?' => 'I combine lived international experience, structured coaching and a practical understanding of how change actually feels.',
-	"What's the first step?" => "Start with a conversation. You don't need a perfect plan — just the willingness to change something.",
+	"What's the first step?" => "Start with a conversation. You don't need a perfect plan — just the willingness to change something. Book a Discovery Session: free 30 minutes that will give you clarity on where you are, what's holding you back, and exactly what your next step looks like. From there, we build everything together.",
 );
 ?>
 <article class="site-page site-page--neuro neuro-psd">
@@ -180,7 +180,6 @@ $faqs = array(
 			'questions_class' => 'neuro-faq__questions',
 			'questions'       => $faqs,
 			'open_question'   => "What's the first step?",
-			'closing'         => "Start with a conversation. You don't need a perfect plan — just the willingness to change something. Book a Discovery Session: free 30 minutes that will give you clarity on where you are, what's holding you back, and exactly what your next step looks like. From there, we build everything together.",
 			'image'           => $images . 'neuro-faq-hires.webp',
 			'image_width'     => 373,
 			'image_height'    => 478,

@@ -32,7 +32,7 @@ $faqs = array(
 ?>
 <article class="site-page site-page--career career-psd">
 	<section class="site-section site-hero career-hero">
-		<div class="site-hero__media career-hero__photo"><img src="<?php echo esc_url( get_theme_file_uri( '/assets/images/career-hero-client.webp' ) ); ?>" width="600" height="900" alt="Ksenia Belousova" decoding="async" fetchpriority="high"></div>
+		<div class="site-hero__media career-hero__photo"><img src="<?php echo esc_url( get_theme_file_uri( '/assets/images/career-hero.webp' ) ); ?>" width="510" height="1125" alt="Ksenia Belousova" decoding="async" fetchpriority="high"></div>
 		<div class="site-hero__content career-hero__copy">
 			<h1>Stop postponing your life</h1>
 			<p class="career-quote">Your time is limited, so don’t waste it living someone else’s life.<br>– Steve Jobs</p>
@@ -122,10 +122,11 @@ $faqs = array(
 			<h2>This is for you if…</h2>
 			<ul><li>You are ready for more, but your next step feels unclear</li><li>You want to move into the UN, an international organisation, or a global role</li><li>Your CV does not reflect your real value</li><li>You are changing direction and want to do it strategically</li><li>You feel stuck, overlooked, or unsure where to start</li></ul>
 			<p>You do not have to figure this out alone.</p>
-			<p>Together, we will clarify your direction, make your experience visible, and create a clear plan for your next move. My approach combines international HR expertise, career strategy, and nervous-system-aware guidance – so you can move forward with clarity and confidence.</p>
+			<p>Together, we will clarify your direction, make your experience visible, and create a clear plan for your next move.</p>
+			<p>My approach combines international HR expertise, career strategy, and nervous-system-aware guidance – so you can move forward with clarity and confidence.</p>
 			<a class="site-button career-button career-button--light" href="<?php echo esc_url( $booking_url ); ?>">Book a free call</a>
 		</div>
-		<img src="<?php echo esc_url( get_theme_file_uri( '/assets/images/career-suitable-client.webp' ) ); ?>" width="1200" height="1782" alt="Ksenia Belousova in a blue beret" loading="lazy" decoding="async">
+		<img src="<?php echo esc_url( get_theme_file_uri( '/assets/images/career-suitable-1440.webp' ) ); ?>" width="1440" height="1920" alt="Ksenia Belousova in a blue beret" loading="lazy" decoding="async">
 	</section>
 
 	<section class="site-section site-reviews career-reviews" aria-labelledby="career-reviews-title"><div class="site-shell career-wrap">
