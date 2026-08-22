@@ -10,7 +10,7 @@ All six target screens were rendered again from the latest PSD files and compare
 |---|---:|---:|---:|---:|---:|
 | About | 1320×6101* | 1320×5555 | 320×5753 | 320×5801 | 0 px |
 | Career Services | 1440×9212 | 1440×9153 | 320×9307 | 320×9342 | 0 px |
-| Neurocoaching | 1440×10926 | 1440×10935 | 320×11553 | 320×11566 | 0 px |
+| Neurocoaching | 1440×10926 | 1440×10912 | 320×11553 | 320×11487 | 0 px |
 
 `*` The About PSD canvas contains material below the actual 5671 px page composition; it is not implemented as page content.
 
@@ -19,6 +19,11 @@ Confirmed corrections from this re-audit:
 - About desktop CTA content now uses the PSD coordinates: title `x=197/y=3858`, subtitle `x=196/y=3942`, button `x=195/y=3989`, section height `401px`.
 - About mobile B2B `Book a call` is filled `#855CAC` with white text, matching the mobile PSD instead of inheriting the shared outline-button rule.
 - About desktop hero now selects the 768 px source candidate for the measured 711 px rendered image instead of stretching the 512 px candidate; the crop and layout are unchanged.
+- Career hero now uses the PSD-derived `510×1125` composition instead of the later brown-background portrait that changed the crop and page silhouette.
+- Career `This is for you if…` now uses the PSD-derived transparent source, measured subject placement, source gradient, copy column, paragraph breaks and button coordinates on both artboards.
+- Career review viewport extends to the right edge at desktop width, preserving the PSD's partially visible third card and horizontal browsing affordance.
+- Neuro FAQ order now follows the PSD. The final answer is rendered once, with the complete discovery-session copy, instead of being duplicated by a separate closing paragraph.
+- The shared `In real life` controller preloads the remaining slides only when the carousel approaches the viewport and does not expose an unloaded frame while changing slides.
 
 Functional differences that intentionally supersede decorative PSD pixels remain limited to the customer-approved certificate sets, the real functional gallery-dot count, the later supplied About FAQ photograph, and the consistent NeuroSprint price described below.
 
@@ -67,11 +72,12 @@ Functional differences that intentionally supersede decorative PSD pixels remain
 
 - Tested desktop source widths: About `1320`, Career/Neuro `1440`.
 - Tested mobile source width: `320` for all routes.
-- No horizontal overflow at desktop or mobile widths.
-- Gallery next controls change the active slide and load a non-zero natural-size source image.
+- Additional responsive smoke widths: `390`, `510`, and `768` for all three routes.
+- No horizontal overflow at any of the 15 route/viewport combinations.
+- Gallery next/dot controls change the active slide and load a non-zero natural-size source image. Slide counts are About `3`, Career `4`, Neuro `4`.
 - Certificate counts: About `8`, Career `8`, Neuro `5`; lightbox opens and next/close controls work.
 - FAQ disclosures change state on click.
-- No browser console errors and no HTTP responses `>=400` during the functional smoke test.
+- No browser console errors and no broken images in the 15-combination browser audit.
 
 ## Explicit source conflict
 
