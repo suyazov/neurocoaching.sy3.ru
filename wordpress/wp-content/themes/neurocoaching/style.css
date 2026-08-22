@@ -882,6 +882,26 @@ details p { padding:0 45px 18px 0; }
 	.career-services-route .career-card--featured .career-card__label { left:27px; }
 	.career-services-route .career-card--featured .career-card__flag { -webkit-mask:none; mask:none; clip-path:polygon(0 0,100% 0,100% 100%,0 100%,19px 50%); }
 	.career-services-route .career-card--featured .career-card__motif::after { right:6px; bottom:2px; left:1px; height:4px; }
+	.career-services-route .career-card h4 { font-size:47px; line-height:1; }
+	.career-services-route .career-card__free,
+	.career-services-route .career-offer { justify-content:flex-start; -webkit-mask:none; mask:none; clip-path:polygon(0 0,100% 0,100% 100%,0 100%,19px 50%); letter-spacing:.8px; }
+	.career-services-route .career-card__free { padding-left:53px; }
+	.career-services-route .career-offer { padding-left:37px; background:#f00; }
+	.career-services-route .career-card ul { font-size:18px; line-height:20px; letter-spacing:-.15px; }
+	.career-services-route .career-card li { margin-bottom:17px; }
+	.career-services-route .career-card:not(.career-card--featured) li:nth-child(2) { margin-bottom:16px; }
+	.career-services-route .career-card--featured li { margin-bottom:16px; }
+	.career-services-route .career-card--featured li:nth-child(3),
+	.career-services-route .career-card--featured li:nth-child(4),
+	.career-services-route .career-card--featured li:nth-child(5) { margin-bottom:18px; }
+	.career-services-route .career-card li::before { top:0; width:22px; height:20px; }
+	.career-services-route .career-card__outcome { font-size:18px; line-height:20px; letter-spacing:-.25px; }
+	.career-services-route .career-card:not(.career-card--featured) .career-card__outcome { max-width:none; white-space:nowrap; }
+	.career-services-route .career-card--featured .career-card__outcome { font-size:16px; line-height:19px; }
+	.career-services-route .career-price { font-size:62px; }
+	.career-services-route .career-card--featured .career-price s { margin-right:70px; }
+	.career-services-route .career-card .career-button { font-size:18px; }
+	.career-services-route .career-card--featured .career-button { padding-inline:20px; border-color:#7a5ca8; background:#7a5ca8; font-size:18px; letter-spacing:.4px; white-space:nowrap; }
 	.career-positioning { width:1226px; height:727px; grid-template-columns:476px minmax(0,1fr); margin-bottom:83px; }
 	.career-positioning>div { padding-top:83px; padding-bottom:101px; }
 	.career-positioning>.career-positioning__statement { padding-right:23px; padding-left:123px; }
