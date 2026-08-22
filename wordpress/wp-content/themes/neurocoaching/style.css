@@ -622,13 +622,13 @@ details p { padding:0 45px 18px 0; }
 .neuro-psd {
 		--neuro-section:#3f2961;
 	--neuro-hero-title:#2a2a2a;
-	--neuro-heading:#2a2a2a;
-	--neuro-body:#5a5566;
-		--neuro-accent:#855cac;
+	--neuro-heading:#282828;
+	--neuro-body:#5b5669;
+		--neuro-accent:#815eb8;
 	--neuro-kicker-source:#815eb8;
-	--neuro-action:#5b3f8c;
+	--neuro-action:#815eb8;
 		--neuro-on-section:#f8f1ee;
-		--neuro-paper:#f8f1ee;
+		--neuro-paper:#f8f4f2;
 	--neuro-ink:var(--neuro-body);
 	--neuro-purple:var(--neuro-section);
 	--neuro-violet:var(--neuro-accent);
@@ -647,6 +647,7 @@ details p { padding:0 45px 18px 0; }
 .neuro-card h3,.neuro-card h4,.neuro-services>h2,.neuro-method h2,.neuro-suitable h2,.neuro-faq h2 { color:var(--neuro-heading); }
 .neuro-card,.neuro-review-track header,.neuro-faq details { border-color:var(--neuro-accent); }
 .neuro-card__label,.neuro-price strong,.neuro-method a,.neuro-review-track a,.neuro-faq>header p { color:var(--neuro-accent); }
+.neuro-price { color:var(--neuro-heading); }
 
 /* PSD button roles: outline CTAs use the route action colour; buttons on dark
    sections are light filled; premium packages use a solid action fill. */
@@ -660,7 +661,8 @@ details p { padding:0 45px 18px 0; }
 .career-suitable .career-button { border-color:#fff; color:var(--career-section); background:#fff; }
 .career-card__flag,.career-card__free { background:var(--career-section); }
 .career-offer { background:#f1264b; }
-.neuro-card__flag { background:var(--neuro-section); }
+.neuro-card__flag { background:var(--neuro-section); font-family:"IBM Plex Sans",Arial,sans-serif; letter-spacing:.03em; }
+.neuro-card__offer { background:#ff0000; font-family:"IBM Plex Sans",Arial,sans-serif; letter-spacing:.03em; }
 
 @media (max-width:850px) {
 	.career-psd {
@@ -686,6 +688,7 @@ details p { padding:0 45px 18px 0; }
 		--neuro-paper:#f8f1ee;
 	}
 	.neurocoaching-route { --purple:#3f2961; --violet:#8d5ebc; --paper:#f8f1ee; --ink:#5c5467; --line:#855cac; }
+	.site-page.site-page--neuro { --site-action:#855cac; }
 	.neuro-hero__copy .neuro-lead { color:var(--neuro-body); }
 
 	/* One source-derived mobile header for every route. */
@@ -836,6 +839,15 @@ details p { padding:0 45px 18px 0; }
 	--site-on-section:#f8f1ee;
 	color:var(--site-body);
 	background:var(--site-paper);
+}
+@media (min-width:851px) {
+	.site-page.site-page--neuro {
+		--site-accent:#815eb8;
+		--site-action:#815eb8;
+		--site-paper:#f8f4f2;
+		--site-heading:#282828;
+		--site-body:#5b5669;
+	}
 }
 .site-page .site-button {
 	display:inline-flex;
@@ -1337,10 +1349,10 @@ body.has-certificate-lightbox { overflow:hidden; }
 	.neuro-card li { margin-bottom:0; padding-left:29px; font-size:14px; line-height:20px; }
 	.neuro-card li:nth-child(-n+3),.neuro-card--featured li { margin-bottom:0; }
 	.neuro-card__outcome,.neuro-card--featured .neuro-card__outcome { position:absolute; top:908px; right:20px; left:22px; width:auto; margin:0; font-size:14px; line-height:20px; font-weight:400; }
-	.neuro-price,.neuro-card--featured .neuro-price { position:absolute; top:980px; left:21px; margin:0; font-size:36px; line-height:36px; }
+	.neuro-price,.neuro-card--featured .neuro-price { position:absolute; top:980px; left:21px; margin:0; font-family:"IBM Plex Sans",Arial,sans-serif; font-size:36px; line-height:36px; font-weight:700; }
 	.neuro-price s { margin-right:42px; }
 	.neuro-card .neuro-button { position:absolute; top:1034px; bottom:auto; left:21px; width:185px; height:55px; min-height:55px; }
-	.neuro-card__flag { top:226px; right:-1px; width:163px; height:33px; padding:0 22px 0 38px; clip-path:none; font-size:14px; }
+	.neuro-card__flag { top:226px; right:-1px; width:163px; height:33px; padding:0 22px 0 38px; clip-path:none; font-size:16px; }
 	.neuro-card--featured>p:not([class]) { top:289px; }
 	.neuro-card--featured>p:not([class]):nth-of-type(3) { top:409px; }
 	.neuro-card--featured h4 { top:587px; }
@@ -1349,7 +1361,7 @@ body.has-certificate-lightbox { overflow:hidden; }
 	.neuro-card--featured li::before { content:none; }
 	.neuro-card--featured .neuro-card__outcome { top:1072px; }
 	.neuro-card--featured .neuro-price { top:1145px; }
-	.neuro-card__offer { position:absolute; top:1196px; right:auto; bottom:auto; left:0; width:163px; height:32px; margin:0; padding:0 19px; -webkit-mask:none; mask:none; clip-path:polygon(0 0,calc(100% - 18px) 0,100% 50%,calc(100% - 18px) 100%,0 100%); font-size:14px; text-align:center; }
+	.neuro-card__offer { position:absolute; top:1196px; right:auto; bottom:auto; left:0; width:163px; height:32px; margin:0; padding:0 19px; -webkit-mask:none; mask:none; clip-path:polygon(0 0,calc(100% - 18px) 0,100% 50%,calc(100% - 18px) 100%,0 100%); font-size:16px; text-align:center; }
 	.site-page .neuro-card--featured .neuro-button { top:1253px; left:21px; width:217px; }
 	.neuro-story { height:1221px; }
 	.neuro-story__copy { height:683px; padding:31px 16px 25px; }
