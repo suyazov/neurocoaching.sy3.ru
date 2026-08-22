@@ -310,17 +310,15 @@ function neurocoaching_about_career_certificates() {
 }
 
 /**
- * Keep Neurocoaching certificates independent until its dedicated set arrives.
+ * The certificate set shown in the final Neurocoaching desktop PSD.
  */
 function neurocoaching_neuro_certificates() {
-	return array_map(
-		static function ( $index ) {
-			return array(
-				'file' => 'neuro-certificate-' . $index . '-source.webp',
-				'alt'  => 'Neurocoaching professional certificate ' . $index,
-			);
-		},
-		range( 1, 5 )
+	return array(
+		array( 'file' => 'neuro-certificate-1-source.webp', 'alt' => 'Nonproliferation Studies certificate' ),
+		array( 'file' => 'neuro-certificate-2-source.webp', 'alt' => 'Webster University MBA degree' ),
+		array( 'file' => 'neuro-certificate-3-source.webp', 'alt' => 'International Organisations Management certificate' ),
+		array( 'file' => 'neuro-certificate-4-source.webp', 'alt' => 'Cornell University Human Resources Management certificate' ),
+		array( 'file' => 'about-certificate-3-source.webp', 'alt' => 'Webster University bachelor degree' ),
 	);
 }
 

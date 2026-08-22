@@ -834,6 +834,24 @@ details p { padding:0 45px 18px 0; }
 .site-education .site-certificates img { display:block; width:auto; max-width:100%; height:auto; max-height:127px; margin:auto; object-fit:contain; }
 .site-education__more { display:block; width:max-content; margin:25px 0 0 auto; color:var(--site-on-section); font-size:18px; font-weight:900; text-decoration:none; }
 .site-education__more .education-more-arrow { vertical-align:-8px; }
+@media (min-width:851px) {
+	/* The 1440 px Career and Neurocoaching PSDs share this certificate geometry. */
+	.career-services-route .site-education,
+	.neurocoaching-route .site-education { padding-top:99px; }
+	.career-services-route .site-education__inner,
+	.neurocoaching-route .site-education__inner {
+		width:1156px;
+		max-width:none;
+		margin-right:0;
+		margin-left:calc((100% - 1092px) / 2);
+	}
+	.career-services-route .site-education .site-certificates,
+	.neurocoaching-route .site-education .site-certificates { gap:59.5px; }
+	.career-services-route .site-education .site-certificates figure,
+	.neurocoaching-route .site-education .site-certificates figure { width:213px; flex-basis:213px; }
+	.career-services-route .site-education__more .education-more-arrow,
+	.neurocoaching-route .site-education__more .education-more-arrow { margin-left:34px; }
+}
 .site-page .site-credentials { width:1084px; max-width:calc(100% - 64px); height:auto; margin-inline:auto; padding:126px 0 106px; }
 .site-page .site-credentials ul { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:31px 110px; margin:0; padding:0; list-style:none; }
 .site-page .site-credentials li { position:relative; min-height:42px; padding-left:28px; font-size:18px; line-height:1.25; font-weight:900; }
