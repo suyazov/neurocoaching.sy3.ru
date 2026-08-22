@@ -37,7 +37,12 @@ $faqs = array(
 		<div class="site-hero__media neuro-hero__photo"><img src="<?php echo esc_url( $images . 'neuro-hero-hires.webp' ); ?>" width="511" height="911" alt="Ksenia Belousova holding hydrangeas" decoding="async" fetchpriority="high"></div>
 		<div class="site-hero__content neuro-hero__copy">
 			<p class="neuro-kicker">Neurointegration coaching</p>
-			<h1>Burned out, overwhelmed, or know something needs to change?</h1>
+			<a class="neuro-profile-link" href="<?php echo esc_url( home_url( '/' ) ); ?>">More details in my profile</a>
+			<h1>
+				<span class="neuro-title__desktop" aria-hidden="true">Burned out,<br>overwhelmed, or know<br>something needs<br>to change?</span>
+				<span class="neuro-title__mobile" aria-hidden="true">Burned out,<br>overwhelmed, or<br>know something<br>needs to change?</span>
+				<span class="screen-reader-text">Burned out, overwhelmed, or know something needs to change?</span>
+			</h1>
 			<p>I had the United Nations career, four countries, the life that looked like a dream from the outside. Then I hit a wall — and what I discovered on the other side is what I now teach.</p>
 			<p class="neuro-lead">If something needs to change but you don't know where to start — I'm here to help.</p>
 			<a class="site-button neuro-button" href="<?php echo esc_url( $booking ); ?>">Book a free call</a>
