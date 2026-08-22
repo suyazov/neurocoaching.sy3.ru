@@ -153,8 +153,15 @@ details p { padding:0 45px 18px 0; }
 .neuro-card { position:relative; height:1713px; min-height:1713px; display:block; padding:0; border:2px solid var(--neuro-violet); border-radius:6px; background:#fff; font-size:18px; line-height:1.2; }
 .neuro-card:first-child { height:1712px; min-height:1712px; }
 .neuro-card--featured { background:linear-gradient(to bottom,#cdd7fb 0%,#e1e8fc 100%); }
-.neuro-card__label { position:absolute; top:222px; left:30px; width:420px; min-height:0; margin:0; color:var(--neuro-violet); font-size:18px; line-height:1.2; font-weight:900; text-transform:uppercase; }
+.neuro-card__label { position:absolute; top:222px; left:30px; width:420px; min-height:0; margin:0; color:var(--neuro-violet); font:700 21px/1.18 "IBM Plex Sans",Arial,sans-serif; text-transform:uppercase; }
 .neuro-card--featured .neuro-card__label { top:198px; left:22px; width:377px; }
+.neuro-card__label-desktop,
+.neuro-card__label-primary,
+.neuro-card__label-sessions,
+.neuro-card__label-support { display:block; }
+.neuro-card__label-mobile { display:none; }
+.neuro-card__label-sessions { margin-top:15px; }
+.neuro-card__label-support { margin-top:13px; }
 .neuro-card__mobile-break { display:none; }
 .neuro-card h3 { position:absolute; top:54px; right:28px; left:28px; margin:0; font-size:45px; line-height:1.03; }
 .neuro-card--featured h3 { left:22px; }
@@ -1309,6 +1316,13 @@ body.has-certificate-lightbox { overflow:hidden; }
 	.neuro-card__desktop-break { display:none; }
 	.neuro-card__desktop-separator { display:none; }
 	.neuro-card__mobile-break { display:block; }
+	.neuro-card__label-desktop { display:none; }
+	.neuro-card__label-mobile { display:block; }
+	.neuro-card__label-mobile-primary,
+	.neuro-card__label-mobile-sessions,
+	.neuro-card__label-mobile-support { display:block; }
+	.neuro-card__label-mobile-sessions,
+	.neuro-card__label-mobile-support { margin-top:6px; }
 	.neuro-card h3 { position:absolute; top:24px; right:22px; left:22px; margin:0; font-size:20px; line-height:24px; }
 	.neuro-card--featured h3 { top:19px; }
 	.neuro-card__label,.neuro-card--featured .neuro-card__label { position:absolute; top:89px; left:22px; width:235px; padding:0; font-size:16px; line-height:20px; }
