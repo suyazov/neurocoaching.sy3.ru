@@ -78,6 +78,78 @@ details p { padding:0 45px 18px 0; }
 .neuro-difference dt { margin-bottom:3px; font-size:17px; font-weight:900; }
 .neuro-difference dd { margin:0; }
 .neuro-difference__intro>strong { display:block; margin-top:32px; font-size:17px; }
+@media (min-width:851px) {
+	.neuro-difference {
+		position:relative;
+		width:1225px;
+		height:663px;
+		min-height:663px;
+		grid-template-columns:467px 758px;
+		margin-right:0;
+		margin-left:calc((100% - 1220px) / 2);
+		background:#3c2d60;
+	}
+	.neuro-difference::before {
+		content:'';
+		position:absolute;
+		top:84px;
+		left:462px;
+		width:4px;
+		height:497px;
+		background:#fff;
+	}
+	.neuro-difference>div { padding:0; }
+	.neuro-difference>.neuro-difference__intro {
+		display:flex;
+		padding:76px 0 0 107px;
+		flex-direction:column;
+		border-right:0;
+	}
+	.neuro-difference__intro h2 {
+		width:230px;
+		margin:0;
+		order:1;
+		font-size:45px;
+		line-height:1.016;
+	}
+	.neuro-difference__intro .neuro-waves {
+		margin:24px 0 35px 5px;
+		order:2;
+		color:#fff;
+	}
+	.neuro-difference__intro p {
+		width:296px;
+		margin:0;
+		order:3;
+		font-size:18px;
+		line-height:1.2;
+	}
+	.neuro-difference__intro p:first-of-type { margin-bottom:20px; }
+	.neuro-difference__intro>strong {
+		width:230px;
+		margin:46px 0 0;
+		order:4;
+		font-size:18px;
+		line-height:1.2;
+	}
+	.neuro-difference__process { padding:67px 0 0 68px!important; }
+	.neuro-difference__process h2 {
+		width:550px;
+		margin:0 0 44px;
+		font-size:65px;
+		line-height:1.115;
+	}
+	.neuro-difference dl {
+		width:530px;
+		display:block;
+		margin:0;
+	}
+	.neuro-difference dl div,
+	.neuro-difference dl div:last-child { width:100%; margin:0 0 18px; }
+	.neuro-difference dt,
+	.neuro-difference dd { font-size:18px; line-height:1.2; }
+	.neuro-difference dt { margin:0; }
+}
 .neuro-card { position:relative; height:1713px; min-height:1713px; display:block; padding:0; border:2px solid var(--neuro-violet); border-radius:6px; background:#fff; font-size:18px; line-height:1.2; }
 .neuro-card:first-child { height:1712px; min-height:1712px; }
 .neuro-card--featured { background:linear-gradient(to bottom,#cdd7fb 0%,#e1e8fc 100%); }
@@ -1215,15 +1287,19 @@ body.has-certificate-lightbox { overflow:hidden; }
 
 	/* Neurocoaching 320 px artboard. */
 	.site-page .neuro-hero .neuro-button { width:185px; height:55px; min-height:55px; }
-	.neuro-difference { width:auto; height:780px; min-height:780px; margin:0 2px 2px; }
+	.neuro-difference { width:100%; height:784px; min-height:784px; margin:0 0 2px; }
 	.neuro-difference>div { padding-right:14px; padding-left:14px; }
-	.neuro-difference__intro { height:333px; min-height:333px; padding-top:35px; }
-	.neuro-difference__intro h2 { margin-bottom:21px; font-size:22px; line-height:1.05; }
-	.neuro-difference__intro .neuro-waves { margin:18px 0 20px; }
-	.neuro-difference__intro>strong { margin:0; font-size:12px; line-height:1.3; }
-	.neuro-difference__process { height:447px; padding:22px 14px!important; }
-	.neuro-difference__process h2 { margin-bottom:17px; font-size:36px; line-height:1.03; }
-	.neuro-difference p,.neuro-difference dt,.neuro-difference dd { font-size:12px; line-height:1.3; }
+	.neuro-difference>.neuro-difference__intro { position:relative; height:358px; min-height:358px; padding-top:28px; border-bottom:0; }
+	.neuro-difference__intro::after { content:''; position:absolute; right:15px; bottom:0; left:15px; height:6px; background:#fff; }
+	.neuro-difference__intro h2 { margin-bottom:21px; font-size:20px; line-height:1.05; }
+	.neuro-difference__intro h2 br { display:none; }
+	.neuro-difference__intro p { width:277px; }
+	.neuro-difference__intro p:first-of-type { margin-bottom:22px; }
+	.neuro-difference__intro .neuro-waves { margin:28px 0 25px; color:#fff; }
+	.neuro-difference__intro>strong { width:281px; margin:0; font-size:14px; line-height:16px; }
+	.neuro-difference__process { height:426px; padding:18px 14px!important; }
+	.neuro-difference__process h2 { margin-bottom:25px; font-size:36px; line-height:1.03; }
+	.neuro-difference p,.neuro-difference dt,.neuro-difference dd { font-size:14px; line-height:1.2; }
 	.neuro-difference dl div,.neuro-difference dl div:last-child { margin-bottom:15px; }
 	.site-page .neuro-services { padding-top:52px; }
 	.site-page .neuro-services>.site-section-title { margin-bottom:24px; }

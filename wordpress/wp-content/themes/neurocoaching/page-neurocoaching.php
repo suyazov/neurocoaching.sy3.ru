@@ -72,7 +72,7 @@ $faqs = array(
 
 	<section class="neuro-difference neuro-wrap" aria-labelledby="neuro-difference-title">
 		<div class="neuro-difference__intro">
-			<h2 id="neuro-difference-title">Why this is<br>different</h2>
+			<h2 id="neuro-difference-title">Why this is<br> different</h2>
 			<p>Most coaching changes what you think. NeuroIntegration changes how your brain responds to stress and change. That's why the results last.</p>
 			<p>This isn't therapy. It's a structured, science-based process personalised to your needs and your pace.</p>
 			<span class="neuro-waves" aria-hidden="true">≋</span>
