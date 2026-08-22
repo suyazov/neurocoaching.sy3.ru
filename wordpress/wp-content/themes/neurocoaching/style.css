@@ -60,12 +60,12 @@ details p { padding:0 45px 18px 0; }
 .neuro-hero .neuro-button { margin-top:5px; }
 .education-more-arrow { display:inline-block; margin-left:24px; overflow:visible; vertical-align:middle; }
 .education-more-arrow path { fill:none; stroke:currentColor; stroke-width:2px; stroke-linecap:butt; stroke-linejoin:miter; }
-.neuro-card li::before { content:'✓'; position:absolute; left:0; color:var(--neuro-violet); font-size:21px; font-weight:900; }
+.neuro-card li::before { content:''; position:absolute; top:2px; left:0; width:20px; height:18px; background:url('./assets/images/career-check-violet.svg') center/contain no-repeat; }
 .neuro-difference { min-height:655px; display:grid; grid-template-columns:480px 1fr; margin-bottom:142px; color:#fff; background:var(--neuro-purple); }
 .neuro-difference>div { padding:67px 52px; }
 .neuro-difference__intro { border-right:1px solid rgba(255,255,255,.75); }
 .neuro-difference h2 { margin:0 0 27px; color:#fff; font-size:61px; line-height:1.03; }
-.neuro-waves { position:relative; display:block; width:65px; height:45px; margin:-5px 0 34px; overflow:hidden; color:var(--neuro-purple); font-size:0; }
+.neuro-waves { position:relative; display:block; width:75px; height:51px; margin:-5px 0 34px; overflow:hidden; color:var(--neuro-purple); font-size:0; }
 .neuro-waves::before { content:''; position:absolute; inset:0; background:currentColor; -webkit-mask:url('./assets/images/about-zigzag-v2.svg') center/contain no-repeat; mask:url('./assets/images/about-zigzag-v2.svg') center/contain no-repeat; }
 .neuro-difference p,.neuro-difference dd { font-size:16px; line-height:1.35; }
 .neuro-difference__process { padding-left:68px!important; }
@@ -79,20 +79,20 @@ details p { padding:0 45px 18px 0; }
 .neuro-card__label { min-height:59px; margin:0; color:var(--neuro-violet); font-size:14px; font-weight:900; text-transform:uppercase; }
 .neuro-card__mobile-break { display:none; }
 .neuro-card h3 { margin:0 0 22px; font-size:45px; line-height:1.03; }
-.neuro-card>.neuro-waves { margin:20px 0 25px; padding-bottom:28px; border-bottom:2px solid var(--neuro-violet); color:var(--neuro-purple); }
-.neuro-card>.neuro-waves::before { top:0; right:auto; bottom:auto; width:53px; height:35px; }
+.neuro-card>.neuro-waves { width:100%; height:99px; margin:20px 0 25px; padding-bottom:28px; flex-shrink:0; border-bottom:2px solid var(--neuro-violet); color:var(--neuro-purple); }
+.neuro-card>.neuro-waves::before { top:0; right:auto; bottom:auto; width:104px; height:71px; }
 .neuro-card>p:not([class]) { margin-bottom:31px; }
 .neuro-card h4 { margin:55px 0 25px; font-size:28px; }
 .neuro-card ul { margin:0; padding:0; list-style:none; }
 .neuro-card li { position:relative; margin-bottom:24px; padding-left:29px; }
 .neuro-card li strong { font-weight:900; }
 .neuro-card li em { display:inline; font-style:italic; }
-.neuro-card__flag { position:absolute; top:75px; right:0; padding:5px 31px; color:#fff; background:var(--neuro-purple); font-size:14px; font-weight:900; }
+.neuro-card__flag { position:absolute; top:75px; right:0; width:158px; height:34px; display:flex; padding:0 22px 0 38px; align-items:center; justify-content:center; color:#fff; background:var(--neuro-purple); -webkit-mask:url('./assets/images/career-flag-long.svg') center/100% 100% no-repeat; mask:url('./assets/images/career-flag-long.svg') center/100% 100% no-repeat; font-size:14px; font-weight:900; }
 .neuro-card__outcome { margin:36px 0 18px; margin-top:auto; font-weight:900; }
 .neuro-price { margin:28px 0 22px; font:700 45px/1 Lato,Arial,sans-serif; }
 .neuro-price s { margin-right:40px; text-decoration-color:#f1264b; text-decoration-thickness:2px; }
 .neuro-price strong { color:var(--neuro-violet); }
-.neuro-card__offer { position:absolute; right:42px; bottom:56px; padding:4px 24px; color:#fff; background:#e43d62; font-size:13px; font-weight:900; }
+.neuro-card__offer { position:absolute; right:42px; bottom:56px; width:163px; height:34px; display:flex; padding:0 20px 0 34px; flex-shrink:0; align-items:center; justify-content:center; color:#fff; background:#e43d62; -webkit-mask:url('./assets/images/career-flag-long.svg') center/100% 100% no-repeat; mask:url('./assets/images/career-flag-long.svg') center/100% 100% no-repeat; font-size:13px; font-weight:900; }
 .neuro-card .neuro-button { min-height:51px; padding:10px 31px; }
 .neuro-story { height:1066px; display:grid; grid-template-columns:50% 50%; color:#fff; background:var(--neuro-purple); }
 .neuro-story__photo { height:1066px; overflow:hidden; }
@@ -116,7 +116,7 @@ details p { padding:0 45px 18px 0; }
 .neuro-method__steps strong,.neuro-method__steps span { display:block; }
 .neuro-method__steps strong { color:var(--neuro-violet); font-size:14px; }
 .neuro-method__steps span { font-size:12px; line-height:1.25; }
-.neuro-method>.neuro-waves { position:absolute; bottom:115px; left:0; margin:0; color:#d8bce9; }
+.neuro-method>.neuro-waves { position:absolute; bottom:115px; left:0; width:104px; height:71px; margin:0; color:#d8bce9; }
 .neuro-suitable { padding:29px 0 132px; }
 .neuro-suitable h2 { margin-bottom:49px; font-size:50px; line-height:1.05; }
 .neuro-suitable__grid { display:grid; grid-template-columns:1fr 1fr; gap:48px 44px; }
@@ -132,7 +132,7 @@ details p { padding:0 45px 18px 0; }
 .neuro-suitable__grid span { font-size:16px; line-height:1.25; }
 .neuro-review-track blockquote { width:478px; height:384px; min-height:384px; margin:0; padding:31px 33px; flex:0 0 478px; color:var(--neuro-ink); background:#fff; }
 .neuro-review-track header { position:relative; padding:0 76px 24px 0; border-bottom:2px solid var(--neuro-violet); }
-.neuro-review-track header::after { content:''; position:absolute; right:0; bottom:27px; width:57px; height:39px; background:#c1b4ed; -webkit-mask:url('./assets/images/career-zigzag-white.svg') center/contain no-repeat; mask:url('./assets/images/career-zigzag-white.svg') center/contain no-repeat; }
+.neuro-review-track header::after { content:''; position:absolute; right:0; bottom:27px; width:60px; height:41px; background:#c1b4ed; -webkit-mask:url('./assets/images/career-zigzag-white.svg') center/contain no-repeat; mask:url('./assets/images/career-zigzag-white.svg') center/contain no-repeat; }
 .neuro-review-track strong,.neuro-review-track a { display:block; }
 .neuro-review-track strong { font-size:17px; }
 .neuro-review-track a { color:var(--neuro-violet); font-size:13px; font-weight:900; text-decoration:none; }
@@ -151,7 +151,7 @@ details p { padding:0 45px 18px 0; }
 	.neuro-difference>div { padding:37px 25px; }
 	.neuro-difference__intro { min-height:400px; border-right:0; border-bottom:1px solid rgba(255,255,255,.75); }
 	.neuro-difference h2 { margin-bottom:25px; font-size:36px; }
-	.neuro-waves { margin-bottom:28px; font-size:0; }
+	.neuro-waves { width:53px; height:35px; margin-bottom:28px; font-size:0; }
 	.neuro-difference p,.neuro-difference dd { font-size:14px; }
 	.neuro-difference__process { padding:38px 25px!important; }
 	.neuro-difference__process h2 { font-size:40px; }
@@ -162,14 +162,16 @@ details p { padding:0 45px 18px 0; }
 	.neuro-card { min-height:0; margin-bottom:31px; padding:36px 24px 30px; font-size:14px; }
 	.neuro-card__label { min-height:0; padding-right:35px; font-size:11px; }
 	.neuro-card h3 { font-size:29px; }
-	.neuro-card>.neuro-waves { margin-bottom:32px; }
+	.neuro-card>.neuro-waves { width:100%; height:66px; margin-bottom:32px; }
+	.neuro-card>.neuro-waves::before { width:53px; height:35px; }
 	.neuro-card h4 { margin:36px 0 20px; font-size:23px; }
 	.neuro-card li { margin-bottom:17px; padding-left:23px; }
-	.neuro-card__flag { top:40px; padding:4px 15px; font-size:11px; }
+	.neuro-card li::before { width:16px; height:14px; }
+	.neuro-card__flag { top:40px; padding:0 18px 0 34px; font-size:11px; }
 	.neuro-card__outcome { margin-top:26px; }
 	.neuro-price { font-size:29px; }
 	.neuro-price s { margin-right:25px; }
-	.neuro-card__offer { position:static; display:inline-block; margin:0 0 17px 13px; padding:3px 18px; }
+	.neuro-card__offer { position:static; display:flex; margin:0 0 17px 13px; }
 	.neuro-card .neuro-button { min-height:53px; }
 	.neuro-story { height:auto; display:flex; flex-direction:column; }
 	.neuro-story__copy { order:1; padding:45px 16px 37px; }
@@ -188,13 +190,14 @@ details p { padding:0 45px 18px 0; }
 	.neuro-method__visual img { width:100%; }
 	.neuro-method__steps { margin-top:28px; gap:24px; }
 	.neuro-method p { font-size:15px; }
-	.neuro-method>.neuro-waves { position:relative; bottom:auto; left:auto; margin:34px 0 0; }
+	.neuro-method>.neuro-waves { position:relative; bottom:auto; left:auto; width:53px; height:35px; margin:34px 0 0; }
 	.neuro-suitable { padding:29px 0 58px; }
 	.neuro-suitable h2 { margin-bottom:35px; font-size:36px; }
 	.neuro-suitable__grid { grid-template-columns:1fr; gap:13px; }
 	.neuro-suitable__grid p:nth-child(n) { grid-area:auto; }
 	.neuro-suitable__grid p { min-height:80px; padding:13px 15px; }
 	.neuro-review-track blockquote { width:271px; min-height:545px; padding:28px 22px; flex-basis:271px; }
+	.neuro-review-track header::after { width:28px; height:18px; }
 	.neuro-review-track blockquote p { font-size:12px; }
 }
 
@@ -273,7 +276,7 @@ details p { padding:0 45px 18px 0; }
 .career-suitable .career-button { width:238px; margin:24px 0 0; color:#fff; border-color:#fff; background:transparent; }
 .career-review-track blockquote { width:478px; height:624px; min-height:624px; display:block; margin:0; flex:0 0 478px; padding:24px; border:2px solid #c1b4ed; border-radius:6px; color:var(--career-ink); background:#fff; }
 .career-review-track header { position:relative; min-height:201px; display:flex; padding:0 82px 25px 0; flex-direction:column; border-bottom:2px solid #c1b4ed; }
-.career-review-track header::after { content:''; position:absolute; right:2px; bottom:24px; width:57px; height:39px; background:#c1b4ed; -webkit-mask:url('./assets/images/career-zigzag-white.svg') center/contain no-repeat; mask:url('./assets/images/career-zigzag-white.svg') center/contain no-repeat; }
+.career-review-track header::after { content:''; position:absolute; right:2px; bottom:24px; width:60px; height:41px; background:#c1b4ed; -webkit-mask:url('./assets/images/career-zigzag-white.svg') center/contain no-repeat; mask:url('./assets/images/career-zigzag-white.svg') center/contain no-repeat; }
 .career-review-track strong { font-size:18px; }
 .career-review-track span { margin-top:12px; color:var(--career-violet); font-weight:900; }
 .career-review-track a { margin-top:73px; font-size:14px; }
@@ -296,6 +299,7 @@ details p { padding:0 45px 18px 0; }
 	.career-hero__checklist { max-width:none; margin-bottom:22px; }
 	.career-hero__checklist li { margin-bottom:8px; padding-left:24px; line-height:1.42; }
 	.career-hero__checklist li::before { top:3px; width:16px; height:14px; }
+	.career-positioning li::before,.career-card li::before,.career-suitable li::before { width:16px; height:14px; }
 	.career-accent { font-size:16px; }
 	.career-hero .career-button { margin:9px 0 0 30px; }
 	.career-positioning { width:auto; max-width:none; height:auto; min-height:829px; display:block; margin:0 1px; }
@@ -315,7 +319,7 @@ details p { padding:0 45px 18px 0; }
 	.career-card h3 { position:static; margin:0 0 13px; font-size:22px; }
 	.career-card__label { position:static; margin:0; }
 	.career-card__motif { position:relative; inset:auto; height:67px; margin:17px 0 21px; }
-	.career-card__motif::before { width:52px; height:35px; }
+	.career-card__motif::before { width:53px; height:35px; }
 	.career-card__motif::after { height:2px; }
 	.career-card>p:not([class]),
 	.career-card--featured>p:not([class]) { position:static; max-width:none; min-height:0; margin:0 0 24px; }
@@ -339,7 +343,7 @@ details p { padding:0 45px 18px 0; }
 	.career-suitable img { width:110%; height:auto; max-height:520px; margin:auto 0 0 -5%; object-position:center bottom; }
 	.career-review-track blockquote { position:relative; width:271px; min-height:390px; flex-basis:271px; padding:28px 22px 55px; }
 	.career-review-track header { min-height:118px; padding-right:58px; }
-	.career-review-track header::after { right:0; width:43px; height:30px; }
+	.career-review-track header::after { right:0; width:28px; height:18px; }
 	.career-review-track strong { font-size:16px; }
 	.career-review-track span { font-size:14px; }
 	.career-review-track a,.career-review-track blockquote p { font-size:12px; }
@@ -376,10 +380,10 @@ details p { padding:0 45px 18px 0; }
 .nc-about__service-summary::after { content:''; position:absolute; top:283px; left:45px; width:374px; height:2px; background:var(--nc-about-violet); }
 .nc-about__service-heading { position:relative; display:flex; align-items:flex-start; }
 .nc-about__service-heading h3,.nc-about__programmes h3 { margin:0; color:var(--nc-about-purple); font-size:45px; line-height:1.08; }
-.nc-about__service-heading span { position:absolute; top:16px; right:-46px; width:180px; height:32.5px; margin:0; color:#fff; font:700 21px/1.1 Lato,Arial,sans-serif; }
-.nc-about__service-heading span img { position:absolute; inset:0; width:180px; height:32.5px; }
+.nc-about__service-heading span { position:absolute; top:16px; right:-46px; width:158px; height:34px; margin:0; color:#fff; font:700 21px/1.1 Lato,Arial,sans-serif; }
+.nc-about__service-heading span img { position:absolute; inset:0; width:158px; height:34px; }
 .nc-about__service-heading span b { position:relative; z-index:1; display:block; padding:5px 18px; font:inherit; text-align:center; }
-.nc-about__zigzag { width:110px; height:auto; margin:23px 0 0; }
+.nc-about__zigzag { width:110px; height:71px; margin:23px 0 0; }
 .nc-about__scope { margin:60px 0 22px; font-weight:900; }
 .nc-about__service-summary>p:last-child { width:356px; max-width:100%; font-size:18px; line-height:20px; }
 .nc-about__programmes { padding-left:0!important; }
@@ -391,7 +395,7 @@ details p { padding:0 45px 18px 0; }
 .nc-about__life { --nc-about-purple:#3f2961; --nc-about-violet:#855cac; --nc-about-stroke:#855cac; --nc-about-lilac:#e9e1f3; --nc-about-paper:#f8f1ee; position:relative; height:auto; min-height:1118px; padding-top:143px; padding-bottom:80px; overflow:hidden; isolation:isolate; color:#252525; text-align:center; background:var(--nc-about-lilac); font-family:Lato,Arial,sans-serif; }
 .nc-about__life h2 { margin:0; font-size:65px; line-height:1; }
 .nc-about__instagram { display:inline-flex; margin-top:25px; align-items:center; gap:15px; color:var(--nc-about-purple); font-size:18px; font-weight:900; text-decoration:none; }
-.nc-about__instagram img { width:29px; height:29px; }
+.nc-about__instagram img { width:28px; height:29px; }
 .nc-about__life-photo { position:relative; z-index:1; width:1216px; height:661px; display:grid; grid-template-columns:98px 930px 98px; gap:45px; align-items:center; justify-content:center; margin:49px auto 0; }
 @media (min-width:851px) {
 	.nc-about__hero { width:100%; max-width:none; grid-template-columns:39.0909vw minmax(0,1fr); margin:0; }
@@ -419,8 +423,8 @@ details p { padding:0 45px 18px 0; }
 	.nc-about__service-card>div { padding:0; }
 	.nc-about__service-summary { position:absolute; top:25px; left:24px; width:237px; border-right:0; }
 	.nc-about__service-heading h3,.nc-about__programmes h3 { font-size:29px; line-height:32px; }
-	.nc-about__service-heading span { position:absolute; top:63px; right:auto; left:84px; width:180px; height:34px; margin:0; font-size:18px; }
-	.nc-about__zigzag { width:53px; height:auto; margin-top:20px; }
+	.nc-about__service-heading span { position:absolute; top:63px; right:-27px; left:auto; width:158px; height:34px; margin:0; font-size:18px; }
+	.nc-about__zigzag { width:53px; height:35px; margin-top:20px; }
 	.nc-about__scope { margin:40px 0 19px; }
 	.nc-about__service-summary>p:last-child { font-size:14px; line-height:16px; }
 	.nc-about__service-summary::after { top:101px; left:0; width:246px; height:2px; }
@@ -620,8 +624,8 @@ details p { padding:0 45px 18px 0; }
 }
 .nc-gallery>button:disabled { cursor:default; opacity:.42; }
 .nc-about__life .nc-gallery--single>button:disabled { opacity:1; }
-.nc-gallery__pagination { position:absolute; top:calc(100% + 54px); left:50%; display:flex; width:max-content; max-width:100%; gap:22px; transform:translateX(-50%); }
-.nc-gallery__pagination button { width:12px; height:12px; padding:0; border:2px solid currentColor; border-radius:50%; color:inherit; background:transparent; cursor:pointer; }
+.nc-gallery__pagination { position:absolute; top:calc(100% + 54px); left:50%; display:flex; width:max-content; max-width:100%; gap:11px; transform:translateX(-50%); }
+.nc-gallery__pagination button { width:18px; height:18px; padding:0; border:2px solid currentColor; border-radius:50%; color:inherit; background:transparent; cursor:pointer; }
 .nc-gallery__pagination button[aria-current="true"] { background:currentColor; }
 
 /* One desktop header system across every route. */
@@ -653,7 +657,7 @@ details p { padding:0 45px 18px 0; }
 }
 .nc-about__life-photo { color:var(--nc-about-violet); }
 .nc-about__life-photo .nc-gallery__viewport { width:930px; height:661px; }
-.nc-about__life-photo>button { width:84px; height:86px; padding:0; overflow:hidden; justify-self:center; appearance:none; border:0; border-radius:0; color:transparent; background-color:transparent; background-position:center; background-size:84px 86px; background-repeat:no-repeat; box-shadow:none; font-size:0; }
+.nc-about__life-photo>button { width:86px; height:86px; padding:0; overflow:hidden; justify-self:center; appearance:none; border:0; border-radius:0; color:transparent; background-color:transparent; background-position:center; background-size:86px 86px; background-repeat:no-repeat; box-shadow:none; font-size:0; }
 .nc-about__life-photo>.nc-gallery__previous { background-image:url('assets/images/icon-arrow-gallery-v2.svg'); transform:rotate(180deg); }
 .nc-about__life-photo>.nc-gallery__next { background-image:url('assets/images/icon-arrow-gallery-v2.svg'); }
 .nc-about__life-photo .nc-gallery__pagination { width:max-content; }
@@ -669,9 +673,9 @@ details p { padding:0 45px 18px 0; }
 	.nc-about__life-photo { display:block; margin-top:15px; }
 	.nc-about__life-photo .nc-gallery__viewport { width:100%; max-width:none; height:223px; margin:0; }
 	.nc-gallery>button { display:none; }
-	.nc-gallery__pagination { top:calc(100% + 7px); gap:9px; }
-	.nc-gallery__pagination button { width:8px; height:8px; border-width:1px; }
-	.nc-about__life-photo .nc-gallery__pagination { width:max-content; height:8px; }
+	.nc-gallery__pagination { top:calc(100% + 7px); gap:7px; }
+	.nc-gallery__pagination button { width:12px; height:12px; border-width:1px; }
+	.nc-about__life-photo .nc-gallery__pagination { width:max-content; height:12px; }
 }
 
 /* Source-safe photo rendering: never stretch a PSD smart-object export. */
@@ -834,7 +838,7 @@ details p { padding:0 45px 18px 0; }
 .site-page .site-faq details { border-top:2px solid var(--site-accent); }
 .site-page .site-faq details:last-of-type { border-bottom:2px solid var(--site-accent); }
 .site-page .site-faq summary { min-height:80px; display:flex; align-items:center; padding:15px 52px; font-size:16px; line-height:1.3; font-weight:900; }
-.site-page .site-faq summary::after { right:20px; }
+.site-page .site-faq summary::after { right:20px; width:21px; height:22px; }
 .site-page .site-faq details p { max-width:none; margin:0; padding:0 52px 25px; font-size:14px; line-height:1.45; }
 .site-page .site-faq__closing { margin:40px 0 0; font-size:14px; line-height:1.4; }
 .site-page .site-faq__aside { position:relative; width:294px; grid-column:2; grid-row:2; align-self:start; margin:0; padding:0; }
@@ -904,7 +908,7 @@ details p { padding:0 45px 18px 0; }
 	.site-page .site-credentials { width:auto; max-width:none; height:auto; margin:0 16px; padding:51px 7px 32px; }
 	.site-page .site-credentials ul { grid-template-columns:1fr; gap:23px; padding:0; }
 	.site-page .site-credentials li { min-height:0; padding-left:22px; font-size:14px; line-height:1.28; }
-	.site-check { font-size:17px; }
+	.site-check { width:16px; height:14px; font-size:0; }
 	.site-page .site-services { width:auto; max-width:none; height:auto; margin:0 16px; padding:0 0 61px; }
 	.site-page .site-services>.site-section-title { width:240px; max-width:100%; margin:0 0 60px; font-size:40px; line-height:1.05; text-align:left; }
 	.site-page .site-service-grid { width:100%; display:block; }
@@ -985,10 +989,11 @@ body.has-certificate-lightbox { overflow:hidden; }
 	.career-card__motif { height:50px; }
 	.career-card h4,.career-card--featured h4 { margin:24px 0 15px; }
 	.career-card__free { width:276px; margin-right:-12px; padding-inline:24px; }
-	.career-card__flag { width:165px; padding-left:32px; }
+	.career-card__free,.career-card__flag,.career-offer { height:32px; }
+	.career-card__flag { width:163px; padding-left:32px; }
 	.career-price s { margin-right:16px; }
 	.career-offer {
-		width:150px;
+		width:163px;
 		margin:0 auto 19px -12px;
 		padding:0 27px 0 14px;
 		-webkit-mask:none;
@@ -1038,8 +1043,8 @@ body.has-certificate-lightbox { overflow:hidden; }
 	.neuro-card li { margin-bottom:14px; padding-left:23px; font-size:14px; line-height:1.3; }
 	.neuro-card__outcome { margin:25px 0 17px; margin-top:auto; font-size:14px; line-height:1.3; }
 	.neuro-price { margin:20px 0 18px; font-size:36px; }
-	.neuro-card__flag { top:223px; right:0; width:158px; height:34px; padding:8px 16px 0 54px; clip-path:polygon(18px 0,100% 0,100% 100%,18px 100%,0 50%); }
-	.neuro-card__offer { width:163px; height:34px; margin:0 0 26px -20px; padding:7px 19px; clip-path:polygon(0 0,100% 0,calc(100% - 18px) 50%,100% 100%,0 100%); font-size:12px; text-align:center; }
+	.neuro-card__flag { top:176px; right:-4px; width:162px; height:33px; padding:0 22px 0 38px; clip-path:none; font-size:14px; }
+	.neuro-card__offer { width:162px; height:32px; margin:0 0 26px -20px; padding:0 19px; -webkit-mask:none; mask:none; clip-path:polygon(0 0,calc(100% - 18px) 0,100% 50%,calc(100% - 18px) 100%,0 100%); font-size:14px; text-align:center; }
 	.site-page .neuro-card--featured .neuro-button { width:214px; }
 	.neuro-story { height:1221px; }
 	.neuro-story__copy { height:683px; padding:31px 16px 25px; }
@@ -1070,7 +1075,7 @@ body.has-certificate-lightbox { overflow:hidden; }
 	.site-page .neuro-review-track::-webkit-scrollbar { display:none; }
 	.neuro-review-track blockquote { width:207px; height:310px; min-height:310px; padding:12px 22px; flex-basis:207px; overflow:hidden; }
 	.neuro-review-track header { padding:0 45px 12px 0; }
-	.neuro-review-track header::after { right:0; bottom:13px; width:34px; height:23px; }
+	.neuro-review-track header::after { right:0; bottom:13px; }
 	.neuro-review-track strong { font-size:12px; }
 	.neuro-review-track a { font-size:10px; }
 	.neuro-review-track blockquote p { margin-top:13px; font-size:10px; line-height:1.25; }
