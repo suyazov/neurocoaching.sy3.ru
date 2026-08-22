@@ -83,9 +83,9 @@ $questions = array(
 					<li><img src="<?php echo esc_url( $images . 'about-check.svg' ); ?>" width="112" height="98" alt=""><strong>From Surviving to Thriving —</strong><br>Stress &amp; Energy Management</li>
 					<li><img src="<?php echo esc_url( $images . 'about-check.svg' ); ?>" width="112" height="98" alt=""><strong>Burnout-Proof —</strong><br>Recognise It Before It Hits</li>
 					<li><img src="<?php echo esc_url( $images . 'about-check.svg' ); ?>" width="112" height="98" alt=""><strong>Work Smarter —</strong><br>Time, Focus &amp; Productivity</li>
-					<li><img src="<?php echo esc_url( $images . 'about-check.svg' ); ?>" width="112" height="98" alt=""><strong>Building Resilience —</strong> Wellbeing That Actually Lasts</li>
+					<li><img src="<?php echo esc_url( $images . 'about-check.svg' ); ?>" width="112" height="98" alt=""><strong>Building Resilience —</strong><br>Wellbeing That Actually Lasts</li>
 				</ul>
-				<p><em>A team that feels better, works better</em></p>
+				<p class="nc-about__programmes-outcome"><img src="<?php echo esc_url( $images . 'about-check.svg' ); ?>" width="112" height="98" alt=""><em>A team that feels better, works better</em></p>
 				<a class="site-button nc-about__button" href="<?php echo esc_url( $booking ); ?>">Book a call</a>
 			</div>
 		</article>

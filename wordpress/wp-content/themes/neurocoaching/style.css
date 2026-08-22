@@ -410,8 +410,10 @@ details p { padding:0 45px 18px 0; }
 .nc-about__programmes { width:362px; padding-left:0!important; }
 .nc-about__programmes ul { margin:30px 0 21px; padding:0 0 0 31px; list-style:none; }
 .nc-about__programmes li { position:relative; margin-bottom:28px; font-size:18px; line-height:21px; }
-.nc-about__programmes li>img { position:absolute; top:0; left:-31px; width:20px; height:18px; }
+.nc-about__programmes li>img { position:absolute; top:-4px; left:-31px; width:20px; height:18px; }
 .nc-about__programmes>p { margin:0 0 29px; font-size:18px; font-weight:600; }
+.nc-about__programmes-outcome { position:relative; }
+.nc-about__programmes-outcome>img { position:absolute; top:-4px; left:-35px; width:20px; height:18px; }
 .nc-about__programmes .nc-about__button { width:186px; min-width:186px; min-height:63px; border-color:var(--nc-about-violet); color:#fff; background:var(--nc-about-violet); }
 .nc-about__life { --nc-about-purple:#3f2961; --nc-about-violet:#855cac; --nc-about-stroke:#855cac; --nc-about-lilac:#e9e1f3; --nc-about-paper:#f8f1ee; position:relative; height:auto; min-height:1118px; padding-top:143px; padding-bottom:80px; overflow:hidden; isolation:isolate; color:#252525; text-align:center; background:var(--nc-about-lilac); font-family:Lato,Arial,sans-serif; }
 .nc-about__life h2 { margin:0; font-size:65px; line-height:1; }
@@ -452,8 +454,9 @@ details p { padding:0 45px 18px 0; }
 	.nc-about__programmes { position:absolute; top:363px; left:24px; width:237px; }
 	.nc-about__programmes ul { margin:19px 0 10px; padding-left:23px; }
 	.nc-about__programmes li { margin-bottom:8px; font-size:14px; line-height:16px; }
-	.nc-about__programmes li>img { left:-23px; width:16px; height:14px; }
+	.nc-about__programmes li>img { top:0; left:-23px; width:16px; height:14px; }
 	.nc-about__programmes>p { margin:7px 0 0; font-size:14px; }
+	.nc-about__programmes-outcome>img { display:none; }
 	.nc-about__programmes .nc-about__button { width:163px; min-width:163px; min-height:53px; margin:29px 0 0 -2px; }
 	.nc-about__life { width:100%; height:434px; min-height:0; padding-top:43px; padding-bottom:0; background:var(--nc-about-paper); }
 	.nc-about__life h2 { font-size:36px; }
