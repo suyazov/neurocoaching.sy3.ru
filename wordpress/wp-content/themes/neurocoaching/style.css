@@ -854,7 +854,11 @@ details p { padding:0 45px 18px 0; }
 	.site-page--about .nc-about__programmes>p { width:281px; margin-left:34px; white-space:nowrap; }
 	.site-page .nc-about__programmes .nc-about__button { width:186px; min-width:186px; min-height:63px; margin-left:-3px; border-color:var(--nc-about-violet); color:#fff; background:var(--nc-about-violet); }
 	.site-page--about .nc-about__life { height:944px; min-height:944px; padding-bottom:0; }
-	.site-page.site-page--about .site-cta { height:401px; margin-top:-4px; }
+	.site-page.site-page--about .site-cta { height:401px; margin-top:-4px; padding-top:150px; }
+	.site-page.site-page--about .site-cta__inner { width:930px; }
+	.site-page.site-page--about .site-cta .site-section-title { margin:0 0 34px 2px; }
+	.site-page.site-page--about .site-cta p { margin:0 0 26px 1px; }
+	.site-page.site-page--about .site-cta__button { height:63px; min-height:63px; }
 
 	.career-services-route .career-hero { height:1139px; }
 	.career-services-route .site-education { height:473px; }
