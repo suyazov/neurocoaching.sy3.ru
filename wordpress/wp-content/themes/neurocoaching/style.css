@@ -1006,6 +1006,11 @@ details p { padding:0 45px 18px 0; }
 	.site-page .site-services>.site-section-title { width:240px; max-width:100%; margin:0 0 60px; font-size:40px; line-height:1.05; text-align:left; }
 	.site-page .site-service-grid { width:100%; display:block; }
 	.site-page--about .site-service-card { grid-template-columns:none; }
+	.site-page.site-page--about .nc-about__programmes .nc-about__button {
+		border-color:var(--site-accent);
+		color:#fff;
+		background:var(--site-accent);
+	}
 	.site-page .site-reviews { min-height:0; padding:55px 0; }
 	.site-page .site-reviews>.site-shell { width:auto; max-width:none; margin-inline:16px; }
 	.site-page .site-reviews .site-section-title { margin-bottom:39px; font-size:36px; text-align:left; }

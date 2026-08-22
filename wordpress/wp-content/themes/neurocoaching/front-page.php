@@ -32,7 +32,7 @@ $questions = array(
 ?>
 <article class="site-page site-page--about nc-about">
 	<section class="site-section site-hero nc-about__hero" aria-labelledby="nc-about-name">
-		<div class="site-hero__media nc-about__hero-photo"><img src="<?php echo esc_url( $images . 'about-hero-768.webp' ); ?>" srcset="<?php echo esc_url( $images . 'about-hero-512.webp' ); ?> 512w, <?php echo esc_url( $images . 'about-hero-768.webp' ); ?> 768w, <?php echo esc_url( $images . 'about-hero-1200.webp' ); ?> 1200w, <?php echo esc_url( $images . 'about-hero-hires.webp' ); ?> 1537w" sizes="(max-width: 850px) min(100vw, 402px), 511px" width="768" height="1152" alt="Ksenia Belousova" decoding="async" fetchpriority="high"></div>
+		<div class="site-hero__media nc-about__hero-photo"><img src="<?php echo esc_url( $images . 'about-hero-768.webp' ); ?>" srcset="<?php echo esc_url( $images . 'about-hero-512.webp' ); ?> 512w, <?php echo esc_url( $images . 'about-hero-768.webp' ); ?> 768w, <?php echo esc_url( $images . 'about-hero-1200.webp' ); ?> 1200w, <?php echo esc_url( $images . 'about-hero-hires.webp' ); ?> 1537w" sizes="(max-width: 850px) min(100vw, 402px), 711px" width="768" height="1152" alt="Ksenia Belousova" decoding="async" fetchpriority="high"></div>
 		<div class="site-hero__content nc-about__hero-copy">
 			<p class="nc-about__eyebrow">UN PROFESSIONAL <span>|</span><br class="nc-about__mobile-break"> CAREER STRATEGIST <span>|</span><br class="nc-about__mobile-break"> NEURO COACH</p>
 			<h1 id="nc-about-name">Ksenia Belousova</h1>

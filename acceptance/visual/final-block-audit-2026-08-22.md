@@ -2,6 +2,26 @@
 
 Source of truth: the latest customer PSD files in `source/`, supplemented only by the customer's later explicit PDF/image corrections. The three routes use shared components where the content pattern is shared; route modifiers preserve the measured PSD geometry.
 
+## Fresh production re-audit after owner review
+
+All six target screens were rendered again from the latest PSD files and compared side by side with fresh production full-page captures at the native source widths. This pass did not reuse the old screenshots as the source of truth.
+
+| Route | PSD desktop | Live desktop | PSD mobile | Live mobile | Horizontal overflow |
+|---|---:|---:|---:|---:|---:|
+| About | 1320×6101* | 1320×5555 | 320×5753 | 320×5801 | 0 px |
+| Career Services | 1440×9212 | 1440×9153 | 320×9307 | 320×9342 | 0 px |
+| Neurocoaching | 1440×10926 | 1440×10935 | 320×11553 | 320×11566 | 0 px |
+
+`*` The About PSD canvas contains material below the actual 5671 px page composition; it is not implemented as page content.
+
+Confirmed corrections from this re-audit:
+
+- About desktop CTA content now uses the PSD coordinates: title `x=197/y=3858`, subtitle `x=196/y=3942`, button `x=195/y=3989`, section height `401px`.
+- About mobile B2B `Book a call` is filled `#855CAC` with white text, matching the mobile PSD instead of inheriting the shared outline-button rule.
+- About desktop hero now selects the 768 px source candidate for the measured 711 px rendered image instead of stretching the 512 px candidate; the crop and layout are unchanged.
+
+Functional differences that intentionally supersede decorative PSD pixels remain limited to the customer-approved certificate sets, the real functional gallery-dot count, the later supplied About FAQ photograph, and the consistent NeuroSprint price described below.
+
 ## Shared components
 
 - **Header:** one semantic structure, one logo/social icon set, common navigation spacing and active state on all three routes.
