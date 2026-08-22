@@ -194,14 +194,18 @@ details p { padding:0 45px 18px 0; }
 .neuro-card__offer { position:absolute; right:-1px; bottom:79px; width:198px; height:37px; display:flex; padding:0 22px 0 38px; align-items:center; justify-content:center; color:#fff; background:#f1264b; -webkit-mask:url('./assets/images/career-flag-long.svg') center/100% 100% no-repeat; mask:url('./assets/images/career-flag-long.svg') center/100% 100% no-repeat; font-size:21px; font-weight:900; }
 .neuro-card .neuro-button { position:absolute; bottom:54px; left:28px; width:238px; height:64px; min-height:64px; padding:10px 31px; }
 .site-page .neuro-card--featured .neuro-button { left:22px; width:243px; border-color:var(--site-action); color:#fff; background:var(--site-action); }
-.neuro-story { height:1066px; display:grid; grid-template-columns:50% 50%; color:#fff; background:var(--neuro-purple); }
-.neuro-story__photo { height:1066px; overflow:hidden; }
+.neuro-story { height:1066px; display:grid; grid-template-columns:50% 50%; color:#fbf7f2; background:#382964; }
+.neuro-story__photo { position:relative; height:1066px; overflow:hidden; }
 .neuro-story__photo img { width:100%; height:100%; object-fit:cover; object-position:center; }
-.neuro-story__copy { padding:90px 85px 60px 76px; }
-.neuro-story h2,.neuro-story h3 { color:#fff; font-size:49px; line-height:1.03; }
-.neuro-story h2 { margin-bottom:52px; }
-.neuro-story h3 { margin:65px 0 28px; }
-.neuro-story p { font-size:16px; line-height:1.37; }
+.neuro-story__photo::after { content:''; position:absolute; inset:0 0 0 auto; width:165px; background:linear-gradient(90deg,rgba(56,41,100,0),#382964); pointer-events:none; }
+.neuro-story__copy { padding:90px 0 60px 24px; }
+.neuro-story h2,.neuro-story h3 { width:510px; color:#fbf7f2; font-size:42px; line-height:1.12; letter-spacing:-.035em; }
+.neuro-story h2 { margin-bottom:38px; }
+.neuro-story h3 { width:445px; margin:65px 0 37px; }
+.neuro-story p { width:426px; margin-bottom:12px; font-size:18px; line-height:1.2; }
+.neuro-story__copy>p:last-child { width:406px; }
+.neuro-story__desktop-title { display:inline; }
+.neuro-story__mobile-title { display:none; }
 .neuro-method { position:relative; min-height:714px; padding:130px 0 45px; }
 .neuro-method h2 { width:920px; max-width:100%; margin:0 0 65px; font-size:43px; line-height:1.05; }
 .neuro-method__layout { display:grid; grid-template-columns:470px minmax(0,1fr); gap:60px; align-items:start; }
@@ -818,8 +822,8 @@ details p { padding:0 45px 18px 0; }
 	.site-page .site-hero>.site-hero__content>* { max-width:100%; }
 	.site-page .neuro-hero>.neuro-hero__copy { width:min(887px,100%); padding-top:211px; padding-left:95px; }
 	.site-page .neuro-hero .neuro-button { width:238px; height:64px; min-height:64px; }
-	.neuro-story { grid-template-columns:600px minmax(0,1fr); }
-	.neuro-story__photo { width:600px; height:800px; }
+	.neuro-story { grid-template-columns:50% 50%; }
+	.neuro-story__photo { width:auto; height:1066px; }
 	.nc-about__life-photo { width:1216px; grid-template-columns:98px 930px 98px; }
 	.nc-about__life-photo .nc-gallery__viewport { width:930px; }
 }
@@ -1363,12 +1367,16 @@ body.has-certificate-lightbox { overflow:hidden; }
 	.neuro-card--featured .neuro-price { top:1145px; }
 	.neuro-card__offer { position:absolute; top:1196px; right:auto; bottom:auto; left:0; width:163px; height:32px; margin:0; padding:0 19px; -webkit-mask:none; mask:none; clip-path:polygon(0 0,calc(100% - 18px) 0,100% 50%,calc(100% - 18px) 100%,0 100%); font-size:16px; text-align:center; }
 	.site-page .neuro-card--featured .neuro-button { top:1253px; left:21px; width:217px; }
-	.neuro-story { height:1221px; }
-	.neuro-story__copy { height:683px; padding:31px 16px 25px; }
-	.neuro-story__photo { height:538px; }
-	.neuro-story h2 { margin-bottom:24px; font-size:30px; line-height:1.03; }
-	.neuro-story h3 { margin:34px 0 20px; font-size:22px; line-height:1.05; }
-	.neuro-story p { margin-bottom:14px; font-size:12px; line-height:1.35; }
+	.neuro-story { height:1224px; }
+	.neuro-story__copy { z-index:1; height:797px; padding:31px 16px 0; }
+	.neuro-story__photo { height:427px; }
+	.neuro-story__photo::after { inset:0; width:auto; background:linear-gradient(180deg,#382964 0,rgba(56,41,100,.88) 26px,rgba(56,41,100,0) 112px); }
+	.neuro-story h2 { margin-bottom:16px; font-size:36px; line-height:40px; }
+	.neuro-story h3 { margin:43px 0 22px; font-size:20px; line-height:24px; }
+	.neuro-story h2,.neuro-story h3,.neuro-story p,.neuro-story__copy>p:last-child { width:auto; }
+	.neuro-story p { margin-bottom:14px; font-size:14px; line-height:20px; }
+	.neuro-story__desktop-title { display:none; }
+	.neuro-story__mobile-title { display:inline; }
 	.neuro-method { height:1022px; padding:48px 0 0; }
 	.neuro-method h2 { margin-bottom:24px; font-size:22px; line-height:1.08; }
 	.neuro-method__layout { gap:22px; }

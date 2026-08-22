@@ -111,13 +111,13 @@ $faqs = array(
 	</section>
 
 	<section class="neuro-story">
-		<div class="neuro-story__photo"><img src="<?php echo esc_url( $images . 'neuro-story-hires.webp' ); ?>" width="600" height="800" alt="Ksenia Belousova beside flowering trees" loading="lazy" decoding="async"></div>
+		<div class="neuro-story__photo"><img src="<?php echo esc_url( $images . 'neuro-story-hires.webp' ); ?>" width="809" height="1079" alt="Ksenia Belousova beside flowering trees" loading="lazy" decoding="async"></div>
 		<div class="neuro-story__copy">
-			<h2>I didn't find this in a book.<br>I found it in the hardest years of my life.</h2>
+			<h2><span class="neuro-story__desktop-title">I didn't find this in a book.<br>I found it in the hardest<br>years of my life.</span><span class="neuro-story__mobile-title">I didn't find this<br>in a book. I found<br>it in the hardest<br>years of my life</span></h2>
 			<p>I built a successful international career at the United Nations — working alongside diplomats, leading people across different cultures, and changing my career path several times along the way. I relocated to four countries, travelled constantly, and lived a life that, from the outside, looked extraordinary.</p>
 			<p>And it was. I also had a husband I love, two children growing up too fast, and aging parents who needed me. Every role I played, I gave it everything. What I didn't realise was how far I had overstretched — until the day I simply couldn't go on anymore. Not because something broke. Because I had nothing left.</p>
 			<p>That's when I stopped looking for a better strategy and started understanding how my brain actually works. That search led me to neuroscience — and changed everything.</p>
-			<h3>I was doing everything right. And I still felt completely lost.</h3>
+			<h3><span class="neuro-story__desktop-title">I was doing everything<br>right. And I still felt<br>completely lost.</span><span class="neuro-story__mobile-title">I was doing everything right.<br>And I still felt completely lost.</span></h3>
 			<p>That's the moment I understand better than any theory. It's not about not trying hard enough. It's about running a system that was never designed for this much — and not knowing how to reset it.</p>
 		</div>
 	</section>
