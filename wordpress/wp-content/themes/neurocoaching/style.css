@@ -864,6 +864,16 @@ details p { padding:0 45px 18px 0; }
 	.site-page.site-page--about .site-cta__button { height:63px; min-height:63px; }
 
 	.career-services-route .career-hero { height:1139px; }
+	.career-services-route .career-hero>.career-hero__copy { width:610px; padding-left:98px; }
+	.career-services-route .career-hero>.career-hero__copy>p { max-width:485px; }
+	.career-services-route .career-hero__checklist { width:485px; max-width:485px; }
+	.career-services-route .career-hero__checklist li { padding-left:0; }
+	.career-services-route .career-hero__checklist li::before { top:-4px; left:-37px; width:22px; height:20px; }
+	.career-services-route .career-hero__checklist li:first-child { width:373px; }
+	.career-services-route .career-hero__checklist li:nth-child(3) { margin-bottom:13px; }
+	.career-services-route .career-hero__copy>p:not(.career-quote):not(.career-accent) { margin-bottom:18px; font-size:14px; line-height:1.2; }
+	.career-services-route .career-hero__copy>.career-accent { margin-bottom:18px; font-size:18px; line-height:1.12; }
+	.career-services-route .career-hero .career-button { width:255px; height:64px; min-height:64px; margin-top:32px; margin-left:1px; }
 	.career-services-route .site-education { height:473px; }
 	.career-services-route .site-credentials { height:472px; padding-top:92px; padding-bottom:110px; }
 	.career-positioning { width:1226px; height:727px; grid-template-columns:476px minmax(0,1fr); margin-bottom:83px; }
