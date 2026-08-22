@@ -842,6 +842,56 @@ details p { padding:0 45px 18px 0; }
 	.career-card--featured .career-button { bottom:65px; height:61px; min-height:61px; }
 	.site-page .neuro-card .neuro-button { bottom:53px; height:64px; min-height:64px; }
 	.site-page .neuro-card--featured .neuro-button { bottom:54px; height:61px; min-height:61px; }
+
+	/* Final PSD block geometry. Shared components keep one structure while
+	   route modifiers preserve the source artwork's measured proportions. */
+	.site-page--about .site-education { height:481px; }
+	.site-page--about .site-credentials { height:553px; padding-top:142px; padding-bottom:141px; }
+	.site-page--about .site-services { padding-bottom:146px; }
+	.site-page--about .site-services>.site-section-title { margin-bottom:82px; }
+	.site-page--about .nc-about__life { height:944px; min-height:944px; padding-bottom:0; }
+	.site-page.site-page--about .site-cta { height:401px; margin-top:-4px; }
+
+	.career-services-route .career-hero { height:1139px; }
+	.career-services-route .site-education { height:473px; }
+	.career-services-route .site-credentials { height:472px; padding-top:92px; padding-bottom:110px; }
+	.career-positioning { width:1226px; height:727px; grid-template-columns:476px minmax(0,1fr); margin-bottom:83px; }
+	.career-positioning>div { padding-top:83px; padding-bottom:101px; }
+	.career-positioning>.career-positioning__statement { padding-right:23px; padding-left:123px; }
+	.career-positioning__statement::after { top:85px; right:-1px; bottom:78px; width:6px; }
+	.career-positioning__help { padding-right:49px; padding-left:75px!important; }
+	.career-positioning__help h2 { margin-bottom:48px; }
+	.career-positioning li { padding-left:38px; }
+	.site-page .career-positioning .career-button { width:236px; margin-left:-3px; }
+	.career-services-route .nc-about__life { height:1105px; min-height:1105px; padding-bottom:0; }
+	.career-services-route .site-cta { margin-top:-3px; }
+
+	.site-page .neuro-services { padding-bottom:138px; }
+	.site-page .neuro-suitable { margin-bottom:31px; }
+	.neurocoaching-route .nc-about__life { height:1106px; min-height:1106px; margin-top:-4px; padding-bottom:0; }
+	.neurocoaching-route .site-cta { margin-top:-3px; }
+
+	.site-page--about .nc-about__life-photo,
+	.career-services-route .nc-about__life-photo,
+	.neurocoaching-route .nc-about__life-photo { position:relative; display:block; }
+	.site-page--about .nc-about__life-photo { width:936px; height:479px; margin-top:52px; }
+	.site-page--about .nc-about__life-photo .nc-gallery__viewport { position:absolute; top:0; left:132px; width:674px; height:479px; }
+	.site-page--about .nc-about__life-photo>button { position:absolute; top:198px; }
+	.site-page--about .nc-about__life-photo>.nc-gallery__previous { left:0; }
+	.site-page--about .nc-about__life-photo>.nc-gallery__next { right:0; }
+
+	.career-services-route .nc-about__life-photo { width:1224px; height:632px; margin-top:56px; }
+	.career-services-route .nc-about__life-photo .nc-gallery__viewport { position:absolute; top:0; left:361px; width:512px; height:632px; }
+	.career-services-route .nc-about__life-photo>button { position:absolute; top:281px; }
+	.career-services-route .nc-about__life-photo>.nc-gallery__previous { left:2px; }
+	.career-services-route .nc-about__life-photo>.nc-gallery__next { right:-1px; }
+
+	.neurocoaching-route .nc-about__life-photo { width:1220px; height:632px; margin-top:57px; }
+	.neurocoaching-route .nc-about__life-photo .nc-gallery__viewport { position:absolute; top:0; left:129px; width:961px; height:632px; }
+	.neurocoaching-route .nc-about__life-photo>button { position:absolute; top:281px; }
+	.neurocoaching-route .nc-about__life-photo>.nc-gallery__previous { left:0; }
+	.neurocoaching-route .nc-about__life-photo>.nc-gallery__next { right:-10px; }
+	.site-page .nc-about__life-photo .nc-gallery__pagination { top:calc(100% + 34px); }
 }
 .site-page .site-service-card { border-color:var(--site-accent); }
 .site-page--about .site-service-card { grid-template-columns:repeat(2,minmax(0,1fr)); }
@@ -888,7 +938,7 @@ details p { padding:0 45px 18px 0; }
 	.site-page .career-reviews { min-height:975px; padding:130px 0 104px; }
 	.site-page .career-reviews .site-section-title { font-size:62px; }
 	.site-page .career-review-track { gap:48px; }
-	.site-page .neuro-reviews { height:736px; min-height:736px; padding:130px 0 108px; }
+	.site-page .neuro-reviews { height:741px; min-height:741px; padding:130px 0 108px; }
 	.site-page .neuro-reviews .site-section-title { margin-bottom:55px; font-size:62px; }
 	.site-page .neuro-review-track { gap:48px; scrollbar-width:none; }
 	.site-page .neuro-review-track::-webkit-scrollbar { display:none; }

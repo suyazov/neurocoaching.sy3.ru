@@ -176,9 +176,9 @@ $faqs = array(
 			'questions'       => $faqs,
 			'open_question'   => "What's the first step?",
 			'closing'         => "Start with a conversation. You don't need a perfect plan — just the willingness to change something. Book a Discovery Session: free 30 minutes that will give you clarity on where you are, what's holding you back, and exactly what your next step looks like. From there, we build everything together.",
-			'image'           => $images . 'about-faq-hires.webp',
-			'image_width'     => 600,
-			'image_height'    => 800,
+			'image'           => $images . 'neuro-faq-hires.webp',
+			'image_width'     => 373,
+			'image_height'    => 478,
 			'image_alt'       => 'Ksenia in the mountains',
 			'button_url'      => $booking,
 		)
