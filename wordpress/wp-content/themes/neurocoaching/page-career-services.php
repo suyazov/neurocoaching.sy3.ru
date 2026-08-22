@@ -169,6 +169,7 @@ $faqs = array(
 			'section_class'   => 'career-faq career-wrap',
 			'questions_class' => 'career-faq__questions',
 			'questions'       => $faqs,
+			'open_question'   => "What's the first step?",
 			'image'           => get_theme_file_uri( '/assets/images/career-faq-client.webp' ),
 			'image_width'     => 700,
 			'image_height'    => 910,
