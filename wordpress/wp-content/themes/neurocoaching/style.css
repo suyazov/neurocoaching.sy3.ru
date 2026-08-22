@@ -65,7 +65,8 @@ details p { padding:0 45px 18px 0; }
 .neuro-difference>div { padding:67px 52px; }
 .neuro-difference__intro { border-right:1px solid rgba(255,255,255,.75); }
 .neuro-difference h2 { margin:0 0 27px; color:#fff; font-size:61px; line-height:1.03; }
-.neuro-waves { display:block; margin:-5px 0 34px; font:700 65px/.35 Arial,sans-serif; letter-spacing:-13px; }
+.neuro-waves { position:relative; display:block; width:65px; height:45px; margin:-5px 0 34px; overflow:hidden; color:var(--neuro-purple); font-size:0; }
+.neuro-waves::before { content:''; position:absolute; inset:0; background:currentColor; -webkit-mask:url('./assets/images/about-zigzag-v2.svg') center/contain no-repeat; mask:url('./assets/images/about-zigzag-v2.svg') center/contain no-repeat; }
 .neuro-difference p,.neuro-difference dd { font-size:16px; line-height:1.35; }
 .neuro-difference__process { padding-left:68px!important; }
 .neuro-difference dl { display:grid; grid-template-columns:1fr 1fr; gap:20px 42px; margin:0 0 28px; }
@@ -73,11 +74,13 @@ details p { padding:0 45px 18px 0; }
 .neuro-difference dt { margin-bottom:3px; font-size:17px; font-weight:900; }
 .neuro-difference dd { margin:0; }
 .neuro-difference__intro>strong { display:block; margin-top:32px; font-size:17px; }
-.neuro-card { position:relative; min-height:1708px; padding:64px 58px 50px; border:2px solid var(--neuro-violet); border-radius:6px; background:#fff; font-size:16px; line-height:1.36; }
+.neuro-card { position:relative; min-height:1708px; display:flex; padding:64px 58px 50px; flex-direction:column; border:2px solid var(--neuro-violet); border-radius:6px; background:#fff; font-size:16px; line-height:1.36; }
 .neuro-card--featured { background:linear-gradient(145deg,#c8d2f5,#dfb7e3); }
 .neuro-card__label { min-height:59px; margin:0; color:var(--neuro-violet); font-size:14px; font-weight:900; text-transform:uppercase; }
+.neuro-card__mobile-break { display:none; }
 .neuro-card h3 { margin:0 0 22px; font-size:45px; line-height:1.03; }
 .neuro-card>.neuro-waves { margin:20px 0 25px; padding-bottom:28px; border-bottom:2px solid var(--neuro-violet); color:var(--neuro-purple); }
+.neuro-card>.neuro-waves::before { top:0; right:auto; bottom:auto; width:53px; height:35px; }
 .neuro-card>p:not([class]) { margin-bottom:31px; }
 .neuro-card h4 { margin:55px 0 25px; font-size:28px; }
 .neuro-card ul { margin:0; padding:0; list-style:none; }
@@ -85,9 +88,9 @@ details p { padding:0 45px 18px 0; }
 .neuro-card li strong { font-weight:900; }
 .neuro-card li em { display:inline; font-style:italic; }
 .neuro-card__flag { position:absolute; top:75px; right:0; padding:5px 31px; color:#fff; background:var(--neuro-purple); font-size:14px; font-weight:900; }
-.neuro-card__outcome { margin:36px 0 18px; font-weight:900; }
+.neuro-card__outcome { margin:36px 0 18px; margin-top:auto; font-weight:900; }
 .neuro-price { margin:28px 0 22px; font:700 45px/1 Lato,Arial,sans-serif; }
-.neuro-price s { margin-right:40px; text-decoration-thickness:2px; }
+.neuro-price s { margin-right:40px; text-decoration-color:#f1264b; text-decoration-thickness:2px; }
 .neuro-price strong { color:var(--neuro-violet); }
 .neuro-card__offer { position:absolute; right:42px; bottom:56px; padding:4px 24px; color:#fff; background:#e43d62; font-size:13px; font-weight:900; }
 .neuro-card .neuro-button { min-height:51px; padding:10px 31px; }
@@ -100,9 +103,9 @@ details p { padding:0 45px 18px 0; }
 .neuro-story h3 { margin:65px 0 28px; }
 .neuro-story p { font-size:16px; line-height:1.37; }
 .neuro-method { position:relative; min-height:714px; padding:130px 0 45px; }
-.neuro-method h2 { width:970px; max-width:100%; margin:0 0 65px; font-size:43px; line-height:1.05; }
+.neuro-method h2 { width:920px; max-width:100%; margin:0 0 65px; font-size:43px; line-height:1.05; }
 .neuro-method__layout { display:grid; grid-template-columns:470px minmax(0,1fr); gap:60px; align-items:start; }
-.neuro-method p { font-size:15px; line-height:1.4; }
+.neuro-method p { font-size:17px; line-height:1.4; }
 .neuro-method a { color:var(--neuro-violet); font-weight:900; text-decoration:none; }
 .neuro-method__visual { display:grid; grid-template-columns:400px minmax(0,1fr); gap:18px; align-items:center; }
 .neuro-method__visual picture { display:block; width:400px; }
@@ -113,11 +116,11 @@ details p { padding:0 45px 18px 0; }
 .neuro-method__steps strong,.neuro-method__steps span { display:block; }
 .neuro-method__steps strong { color:var(--neuro-violet); font-size:14px; }
 .neuro-method__steps span { font-size:12px; line-height:1.25; }
-.neuro-method>.neuro-waves { position:absolute; bottom:38px; left:0; margin:0; color:#d8bce9; }
-.neuro-suitable { padding:45px 0 132px; }
+.neuro-method>.neuro-waves { position:absolute; bottom:115px; left:0; margin:0; color:#d8bce9; }
+.neuro-suitable { padding:29px 0 132px; }
 .neuro-suitable h2 { margin-bottom:49px; font-size:50px; line-height:1.05; }
-.neuro-suitable__grid { display:grid; grid-template-columns:1fr 1fr; gap:20px 44px; }
-.neuro-suitable__grid p { min-height:84px; margin:0; padding:16px 24px; border:2px solid #c59ee0; border-radius:6px; background:#f2e9f8; }
+.neuro-suitable__grid { display:grid; grid-template-columns:1fr 1fr; gap:48px 44px; }
+.neuro-suitable__grid p { min-height:100px; margin:0; padding:24px; border:2px solid #c59ee0; border-radius:6px; background:#f2e9f8; }
 .neuro-suitable__grid p:nth-child(1) { grid-area:1/1; }
 .neuro-suitable__grid p:nth-child(2) { grid-area:2/1; }
 .neuro-suitable__grid p:nth-child(3) { grid-area:3/1; }
@@ -125,8 +128,8 @@ details p { padding:0 45px 18px 0; }
 .neuro-suitable__grid p:nth-child(5) { grid-area:2/2; }
 .neuro-suitable__grid p:nth-child(6) { grid-area:3/2; }
 .neuro-suitable__grid strong,.neuro-suitable__grid span { display:block; }
-.neuro-suitable__grid strong { margin-bottom:5px; font-size:15px; }
-.neuro-suitable__grid span { font-size:13px; }
+.neuro-suitable__grid strong { margin-bottom:5px; font-size:16px; }
+.neuro-suitable__grid span { font-size:16px; line-height:1.25; }
 .neuro-review-track blockquote { width:478px; height:384px; min-height:384px; margin:0; padding:31px 33px; flex:0 0 478px; color:var(--neuro-ink); background:#fff; }
 .neuro-review-track header { position:relative; padding:0 76px 24px 0; border-bottom:2px solid var(--neuro-violet); }
 .neuro-review-track header::after { content:''; position:absolute; right:0; bottom:27px; width:57px; height:39px; background:#c1b4ed; -webkit-mask:url('./assets/images/career-zigzag-white.svg') center/contain no-repeat; mask:url('./assets/images/career-zigzag-white.svg') center/contain no-repeat; }
@@ -148,7 +151,7 @@ details p { padding:0 45px 18px 0; }
 	.neuro-difference>div { padding:37px 25px; }
 	.neuro-difference__intro { min-height:400px; border-right:0; border-bottom:1px solid rgba(255,255,255,.75); }
 	.neuro-difference h2 { margin-bottom:25px; font-size:36px; }
-	.neuro-waves { margin-bottom:28px; font-size:55px; }
+	.neuro-waves { margin-bottom:28px; font-size:0; }
 	.neuro-difference p,.neuro-difference dd { font-size:14px; }
 	.neuro-difference__process { padding:38px 25px!important; }
 	.neuro-difference__process h2 { font-size:40px; }
@@ -184,7 +187,8 @@ details p { padding:0 45px 18px 0; }
 	.neuro-method__visual picture { width:100%; }
 	.neuro-method__visual img { width:100%; }
 	.neuro-method__steps { margin-top:28px; gap:24px; }
-	.neuro-method>.neuro-waves { position:static; margin:34px 0 0; }
+	.neuro-method p { font-size:15px; }
+	.neuro-method>.neuro-waves { position:relative; bottom:auto; left:auto; margin:34px 0 0; }
 	.neuro-suitable { padding:29px 0 58px; }
 	.neuro-suitable h2 { margin-bottom:35px; font-size:36px; }
 	.neuro-suitable__grid { grid-template-columns:1fr; gap:13px; }
@@ -897,7 +901,7 @@ details p { padding:0 45px 18px 0; }
 	.site-education .site-certificates { width:calc(100% + 16px); gap:22px; margin:0; padding-right:16px; overflow-x:auto; overscroll-behavior-inline:contain; scroll-snap-type:x proximity; scrollbar-width:thin; }
 	.site-education .site-certificates figure { width:213px; height:155px; flex-basis:213px; scroll-snap-align:start; }
 	.site-page .site-education__more { display:none; }
-	.site-page .site-credentials { width:auto; max-width:none; height:auto; margin:0 16px; padding:51px 7px 57px; }
+	.site-page .site-credentials { width:auto; max-width:none; height:auto; margin:0 16px; padding:51px 7px 32px; }
 	.site-page .site-credentials ul { grid-template-columns:1fr; gap:23px; padding:0; }
 	.site-page .site-credentials li { min-height:0; padding-left:22px; font-size:14px; line-height:1.28; }
 	.site-check { font-size:17px; }
@@ -914,7 +918,7 @@ details p { padding:0 45px 18px 0; }
 	.site-page .site-cta .site-section-title { width:280px; max-width:100%; margin-bottom:11px; font-size:36px; line-height:40px; }
 	.site-page .site-cta p { margin-bottom:18px; font-size:14px; line-height:16px; }
 	.site-page .site-cta__button { width:auto; min-width:183px; min-height:53px; }
-	.site-page .site-faq { width:auto; max-width:none; min-height:0; display:block; margin:0 16px; padding:55px 0 58px; }
+	.site-page .site-faq { width:auto; max-width:none; min-height:0; display:block; margin:0 16px; padding:55px 0 83px; }
 	.site-page .site-faq__header { display:block; margin:0 0 29px; }
 	.site-page .site-faq__header .site-section-title { font-size:36px; line-height:1; }
 	.site-page .site-faq__header p { margin-top:5px; font-size:16px; }
@@ -924,8 +928,8 @@ details p { padding:0 45px 18px 0; }
 	.site-page .site-faq details p { padding:0 30px 20px 1px; font-size:14px; line-height:20px; }
 	.site-page .site-faq__closing { margin:34px 0 42px; font-size:14px; }
 	.site-page .site-faq__aside { width:auto; margin:56px 0 0; }
-	.site-page .site-faq__aside img { width:100%; height:241px; margin-left:0; object-position:center; }
-	.site-page .site-faq__aside::before { top:256px; left:0; width:100%; }
+	.site-page .site-faq__aside img { width:100%; height:345px; margin-left:0; object-position:center; }
+	.site-page .site-faq__aside::before { top:360px; left:0; width:100%; }
 	.site-page .site-faq__aside h2 { width:250px; margin:47px 0 20px; font-size:36px; line-height:40px; }
 	.site-page .site-faq__aside p { width:auto; margin:0 0 24px; font-size:14px; line-height:20px; }
 	.site-page .site-faq__button { width:186px; min-height:53px; padding:0 12px; }
@@ -963,6 +967,8 @@ body.has-certificate-lightbox { overflow:hidden; }
 
 /* Career 320 px artboard: exact route geometry after the shared responsive rules. */
 @media (max-width:360px) {
+	.site-page--about .site-services { padding-bottom:6px; }
+	.site-page--about .site-services>.site-section-title { margin-bottom:34px; }
 	.career-hero { height:1526px; }
 	.career-positioning { height:850px; min-height:850px; }
 	.career-positioning>div { padding-right:16px; padding-left:16px; }
@@ -1017,25 +1023,31 @@ body.has-certificate-lightbox { overflow:hidden; }
 	.neuro-difference p,.neuro-difference dt,.neuro-difference dd { font-size:12px; line-height:1.3; }
 	.neuro-difference dl div,.neuro-difference dl div:last-child { margin-bottom:15px; }
 	.site-page .neuro-services>.site-section-title { margin-bottom:76px; }
-	.neuro-card { padding:20px 20px 24px; font-size:12px; line-height:1.35; }
+	.neuro-card { padding:20px 20px 24px; font-size:14px; line-height:1.3; }
 	.neuro-card:first-child { height:1112px; margin-bottom:60px; }
 	.neuro-card--featured { height:1320px; margin-bottom:0; }
+	.neuro-card__desktop-break { display:none; }
+	.neuro-card__desktop-separator { display:none; }
+	.neuro-card__mobile-break { display:block; }
 	.neuro-card h3 { margin-bottom:22px; font-size:22px; line-height:1.05; }
-	.neuro-card__label { padding-right:40px; font-size:12px; line-height:1.3; }
-	.neuro-card>.neuro-waves { height:72px; margin:0 0 18px; padding:20px 0 18px; font-size:55px; }
+	.neuro-card__label { padding-right:40px; font-size:14px; line-height:1.3; }
+	.neuro-card>.neuro-waves { height:66px; margin:0 0 18px; padding:20px 0 18px; font-size:0; }
+	.neuro-card>.neuro-waves::before { top:18px; }
 	.neuro-card>p:not([class]) { margin-bottom:25px; }
 	.neuro-card h4 { margin:27px 0 18px; font-size:22px; }
-	.neuro-card li { margin-bottom:14px; padding-left:23px; font-size:12px; line-height:1.35; }
-	.neuro-card__outcome { margin:25px 0 17px; font-size:12px; line-height:1.35; }
+	.neuro-card li { margin-bottom:14px; padding-left:23px; font-size:14px; line-height:1.3; }
+	.neuro-card__outcome { margin:25px 0 17px; margin-top:auto; font-size:14px; line-height:1.3; }
 	.neuro-price { margin:20px 0 18px; font-size:36px; }
-	.neuro-card__offer { margin-left:0; }
+	.neuro-card__flag { top:223px; right:0; width:158px; height:34px; padding:8px 16px 0 54px; clip-path:polygon(18px 0,100% 0,100% 100%,18px 100%,0 50%); }
+	.neuro-card__offer { width:163px; height:34px; margin:0 0 26px -20px; padding:7px 19px; clip-path:polygon(0 0,100% 0,calc(100% - 18px) 50%,100% 100%,0 100%); font-size:12px; text-align:center; }
+	.site-page .neuro-card--featured .neuro-button { width:214px; }
 	.neuro-story { height:1221px; }
 	.neuro-story__copy { height:683px; padding:31px 16px 25px; }
 	.neuro-story__photo { height:538px; }
 	.neuro-story h2 { margin-bottom:24px; font-size:30px; line-height:1.03; }
 	.neuro-story h3 { margin:34px 0 20px; font-size:22px; line-height:1.05; }
 	.neuro-story p { margin-bottom:14px; font-size:12px; line-height:1.35; }
-	.neuro-method { padding:48px 0 0; }
+	.neuro-method { height:1022px; padding:48px 0 0; }
 	.neuro-method h2 { margin-bottom:24px; font-size:22px; line-height:1.08; }
 	.neuro-method__layout { gap:22px; }
 	.neuro-method p { margin-bottom:16px; font-size:12px; line-height:1.35; }
