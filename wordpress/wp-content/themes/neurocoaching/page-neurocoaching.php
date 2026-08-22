@@ -123,7 +123,7 @@ $faqs = array(
 	</section>
 
 	<section class="neuro-method neuro-wrap" aria-labelledby="neuro-method-title">
-		<h2 id="neuro-method-title">The method based on the NeuroIntegration method by Katerina Lengold</h2>
+		<h2 id="neuro-method-title">The method based<span class="neuro-method__mobile-break"><br></span> on the NeuroIntegration<span class="neuro-method__mobile-break"><br></span> method by Katerina Lengold</h2>
 		<div class="neuro-method__layout">
 			<div class="neuro-method__copy"><p><strong>The NeuroIntegration method was developed by Katerina Lengold, founder of the California Institute of Neurointegration.</strong></p><p>It combines neuroscience, psychology, and behavioural science into a practical coaching framework that works with how your brain is actually wired. NeuroSprints apply this in focused 21-day cycles — structured enough to create real change, flexible enough to fit a full life.</p><a href="https://neurointegration.org/">Learn more about the science: neurointegration.org</a></div>
 			<div class="neuro-method__visual">

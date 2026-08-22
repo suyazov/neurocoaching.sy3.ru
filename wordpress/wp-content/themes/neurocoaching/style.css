@@ -206,25 +206,30 @@ details p { padding:0 45px 18px 0; }
 .neuro-story__copy>p:last-child { width:406px; }
 .neuro-story__desktop-title { display:inline; }
 .neuro-story__mobile-title { display:none; }
-.neuro-method { position:relative; min-height:714px; padding:130px 0 45px; }
-.neuro-method h2 { width:920px; max-width:100%; margin:0 0 65px; font-size:43px; line-height:1.05; }
-.neuro-method__layout { display:grid; grid-template-columns:470px minmax(0,1fr); gap:60px; align-items:start; }
+.neuro-method { position:relative; min-height:714px; padding:124px 0 45px; }
+.neuro-method h2 { width:920px; max-width:100%; margin:0 0 61px 3px; font-size:45px; line-height:50px; }
+.neuro-method__mobile-break { display:none; }
+.neuro-method__layout { display:grid; grid-template-columns:493px 728px; gap:17px; align-items:start; }
+.neuro-method__copy p:first-child { width:418px; }
 .neuro-method p { font-size:17px; line-height:1.4; }
 .neuro-method a { color:var(--neuro-violet); font-weight:900; text-decoration:none; }
-.neuro-method__visual { display:grid; grid-template-columns:400px minmax(0,1fr); gap:18px; align-items:center; }
-.neuro-method__visual picture { display:block; width:400px; }
-.neuro-method__visual img { width:400px; max-width:100%; }
-.neuro-method__steps { display:grid; gap:29px; margin:0; padding:0; list-style:none; counter-reset:neuro-step; }
-.neuro-method__steps li { position:relative; padding-left:18px; border-left:3px solid #aa7fd0; counter-increment:neuro-step; }
-.neuro-method__steps li::before { content:counter(neuro-step); position:absolute; top:0; left:-32px; color:var(--neuro-violet); font-weight:900; }
+.neuro-method__visual { position:relative; width:728px; height:398px; }
+.neuro-method__visual picture { display:block; width:728px; height:398px; }
+.neuro-method__visual img { width:728px; max-width:none; height:398px; }
+.neuro-method__steps { position:absolute; top:38px; left:438px; width:290px; height:316px; margin:0; padding:0; list-style:none; }
+.neuro-method__steps li { position:absolute; left:0; width:285px; min-height:57px; padding-left:14px; border-left:3px solid #8a67c9; }
+.neuro-method__steps li:nth-child(1) { top:0; }
+.neuro-method__steps li:nth-child(2) { top:92px; }
+.neuro-method__steps li:nth-child(3) { top:219px; }
+.neuro-method__steps li::before { content:none; }
 .neuro-method__steps strong,.neuro-method__steps span { display:block; }
 .neuro-method__steps strong { color:var(--neuro-violet); font-size:14px; }
 .neuro-method__steps span { font-size:12px; line-height:1.25; }
-.neuro-method>.neuro-waves { position:absolute; bottom:115px; left:0; width:104px; height:71px; margin:0; color:#d8bce9; }
-.neuro-suitable { padding:29px 0 132px; }
+.neuro-method>.neuro-waves { position:absolute; bottom:98px; left:2px; width:104px; height:71px; margin:0; color:#d8bce9; }
+.neuro-suitable { padding:17px 0 132px; }
 .neuro-suitable h2 { margin-bottom:49px; font-size:50px; line-height:1.05; }
-.neuro-suitable__grid { display:grid; grid-template-columns:1fr 1fr; gap:48px 44px; }
-.neuro-suitable__grid p { min-height:100px; margin:0; padding:24px; border:2px solid #c59ee0; border-radius:6px; background:#f2e9f8; }
+.neuro-suitable__grid { width:1232px; display:grid; grid-template-columns:588px 598px; grid-template-rows:105px 123px 125px; gap:44px 46px; }
+.neuro-suitable__grid p { min-height:0; margin:0; padding:24px 25px; border:2px solid #855cac; border-radius:6px; background:linear-gradient(180deg,#dce4fc 0%,#f7f8fe 100%); }
 .neuro-suitable__grid p:nth-child(1) { grid-area:1/1; }
 .neuro-suitable__grid p:nth-child(2) { grid-area:2/1; }
 .neuro-suitable__grid p:nth-child(3) { grid-area:3/1; }
@@ -1377,23 +1382,30 @@ body.has-certificate-lightbox { overflow:hidden; }
 	.neuro-story p { margin-bottom:14px; font-size:14px; line-height:20px; }
 	.neuro-story__desktop-title { display:none; }
 	.neuro-story__mobile-title { display:inline; }
-	.neuro-method { height:1022px; padding:48px 0 0; }
-	.neuro-method h2 { margin-bottom:24px; font-size:22px; line-height:1.08; }
-	.neuro-method__layout { gap:22px; }
-	.neuro-method p { margin-bottom:16px; font-size:12px; line-height:1.35; }
-	.neuro-method a { font-size:12px; line-height:1.35; }
-	.neuro-method__visual picture img { width:100%; height:270px; object-fit:fill; }
-	.neuro-method__steps { margin:25px 0 0 26px; gap:24px; }
-	.neuro-method__steps li { min-height:58px; padding-left:12px; }
-	.neuro-method__steps strong { font-size:12px; }
-	.neuro-method__steps span { font-size:11px; line-height:1.25; }
-	.neuro-method>.neuro-waves { margin:25px 0 0; }
-	.neuro-suitable { padding:17px 0 57px; }
-	.neuro-suitable h2 { margin-bottom:27px; font-size:22px; line-height:1.08; }
-	.neuro-suitable__grid { gap:13px; }
-	.neuro-suitable__grid p { min-height:0; height:73px; padding:9px 20px; }
-	.neuro-suitable__grid strong { margin-bottom:1px; font-size:12px; line-height:1.15; }
-	.neuro-suitable__grid span { font-size:11px; line-height:1.15; }
+	.neuro-method { height:1017px; margin-top:-15px; padding:51px 0 0; background:#fff; box-shadow:0 0 0 100vmax #fff; clip-path:inset(0 -100vmax); }
+	.neuro-method h2 { width:278px; margin:0 0 18px; font-size:20px; line-height:24px; }
+	.neuro-method__mobile-break { display:inline; }
+	.neuro-method__layout { display:block; }
+	.neuro-method__copy { width:284px; margin-left:1px; }
+	.neuro-method__copy p:first-child { width:284px; }
+	.neuro-method p { margin-bottom:16px; font-size:14px; line-height:20px; }
+	.neuro-method a { display:block; width:230px; font-size:16px; line-height:18px; }
+	.neuro-method__visual { width:557px; height:568px; margin:13px 0 0 -21px; }
+	.neuro-method__visual picture { width:557px; height:304px; }
+	.neuro-method__visual picture img { width:557px; max-width:none; height:304px; object-fit:fill; }
+	.neuro-method__steps { position:absolute; top:300px; left:45px; width:269px; height:238px; display:grid; grid-template-rows:58px 58px 58px; align-content:start; margin:0; gap:32px; counter-reset:neuro-step; }
+	.neuro-method__steps li { position:relative; top:auto!important; left:auto; width:269px; min-height:58px; padding-left:12px; counter-increment:neuro-step; }
+	.neuro-method__steps li::before { content:counter(neuro-step); position:absolute; top:0; left:-25px; color:var(--neuro-violet); font-weight:900; }
+	.neuro-method__steps li::before { font-size:20px; line-height:24px; }
+	.neuro-method__steps strong { font-size:14px; line-height:17px; }
+	.neuro-method__steps span { font-size:12px; line-height:15px; }
+	.neuro-method>.neuro-waves { bottom:13px; left:0; margin:0; }
+	.neuro-suitable { margin-right:10px; margin-left:14px; padding:17px 0 57px; background:#fff; box-shadow:0 0 0 100vmax #fff; clip-path:inset(0 -100vmax); }
+	.neuro-suitable h2 { width:285px; margin-bottom:16px; font-size:20px; line-height:24px; }
+	.neuro-suitable__grid { width:auto; grid-template-columns:1fr; grid-template-rows:76px 76px 76px 76px 76px 89px; gap:10px; }
+	.neuro-suitable__grid p { min-height:0; height:auto; padding:12px 22px; background:linear-gradient(180deg,#cfd9fb 0%,#f4f6fd 100%); }
+	.neuro-suitable__grid strong { margin-bottom:0; font-size:14px; line-height:16px; }
+	.neuro-suitable__grid span { font-size:12px; line-height:14px; }
 	.site-page .neuro-reviews { height:442px; min-height:442px; padding:34px 0 42px; }
 	.site-page .neuro-reviews .site-section-title { margin-bottom:15px; }
 	.site-page .neuro-review-track { gap:18px; scrollbar-width:none; }
