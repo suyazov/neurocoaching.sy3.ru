@@ -73,7 +73,7 @@ $questions = array(
 		<article class="site-service-card nc-about__service-card">
 			<div class="nc-about__service-summary">
 				<div class="nc-about__service-heading"><h3>Team<br>Workshops</h3><span><img src="<?php echo esc_url( $images . 'flag-corporate-v2.svg' ); ?>" width="138" height="39" alt=""><b>Corporate</b></span></div>
-				<img class="nc-about__zigzag" src="<?php echo esc_url( $images . 'about-zigzag-v2.svg' ); ?>" width="129" height="88" alt="">
+				<img class="nc-about__zigzag" src="<?php echo esc_url( $images . 'about-zigzag-v2.svg' ); ?>" width="110" height="71" alt="">
 				<p class="nc-about__scope">On request &nbsp;×&nbsp; Custom scope</p>
 				<p>Practical, tailored workshops for teams covering stress management, burnout prevention, time management, and overall wellbeing. Delivered online or in-person, fully customised context around your team's specific needs.</p>
 			</div>

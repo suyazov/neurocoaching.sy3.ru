@@ -391,7 +391,7 @@ function neurocoaching_credentials_section( $args ) {
 	<section id="<?php echo esc_attr( $args['id'] ); ?>" class="site-section site-shell site-credentials <?php echo esc_attr( $args['section_class'] ); ?>" aria-label="<?php echo esc_attr( $args['label'] ); ?>" tabindex="-1">
 		<ul>
 			<?php foreach ( $args['items'] as $item ) : ?>
-				<li><span class="site-check" aria-hidden="true">&#10003;</span><?php echo esc_html( $item ); ?></li>
+				<li><span class="site-check" aria-hidden="true"></span><?php echo esc_html( $item ); ?></li>
 			<?php endforeach; ?>
 		</ul>
 	</section>
