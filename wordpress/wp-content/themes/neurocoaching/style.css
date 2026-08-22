@@ -876,6 +876,12 @@ details p { padding:0 45px 18px 0; }
 	.career-services-route .career-hero .career-button { width:255px; height:64px; min-height:64px; margin-top:32px; margin-left:1px; }
 	.career-services-route .site-education { height:473px; }
 	.career-services-route .site-credentials { height:472px; padding-top:92px; padding-bottom:110px; }
+	.career-services-route .career-card h3 { top:48px; left:25px; font-size:46px; line-height:1.3; }
+	.career-services-route .career-card--featured h3 { top:45px; font-size:48px; line-height:1.25; }
+	.career-services-route .career-card__label { font-size:18px; line-height:1; letter-spacing:2.8px; }
+	.career-services-route .career-card--featured .career-card__label { left:27px; }
+	.career-services-route .career-card--featured .career-card__flag { -webkit-mask:none; mask:none; clip-path:polygon(0 0,100% 0,100% 100%,0 100%,19px 50%); }
+	.career-services-route .career-card--featured .career-card__motif::after { right:6px; bottom:2px; left:1px; height:4px; }
 	.career-positioning { width:1226px; height:727px; grid-template-columns:476px minmax(0,1fr); margin-bottom:83px; }
 	.career-positioning>div { padding-top:83px; padding-bottom:101px; }
 	.career-positioning>.career-positioning__statement { padding-right:23px; padding-left:123px; }
