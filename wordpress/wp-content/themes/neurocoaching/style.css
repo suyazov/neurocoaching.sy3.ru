@@ -226,6 +226,24 @@ details p { padding:0 45px 18px 0; }
 .neuro-method__steps strong { color:var(--neuro-violet); font-size:14px; }
 .neuro-method__steps span { font-size:12px; line-height:1.25; }
 .neuro-method>.neuro-waves { position:absolute; bottom:98px; left:2px; width:104px; height:71px; margin:0; color:#d8bce9; }
+@media (min-width:851px) {
+	/* 3_Neurocoaching_1440.psd: preserve the 1220 px composition and source axes. */
+	.neuro-method { background:#f8f4f2; box-shadow:0 0 0 100vmax #f8f4f2; clip-path:inset(0 -100vmax); }
+	.neuro-method h2 { position:relative; top:-1px; width:1029px; color:#2a2a2a; letter-spacing:0; }
+	.neuro-method__copy { position:relative; top:5px; margin-left:2px; }
+	.neuro-method__copy p:first-child { margin-bottom:11px; font-size:18px; line-height:21.6px; font-weight:900; letter-spacing:-.15px; color:#2a2a2a; }
+	.neuro-method__copy p:first-child strong { font-weight:inherit; }
+	.neuro-method__copy p:nth-child(2) { font-size:18px; line-height:21.6px; font-weight:400; color:#5a5566; }
+	.neuro-method__nowrap { white-space:nowrap; }
+	.neuro-method__copy a { position:relative; top:11px; font-size:18px; line-height:22.5px; letter-spacing:-.1px; color:#7a5ca8; }
+	.neuro-method__copy a span { text-decoration-line:underline; text-decoration-thickness:2px; text-underline-offset:7px; }
+	.neuro-method__visual { top:8px; }
+	.neuro-method__steps { left:439px; }
+	.neuro-method__steps li { padding-left:12px; border-left-color:#7c6bd6; }
+	.neuro-method__steps strong { position:relative; top:1px; color:#7c6bd6; font-size:16px; line-height:21px; font-weight:900; }
+	.neuro-method__steps span { position:relative; top:3px; width:273px; color:#5a5566; font-size:14px; line-height:17px; font-weight:400; }
+	.neuro-method>.neuro-waves { bottom:90px; }
+}
 .neuro-suitable { padding:17px 0 132px; }
 .neuro-suitable h2 { margin-bottom:49px; font-size:50px; line-height:1.05; }
 .neuro-suitable__grid { width:1232px; display:grid; grid-template-columns:588px 598px; grid-template-rows:105px 123px 125px; gap:44px 46px; }
