@@ -287,10 +287,10 @@ details p { padding:0 45px 18px 0; }
 .neuro-review-paragraph-break { display:block; margin-top:1.35em; }
 @media (max-width:850px) {
 	.neuro-wrap { width:auto; max-width:none; margin-inline:16px; }
-	.neuro-hero { height:clamp(1029px,calc(951.286px + 24.286vw),1046px); display:block; padding-top:53px; }
+	.neuro-hero { height:clamp(1099px,calc(1021.286px + 24.286vw),1116px); display:block; padding-top:53px; }
 	.neuro-hero__photo { width:100%; height:clamp(406px,calc(204.857px + 62.857vw),450px); }
 	.neuro-hero__photo img { width:100%; max-width:none; height:100%; object-fit:cover; object-position:center 18%; }
-	.neuro-hero__copy { width:auto; padding:37px 15px 20px; font-size:12px; line-height:1.35; }
+	.neuro-hero__copy { width:auto; padding:37px 15px 20px; font-size:14px; line-height:1.42; }
 	.neuro-kicker { margin-bottom:19px; font-size:11px; line-height:1.38; }
 	.neuro-profile-link { margin-bottom:26px; font-size:16px; line-height:20px; }
 	.neuro-hero h1 { width:290px; margin-bottom:20px; font-size:40px; line-height:1.02; }
