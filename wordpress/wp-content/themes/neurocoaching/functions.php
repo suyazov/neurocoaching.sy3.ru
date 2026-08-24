@@ -8,6 +8,23 @@ function neurocoaching_setup() {
 }
 add_action( 'after_setup_theme', 'neurocoaching_setup' );
 
+/**
+ * Provide branded favicon assets when WordPress has no custom Site Icon.
+ */
+function neurocoaching_favicon_tags() {
+	if ( has_site_icon() ) {
+		return;
+	}
+
+	$images = get_theme_file_uri( '/assets/images/' );
+	?>
+	<link rel="icon" type="image/png" sizes="32x32" href="<?php echo esc_url( $images . 'favicon-32.png' ); ?>">
+	<link rel="icon" type="image/png" sizes="192x192" href="<?php echo esc_url( $images . 'favicon-192.png' ); ?>">
+	<link rel="apple-touch-icon" sizes="180x180" href="<?php echo esc_url( $images . 'apple-touch-icon.png' ); ?>">
+	<?php
+}
+add_action( 'wp_head', 'neurocoaching_favicon_tags', 2 );
+
 function neurocoaching_asset_version( $path, $fallback ) {
 	$modified = is_file( $path ) ? filemtime( $path ) : false;
 	return false !== $modified ? (string) $modified : $fallback;
