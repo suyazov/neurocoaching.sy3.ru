@@ -32,7 +32,7 @@ $faqs = array(
 ?>
 <article class="site-page site-page--career career-psd">
 	<section class="site-section site-hero career-hero">
-		<div class="site-hero__media career-hero__photo"><img src="<?php echo esc_url( get_theme_file_uri( '/assets/images/career-hero.webp' ) ); ?>" width="510" height="1125" alt="Ksenia Belousova" decoding="async" fetchpriority="high"></div>
+		<div class="site-hero__media career-hero__photo"><img src="<?php echo esc_url( get_theme_file_uri( '/assets/images/career-hero-client.webp' ) ); ?>" width="600" height="900" alt="Ksenia Belousova" decoding="async" fetchpriority="high"></div>
 		<div class="site-hero__content career-hero__copy">
 			<h1>Stop postponing your life</h1>
 			<p class="career-quote">Your time is limited, so don’t waste it living someone else’s life.<br>– Steve Jobs</p>
