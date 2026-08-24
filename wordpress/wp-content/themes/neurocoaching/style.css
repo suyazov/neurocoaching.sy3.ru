@@ -1141,6 +1141,20 @@ details p { padding:0 45px 18px 0; }
 .site-page .site-faq__button { width:294px; min-height:59px; padding:0 16px; color:#fff; background:var(--site-accent); }
 
 @media (min-width:851px) {
+	/* Paint both aligned FAQ dividers from the same fixed grid offset. This
+	 * prevents border/background rounding from splitting them at browser zoom. */
+	.site-page .site-faq__questions { position:relative; }
+	.site-page .site-faq__questions details:nth-of-type(6) { border-top-color:transparent; }
+	.site-page .site-faq__questions::after {
+		content:'';
+		position:absolute;
+		top:410px;
+		left:0;
+		width:100%;
+		height:2px;
+		background:var(--site-accent);
+		pointer-events:none;
+	}
 	.site-page .career-reviews { min-height:975px; padding:130px 0 104px; }
 	.site-page .career-reviews .site-section-title { font-size:62px; }
 	.site-page .career-review-track { width:calc(100vw - max(0px,(100vw - 1226px)/2)); gap:48px; }
