@@ -98,7 +98,7 @@ $faqs = array(
 			<article class="site-service-card career-card">
 				<h3>Consultation Session<br>90 min</h3><p class="career-card__label">Single Session</p>
 				<div class="career-card__motif" aria-hidden="true"></div>
-				<p>One focused 90 min session to identify what’s holding you back and define your clearest next step — whether you’re applying for your first job, going through a career shift, burnout, or simply feeling stuck.</p>
+				<p>One focused 90 min session to identify what’s holding you back and define your clearest next step — whether you’re applying for your first job, going through a career shift, burnout,<br class="career-desktop-break"> or simply feeling stuck.</p>
 				<h4>Includes:</h4>
 				<p class="career-card__free">Free 30-min intro call</p>
 				<ul><li>60-min deep-dive strategy session</li><li>Personal one-page action summary</li><li>Personalised next-step plan</li></ul>
@@ -108,7 +108,7 @@ $faqs = array(
 			<article class="site-service-card site-service-card--featured career-card career-card--featured">
 				<span class="career-card__flag">Flagship</span><h3>Career Accelerator<br>4 × 60 min</h3><p class="career-card__label">4 SESSIONS</p>
 				<div class="career-card__motif" aria-hidden="true"></div>
-				<p>Four focused sessions to go from stuck to executing. We refine your positioning, sharpen your CV and LinkedIn, prepare you for interviews and stay available between sessions for questions and application reviews.</p>
+				<p>Four focused sessions to go from stuck<br class="career-desktop-break"> to executing. We refine your positioning, sharpen your CV and LinkedIn, prepare you<br class="career-desktop-break"> for interviews and stay available between sessions for questions and application reviews.</p>
 				<h4>Includes:</h4>
 				<ul><li>Positioning &amp; job search strategy</li><li>CV, LinkedIn &amp; cover letter refinement</li><li>Interview preparation &amp; techniques</li><li>Full mock interview with written feedback</li><li>Between-session support (application reviews &amp; questions)</li><li>One-page action summary — your profile, strategy, and next steps</li></ul>
 				<p class="career-card__outcome">A compelling professional profile, a focused strategy, and the confidence to execute.</p>
