@@ -1040,13 +1040,71 @@ details p { padding:0 45px 18px 0; }
 	}
 	.site-page .site-education .site-certificates { gap:59.5px; }
 	.site-page .site-education .site-certificates figure { width:213px; flex-basis:213px; }
-	.site-page .site-education__more .education-more-arrow { margin-left:34px; }
+	.site-page .site-education__more {
+		display:flex;
+		align-items:center;
+		gap:26px;
+		margin-top:30px;
+		transform:translateX(-1px);
+	}
+	.site-page .site-education__more .education-more-arrow {
+		width:81px;
+		height:28px;
+		margin-left:0;
+	}
+	.site-page--neuro .neuro-certificates { transform:translateY(1px); }
+	.site-page--neuro .neuro-certificates figure { position:relative; padding:0; }
+	.site-page--neuro .neuro-certificates figure:nth-child(2) { transform:translateX(-.5px); }
+	.site-page--neuro .neuro-certificates figure:nth-child(4) { transform:translateX(.5px); }
+	.site-page--neuro .neuro-certificates a { position:absolute; inset:0; display:block; }
+	.site-page--neuro .neuro-certificates img {
+		position:absolute;
+		max-width:none;
+		max-height:none;
+		margin:0;
+		object-fit:fill;
+	}
+	.site-page--neuro .neuro-certificates figure:nth-child(1) img { top:5px; left:17px; width:176px; height:135px; }
+	.site-page--neuro .neuro-certificates figure:nth-child(2) img { top:1px; left:18px; width:181px; height:142px; }
+	.site-page--neuro .neuro-certificates figure:nth-child(3) img { top:8px; left:16px; width:177px; height:136px; }
+	.site-page--neuro .neuro-certificates figure:nth-child(4) img { top:12px; left:18px; width:175px; height:124px; }
+	.site-page--neuro .neuro-certificates figure:nth-child(5) img { top:1px; left:16px; width:181px; height:142px; }
 }
 .site-page .site-credentials { width:1084px; max-width:calc(100% - 64px); height:auto; margin-inline:auto; padding:126px 0 106px; }
 .site-page .site-credentials ul { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:31px 110px; margin:0; padding:0; list-style:none; }
 .site-page .site-credentials li { position:relative; min-height:42px; padding-left:28px; font-size:18px; line-height:1.25; font-weight:900; }
 .site-page .site-credentials li::before { content:none; }
 .site-check { position:absolute; top:0; left:0; width:20px; height:18px; overflow:hidden; color:transparent; background:url('./assets/images/career-check-violet.svg') center/contain no-repeat; font-size:0; }
+
+/* Neuro desktop credentials reconstructed from the PSD text and checkmark bounds. */
+@media (min-width:851px) {
+	.site-page--neuro .neuro-credentials {
+		height:502px;
+		padding:0;
+	}
+	.site-page--neuro .neuro-credentials ul {
+		position:relative;
+		display:block;
+		height:100%;
+	}
+	.site-page--neuro .neuro-credentials li {
+		position:absolute;
+		width:420px;
+		min-height:0;
+		padding-left:31px;
+		color:#2a2a2a;
+		font:900 18px/22.5px Lato,Arial,sans-serif;
+	}
+	.site-page--neuro .neuro-credentials li:nth-child(odd) { left:41px; }
+	.site-page--neuro .neuro-credentials li:nth-child(even) { left:570px; width:434px; }
+	.site-page--neuro .neuro-credentials li:nth-child(-n+2) { top:92px; }
+	.site-page--neuro .neuro-credentials li:nth-child(3) { top:182px; }
+	.site-page--neuro .neuro-credentials li:nth-child(4) { top:185px; }
+	.site-page--neuro .neuro-credentials li:nth-child(5),
+	.site-page--neuro .neuro-credentials li:nth-child(6) { top:250px; }
+	.site-page--neuro .neuro-credentials li:nth-child(n+7) { top:297px; }
+	.site-page--neuro .neuro-credentials .site-check { width:22px; height:20px; }
+}
 .site-page .site-services { width:1084px; max-width:calc(100% - 64px); height:auto; margin-inline:auto; padding-bottom:145px; }
 .site-page .site-services>.site-section-title { width:auto; margin:0 0 72px; color:var(--site-heading); font-size:57px; line-height:1; text-align:center; }
 .site-page .site-service-grid { width:1012px; max-width:100%; display:grid; grid-template-columns:repeat(2,minmax(0,482px)); gap:48px; margin-inline:auto; }
