@@ -640,7 +640,7 @@ details p { padding:0 45px 18px 0; }
 	--neuro-kicker-source:#815eb8;
 	--neuro-action:#815eb8;
 		--neuro-on-section:#f8f1ee;
-		--neuro-paper:#f8f4f2;
+		--neuro-paper:#faf4f2;
 	--neuro-ink:var(--neuro-body);
 	--neuro-purple:var(--neuro-section);
 	--neuro-violet:var(--neuro-accent);
@@ -860,7 +860,7 @@ details p { padding:0 45px 18px 0; }
 	.site-page.site-page--neuro {
 		--site-accent:#815eb8;
 		--site-action:#815eb8;
-		--site-paper:#f8f4f2;
+		--site-paper:#faf4f2;
 		--site-heading:#282828;
 		--site-body:#5b5669;
 	}
@@ -973,9 +973,110 @@ details p { padding:0 45px 18px 0; }
 		line-height:65px;
 		letter-spacing:0;
 	}
-	.site-page .neuro-services>.site-section-title { margin-bottom:63px; }
+	/* 3_Neurocoaching_1440.psd, artboard 1440 px. Keep the measured card
+	 * geometry intact and correct only source-confirmed typography/offsets. */
+	.site-page .neuro-services {
+		--site-accent:#7a5ca8;
+		--site-action:#7a5ca8;
+		--site-heading:#2a2a2a;
+		--site-body:#5a5566;
+		--neuro-accent:#7a5ca8;
+		--neuro-action:#7a5ca8;
+		--neuro-heading:#2a2a2a;
+		--neuro-body:#5a5566;
+		--neuro-violet:#7a5ca8;
+		color:#5a5566;
+	}
+	.site-page .neuro-services>.site-section-title {
+		position:relative;
+		top:-19px;
+		left:-1px;
+		margin-bottom:34px;
+		font-size:65px;
+		line-height:78px;
+		letter-spacing:0;
+	}
 	.site-page .career-service-grid { transform:translateX(-2px); }
 	.site-page .neuro-service-grid { width:1018px; max-width:none; gap:54px; transform:translateX(4px); }
+	.site-page .neuro-services .neuro-card {
+		border-width:3px;
+		color:#5a5566;
+	}
+	.site-page .neuro-services .neuro-card--featured { background:linear-gradient(to bottom,#cad8fd 0%,#dee8fd 100%); }
+	.site-page .neuro-services .neuro-card h3,
+	.site-page .neuro-services .neuro-card h4 { letter-spacing:0; }
+	.site-page .neuro-services .neuro-card h3 { top:46px; left:25px; line-height:50px; }
+	.site-page .neuro-services .neuro-card--featured h3 { top:46px; left:21px; line-height:60px; }
+	.site-page .neuro-services .neuro-card:first-child .neuro-card__label { top:219px; }
+	.site-page .neuro-services .neuro-card--featured .neuro-card__label { top:194px; }
+	.site-page .neuro-services .neuro-card__label {
+		font-size:20.833px;
+		line-height:25px;
+		letter-spacing:.625px;
+	}
+	.site-page .neuro-services .neuro-card--featured .neuro-card__label-primary { width:380px; letter-spacing:.625px; }
+	.site-page .neuro-services .neuro-card>.neuro-waves { top:337px; }
+	.site-page .neuro-services .neuro-card--featured>.neuro-waves { top:332px; }
+	.site-page .neuro-services .neuro-card>p:not([class]) { top:458px; left:27px; }
+	.site-page .neuro-services .neuro-card--featured>p:not([class]) { top:464px; left:21px; }
+	.site-page .neuro-services .neuro-card--featured>p:not([class]):nth-of-type(3) { top:565px; }
+	.site-page .neuro-services .neuro-card h4 { top:742px; left:33px; line-height:54px; }
+	.site-page .neuro-services .neuro-card--featured h4 { top:741px; left:22px; }
+	.site-page .neuro-services .neuro-card ul { top:815px; left:35px; }
+	.site-page .neuro-services .neuro-card:first-child ul { width:379px; }
+	.site-page .neuro-services .neuro-card--featured ul { left:25px; }
+	.site-page .neuro-services .neuro-card li:nth-child(3) { margin-bottom:49px; }
+	.site-page .neuro-services .neuro-card--featured li:nth-child(1) { margin-bottom:22px; }
+	.site-page .neuro-services .neuro-card--featured li:nth-child(3) { margin-bottom:21px; }
+	.site-page .neuro-services .neuro-card:first-child li:nth-child(n+4) { font-weight:900; }
+	.site-page .neuro-services .neuro-card__outcome { top:1390px; left:36px; }
+	.site-page .neuro-services .neuro-card--featured .neuro-card__outcome { left:25px; }
+	.site-page .neuro-services .neuro-price { top:1509px; left:25px; }
+	.site-page .neuro-services .neuro-card--featured .neuro-price { left:22px; }
+	.site-page .neuro-services .neuro-price__currency {
+		display:inline-block;
+		font-family:"IBM Plex Sans",Arial,sans-serif;
+		font-weight:700;
+		transform:scaleX(1.075);
+		transform-origin:left center;
+	}
+	.site-page .neuro-services .neuro-card--featured .neuro-price__currency { transform:scaleX(1.05); }
+	.site-page .neuro-services .neuro-card--featured .neuro-price s {
+		position:relative;
+		top:-7px;
+		left:-2px;
+		margin-right:0;
+	}
+	.site-page .neuro-services .neuro-card--featured .neuro-price strong {
+		position:absolute;
+		top:-3px;
+		left:257px;
+		white-space:nowrap;
+	}
+	.site-page .neuro-services .neuro-card__flag,
+	.site-page .neuro-services .neuro-card__offer {
+		font-family:"IBM Plex Sans",Arial,sans-serif;
+		font-size:20.833px;
+		line-height:25px;
+		font-weight:700;
+		letter-spacing:.625px;
+	}
+	.site-page .neuro-services .neuro-card__flag { top:53px; right:0; height:38px; }
+	.site-page .neuro-services .neuro-card__offer { right:0; bottom:77px; width:196px; height:38px; }
+	.site-page .neuro-services .neuro-card .neuro-button {
+		bottom:52px;
+		left:27px;
+		padding:0 12px;
+		font-size:18px;
+		line-height:1;
+		font-weight:900;
+		white-space:nowrap;
+	}
+	.site-page .neuro-services .neuro-card--featured .neuro-button {
+		bottom:53px;
+		left:21px;
+		letter-spacing:.36px;
+	}
 	.career-price s { margin-right:81px; }
 	.career-card--featured { height:1193px; }
 	.career-card__free { top:577px; height:37px; }
