@@ -12,9 +12,9 @@ $credentials = array(
 	'Worked with diplomats, senior UN officials, and international teams across the world',
 	'Managed multi-million dollar international projects across UN missions',
 	'Human Resources Management Certificate, Cornell University, USA',
-	'ICF Certified Neurointegration Coach, Neurointegration Institute, USA',
-	'Works with clients in English, Russian & Italian',
 	'MBA, Webster University, USA',
+	'Works with clients in English, Russian & Italian',
+	'ICF Certified Neurointegration Coach, Neurointegration Institute, USA',
 	'200+ hours of individual coaching practice',
 );
 $faqs = array(
