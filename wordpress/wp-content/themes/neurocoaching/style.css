@@ -837,6 +837,51 @@ details p { padding:0 45px 18px 0; }
 }
 
 /*
+ * Neurocoaching story: reconstruct the 1440 px PSD composition.
+ * The placed photo is 809 x 1079 at (-44, -7); it must not be scaled with
+ * the viewport. The overlay asset is the alpha shape exported from Layer 10.
+ */
+@media (min-width:1440px) {
+	.neuro-story {
+		position:relative;
+		width:1440px;
+		max-width:100%;
+		margin-inline:auto;
+		grid-template-columns:720px 720px;
+		overflow:hidden;
+		background:#382964;
+	}
+	.neuro-story__photo {
+		z-index:0;
+		width:720px;
+		overflow:visible;
+	}
+	.neuro-story__photo img {
+		position:absolute;
+		top:-7px;
+		left:-44px;
+		width:809px;
+		max-width:none;
+		height:1079px;
+		object-fit:fill;
+		object-position:initial;
+	}
+	.neuro-story__photo::after {
+		inset:0 auto auto 276px;
+		width:1164px;
+		height:1066px;
+		background:url('./assets/images/neuro-story-overlay.webp') 0 0/1164px 1066px no-repeat;
+	}
+	.neuro-story__copy {
+		position:relative;
+		z-index:1;
+		width:720px;
+	}
+	.neuro-story h2,.neuro-story h3 { color:#f7f0e8; }
+	.neuro-story p { color:#fff; }
+}
+
+/*
  * Shared content system.
  * Route classes below are modifiers only; repeated sections use one geometry,
  * spacing scale, interaction pattern and mobile composition on every page.
