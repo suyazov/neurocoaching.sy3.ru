@@ -492,7 +492,7 @@ details p { padding:0 45px 18px 0; }
 .nc-about__button:hover,.nc-about__button:focus-visible { color:#fff; background:var(--nc-about-purple); outline:3px solid #caa8e2; outline-offset:2px; }
 .nc-about__services { width:1037px; max-width:calc(100% - 64px); margin-inline:auto; padding-bottom:146px; }
 .nc-about__services>h2 { width:max-content; margin:0 auto 80px; color:var(--nc-about-purple); font-size:65px; line-height:.92; }
-.nc-about__service-card { height:597px; display:grid; grid-template-columns:527px 504px; border:2px solid var(--nc-about-violet); border-radius:6px; color:var(--nc-about-ink); background:#c8d2fa; }
+.nc-about__service-card { height:597px; display:grid; grid-template-columns:527px 504px; border:2px solid var(--nc-about-violet); border-radius:6px; color:var(--nc-about-ink); background:linear-gradient(180deg,#b9c8f9 0%,#cfdafb 100%); }
 .nc-about__service-card>div { min-height:0; padding:56px 46px; }
 .nc-about__service-summary { position:relative; }
 .nc-about__service-summary::after { content:''; position:absolute; top:283px; left:45px; width:374px; height:2px; background:var(--nc-about-violet); }
@@ -520,6 +520,8 @@ details p { padding:0 45px 18px 0; }
 @media (min-width:851px) {
 	.nc-about__hero { width:100%; max-width:none; grid-template-columns:39.0909vw minmax(0,1fr); margin:0; }
 	.nc-about__hero-photo img { top:0; left:0; width:max(711px,calc(100% + 195px)); height:auto; transform:translate(-12.24%,-12.22%); }
+	.nc-about__service-heading h3,.nc-about__programmes h3 { transform:translateY(-10px); }
+	.nc-about__scope { margin:92px 0 54px; }
 }
 
 @media (max-width:850px) {
