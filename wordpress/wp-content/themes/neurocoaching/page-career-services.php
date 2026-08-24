@@ -126,7 +126,7 @@ $faqs = array(
 			<p>My approach combines international HR expertise, career strategy, and nervous-system-aware guidance – so you can move forward with clarity and confidence.</p>
 			<a class="site-button career-button career-button--light" href="<?php echo esc_url( $booking_url ); ?>">Book a free call</a>
 		</div>
-		<img src="<?php echo esc_url( get_theme_file_uri( '/assets/images/career-suitable-1440.webp' ) ); ?>" width="1440" height="1920" alt="Ksenia Belousova in a blue beret" loading="lazy" decoding="async">
+		<img src="<?php echo esc_url( get_theme_file_uri( '/assets/images/career-suitable-client.webp' ) ); ?>" width="1200" height="1782" alt="Ksenia Belousova in a blue beret" loading="lazy" decoding="async">
 	</section>
 
 	<section class="site-section site-reviews career-reviews" aria-labelledby="career-reviews-title"><div class="site-shell career-wrap">
