@@ -13,6 +13,7 @@ Text Domain: neurocoaching
 @font-face { font-family:Lato; src:url('assets/fonts/lato-900-latin.woff2') format('woff2'); font-style:normal; font-weight:900; font-display:swap; }
 @font-face { font-family:"Lato PSD Light"; src:url('assets/fonts/lato-300-latin.woff2') format('woff2'); font-style:normal; font-weight:300; font-display:swap; }
 @font-face { font-family:"Lato PSD Heavy"; src:url('assets/fonts/lato-heavy-800.woff2') format('woff2'); font-style:normal; font-weight:800; font-display:swap; }
+@font-face { font-family:"Lato PSD Semibold Italic"; src:url('assets/fonts/lato-600-italic-latin.woff2') format('woff2'); font-style:italic; font-weight:600; font-display:swap; }
 :root { --purple:#3f2961; --violet:#855cac; --paper:#f8f1ee; --ink:#5c5467; --line:#855cac; }
 * { box-sizing:border-box; }
 html { scroll-behavior:smooth; }
@@ -283,6 +284,7 @@ details p { padding:0 45px 18px 0; }
 .neuro-review-track strong { font-size:17px; }
 .neuro-review-track a { color:var(--neuro-violet); font-size:13px; font-weight:900; text-decoration:none; }
 .neuro-review-track blockquote p { margin:27px 0 0; font-size:13px; line-height:1.35; }
+.neuro-review-paragraph-break { display:block; margin-top:1.35em; }
 @media (max-width:850px) {
 	.neuro-wrap { width:auto; max-width:none; margin-inline:16px; }
 	.neuro-hero { height:clamp(1029px,calc(951.286px + 24.286vw),1046px); display:block; padding-top:53px; }
@@ -1397,10 +1399,89 @@ details p { padding:0 45px 18px 0; }
 		letter-spacing:0;
 	}
 	.career-services-route .career-review-track blockquote:nth-child(3)>p { width:378px; }
-	.site-page .neuro-reviews { height:741px; min-height:741px; padding:130px 0 108px; }
-	.site-page .neuro-reviews .site-section-title { margin-bottom:55px; font-size:62px; }
-	.site-page .neuro-review-track { gap:48px; scrollbar-width:none; }
+	/* Native 1440 px Reviews track from 3_Neurocoaching_1440.psd. The
+	 * viewport runs to the browser edge, so the third real slide stays
+	 * intentionally partial instead of being compressed into a grid. */
+	.site-page .neuro-reviews {
+		height:737px;
+		min-height:737px;
+		padding:120px 0 108px;
+		background:#3a2466;
+	}
+	.site-page .neuro-reviews>.site-shell { width:1224px; }
+	.site-page .neuro-reviews .site-section-title {
+		margin:0 0 56.7px;
+		color:#fff;
+		font:700 65.1px/66.3px "IBM Plex Sans",Arial,sans-serif;
+		letter-spacing:0;
+		text-align:center;
+		transform:translate(2px,2px);
+	}
+	.site-page .neuro-review-track {
+		width:calc(100vw - 108px);
+		gap:49px;
+		scrollbar-width:none;
+	}
 	.site-page .neuro-review-track::-webkit-scrollbar { display:none; }
+	.site-page .neuro-review-track blockquote {
+		width:478px;
+		height:386px;
+		min-height:386px;
+		padding:27px 22px 20px 23px;
+		flex:0 0 478px;
+		border:3px solid #855cac;
+		border-radius:6px;
+		color:#5c5467;
+		background:#fff;
+	}
+	.site-page .neuro-review-track blockquote:nth-child(2) { padding-right:27px; padding-left:18px; }
+	.site-page .neuro-review-track blockquote:nth-child(3) { margin-left:-6px; padding-right:26px; padding-left:19px; }
+	.site-page .neuro-review-track header {
+		position:relative;
+		padding:0 76px 31px 8px;
+		border-bottom:2px solid #855cac;
+	}
+	.site-page .neuro-review-track blockquote:nth-child(n+2) header { padding-left:7px; }
+	.site-page .neuro-review-track header::after {
+		top:17px;
+		right:1px;
+		bottom:auto;
+		width:60px;
+		height:41px;
+		background:#d5c4e8;
+	}
+	.site-page .neuro-review-track strong {
+		color:#2a2a2a;
+		font:700 20.83px/25px "IBM Plex Sans",Arial,sans-serif;
+		letter-spacing:.5px;
+		transform:translateY(-1px);
+	}
+	.site-page .neuro-review-track blockquote:first-child strong {
+		letter-spacing:.625px;
+		transform:translate(-1px,-1px);
+	}
+	.site-page .neuro-review-track a {
+		margin-top:10px;
+		color:#5c5467;
+		font:600 italic 18px/21.6px "Lato PSD Semibold Italic",Lato,Arial,sans-serif;
+		text-decoration:underline;
+		text-decoration-thickness:1px;
+		text-underline-offset:4px;
+	}
+	.site-page .neuro-review-track blockquote:nth-child(2) a { transform:translateX(1px); }
+	.site-page .neuro-review-track blockquote>p {
+		position:relative;
+		top:1px;
+		left:5px;
+		width:409px;
+		margin:25.5px 0 0;
+		color:#5c5467;
+		font:400 18px/21.6px Lato,Arial,sans-serif;
+		letter-spacing:0;
+	}
+	.site-page .neuro-review-track blockquote:nth-child(2)>p { width:421px; }
+	.site-page .neuro-review-track blockquote:nth-child(3)>p { width:376px; }
+	.site-page .neuro-review-track .neuro-review-paragraph-break { margin-top:15px; }
 }
 
 /* Contact: one focused conversion page using the shared site tokens and header. */
