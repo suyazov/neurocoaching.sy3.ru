@@ -698,6 +698,10 @@ details p { padding:0 45px 18px 0; }
 .neuro-card h3,.neuro-card h4,.neuro-services>h2,.neuro-method h2,.neuro-suitable h2,.neuro-faq h2 { color:var(--neuro-heading); }
 .neuro-card,.neuro-review-track header,.neuro-faq details { border-color:var(--neuro-accent); }
 .neuro-card__label,.neuro-price strong,.neuro-method a,.neuro-review-track a,.neuro-faq>header p { color:var(--neuro-accent); }
+.neurocoaching-route .neuro-faq details[open] summary::after {
+	background:linear-gradient(var(--neuro-section),var(--neuro-section)) center/100% 6px no-repeat;
+	transform:translateY(-50%);
+}
 .neuro-price { color:var(--neuro-heading); }
 
 /* PSD button roles: outline CTAs use the route action colour; buttons on dark
@@ -1253,7 +1257,7 @@ details p { padding:0 45px 18px 0; }
 
 	.site-page .neuro-services { padding-bottom:138px; }
 	.site-page .neuro-suitable { margin-bottom:31px; }
-	.neurocoaching-route .nc-about__life { height:1106px; min-height:1106px; margin-top:-4px; padding-bottom:0; }
+	.neurocoaching-route .nc-about__life { height:1106px; min-height:1106px; margin-top:-2px; padding-bottom:0; }
 	.neurocoaching-route .site-cta { margin-top:-3px; }
 
 	.site-page--about .nc-about__life-photo,
@@ -1332,6 +1336,81 @@ details p { padding:0 45px 18px 0; }
 		height:2px;
 		background:var(--site-accent);
 		pointer-events:none;
+	}
+	/* Neuro desktop follows the native 1440 px FAQ group from the PSD.  The
+	 * source uses a 1222 px composition (761 px questions + 86 px gutter +
+	 * 375 px aside), not the older shared 1084 px compact layout. */
+	.neurocoaching-route .neuro-cta .site-section-title {
+		font-size:51.6px;
+		letter-spacing:0;
+		transform:translateY(-6px);
+	}
+	.neurocoaching-route .neuro-cta p { margin-bottom:25.4px; }
+	.neurocoaching-route .neuro-cta .site-cta__button { width:236px; min-width:236px; }
+	.neurocoaching-route .neuro-faq {
+		width:1222px;
+		grid-template-columns:761px 375px;
+		column-gap:86px;
+		padding-top:153px;
+		padding-bottom:128px;
+	}
+	.neurocoaching-route .neuro-faq .site-faq__header { margin-bottom:56px; }
+	.neurocoaching-route .neuro-faq__questions { width:761px; }
+	.neurocoaching-route .neuro-faq__questions::after { display:none; }
+	.neurocoaching-route .neuro-faq details {
+		border-top:2px solid var(--site-accent);
+		border-bottom:2px solid var(--site-accent);
+		margin:0 0 17px;
+	}
+	.neurocoaching-route .neuro-faq details:nth-of-type(1),
+	.neurocoaching-route .neuro-faq details:nth-of-type(4),
+	.neurocoaching-route .neuro-faq details:nth-of-type(5),
+	.neurocoaching-route .neuro-faq details:nth-of-type(8) { margin-bottom:18px; }
+	.neurocoaching-route .neuro-faq details:nth-of-type(6) { margin-bottom:15px; }
+	.neurocoaching-route .neuro-faq details:nth-of-type(9),
+	.neurocoaching-route .neuro-faq details:nth-of-type(11) { margin-bottom:19px; }
+	.neurocoaching-route .neuro-faq details:last-of-type { margin-bottom:0; }
+	.neurocoaching-route .neuro-faq details:last-of-type[open] { min-height:179px; }
+	.neurocoaching-route .neuro-faq summary {
+		min-height:59px;
+		padding:0 53px;
+		font-size:16px;
+		line-height:18px;
+	}
+	.neurocoaching-route .neuro-faq details:nth-of-type(6) summary,
+	.neurocoaching-route .neuro-faq details:nth-of-type(10) summary { min-height:77px; }
+	.neurocoaching-route .neuro-faq summary::after { right:51px; }
+	.neurocoaching-route .neuro-faq details[open] summary { min-height:50px; }
+	.neurocoaching-route .neuro-faq details p {
+		width:517px;
+		margin-left:55px;
+		padding:0 0 25px;
+		font-size:18px;
+		line-height:20px;
+	}
+	.neurocoaching-route .neuro-faq .site-faq__aside { width:375px; }
+	.neurocoaching-route .neuro-faq .site-faq__aside img {
+		width:373px;
+		height:478px;
+		margin:3px 0 0 1px;
+	}
+	.neurocoaching-route .neuro-faq .site-faq__aside::before {
+		top:500px;
+		width:375px;
+	}
+	.neurocoaching-route .neuro-faq .site-faq__aside h2 {
+		width:290px;
+		margin:62px 0 22px 6px;
+		font-size:45px;
+		line-height:46px;
+	}
+	.neurocoaching-route .neuro-faq .site-faq__aside p {
+		width:296px;
+		margin:0 0 38px 5px;
+	}
+	.neurocoaching-route .neuro-faq .site-faq__button {
+		width:280px;
+		min-height:60px;
 	}
 	/* Career Reviews follows the native 1440 px PSD track rather than a
 	 * centred three-column grid. The third card remains the real next slide
