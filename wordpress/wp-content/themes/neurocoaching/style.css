@@ -324,7 +324,7 @@ details p { padding:0 45px 18px 0; }
 	.neuro-card ul { position:static; width:auto; }
 	.neuro-card li { margin-bottom:17px; padding-left:23px; }
 	.neuro-card li::before { width:16px; height:14px; }
-	.neuro-card__flag { top:40px; width:163px; height:33px; padding:0 22px 0 38px; font-size:16px; }
+	.neuro-card__flag { top:40px; width:163px; height:33px; padding:0 22px 0 38px; -webkit-mask:none; mask:none; clip-path:polygon(0 0,100% 0,100% 100%,0 100%,18px 50%); font-size:16px; }
 	.neuro-card__outcome { position:static; width:auto; margin-top:26px; }
 	.neuro-price { position:static; font-size:29px; }
 	.neuro-price s { margin-right:25px; }
@@ -1208,9 +1208,12 @@ details p { padding:0 45px 18px 0; }
 		line-height:25px;
 		font-weight:700;
 		letter-spacing:.625px;
+		-webkit-mask:none;
+		mask:none;
+		clip-path:polygon(0 0,100% 0,100% 100%,0 100%,19px 50%);
 	}
 	.site-page .neuro-services .neuro-card__flag { top:53px; right:0; height:37px; transform:translateY(1px); }
-	.site-page .neuro-services .neuro-card__offer { right:0; bottom:77px; width:196px; height:37px; }
+	.site-page .neuro-services .neuro-card__offer { right:0; bottom:65px; width:196px; height:37px; }
 	.site-page .neuro-services .neuro-card .neuro-button {
 		bottom:52px;
 		left:27px;
@@ -1859,7 +1862,7 @@ body.has-certificate-lightbox { overflow:hidden; }
 	.neuro-price,.neuro-card--featured .neuro-price { position:absolute; top:980px; left:21px; margin:0; font-family:"IBM Plex Sans",Arial,sans-serif; font-size:36px; line-height:36px; font-weight:700; }
 	.neuro-price s { margin-right:42px; }
 	.neuro-card .neuro-button { position:absolute; top:1034px; bottom:auto; left:21px; width:185px; height:55px; min-height:55px; }
-	.neuro-card__flag { top:226px; right:-1px; width:163px; height:33px; padding:0 22px 0 38px; clip-path:none; font-size:16px; }
+	.neuro-card__flag { top:226px; right:-1px; width:163px; height:33px; padding:0 22px 0 38px; -webkit-mask:none; mask:none; clip-path:polygon(0 0,100% 0,100% 100%,0 100%,18px 50%); font-size:16px; }
 	.neuro-card--featured>p:not([class]) { top:289px; }
 	.neuro-card--featured>p:not([class]):nth-of-type(3) { top:409px; }
 	.neuro-card--featured h4 { top:587px; }
