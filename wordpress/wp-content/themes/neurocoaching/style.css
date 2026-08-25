@@ -815,7 +815,7 @@ details p { padding:0 45px 18px 0; }
 	.site-header[data-site-header] .primary-nav a:nth-child(2) { left:74px; }
 	.site-header[data-site-header] .primary-nav a:nth-child(3) { left:193px; }
 	.site-header[data-site-header] .primary-nav a:nth-child(4) { left:315px; }
-	.site-header[data-site-header]>.button { position:absolute; top:56px; right:auto; left:370px; width:194px; min-height:59px; padding:10px 12px; font-size:14px; letter-spacing:.08em; }
+	.site-header[data-site-header]>.button { position:absolute; top:56px; right:auto; left:370px; width:194px; min-height:59px; padding:10px 8px; font-size:18px; line-height:22.5px; font-weight:900; letter-spacing:0; white-space:nowrap; }
 }
 
 /* Tablet interpolation: preserve the 320 px PSD composition without enlarging
@@ -965,11 +965,12 @@ details p { padding:0 45px 18px 0; }
 	border-radius:6px;
 	color:var(--site-action);
 	background:transparent;
-	font-size:14px;
-	font-weight:800;
-	line-height:1.2;
+	font-size:18px;
+	font-weight:900;
+	line-height:22.5px;
 	text-align:center;
 	text-decoration:none;
+	white-space:nowrap;
 }
 .site-page .site-button:hover,.site-page .site-button:focus-visible {
 	color:#fff;
@@ -1215,7 +1216,7 @@ details p { padding:0 45px 18px 0; }
 		left:27px;
 		padding:0 12px;
 		font-size:18px;
-		line-height:1;
+		line-height:22.5px;
 		font-weight:900;
 		white-space:nowrap;
 	}
@@ -1662,7 +1663,7 @@ details p { padding:0 45px 18px 0; }
 .site-page .contact-form__submit:hover,.site-page .contact-form__submit:focus-visible { background:var(--site-section); }
 
 @media (max-width:850px) {
-	.site-page .site-button { height:53px; min-height:53px; padding:11px 29px; font-size:14px; }
+	.site-page .site-button { height:53px; min-height:53px; padding:11px 29px; font-size:14px; font-weight:900; line-height:16.8px; }
 	.site-page .site-education { height:389px; padding-top:55px; }
 	.site-page .site-education__inner { width:auto; max-width:none; margin-inline:16px; }
 	.site-page .site-education__title { width:250px; margin:0 0 40px; font-size:36px; line-height:1.05; }
