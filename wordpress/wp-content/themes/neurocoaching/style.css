@@ -612,7 +612,7 @@ details p { padding:0 45px 18px 0; }
 .nc-gallery__slide { height:100%; margin:0; overflow:hidden; }
 .nc-gallery__slide picture { display:block; width:100%; height:100%; }
 .nc-gallery__slide[hidden] { display:none; }
-.nc-gallery__slide img { display:block; width:100%; height:100%; object-fit:cover; }
+.nc-gallery__slide img { display:block; width:100%; height:100%; object-fit:contain; object-position:center; }
 .nc-gallery>button { display:grid; place-items:center; cursor:pointer; }
 
 /* Bound source-sized mobile galleries and decoration to the device viewport. */
