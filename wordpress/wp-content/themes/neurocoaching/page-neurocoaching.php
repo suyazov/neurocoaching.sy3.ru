@@ -111,7 +111,12 @@ $faqs = array(
 	</section>
 
 	<section class="neuro-story">
-		<div class="neuro-story__photo"><img src="<?php echo esc_url( $images . 'neuro-story-hires.webp' ); ?>" width="809" height="1079" alt="Ksenia Belousova beside flowering trees" loading="lazy" decoding="async"></div>
+		<div class="neuro-story__photo">
+			<picture>
+				<source media="(min-width: 851px)" srcset="<?php echo esc_url( $images . 'neuro-story-transition.webp' ); ?>">
+				<img src="<?php echo esc_url( $images . 'neuro-story-hires.webp' ); ?>" width="809" height="1079" alt="Ksenia Belousova beside flowering trees" loading="lazy" decoding="async">
+			</picture>
+		</div>
 		<div class="neuro-story__copy">
 			<h2><span class="neuro-story__desktop-title">I didn't find this in a book.<br>I found it in the hardest<br>years of my life.</span><span class="neuro-story__mobile-title">I didn't find this<br>in a book. I found<br>it in the hardest<br>years of my life</span></h2>
 			<p>I built a successful international career at the United Nations — working alongside diplomats, leading people across different cultures, and changing my career path several times along the way. I relocated to four countries, travelled constantly, and lived a life that, from the outside, looked extraordinary.</p>
