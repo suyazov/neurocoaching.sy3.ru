@@ -327,15 +327,18 @@ function neurocoaching_about_career_certificates() {
 }
 
 /**
- * The certificate set shown in the final Neurocoaching desktop PSD.
+ * The Neurocoaching-only certificate set supplied by the client.
  */
 function neurocoaching_neuro_certificates() {
 	return array(
-		array( 'file' => 'neuro-certificate-1-source.webp', 'alt' => 'Nonproliferation Studies certificate' ),
-		array( 'file' => 'neuro-certificate-2-source.webp', 'alt' => 'Webster University MBA degree' ),
-		array( 'file' => 'neuro-certificate-3-source.webp', 'alt' => 'International Organisations Management certificate' ),
-		array( 'file' => 'neuro-certificate-4-source.webp', 'alt' => 'Cornell University Human Resources Management certificate' ),
-		array( 'file' => 'about-certificate-3-source.webp', 'alt' => 'Webster University bachelor degree' ),
+		array( 'file' => 'neuro-integration-certificate-01-source.webp', 'alt' => 'Neurointegration Trainer professional retraining diploma' ),
+		array( 'file' => 'neuro-integration-certificate-02-source.webp', 'alt' => 'Neurointegration Trainer professional retraining diploma cover' ),
+		array( 'file' => 'neuro-integration-certificate-03-source.webp', 'alt' => 'HarvardX Managing Happiness verified certificate' ),
+		array( 'file' => 'neuro-integration-certificate-04-source.webp', 'alt' => 'Certified Neurointegration Coach professional development certificate' ),
+		array( 'file' => 'neuro-integration-certificate-05-source.webp', 'alt' => 'Inside LVMH certificate' ),
+		array( 'file' => 'neuro-integration-certificate-06-source.webp', 'alt' => 'Neurointegration Fundamentals certificate of completion' ),
+		array( 'file' => 'neuro-integration-certificate-07-source.webp', 'alt' => 'Neurointegration Practical Module certificate of completion' ),
+		array( 'file' => 'neuro-integration-certificate-08-source.webp', 'alt' => 'Neurointegration Trainer certificate of completion' ),
 	);
 }
 
