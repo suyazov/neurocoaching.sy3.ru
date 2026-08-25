@@ -157,15 +157,9 @@ $faqs = array(
 	</div></div></section>
 
 	<?php
-	$neuro_life_image = $images . 'neuro-life-1-hires.webp';
-	$neuro_life_defaults = array(
-		$neuro_life_image,
-		$images . 'neuro-life-2-hires.webp',
-		$images . 'neuro-hero-client-20260825.webp',
-		$images . 'neuro-life-4-hires.webp',
-	);
+	$neuro_life_defaults = neurocoaching_neuro_gallery_urls();
 	$neuro_life_slides = neurocoaching_gallery_urls( 'neuro_gallery_urls', implode( "\n", $neuro_life_defaults ) );
-	$neuro_life_slides = array_slice( array_values( array_unique( array_merge( $neuro_life_slides, $neuro_life_defaults ) ) ), 0, 4 );
+	$neuro_life_image = $neuro_life_slides[0];
 	neurocoaching_real_life_section( 'neuro-life-title', $instagram, 'neuro_gallery_urls', $neuro_life_image, 'Neurointegration Institute gathering', $neuro_life_slides );
 	?>
 
