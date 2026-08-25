@@ -34,7 +34,7 @@ $faqs = array(
 ?>
 <article class="site-page site-page--neuro neuro-psd">
 	<section class="site-section site-hero neuro-hero">
-		<div class="site-hero__media neuro-hero__photo"><img src="<?php echo esc_url( $images . 'neuro-hero-hires.webp' ); ?>" width="511" height="911" alt="Ksenia Belousova holding hydrangeas" decoding="async" fetchpriority="high"></div>
+		<div class="site-hero__media neuro-hero__photo"><img src="<?php echo esc_url( $images . 'neuro-hero-client-20260825.webp' ); ?>" width="600" height="900" alt="Ksenia Belousova holding hydrangeas" decoding="async" fetchpriority="high"></div>
 		<div class="site-hero__content neuro-hero__copy">
 			<p class="neuro-kicker">Neurointegration coaching</p>
 			<a class="neuro-profile-link" href="<?php echo esc_url( home_url( '/' ) ); ?>">More details in my profile</a>
@@ -156,7 +156,7 @@ $faqs = array(
 	$neuro_life_defaults = array(
 		$neuro_life_image,
 		$images . 'neuro-life-2-hires.webp',
-		$images . 'neuro-hero-hires.webp',
+		$images . 'neuro-hero-client-20260825.webp',
 		$images . 'neuro-life-4-hires.webp',
 	);
 	$neuro_life_slides = neurocoaching_gallery_urls( 'neuro_gallery_urls', implode( "\n", $neuro_life_defaults ) );

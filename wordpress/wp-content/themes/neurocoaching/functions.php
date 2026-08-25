@@ -83,7 +83,7 @@ function neurocoaching_customize_register( $customizer ) {
 		'neuro_gallery_urls'  => array( 'Neurocoaching: In real life image URLs', implode( "\n", array(
 			get_theme_file_uri( '/assets/images/neuro-life-1-hires.webp' ),
 			get_theme_file_uri( '/assets/images/neuro-life-2-hires.webp' ),
-			get_theme_file_uri( '/assets/images/neuro-hero-hires.webp' ),
+			get_theme_file_uri( '/assets/images/neuro-hero-client-20260825.webp' ),
 			get_theme_file_uri( '/assets/images/neuro-life-4-hires.webp' ),
 		) ) ),
 	);
@@ -250,7 +250,7 @@ function neurocoaching_gallery_urls( $setting, $fallback ) {
 		'desktop-8139-place-your-image-here-double-click-to-edit.png'        => 'neuro-life-1-hires.webp',
 		'desktop-1440-8139-place-your-image-here-double-click-to-edit.png'   => 'neuro-life-1-hires.webp',
 		'desktop-1440-10825-place-your-image-here-double-click-to-edit-copy-3.png' => 'neuro-life-2-hires.webp',
-		'desktop-1440-6037-place-your-image-here-double-click-to-edit-copy-2.png'  => 'neuro-hero-hires.webp',
+		'desktop-1440-6037-place-your-image-here-double-click-to-edit-copy-2.png'  => 'neuro-hero-client-20260825.webp',
 		'desktop-1440-5230-place-your-image-here-double-click-to-edit.png'   => 'neuro-life-4-hires.webp',
 	);
 	$urls = array_map( static function ( $url ) use ( $optimized_assets ) {
