@@ -798,6 +798,17 @@ details p { padding:0 45px 18px 0; }
 .nc-gallery__pagination { position:absolute; top:calc(100% + 54px); left:50%; display:flex; width:max-content; max-width:100%; gap:11px; transform:translateX(-50%); }
 .nc-gallery__pagination button { width:18px; height:18px; padding:0; border:2px solid currentColor; border-radius:50%; color:inherit; background:transparent; cursor:pointer; }
 .nc-gallery__pagination button[aria-current="true"] { background:currentColor; }
+.nc-gallery--many .nc-gallery__pagination { justify-content:flex-start; overflow-x:auto; overscroll-behavior-inline:contain; scroll-behavior:smooth; scrollbar-width:none; }
+.nc-gallery--many .nc-gallery__pagination::-webkit-scrollbar { display:none; }
+.nc-gallery--many .nc-gallery__pagination button { flex:0 0 auto; }
+
+@media (min-width:851px) {
+	.site-page--about .nc-gallery--many .nc-gallery__pagination { width:674px; }
+}
+
+@media (max-width:850px) {
+	.site-page--about .nc-gallery--many .nc-gallery__pagination { width:100%; }
+}
 
 /* One desktop header system across every route. */
 @media (min-width:851px) {
