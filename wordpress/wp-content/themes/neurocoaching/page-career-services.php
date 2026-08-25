@@ -143,15 +143,9 @@ $faqs = array(
 	</div></section>
 
 	<?php
-	$career_life_image = get_theme_file_uri( '/assets/images/career-life-hires.webp' );
-	$career_life_defaults = array(
-		$career_life_image,
-		get_theme_file_uri( '/assets/images/about-life-hires.webp' ),
-		get_theme_file_uri( '/assets/images/neuro-story-hires.webp' ),
-		get_theme_file_uri( '/assets/images/about-faq-hires.webp' ),
-	);
+	$career_life_defaults = neurocoaching_career_gallery_urls();
 	$career_life_slides = neurocoaching_gallery_urls( 'career_gallery_urls', implode( "\n", $career_life_defaults ) );
-	$career_life_slides = array_slice( array_values( array_unique( array_merge( $career_life_slides, $career_life_defaults ) ) ), 0, 4 );
+	$career_life_image = $career_life_slides[0];
 	neurocoaching_real_life_section( 'career-life-title', $instagram_url, 'career_gallery_urls', $career_life_image, 'Ksenia at an international flags installation', $career_life_slides );
 	?>
 

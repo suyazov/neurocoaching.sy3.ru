@@ -70,12 +70,7 @@ function neurocoaching_customize_register( $customizer ) {
 	}
 	$gallery_fields = array(
 		'about_gallery_urls'  => array( 'About: In real life image URLs', implode( "\n", neurocoaching_about_gallery_urls() ) ),
-		'career_gallery_urls' => array( 'Career: In real life image URLs', implode( "\n", array(
-			get_theme_file_uri( '/assets/images/career-life-hires.webp' ),
-			get_theme_file_uri( '/assets/images/about-life-hires.webp' ),
-			get_theme_file_uri( '/assets/images/neuro-story-hires.webp' ),
-			get_theme_file_uri( '/assets/images/about-faq-hires.webp' ),
-		) ) ),
+		'career_gallery_urls' => array( 'Career: In real life image URLs', implode( "\n", neurocoaching_career_gallery_urls() ) ),
 		'neuro_gallery_urls'  => array( 'Neurocoaching: In real life image URLs', implode( "\n", array(
 			get_theme_file_uri( '/assets/images/neuro-life-1-hires.webp' ),
 			get_theme_file_uri( '/assets/images/neuro-life-2-hires.webp' ),
@@ -239,6 +234,18 @@ function neurocoaching_about_gallery_urls() {
 	$sequence = array_merge( array( 19 ), range( 1, 18 ), range( 20, 61 ) );
 	foreach ( $sequence as $index ) {
 		$urls[] = get_theme_file_uri( sprintf( '/assets/images/about-gallery-%03d.webp', $index ) );
+	}
+
+	return $urls;
+}
+
+/**
+ * Return the client-supplied Career Services photo set in its intended sequence.
+ */
+function neurocoaching_career_gallery_urls() {
+	$urls = array();
+	for ( $index = 1; $index <= 21; $index++ ) {
+		$urls[] = get_theme_file_uri( sprintf( '/assets/images/career-gallery-%03d.webp', $index ) );
 	}
 
 	return $urls;
