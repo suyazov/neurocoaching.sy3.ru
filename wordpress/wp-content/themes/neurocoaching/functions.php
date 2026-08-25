@@ -236,7 +236,8 @@ add_action( 'admin_post_nopriv_neurocoaching_contact', 'neurocoaching_handle_con
  */
 function neurocoaching_about_gallery_urls() {
 	$urls = array();
-	for ( $index = 1; $index <= 61; $index++ ) {
+	$sequence = array_merge( array( 19 ), range( 1, 18 ), range( 20, 61 ) );
+	foreach ( $sequence as $index ) {
 		$urls[] = get_theme_file_uri( sprintf( '/assets/images/about-gallery-%03d.webp', $index ) );
 	}
 
