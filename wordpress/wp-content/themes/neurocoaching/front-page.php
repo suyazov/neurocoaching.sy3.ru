@@ -92,11 +92,10 @@ $questions = array(
 	</section>
 
 	<?php
-	$about_life_image = $images . 'about-life-hires.webp';
-	$about_life_defaults = array( $about_life_image, $images . 'about-hero-hires.webp', $images . 'about-faq-hires.webp' );
-	$about_life_slides = neurocoaching_gallery_urls( 'about_gallery_urls', implode( "\n", $about_life_defaults ) );
-	$about_life_slides = array_slice( array_merge( $about_life_slides, $about_life_defaults ), 0, 3 );
-	neurocoaching_real_life_section( 'nc-about-life-title', $instagram, 'about_gallery_urls', $about_life_image, 'Ksenia by the sea at sunset', $about_life_slides );
+	$about_life_defaults = neurocoaching_about_gallery_urls();
+	$about_life_slides   = neurocoaching_gallery_urls( 'about_gallery_urls', implode( "\n", $about_life_defaults ) );
+	$about_life_image    = $about_life_slides[0];
+	neurocoaching_real_life_section( 'nc-about-life-title', $instagram, 'about_gallery_urls', $about_life_image, 'Ksenia Belousova with friends', $about_life_slides );
 	?>
 
 	<?php

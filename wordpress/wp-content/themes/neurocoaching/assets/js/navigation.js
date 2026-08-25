@@ -95,11 +95,12 @@
     const dots = Array.from(carousel.querySelectorAll('[data-carousel-dot]'));
     const previous = carousel.querySelector('[data-carousel-previous]');
     const next = carousel.querySelector('[data-carousel-next]');
+    const pagination = carousel.querySelector('[data-carousel-pagination]');
     let active = 0;
     let touchStart = null;
     const preload = function () {
-      slides.forEach(function (slide) {
-        const slideImage = slide.querySelector('img');
+      [active, (active + 1) % slides.length].forEach(function (slideIndex) {
+        const slideImage = slides[slideIndex] ? slides[slideIndex].querySelector('img') : null;
         if (slideImage) slideImage.loading = 'eager';
       });
     };
@@ -107,10 +108,15 @@
       if (!slides.length) return;
       const nextIndex = (index + slides.length) % slides.length;
       const nextImage = slides[nextIndex].querySelector('img');
+      if (nextImage) nextImage.loading = 'eager';
       const apply = function () {
         active = nextIndex;
         slides.forEach(function (slide, slideIndex) { slide.hidden = slideIndex !== active; });
         dots.forEach(function (dot, dotIndex) { dot.setAttribute('aria-current', String(dotIndex === active)); });
+        if (pagination && dots[active] && pagination.scrollWidth > pagination.clientWidth) {
+          pagination.scrollLeft = dots[active].offsetLeft - ((pagination.clientWidth - dots[active].offsetWidth) / 2);
+        }
+        preload();
       };
       if (nextImage && !nextImage.complete) {
         nextImage.loading = 'eager';

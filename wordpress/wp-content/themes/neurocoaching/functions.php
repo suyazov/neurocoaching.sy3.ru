@@ -69,11 +69,7 @@ function neurocoaching_customize_register( $customizer ) {
 		$customizer->add_control( $key, array( 'label' => $field[0], 'section' => 'neurocoaching_content', 'type' => $field[2] ) );
 	}
 	$gallery_fields = array(
-		'about_gallery_urls'  => array( 'About: In real life image URLs', implode( "\n", array(
-			get_theme_file_uri( '/assets/images/about-life-hires.webp' ),
-			get_theme_file_uri( '/assets/images/about-hero-hires.webp' ),
-			get_theme_file_uri( '/assets/images/about-faq-hires.webp' ),
-		) ) ),
+		'about_gallery_urls'  => array( 'About: In real life image URLs', implode( "\n", neurocoaching_about_gallery_urls() ) ),
 		'career_gallery_urls' => array( 'Career: In real life image URLs', implode( "\n", array(
 			get_theme_file_uri( '/assets/images/career-life-hires.webp' ),
 			get_theme_file_uri( '/assets/images/about-life-hires.webp' ),
@@ -235,6 +231,18 @@ function neurocoaching_handle_contact_form() {
 add_action( 'admin_post_neurocoaching_contact', 'neurocoaching_handle_contact_form' );
 add_action( 'admin_post_nopriv_neurocoaching_contact', 'neurocoaching_handle_contact_form' );
 
+/**
+ * Return the client-supplied About photo set in its intended sequence.
+ */
+function neurocoaching_about_gallery_urls() {
+	$urls = array();
+	for ( $index = 1; $index <= 61; $index++ ) {
+		$urls[] = get_theme_file_uri( sprintf( '/assets/images/about-gallery-%03d.webp', $index ) );
+	}
+
+	return $urls;
+}
+
 function neurocoaching_gallery_urls( $setting, $fallback ) {
 	$urls = preg_split( '/\R+/', neurocoaching_mod( $setting, $fallback ) );
 	$urls = array_values( array_filter( array_map( 'esc_url_raw', array_map( 'trim', $urls ) ) ) );
@@ -268,7 +276,8 @@ function neurocoaching_gallery_urls( $setting, $fallback ) {
 			return in_array( wp_basename( wp_parse_url( $url, PHP_URL_PATH ) ), array( 'neuro-life.webp', 'neuro-life-hires.webp' ), true ) ? $fallback : $url;
 		}, $urls );
 	}
-	return array_slice( $urls ? $urls : array( $fallback ), 0, 24 );
+	$limit = 'about_gallery_urls' === $setting ? 100 : 24;
+	return array_slice( $urls ? $urls : array( $fallback ), 0, $limit );
 }
 
 /**
@@ -286,14 +295,28 @@ function neurocoaching_gallery( $setting, $fallback, $alt, $class_name, $mobile_
 	$slides = $slides_override ? array_values( array_filter( array_map( 'esc_url_raw', $slides_override ) ) ) : neurocoaching_gallery_urls( $setting, $fallback );
 	$count  = count( $slides );
 	?>
-	<div class="<?php echo esc_attr( $class_name ); ?> site-gallery nc-gallery<?php echo 1 === $count ? ' nc-gallery--single' : ''; ?>" data-carousel tabindex="0" role="region" aria-roledescription="carousel" aria-label="In real life photo gallery" data-slide-count="<?php echo esc_attr( (string) $count ); ?>">
+	<div class="<?php echo esc_attr( $class_name ); ?> site-gallery nc-gallery<?php echo 1 === $count ? ' nc-gallery--single' : ''; ?><?php echo $count > 12 ? ' nc-gallery--many' : ''; ?>" data-carousel tabindex="0" role="region" aria-roledescription="carousel" aria-label="In real life photo gallery" data-slide-count="<?php echo esc_attr( (string) $count ); ?>">
 		<button class="nc-gallery__previous" type="button" data-carousel-previous aria-label="Previous photo"<?php echo 1 === $count ? ' disabled aria-disabled="true"' : ''; ?>>←</button>
 		<div class="nc-gallery__viewport" aria-live="polite">
 		<?php foreach ( $slides as $index => $url ) : ?>
-			<?php $dimensions = neurocoaching_theme_image_dimensions( $url ); ?>
+			<?php
+			$dimensions      = neurocoaching_theme_image_dimensions( $url );
+			$filename        = wp_basename( wp_parse_url( $url, PHP_URL_PATH ) );
+			$small_filename  = preg_replace( '/\.webp$/', '-700.webp', $filename );
+			$small_path      = get_theme_file_path( '/assets/images/' . $small_filename );
+			$responsive_set  = '';
+			$responsive_size = '';
+			if ( $small_filename !== $filename && is_file( $small_path ) && $dimensions ) {
+				$responsive_set  = get_theme_file_uri( '/assets/images/' . $small_filename ) . ' 700w, ' . $url . ' ' . $dimensions[0] . 'w';
+				$responsive_size = '(max-width: 700px) calc(100vw - 30px), 930px';
+			} elseif ( 0 === $index && $fallback === $url && $fallback_srcset ) {
+				$responsive_set  = $fallback_srcset;
+				$responsive_size = '(max-width: 700px) 290px, 600px';
+			}
+			?>
 			<figure class="nc-gallery__slide" data-carousel-slide<?php echo 0 !== $index ? ' hidden' : ''; ?> aria-label="Photo <?php echo esc_attr( (string) ( $index + 1 ) ); ?> of <?php echo esc_attr( (string) $count ); ?>">
 				<?php if ( 0 === $index && $mobile_fallback && $fallback === $url ) : ?><picture><source media="(max-width: 700px)" srcset="<?php echo esc_url( $mobile_fallback ); ?>"><?php endif; ?>
-				<img src="<?php echo esc_url( $url ); ?>"<?php echo $dimensions ? ' width="' . esc_attr( (string) $dimensions[0] ) . '" height="' . esc_attr( (string) $dimensions[1] ) . '"' : ''; ?><?php echo 0 === $index && $fallback === $url && $fallback_srcset ? ' srcset="' . esc_attr( $fallback_srcset ) . '" sizes="(max-width: 700px) 290px, 600px"' : ''; ?> alt="<?php echo esc_attr( 0 === $index ? $alt : sprintf( 'Ksenia Belousova, gallery photo %d', $index + 1 ) ); ?>" loading="lazy" decoding="async">
+				<img src="<?php echo esc_url( $url ); ?>"<?php echo $dimensions ? ' width="' . esc_attr( (string) $dimensions[0] ) . '" height="' . esc_attr( (string) $dimensions[1] ) . '"' : ''; ?><?php echo $responsive_set ? ' srcset="' . esc_attr( $responsive_set ) . '" sizes="' . esc_attr( $responsive_size ) . '"' : ''; ?> alt="<?php echo esc_attr( 0 === $index ? $alt : sprintf( 'Ksenia Belousova, gallery photo %d', $index + 1 ) ); ?>" loading="lazy" decoding="async">
 				<?php if ( 0 === $index && $mobile_fallback && $fallback === $url ) : ?></picture><?php endif; ?>
 			</figure>
 		<?php endforeach; ?>
