@@ -875,15 +875,18 @@ details p { padding:0 45px 18px 0; }
 	.site-page .neuro-hero>.neuro-hero__copy { width:min(887px,100%); padding-top:211px; padding-left:95px; }
 	.site-page .neuro-hero .neuro-button { width:238px; height:64px; min-height:64px; font-size:18px; font-weight:900; line-height:22.5px; }
 	.neuro-story { grid-template-columns:50% 50%; }
-	.neuro-story__photo { width:auto; height:1066px; }
+	.neuro-story__photo { width:auto; height:1066px; overflow:visible; }
+	.neuro-story__photo picture { position:absolute; inset:0 auto auto 0; width:200%; height:100%; display:block; }
+	.neuro-story__photo img { width:100%; max-width:none; height:100%; object-fit:fill; object-position:initial; }
+	.neuro-story__photo::after { content:none; }
 	.nc-about__life-photo { width:1216px; grid-template-columns:98px 930px 98px; }
 	.nc-about__life-photo .nc-gallery__viewport { width:930px; }
 }
 
 /*
  * Neurocoaching story: reconstruct the 1440 px PSD composition.
- * The placed photo is 809 x 1079 at (-44, -7); it must not be scaled with
- * the viewport. The overlay asset is the alpha shape exported from Layer 10.
+ * The approved 1440 px composite already contains the smooth photo-to-colour
+ * transition. Keep it at the source composition width and place live copy above it.
  */
 @media (min-width:1440px) {
 	.neuro-story {
@@ -900,21 +903,14 @@ details p { padding:0 45px 18px 0; }
 		width:720px;
 		overflow:visible;
 	}
+	.neuro-story__photo picture { width:1440px; height:1066px; }
 	.neuro-story__photo img {
-		position:absolute;
-		top:-7px;
-		left:-44px;
-		width:809px;
+		position:static;
+		width:100%;
 		max-width:none;
-		height:1079px;
+		height:100%;
 		object-fit:fill;
 		object-position:initial;
-	}
-	.neuro-story__photo::after {
-		inset:0 auto auto 276px;
-		width:1164px;
-		height:1066px;
-		background:url('./assets/images/neuro-story-overlay.webp') 0 0/1164px 1066px no-repeat;
 	}
 	.neuro-story__copy {
 		position:relative;
