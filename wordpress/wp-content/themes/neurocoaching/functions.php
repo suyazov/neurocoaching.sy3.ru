@@ -319,10 +319,11 @@ function neurocoaching_gallery( $setting, $fallback, $alt, $class_name, $mobile_
 			$filename        = wp_basename( wp_parse_url( $url, PHP_URL_PATH ) );
 			$small_filename  = preg_replace( '/\.webp$/', '-700.webp', $filename );
 			$small_path      = get_theme_file_path( '/assets/images/' . $small_filename );
+			$small_dimensions = is_file( $small_path ) ? getimagesize( $small_path ) : false;
 			$responsive_set  = '';
 			$responsive_size = '';
-			if ( $small_filename !== $filename && is_file( $small_path ) && $dimensions ) {
-				$responsive_set  = get_theme_file_uri( '/assets/images/' . $small_filename ) . ' 700w, ' . $url . ' ' . $dimensions[0] . 'w';
+			if ( $small_filename !== $filename && $small_dimensions && $dimensions && $small_dimensions[0] < $dimensions[0] ) {
+				$responsive_set  = get_theme_file_uri( '/assets/images/' . $small_filename ) . ' ' . $small_dimensions[0] . 'w, ' . $url . ' ' . $dimensions[0] . 'w';
 				$responsive_size = '(max-width: 700px) calc(100vw - 30px), 930px';
 			} elseif ( 0 === $index && $fallback === $url && $fallback_srcset ) {
 				$responsive_set  = $fallback_srcset;
