@@ -430,7 +430,7 @@ details p { padding:0 45px 18px 0; }
 .career-suitable li { position:relative; margin-bottom:10px; padding-left:29px; font-size:18px; line-height:1.3; font-weight:900; }
 .career-suitable li::before { background-image:url('./assets/images/career-check-white.svg'); }
 .career-suitable p { margin:0 0 12px; font-size:18px; line-height:1.4; }
-.career-suitable img { width:auto; max-width:none; height:1320px; align-self:start; justify-self:start; margin:-24px 0 0 -182px; object-fit:contain; object-position:center bottom; }
+.career-suitable img { width:auto; max-width:none; height:970px; align-self:start; justify-self:start; margin:36px 0 0; object-fit:contain; object-position:center bottom; }
 .career-suitable .career-button { width:254px; min-height:64px; margin:30px 0 0; color:#fff; border-color:#fff; background:transparent; }
 .career-review-track blockquote { width:478px; height:624px; min-height:624px; display:block; margin:0; flex:0 0 478px; padding:24px; border:2px solid #c1b4ed; border-radius:6px; color:var(--career-ink); background:#fff; }
 .career-review-track header { position:relative; min-height:201px; display:flex; padding:0 82px 25px 0; flex-direction:column; border-bottom:2px solid #c1b4ed; }
