@@ -4,7 +4,7 @@ get_header();
 neurocoaching_header( 'career' );
 $booking_url = neurocoaching_contact_url();
 $social_url    = neurocoaching_mod( 'contact_url', 'https://www.linkedin.com/' );
-$instagram_url = neurocoaching_mod( 'instagram_url', 'https://www.instagram.com/' );
+$instagram_url = neurocoaching_mod( 'instagram_url', 'https://www.instagram.com/belka80' );
 $credentials = array(
 	'15+ years in the UN & international organisations — HR, project management, organisational development',
 	'Worked with diplomats, senior UN officials, and international teams across the world',

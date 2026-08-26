@@ -3,7 +3,7 @@
 get_header();
 neurocoaching_header( 'about' );
 $booking = neurocoaching_contact_url();
-$instagram = neurocoaching_mod( 'instagram_url', 'https://www.instagram.com/' );
+$instagram = neurocoaching_mod( 'instagram_url', 'https://www.instagram.com/belka80' );
 $images  = get_template_directory_uri() . '/assets/images/';
 $credentials = array(
 	'15+ years in the UN & international organisations — HR, project management, organisational development',
