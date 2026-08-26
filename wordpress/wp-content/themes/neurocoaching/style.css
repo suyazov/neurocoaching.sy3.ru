@@ -1246,6 +1246,7 @@ details p { padding:0 45px 18px 0; }
 	.site-page.site-page--about .site-cta__button { height:63px; min-height:63px; }
 
 	.career-services-route .career-hero { height:1139px; }
+	.career-services-route .career-hero>.career-hero__photo { height:1139px; }
 	.career-services-route .career-hero>.career-hero__copy { width:610px; padding-left:98px; }
 	.career-services-route .career-hero>.career-hero__copy>p { max-width:485px; }
 	.career-services-route .career-hero__checklist { width:485px; max-width:485px; }
