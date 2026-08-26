@@ -1301,7 +1301,7 @@ details p { padding:0 45px 18px 0; }
 	.career-positioning { width:1226px; height:727px; grid-template-columns:476px minmax(0,1fr); margin-bottom:83px; }
 	.career-positioning>div { padding-top:83px; padding-bottom:101px; }
 	.career-positioning>.career-positioning__statement { padding-right:23px; padding-left:123px; }
-	.career-positioning__statement::after { top:85px; right:-1px; bottom:78px; width:6px; }
+	.career-positioning__statement::after { top:85px; right:-1px; bottom:78px; width:2px; }
 	.career-positioning__help { padding-right:49px; padding-left:75px!important; }
 	.career-positioning__help h2 { margin-bottom:48px; }
 	.career-positioning li { padding-left:38px; }
