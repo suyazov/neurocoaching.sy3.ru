@@ -1657,6 +1657,12 @@ details p { padding:0 45px 18px 0; }
 .site-page .contact-form__submit { width:194px; color:#fff; background:var(--site-action); cursor:pointer; }
 .site-page .contact-form__submit:hover,.site-page .contact-form__submit:focus-visible { background:var(--site-section); }
 
+@media (min-width:1024px) {
+	.site-page--neuro .neuro-hero,
+	.site-page--neuro .neuro-hero__photo { height:960px; }
+	.site-page--neuro .neuro-hero__copy>p:not(.neuro-kicker) { font-size:18px; }
+}
+
 @media (max-width:850px) {
 	.site-page .site-button { height:53px; min-height:53px; padding:11px 29px; font-size:14px; font-weight:900; line-height:16.8px; }
 	.site-page .site-education { height:389px; padding-top:55px; }
