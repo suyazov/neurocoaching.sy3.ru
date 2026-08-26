@@ -1279,7 +1279,7 @@ details p { padding:0 45px 18px 0; }
 	.career-services-route .career-card--featured li:nth-child(4),
 	.career-services-route .career-card--featured li:nth-child(5) { margin-bottom:18px; }
 	.career-services-route .career-card li::before { top:0; width:22px; height:20px; }
-	.career-services-route .career-card__outcome { top:767px; font-size:18px; line-height:20px; letter-spacing:-.25px; }
+	.career-services-route .career-card__outcome { top:767px; font-size:16px; line-height:19px; letter-spacing:-.25px; }
 	.career-services-route .career-card:not(.career-card--featured) .career-card__outcome { max-width:none; white-space:nowrap; }
 	.career-services-route .career-card--featured .career-card__outcome { top:872px; font-size:16px; line-height:19px; }
 	.career-services-route .career-price,
