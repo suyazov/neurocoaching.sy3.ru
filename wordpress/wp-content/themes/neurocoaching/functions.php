@@ -48,19 +48,15 @@ function neurocoaching_mod( $key, $fallback ) {
 }
 
 function neurocoaching_email_url() {
-	$admin_email = sanitize_email( get_option( 'admin_email' ) );
-	$fallback    = $admin_email ? 'mailto:' . $admin_email : 'mailto:hello@example.com';
-	$email_url   = neurocoaching_mod( 'email_url', $fallback );
-
-	return 'mailto:hello@example.com' === strtolower( trim( $email_url ) ) && $admin_email ? $fallback : $email_url;
+	return neurocoaching_mod( 'email_url', 'mailto:kseniaalex@gmail.com' );
 }
 
 function neurocoaching_customize_register( $customizer ) {
 	$customizer->add_section( 'neurocoaching_content', array( 'title' => __( 'Neurocoaching content', 'neurocoaching' ) ) );
 	$fields = array(
-		'contact_url' => array( 'LinkedIn CTA URL', 'https://www.linkedin.com/', 'url', 'esc_url_raw' ),
-		'instagram_url' => array( 'Instagram URL', 'https://www.instagram.com/', 'url', 'esc_url_raw' ),
-		'telegram_url' => array( 'Telegram URL', 'https://t.me/', 'url', 'esc_url_raw' ),
+		'contact_url' => array( 'LinkedIn CTA URL', 'https://www.linkedin.com/in/belka80/', 'url', 'esc_url_raw' ),
+		'instagram_url' => array( 'Instagram URL', 'https://www.instagram.com/belka80', 'url', 'esc_url_raw' ),
+		'telegram_url' => array( 'Telegram URL', 'https://t.me/BEL_KA80', 'url', 'esc_url_raw' ),
 		'email_url' => array( 'Email URL', neurocoaching_email_url(), 'url', 'esc_url_raw' ),
 		'about_name'  => array( 'About page name', 'Ksenia Belousova', 'text', 'sanitize_text_field' ),
 	);
@@ -540,13 +536,17 @@ function neurocoaching_real_life_section( $title_id, $instagram_url, $setting, $
 function neurocoaching_header( $active ) {
 	$about_images = get_template_directory_uri() . '/assets/images/';
 	$faq_url      = 'contact' === $active ? home_url( '/#faqs' ) : '#faqs';
+	$linkedin_url = neurocoaching_mod( 'contact_url', 'https://www.linkedin.com/in/belka80/' );
+	$instagram_url = neurocoaching_mod( 'instagram_url', 'https://www.instagram.com/belka80' );
+	$telegram_url = neurocoaching_mod( 'telegram_url', 'https://t.me/BEL_KA80' );
 	?>
 	<header class="site-header" data-site-header>
 		<a class="brand" href="<?php echo esc_url( home_url( '/' ) ); ?>" aria-label="Digital Belka home"><img src="<?php echo esc_url( $about_images . 'logo-belka.svg' ); ?>" width="110" height="58" alt="Digital Belka"></a>
 		<div class="about-socials" aria-label="Social links">
-			<a href="<?php echo esc_url( neurocoaching_mod( 'contact_url', 'https://www.linkedin.com/' ) ); ?>" aria-label="LinkedIn"><img src="<?php echo esc_url( $about_images . 'about-linkedin-v2.svg' ); ?>" width="28" height="28" alt=""></a>
+			<a href="<?php echo esc_url( $linkedin_url ); ?>" aria-label="LinkedIn"><img src="<?php echo esc_url( $about_images . 'about-linkedin-v2.svg' ); ?>" width="28" height="28" alt=""></a>
 			<a href="<?php echo esc_url( neurocoaching_email_url() ); ?>" aria-label="Email"><img src="<?php echo esc_url( $about_images . 'icon-mail.svg' ); ?>" width="28" height="28" alt=""></a>
-			<a href="<?php echo esc_url( neurocoaching_mod( 'telegram_url', 'https://t.me/' ) ); ?>" aria-label="Telegram"><img src="<?php echo esc_url( $about_images . 'about-telegram-v2.svg' ); ?>" width="28" height="28" alt=""></a>
+			<a href="<?php echo esc_url( $instagram_url ); ?>" aria-label="Instagram"><img src="<?php echo esc_url( $about_images . 'about-instagram.svg' ); ?>" width="28" height="28" alt=""></a>
+			<a href="<?php echo esc_url( $telegram_url ); ?>" aria-label="Telegram"><img src="<?php echo esc_url( $about_images . 'about-telegram-v2.svg' ); ?>" width="28" height="28" alt=""></a>
 		</div>
 		<button class="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-navigation" data-menu-toggle><span class="screen-reader-text">Open menu</span><i></i><i></i><i></i></button>
 		<nav id="primary-navigation" class="primary-nav nc-nav" aria-label="Primary navigation">
@@ -555,7 +555,7 @@ function neurocoaching_header( $active ) {
 			<a<?php echo 'neuro' === $active ? ' aria-current="page"' : ''; ?> href="<?php echo esc_url( neurocoaching_page_url( 'neurocoaching' ) ); ?>">Neurocoaching</a>
 			<a href="<?php echo esc_url( $faq_url ); ?>">FAQs</a>
 		</nav>
-		<a class="site-button button button--small" href="<?php echo esc_url( neurocoaching_mod( 'contact_url', 'https://www.linkedin.com/' ) ); ?>"><?php echo 'about' === $active ? 'Connect on Linkedin' : 'Connect on LinkedIn'; ?></a>
+		<a class="site-button button button--small" href="<?php echo esc_url( $linkedin_url ); ?>">Connect on Linkedin</a>
 	</header>
 	<?php
 }
