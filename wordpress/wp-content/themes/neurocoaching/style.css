@@ -1537,8 +1537,8 @@ details p { padding:0 45px 18px 0; }
 	 * viewport runs to the browser edge, so the third real slide stays
 	 * intentionally partial instead of being compressed into a grid. */
 	.site-page .neuro-reviews {
-		height:737px;
-		min-height:737px;
+		height:817px;
+		min-height:817px;
 		padding:120px 0 108px;
 		background:#3a2466;
 	}
@@ -1559,8 +1559,8 @@ details p { padding:0 45px 18px 0; }
 	.site-page .neuro-review-track::-webkit-scrollbar { display:none; }
 	.site-page .neuro-review-track blockquote {
 		width:478px;
-		height:386px;
-		min-height:386px;
+		height:466px;
+		min-height:466px;
 		padding:27px 22px 20px 23px;
 		flex:0 0 478px;
 		border:3px solid #855cac;
