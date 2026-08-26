@@ -98,6 +98,19 @@
     const pagination = carousel.querySelector('[data-carousel-pagination]');
     let active = 0;
     let touchStart = null;
+    const fitPagination = function () {
+      if (!pagination || !dots.length || !carousel.classList.contains('nc-gallery--many')) return;
+      pagination.style.width = '';
+      const availableWidth = pagination.clientWidth;
+      if (pagination.scrollWidth <= availableWidth) return;
+      const dotWidth = dots[0].offsetWidth;
+      const paginationStyle = window.getComputedStyle(pagination);
+      const gap = parseFloat(paginationStyle.columnGap || paginationStyle.gap) || 0;
+      let visibleDots = Math.max(1, Math.floor((availableWidth + gap) / (dotWidth + gap)));
+      if (visibleDots > 1 && visibleDots % 2 === 0) visibleDots -= 1;
+      const fittedWidth = Math.min(availableWidth, (visibleDots * dotWidth) + ((visibleDots - 1) * gap));
+      pagination.style.width = fittedWidth + 'px';
+    };
     const preload = function () {
       [active, (active + 1) % slides.length].forEach(function (slideIndex) {
         const slideImage = slides[slideIndex] ? slides[slideIndex].querySelector('img') : null;
@@ -149,6 +162,8 @@
       }, { rootMargin: '400px 0px' });
       observer.observe(carousel);
     }
+    fitPagination();
+    window.addEventListener('resize', fitPagination);
     show(0);
   });
 
