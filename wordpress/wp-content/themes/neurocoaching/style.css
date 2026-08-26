@@ -1222,8 +1222,8 @@ details p { padding:0 45px 18px 0; }
 	.career-price s { margin-right:81px; }
 	.career-card--featured { height:1193px; }
 	.career-card__free { top:577px; height:37px; }
-	.career-card__flag { right:2px; height:37px; }
-	.career-offer { top:1075px; right:2px; bottom:auto; height:37px; }
+	.career-card__flag { right:0; height:37px; }
+	.career-offer { top:1075px; right:0; bottom:auto; height:37px; }
 	.career-card .career-button { bottom:63px; height:64px; min-height:64px; }
 	.career-card--featured .career-button { bottom:65px; height:61px; min-height:61px; }
 	.site-page .neuro-card .neuro-button { bottom:53px; height:64px; min-height:64px; }
@@ -1264,7 +1264,7 @@ details p { padding:0 45px 18px 0; }
 	.career-services-route .career-card>p:not([class]),
 	.career-services-route .career-card--featured>p:not([class]) { top:341px; }
 	.career-services-route .career-card--featured .career-card__flag { -webkit-mask:none; mask:none; clip-path:polygon(0 0,100% 0,100% 100%,0 100%,19px 50%); }
-	.career-services-route .career-card--featured .career-card__motif::after { right:6px; bottom:2px; left:1px; height:4px; }
+	.career-services-route .career-card--featured .career-card__motif::after { right:6px; bottom:2px; left:1px; height:2px; }
 	.career-services-route .career-card h4 { top:520px; font-size:47px; line-height:1; }
 	.career-services-route .career-card__free,
 	.career-services-route .career-offer { justify-content:flex-start; -webkit-mask:none; mask:none; clip-path:polygon(0 0,100% 0,100% 100%,0 100%,19px 50%); letter-spacing:.8px; }
