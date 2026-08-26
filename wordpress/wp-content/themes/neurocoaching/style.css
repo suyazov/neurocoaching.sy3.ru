@@ -1526,13 +1526,12 @@ details p { padding:0 45px 18px 0; }
 	.career-services-route .career-review-track blockquote:nth-child(n+2) a { left:1px; }
 	.career-services-route .career-review-track blockquote>p {
 		left:-2px;
-		width:371px;
+		width:420px;
 		margin-top:27px;
 		color:#5c5467;
-		font:400 18px/21.6px Lato,Arial,sans-serif;
+		font:400 16px/19.2px Lato,Arial,sans-serif;
 		letter-spacing:0;
 	}
-	.career-services-route .career-review-track blockquote:nth-child(3)>p { width:378px; }
 	/* Native 1440 px Reviews track from 3_Neurocoaching_1440.psd. The
 	 * viewport runs to the browser edge, so the third real slide stays
 	 * intentionally partial instead of being compressed into a grid. */
