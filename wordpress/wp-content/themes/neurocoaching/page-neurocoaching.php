@@ -5,7 +5,7 @@ neurocoaching_header( 'neuro' );
 $images  = get_template_directory_uri() . '/assets/images/';
 $desktop_source = $images . 'neurocoaching-source/desktop-1440/';
 $mobile_source  = $images . 'neurocoaching-source/mobile-320/';
-$booking = neurocoaching_contact_url();
+$booking = neurocoaching_booking_url();
 $instagram = neurocoaching_mod( 'instagram_url', 'https://www.instagram.com/belka80' );
 $credentials = array(
 	'15+ years in the UN & international organisations — HR, project management, organisational development',

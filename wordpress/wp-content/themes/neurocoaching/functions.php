@@ -55,6 +55,7 @@ function neurocoaching_customize_register( $customizer ) {
 	$customizer->add_section( 'neurocoaching_content', array( 'title' => __( 'Neurocoaching content', 'neurocoaching' ) ) );
 	$fields = array(
 		'contact_url' => array( 'LinkedIn CTA URL', 'https://www.linkedin.com/in/belka80/', 'url', 'esc_url_raw' ),
+		'booking_url' => array( 'Booking CTA URL', 'https://calendly.com/digitalbelka/consultation', 'url', 'esc_url_raw' ),
 		'instagram_url' => array( 'Instagram URL', 'https://www.instagram.com/belka80', 'url', 'esc_url_raw' ),
 		'telegram_url' => array( 'Telegram URL', 'https://t.me/BEL_KA80', 'url', 'esc_url_raw' ),
 		'email_url' => array( 'Email URL', neurocoaching_email_url(), 'url', 'esc_url_raw' ),
@@ -141,6 +142,10 @@ function neurocoaching_page_url( $slug ) {
 
 function neurocoaching_contact_url() {
 	return neurocoaching_page_url( 'contact' );
+}
+
+function neurocoaching_booking_url() {
+	return neurocoaching_mod( 'booking_url', 'https://calendly.com/digitalbelka/consultation' );
 }
 
 function neurocoaching_contact_redirect( $status ) {
@@ -461,7 +466,7 @@ function neurocoaching_cta_section( $args ) {
 			'heading'       => 'Ready to take the first step?',
 			'text'          => 'Free 30-min intro call · No commitment',
 			'button_label'  => 'Book a free call',
-			'button_url'    => neurocoaching_contact_url(),
+			'button_url'    => neurocoaching_booking_url(),
 			'section_class' => '',
 			'inner_class'   => '',
 		)
@@ -497,7 +502,7 @@ function neurocoaching_faq_section( $args ) {
 			'aside_heading'  => 'Ready to take the first step?',
 			'aside_text'     => 'Leave with clarity, a defined direction, and a concrete next step.',
 			'button_label'   => 'Book a free call',
-			'button_url'     => neurocoaching_contact_url(),
+			'button_url'     => neurocoaching_booking_url(),
 		)
 	);
 	?>
