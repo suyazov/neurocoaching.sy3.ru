@@ -527,6 +527,7 @@ details p { padding:0 45px 18px 0; }
 .nc-about__lead { margin:0 0 47px 6px; color:var(--nc-about-purple); font-size:18px; line-height:22px; font-weight:800; letter-spacing:-.18px; }
 .nc-about__intro { width:550px; max-width:100%; margin-left:5px; font-size:14px; line-height:20px; }
 .nc-about__intro p { margin-bottom:13px; }
+.nc-about__intro-heavy { font-family:"Lato PSD Heavy",Lato,Arial,sans-serif; font-weight:800; }
 .nc-about__hero-copy>.nc-about__button { position:relative; top:48px; left:4px; width:238px; min-height:64px; }
 .nc-about__button { display:inline-flex; min-width:186px; min-height:64px; padding:11px 26px; align-items:center; justify-content:center; border:2px solid var(--nc-about-violet); border-radius:6px; color:var(--nc-about-purple); background:transparent; font-size:18px; font-weight:800; text-decoration:none; }
 .nc-about__button:hover,.nc-about__button:focus-visible { color:#fff; background:var(--nc-about-purple); outline:3px solid #caa8e2; outline-offset:2px; }

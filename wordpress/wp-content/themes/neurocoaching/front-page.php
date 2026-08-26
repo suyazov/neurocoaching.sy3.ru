@@ -40,7 +40,7 @@ $questions = array(
 			<div class="nc-about__intro">
 				<p>That combination — insider knowledge of international organisations and the lived experience of navigating change — is exactly what I bring to every client.</p>
 				<p><strong>Why me?</strong> Because I've been where you are. And I get it — not from a textbook, but from lived experience inside international organisations.</p>
-				<p>I built my career across the United Nations and international organisations, working with diplomats and senior officials across the globe, leading HR across multiple missions and countries. Over 15 years, I hired people, shaped organisations, advised managers, and saw firsthand what it takes to succeed in complex international environments, including within the UN system and what quietly holds talented people back.</p>
+				<p>I built my career across the <strong class="nc-about__intro-heavy">United Nations and international organisations</strong>, working with diplomats and senior officials across the globe, leading HR across multiple missions and countries. Over 15 years, I hired people, shaped organisations, advised managers, and saw firsthand what it takes to succeed in complex international environments, including within the UN system and what quietly holds talented people back.</p>
 				<p>I've also changed career paths myself more than once, relocated across four countries — Russia, the US, Japan, and Austria — and learned how to rebuild from scratch while holding together a career, a husband, two kids, and myself when everything kept changing.</p>
 			</div>
 			<a class="site-button nc-about__button" href="<?php echo esc_url( $booking ); ?>">Book a free call</a>
