@@ -446,7 +446,7 @@ details p { padding:0 45px 18px 0; }
 .career-review-more { display:none; }
 @media (max-width:850px) {
 	.career-wrap { width:auto; max-width:none; margin-inline:18px; }
-	.career-hero { height:1573px; display:block; padding-top:51px; overflow:hidden; }
+	.career-hero { height:auto; display:block; padding-top:51px; overflow:hidden; }
 	.career-hero__photo { position:relative; left:-.9375vw; width:101.5625vw; height:126.25vw; background:#f7d7c6; }
 	.career-hero__photo img { position:absolute; top:-4.6875vw; left:.3125vw; width:94.6875vw; max-width:none; height:auto; aspect-ratio:2/3; margin:0; }
 	.career-hero__copy { width:auto; padding:44px 18px 30px; font-size:14px; line-height:1.42; }
@@ -491,6 +491,7 @@ details p { padding:0 45px 18px 0; }
 	.career-card__flag { top:77px; width:163px; height:32px; padding:0 14px 0 32px; font-size:18px; }
 	.career-offer { position:relative; right:auto; bottom:auto; width:163px; height:32px; margin:0 -26px 19px auto; padding:0 27px 0 14px; -webkit-mask:none; mask:none; clip-path:polygon(0 0,calc(100% - 18px) 0,100% 50%,calc(100% - 18px) 100%,0 100%); font-size:18px; }
 	.career-card .career-button { position:static; width:auto; }
+	.career-card--featured { margin-bottom:0; }
 	.career-card--featured .career-button { display:flex; width:218px; margin:auto; }
 	.career-suitable { height:auto; min-height:1100px; display:flex; flex-direction:column; }
 	.career-suitable__copy { width:auto; min-height:650px; margin:0; padding:54px 18px 34px; }
@@ -499,15 +500,16 @@ details p { padding:0 45px 18px 0; }
 	.career-suitable li { padding-left:24px; }
 	.career-suitable .career-button { margin:24px 0 0; }
 	.career-suitable img { width:110%; height:auto; max-height:520px; margin:auto 0 0 -5%; object-position:center bottom; }
-	.career-review-track blockquote { position:relative; width:271px; min-height:390px; flex-basis:271px; padding:28px 22px 55px; }
-	.career-review-track header { min-height:118px; padding-right:58px; }
+	.career-review-track blockquote { position:relative; width:271px; height:360px; min-height:360px; display:flex; flex-basis:271px; flex-direction:column; padding:28px 22px 55px; }
+	.career-review-track header { min-height:118px; padding-right:58px; flex:0 0 auto; }
 	.career-review-track header::after { right:0; width:28px; height:18px; }
 	.career-review-track strong { font-size:16px; }
 	.career-review-track span { font-size:14px; }
 	.career-review-track a,.career-review-track blockquote p { font-size:12px; }
 	.career-review-track a { margin-top:14px; }
-	.career-review-track blockquote p { max-height:228px; margin-top:20px; overflow:hidden; }
-	.career-review-track blockquote.is-expanded p { max-height:none; }
+	.career-review-track blockquote p { min-height:0; margin-top:20px; overflow:hidden; flex:1 1 auto; }
+	.career-review-track blockquote.is-expanded { height:auto; }
+	.career-review-track blockquote.is-expanded p { overflow:visible; flex:none; }
 	.career-review-more { position:absolute; bottom:22px; left:22px; display:block; padding:0; border:0; color:var(--career-violet); background:transparent; font-size:12px; text-decoration:underline; }
 	.career-review-nav { display:none; }
 }
@@ -781,16 +783,17 @@ details p { padding:0 45px 18px 0; }
 		transform:none;
 	}
 	.site-header[data-site-header] .brand img { display:block; width:89px; min-width:89px; max-width:89px; height:45px; min-height:45px; max-height:45px; object-fit:contain; filter:brightness(0) invert(1); }
-	.site-header[data-site-header] .about-socials { position:absolute; top:15px; left:130px; width:126px; min-width:126px; max-width:126px; height:22px; min-height:22px; max-height:22px; display:block; margin:0; flex:none; overflow:visible; transform:none; }
-	.site-header[data-site-header] .about-socials a,.site-header[data-site-header] .about-socials a:last-child { position:absolute; top:0; width:22px; height:22px; color:#fff; }
+	.site-header[data-site-header] .about-socials { position:absolute; top:15px; left:106px; width:160px; min-width:160px; max-width:160px; height:22px; min-height:22px; max-height:22px; display:block; margin:0; flex:none; overflow:visible; transform:none; }
+	.site-header[data-site-header] .about-socials a,.site-header[data-site-header] .about-socials a:last-child { position:absolute; top:-9px; width:40px; height:40px; display:grid; padding:0; place-items:center; color:#fff; }
 	.site-header[data-site-header] .about-socials a:nth-child(1) { left:0; }
-	.site-header[data-site-header] .about-socials a:nth-child(2) { left:34px; width:25px; }
-	.site-header[data-site-header] .about-socials a:nth-child(3) { left:70px; }
-	.site-header[data-site-header] .about-socials a:nth-child(4) { left:104px; }
-	.site-header[data-site-header] .about-socials img { width:100%; min-width:100%; max-width:100%; height:100%; min-height:100%; max-height:100%; object-fit:contain; filter:brightness(0) invert(1); }
+	.site-header[data-site-header] .about-socials a:nth-child(2) { left:40px; width:40px; }
+	.site-header[data-site-header] .about-socials a:nth-child(3) { left:80px; }
+	.site-header[data-site-header] .about-socials a:nth-child(4) { left:120px; }
+	.site-header[data-site-header] .about-socials img { width:22px; min-width:22px; max-width:22px; height:22px; min-height:22px; max-height:22px; object-fit:contain; filter:brightness(0) invert(1); }
+	.site-header[data-site-header] .about-socials a:nth-child(2) img { width:25px; min-width:25px; max-width:25px; }
 	.site-header[data-site-header]>.button { display:none; }
-	.site-header[data-site-header] .menu-toggle { position:absolute; top:16px; right:15px; display:grid; width:24px; min-width:24px; max-width:24px; height:22px; min-height:22px; max-height:22px; margin:0; padding:1px 0; flex:none; align-content:space-between; border:0; background:transparent; cursor:pointer; transform:none; }
-	.site-header[data-site-header] .menu-toggle i { display:block; width:24px; height:4px; background:#f7f1ed; }
+	.site-header[data-site-header] .menu-toggle { position:absolute; top:4px; right:5px; display:grid; width:44px; min-width:44px; max-width:44px; height:44px; min-height:44px; max-height:44px; margin:0; padding:11px 10px; flex:none; align-content:space-between; border:0; background:transparent; cursor:pointer; transform:none; }
+	.site-header[data-site-header] .menu-toggle i { display:block; width:24px; height:4px; justify-self:center; background:#f7f1ed; }
 	.site-header[data-site-header] .primary-nav { position:absolute; top:53px; left:0; width:100%; display:none; margin:0; padding:18px 15px 22px; flex-direction:column; gap:7px; background:#3f2961; font-size:14px; }
 	.site-header[data-site-header].is-open .primary-nav { display:flex; }
 	.site-header[data-site-header] .primary-nav a { position:relative; top:auto; left:auto!important; width:auto; height:auto; padding:3px 0; border:0; border-radius:0; color:#fff; }
@@ -857,9 +860,9 @@ details p { padding:0 45px 18px 0; }
 	.nc-about__life-photo { display:block; margin-top:15px; }
 	.nc-about__life-photo .nc-gallery__viewport { width:100%; max-width:none; height:223px; margin:0; }
 	.nc-gallery>button { display:none; }
-	.nc-gallery__pagination { top:calc(100% + 7px); gap:7px; }
-	.nc-gallery__pagination button { width:10px; height:10px; border-width:1px; }
-	.nc-about__life-photo .nc-gallery__pagination { width:max-content; height:10px; }
+	.nc-gallery__pagination { top:calc(100% + 7px); gap:5px; }
+	.nc-gallery__pagination button { width:8px; height:8px; border-width:1px; }
+	.nc-about__life-photo .nc-gallery__pagination { width:max-content; height:8px; }
 }
 
 /* Source-safe photo rendering: never stretch a PSD smart-object export. */
@@ -1678,6 +1681,8 @@ details p { padding:0 45px 18px 0; }
 	.site-check { width:16px; height:14px; font-size:0; }
 	.site-page .site-services { width:auto; max-width:none; height:auto; margin:0 13px; padding:0 0 61px; }
 	.site-page .site-services>.site-section-title { width:240px; max-width:100%; margin:0 0 60px; font-size:40px; line-height:1.05; text-align:left; }
+	.career-services-route .career-services { padding-bottom:32px; }
+	.career-services-route .career-services>.site-section-title { width:auto; max-width:none; font-size:clamp(34px,10.5vw,40px); white-space:nowrap; }
 	.site-page .site-service-grid { width:100%; display:block; }
 	.site-page--about .site-service-card { grid-template-columns:none; }
 	.site-page.site-page--about .nc-about__programmes .nc-about__button {
@@ -1686,6 +1691,7 @@ details p { padding:0 45px 18px 0; }
 		background:var(--site-accent);
 	}
 	.site-page .site-reviews { min-height:0; padding:55px 0; }
+	.site-page .career-reviews { padding:39px 0 28px; }
 	.site-page .site-reviews>.site-shell { width:auto; max-width:none; margin-inline:16px; }
 	.site-page .site-reviews .site-section-title { margin-bottom:39px; font-size:36px; text-align:left; }
 	.site-page .site-review-track { gap:18px; }
@@ -1745,7 +1751,7 @@ body.has-certificate-lightbox { overflow:hidden; }
 @media (max-width:360px) {
 	.site-page--about .site-services { padding-bottom:6px; }
 	.site-page--about .site-services>.site-section-title { margin-bottom:34px; }
-	.career-hero { height:1526px; }
+	.career-hero { height:auto; }
 	.career-positioning { height:850px; min-height:850px; }
 	.career-positioning>div { padding-right:16px; padding-left:16px; }
 	.career-positioning__statement { height:420px; min-height:420px; }
@@ -1801,16 +1807,17 @@ body.has-certificate-lightbox { overflow:hidden; }
 	.career-suitable li,.career-suitable p { font-size:12px; line-height:1.35; }
 	.career-suitable li { margin-bottom:16px; }
 	.career-suitable .career-button { width:185px; min-height:53px; margin-top:24px; }
-	.site-page .career-reviews { padding:39px 0; }
+	.site-page .career-reviews { padding:39px 0 24px; }
 	.site-page .career-reviews .site-section-title { margin-bottom:15px; }
 	.site-page .career-review-track blockquote {
 		width:207px;
-		height:377px;
-		min-height:377px;
+		height:350px;
+		min-height:350px;
 		flex-basis:207px;
 		padding:12px 22px 43px;
 	}
-	.career-review-track blockquote p { max-height:190px; }
+	.site-page .career-review-track blockquote.is-expanded { height:auto; }
+	.career-review-track blockquote p { max-height:none; }
 	.career-review-more { bottom:14px; }
 
 	/* Neurocoaching 320 px artboard. */
