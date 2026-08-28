@@ -124,4 +124,5 @@ $questions = array(
 	);
 	?>
 </article>
+<!-- BRIDGE_R7_B3_OK -->
 <?php get_footer();
