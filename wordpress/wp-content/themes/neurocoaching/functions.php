@@ -560,7 +560,7 @@ function neurocoaching_header( $active ) {
 			<a<?php echo 'neuro' === $active ? ' aria-current="page"' : ''; ?> href="<?php echo esc_url( neurocoaching_page_url( 'neurocoaching' ) ); ?>">Neurocoaching</a>
 			<a href="<?php echo esc_url( $faq_url ); ?>">FAQs</a>
 		</nav>
-		<a class="site-button button button--small" href="<?php echo esc_url( $linkedin_url ); ?>">Connect on Linkedin</a>
+		<a class="site-button button button--small" href="<?php echo esc_url( $linkedin_url ); ?>">Connect on LinkedIn</a>
 	</header>
 	<?php
 }
