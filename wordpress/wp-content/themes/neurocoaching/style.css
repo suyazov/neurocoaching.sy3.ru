@@ -552,8 +552,9 @@ details p { padding:0 45px 18px 0; }
 .nc-about__programmes li { position:relative; margin-bottom:28px; font-size:18px; line-height:21px; }
 .nc-about__programmes li>img { position:absolute; top:-4px; left:-31px; width:20px; height:18px; }
 .nc-about__programmes>p { margin:0 0 29px; font-size:18px; font-weight:600; }
-.nc-about__programmes-outcome { position:relative; }
-.nc-about__programmes-outcome>img { position:absolute; top:-4px; left:-35px; width:20px; height:18px; }
+.nc-about__programmes .nc-about__programmes-outcome { position:relative; font-style:italic; font-weight:400; }
+.nc-about__programmes-outcome>img { position:absolute; top:-4px; left:-35px; width:20px; height:18px; display:block; }
+.nc-about__programmes-outcome em { font-style:inherit; font-weight:inherit; }
 .nc-about__programmes .nc-about__button { width:186px; min-width:186px; min-height:63px; border-color:var(--nc-about-violet); color:#fff; background:var(--nc-about-violet); }
 .nc-about__life { --nc-about-purple:#3f2961; --nc-about-violet:#855cac; --nc-about-stroke:#855cac; --nc-about-lilac:#e9e1f3; --nc-about-paper:#f8f1ee; position:relative; height:auto; min-height:1118px; padding-top:143px; padding-bottom:80px; overflow:hidden; isolation:isolate; color:#252525; text-align:center; background:var(--nc-about-lilac); font-family:Lato,Arial,sans-serif; }
 .nc-about__life h2 { margin:0; font-size:65px; line-height:1; }
