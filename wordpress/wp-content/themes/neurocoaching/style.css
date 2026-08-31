@@ -348,10 +348,14 @@ details p { padding:0 45px 18px 0; }
 	.neuro-method h2 { font-size:31px; }
 	.neuro-method__layout { display:flex; flex-direction:column; gap:34px; }
 	.neuro-method p { font-size:14px; }
-	.neuro-method__visual { display:block; }
-	.neuro-method__visual picture { width:100%; }
-	.neuro-method__visual img { width:100%; }
-	.neuro-method__steps { margin-top:28px; gap:24px; }
+	.neuro-method__visual { width:min(100%,360px); height:auto; display:block; margin-inline:auto; align-self:center; }
+	.neuro-method__visual picture { width:100%; height:auto; display:block; }
+	.neuro-method__visual img { width:100%; max-width:100%; height:auto; display:block; }
+	.neuro-method__steps { position:static; width:calc(100% - 28px); height:auto; display:grid; grid-template-rows:repeat(3,minmax(58px,auto)); margin:30px 0 0 28px; gap:30px; counter-reset:neuro-step; }
+	.neuro-method__steps li { position:relative; top:auto!important; left:auto; width:100%; min-height:58px; padding-left:12px; counter-increment:neuro-step; }
+	.neuro-method__steps li::before { content:counter(neuro-step); position:absolute; top:0; left:-26px; color:var(--neuro-violet); font-size:20px; line-height:24px; font-weight:900; }
+	.neuro-method__steps strong { position:static; color:var(--neuro-violet); font-size:14px; line-height:17px; font-weight:900; }
+	.neuro-method__steps span { position:static; top:auto; width:auto; color:#5a5566; font-size:12px; line-height:15px; font-weight:400; }
 	.neuro-method p { font-size:15px; }
 	.neuro-method>.neuro-waves { position:relative; bottom:auto; left:auto; width:53px; height:35px; margin:34px 0 0; }
 	.neuro-suitable { padding:29px 0 58px; }
@@ -1898,7 +1902,7 @@ body.has-certificate-lightbox { overflow:hidden; }
 	.neuro-story p { margin-bottom:14px; font-size:14px; line-height:20px; }
 	.neuro-story__desktop-title { display:none; }
 	.neuro-story__mobile-title { display:inline; }
-	.neuro-method { height:1017px; margin-top:-15px; padding:51px 0 0; background:#fff; box-shadow:0 0 0 100vmax #fff; clip-path:inset(0 -100vmax); }
+	.neuro-method { height:auto; margin-top:-15px; padding:51px 0 44px; background:#fff; box-shadow:0 0 0 100vmax #fff; clip-path:inset(0 -100vmax); }
 	.neuro-method h2 { width:278px; margin:0 0 18px; font-size:20px; line-height:24px; }
 	.neuro-method__mobile-break { display:inline; }
 	.neuro-method__layout { display:block; }
@@ -1906,16 +1910,15 @@ body.has-certificate-lightbox { overflow:hidden; }
 	.neuro-method__copy p:first-child { width:284px; }
 	.neuro-method p { margin-bottom:16px; font-size:14px; line-height:20px; }
 	.neuro-method a { display:block; width:230px; font-size:16px; line-height:18px; }
-	.neuro-method__visual { width:557px; height:568px; margin:13px 0 0 -21px; }
-	.neuro-method__visual picture { width:557px; height:304px; }
-	.neuro-method__visual picture img { width:557px; max-width:none; height:304px; object-fit:fill; }
-	.neuro-method__steps { position:absolute; top:300px; left:45px; width:269px; height:238px; display:grid; grid-template-rows:58px 58px 58px; align-content:start; margin:0; gap:32px; counter-reset:neuro-step; }
-	.neuro-method__steps li { position:relative; top:auto!important; left:auto; width:269px; min-height:58px; padding-left:12px; counter-increment:neuro-step; }
-	.neuro-method__steps li::before { content:counter(neuro-step); position:absolute; top:0; left:-25px; color:var(--neuro-violet); font-weight:900; }
-	.neuro-method__steps li::before { font-size:20px; line-height:24px; }
+	.neuro-method__visual { width:284px; height:auto; margin:13px 0 0; }
+	.neuro-method__visual picture { width:284px; height:auto; }
+	.neuro-method__visual picture img { width:284px; max-width:100%; height:auto; object-fit:contain; }
+	.neuro-method__steps { position:static; top:auto; left:auto; width:256px; height:auto; display:grid; grid-template-rows:repeat(3,minmax(58px,auto)); align-content:start; margin:30px 0 0 28px; gap:32px; counter-reset:neuro-step; }
+	.neuro-method__steps li { position:relative; top:auto!important; left:auto; width:256px; min-height:58px; padding-left:12px; counter-increment:neuro-step; }
+	.neuro-method__steps li::before { content:counter(neuro-step); position:absolute; top:0; left:-26px; color:var(--neuro-violet); font-size:20px; line-height:24px; font-weight:900; }
 	.neuro-method__steps strong { font-size:14px; line-height:17px; }
 	.neuro-method__steps span { font-size:12px; line-height:15px; }
-	.neuro-method>.neuro-waves { bottom:13px; left:0; margin:0; }
+	.neuro-method>.neuro-waves { bottom:auto; left:auto; margin:34px 0 0; }
 	.neuro-suitable { margin-right:10px; margin-left:14px; padding:17px 0 57px; background:#fff; box-shadow:0 0 0 100vmax #fff; clip-path:inset(0 -100vmax); }
 	.neuro-suitable h2 { width:285px; margin-bottom:16px; font-size:20px; line-height:24px; }
 	.neuro-suitable__grid { width:auto; grid-template-columns:1fr; grid-template-rows:76px 76px 76px 76px 76px 89px; gap:10px; }
