@@ -372,7 +372,6 @@ function neurocoaching_about_career_certificates() {
 function neurocoaching_neuro_certificates() {
 	return array(
 		array( 'file' => 'neuro-integration-certificate-01-source.webp', 'alt' => 'Neurointegration Trainer professional retraining diploma' ),
-		array( 'file' => 'neuro-integration-certificate-02-source.webp', 'alt' => 'Neurointegration Trainer professional retraining diploma cover' ),
 		array( 'file' => 'neuro-integration-certificate-03-source.webp', 'alt' => 'HarvardX Managing Happiness verified certificate' ),
 		array( 'file' => 'neuro-integration-certificate-04-source.webp', 'alt' => 'Certified Neurointegration Coach professional development certificate' ),
 		array( 'file' => 'neuro-integration-certificate-05-source.webp', 'alt' => 'Inside LVMH certificate' ),
