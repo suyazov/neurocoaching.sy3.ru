@@ -39,7 +39,7 @@ $faqs = array(
 			<p class="neuro-kicker">Neurointegration coaching</p>
 			<a class="neuro-profile-link" href="<?php echo esc_url( 'https://trainer.neurointegration.org/profile/826077931552-kseniya-belousova' ); ?>">More details in my profile</a>
 			<h1>
-				<span class="neuro-title__desktop" aria-hidden="true">Burned out,<br>overwhelmed, or know<br>something needs<br>to change?</span>
+				<span class="neuro-title__desktop" aria-hidden="true">Burned out,<br>overwhelmed,<br>or know something<br>needs to change?</span>
 				<span class="neuro-title__mobile" aria-hidden="true">Burned out,<br>overwhelmed, or<br>know something<br>needs to change?</span>
 				<span class="screen-reader-text">Burned out, overwhelmed, or know something needs to change?</span>
 			</h1>
