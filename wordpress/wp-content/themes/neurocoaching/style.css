@@ -333,6 +333,8 @@ details p { padding:0 45px 18px 0; }
 	.neuro-price s { margin-right:25px; }
 	.neuro-card__offer { position:static; width:163px; height:32px; display:flex; margin:0 0 17px 13px; padding:0 19px; -webkit-mask:none; mask:none; clip-path:polygon(0 0,calc(100% - 18px) 0,100% 50%,calc(100% - 18px) 100%,0 100%); font-size:16px; }
 	.neuro-card .neuro-button { position:static; width:auto; min-height:53px; }
+	.neuro-card:not(.neuro-card--featured) .neuro-price { margin-top:24px; }
+	.neuro-card:not(.neuro-card--featured) .neuro-button { margin-top:16px; }
 	.neuro-story { height:auto; display:flex; flex-direction:column; }
 	.neuro-story__copy { order:1; padding:45px 16px 37px; }
 	.neuro-story__photo { order:2; height:471px; }
@@ -1843,7 +1845,7 @@ body.has-certificate-lightbox { overflow:hidden; }
 	.site-page .neuro-services { padding-top:52px; }
 	.site-page .neuro-services>.site-section-title { margin-bottom:24px; }
 	.neuro-card { height:auto; display:block; padding:0; font-size:14px; line-height:20px; }
-	.neuro-card:first-child { height:1117px; min-height:1117px; margin-bottom:53px; }
+	.neuro-card:first-child { height:1133px; min-height:1133px; margin-bottom:53px; }
 	.neuro-card--featured { height:1333px; min-height:1333px; margin-bottom:0; background:linear-gradient(to bottom,#bdcafa 0%,#cdd8fb 100%); }
 	.neuro-card__desktop-break { display:none; }
 	.neuro-card__desktop-separator { display:none; }
@@ -1870,8 +1872,10 @@ body.has-certificate-lightbox { overflow:hidden; }
 	.neuro-card li:nth-child(-n+3),.neuro-card--featured li { margin-bottom:0; }
 	.neuro-card__outcome,.neuro-card--featured .neuro-card__outcome { position:absolute; top:908px; right:20px; left:22px; width:auto; margin:0; font-size:14px; line-height:20px; font-weight:400; }
 	.neuro-price,.neuro-card--featured .neuro-price { position:absolute; top:980px; left:21px; margin:0; font-family:"IBM Plex Sans",Arial,sans-serif; font-size:36px; line-height:36px; font-weight:700; }
+	.neuro-card:not(.neuro-card--featured) .neuro-price { top:996px; margin-top:0; }
 	.neuro-price s { margin-right:42px; }
 	.neuro-card .neuro-button { position:absolute; top:1034px; bottom:auto; left:21px; width:185px; height:55px; min-height:55px; }
+	.neuro-card:not(.neuro-card--featured) .neuro-button { top:1050px; margin-top:0; }
 	.neuro-card__flag { top:226px; right:-1px; width:163px; height:33px; padding:0 22px 0 38px; -webkit-mask:none; mask:none; clip-path:polygon(0 0,100% 0,100% 100%,0 100%,18px 50%); font-size:16px; }
 	.neuro-card--featured>p:not([class]) { top:289px; }
 	.neuro-card--featured>p:not([class]):nth-of-type(3) { top:409px; }
