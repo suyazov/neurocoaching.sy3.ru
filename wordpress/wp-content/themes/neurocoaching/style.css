@@ -62,6 +62,9 @@ details p { padding:0 45px 18px 0; }
 .neuro-title__desktop,.neuro-title__mobile { display:block; }
 .neuro-title__desktop,.neuro-title__mobile { white-space:nowrap; }
 .neuro-title__mobile { display:none; }
+@media (min-width:851px) and (max-width:1199px) {
+	.site-page--neuro .neuro-hero h1 { font-size:clamp(29px,calc(12.2vw - 76px),70px); }
+}
 .neuro-hero__copy>p:not(.neuro-kicker) { width:431px; margin-bottom:31px; }
 .neuro-hero__copy>p.neuro-lead { width:400px; margin-bottom:56px; color:var(--neuro-purple); font-weight:900; }
 .neuro-hero .neuro-button { width:238px; height:64px; min-height:64px; margin:-1px 0 0 -4px; font-size:18px; font-weight:900; line-height:22.5px; }
