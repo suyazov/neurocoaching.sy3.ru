@@ -1688,7 +1688,7 @@ details p { padding:0 45px 18px 0; }
 	.site-check { width:16px; height:14px; font-size:0; }
 	.site-page .site-services { width:auto; max-width:none; height:auto; margin:0 13px; padding:0 0 61px; }
 	.site-page .site-services>.site-section-title { width:240px; max-width:100%; margin:0 0 60px; font-size:40px; line-height:1.05; text-align:left; }
-	.career-services-route .career-services { padding-bottom:32px; }
+	.career-services-route .career-services { padding-top:55px; padding-bottom:32px; }
 	.career-services-route .career-services>.site-section-title { width:auto; max-width:none; font-size:clamp(34px,10.5vw,40px); white-space:nowrap; }
 	.site-page .site-service-grid { width:100%; display:block; }
 	.site-page--about .site-service-card { grid-template-columns:none; }
@@ -1767,7 +1767,7 @@ body.has-certificate-lightbox { overflow:hidden; }
 	.career-positioning__help { height:430px; }
 	.career-positioning__help h2 { font-size:36px; }
 	.site-page .career-positioning .career-button { min-width:181px; margin-left:0; }
-	.site-page .career-services { padding-top:0; }
+	.site-page .career-services { padding-top:55px; }
 	.site-page .career-services>.site-section-title { margin-bottom:71px; }
 	.career-card { height:auto; display:block; padding:0; font-size:14px; line-height:1.35; }
 	.career-card:first-child { height:731px; margin-bottom:54px; }
