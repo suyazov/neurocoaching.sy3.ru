@@ -4,7 +4,7 @@ Theme URI: https://digitalbelka.com/
 Update URI: https://digitalbelka.com/neurocoaching-theme/
 Author: SY3
 Description: Semantic custom WordPress theme for Ksenia Belousova.
-Version: 1.0.11
+Version: 1.0.12
 Text Domain: neurocoaching
 */
 @font-face { font-family:"IBM Plex Sans"; src:url('assets/fonts/ibm-plex-sans-700-latin.woff2') format('woff2'); font-style:normal; font-weight:700; font-display:swap; }
@@ -628,11 +628,11 @@ body > .elementor-location-footer {
 	.nc-about__programmes>p { margin:7px 0 0; font-size:14px; }
 	.nc-about__programmes-outcome>img { display:none; }
 	.nc-about__programmes .nc-about__button { width:163px; min-width:163px; min-height:53px; margin:29px 0 0 -2px; }
-	.nc-about__life { width:100%; height:434px; min-height:0; padding-top:43px; padding-bottom:0; background:var(--nc-about-paper); }
+	.nc-about__life { width:100%; height:auto; min-height:434px; padding-top:43px; padding-bottom:20px; background:var(--nc-about-paper); }
 	.nc-about__life h2 { font-size:36px; }
 	.nc-about__instagram { margin-top:13px; gap:16px; font-size:16px; }
 	.nc-about__instagram img { width:21px; height:21px; }
-	.nc-about__life-photo { width:min(323px,100vw); height:223px; display:block; margin:8px auto 0; }
+	.nc-about__life-photo { width:min(calc(100% - 26px),404px); height:auto; aspect-ratio:7/5; display:block; margin:8px auto 0; }
 }
 
 /* Source-faithful interactive galleries. The PSD bundle contains one usable photo per route;
@@ -886,7 +886,7 @@ body > .elementor-location-footer {
 	.nc-about__frame { width:calc(100% - 30px); }
 	.nc-about__service-card { width:100%; margin-inline:auto; }
 	.nc-about__life-photo { display:block; margin-top:15px; }
-	.nc-about__life-photo .nc-gallery__viewport { width:100%; max-width:none; height:223px; margin:0; }
+	.nc-about__life-photo .nc-gallery__viewport { width:100%; max-width:none; height:auto; aspect-ratio:7/5; margin:0; }
 	.nc-gallery>button { display:none; }
 	.nc-gallery__pagination { top:calc(100% + 7px); gap:5px; }
 	.nc-gallery__pagination button { width:8px; height:8px; border-width:1px; }
