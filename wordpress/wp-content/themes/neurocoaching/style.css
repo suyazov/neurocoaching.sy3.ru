@@ -628,7 +628,7 @@ body > .elementor-location-footer {
 	.nc-about__programmes>p { margin:7px 0 0; font-size:14px; }
 	.nc-about__programmes-outcome>img { display:none; }
 	.nc-about__programmes .nc-about__button { width:163px; min-width:163px; min-height:53px; margin:29px 0 0 -2px; }
-	.nc-about__life { width:100%; height:auto; min-height:434px; padding-top:43px; padding-bottom:20px; background:var(--nc-about-paper); }
+	.nc-about__life { width:100%; height:auto; min-height:0; padding-top:43px; padding-bottom:80px; background:var(--nc-about-paper); }
 	.nc-about__life h2 { font-size:36px; }
 	.nc-about__instagram { margin-top:13px; gap:16px; font-size:16px; }
 	.nc-about__instagram img { width:21px; height:21px; }
@@ -888,7 +888,7 @@ body > .elementor-location-footer {
 	.nc-about__life-photo { display:block; margin-top:15px; }
 	.nc-about__life-photo .nc-gallery__viewport { width:100%; max-width:none; height:auto; aspect-ratio:7/5; margin:0; }
 	.nc-gallery>button { display:none; }
-	.nc-gallery__pagination { top:calc(100% + 7px); gap:5px; }
+	.nc-gallery__pagination { top:calc(100% + 10px); gap:5px; }
 	.nc-gallery__pagination button { width:8px; height:8px; border-width:1px; }
 	.nc-about__life-photo .nc-gallery__pagination { width:max-content; height:8px; }
 }
