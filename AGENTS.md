@@ -4,7 +4,9 @@
 - Current capability includes direct WordPress application-code maintenance explicitly authorized by the project owner.
 - Direct maintenance uses a scoped `codex/*` branch, reviewable pull request, staging delivery, and browser verification; Bridge orchestration is not required when the owner explicitly requests direct work.
 - Theme delivery must not preserve the repository's group-only directory permissions. Use a sync mode that does not copy owner/group/permissions, or restore public theme directories to `0755` and files to `0644`, then confirm the PHP-FPM `www-data` user can read the templates.
-- Direct staging deploy/publish to `/var/www/neurocoaching.sy3.ru` is explicitly authorized by the project owner for this project. Production DNS, unrelated production environments, privileged/destructive operations, WP core/plugins/database/credentials, and secrets remain prohibited.
+- Direct staging deploy/publish to `/var/www/neurocoaching.sy3.ru` is explicitly authorized by the project owner for this project.
+- Production is `https://digitalbelka.com`. On 2026-09-01 the owner explicitly authorized the exact migration through WordPress admin only; no SSH access was required. Production theme delivery uses a public-readable runtime ZIP (`0755` directories, `0644` files), keeps OceanWP installed as the immediate rollback theme, and must be preceded by a fresh All-in-One WP Migration backup.
+- Do not change production DNS, WP core/plugins/database, credentials, secrets, or unrelated production environments without a separate exact owner request. Never update the custom `Neurocoaching` theme from WordPress.org; its `Update URI` header prevents same-slug replacement.
 - Never store raw secrets in this repository.
 - Use controlled `codex/*` branches and pull requests.
 
