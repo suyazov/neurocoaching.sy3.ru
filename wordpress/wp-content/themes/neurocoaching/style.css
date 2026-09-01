@@ -4,7 +4,7 @@ Theme URI: https://digitalbelka.com/
 Update URI: https://digitalbelka.com/neurocoaching-theme/
 Author: SY3
 Description: Semantic custom WordPress theme for Ksenia Belousova.
-Version: 1.0.5
+Version: 1.0.6
 Text Domain: neurocoaching
 */
 @font-face { font-family:"IBM Plex Sans"; src:url('assets/fonts/ibm-plex-sans-700-latin.woff2') format('woff2'); font-style:normal; font-weight:700; font-display:swap; }
@@ -1770,7 +1770,7 @@ body.has-certificate-lightbox { overflow:hidden; }
 
 @media (max-width:850px) {
 	.certificate-lightbox { grid-template-columns:40px minmax(0,1fr) 40px; padding:58px 8px 20px; }
-	.certificate-lightbox__image { width:auto; height:auto; max-width:100%; max-height:calc(100vh - 78px); }
+	.certificate-lightbox__image { width:auto; height:auto; max-width:100%; max-height:calc(100vh - 78px); max-height:calc(100dvh - 78px); align-self:center; justify-self:center; border:0; border-radius:0; background:transparent; }
 	.certificate-lightbox__close { top:8px; right:8px; width:40px; height:40px; }
 	.certificate-lightbox__previous,.certificate-lightbox__next { width:38px; height:40px; background-size:38px 40px; }
 }
