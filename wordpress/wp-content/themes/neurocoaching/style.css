@@ -372,6 +372,8 @@ details p { padding:0 45px 18px 0; }
 @media (min-width:361px) and (max-width:850px) {
 	.neuro-card:not(.neuro-card--featured) .neuro-card__label { margin-top:16px; }
 	.neuro-card:not(.neuro-card--featured)>.neuro-waves { margin-top:12px; }
+	.neuro-suitable__grid { width:100%; max-width:100%; min-width:0; }
+	.neuro-suitable__grid p { width:100%; max-width:100%; min-width:0; box-sizing:border-box; overflow-wrap:anywhere; }
 }
 
 /* Career Services: measurements and copy follow 2_Career_1440.psd / 2_Career_320.psd. */
