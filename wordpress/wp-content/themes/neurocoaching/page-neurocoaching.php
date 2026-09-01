@@ -36,8 +36,7 @@ $faqs = array(
 	<section class="site-section site-hero neuro-hero">
 		<div class="site-hero__media neuro-hero__photo"><img src="<?php echo esc_url( $images . 'neuro-hero-client-20260825.webp' ); ?>" width="600" height="900" alt="Ksenia Belousova holding hydrangeas" decoding="async" fetchpriority="high"></div>
 		<div class="site-hero__content neuro-hero__copy">
-			<p class="neuro-kicker">Neurointegration coaching</p>
-			<a class="neuro-profile-link" href="<?php echo esc_url( 'https://trainer.neurointegration.org/profile/826077931552-kseniya-belousova' ); ?>">More details in my profile</a>
+			<a class="neuro-profile-link" href="<?php echo esc_url( 'https://trainer.neurointegration.org/profile/826077931552-kseniya-belousova' ); ?>">NeuroIntegration Services — Profile in Russian</a>
 			<h1>
 				<span class="neuro-title__desktop" aria-hidden="true">Burned out,<br>overwhelmed,<br>or know something<br>needs to change?</span>
 				<span class="neuro-title__mobile" aria-hidden="true">Burned out,<br>overwhelmed, or<br>know something<br>needs to change?</span>
