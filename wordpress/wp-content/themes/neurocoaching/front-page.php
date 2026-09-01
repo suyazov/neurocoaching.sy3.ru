@@ -115,6 +115,7 @@ $questions = array(
 			'questions'       => $questions,
 			'open_question'   => "What's the first step?",
 			'image'           => $images . 'about-faq-client-jump.webp',
+			'image_mobile'    => $images . 'about-faq-client-jump-mobile.webp',
 			'image_width'     => 700,
 			'image_height'    => 910,
 			'image_alt'       => 'Ksenia outdoors',

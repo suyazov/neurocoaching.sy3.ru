@@ -495,6 +495,7 @@ function neurocoaching_faq_section( $args ) {
 			'open_question'  => '',
 			'closing'        => '',
 			'image'          => '',
+			'image_mobile'   => '',
 			'image_width'    => 600,
 			'image_height'   => 800,
 			'image_alt'      => 'Ksenia Belousova',
@@ -514,7 +515,10 @@ function neurocoaching_faq_section( $args ) {
 			<?php if ( $args['closing'] ) : ?><p class="site-faq__closing"><?php echo esc_html( $args['closing'] ); ?></p><?php endif; ?>
 		</div>
 		<aside class="site-faq__aside">
-			<img src="<?php echo esc_url( $args['image'] ); ?>" width="<?php echo esc_attr( (string) $args['image_width'] ); ?>" height="<?php echo esc_attr( (string) $args['image_height'] ); ?>" alt="<?php echo esc_attr( $args['image_alt'] ); ?>" loading="lazy" decoding="async">
+			<picture>
+				<?php if ( $args['image_mobile'] ) : ?><source media="(max-width: 850px)" srcset="<?php echo esc_url( $args['image_mobile'] ); ?>"><?php endif; ?>
+				<img src="<?php echo esc_url( $args['image'] ); ?>" width="<?php echo esc_attr( (string) $args['image_width'] ); ?>" height="<?php echo esc_attr( (string) $args['image_height'] ); ?>" alt="<?php echo esc_attr( $args['image_alt'] ); ?>" loading="lazy" decoding="async">
+			</picture>
 			<h2><?php echo esc_html( $args['aside_heading'] ); ?></h2>
 			<p><?php echo esc_html( $args['aside_text'] ); ?></p>
 			<a class="site-button site-faq__button" href="<?php echo esc_url( $args['button_url'] ); ?>"><?php echo esc_html( $args['button_label'] ); ?></a>
