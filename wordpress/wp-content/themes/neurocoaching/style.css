@@ -56,8 +56,7 @@ details p { padding:0 45px 18px 0; }
 .neuro-hero__photo { height:909px; overflow:hidden; }
 .neuro-hero__photo img { width:100%; height:100%; object-fit:cover; object-position:center top; }
 .neuro-hero__copy { width:887px; padding:211px 0 53px 95px; font-size:14px; line-height:1.35; }
-.neuro-kicker { margin-bottom:16px; color:var(--neuro-violet); font-size:14px; font-weight:900; text-transform:uppercase; letter-spacing:.05em; }
-.neuro-profile-link { display:block; width:max-content; margin-bottom:34px; color:var(--neuro-violet); font-size:18px; font-weight:900; line-height:1.25; text-decoration-line:underline; text-decoration-thickness:2px; text-underline-offset:3px; }
+.neuro-profile-link { display:block; width:max-content; max-width:100%; margin-top:35px; margin-bottom:34px; color:var(--neuro-violet); font-size:18px; font-weight:900; line-height:1.25; text-decoration-line:underline; text-decoration-thickness:2px; text-underline-offset:3px; }
 .neuro-hero h1 { width:697px; margin-bottom:18px; color:var(--neuro-ink); font-size:70px; line-height:1.04; }
 .neuro-title__desktop,.neuro-title__mobile { display:block; }
 .neuro-title__desktop,.neuro-title__mobile { white-space:nowrap; }
@@ -294,8 +293,7 @@ details p { padding:0 45px 18px 0; }
 	.neuro-hero__photo { width:100%; height:clamp(406px,calc(204.857px + 62.857vw),450px); }
 	.neuro-hero__photo img { width:100%; max-width:none; height:100%; object-fit:cover; object-position:center 18%; }
 	.neuro-hero__copy { width:auto; padding:37px 15px 20px; font-size:14px; line-height:1.42; }
-	.neuro-kicker { margin-bottom:19px; font-size:11px; line-height:1.38; }
-	.neuro-profile-link { margin-bottom:26px; font-size:16px; line-height:20px; }
+	.neuro-profile-link { margin-top:34px; margin-bottom:26px; font-size:16px; line-height:20px; }
 	.neuro-hero h1 { width:290px; margin-bottom:20px; font-size:40px; line-height:1.02; }
 	.neuro-title__desktop { display:none; }
 	.neuro-title__mobile { display:block; }
