@@ -180,9 +180,9 @@ $faqs = array(
 			'questions_class' => 'neuro-faq__questions',
 			'questions'       => $faqs,
 			'open_question'   => "What's the first step?",
-			'image'           => $images . 'neuro-faq-hires.webp',
-			'image_width'     => 373,
-			'image_height'    => 478,
+			'image'           => $images . 'neuro-faq-mountains-2026.webp',
+			'image_width'     => 1537,
+			'image_height'    => 1346,
 			'image_alt'       => 'Ksenia in the mountains',
 			'button_url'      => $booking,
 		)
