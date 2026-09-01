@@ -369,6 +369,11 @@ details p { padding:0 45px 18px 0; }
 	.neuro-review-track blockquote p { font-size:12px; }
 }
 
+@media (min-width:361px) and (max-width:850px) {
+	.neuro-card:not(.neuro-card--featured) .neuro-card__label { margin-top:16px; }
+	.neuro-card:not(.neuro-card--featured)>.neuro-waves { margin-top:12px; }
+}
+
 /* Career Services: measurements and copy follow 2_Career_1440.psd / 2_Career_320.psd. */
 .career-psd { --career-peach:#d88a5c; overflow:hidden; font-family:Lato,Arial,sans-serif; }
 .career-psd h1,.career-psd h2,.career-psd h3,.career-psd h4 { font-family:"IBM Plex Sans",Arial,sans-serif; font-weight:700; letter-spacing:-.035em; }
