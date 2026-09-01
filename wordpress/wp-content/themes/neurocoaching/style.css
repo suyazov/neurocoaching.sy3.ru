@@ -4,7 +4,7 @@ Theme URI: https://digitalbelka.com/
 Update URI: https://digitalbelka.com/neurocoaching-theme/
 Author: SY3
 Description: Semantic custom WordPress theme for Ksenia Belousova.
-Version: 1.0.10
+Version: 1.0.11
 Text Domain: neurocoaching
 */
 @font-face { font-family:"IBM Plex Sans"; src:url('assets/fonts/ibm-plex-sans-700-latin.woff2') format('woff2'); font-style:normal; font-weight:700; font-display:swap; }
@@ -516,7 +516,7 @@ body > .elementor-location-footer {
 	.career-card__outcome,.career-card--featured .career-card__outcome { position:static; max-width:none; min-height:0; margin-top:20px; font-size:14px; }
 	.career-price,.career-card--featured .career-price { position:static; margin:20px 0 20px; font-size:40px; }
 	.career-card__flag { top:91px; width:163px; height:37px; padding:0 14px 0 32px; font-size:18px; }
-	.career-offer { position:relative; right:auto; bottom:auto; width:163px; height:32px; margin:0 -26px 19px auto; padding:0 27px 0 14px; -webkit-mask:none; mask:none; clip-path:polygon(0 0,calc(100% - 18px) 0,100% 50%,calc(100% - 18px) 100%,0 100%); font-size:18px; }
+	.career-offer { position:relative; right:auto; bottom:auto; width:163px; height:32px; margin:0 0 19px -26px; padding:0 27px 0 14px; -webkit-mask:none; mask:none; clip-path:polygon(0 0,calc(100% - 18px) 0,100% 50%,calc(100% - 18px) 100%,0 100%); font-size:18px; }
 	.career-card .career-button { position:static; width:auto; }
 	.career-card--featured { margin-bottom:0; }
 	.career-card--featured .career-button { display:flex; width:218px; margin:auto; }
