@@ -383,6 +383,16 @@ body > .elementor-location-footer {
 	.neuro-card:not(.neuro-card--featured)>.neuro-waves { margin-top:12px; }
 	.neuro-suitable__grid { width:100%; max-width:100%; min-width:0; }
 	.neuro-suitable__grid p { width:100%; max-width:100%; min-width:0; box-sizing:border-box; overflow-wrap:anywhere; }
+	/* Release the fixed desktop widths that overflow the 361-526 px range;
+	 * the 320 px artboard and desktop >=851 px keep their exact geometry. */
+	.neuro-card--featured .neuro-card__label,
+	.neuro-card--featured .neuro-card__outcome { width:auto; }
+	.neuro-story h2,
+	.neuro-story h3,
+	.neuro-story p,
+	.neuro-story__copy>p:last-child { width:auto; }
+	.neuro-method__copy,
+	.neuro-method__copy p:first-child { width:auto; max-width:100%; }
 }
 
 /* Career Services: measurements and copy follow 2_Career_1440.psd / 2_Career_320.psd. */
@@ -2338,4 +2348,27 @@ body.has-certificate-lightbox { overflow:hidden; }
 	.neurocoaching-route .neuro-faq .site-faq__aside img { max-width:100%; }
 	.neurocoaching-route .neuro-faq .site-faq__aside::before { width:100%; }
 	.neurocoaching-route .neuro-faq summary::after { right:20px; }
+
+	/* Keep the shared desktop gallery controls and photo inside compact canvases. */
+	.site-page--about .nc-about__life-photo,
+	.career-services-route .nc-about__life-photo,
+	.neurocoaching-route .nc-about__life-photo { width:calc(100% - 64px); }
+	.site-page--about .nc-about__life-photo { max-width:936px; }
+	.career-services-route .nc-about__life-photo { max-width:1224px; }
+	.neurocoaching-route .nc-about__life-photo { max-width:1220px; }
+	.site-page--about .nc-about__life-photo .nc-gallery__viewport,
+	.career-services-route .nc-about__life-photo .nc-gallery__viewport,
+	.neurocoaching-route .nc-about__life-photo .nc-gallery__viewport {
+		left:50%;
+		transform:translateX(-50%);
+	}
+	.site-page--about .nc-about__life-photo .nc-gallery__viewport {
+		width:min(674px,calc(100% - 220px));
+	}
+	.career-services-route .nc-about__life-photo .nc-gallery__viewport {
+		width:min(512px,calc(100% - 220px));
+	}
+	.neurocoaching-route .nc-about__life-photo .nc-gallery__viewport {
+		width:min(961px,calc(100% - 220px));
+	}
 }
