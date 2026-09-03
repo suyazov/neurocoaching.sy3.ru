@@ -2,7 +2,7 @@
 
 ## Scope and source of truth
 
-- Production: `https://digitalbelka.com`, active custom theme `Neurocoaching 1.0.15`.
+- Production: `https://digitalbelka.com`, active custom theme `Neurocoaching 1.0.16`.
 - Routes: `/`, `/career-services/`, `/neurocoaching/`.
 - Live checks: native mobile width `320px`, additional mobile width `390px`, desktop source widths `1320px` for About and `1440px` for Career/Neurocoaching.
 - PSD evidence retained in the repository:
@@ -14,9 +14,9 @@
 
 The source files do **not** need to be sent again. The manifests contain the original PSD hashes, artboard geometry, text-layer coordinates and exported assets required for the remaining comparison.
 
-## Correction status — staging theme 1.0.16
+## Correction status — production theme 1.0.16
 
-The discrepancies below are corrected in the `1.0.16` staging candidate:
+The discrepancies below are corrected in production theme `1.0.16`:
 
 - restored the PSD role hierarchy instead of the global mobile `18/22px` override;
 - returned the Career mobile services composition to its 320px source coordinates, including the free-call, `Flagship`, and `Special Offer` ribbons;
@@ -24,7 +24,7 @@ The discrepancies below are corrected in the `1.0.16` staging candidate:
 - restored the Neurocoaching desktop hero to `909px` and Reviews to `741px`;
 - preserved the approved mobile menu, transparent certificate viewer, widened galleries, and gallery spacing.
 
-Browser verification passed at `320px`, `390px`, `768px`, and the retained desktop source widths. All three routes have no horizontal overflow; card contents and ribbons remain inside their intended boundaries; Career and Neurocoaching load without console warnings/errors or failed theme assets. At 320px the corrected key coordinates are within low single-digit tolerances of the retained PSD manifests.
+Browser verification passed on staging and production at `320px`, `390px`, `768px`, and the retained desktop source widths. All three routes have no horizontal overflow; card contents and ribbons remain inside their intended boundaries; the routes load without console warnings/errors or failed theme assets. At 320px the corrected key coordinates are within low single-digit tolerances of the retained PSD manifests. Production delivery followed full backup `digitalbelka.com-20260903-155956-89ffvk.wpress` (297 MB); Neurocoaching remains active and OceanWP remains installed for rollback.
 
 ## Corrected discrepancies
 
