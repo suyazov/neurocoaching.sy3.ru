@@ -13,6 +13,8 @@
 
 ## State
 
+- 2026-09-03: Direct owner-authorized follow-up `1.0.17` is staging-verified. Latest client instructions override the old PSD's mixed mobile heading sizes: all marked pricing headings/ribbons now use the Corporate reference IBM Plex Sans Bold 16/20px; purple labels are 16/20px across mobile widths. CSS notches replace letterboxed SVG ribbon masks, Career flags align with their labels/edges, Special Offer keeps the purple outline and inward notch, Neurocoaching header/price spacing is restored, and the shared mobile gallery loses its 404px width cap while retaining 10px/62px spacing. Two above-fold fonts are preloaded to address cold-load font swaps. See `docs/qa/mobile-followup-2026-09-03.md`; production delivery is pending a fresh full backup and admin theme replacement.
+
 - GitHub `main` is the source for the custom `Neurocoaching` theme; staging checkout is `/var/www/neurocoaching.sy3.ru`.
 - Production was migrated through WordPress admin on 2026-09-01. The custom theme is installed separately and active; legacy OceanWP remains installed for immediate rollback.
 - Published production routes: `/`, `/career-services/`, and `/neurocoaching/`.

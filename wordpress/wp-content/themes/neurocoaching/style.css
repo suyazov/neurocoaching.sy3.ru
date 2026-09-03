@@ -4,7 +4,7 @@ Theme URI: https://digitalbelka.com/
 Update URI: https://digitalbelka.com/neurocoaching-theme/
 Author: SY3
 Description: Semantic custom WordPress theme for Ksenia Belousova.
-Version: 1.0.16
+Version: 1.0.17
 Text Domain: neurocoaching
 */
 @font-face { font-family:"IBM Plex Sans"; src:url('assets/fonts/ibm-plex-sans-700-latin.woff2') format('woff2'); font-style:normal; font-weight:700; font-display:swap; }
@@ -644,7 +644,7 @@ body > .elementor-location-footer {
 	.nc-about__life h2 { font-size:36px; }
 	.nc-about__instagram { margin-top:13px; gap:16px; font-size:16px; }
 	.nc-about__instagram img { width:21px; height:21px; }
-	.nc-about__life-photo { width:min(calc(100% - 26px),404px); height:auto; aspect-ratio:7/5; display:block; margin:8px auto 0; }
+	.nc-about__life-photo { width:calc(100% - 26px); height:auto; aspect-ratio:7/5; display:block; margin:8px auto 0; }
 }
 
 /* Source-faithful interactive galleries. The PSD bundle contains one usable photo per route;
@@ -1963,6 +1963,73 @@ body.has-certificate-lightbox { overflow:hidden; }
 	.neuro-review-track strong { font-size:12px; }
 	.neuro-review-track a { font-size:10px; }
 	.neuro-review-track blockquote p { margin-top:13px; font-size:10px; line-height:1.25; }
+}
+
+/* September 3 client correction: the marked Corporate ribbon is the mobile
+ * type reference. This deliberately supersedes the older PSD's mixed 20/36px
+ * card headings, not the large Services section headings. */
+@media (max-width:850px) {
+	.site-page .site-service-card { --service-heading-size:16px; --service-heading-line:20px; }
+	.site-page .site-service-card h3,
+	.site-page .site-service-card h4,
+	.site-page .nc-about__service-heading span,
+	.site-page .career-card__flag,
+	.site-page .career-card__free,
+	.site-page .career-offer,
+	.site-page .neuro-card__flag,
+	.site-page .neuro-card__offer {
+		font:700 var(--service-heading-size)/var(--service-heading-line) "IBM Plex Sans",Arial,sans-serif;
+		letter-spacing:0;
+	}
+	.site-page .career-card__label,
+	.site-page .neuro-card__label {
+		font:700 16px/20px "IBM Plex Sans",Arial,sans-serif;
+		letter-spacing:0;
+	}
+	/* SVG preserveAspectRatio letterboxes the old mask and clips the lettering.
+	 * Draw the notch on the actual box so its visible height equals its height. */
+	.site-page .career-card__flag,
+	.site-page .career-card__free,
+	.site-page .neuro-card__flag {
+		right:0;
+		-webkit-mask:none;
+		mask:none;
+		clip-path:polygon(0 0,100% 0,100% 100%,0 100%,18px 50%);
+	}
+	.site-page .career-card__flag { top:84.5px; }
+	.site-page .career-card__free { width:calc(100% + 24px); margin-right:-24px; }
+	/* Offers are left-attached ribbons with an inward V, not right arrows.
+	 * Stop at the inner border so the purple outline remains visible. */
+	.site-page .career-offer,
+	.site-page .neuro-card__offer {
+		-webkit-mask:none;
+		mask:none;
+		clip-path:polygon(0 0,100% 0,calc(100% - 18px) 50%,100% 100%,0 100%);
+		margin-left:-24px;
+	}
+}
+
+@media (min-width:361px) and (max-width:850px) {
+	.site-page .neuro-card__label { padding-right:0; }
+	.site-page .neuro-card--featured .neuro-card__label { margin-top:16px; }
+	.site-page .neuro-card--featured .neuro-card__label-desktop { display:none; }
+	.site-page .neuro-card--featured .neuro-card__label-mobile,
+	.site-page .neuro-card__label-mobile-primary,
+	.site-page .neuro-card__label-mobile-sessions,
+	.site-page .neuro-card__label-mobile-support { display:block; }
+	.site-page .neuro-card__label-mobile-sessions,
+	.site-page .neuro-card__label-mobile-support { margin-top:6px; }
+	.site-page .neuro-card--featured>.neuro-waves { margin-top:12px; }
+	/* Same decoration row as the 320px artboard; never beside the title. */
+	.site-page .neuro-card__flag { top:220px; }
+	.site-page .neuro-card__offer { margin-top:20px; margin-bottom:24px; }
+}
+
+@media (max-width:360px) {
+	.site-page .career-card__flag { top:77.5px; }
+	.site-page .career-card__free { left:24px; right:0; width:auto; margin-right:0; }
+	.site-page .career-offer,
+	.site-page .neuro-card__offer { left:0; margin-left:0; }
 }
 
 /* Keep the Career route usable in narrow DevTools panes and embedded browsers. */
