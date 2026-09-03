@@ -14,7 +14,19 @@
 
 The source files do **not** need to be sent again. The manifests contain the original PSD hashes, artboard geometry, text-layer coordinates and exported assets required for the remaining comparison.
 
-## Open discrepancies
+## Correction status — staging theme 1.0.16
+
+The discrepancies below are corrected in the `1.0.16` staging candidate:
+
+- restored the PSD role hierarchy instead of the global mobile `18/22px` override;
+- returned the Career mobile services composition to its 320px source coordinates, including the free-call, `Flagship`, and `Special Offer` ribbons;
+- removed the Neurocoaching mobile cumulative drift through both pricing cards and the downstream sections;
+- restored the Neurocoaching desktop hero to `909px` and Reviews to `741px`;
+- preserved the approved mobile menu, transparent certificate viewer, widened galleries, and gallery spacing.
+
+Browser verification passed at `320px`, `390px`, `768px`, and the retained desktop source widths. All three routes have no horizontal overflow; card contents and ribbons remain inside their intended boundaries; Career and Neurocoaching load without console warnings/errors or failed theme assets. At 320px the corrected key coordinates are within low single-digit tolerances of the retained PSD manifests.
+
+## Corrected discrepancies
 
 ### P1 — Restore the mobile pricing-card typography hierarchy on all routes
 

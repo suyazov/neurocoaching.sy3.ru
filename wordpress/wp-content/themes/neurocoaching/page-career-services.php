@@ -34,7 +34,7 @@ $faqs = array(
 	<section class="site-section site-hero career-hero">
 		<div class="site-hero__media career-hero__photo"><img src="<?php echo esc_url( get_theme_file_uri( '/assets/images/career-hero-client.webp' ) ); ?>" width="600" height="900" alt="Ksenia Belousova" decoding="async" fetchpriority="high"></div>
 		<div class="site-hero__content career-hero__copy">
-			<h1>Stop postponing your life</h1>
+			<h1>Stop postponing<br>your life</h1>
 			<p class="career-quote">Your time is limited, so don’t waste it living someone else’s life.<br>– Steve Jobs</p>
 			<ul class="career-hero__checklist">
 				<li>You are ready for more, but your next step feels unclear.</li>
