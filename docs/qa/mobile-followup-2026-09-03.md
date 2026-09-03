@@ -1,4 +1,4 @@
-# Mobile follow-up — theme 1.0.17
+# Mobile follow-up — themes 1.0.17 / 1.0.18
 
 ## Authority and source precedence
 
@@ -34,6 +34,11 @@ that the older PSD already had uniform typography.
 8. Two existing above-the-fold fonts are preloaded. The production cold trace
    identified a late Lato 900 swap moving the About copy. No plugins, DNS,
    hosting configuration, credentials or unrelated content were changed.
+9. Final visual review caught the About divider crossing the top of On request
+   (its old 134px offset put it 1px into the text box). Theme 1.0.18 moves only
+   that mobile divider: 15px after the zigzag, 23px before the text. No section
+   heights or subsequent content positions change. Staging verified at
+   320/390/768px.
 
 ## Staging verification
 
@@ -62,5 +67,32 @@ origin latency account for most of LCP. The client's complete regional outage
 was not reproduced, so this release must not be described as a proven fix for
 regional connectivity/hosting issues.
 
-Production delivery/read-back will be recorded after the fresh full backup and
-WordPress-admin theme replacement complete. OceanWP must remain installed.
+## Production delivery and read-back
+
+- Theme 1.0.17 delivered through WP admin after fresh full backup
+  `digitalbelka.com-20260903-202409-lomev3.wpress` (491.44 MB), verified in Backups.
+- Active theme remains Neurocoaching; OceanWP rollback is installed. The generic
+  plugin-reactivation warning on the theme updater did not deactivate the theme;
+  verified both the Themes screen and anonymous frontend.
+- Production stylesheet SHA-256 matches the release exactly:
+  `14b0c81c5b364a4e6908325302503b694e5ebe41d28653ee6bb612f2d3b9ea04`.
+- Anonymous checks on all three routes at 320/390/768px match staging. No card
+  content outside bounds, no horizontal overflow, uniform 16/20px typography,
+  approved gallery widths/spacing, correct attached and unclipped ribbons.
+- Mobile menu opens/closes, header and dropdown both #855cac. First/middle/last
+  gallery selections and wraparound work on all routes (61/21/15 slides).
+- Certificate viewer works for landscape and portrait assets, transparent image
+  background, no image border, correct aspect ratios and viewport containment.
+- All three FAQ photos decode successfully. About mobile and Neurocoaching use
+  the client replacements at 1537 × 1346; the Russian-profile label is correct.
+- No browser warnings/errors on the three routes or the cold-load measurement.
+- Production cold Slow 4G / CPU 4x after font preloads: TTFB 1.186s, FCP 4.480s,
+  LCP 4.477s, load 6.999s, CLS 0. The layout shifts disappeared, but there is no
+  demonstrated LCP improvement (baseline 4.072s). Do not present this as a speed
+  fix or a fix for the client's regional outage. Document latency remains a
+  measured limitation; infrastructure investigation is separate from this
+  theme-only delivery.
+- Evidence: local `digitalbelka-1.0.17/` folder contains viewport-checks.json,
+  production screenshots and the cold performance trace.
+- Theme 1.0.18 final divider correction is staging-verified; production pending
+  another fresh full backup. All other runtime bytes are unchanged from 1.0.17.
