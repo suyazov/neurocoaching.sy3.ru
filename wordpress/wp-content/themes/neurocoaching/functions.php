@@ -42,6 +42,22 @@ function neurocoaching_assets() {
 }
 add_action( 'wp_enqueue_scripts', 'neurocoaching_assets' );
 
+/** Discover the two above-the-fold heading fonts before the stylesheet loads.
+ * The cold mobile trace showed late font swaps moving the About hero copy.
+ */
+function neurocoaching_preload_heading_fonts() {
+	if ( is_admin() || isset( $_GET['elementor-preview'] ) ) {
+		return;
+	}
+	foreach ( array( 'ibm-plex-sans-700-latin.woff2', 'lato-900-latin.woff2' ) as $font ) {
+		printf(
+			'<link rel="preload" href="%s" as="font" type="font/woff2" crossorigin>' . "\n",
+			esc_url( get_theme_file_uri( '/assets/fonts/' . $font ) )
+		);
+	}
+}
+add_action( 'wp_head', 'neurocoaching_preload_heading_fonts', 1 );
+
 /**
  * Remove unused builder assets and Google Fonts from the public frontend.
  *
