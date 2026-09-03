@@ -94,5 +94,12 @@ regional connectivity/hosting issues.
   theme-only delivery.
 - Evidence: local `digitalbelka-1.0.17/` folder contains viewport-checks.json,
   production screenshots and the cold performance trace.
-- Theme 1.0.18 final divider correction is staging-verified; production pending
-  another fresh full backup. All other runtime bytes are unchanged from 1.0.17.
+- Theme 1.0.18 final divider correction delivered through WP admin after fresh
+  full backup `digitalbelka.com-20260903-203449-btmeys.wpress` (297.12 MB), verified
+  in Backups. Anonymous production read-back confirms 15px after the zigzag,
+  23px before On request and no horizontal overflow. All other runtime bytes
+  are unchanged from 1.0.17.
+- Final production stylesheet SHA-256:
+  `f0fe96f22eca0381bc9abb5ce0b09edaae847ff953cc613fb6bcac6b76e71413`.
+- No failed resources in the post-delivery About/Career/Neurocoaching network
+  logs, including interaction-loaded gallery and certificate images.
