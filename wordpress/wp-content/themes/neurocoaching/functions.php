@@ -102,6 +102,47 @@ function neurocoaching_url_contains_any( $url, $needles ) {
 	return false;
 }
 
+/**
+ * Remove builder tags that are enqueued after wp_enqueue_scripts has run.
+ *
+ * Elementor can discover historical document assets while rendering the
+ * footer. Loader filters are therefore the final guard for public templates.
+ */
+function neurocoaching_filter_unused_style_tag( $html, $handle, $href ) {
+	if ( is_admin() || isset( $_GET['elementor-preview'] ) ) {
+		return $html;
+	}
+
+	$builder_asset_paths = array(
+		'/wp-content/plugins/elementor/',
+		'/wp-content/plugins/pro-elements/',
+		'/wp-content/plugins/elementskit-lite/',
+		'/wp-content/uploads/elementor/css/',
+	);
+
+	if ( preg_match( '#fonts\.(googleapis|gstatic)\.com#i', $href ) || neurocoaching_url_contains_any( $href, $builder_asset_paths ) ) {
+		return '';
+	}
+
+	return $html;
+}
+add_filter( 'style_loader_tag', 'neurocoaching_filter_unused_style_tag', 1000, 3 );
+
+function neurocoaching_filter_unused_script_tag( $tag, $handle, $src ) {
+	if ( is_admin() || isset( $_GET['elementor-preview'] ) ) {
+		return $tag;
+	}
+
+	$builder_asset_paths = array(
+		'/wp-content/plugins/elementor/',
+		'/wp-content/plugins/pro-elements/',
+		'/wp-content/plugins/elementskit-lite/',
+	);
+
+	return neurocoaching_url_contains_any( $src, $builder_asset_paths ) ? '' : $tag;
+}
+add_filter( 'script_loader_tag', 'neurocoaching_filter_unused_script_tag', 1000, 3 );
+
 function neurocoaching_strip_google_fonts_hints( $urls, $relation_type ) {
 	if ( 'preconnect' !== $relation_type ) {
 		return $urls;
