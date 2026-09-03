@@ -42,6 +42,85 @@ function neurocoaching_assets() {
 }
 add_action( 'wp_enqueue_scripts', 'neurocoaching_assets' );
 
+/**
+ * Remove unused builder assets and Google Fonts from the public frontend.
+ *
+ * Every public route is rendered by this theme's PHP templates and shared
+ * components; Elementor is not used for page content. Its plugins still enqueue
+ * their complete frontend bundle because the corresponding WordPress pages keep
+ * historical Elementor metadata. The theme also ships all of its fonts locally.
+ * Removing these unused assets avoids dozens of render-blocking requests while
+ * leaving the WordPress admin and Elementor preview untouched.
+ */
+function neurocoaching_dequeue_unused_frontend_assets() {
+	if ( is_admin() || isset( $_GET['elementor-preview'] ) ) {
+		return;
+	}
+
+	$builder_asset_paths = array(
+		'/wp-content/plugins/elementor/',
+		'/wp-content/plugins/pro-elements/',
+		'/wp-content/plugins/elementskit-lite/',
+		'/wp-content/uploads/elementor/css/',
+	);
+
+	$styles = wp_styles();
+	foreach ( $styles->queue as $handle ) {
+		if ( ! isset( $styles->registered[ $handle ] ) ) {
+			continue;
+		}
+
+		$style = $styles->registered[ $handle ];
+		$src = isset( $style->src ) && is_string( $style->src ) ? $style->src : '';
+		if ( preg_match( '#fonts\.(googleapis|gstatic)\.com#i', $src ) || neurocoaching_url_contains_any( $src, $builder_asset_paths ) ) {
+			wp_dequeue_style( $handle );
+		}
+	}
+
+	$scripts = wp_scripts();
+	foreach ( $scripts->queue as $handle ) {
+		if ( ! isset( $scripts->registered[ $handle ] ) ) {
+			continue;
+		}
+
+		$script = $scripts->registered[ $handle ];
+		$src    = isset( $script->src ) && is_string( $script->src ) ? $script->src : '';
+		if ( neurocoaching_url_contains_any( $src, $builder_asset_paths ) ) {
+			wp_dequeue_script( $handle );
+		}
+	}
+}
+add_action( 'wp_enqueue_scripts', 'neurocoaching_dequeue_unused_frontend_assets', 1000 );
+
+function neurocoaching_url_contains_any( $url, $needles ) {
+	foreach ( $needles as $needle ) {
+		if ( false !== strpos( $url, $needle ) ) {
+			return true;
+		}
+	}
+
+	return false;
+}
+
+function neurocoaching_strip_google_fonts_hints( $urls, $relation_type ) {
+	if ( 'preconnect' !== $relation_type ) {
+		return $urls;
+	}
+	return array_values(
+		array_filter(
+			$urls,
+			static function ( $url ) {
+				$href = is_array( $url ) && isset( $url['href'] ) ? $url['href'] : $url;
+				return ! ( is_string( $href ) && preg_match( '#fonts\.(googleapis|gstatic)\.com#i', $href ) );
+			}
+		)
+	);
+}
+add_filter( 'wp_resource_hints', 'neurocoaching_strip_google_fonts_hints', 10, 2 );
+
+// Elementor never renders content on these templates; keep its Google Fonts off at the source too.
+add_filter( 'elementor/frontend/print_google_fonts', '__return_false' );
+
 function neurocoaching_mod( $key, $fallback ) {
 	$value = get_theme_mod( $key, $fallback );
 	return is_string( $value ) && '' !== trim( $value ) ? $value : $fallback;
