@@ -69,7 +69,7 @@ $questions = array(
 	?>
 
 	<section class="site-section site-shell site-services nc-about__services" aria-labelledby="nc-about-services-title">
-		<h2 class="site-section-title" id="nc-about-services-title">Services | B2B format</h2>
+		<h2 class="site-section-title" id="nc-about-services-title">Services |<br class="site-mobile-break"> B2B format</h2>
 		<article class="site-service-card nc-about__service-card">
 			<div class="nc-about__service-summary">
 				<div class="nc-about__service-heading"><h3>Team<br>Workshops</h3><span><img src="<?php echo esc_url( $images . 'flag-corporate-v2.svg' ); ?>" width="158" height="34" alt=""><b>Corporate</b></span></div>
