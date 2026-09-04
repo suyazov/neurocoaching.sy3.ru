@@ -12,7 +12,7 @@
 
 ## Protected shared components
 
-- Latest direct production release: `1.0.20` (2026-09-04). Native PSD comparisons, later-client-overrides and unresolved source conflicts are recorded in `docs/qa/full-mobile-20260904/README.md`; do not describe this as unconditional 100% PSD equivalence.
+- Latest direct production release: `1.0.21` (2026-09-04): mobile Career Flagship is 32px high and centred on 4 SESSIONS; see `docs/qa/flagship-20260904/README.md`. Native PSD comparisons, later-client-overrides and unresolved source conflicts are recorded in `docs/qa/full-mobile-20260904/README.md`; do not describe this as unconditional 100% PSD equivalence.
 - `page-privacy-policy.php` only renders the existing WordPress legal content. Do not move or rewrite that content into the theme as part of visual maintenance.
 
 - `/`, `/career-services/`, and `/neurocoaching/` use one shared header and canonical `Education & Experience`, credentials, `In real life`, CTA, and FAQ components.
