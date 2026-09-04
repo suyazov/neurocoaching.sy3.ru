@@ -92,6 +92,8 @@ ZIP    ab254fa107e8bc89c2123ac275d672c98a344b7a1c6855bd4370a9f97a0b9875
 
 ## Публикация и откат
 
+- Код и доказательства сохранены в [PR #185](https://github.com/suyazov/neurocoaching.sy3.ru/pull/185); implementation commit `01b506a`, основной evidence commit `596a8b3`.
+
 - Доставка: через WordPress admin, только отдельная тема Neurocoaching. Версия **1.0.20**. OceanWP осталась установленной; подтверждено, что активна Neurocoaching.
 - Перед основной публикацией создан полный бэкап `digitalbelka.com-20260904-082130-71up79.wpress`, **297.11 MB**.
 - Перед финальной малой правкой пустого `src` просмотрщика: `digitalbelka.com-20260904-085032-rqwol6.wpress`, **297.38 MB**, проверен в списке Backups. Малое исправление устраняет событие ошибки при создании скрытого `<img>`, не меняя CSS/геометрию.
