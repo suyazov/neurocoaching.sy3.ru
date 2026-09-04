@@ -62,8 +62,54 @@ Verification:
 
 Fresh full backup before replacement, verified in WP-admin Backups:
 `digitalbelka.com-20260904-062230-asihfg.wpress`, 297.10 MB.
-Production delivery and post-deploy measurements pending at this commit.
+Theme1.0.19 delivered through WP-admin upload/replacement. Active theme remains
+Neurocoaching; OceanWP remains installed. The updater displayed its generic
+"plugin could not be reactivated" warning, but also confirmed theme update
+success; active-theme and anonymous frontend read-back independently passed.
+CSS SHA-256: `657a4f37b7a4c5f2b40eca476ad1a03859db6f1b181c2f7ac12f6e4dfbe0e010`.
+
+Same-day production cold measurements (390x844, DPR1, Slow4G, CPU4x):
+
+| Metric | Before1.0.18 | After1.0.19 |
+|---|---:|---:|
+| TTFB | 933ms | 954ms |
+| First contentful paint | 2861ms | 2468ms |
+| Largest contentful paint | 3036ms | 2501ms |
+| Main frame load event | 6206ms | 3633ms |
+| Finished network requests in trace | 38 | 24 |
+| Encoded bytes including HTML | 773,976 | 251,331 |
+| CLS | 0 | 0.017 |
+
+The trace-driven changes reduced initial transfer by67.5%, with one measured
+LCP improvement of535ms (17.6%). These are paired lab samples, not field-user
+percentiles or a guarantee for every provider/device. Server latency did not
+improve. The residual small CLS is associated with the normal Lato400 font swap;
+do not report "zero CLS" for the final production trace.
+
+Post-deploy checks:
+
+- All three routes HTTP200; curl TTFB1.07–1.62s, total1.20–1.76s from this server.
+- About390, Career390, Neuro390/1440: all measured loaded headings, paragraphs,
+  hero/gallery bounds and type metrics exactly match the pre-change baseline.
+- No horizontal overflow, failed resources, or console errors/warnings.
+- No legacy Elementor header/footer DOM on any route; `main#content` restored.
+- No gallery image requests before scrolling on any route. Gallery first image,
+  selecting photo3, menu open/Escape-close, and certificate open/close pass.
+- Certificate image background remains transparent. CookieYes Customise, closing
+  preferences, Reject All, and reopening preferences work; consent stored only
+  in the isolated test browser. Global consent settings/plugins not modified.
+- FAQ mobile source reserves1537x1346 before load and retains the approved crop.
+- Production mobile screenshot and a11y tree checked.
+
+Evidence directory:
+`/root/.codex/visualizations/2026/08/26/01a03e25-3797-7811-994c-ce007dd8534a/digitalbelka-1.0.19/`.
+Runtime package: `/tmp/neurocoaching-1019.S5gryS/neurocoaching-1.0.19.zip`.
+Review: https://github.com/suyazov/neurocoaching.sy3.ru/pull/184.
 
 No caching plugin is installed. Responses are served by LiteSpeed, but no page-cache
 header was observed. Cache configuration needs a separate scoped owner approval;
 no plugin/settings changes were made in this task.
+
+Remaining: the reported regional timeout still needs the client's country,
+provider and exact browser error (requested during this task). Current checks
+cannot prove or rule out routing/filtering/intermittent hosting failure there.
