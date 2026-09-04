@@ -93,7 +93,7 @@ $faqs = array(
 	</section>
 
 	<section class="site-section site-shell site-services career-services career-wrap" aria-labelledby="career-services-title">
-		<h2 class="site-section-title" id="career-services-title">Services | Career</h2>
+		<h2 class="site-section-title" id="career-services-title">Services |<br class="site-mobile-break"> Career</h2>
 		<div class="site-service-grid career-service-grid">
 			<article class="site-service-card career-card">
 				<h3>Consultation Session<br>90 min</h3><p class="career-card__label">Single Session</p>

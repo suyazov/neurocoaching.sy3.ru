@@ -4,7 +4,6 @@ get_header();
 neurocoaching_header( 'neuro' );
 $images  = get_template_directory_uri() . '/assets/images/';
 $desktop_source = $images . 'neurocoaching-source/desktop-1440/';
-$mobile_source  = $images . 'neurocoaching-source/mobile-320/';
 $booking = neurocoaching_booking_url();
 $instagram = neurocoaching_mod( 'instagram_url', 'https://www.instagram.com/belka80' );
 $credentials = array(
@@ -88,7 +87,7 @@ $faqs = array(
 	</section>
 
 	<section class="site-section site-shell site-services neuro-services neuro-wrap" aria-labelledby="neuro-services-title">
-		<h2 class="site-section-title" id="neuro-services-title">Services | Neurointegration</h2>
+		<h2 class="site-section-title" id="neuro-services-title">Services |<br class="site-mobile-break"> Neurointegration</h2>
 		<div class="site-service-grid neuro-service-grid">
 			<article class="site-service-card neuro-card">
 				<h3>Individual<br class="neuro-card__desktop-break"> NeuroSprint<br>Coaching</h3><p class="neuro-card__label">3 weeks (21 days)<span class="neuro-card__desktop-separator"> · </span><br class="neuro-card__mobile-break">4 sessions</p><span class="neuro-waves" aria-hidden="true">≋</span>
@@ -131,7 +130,7 @@ $faqs = array(
 		<div class="neuro-method__layout">
 			<div class="neuro-method__copy"><p><strong>The NeuroIntegration method was developed by Katerina Lengold, founder of the California Institute of Neurointegration.</strong></p><p>It combines neuroscience, psychology, and behavioural science into a practical coaching framework that works with how your brain is actually wired. NeuroSprints apply this in <span class="neuro-method__nowrap">focused 21-day</span> cycles — structured enough to create real change, flexible enough to fit a full life.</p><a href="https://neurointegration.org/">Learn more about the science: <span>neurointegration.org</span></a></div>
 			<div class="neuro-method__visual">
-				<picture><source media="(max-width: 850px)" srcset="<?php echo esc_url( $mobile_source . 'mobile-320-neuro-pyramid-20260831.png' ); ?>" width="703" height="617"><img src="<?php echo esc_url( $desktop_source . 'desktop-1440-11037-neuro-pyramid-web-transparent-copy.png' ); ?>" width="728" height="398" alt="Three-stage NeuroIntegration method diagram" loading="lazy" decoding="async"></picture>
+				<div class="neuro-method__pyramid"><picture><source media="(max-width: 850px)" srcset="<?php echo esc_url( $images . 'neuro-pyramid-psd-mobile.png' ); ?>" width="557" height="304"><img src="<?php echo esc_url( $desktop_source . 'desktop-1440-11037-neuro-pyramid-web-transparent-copy.png' ); ?>" width="728" height="398" alt="Three-stage NeuroIntegration method diagram" loading="lazy" decoding="async"></picture><span class="neuro-method__pyramid-number" aria-hidden="true">1</span><span class="neuro-method__pyramid-number" aria-hidden="true">2</span><span class="neuro-method__pyramid-number" aria-hidden="true">3</span></div>
 				<ol class="neuro-method__steps">
 					<li><strong>ACT · NEUROSPRINT</strong><span>Use neuroscience-informed planning cycles to reach goals without burnout.</span></li>
 					<li><strong>THINK · NEUROSURFING</strong><span>Rewire habitual thought patterns, reduce cognitive rigidity, and build creative thinking.</span></li>

@@ -65,10 +65,11 @@ function neurocoaching_preload_heading_fonts() {
 	if ( is_admin() || isset( $_GET['elementor-preview'] ) ) {
 		return;
 	}
-	foreach ( array( 'ibm-plex-sans-700-latin.woff2', 'lato-900-latin.woff2' ) as $font ) {
+	foreach ( array( 'ibm-plex-sans-700-latin.woff2' => 'all', 'lato-900-latin.woff2' => '(min-width: 851px)', 'belka-heavy-800-latin.woff2' => '(max-width: 850px)' ) as $font => $media ) {
 		printf(
-			'<link rel="preload" href="%s" as="font" type="font/woff2" crossorigin>' . "\n",
-			esc_url( get_theme_file_uri( '/assets/fonts/' . $font ) )
+			'<link rel="preload" href="%s" as="font" type="font/woff2" crossorigin media="%s">' . "\n",
+			esc_url( get_theme_file_uri( '/assets/fonts/' . $font ) ),
+			esc_attr( $media )
 		);
 	}
 }
@@ -575,7 +576,7 @@ function neurocoaching_education_section( $args ) {
 	?>
 	<section class="site-section site-education <?php echo esc_attr( $args['section_class'] ); ?>" aria-labelledby="<?php echo esc_attr( $args['id'] ); ?>">
 		<div class="site-shell site-education__inner <?php echo esc_attr( $args['inner_class'] ); ?>">
-			<h2 class="site-section-title site-education__title" id="<?php echo esc_attr( $args['id'] ); ?>">Education &amp; Experience</h2>
+			<h2 class="site-section-title site-education__title" id="<?php echo esc_attr( $args['id'] ); ?>">Education<br class="site-mobile-break"> &amp; Experience</h2>
 			<?php neurocoaching_certificate_gallery( $args['certificates_class'], $args['label'], $args['certificates'] ); ?>
 			<a class="site-education__more" href="#<?php echo esc_attr( $args['target_id'] ); ?>">View more <svg class="education-more-arrow" aria-hidden="true" viewBox="0 0 71 28" width="71" height="28"><path d="M0 14H70M56 1L70 14 56 27" /></svg></a>
 		</div>
@@ -596,11 +597,19 @@ function neurocoaching_credentials_section( $args ) {
 			'items'         => array(),
 		)
 	);
+	// All three mobile PSDs share this visual sequence. Keep desktop grid order.
+	$mobile_prefixes = array( '15+', 'Managed', 'ICF', 'MBA', 'Worked', 'Human Resources', 'Works', '200+' );
 	?>
 	<section id="<?php echo esc_attr( $args['id'] ); ?>" class="site-section site-shell site-credentials <?php echo esc_attr( $args['section_class'] ); ?>" aria-label="<?php echo esc_attr( $args['label'] ); ?>" tabindex="-1">
 		<ul>
 			<?php foreach ( $args['items'] as $item ) : ?>
-				<li><span class="site-check" aria-hidden="true"></span><?php echo esc_html( $item ); ?></li>
+				<?php
+				$mobile_order = count( $mobile_prefixes );
+				foreach ( $mobile_prefixes as $order => $prefix ) {
+					if ( 0 === strpos( $item, $prefix ) ) { $mobile_order = $order; break; }
+				}
+				?>
+				<li style="--credential-mobile-order:<?php echo (int) $mobile_order; ?>"><span class="site-check" aria-hidden="true"></span><?php echo esc_html( $item ); ?></li>
 			<?php endforeach; ?>
 		</ul>
 	</section>

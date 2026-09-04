@@ -1,0 +1,7 @@
+Belka Mobile is a set of renamed Latin subsets of Lato 2.015.
+Original copyright: (c) 2010-2014 tyPoland Lukasz Dziedzic.
+Source: https://github.com/google/fonts/tree/5d3b76120a319730fda218cc7410174a462b32cb/ofl/lato
+License: SIL Open Font License 1.1; see OFL-Lato.txt.
+Reserved original family name: Lato. Internal derivative families are Belka Mobile.
+Only coverage and names are changed; retained outlines and advance widths are
+verified by docs/qa/subset-mobile-lato.py. Used only at mobile breakpoints.
