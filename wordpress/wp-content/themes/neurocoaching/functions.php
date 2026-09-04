@@ -9,6 +9,22 @@ function neurocoaching_setup() {
 add_action( 'after_setup_theme', 'neurocoaching_setup' );
 
 /**
+ * Own these locations without invoking Elementor's legacy document renderer.
+ * Otherwise Theme Builder replaces get_header/get_footer with its fallback,
+ * renders the old OceanWP templates (including a high-priority PNG logo), and
+ * discards our document shell. CSS hiding does not prevent those downloads.
+ * Registration is theme-local; old templates and editor previews stay intact.
+ */
+function neurocoaching_register_theme_locations( $locations_manager ) {
+	if ( is_admin() || isset( $_GET['elementor-preview'] ) ) {
+		return;
+	}
+	$locations_manager->register_location( 'header' );
+	$locations_manager->register_location( 'footer' );
+}
+add_action( 'elementor/theme/register_locations', 'neurocoaching_register_theme_locations' );
+
+/**
  * Provide branded favicon assets when WordPress has no custom Site Icon.
  */
 function neurocoaching_favicon_tags() {
@@ -641,6 +657,9 @@ function neurocoaching_faq_section( $args ) {
 			'button_url'     => neurocoaching_booking_url(),
 		)
 	);
+	// Reserve the mobile photo's own ratio before its lazy request finishes.
+	// The About mobile source is 1537x1346, not the desktop image's 700x910.
+	$mobile_dimensions = $args['image_mobile'] ? neurocoaching_theme_image_dimensions( $args['image_mobile'] ) : array();
 	?>
 	<section id="faqs" class="site-section site-shell site-faq <?php echo esc_attr( $args['section_class'] ); ?>" aria-labelledby="<?php echo esc_attr( $args['id'] ); ?>">
 		<header class="site-faq__header"><h2 class="site-section-title" id="<?php echo esc_attr( $args['id'] ); ?>">FAQs</h2><p>(Frequently Asked Questions)</p></header>
@@ -652,7 +671,7 @@ function neurocoaching_faq_section( $args ) {
 		</div>
 		<aside class="site-faq__aside">
 			<picture>
-				<?php if ( $args['image_mobile'] ) : ?><source media="(max-width: 850px)" srcset="<?php echo esc_url( $args['image_mobile'] ); ?>"><?php endif; ?>
+				<?php if ( $args['image_mobile'] ) : ?><source media="(max-width: 850px)" srcset="<?php echo esc_url( $args['image_mobile'] ); ?>"<?php echo $mobile_dimensions ? ' width="' . esc_attr( (string) $mobile_dimensions[0] ) . '" height="' . esc_attr( (string) $mobile_dimensions[1] ) . '"' : ''; ?>><?php endif; ?>
 				<img src="<?php echo esc_url( $args['image'] ); ?>" width="<?php echo esc_attr( (string) $args['image_width'] ); ?>" height="<?php echo esc_attr( (string) $args['image_height'] ); ?>" alt="<?php echo esc_attr( $args['image_alt'] ); ?>" loading="lazy" decoding="async">
 			</picture>
 			<h2><?php echo esc_html( $args['aside_heading'] ); ?></h2>

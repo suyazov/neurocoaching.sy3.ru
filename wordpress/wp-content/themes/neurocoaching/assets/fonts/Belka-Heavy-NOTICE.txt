@@ -1,0 +1,8 @@
+Belka Heavy Latin is a Latin web subset of the bundled Lato Heavy font.
+Original copyright: (c) 2010-2014 tyPoland Lukasz Dziedzic.
+Original project: https://www.latofonts.com/
+License: SIL Open Font License 1.1, see the bundled OFL-Lato.txt.
+Reserved original name: Lato. The derivative's internal name is Belka Heavy Latin.
+Only character coverage and naming metadata were changed; retained glyph
+outlines, advance widths, vertical metrics and hinting were preserved.
+Reproduction/verification: docs/qa/subset-heavy-font.py in the theme repository.

@@ -164,7 +164,9 @@
     }
     fitPagination();
     window.addEventListener('resize', fitPagination);
-    show(0);
+    // PHP already renders slide 0 and its active dot. Calling show(0) here
+    // eagerly downloads two below-fold photos and defeats the observer above.
+    // Keep native lazy loading until near the gallery or a user interaction.
   });
 
   document.querySelectorAll('[data-horizontal-track]').forEach(function (track) {
