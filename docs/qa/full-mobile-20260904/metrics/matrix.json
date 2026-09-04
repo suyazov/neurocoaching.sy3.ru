@@ -1,0 +1,522 @@
+[
+  {
+    "page": "about",
+    "width": 320,
+    "stageProductionDifferences": [],
+    "errors": [],
+    "brokenImages": [],
+    "gaps": {
+      "imageToDots": 10,
+      "dotsToNext": 62,
+      "photo": {
+        "x": 13,
+        "y": 3324.796875,
+        "w": 294,
+        "h": 210,
+        "right": 307,
+        "bottom": 3534.796875
+      },
+      "count": 61
+    },
+    "sectionHeightsBefore": [
+      1389,
+      389,
+      584.21875,
+      847,
+      421.796875,
+      253,
+      1806.203125
+    ],
+    "sectionHeightsPublished": [
+      1393,
+      389,
+      564,
+      847,
+      421.796875,
+      257,
+      1902.203125
+    ]
+  },
+  {
+    "page": "about",
+    "width": 375,
+    "stageProductionDifferences": [],
+    "errors": [],
+    "brokenImages": [],
+    "gaps": {
+      "imageToDots": 10,
+      "dotsToNext": 62,
+      "photo": {
+        "x": 13,
+        "y": 3260.40625,
+        "w": 349,
+        "h": 249.28125,
+        "right": 362,
+        "bottom": 3509.6875
+      },
+      "count": 61
+    },
+    "sectionHeightsBefore": [
+      1344.359375,
+      389,
+      494.6875,
+      932,
+      461.078125,
+      253,
+      1778.375
+    ],
+    "sectionHeightsPublished": [
+      1342.609375,
+      389,
+      524,
+      873,
+      461.078125,
+      257,
+      1852.375
+    ]
+  },
+  {
+    "page": "about",
+    "width": 390,
+    "stageProductionDifferences": [],
+    "errors": [],
+    "brokenImages": [],
+    "gaps": {
+      "imageToDots": 10,
+      "dotsToNext": 62,
+      "photo": {
+        "x": 13,
+        "y": 3259.390625,
+        "w": 364,
+        "h": 260,
+        "right": 377,
+        "bottom": 3519.390625
+      },
+      "count": 61
+    },
+    "sectionHeightsBefore": [
+      1332,
+      389,
+      494.6875,
+      932,
+      471.796875,
+      253,
+      1791.5
+    ],
+    "sectionHeightsPublished": [
+      1361.59375,
+      389,
+      504,
+      873,
+      471.796875,
+      257,
+      1865.5
+    ]
+  },
+  {
+    "page": "about",
+    "width": 430,
+    "stageProductionDifferences": [],
+    "errors": [],
+    "brokenImages": [],
+    "gaps": {
+      "imageToDots": 10,
+      "dotsToNext": 62,
+      "photo": {
+        "x": 13,
+        "y": 3290.015625,
+        "w": 404,
+        "h": 288.5625,
+        "right": 417,
+        "bottom": 3578.578125
+      },
+      "count": 61
+    },
+    "sectionHeightsBefore": [
+      1312,
+      389,
+      476.78125,
+      932,
+      500.359375,
+      253,
+      1786.53125
+    ],
+    "sectionHeightsPublished": [
+      1392.21875,
+      389,
+      504,
+      873,
+      500.359375,
+      257,
+      1862.53125
+    ]
+  },
+  {
+    "page": "career",
+    "width": 320,
+    "stageProductionDifferences": [],
+    "errors": [],
+    "brokenImages": [],
+    "gaps": {
+      "imageToDots": 10,
+      "dotsToNext": 62,
+      "photo": {
+        "x": 13,
+        "y": 7010.15625,
+        "w": 294,
+        "h": 210,
+        "right": 307,
+        "bottom": 7220.15625
+      },
+      "count": 21
+    },
+    "sectionHeightsBefore": [
+      1522.6875,
+      389,
+      584.21875,
+      850,
+      1882,
+      1014,
+      512,
+      421.796875,
+      253,
+      1899
+    ],
+    "sectionHeightsPublished": [
+      1522.6875,
+      389,
+      564,
+      875.765625,
+      1882,
+      1152.1875,
+      492.71875,
+      421.796875,
+      257,
+      1889.328125
+    ]
+  },
+  {
+    "page": "career",
+    "width": 375,
+    "stageProductionDifferences": [],
+    "errors": [],
+    "brokenImages": [],
+    "gaps": {
+      "imageToDots": 10,
+      "dotsToNext": 62,
+      "photo": {
+        "x": 13,
+        "y": 6821.265625,
+        "w": 349,
+        "h": 249.28125,
+        "right": 362,
+        "bottom": 7070.546875
+      },
+      "count": 21
+    },
+    "sectionHeightsBefore": [
+      1452.875,
+      389,
+      494.6875,
+      865.046875,
+      1734.0625,
+      1170,
+      502.71875,
+      461.078125,
+      253,
+      1823
+    ],
+    "sectionHeightsPublished": [
+      1452.875,
+      389,
+      524,
+      858,
+      1761,
+      1183.875,
+      520.71875,
+      461.078125,
+      257,
+      1837.03125
+    ]
+  },
+  {
+    "page": "career",
+    "width": 390,
+    "stageProductionDifferences": [],
+    "errors": [],
+    "brokenImages": [],
+    "gaps": {
+      "imageToDots": 10,
+      "dotsToNext": 62,
+      "photo": {
+        "x": 13,
+        "y": 6790.59375,
+        "w": 364,
+        "h": 260,
+        "right": 377,
+        "bottom": 7050.59375
+      },
+      "count": 21
+    },
+    "sectionHeightsBefore": [
+      1451.9375,
+      389,
+      494.6875,
+      846.859375,
+      1734.71875,
+      1170,
+      502.71875,
+      471.796875,
+      253,
+      1823
+    ],
+    "sectionHeightsPublished": [
+      1451.9375,
+      389,
+      504,
+      858,
+      1761,
+      1174.140625,
+      520.71875,
+      471.796875,
+      257,
+      1849.5
+    ]
+  },
+  {
+    "page": "career",
+    "width": 430,
+    "stageProductionDifferences": [],
+    "errors": [],
+    "brokenImages": [],
+    "gaps": {
+      "imageToDots": 10,
+      "dotsToNext": 62,
+      "photo": {
+        "x": 13,
+        "y": 6792.75,
+        "w": 404,
+        "h": 288.5625,
+        "right": 417,
+        "bottom": 7081.3125
+      },
+      "count": 21
+    },
+    "sectionHeightsBefore": [
+      1442.8125,
+      389,
+      476.78125,
+      829,
+      1702.8125,
+      1170,
+      502.71875,
+      500.359375,
+      253,
+      1783
+    ],
+    "sectionHeightsPublished": [
+      1462.6875,
+      389,
+      504,
+      850,
+      1721,
+      1213.546875,
+      520.71875,
+      500.359375,
+      257,
+      1844.75
+    ]
+  },
+  {
+    "page": "neuro",
+    "width": 320,
+    "stageProductionDifferences": [],
+    "errors": [],
+    "brokenImages": [],
+    "gaps": {
+      "imageToDots": 10,
+      "dotsToNext": 62,
+      "photo": {
+        "x": 13,
+        "y": 9192.96875,
+        "w": 294,
+        "h": 210,
+        "right": 307,
+        "bottom": 9402.96875
+      },
+      "count": 15
+    },
+    "sectionHeightsBefore": [
+      1099,
+      389,
+      584.21875,
+      710,
+      2720,
+      1224,
+      1025.25,
+      678,
+      446,
+      421.796875,
+      293,
+      1899
+    ],
+    "sectionHeightsPublished": [
+      1061.125,
+      389,
+      564,
+      809.140625,
+      2720,
+      1224,
+      1057,
+      681,
+      570.90625,
+      421.796875,
+      297,
+      1902.203125
+    ]
+  },
+  {
+    "page": "neuro",
+    "width": 375,
+    "stageProductionDifferences": [],
+    "errors": [],
+    "brokenImages": [],
+    "gaps": {
+      "imageToDots": 10,
+      "dotsToNext": 62,
+      "photo": {
+        "x": 13,
+        "y": 9208.390625,
+        "w": 349,
+        "h": 249.28125,
+        "right": 362,
+        "bottom": 9457.671875
+      },
+      "count": 15
+    },
+    "sectionHeightsBefore": [
+      1112.34375,
+      389,
+      494.6875,
+      960,
+      2648,
+      1395.75,
+      1219.71875,
+      977.578125,
+      730.71875,
+      461.078125,
+      293,
+      1823
+    ],
+    "sectionHeightsPublished": [
+      1053.8125,
+      389,
+      524,
+      804.765625,
+      2522.484375,
+      1311,
+      1175.625,
+      721,
+      574.90625,
+      461.078125,
+      297,
+      1852.375
+    ]
+  },
+  {
+    "page": "neuro",
+    "width": 390,
+    "stageProductionDifferences": [],
+    "errors": [],
+    "brokenImages": [],
+    "gaps": {
+      "imageToDots": 10,
+      "dotsToNext": 62,
+      "photo": {
+        "x": 13,
+        "y": 9104.25,
+        "w": 364,
+        "h": 260,
+        "right": 377,
+        "bottom": 9364.25
+      },
+      "count": 15
+    },
+    "sectionHeightsBefore": [
+      1116,
+      389,
+      494.6875,
+      960,
+      2614.40625,
+      1338.640625,
+      1232.890625,
+      977.578125,
+      730.71875,
+      471.796875,
+      293,
+      1823
+    ],
+    "sectionHeightsPublished": [
+      1063.234375,
+      389,
+      504,
+      804.765625,
+      2435.296875,
+      1291,
+      1189.25,
+      721,
+      574.90625,
+      471.796875,
+      297,
+      1865.5
+    ]
+  },
+  {
+    "page": "neuro",
+    "width": 430,
+    "stageProductionDifferences": [],
+    "errors": [],
+    "brokenImages": [],
+    "gaps": {
+      "imageToDots": 10,
+      "dotsToNext": 62,
+      "photo": {
+        "x": 13,
+        "y": 8930.734375,
+        "w": 404,
+        "h": 288.5625,
+        "right": 417,
+        "bottom": 9219.296875
+      },
+      "count": 15
+    },
+    "sectionHeightsBefore": [
+      1116,
+      389,
+      476.78125,
+      960,
+      2492.03125,
+      1264.734375,
+      1213.640625,
+      932.984375,
+      730.71875,
+      500.359375,
+      293,
+      1783
+    ],
+    "sectionHeightsPublished": [
+      1043.375,
+      389,
+      504,
+      771.171875,
+      2344.90625,
+      1251,
+      1204.578125,
+      716,
+      574.90625,
+      500.359375,
+      297,
+      1862.53125
+    ]
+  }
+]

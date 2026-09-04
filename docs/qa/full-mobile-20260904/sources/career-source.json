@@ -1,0 +1,4552 @@
+{
+  "source": "/tmp/belka-psd-audit.p1Kd7d/sources/2_Career_320.psd",
+  "sha256": "df5e94607b68bbb94c11edbde761c6213b1e69b6e1c5463fe23c9fb7160eb2db",
+  "root": "Tablet 320 px",
+  "bounds": [
+    10143,
+    0,
+    10463,
+    9307
+  ],
+  "size": [
+    320,
+    9307
+  ],
+  "layers": [
+    {
+      "name": "Background colour copy",
+      "kind": "shape",
+      "bounds": [
+        -1,
+        452,
+        323,
+        8856
+      ]
+    },
+    {
+      "name": "Rectangle 545 copy 5",
+      "kind": "shape",
+      "bounds": [
+        -2,
+        5228,
+        323,
+        1015
+      ]
+    },
+    {
+      "name": "Layer 6",
+      "kind": "pixel",
+      "bounds": [
+        -86,
+        5670,
+        406,
+        676
+      ]
+    },
+    {
+      "name": "Фото Берет Вырезано",
+      "kind": "smartobject",
+      "bounds": [
+        46,
+        5858,
+        310,
+        572
+      ]
+    },
+    {
+      "name": "Rectangle copy 9",
+      "kind": "shape",
+      "bounds": [
+        -1,
+        2492,
+        323,
+        854
+      ]
+    },
+    {
+      "name": "Background copy 3",
+      "kind": "shape",
+      "bounds": [
+        13,
+        4289,
+        293,
+        885
+      ]
+    },
+    {
+      "name": "Background copy 2",
+      "kind": "shape",
+      "bounds": [
+        13,
+        3504,
+        293,
+        731
+      ]
+    },
+    {
+      "name": "Block 1",
+      "kind": "group",
+      "bounds": [
+        -3,
+        51,
+        325,
+        4157
+      ]
+    },
+    {
+      "name": "Image",
+      "kind": "group",
+      "bounds": [
+        -3,
+        51,
+        325,
+        404
+      ]
+    },
+    {
+      "name": "Place Your Image Here ",
+      "kind": "shape",
+      "bounds": [
+        -3,
+        51,
+        325,
+        404
+      ]
+    },
+    {
+      "name": "Фото Карьера",
+      "kind": "smartobject",
+      "bounds": [
+        37,
+        58,
+        254,
+        433
+      ]
+    },
+    {
+      "name": "headline",
+      "kind": "group",
+      "bounds": [
+        13,
+        504,
+        276,
+        790
+      ]
+    },
+    {
+      "name": "Title copy 2",
+      "kind": "type",
+      "bounds": [
+        13,
+        504,
+        276,
+        74
+      ],
+      "text": "Stop postponing\u0003your life",
+      "transform": [
+        0.6049035459325526,
+        0.0,
+        0.0,
+        0.6049515775474225,
+        10156.489430656846,
+        530.9988402938852
+      ],
+      "runs": [
+        {
+          "font": "'IBMPlexSans-Bold'",
+          "size": 36.0,
+          "leading": 40.0,
+          "tracking": 0.0
+        },
+        {
+          "font": "'IBMPlexSans-Bold'",
+          "size": 36.0,
+          "leading": 40.0,
+          "tracking": 0.0
+        }
+      ]
+    },
+    {
+      "name": "Your time is limited, so don’t waste it living someone else’s l",
+      "kind": "type",
+      "bounds": [
+        16,
+        603,
+        245,
+        36
+      ],
+      "text": "Your time is limited, so don’t waste it living someone else’s life.\u0003- Steve Jobs",
+      "transform": [
+        1.0,
+        0.0,
+        0.0,
+        0.9999999999999999,
+        10159.15625,
+        604.7697015949652
+      ],
+      "runs": [
+        {
+          "font": "'Lato-Italic'",
+          "size": 14.0,
+          "leading": 22.0,
+          "tracking": 0.0
+        },
+        {
+          "font": "'Lato-Italic'",
+          "size": 14.0,
+          "leading": 22.0,
+          "tracking": 0.0
+        }
+      ]
+    },
+    {
+      "name": "I have also been on the other side: changing careers, moving co",
+      "kind": "type",
+      "bounds": [
+        14,
+        1218,
+        255,
+        76
+      ],
+      "text": "I have also been on the other side: changing careers, moving countries, starting over, and rebuilding my professional identity.",
+      "transform": [
+        1.0,
+        0.0,
+        0.0,
+        0.9999999999999999,
+        10157.15625,
+        1218.7697015949652
+      ],
+      "runs": [
+        {
+          "font": "'Lato-Heavy'",
+          "size": 16.0,
+          "leading": 20.0,
+          "tracking": 0.0
+        },
+        {
+          "font": "'Lato-Heavy'",
+          "size": 16.0,
+          "leading": 20.0,
+          "tracking": 0.0
+        }
+      ]
+    },
+    {
+      "name": "Paragraph copy",
+      "kind": "type",
+      "bounds": [
+        39,
+        672,
+        263,
+        257
+      ],
+      "text": "You are ready for more, but your next step feels unclear.\rYou want to move into the UN, an international organisation, or a global role, but you are not sure how to position yourself.\rYou have been applying and hearing nothing back.\rYou have strong experience, but your CV does not fully show your value, and myself when everything kept changing.\r\r",
+      "transform": [
+        0.351420016728184,
+        0.0006849764958658924,
+        -0.0006850308855766721,
+        0.35144792079820575,
+        10183.000000000002,
+        672.9330469318793
+      ],
+      "runs": [
+        {
+          "font": "'Lato-Bold'",
+          "size": 14.0,
+          "leading": 20.0,
+          "tracking": 0.0
+        }
+      ]
+    },
+    {
+      "name": "Paragraph copy",
+      "kind": "type",
+      "bounds": [
+        15,
+        961,
+        285,
+        225
+      ],
+      "text": "This is not a talent problem. It is a clarity, positioning, and strategy problem and this is where I can help.\rI spent 15+ years inside the UN, intergovernmental organisations, and international environments - designing job profiles, leading hiring processes, sitting on recruitment panels, and building HR strategies from the inside.\rI know what gets noticed, what gets missed, and why strong candidates often never receive the call.",
+      "transform": [
+        0.35142001672818546,
+        0.0006849764958658018,
+        -0.0006850308855739779,
+        0.3514479207982058,
+        10159.0,
+        961.9330469318793
+      ],
+      "runs": [
+        {
+          "font": "'Lato-Regular'",
+          "size": 14.0,
+          "leading": 11.715,
+          "tracking": 0.0
+        }
+      ]
+    },
+    {
+      "name": "Paragraph copy 2",
+      "kind": "type",
+      "bounds": [
+        16,
+        1323,
+        283,
+        80
+      ],
+      "text": "You get strategic guidance from someone who understands both how international organisations work and what it feels like when your confidence is shaken and vour next step is unclear.",
+      "transform": [
+        0.35142001672818546,
+        0.0006849764958658018,
+        -0.0006850308855739779,
+        0.3514479207982058,
+        10159.0,
+        1323.9330469318793
+      ],
+      "runs": [
+        {
+          "font": "'Lato-Regular'",
+          "size": 14.0,
+          "leading": 11.715,
+          "tracking": 0.0
+        }
+      ]
+    },
+    {
+      "name": "Button",
+      "kind": "group",
+      "bounds": [
+        15,
+        1437,
+        207,
+        2771
+      ]
+    },
+    {
+      "name": "Rectangle copy 10",
+      "kind": "shape",
+      "bounds": [
+        15,
+        1437,
+        185,
+        55
+      ]
+    },
+    {
+      "name": "Button copy 4",
+      "kind": "type",
+      "bounds": [
+        46,
+        1457,
+        125,
+        11
+      ],
+      "text": "Book a consultation",
+      "transform": [
+        0.4412745070811322,
+        0.0,
+        0.0,
+        0.4385458761627856,
+        10250.950743340696,
+        1468.367799645197
+      ],
+      "runs": [
+        {
+          "font": "'Lato-Heavy'",
+          "size": 14.0,
+          "leading": 14.0,
+          "tracking": 0.0
+        }
+      ]
+    },
+    {
+      "name": "Rectangle copy 16",
+      "kind": "shape",
+      "bounds": [
+        37,
+        4153,
+        185,
+        55
+      ]
+    },
+    {
+      "name": "Button copy 6",
+      "kind": "type",
+      "bounds": [
+        84,
+        4174,
+        92,
+        11
+      ],
+      "text": "Book a session",
+      "transform": [
+        0.4412745070811322,
+        0.0,
+        0.0,
+        0.4385458761627856,
+        10272.950743340696,
+        4185.367799645197
+      ],
+      "runs": [
+        {
+          "font": "'Lato-Heavy'",
+          "size": 14.0,
+          "leading": 14.0,
+          "tracking": 0.0
+        }
+      ]
+    },
+    {
+      "name": "Block 2",
+      "kind": "group",
+      "bounds": [
+        -3,
+        1525,
+        465,
+        389
+      ]
+    },
+    {
+      "name": "Background",
+      "kind": "shape",
+      "bounds": [
+        -3,
+        1525,
+        325,
+        389
+      ]
+    },
+    {
+      "name": "Education & Experience",
+      "kind": "type",
+      "bounds": [
+        15,
+        1584,
+        222,
+        74
+      ],
+      "text": "Education\u0003& Experience",
+      "transform": [
+        1.2436219192029003,
+        0.0,
+        0.0,
+        1.2403154993594137,
+        10156.46673897163,
+        1610.9691494814233
+      ],
+      "runs": [
+        {
+          "font": "'IBMPlexSans-Bold'",
+          "size": 36.0,
+          "leading": 40.0,
+          "tracking": 0.0
+        },
+        {
+          "font": "'IBMPlexSans-Bold'",
+          "size": 36.0,
+          "leading": 40.0,
+          "tracking": 0.0
+        }
+      ]
+    },
+    {
+      "name": "Certificate 1",
+      "kind": "group",
+      "bounds": [
+        16,
+        1701,
+        213,
+        153
+      ]
+    },
+    {
+      "name": "Placeholder copy 3",
+      "kind": "shape",
+      "bounds": [
+        26,
+        1710,
+        192,
+        135
+      ]
+    },
+    {
+      "name": "Layer 3 copy",
+      "kind": "smartobject",
+      "bounds": [
+        24,
+        1703,
+        201,
+        154
+      ]
+    },
+    {
+      "name": "Rectangle copy 11",
+      "kind": "shape",
+      "bounds": [
+        16,
+        1701,
+        213,
+        153
+      ]
+    },
+    {
+      "name": "Certificate 1",
+      "kind": "group",
+      "bounds": [
+        251,
+        1701,
+        211,
+        153
+      ]
+    },
+    {
+      "name": "Placeholder copy 3",
+      "kind": "shape",
+      "bounds": [
+        259,
+        1710,
+        192,
+        135
+      ]
+    },
+    {
+      "name": "Сертификат 2 copy 3",
+      "kind": "smartobject",
+      "bounds": [
+        258,
+        1710,
+        181,
+        142
+      ]
+    },
+    {
+      "name": "Rectangle copy 11",
+      "kind": "shape",
+      "bounds": [
+        251,
+        1701,
+        211,
+        153
+      ]
+    },
+    {
+      "name": "Block 3",
+      "kind": "group",
+      "bounds": [
+        14,
+        1661,
+        288,
+        780
+      ]
+    },
+    {
+      "name": "15+ years in the UN & international organisations — HR,  projec",
+      "kind": "type",
+      "bounds": [
+        39,
+        1968,
+        263,
+        54
+      ],
+      "text": "15+ years in the UN & international organisations — HR,  project management, organisational development\r",
+      "transform": [
+        1.0,
+        0.0,
+        0.0,
+        0.9999999999999999,
+        10182.375,
+        1969.0
+      ],
+      "runs": [
+        {
+          "font": "'Lato-Bold'",
+          "size": 14.0,
+          "leading": 20.0,
+          "tracking": 0.0
+        },
+        {
+          "font": "'Lato-Bold'",
+          "size": 14.0,
+          "leading": 20.0,
+          "tracking": 0.0
+        }
+      ]
+    },
+    {
+      "name": "Managed multi-million dollar international projects across UN m",
+      "kind": "type",
+      "bounds": [
+        39,
+        2053,
+        261,
+        34
+      ],
+      "text": "Managed multi-million dollar international projects across UN missions\r",
+      "transform": [
+        1.0,
+        0.0,
+        0.0,
+        1.0,
+        10182.0,
+        2054.0
+      ],
+      "runs": [
+        {
+          "font": "'Lato-Bold'",
+          "size": 14.0,
+          "leading": 20.0,
+          "tracking": 0.0
+        },
+        {
+          "font": "'Lato-Bold'",
+          "size": 14.0,
+          "leading": 20.0,
+          "tracking": 0.0
+        }
+      ]
+    },
+    {
+      "name": "MBA, Webster University, USA ",
+      "kind": "type",
+      "bounds": [
+        39,
+        2183,
+        192,
+        14
+      ],
+      "text": "MBA, Webster University, USA\r",
+      "transform": [
+        1.0,
+        0.0,
+        0.0,
+        1.0,
+        10181.375,
+        2184.0
+      ],
+      "runs": [
+        {
+          "font": "'Lato-Bold'",
+          "size": 14.0,
+          "leading": 16.0,
+          "tracking": 0.0
+        },
+        {
+          "font": "'Lato-Bold'",
+          "size": 14.0,
+          "leading": 16.0,
+          "tracking": 0.0
+        }
+      ]
+    },
+    {
+      "name": "IСF Certified Neurointegration Сoach, Neurointegration Institut",
+      "kind": "type",
+      "bounds": [
+        39,
+        2118,
+        235,
+        34
+      ],
+      "text": "IСF Certified Neurointegration Сoach, Neurointegration Institute, USA\r",
+      "transform": [
+        1.0,
+        0.0,
+        0.0,
+        1.0,
+        10181.375,
+        2119.0
+      ],
+      "runs": [
+        {
+          "font": "'Lato-Bold'",
+          "size": 14.0,
+          "leading": 20.0,
+          "tracking": 0.0
+        },
+        {
+          "font": "'Lato-Bold'",
+          "size": 14.0,
+          "leading": 20.0,
+          "tracking": 0.0
+        }
+      ]
+    },
+    {
+      "name": "check mark",
+      "kind": "smartobject",
+      "bounds": [
+        16,
+        1965,
+        16,
+        14
+      ]
+    },
+    {
+      "name": "check mark copy 10",
+      "kind": "smartobject",
+      "bounds": [
+        16,
+        2050,
+        16,
+        14
+      ]
+    },
+    {
+      "name": "check mark copy 11",
+      "kind": "smartobject",
+      "bounds": [
+        16,
+        2115,
+        16,
+        14
+      ]
+    },
+    {
+      "name": "check mark copy 12",
+      "kind": "smartobject",
+      "bounds": [
+        16,
+        2180,
+        16,
+        14
+      ]
+    },
+    {
+      "name": "check mark copy 13",
+      "kind": "smartobject",
+      "bounds": [
+        16,
+        2225,
+        16,
+        14
+      ]
+    },
+    {
+      "name": "check mark copy 14",
+      "kind": "smartobject",
+      "bounds": [
+        16,
+        2302,
+        16,
+        14
+      ]
+    },
+    {
+      "name": "check mark copy 15",
+      "kind": "smartobject",
+      "bounds": [
+        16,
+        2363,
+        16,
+        14
+      ]
+    },
+    {
+      "name": "check mark copy 16",
+      "kind": "smartobject",
+      "bounds": [
+        16,
+        2424,
+        16,
+        14
+      ]
+    },
+    {
+      "name": "Worked with diplomats, senior UN officials, and international t",
+      "kind": "type",
+      "bounds": [
+        38,
+        2228,
+        244,
+        43
+      ],
+      "text": "Worked with diplomats, senior UN officials, and international teams across the world\r",
+      "transform": [
+        1.0,
+        0.0,
+        0.0,
+        1.0,
+        10181.375,
+        2229.0
+      ],
+      "runs": [
+        {
+          "font": "'Lato-Bold'",
+          "size": 14.0,
+          "leading": 16.0,
+          "tracking": 0.0
+        },
+        {
+          "font": "'Lato-Bold'",
+          "size": 14.0,
+          "leading": 16.0,
+          "tracking": 0.0
+        }
+      ]
+    },
+    {
+      "name": "Human Resources Management Certificate, Cornell University, USA",
+      "kind": "type",
+      "bounds": [
+        38,
+        2305,
+        219,
+        30
+      ],
+      "text": "Human Resources Management Certificate, Cornell University, USA\u0003",
+      "transform": [
+        1.0,
+        0.0,
+        0.0,
+        1.0,
+        10181.375,
+        2306.0
+      ],
+      "runs": [
+        {
+          "font": "'Lato-Bold'",
+          "size": 14.0,
+          "leading": 16.0,
+          "tracking": 0.0
+        },
+        {
+          "font": "'Lato-Bold'",
+          "size": 14.0,
+          "leading": 16.0,
+          "tracking": 0.0
+        }
+      ]
+    },
+    {
+      "name": "Works with clients in English, Russian & Italian  ",
+      "kind": "type",
+      "bounds": [
+        38,
+        2366,
+        247,
+        27
+      ],
+      "text": "Works with clients in English, Russian & Italian\r\r",
+      "transform": [
+        1.0,
+        0.0,
+        0.0,
+        1.0,
+        10181.375,
+        2367.0
+      ],
+      "runs": [
+        {
+          "font": "'Lato-Bold'",
+          "size": 14.0,
+          "leading": 16.0,
+          "tracking": 0.0
+        },
+        {
+          "font": "'Lato-Bold'",
+          "size": 14.0,
+          "leading": 16.0,
+          "tracking": 0.0
+        }
+      ]
+    },
+    {
+      "name": "200+ hours of individual coaching practice ",
+      "kind": "type",
+      "bounds": [
+        38,
+        2427,
+        263,
+        14
+      ],
+      "text": "200+ hours of individual coaching practice\r",
+      "transform": [
+        1.0,
+        0.0,
+        0.0,
+        1.0,
+        10181.375,
+        2428.0
+      ],
+      "runs": [
+        {
+          "font": "'Lato-Bold'",
+          "size": 14.0,
+          "leading": 16.0,
+          "tracking": 0.0
+        },
+        {
+          "font": "'Lato-Bold'",
+          "size": 14.0,
+          "leading": 16.0,
+          "tracking": 0.0
+        }
+      ]
+    },
+    {
+      "name": "Line 2 copy 15",
+      "kind": "shape",
+      "bounds": [
+        14,
+        1661,
+        226,
+        6
+      ]
+    },
+    {
+      "name": "Block 4",
+      "kind": "group",
+      "bounds": [
+        15,
+        3399,
+        293,
+        2101
+      ]
+    },
+    {
+      "name": "Text 1",
+      "kind": "group",
+      "bounds": [
+        39,
+        3700,
+        240,
+        114
+      ]
+    },
+    {
+      "name": "Paragraph copy 17",
+      "kind": "type",
+      "bounds": [
+        39,
+        3700,
+        240,
+        114
+      ],
+      "text": "One focused 90 min session to identify what's holding you back and define your clearest next step — whether you're applying for your first job, going through a career shift, burnout,\u0003or simply feeling stuck.",
+      "transform": [
+        0.999782144627685,
+        0.0,
+        0.0,
+        1.0014169611328732,
+        10182.0,
+        3700.420188919077
+      ],
+      "runs": [
+        {
+          "font": "'Lato-Regular'",
+          "size": 14.0,
+          "leading": 20.0,
+          "tracking": 0.0
+        }
+      ]
+    },
+    {
+      "name": "Button",
+      "kind": "group",
+      "bounds": [
+        37,
+        5094,
+        217,
+        53
+      ]
+    },
+    {
+      "name": "Rectangle copy 8",
+      "kind": "shape",
+      "bounds": [
+        37,
+        5094,
+        217,
+        53
+      ]
+    },
+    {
+      "name": "Button copy 2",
+      "kind": "type",
+      "bounds": [
+        69,
+        5114,
+        144,
+        14
+      ],
+      "text": "Buy premium package",
+      "transform": [
+        0.4415486680637273,
+        0.0,
+        0.0,
+        0.43913466557389563,
+        10284.107069281758,
+        5125.360704160679
+      ],
+      "runs": [
+        {
+          "font": "'Lato-Heavy'",
+          "size": 14.0,
+          "leading": 14.0,
+          "tracking": 20.0
+        }
+      ]
+    },
+    {
+      "name": "Headline",
+      "kind": "group",
+      "bounds": [
+        16,
+        3399,
+        290,
+        1619
+      ]
+    },
+    {
+      "name": "Headline copy",
+      "kind": "type",
+      "bounds": [
+        16,
+        3399,
+        162,
+        68
+      ],
+      "text": "Services |\rCareer",
+      "transform": [
+        0.9267339096528346,
+        0.0,
+        0.0,
+        0.9268074958080728,
+        10158.214716618126,
+        3427.0948585259775
+      ],
+      "runs": [
+        {
+          "font": "'IBMPlexSans-Bold'",
+          "size": 36.0,
+          "leading": 40.0,
+          "tracking": 0.0
+        },
+        {
+          "font": "'IBMPlexSans-Bold'",
+          "size": 36.0,
+          "leading": 40.0,
+          "tracking": 0.0
+        }
+      ]
+    },
+    {
+      "name": "Headline copy 5",
+      "kind": "type",
+      "bounds": [
+        37,
+        4105,
+        95,
+        26
+      ],
+      "text": "150 €",
+      "transform": [
+        0.9267339096528346,
+        0.0,
+        0.0,
+        0.9268074958080728,
+        10179.214716618126,
+        4131.0948585259775
+      ],
+      "runs": [
+        {
+          "font": "'IBMPlexSans-Bold'",
+          "size": 36.0,
+          "leading": 40.0,
+          "tracking": 0.0
+        },
+        {
+          "font": "'IBMPlexSans-Bold'",
+          "size": 36.0,
+          "leading": 40.0,
+          "tracking": 0.0
+        }
+      ]
+    },
+    {
+      "name": "Headline copy 6",
+      "kind": "type",
+      "bounds": [
+        38,
+        4992,
+        95,
+        26
+      ],
+      "text": "650 €",
+      "transform": [
+        0.9267339096528346,
+        0.0,
+        0.0,
+        0.9268074958080728,
+        10180.214716618126,
+        5018.0948585259775
+      ],
+      "runs": [
+        {
+          "font": "'IBMPlexSans-Bold'",
+          "size": 36.0,
+          "leading": 40.0,
+          "tracking": 0.0
+        },
+        {
+          "font": "'IBMPlexSans-Bold'",
+          "size": 36.0,
+          "leading": 40.0,
+          "tracking": 0.0
+        }
+      ]
+    },
+    {
+      "name": "Headline copy 7",
+      "kind": "type",
+      "bounds": [
+        175,
+        4992,
+        95,
+        26
+      ],
+      "text": "450 €",
+      "transform": [
+        0.9267339096528346,
+        0.0,
+        0.0,
+        0.9268074958080728,
+        10317.214716618126,
+        5018.0948585259775
+      ],
+      "runs": [
+        {
+          "font": "'IBMPlexSans-Bold'",
+          "size": 36.0,
+          "leading": 40.0,
+          "tracking": 0.0
+        },
+        {
+          "font": "'IBMPlexSans-Bold'",
+          "size": 36.0,
+          "leading": 40.0,
+          "tracking": 0.0
+        }
+      ]
+    },
+    {
+      "name": "Headline copy 2",
+      "kind": "type",
+      "bounds": [
+        40,
+        3531,
+        195,
+        39
+      ],
+      "text": "Consultation Session\u000390 min",
+      "transform": [
+        0.9267339096528346,
+        0.0,
+        0.0,
+        0.9268074958080728,
+        10182.214716618126,
+        3546.0948585259775
+      ],
+      "runs": [
+        {
+          "font": "'IBMPlexSans-Bold'",
+          "size": 20.0,
+          "leading": 24.0,
+          "tracking": 0.0
+        },
+        {
+          "font": "'IBMPlexSans-Bold'",
+          "size": 20.0,
+          "leading": 24.0,
+          "tracking": 0.0
+        }
+      ]
+    },
+    {
+      "name": "Headline copy 3",
+      "kind": "type",
+      "bounds": [
+        40,
+        3844,
+        87,
+        15
+      ],
+      "text": "Includes:",
+      "transform": [
+        0.9267339096528346,
+        0.0,
+        0.0,
+        0.9268074958080728,
+        10182.214716618126,
+        3859.0948585259775
+      ],
+      "runs": [
+        {
+          "font": "'IBMPlexSans-Bold'",
+          "size": 20.0,
+          "leading": 24.0,
+          "tracking": 0.0
+        },
+        {
+          "font": "'IBMPlexSans-Bold'",
+          "size": 20.0,
+          "leading": 24.0,
+          "tracking": 0.0
+        }
+      ]
+    },
+    {
+      "name": "zig zag copy",
+      "kind": "smartobject",
+      "bounds": [
+        39,
+        3633,
+        53,
+        35
+      ]
+    },
+    {
+      "name": "Title copy 12",
+      "kind": "type",
+      "bounds": [
+        40,
+        3596,
+        130,
+        12
+      ],
+      "text": "Single Session",
+      "transform": [
+        0.9277058112067081,
+        0.0,
+        0.0,
+        0.927779474534583,
+        10182.582013605112,
+        3608.0589200789527
+      ],
+      "runs": [
+        {
+          "font": "'IBMPlexSans-Bold'",
+          "size": 16.0,
+          "leading": 20.0,
+          "tracking": 0.0
+        },
+        {
+          "font": "'IBMPlexSans-Bold'",
+          "size": 16.0,
+          "leading": 20.0,
+          "tracking": 0.0
+        }
+      ]
+    },
+    {
+      "name": "flag copy",
+      "kind": "smartobject",
+      "bounds": [
+        38,
+        3884,
+        163,
+        32
+      ]
+    },
+    {
+      "name": "Rectangle 546",
+      "kind": "shape",
+      "bounds": [
+        186,
+        3883,
+        120,
+        34
+      ]
+    },
+    {
+      "name": "Title copy 19",
+      "kind": "type",
+      "bounds": [
+        111,
+        3894,
+        170,
+        13
+      ],
+      "text": "Free 30-min intro call",
+      "transform": [
+        0.9277058112067081,
+        0.0,
+        0.0,
+        0.927779474534583,
+        10252.928097318503,
+        3906.0484326936985
+      ],
+      "runs": [
+        {
+          "font": "'IBMPlexSans-Bold'",
+          "size": 16.0,
+          "leading": 20.0,
+          "tracking": 30.0
+        },
+        {
+          "font": "'IBMPlexSans-Bold'",
+          "size": 16.0,
+          "leading": 20.0,
+          "tracking": 30.0
+        }
+      ]
+    },
+    {
+      "name": "Line 2 copy 14",
+      "kind": "shape",
+      "bounds": [
+        37,
+        3671,
+        246,
+        6
+      ]
+    },
+    {
+      "name": "Programmes",
+      "kind": "group",
+      "bounds": [
+        15,
+        5261,
+        293,
+        239
+      ]
+    },
+    {
+      "name": "check mark copy 17",
+      "kind": "smartobject",
+      "bounds": [
+        16,
+        5325,
+        16,
+        14
+      ]
+    },
+    {
+      "name": "check mark copy 37",
+      "kind": "smartobject",
+      "bounds": [
+        16,
+        5369,
+        16,
+        14
+      ]
+    },
+    {
+      "name": "check mark copy 38",
+      "kind": "smartobject",
+      "bounds": [
+        16,
+        5413,
+        16,
+        14
+      ]
+    },
+    {
+      "name": "check mark copy 39",
+      "kind": "smartobject",
+      "bounds": [
+        16,
+        5442,
+        16,
+        14
+      ]
+    },
+    {
+      "name": "check mark copy 40",
+      "kind": "smartobject",
+      "bounds": [
+        16,
+        5486,
+        16,
+        14
+      ]
+    },
+    {
+      "name": "Title copy 15",
+      "kind": "type",
+      "bounds": [
+        15,
+        5261,
+        293,
+        34
+      ],
+      "text": "This is for you if…",
+      "transform": [
+        0.9277058112067081,
+        0.0,
+        0.0,
+        0.927779474534583,
+        10156.583062343638,
+        5287.578045649039
+      ],
+      "runs": [
+        {
+          "font": "'IBMPlexSans-Bold'",
+          "size": 36.0,
+          "leading": 40.0,
+          "tracking": 0.0
+        },
+        {
+          "font": "'IBMPlexSans-Bold'",
+          "size": 36.0,
+          "leading": 40.0,
+          "tracking": 0.0
+        }
+      ]
+    },
+    {
+      "name": "Block 5",
+      "kind": "group",
+      "bounds": [
+        13,
+        6807,
+        298,
+        340
+      ]
+    },
+    {
+      "name": "Circles Gallery",
+      "kind": "group",
+      "bounds": [
+        13,
+        7118,
+        298,
+        29
+      ]
+    },
+    {
+      "name": "Rectangle 3",
+      "kind": "shape",
+      "bounds": [
+        13,
+        7118,
+        13,
+        11
+      ]
+    },
+    {
+      "name": "Rectangle 3 copy",
+      "kind": "shape",
+      "bounds": [
+        32,
+        7118,
+        12,
+        11
+      ]
+    },
+    {
+      "name": "Rectangle 3 copy 3",
+      "kind": "shape",
+      "bounds": [
+        50,
+        7118,
+        13,
+        11
+      ]
+    },
+    {
+      "name": "Rectangle 3 copy 4",
+      "kind": "shape",
+      "bounds": [
+        69,
+        7118,
+        12,
+        11
+      ]
+    },
+    {
+      "name": "Rectangle 3 copy 5",
+      "kind": "shape",
+      "bounds": [
+        87,
+        7118,
+        13,
+        11
+      ]
+    },
+    {
+      "name": "Rectangle 3 copy 5",
+      "kind": "shape",
+      "bounds": [
+        106,
+        7118,
+        12,
+        11
+      ]
+    },
+    {
+      "name": "Rectangle 3 copy 5",
+      "kind": "shape",
+      "bounds": [
+        124,
+        7118,
+        13,
+        11
+      ]
+    },
+    {
+      "name": "Rectangle 3 copy 6",
+      "kind": "shape",
+      "bounds": [
+        143,
+        7118,
+        12,
+        11
+      ]
+    },
+    {
+      "name": "Rectangle 3 copy 6",
+      "kind": "shape",
+      "bounds": [
+        161,
+        7118,
+        13,
+        11
+      ]
+    },
+    {
+      "name": "Rectangle 3 copy 6",
+      "kind": "shape",
+      "bounds": [
+        180,
+        7118,
+        12,
+        11
+      ]
+    },
+    {
+      "name": "Rectangle 3 copy 6",
+      "kind": "shape",
+      "bounds": [
+        198,
+        7118,
+        13,
+        11
+      ]
+    },
+    {
+      "name": "Rectangle 3 copy 6",
+      "kind": "shape",
+      "bounds": [
+        217,
+        7118,
+        12,
+        11
+      ]
+    },
+    {
+      "name": "Rectangle 3 copy 6",
+      "kind": "shape",
+      "bounds": [
+        235,
+        7118,
+        13,
+        11
+      ]
+    },
+    {
+      "name": "Rectangle 3 copy 2",
+      "kind": "shape",
+      "bounds": [
+        254,
+        7118,
+        13,
+        11
+      ]
+    },
+    {
+      "name": "Rectangle 3 copy 9",
+      "kind": "shape",
+      "bounds": [
+        277,
+        7118,
+        12,
+        11
+      ]
+    },
+    {
+      "name": "Rectangle 3 copy 9",
+      "kind": "shape",
+      "bounds": [
+        298,
+        7118,
+        13,
+        11
+      ]
+    },
+    {
+      "name": "Rectangle 3 copy 8",
+      "kind": "shape",
+      "bounds": [
+        219,
+        7136,
+        12,
+        11
+      ]
+    },
+    {
+      "name": "Rectangle 3 copy 7",
+      "kind": "shape",
+      "bounds": [
+        14,
+        7136,
+        12,
+        11
+      ]
+    },
+    {
+      "name": "Rectangle 3 copy 7",
+      "kind": "shape",
+      "bounds": [
+        32,
+        7136,
+        13,
+        11
+      ]
+    },
+    {
+      "name": "Rectangle 3 copy 7",
+      "kind": "shape",
+      "bounds": [
+        51,
+        7136,
+        12,
+        11
+      ]
+    },
+    {
+      "name": "Rectangle 3 copy 7",
+      "kind": "shape",
+      "bounds": [
+        69,
+        7136,
+        12,
+        11
+      ]
+    },
+    {
+      "name": "Rectangle 3 copy 7",
+      "kind": "shape",
+      "bounds": [
+        88,
+        7136,
+        12,
+        11
+      ]
+    },
+    {
+      "name": "Rectangle 3 copy 7",
+      "kind": "shape",
+      "bounds": [
+        106,
+        7136,
+        12,
+        11
+      ]
+    },
+    {
+      "name": "Rectangle 3 copy 7",
+      "kind": "shape",
+      "bounds": [
+        125,
+        7136,
+        12,
+        11
+      ]
+    },
+    {
+      "name": "Rectangle 3 copy 7",
+      "kind": "shape",
+      "bounds": [
+        143,
+        7136,
+        12,
+        11
+      ]
+    },
+    {
+      "name": "Rectangle 3 copy 7",
+      "kind": "shape",
+      "bounds": [
+        162,
+        7136,
+        12,
+        11
+      ]
+    },
+    {
+      "name": "Rectangle 3 copy 7",
+      "kind": "shape",
+      "bounds": [
+        180,
+        7136,
+        12,
+        11
+      ]
+    },
+    {
+      "name": "Rectangle 3 copy 7",
+      "kind": "shape",
+      "bounds": [
+        199,
+        7136,
+        12,
+        11
+      ]
+    },
+    {
+      "name": "Headline",
+      "kind": "group",
+      "bounds": [
+        68,
+        6807,
+        184,
+        66
+      ]
+    },
+    {
+      "name": "In real life",
+      "kind": "type",
+      "bounds": [
+        73,
+        6807,
+        172,
+        27
+      ],
+      "text": "In real life",
+      "transform": [
+        0.9267339096528346,
+        0.0,
+        0.0,
+        0.9268074958080728,
+        10301.810836986195,
+        6833.793855232603
+      ],
+      "runs": [
+        {
+          "font": "'IBMPlexSans-Bold'",
+          "size": 36.0,
+          "leading": 40.0,
+          "tracking": 0.0
+        },
+        {
+          "font": "'IBMPlexSans-Bold'",
+          "size": 36.0,
+          "leading": 40.0,
+          "tracking": 0.0
+        }
+      ]
+    },
+    {
+      "name": "Follow on Instagram",
+      "kind": "type",
+      "bounds": [
+        68,
+        6853,
+        145,
+        16
+      ],
+      "text": "Follow on Instagram",
+      "transform": [
+        1.0,
+        0.0,
+        0.0,
+        0.9999999999999999,
+        10210.15625,
+        6853.769701594963
+      ],
+      "runs": [
+        {
+          "font": "'Lato-Black'",
+          "size": 16.0,
+          "leading": 20.0,
+          "tracking": 0.0
+        },
+        {
+          "font": "'Lato-Black'",
+          "size": 16.0,
+          "leading": 20.0,
+          "tracking": 0.0
+        }
+      ]
+    },
+    {
+      "name": "instagram copy",
+      "kind": "smartobject",
+      "bounds": [
+        231,
+        6852,
+        21,
+        21
+      ]
+    },
+    {
+      "name": "Image",
+      "kind": "group",
+      "bounds": [
+        68,
+        6889,
+        184,
+        222
+      ]
+    },
+    {
+      "name": "Place Your Image Here",
+      "kind": "shape",
+      "bounds": [
+        68,
+        6889,
+        184,
+        222
+      ]
+    },
+    {
+      "name": "IMG_2842",
+      "kind": "smartobject",
+      "bounds": [
+        49,
+        6815,
+        245,
+        327
+      ]
+    },
+    {
+      "name": "Hue/Saturation 2",
+      "kind": "huesaturation",
+      "bounds": [
+        -10143,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "Block 6",
+      "kind": "group",
+      "bounds": [
+        -1,
+        7199,
+        323,
+        249
+      ]
+    },
+    {
+      "name": "Background",
+      "kind": "shape",
+      "bounds": [
+        -1,
+        7199,
+        323,
+        249
+      ]
+    },
+    {
+      "name": "Button",
+      "kind": "group",
+      "bounds": [
+        15,
+        7360,
+        237,
+        53
+      ]
+    },
+    {
+      "name": "Rectangle copy 3",
+      "kind": "shape",
+      "bounds": [
+        15,
+        7360,
+        237,
+        53
+      ]
+    },
+    {
+      "name": "Book a Consultation Session",
+      "kind": "type",
+      "bounds": [
+        41,
+        7380,
+        185,
+        11
+      ],
+      "text": "Book a Consultation Session",
+      "transform": [
+        0.29117888528383606,
+        0.0,
+        0.0,
+        0.2912220200730322,
+        10276.43555335801,
+        7390.654871080893
+      ],
+      "runs": [
+        {
+          "font": "'Lato-Black'",
+          "size": 14.0,
+          "leading": 14.0,
+          "tracking": 20.0
+        }
+      ]
+    },
+    {
+      "name": "Text",
+      "kind": "group",
+      "bounds": [
+        15,
+        7235,
+        277,
+        102
+      ]
+    },
+    {
+      "name": "Number copy 3",
+      "kind": "type",
+      "bounds": [
+        15,
+        7235,
+        233,
+        74
+      ],
+      "text": "Ready to take\u0003the first step?",
+      "transform": [
+        1.2436219192029003,
+        0.0,
+        0.0,
+        1.2403154993594137,
+        10157.46673897163,
+        7261.969149481423
+      ],
+      "runs": [
+        {
+          "font": "'IBMPlexSans-Bold'",
+          "size": 36.0,
+          "leading": 40.0,
+          "tracking": 0.0
+        },
+        {
+          "font": "'IBMPlexSans-Bold'",
+          "size": 36.0,
+          "leading": 40.0,
+          "tracking": 0.0
+        }
+      ]
+    },
+    {
+      "name": "Free 30-min intro call · No commitment",
+      "kind": "type",
+      "bounds": [
+        16,
+        7326,
+        276,
+        11
+      ],
+      "text": "Free 30-min intro call · No commitment",
+      "transform": [
+        1.0,
+        0.0,
+        0.0,
+        0.9999999999999999,
+        10158.15625,
+        7324.769701594965
+      ],
+      "runs": [
+        {
+          "font": "'Lato-Medium'",
+          "size": 16.0,
+          "leading": 16.0,
+          "tracking": 0.0
+        },
+        {
+          "font": "'Lato-Medium'",
+          "size": 16.0,
+          "leading": 16.0,
+          "tracking": 0.0
+        }
+      ]
+    },
+    {
+      "name": "Block 7",
+      "kind": "group",
+      "bounds": [
+        14,
+        7505,
+        292,
+        1754
+      ]
+    },
+    {
+      "name": "Headline",
+      "kind": "group",
+      "bounds": [
+        16,
+        7505,
+        221,
+        55
+      ]
+    },
+    {
+      "name": "Subtitle",
+      "kind": "type",
+      "bounds": [
+        16,
+        7545,
+        221,
+        15
+      ],
+      "text": "(Frequently Asked Questions)",
+      "transform": [
+        0.1968176878487901,
+        0.0,
+        0.0,
+        0.1967961218704115,
+        10158.403993274824,
+        7557.469093301348
+      ],
+      "runs": [
+        {
+          "font": "'IBMPlexSans-Bold'",
+          "size": 16.0,
+          "leading": 20.0,
+          "tracking": 0.0
+        },
+        {
+          "font": "'IBMPlexSans-Bold'",
+          "size": 16.0,
+          "leading": 20.0,
+          "tracking": 0.0
+        }
+      ]
+    },
+    {
+      "name": "Title",
+      "kind": "type",
+      "bounds": [
+        17,
+        7505,
+        82,
+        33
+      ],
+      "text": "FAQs",
+      "transform": [
+        0.8976024141584115,
+        0.0,
+        0.0,
+        0.8975040608322165,
+        10157.301007340246,
+        7530.579941448785
+      ],
+      "runs": [
+        {
+          "font": "'IBMPlexSans-Bold'",
+          "size": 36.0,
+          "leading": 40.0,
+          "tracking": 0.0
+        },
+        {
+          "font": "'IBMPlexSans-Bold'",
+          "size": 36.0,
+          "leading": 40.0,
+          "tracking": 0.0
+        }
+      ]
+    },
+    {
+      "name": "Questions",
+      "kind": "group",
+      "bounds": [
+        14,
+        7592,
+        292,
+        1108
+      ]
+    },
+    {
+      "name": "Paragraph",
+      "kind": "type",
+      "bounds": [
+        16,
+        7609,
+        212,
+        14
+      ],
+      "text": "Who are you and what do you do?",
+      "transform": [
+        0.3755051226618533,
+        0.0,
+        0.0,
+        0.37605158245891146,
+        10159.655239140528,
+        7609.2424605753
+      ],
+      "runs": [
+        {
+          "font": "'Lato-Bold'",
+          "size": 14.0,
+          "leading": 20.0,
+          "tracking": 0.0
+        },
+        {
+          "font": "'Lato-Bold'",
+          "size": 14.0,
+          "leading": 20.0,
+          "tracking": 0.0
+        }
+      ]
+    },
+    {
+      "name": "Paragraph copy 16",
+      "kind": "type",
+      "bounds": [
+        16,
+        7673,
+        226,
+        34
+      ],
+      "text": "What is neurointegration and how is it different from regular coaching?",
+      "transform": [
+        0.37550512266185426,
+        0.0,
+        0.0,
+        0.37605158245890363,
+        10159.65523914053,
+        7673.242460575302
+      ],
+      "runs": [
+        {
+          "font": "'Lato-Bold'",
+          "size": 14.0,
+          "leading": 20.0,
+          "tracking": 0.0
+        },
+        {
+          "font": "'Lato-Bold'",
+          "size": 14.0,
+          "leading": 20.0,
+          "tracking": 0.0
+        }
+      ]
+    },
+    {
+      "name": "Paragraph copy 18",
+      "kind": "type",
+      "bounds": [
+        15,
+        7755,
+        98,
+        11
+      ],
+      "text": "Who is this for?",
+      "transform": [
+        0.3755051226618533,
+        0.0,
+        0.0,
+        0.37605158245891146,
+        10158.655239140528,
+        7755.2424605753
+      ],
+      "runs": [
+        {
+          "font": "'Lato-Bold'",
+          "size": 14.0,
+          "leading": 20.0,
+          "tracking": 0.0
+        },
+        {
+          "font": "'Lato-Bold'",
+          "size": 14.0,
+          "leading": 20.0,
+          "tracking": 0.0
+        }
+      ]
+    },
+    {
+      "name": "Paragraph copy 19",
+      "kind": "type",
+      "bounds": [
+        14,
+        7817,
+        236,
+        34
+      ],
+      "text": "Do I need to know what I want before working with you?",
+      "transform": [
+        0.3755051226618545,
+        0.0,
+        0.0,
+        0.3760515824589118,
+        10157.655239140528,
+        7817.242460575304
+      ],
+      "runs": [
+        {
+          "font": "'Lato-Bold'",
+          "size": 14.0,
+          "leading": 20.0,
+          "tracking": 0.0
+        },
+        {
+          "font": "'Lato-Bold'",
+          "size": 14.0,
+          "leading": 20.0,
+          "tracking": 0.0
+        }
+      ]
+    },
+    {
+      "name": "Paragraph copy 19",
+      "kind": "type",
+      "bounds": [
+        14,
+        7899,
+        226,
+        34
+      ],
+      "text": "How is your approach different from typical career coaching?",
+      "transform": [
+        0.3755051226618533,
+        0.0,
+        0.0,
+        0.37605158245891196,
+        10157.655239140528,
+        7899.242460575293
+      ],
+      "runs": [
+        {
+          "font": "'Lato-Bold'",
+          "size": 14.0,
+          "leading": 20.0,
+          "tracking": 0.0
+        },
+        {
+          "font": "'Lato-Bold'",
+          "size": 14.0,
+          "leading": 20.0,
+          "tracking": 0.0
+        }
+      ]
+    },
+    {
+      "name": "Paragraph copy 21",
+      "kind": "type",
+      "bounds": [
+        16,
+        8083,
+        164,
+        14
+      ],
+      "text": "What results can I expect?",
+      "transform": [
+        0.3755051226618533,
+        0.0,
+        0.0,
+        0.37605158245891146,
+        10159.655239140528,
+        8083.2424605753
+      ],
+      "runs": [
+        {
+          "font": "'Lato-Bold'",
+          "size": 14.0,
+          "leading": 20.0,
+          "tracking": 0.0
+        },
+        {
+          "font": "'Lato-Bold'",
+          "size": 14.0,
+          "leading": 20.0,
+          "tracking": 0.0
+        }
+      ]
+    },
+    {
+      "name": "Paragraph copy 21",
+      "kind": "type",
+      "bounds": [
+        16,
+        8148,
+        227,
+        14
+      ],
+      "text": "How long does it take to see results?",
+      "transform": [
+        0.375505122661854,
+        0.0,
+        0.0,
+        0.37605158245891507,
+        10158.655239140528,
+        8148.242460575302
+      ],
+      "runs": [
+        {
+          "font": "'Lato-Bold'",
+          "size": 14.0,
+          "leading": 22.0,
+          "tracking": 0.0
+        },
+        {
+          "font": "'Lato-Bold'",
+          "size": 14.0,
+          "leading": 22.0,
+          "tracking": 0.0
+        }
+      ]
+    },
+    {
+      "name": "Paragraph copy 21",
+      "kind": "type",
+      "bounds": [
+        16,
+        8212,
+        226,
+        34
+      ],
+      "text": "Is this more about career or personal development?",
+      "transform": [
+        0.3755051226618533,
+        0.0,
+        0.0,
+        0.37605158245891196,
+        10158.655239140528,
+        8212.242460575293
+      ],
+      "runs": [
+        {
+          "font": "'Lato-Bold'",
+          "size": 14.0,
+          "leading": 20.0,
+          "tracking": 0.0
+        },
+        {
+          "font": "'Lato-Bold'",
+          "size": 14.0,
+          "leading": 20.0,
+          "tracking": 0.0
+        }
+      ]
+    },
+    {
+      "name": "Paragraph copy 19",
+      "kind": "type",
+      "bounds": [
+        15,
+        7980,
+        222,
+        54
+      ],
+      "text": "How is working with you different from just reading self-help books or watching videos?",
+      "transform": [
+        0.3755051226618533,
+        0.0,
+        0.0,
+        0.37605158245891146,
+        10158.655239140528,
+        7980.2424605753
+      ],
+      "runs": [
+        {
+          "font": "'Lato-Bold'",
+          "size": 14.0,
+          "leading": 20.0,
+          "tracking": 0.0
+        },
+        {
+          "font": "'Lato-Bold'",
+          "size": 14.0,
+          "leading": 20.0,
+          "tracking": 0.0
+        }
+      ]
+    },
+    {
+      "name": "Paragraph copy 20",
+      "kind": "type",
+      "bounds": [
+        16,
+        8295,
+        225,
+        51
+      ],
+      "text": "Do I need to choose between career coaching and neurointegration —\u0003or can I do both?",
+      "transform": [
+        0.3755051226618534,
+        0.0,
+        0.0,
+        0.37605158245890913,
+        10158.655239140528,
+        8295.242460575311
+      ],
+      "runs": [
+        {
+          "font": "'Lato-Bold'",
+          "size": 14.0,
+          "leading": 20.0,
+          "tracking": 0.0
+        },
+        {
+          "font": "'Lato-Bold'",
+          "size": 14.0,
+          "leading": 20.0,
+          "tracking": 0.0
+        }
+      ]
+    },
+    {
+      "name": "Plus",
+      "kind": "group",
+      "bounds": [
+        288,
+        7897,
+        18,
+        19
+      ]
+    },
+    {
+      "name": "Line",
+      "kind": "shape",
+      "bounds": [
+        294,
+        7897,
+        6,
+        19
+      ]
+    },
+    {
+      "name": "Line",
+      "kind": "shape",
+      "bounds": [
+        288,
+        7903,
+        18,
+        6
+      ]
+    },
+    {
+      "name": "Plus",
+      "kind": "group",
+      "bounds": [
+        288,
+        7752,
+        18,
+        19
+      ]
+    },
+    {
+      "name": "Line",
+      "kind": "shape",
+      "bounds": [
+        294,
+        7752,
+        6,
+        19
+      ]
+    },
+    {
+      "name": "Line",
+      "kind": "shape",
+      "bounds": [
+        288,
+        7758,
+        18,
+        6
+      ]
+    },
+    {
+      "name": "Paragraph copy 22",
+      "kind": "type",
+      "bounds": [
+        16,
+        8398,
+        237,
+        34
+      ],
+      "text": "Why should I choose to work with you?",
+      "transform": [
+        0.3755051226618533,
+        0.0,
+        0.0,
+        0.37605158245891196,
+        10159.655239140528,
+        8398.242460575293
+      ],
+      "runs": [
+        {
+          "font": "'Lato-Bold'",
+          "size": 14.0,
+          "leading": 20.0,
+          "tracking": 0.0
+        },
+        {
+          "font": "'Lato-Bold'",
+          "size": 14.0,
+          "leading": 20.0,
+          "tracking": 0.0
+        }
+      ]
+    },
+    {
+      "name": "Paragraph copy 22",
+      "kind": "type",
+      "bounds": [
+        15,
+        8481,
+        133,
+        14
+      ],
+      "text": "What's the first step?",
+      "transform": [
+        0.3755051226618534,
+        0.0,
+        0.0,
+        0.37605158245890913,
+        10158.655239140528,
+        8481.242460575311
+      ],
+      "runs": [
+        {
+          "font": "'Lato-Bold'",
+          "size": 14.0,
+          "leading": 20.0,
+          "tracking": 0.0
+        },
+        {
+          "font": "'Lato-Bold'",
+          "size": 14.0,
+          "leading": 20.0,
+          "tracking": 0.0
+        }
+      ]
+    },
+    {
+      "name": "Paragraph copy 23",
+      "kind": "type",
+      "bounds": [
+        16,
+        8507,
+        230,
+        174
+      ],
+      "text": "Start with a conversation. You don't need a perfect plan — just the willingness to change something. Book a Discovery Session:  free 30 minutes that will give you clarity on where you are, what's holding you back, and exactly what your next step looks like. From there, we build everything together.",
+      "transform": [
+        0.9987347330364651,
+        0.0,
+        0.0,
+        1.0003678368427755,
+        10158.987626792195,
+        8507.604657141574
+      ],
+      "runs": [
+        {
+          "font": "'Lato-Regular'",
+          "size": 14.0,
+          "leading": 20.0,
+          "tracking": 0.0
+        }
+      ]
+    },
+    {
+      "name": "Plus",
+      "kind": "group",
+      "bounds": [
+        288,
+        7606,
+        18,
+        19
+      ]
+    },
+    {
+      "name": "Line",
+      "kind": "shape",
+      "bounds": [
+        294,
+        7606,
+        6,
+        19
+      ]
+    },
+    {
+      "name": "Line",
+      "kind": "shape",
+      "bounds": [
+        288,
+        7612,
+        18,
+        6
+      ]
+    },
+    {
+      "name": "Plus",
+      "kind": "group",
+      "bounds": [
+        288,
+        7669,
+        18,
+        19
+      ]
+    },
+    {
+      "name": "Line",
+      "kind": "shape",
+      "bounds": [
+        294,
+        7669,
+        6,
+        19
+      ]
+    },
+    {
+      "name": "Line",
+      "kind": "shape",
+      "bounds": [
+        288,
+        7675,
+        18,
+        6
+      ]
+    },
+    {
+      "name": "Plus",
+      "kind": "group",
+      "bounds": [
+        288,
+        8291,
+        18,
+        18
+      ]
+    },
+    {
+      "name": "Line",
+      "kind": "shape",
+      "bounds": [
+        294,
+        8291,
+        6,
+        18
+      ]
+    },
+    {
+      "name": "Line",
+      "kind": "shape",
+      "bounds": [
+        288,
+        8297,
+        18,
+        6
+      ]
+    },
+    {
+      "name": "Plus",
+      "kind": "group",
+      "bounds": [
+        288,
+        8395,
+        18,
+        18
+      ]
+    },
+    {
+      "name": "Line",
+      "kind": "shape",
+      "bounds": [
+        294,
+        8395,
+        6,
+        18
+      ]
+    },
+    {
+      "name": "Line",
+      "kind": "shape",
+      "bounds": [
+        288,
+        8401,
+        18,
+        6
+      ]
+    },
+    {
+      "name": "Plus",
+      "kind": "group",
+      "bounds": [
+        287,
+        7816,
+        19,
+        18
+      ]
+    },
+    {
+      "name": "Line",
+      "kind": "shape",
+      "bounds": [
+        294,
+        7816,
+        6,
+        18
+      ]
+    },
+    {
+      "name": "Line",
+      "kind": "shape",
+      "bounds": [
+        287,
+        7821,
+        19,
+        6
+      ]
+    },
+    {
+      "name": "Plus",
+      "kind": "group",
+      "bounds": [
+        287,
+        8082,
+        19,
+        18
+      ]
+    },
+    {
+      "name": "Line",
+      "kind": "shape",
+      "bounds": [
+        294,
+        8082,
+        6,
+        18
+      ]
+    },
+    {
+      "name": "Line",
+      "kind": "shape",
+      "bounds": [
+        287,
+        8087,
+        19,
+        6
+      ]
+    },
+    {
+      "name": "Plus",
+      "kind": "group",
+      "bounds": [
+        288,
+        7977,
+        18,
+        18
+      ]
+    },
+    {
+      "name": "Line",
+      "kind": "shape",
+      "bounds": [
+        294,
+        7977,
+        6,
+        18
+      ]
+    },
+    {
+      "name": "Line",
+      "kind": "shape",
+      "bounds": [
+        288,
+        7983,
+        18,
+        6
+      ]
+    },
+    {
+      "name": "Plus",
+      "kind": "group",
+      "bounds": [
+        288,
+        8145,
+        18,
+        18
+      ]
+    },
+    {
+      "name": "Line",
+      "kind": "shape",
+      "bounds": [
+        294,
+        8145,
+        6,
+        18
+      ]
+    },
+    {
+      "name": "Line",
+      "kind": "shape",
+      "bounds": [
+        288,
+        8151,
+        18,
+        6
+      ]
+    },
+    {
+      "name": "Plus",
+      "kind": "group",
+      "bounds": [
+        288,
+        8208,
+        18,
+        18
+      ]
+    },
+    {
+      "name": "Line",
+      "kind": "shape",
+      "bounds": [
+        294,
+        8208,
+        6,
+        18
+      ]
+    },
+    {
+      "name": "Line",
+      "kind": "shape",
+      "bounds": [
+        288,
+        8214,
+        18,
+        6
+      ]
+    },
+    {
+      "name": "Line 2",
+      "kind": "shape",
+      "bounds": [
+        15,
+        7592,
+        290,
+        6
+      ]
+    },
+    {
+      "name": "Line 2 copy",
+      "kind": "shape",
+      "bounds": [
+        15,
+        7635,
+        290,
+        6
+      ]
+    },
+    {
+      "name": "Line 2 copy 2",
+      "kind": "shape",
+      "bounds": [
+        15,
+        7656,
+        289,
+        6
+      ]
+    },
+    {
+      "name": "Line 2 copy 2",
+      "kind": "shape",
+      "bounds": [
+        16,
+        7716,
+        289,
+        6
+      ]
+    },
+    {
+      "name": "Line 2 copy 3",
+      "kind": "shape",
+      "bounds": [
+        15,
+        7737,
+        291,
+        6
+      ]
+    },
+    {
+      "name": "Line 2 copy 3",
+      "kind": "shape",
+      "bounds": [
+        15,
+        7780,
+        290,
+        6
+      ]
+    },
+    {
+      "name": "Line 2 copy 4",
+      "kind": "shape",
+      "bounds": [
+        15,
+        7799,
+        290,
+        6
+      ]
+    },
+    {
+      "name": "Line 2 copy 4",
+      "kind": "shape",
+      "bounds": [
+        14,
+        7860,
+        291,
+        6
+      ]
+    },
+    {
+      "name": "Line 2 copy 12",
+      "kind": "shape",
+      "bounds": [
+        14,
+        7879,
+        291,
+        6
+      ]
+    },
+    {
+      "name": "Line 2 copy 13",
+      "kind": "shape",
+      "bounds": [
+        14,
+        7945,
+        291,
+        6
+      ]
+    },
+    {
+      "name": "Line 2 copy 5",
+      "kind": "shape",
+      "bounds": [
+        15,
+        8065,
+        290,
+        5
+      ]
+    },
+    {
+      "name": "Line 2 copy 5",
+      "kind": "shape",
+      "bounds": [
+        16,
+        8110,
+        289,
+        6
+      ]
+    },
+    {
+      "name": "Line 2 copy 7",
+      "kind": "shape",
+      "bounds": [
+        15,
+        8131,
+        291,
+        5
+      ]
+    },
+    {
+      "name": "Line 2 copy 7",
+      "kind": "shape",
+      "bounds": [
+        16,
+        8174,
+        290,
+        6
+      ]
+    },
+    {
+      "name": "Line 2 copy 9",
+      "kind": "shape",
+      "bounds": [
+        15,
+        8278,
+        290,
+        6
+      ]
+    },
+    {
+      "name": "Line 2 copy 9",
+      "kind": "shape",
+      "bounds": [
+        16,
+        8360,
+        290,
+        6
+      ]
+    },
+    {
+      "name": "Line 2 copy 10",
+      "kind": "shape",
+      "bounds": [
+        14,
+        8381,
+        292,
+        6
+      ]
+    },
+    {
+      "name": "Line 2 copy 10",
+      "kind": "shape",
+      "bounds": [
+        16,
+        8444,
+        289,
+        6
+      ]
+    },
+    {
+      "name": "Line 2 copy 11",
+      "kind": "shape",
+      "bounds": [
+        15,
+        8466,
+        291,
+        6
+      ]
+    },
+    {
+      "name": "Line 2 copy 11",
+      "kind": "shape",
+      "bounds": [
+        16,
+        8694,
+        289,
+        6
+      ]
+    },
+    {
+      "name": "Line 2 copy 8",
+      "kind": "shape",
+      "bounds": [
+        15,
+        8195,
+        291,
+        6
+      ]
+    },
+    {
+      "name": "Line 2 copy 8",
+      "kind": "shape",
+      "bounds": [
+        15,
+        8259,
+        290,
+        6
+      ]
+    },
+    {
+      "name": "Line 2 copy 6",
+      "kind": "shape",
+      "bounds": [
+        15,
+        7963,
+        290,
+        6
+      ]
+    },
+    {
+      "name": "Line 2 copy 6",
+      "kind": "shape",
+      "bounds": [
+        16,
+        8046,
+        289,
+        6
+      ]
+    },
+    {
+      "name": "Minus",
+      "kind": "shape",
+      "bounds": [
+        288,
+        8483,
+        18,
+        6
+      ]
+    },
+    {
+      "name": "Image",
+      "kind": "group",
+      "bounds": [
+        15,
+        8755,
+        290,
+        241
+      ]
+    },
+    {
+      "name": "Place Your Image Here  copy",
+      "kind": "smartobject",
+      "bounds": [
+        16,
+        8756,
+        288,
+        239
+      ]
+    },
+    {
+      "name": "Place Your Image Here",
+      "kind": "shape",
+      "bounds": [
+        15,
+        8755,
+        290,
+        241
+      ]
+    },
+    {
+      "name": "IMG_7969",
+      "kind": "smartobject",
+      "bounds": [
+        13,
+        8747,
+        337,
+        253
+      ]
+    },
+    {
+      "name": "Text buttons",
+      "kind": "group",
+      "bounds": [
+        15,
+        9010,
+        290,
+        166
+      ]
+    },
+    {
+      "name": "Paragraph copy 28",
+      "kind": "type",
+      "bounds": [
+        16,
+        9142,
+        267,
+        34
+      ],
+      "text": "Leave with clarity, a defined direction, and a concrete next step.",
+      "transform": [
+        0.9987347330364631,
+        0.0,
+        0.0,
+        1.0003678368427775,
+        10158.987626792195,
+        9142.604657141574
+      ],
+      "runs": [
+        {
+          "font": "'Lato-Regular'",
+          "size": 14.0,
+          "leading": 20.0,
+          "tracking": 0.0
+        }
+      ]
+    },
+    {
+      "name": "Ready to take the first step?",
+      "kind": "type",
+      "bounds": [
+        16,
+        9042,
+        231,
+        74
+      ],
+      "text": "Ready to take the first step?",
+      "transform": [
+        0.9999999999999999,
+        0.0,
+        0.0,
+        1.0,
+        10157.541809082031,
+        9042.140746542302
+      ],
+      "runs": [
+        {
+          "font": "'IBMPlexSans-Bold'",
+          "size": 36.0,
+          "leading": 40.0,
+          "tracking": 0.0
+        }
+      ]
+    },
+    {
+      "name": "Line 2 copy 16",
+      "kind": "shape",
+      "bounds": [
+        15,
+        9010,
+        290,
+        6
+      ]
+    },
+    {
+      "name": "Button",
+      "kind": "group",
+      "bounds": [
+        14,
+        9206,
+        240,
+        53
+      ]
+    },
+    {
+      "name": "Rectangle copy 9",
+      "kind": "shape",
+      "bounds": [
+        14,
+        9206,
+        240,
+        53
+      ]
+    },
+    {
+      "name": "Button copy 3",
+      "kind": "type",
+      "bounds": [
+        41,
+        9227,
+        186,
+        11
+      ],
+      "text": "Book a Consultation Session",
+      "transform": [
+        0.4415486680637273,
+        0.0,
+        0.0,
+        0.43913466557389563,
+        10277.107069281758,
+        9238.36070416068
+      ],
+      "runs": [
+        {
+          "font": "'Lato-Black'",
+          "size": 14.0,
+          "leading": 14.0,
+          "tracking": 20.0
+        }
+      ]
+    },
+    {
+      "name": "menu burger",
+      "kind": "group",
+      "bounds": [
+        -1,
+        -1,
+        323,
+        54
+      ]
+    },
+    {
+      "name": "Прямоугольник 4",
+      "kind": "shape",
+      "bounds": [
+        -1,
+        -1,
+        323,
+        54
+      ]
+    },
+    {
+      "name": "Burger",
+      "kind": "shape",
+      "bounds": [
+        281,
+        16,
+        24,
+        22
+      ]
+    },
+    {
+      "name": "social media icons",
+      "kind": "group",
+      "bounds": [
+        145,
+        15,
+        90,
+        22
+      ]
+    },
+    {
+      "name": "instagram",
+      "kind": "smartobject",
+      "bounds": [
+        180,
+        16,
+        22,
+        21
+      ]
+    },
+    {
+      "name": "linkedin",
+      "kind": "smartobject",
+      "bounds": [
+        145,
+        15,
+        22,
+        21
+      ]
+    },
+    {
+      "name": "telegram",
+      "kind": "smartobject",
+      "bounds": [
+        213,
+        15,
+        22,
+        22
+      ]
+    },
+    {
+      "name": "d_belka_logo copy",
+      "kind": "smartobject",
+      "bounds": [
+        16,
+        4,
+        89,
+        45
+      ]
+    },
+    {
+      "name": "check mark copy 21",
+      "kind": "smartobject",
+      "bounds": [
+        16,
+        668,
+        16,
+        14
+      ]
+    },
+    {
+      "name": "check mark copy 22",
+      "kind": "smartobject",
+      "bounds": [
+        16,
+        723,
+        16,
+        14
+      ]
+    },
+    {
+      "name": "check mark copy 23",
+      "kind": "smartobject",
+      "bounds": [
+        16,
+        817,
+        16,
+        14
+      ]
+    },
+    {
+      "name": "check mark copy 24",
+      "kind": "smartobject",
+      "bounds": [
+        16,
+        872,
+        16,
+        14
+      ]
+    },
+    {
+      "name": "Paragraph copy 15",
+      "kind": "type",
+      "bounds": [
+        68,
+        3945,
+        212,
+        86
+      ],
+      "text": "60-min deep-dive strategy session\rPersonal one-page action summary\rPersonalised next-step plan\r",
+      "transform": [
+        0.9987347330364654,
+        0.0,
+        0.0,
+        1.0003678368427784,
+        10210.987626792194,
+        3945.6046571415754
+      ],
+      "runs": [
+        {
+          "font": "'Lato-Bold'",
+          "size": 14.0,
+          "leading": 16.0,
+          "tracking": 0.0
+        }
+      ]
+    },
+    {
+      "name": "Paragraph copy 31",
+      "kind": "type",
+      "bounds": [
+        39,
+        3050,
+        258,
+        174
+      ],
+      "text": "Strategic career positioning\rCV / UN Application · LinkedIn · Cover Letter optimisation\rCompetency-based interview preparation\rCommunicate your strengths with clarity, confidence and impact\r10+ years of international HR & talent acquisition expertise \r",
+      "transform": [
+        0.9987347330364654,
+        0.0,
+        0.0,
+        1.0003678368427784,
+        10181.987626792194,
+        3050.6046571415754
+      ],
+      "runs": [
+        {
+          "font": "'Lato-Bold'",
+          "size": 14.0,
+          "leading": 16.0,
+          "tracking": 0.0
+        }
+      ]
+    },
+    {
+      "name": "check mark copy 25",
+      "kind": "smartobject",
+      "bounds": [
+        39,
+        3942,
+        16,
+        14
+      ]
+    },
+    {
+      "name": "check mark copy 26",
+      "kind": "smartobject",
+      "bounds": [
+        39,
+        3970,
+        16,
+        14
+      ]
+    },
+    {
+      "name": "check mark copy 27",
+      "kind": "smartobject",
+      "bounds": [
+        39,
+        4014,
+        16,
+        14
+      ]
+    },
+    {
+      "name": "Paragraph copy 14",
+      "kind": "type",
+      "bounds": [
+        38,
+        4043,
+        217,
+        27
+      ],
+      "text": "You leave knowing exactly what to do next",
+      "transform": [
+        0.9987347330364654,
+        0.0,
+        0.0,
+        1.0003678368427784,
+        10180.987626792194,
+        4043.6046571415754
+      ],
+      "runs": [
+        {
+          "font": "'Lato-Italic'",
+          "size": 14.0,
+          "leading": 16.0,
+          "tracking": 0.0
+        }
+      ]
+    },
+    {
+      "name": "Paragraph copy 30",
+      "kind": "type",
+      "bounds": [
+        39,
+        4481,
+        241,
+        114
+      ],
+      "text": "Four focused sessions to go from stuck\u0003to executing. We refine your positioning, sharpen your CV and LinkedIn, prepare you  for interviews and stay available between sessions for questions and application reviews.",
+      "transform": [
+        0.999782144627685,
+        0.0,
+        0.0,
+        1.0014169611328732,
+        10182.0,
+        4481.420188919077
+      ],
+      "runs": [
+        {
+          "font": "'Lato-Regular'",
+          "size": 14.0,
+          "leading": 20.0,
+          "tracking": 0.0
+        }
+      ]
+    },
+    {
+      "name": "Paragraph copy 33",
+      "kind": "type",
+      "bounds": [
+        14,
+        5569,
+        284,
+        182
+      ],
+      "text": "You do not have to figure this out alone.\rTogether, we will clarify your direction, make your experience visible, and create a clear plan for your next move.\rMy approach combines international HR expertise, career strategy, and nervous-system-aware guidance - so you can move forward with clarity and confidence.",
+      "transform": [
+        0.9997821446276869,
+        0.0,
+        0.0,
+        1.0014169611328732,
+        10157.999999999998,
+        5569.420188919079
+      ],
+      "runs": [
+        {
+          "font": "'Lato-Regular'",
+          "size": 14.0,
+          "leading": 20.0,
+          "tracking": 0.0
+        }
+      ]
+    },
+    {
+      "name": "Headline copy 4",
+      "kind": "type",
+      "bounds": [
+        40,
+        4312,
+        176,
+        39
+      ],
+      "text": "Career Accelerator\u00034 × 60 min",
+      "transform": [
+        0.9267339096528346,
+        0.0,
+        0.0,
+        0.9268074958080728,
+        10182.214716618126,
+        4327.0948585259775
+      ],
+      "runs": [
+        {
+          "font": "'IBMPlexSans-Bold'",
+          "size": 20.0,
+          "leading": 24.0,
+          "tracking": 0.0
+        },
+        {
+          "font": "'IBMPlexSans-Bold'",
+          "size": 20.0,
+          "leading": 24.0,
+          "tracking": 0.0
+        }
+      ]
+    },
+    {
+      "name": "Headline copy 4",
+      "kind": "type",
+      "bounds": [
+        40,
+        4625,
+        87,
+        15
+      ],
+      "text": "Includes:",
+      "transform": [
+        0.9267339096528346,
+        0.0,
+        0.0,
+        0.9268074958080728,
+        10182.214716618126,
+        4640.0948585259775
+      ],
+      "runs": [
+        {
+          "font": "'IBMPlexSans-Bold'",
+          "size": 20.0,
+          "leading": 24.0,
+          "tracking": 0.0
+        },
+        {
+          "font": "'IBMPlexSans-Bold'",
+          "size": 20.0,
+          "leading": 24.0,
+          "tracking": 0.0
+        }
+      ]
+    },
+    {
+      "name": "zig zag copy 2",
+      "kind": "smartobject",
+      "bounds": [
+        39,
+        4414,
+        53,
+        35
+      ]
+    },
+    {
+      "name": "Title copy 13",
+      "kind": "type",
+      "bounds": [
+        40,
+        4377,
+        92,
+        12
+      ],
+      "text": "4 SESSIONS",
+      "transform": [
+        0.9277058112067081,
+        0.0,
+        0.0,
+        0.927779474534583,
+        10182.582013605112,
+        4389.058920078953
+      ],
+      "runs": [
+        {
+          "font": "'IBMPlexSans-Bold'",
+          "size": 16.0,
+          "leading": 20.0,
+          "tracking": 0.0
+        },
+        {
+          "font": "'IBMPlexSans-Bold'",
+          "size": 16.0,
+          "leading": 20.0,
+          "tracking": 0.0
+        }
+      ]
+    },
+    {
+      "name": "flag copy 2",
+      "kind": "smartobject",
+      "bounds": [
+        140,
+        4367,
+        163,
+        32
+      ]
+    },
+    {
+      "name": "Title copy 20",
+      "kind": "type",
+      "bounds": [
+        215,
+        4376,
+        66,
+        15
+      ],
+      "text": "Flagship",
+      "transform": [
+        0.9277058112067081,
+        0.0,
+        0.0,
+        0.927779474534583,
+        10356.928097318503,
+        4388.0484326936985
+      ],
+      "runs": [
+        {
+          "font": "'IBMPlexSans-Bold'",
+          "size": 16.0,
+          "leading": 20.0,
+          "tracking": 30.0
+        },
+        {
+          "font": "'IBMPlexSans-Bold'",
+          "size": 16.0,
+          "leading": 20.0,
+          "tracking": 30.0
+        }
+      ]
+    },
+    {
+      "name": "flag copy 3",
+      "kind": "smartobject",
+      "bounds": [
+        16,
+        5037,
+        163,
+        32
+      ]
+    },
+    {
+      "name": "Title copy 21",
+      "kind": "type",
+      "bounds": [
+        53,
+        5046,
+        103,
+        15
+      ],
+      "text": "Special Offer",
+      "transform": [
+        0.9277058112067081,
+        0.0,
+        0.0,
+        0.927779474534583,
+        10195.928097318503,
+        5058.0484326936985
+      ],
+      "runs": [
+        {
+          "font": "'IBMPlexSans-Bold'",
+          "size": 16.0,
+          "leading": 20.0,
+          "tracking": 30.0
+        },
+        {
+          "font": "'IBMPlexSans-Bold'",
+          "size": 16.0,
+          "leading": 20.0,
+          "tracking": 30.0
+        }
+      ]
+    },
+    {
+      "name": "Line 2 copy 17",
+      "kind": "shape",
+      "bounds": [
+        37,
+        4452,
+        246,
+        6
+      ]
+    },
+    {
+      "name": "Paragraph copy 30",
+      "kind": "type",
+      "bounds": [
+        68,
+        4665,
+        210,
+        234
+      ],
+      "text": "Positioning & job search strategy\rCV, LinkedIn & cover letter refinement\rInterview preparation & techniques\rFull mock interview with written feedback\rBetween-session support (application reviews & questions)\rOne-page action summary — your profile, strategy, and next steps",
+      "transform": [
+        0.9987347330364679,
+        0.0,
+        0.0,
+        1.0003678368427797,
+        10210.987626792195,
+        4665.604657141574
+      ],
+      "runs": [
+        {
+          "font": "'Lato-Bold'",
+          "size": 14.0,
+          "leading": 16.0,
+          "tracking": 0.0
+        }
+      ]
+    },
+    {
+      "name": "check mark copy 28",
+      "kind": "smartobject",
+      "bounds": [
+        39,
+        4662,
+        16,
+        14
+      ]
+    },
+    {
+      "name": "check mark copy 28",
+      "kind": "smartobject",
+      "bounds": [
+        39,
+        4690,
+        16,
+        14
+      ]
+    },
+    {
+      "name": "check mark copy 28",
+      "kind": "smartobject",
+      "bounds": [
+        39,
+        4734,
+        16,
+        14
+      ]
+    },
+    {
+      "name": "check mark copy 29",
+      "kind": "smartobject",
+      "bounds": [
+        39,
+        4778,
+        16,
+        14
+      ]
+    },
+    {
+      "name": "check mark copy 30",
+      "kind": "smartobject",
+      "bounds": [
+        39,
+        4822,
+        16,
+        14
+      ]
+    },
+    {
+      "name": "check mark copy 31",
+      "kind": "smartobject",
+      "bounds": [
+        39,
+        4866,
+        16,
+        14
+      ]
+    },
+    {
+      "name": "Paragraph copy 30",
+      "kind": "type",
+      "bounds": [
+        37,
+        4913,
+        227,
+        43
+      ],
+      "text": "A compelling professional profile, a focused strategy, and the confidence to execute.",
+      "transform": [
+        0.9987347330364654,
+        0.0,
+        0.0,
+        1.0003678368427784,
+        10180.987626792194,
+        4913.604657141575
+      ],
+      "runs": [
+        {
+          "font": "'Lato-Italic'",
+          "size": 14.0,
+          "leading": 16.0,
+          "tracking": 0.0
+        }
+      ]
+    },
+    {
+      "name": "Rectangle copy 16",
+      "kind": "shape",
+      "bounds": [
+        38,
+        5002,
+        96,
+        6
+      ]
+    },
+    {
+      "name": "Education & Experience copy",
+      "kind": "type",
+      "bounds": [
+        15,
+        2943,
+        165,
+        73
+      ],
+      "text": "How can\u0003I help you",
+      "transform": [
+        1.2436219192029003,
+        0.0,
+        0.0,
+        1.2403154993594137,
+        10157.46673897163,
+        2968.9691494814233
+      ],
+      "runs": [
+        {
+          "font": "'IBMPlexSans-Bold'",
+          "size": 36.0,
+          "leading": 40.0,
+          "tracking": 0.0
+        },
+        {
+          "font": "'IBMPlexSans-Bold'",
+          "size": 36.0,
+          "leading": 40.0,
+          "tracking": 0.0
+        }
+      ]
+    },
+    {
+      "name": "Headline copy 8",
+      "kind": "type",
+      "bounds": [
+        15,
+        2528,
+        145,
+        63
+      ],
+      "text": "Stand out.\rGet shortlisted.\rGet hired.",
+      "transform": [
+        0.9267339096528346,
+        0.0,
+        0.0,
+        0.9268074958080728,
+        10158.214716618126,
+        2543.0948585259775
+      ],
+      "runs": [
+        {
+          "font": "'IBMPlexSans-Bold'",
+          "size": 20.0,
+          "leading": 24.0,
+          "tracking": 0.0
+        },
+        {
+          "font": "'IBMPlexSans-Bold'",
+          "size": 20.0,
+          "leading": 24.0,
+          "tracking": 0.0
+        },
+        {
+          "font": "'IBMPlexSans-Bold'",
+          "size": 20.0,
+          "leading": 24.0,
+          "tracking": 0.0
+        },
+        {
+          "font": "'IBMPlexSans-Bold'",
+          "size": 20.0,
+          "leading": 24.0,
+          "tracking": 0.0
+        }
+      ]
+    },
+    {
+      "name": "Paragraph copy 4",
+      "kind": "type",
+      "bounds": [
+        16,
+        2616,
+        284,
+        80
+      ],
+      "text": "I help professionals secure roles in the UN, international organisations, and leading global companies through strategic career positioning, compelling applications, and interview coaching.",
+      "transform": [
+        0.35153355507511813,
+        0.0,
+        0.0,
+        0.3511138805505405,
+        10158.999999999996,
+        2616.1027425538578
+      ],
+      "runs": [
+        {
+          "font": "'Lato-Light'",
+          "size": 14.0,
+          "leading": 11.704,
+          "tracking": 0.0
+        }
+      ]
+    },
+    {
+      "name": "Paragraph copy 5",
+      "kind": "type",
+      "bounds": [
+        16,
+        2778,
+        287,
+        94
+      ],
+      "text": "I know exactly what recruiters look for because I've been on the hiring side — reviewing applications, interviewing candidates, and advising hiring managers. I know what makes an application stand out and what gets overlooked.",
+      "transform": [
+        0.35153355507511813,
+        0.0,
+        0.0,
+        0.3511138805505405,
+        10158.999999999996,
+        2778.1027425538578
+      ],
+      "runs": [
+        {
+          "font": "'Lato-Light'",
+          "size": 14.0,
+          "leading": 11.704,
+          "tracking": 0.0
+        }
+      ]
+    },
+    {
+      "name": "zig zag copy 3",
+      "kind": "smartobject",
+      "bounds": [
+        16,
+        2721,
+        53,
+        35
+      ]
+    },
+    {
+      "name": "Line 2 copy 18",
+      "kind": "shape",
+      "bounds": [
+        15,
+        2905,
+        290,
+        6
+      ]
+    },
+    {
+      "name": "check mark copy 32",
+      "kind": "smartobject",
+      "bounds": [
+        17,
+        3047,
+        16,
+        14
+      ]
+    },
+    {
+      "name": "check mark copy 33",
+      "kind": "smartobject",
+      "bounds": [
+        17,
+        3075,
+        16,
+        14
+      ]
+    },
+    {
+      "name": "check mark copy 34",
+      "kind": "smartobject",
+      "bounds": [
+        17,
+        3119,
+        16,
+        14
+      ]
+    },
+    {
+      "name": "check mark copy 35",
+      "kind": "smartobject",
+      "bounds": [
+        17,
+        3147,
+        16,
+        14
+      ]
+    },
+    {
+      "name": "check mark copy 36",
+      "kind": "smartobject",
+      "bounds": [
+        17,
+        3191,
+        16,
+        14
+      ]
+    },
+    {
+      "name": "Rectangle copy 4",
+      "kind": "shape",
+      "bounds": [
+        15,
+        3258,
+        183,
+        53
+      ]
+    },
+    {
+      "name": "Book a free call",
+      "kind": "type",
+      "bounds": [
+        58,
+        3278,
+        101,
+        11
+      ],
+      "text": "Book a free call",
+      "transform": [
+        0.29117888528383606,
+        0.0,
+        0.0,
+        0.2912220200730322,
+        10251.43555335801,
+        3288.654871080892
+      ],
+      "runs": [
+        {
+          "font": "'Lato-Black'",
+          "size": 14.0,
+          "leading": 14.0,
+          "tracking": 20.0
+        }
+      ]
+    },
+    {
+      "name": "Paragraph copy 32",
+      "kind": "type",
+      "bounds": [
+        39,
+        5328,
+        262,
+        187
+      ],
+      "text": "You are ready for more, but your next step feels unclear\rYou want to move into the UN, an international organisation, or a global role\rYour CV does not reflect your real value\rYou are changing direction and want to do it strategically\rYou feel stuck, overlooked, or unsure where to start",
+      "transform": [
+        0.9987347330364634,
+        0.0,
+        0.0,
+        1.000367836842778,
+        10182.987626792197,
+        5328.604657141577
+      ],
+      "runs": [
+        {
+          "font": "'Lato-Bold'",
+          "size": 14.0,
+          "leading": 16.0,
+          "tracking": 0.0
+        }
+      ]
+    },
+    {
+      "name": "Rectangle copy 17",
+      "kind": "shape",
+      "bounds": [
+        14,
+        5784,
+        185,
+        55
+      ]
+    },
+    {
+      "name": "Button copy 7",
+      "kind": "type",
+      "bounds": [
+        59,
+        5804,
+        96,
+        11
+      ],
+      "text": "Book a free call",
+      "transform": [
+        0.4412745070811322,
+        0.0,
+        0.0,
+        0.4385458761627856,
+        10249.950743340696,
+        5815.367799645197
+      ],
+      "runs": [
+        {
+          "font": "'Lato-Heavy'",
+          "size": 14.0,
+          "leading": 14.0,
+          "tracking": 0.0
+        }
+      ]
+    },
+    {
+      "name": "Background copy",
+      "kind": "shape",
+      "bounds": [
+        -1,
+        6239,
+        323,
+        512
+      ]
+    },
+    {
+      "name": "Number copy 4",
+      "kind": "type",
+      "bounds": [
+        17,
+        6276,
+        138,
+        27
+      ],
+      "text": "Reviews",
+      "transform": [
+        1.2436219192029003,
+        0.0,
+        0.0,
+        1.2403154993594137,
+        10157.46673897163,
+        6302.969149481423
+      ],
+      "runs": [
+        {
+          "font": "'IBMPlexSans-Bold'",
+          "size": 36.0,
+          "leading": 40.0,
+          "tracking": 0.0
+        },
+        {
+          "font": "'IBMPlexSans-Bold'",
+          "size": 36.0,
+          "leading": 40.0,
+          "tracking": 0.0
+        }
+      ]
+    },
+    {
+      "name": "Rectangle copy 11",
+      "kind": "shape",
+      "bounds": [
+        11,
+        6331,
+        212,
+        382
+      ]
+    },
+    {
+      "name": "Paragraph copy 6",
+      "kind": "type",
+      "bounds": [
+        38,
+        6479,
+        158,
+        169
+      ],
+      "text": "I had the pleasure of connecting with Ksenia during my job search, and I was truly impressed by her dedication and support. She is incredibly empathetic, open-hearted, and genuinely cares about helping others.\rConversations with Ksenia are not only productive but also leave you with a real sense of comfort and encouragement. Her efforts go above and beyond, and I can wholeheartedly recommend her to anyone seeking guidance or support in their professional journey!",
+      "transform": [
+        0.9987347330364648,
+        0.0,
+        0.0,
+        1.000367836842781,
+        10180.987626792195,
+        6479.604657141572
+      ],
+      "runs": [
+        {
+          "font": "'Lato-Regular'",
+          "size": 12.0,
+          "leading": 16.006,
+          "tracking": 0.0
+        }
+      ]
+    },
+    {
+      "name": "Title copy 20",
+      "kind": "type",
+      "bounds": [
+        40,
+        6347,
+        61,
+        32
+      ],
+      "text": "Andrea\u0003Scherer",
+      "transform": [
+        0.9267339096528346,
+        0.0,
+        0.0,
+        0.9268074958080728,
+        10182.810836986195,
+        6359.211329784999
+      ],
+      "runs": [
+        {
+          "font": "'IBMPlexSans-Bold'",
+          "size": 16.0,
+          "leading": 20.0,
+          "tracking": 30.0
+        },
+        {
+          "font": "'IBMPlexSans-Bold'",
+          "size": 16.0,
+          "leading": 20.0,
+          "tracking": 30.0
+        }
+      ]
+    },
+    {
+      "name": "Title copy 21",
+      "kind": "type",
+      "bounds": [
+        41,
+        6387,
+        68,
+        35
+      ],
+      "text": "Logistics\u0003Enginee",
+      "transform": [
+        0.9267339096528346,
+        0.0,
+        0.0,
+        0.9268074958080728,
+        10182.810836986195,
+        6398.505676737372
+      ],
+      "runs": [
+        {
+          "font": "'IBMPlexSans-Bold'",
+          "size": 16.0,
+          "leading": 20.0,
+          "tracking": 30.0
+        },
+        {
+          "font": "'IBMPlexSans-Bold'",
+          "size": 16.0,
+          "leading": 20.0,
+          "tracking": 30.0
+        }
+      ]
+    },
+    {
+      "name": "Paragraph copy 17",
+      "kind": "type",
+      "bounds": [
+        38,
+        6434,
+        121,
+        14
+      ],
+      "text": "View profile on LinkedIn",
+      "transform": [
+        0.9987347330364719,
+        0.0,
+        0.0,
+        1.0003678368427822,
+        10181.987626792194,
+        6435.604657141575
+      ],
+      "runs": [
+        {
+          "font": "'Lato-SemiboldItalic'",
+          "size": 12.0,
+          "leading": 16.006,
+          "tracking": 0.0
+        }
+      ]
+    },
+    {
+      "name": "Paragraph copy 27",
+      "kind": "type",
+      "bounds": [
+        37,
+        6681,
+        83,
+        14
+      ],
+      "text": "View full version",
+      "transform": [
+        0.9987347330364719,
+        0.0,
+        0.0,
+        1.0003678368427822,
+        10180.987626792194,
+        6682.604657141575
+      ],
+      "runs": [
+        {
+          "font": "'Lato-SemiboldItalic'",
+          "size": 12.0,
+          "leading": 16.006,
+          "tracking": 0.0
+        }
+      ]
+    },
+    {
+      "name": "Line 2 copy 19",
+      "kind": "shape",
+      "bounds": [
+        37,
+        6460,
+        162,
+        6
+      ]
+    },
+    {
+      "name": "Line 2 copy 20",
+      "kind": "shape",
+      "bounds": [
+        37,
+        6662,
+        162,
+        6
+      ]
+    },
+    {
+      "name": "Rectangle copy 18",
+      "kind": "shape",
+      "bounds": [
+        240,
+        6331,
+        212,
+        382
+      ]
+    },
+    {
+      "name": "Paragraph copy 7",
+      "kind": "type",
+      "bounds": [
+        269,
+        6479,
+        153,
+        169
+      ],
+      "text": "I would like to share my impressions of Ksenia’s professional expertise in preparing candidates for vacancies at international organizations and navigating their hiring systems. I learned valuable new tips on improving my CV, profile, and motivation letters.\rShe helped me narrow down the range of vacancies that best align with my career path, and she highlighted my strengths while helping me structure a strong cover letter. I greatly appreciate her guidance, encouragement, and optimism.",
+      "transform": [
+        0.9987347330364648,
+        0.0,
+        0.0,
+        1.000367836842781,
+        10411.987626792195,
+        6479.604657141572
+      ],
+      "runs": [
+        {
+          "font": "'Lato-Regular'",
+          "size": 12.0,
+          "leading": 16.006,
+          "tracking": 0.0
+        }
+      ]
+    },
+    {
+      "name": "Title copy 22",
+      "kind": "type",
+      "bounds": [
+        270,
+        6387,
+        133,
+        32
+      ],
+      "text": "Erasmus Mundus\rMaster of Arts",
+      "transform": [
+        0.9267339096528346,
+        0.0,
+        0.0,
+        0.9268074958080728,
+        10411.810836986195,
+        6398.505676737372
+      ],
+      "runs": [
+        {
+          "font": "'IBMPlexSans-Bold'",
+          "size": 16.0,
+          "leading": 20.0,
+          "tracking": 30.0
+        },
+        {
+          "font": "'IBMPlexSans-Bold'",
+          "size": 16.0,
+          "leading": 20.0,
+          "tracking": 30.0
+        }
+      ]
+    },
+    {
+      "name": "Paragraph copy 29",
+      "kind": "type",
+      "bounds": [
+        266,
+        6434,
+        121,
+        14
+      ],
+      "text": "View profile on LinkedIn",
+      "transform": [
+        0.9987347330364719,
+        0.0,
+        0.0,
+        1.0003678368427822,
+        10409.987626792194,
+        6435.604657141575
+      ],
+      "runs": [
+        {
+          "font": "'Lato-SemiboldItalic'",
+          "size": 12.0,
+          "leading": 16.006,
+          "tracking": 0.0
+        }
+      ]
+    },
+    {
+      "name": "Paragraph copy 29",
+      "kind": "type",
+      "bounds": [
+        266,
+        6684,
+        83,
+        14
+      ],
+      "text": "View full version",
+      "transform": [
+        0.9987347330364719,
+        0.0,
+        0.0,
+        1.0003678368427822,
+        10409.987626792194,
+        6685.604657141575
+      ],
+      "runs": [
+        {
+          "font": "'Lato-SemiboldItalic'",
+          "size": 12.0,
+          "leading": 16.006,
+          "tracking": 0.0
+        }
+      ]
+    },
+    {
+      "name": "Line 2 copy 21",
+      "kind": "shape",
+      "bounds": [
+        266,
+        6460,
+        162,
+        6
+      ]
+    },
+    {
+      "name": "Line 2 copy 21",
+      "kind": "shape",
+      "bounds": [
+        266,
+        6662,
+        162,
+        6
+      ]
+    },
+    {
+      "name": "Title copy 23",
+      "kind": "type",
+      "bounds": [
+        268,
+        6348,
+        75,
+        35
+      ],
+      "text": "Sayazhan\rTuyakova",
+      "transform": [
+        0.9267339096528346,
+        0.0,
+        0.0,
+        0.9268074958080728,
+        10410.810836986195,
+        6360.211329784999
+      ],
+      "runs": [
+        {
+          "font": "'IBMPlexSans-Bold'",
+          "size": 16.0,
+          "leading": 20.0,
+          "tracking": 30.0
+        },
+        {
+          "font": "'IBMPlexSans-Bold'",
+          "size": 16.0,
+          "leading": 20.0,
+          "tracking": 30.0
+        }
+      ]
+    },
+    {
+      "name": "zig zag copy 5",
+      "kind": "smartobject",
+      "bounds": [
+        170,
+        6430,
+        28,
+        18
+      ]
+    }
+  ]
+}
