@@ -1,0 +1,578 @@
+{
+  "engine": "26.5",
+  "errors": [],
+  "matrix": [
+    {
+      "name": "about",
+      "width": 320,
+      "status": 200,
+      "errors": [],
+      "brokenImages": [],
+      "gaps": {
+        "imageToDots": 10,
+        "dotsToNext": 62,
+        "photo": {
+          "x": 13,
+          "y": 3325.796875,
+          "w": 294,
+          "h": 210,
+          "right": 307,
+          "bottom": 3535.796875
+        },
+        "count": 61
+      },
+      "specific": {
+        "pricingFonts": [
+          "700 16px / 20px IBM Plex Sans, Arial, sans-serif"
+        ],
+        "profileHeights": [],
+        "premiumColor": null
+      }
+    },
+    {
+      "name": "about",
+      "width": 375,
+      "status": 200,
+      "errors": [],
+      "brokenImages": [],
+      "gaps": {
+        "imageToDots": 10,
+        "dotsToNext": 62,
+        "photo": {
+          "x": 13,
+          "y": 3261.40625,
+          "w": 349,
+          "h": 249.28125,
+          "right": 362,
+          "bottom": 3510.6875
+        },
+        "count": 61
+      },
+      "specific": {
+        "pricingFonts": [
+          "700 16px / 20px IBM Plex Sans, Arial, sans-serif"
+        ],
+        "profileHeights": [],
+        "premiumColor": null
+      }
+    },
+    {
+      "name": "about",
+      "width": 390,
+      "status": 200,
+      "errors": [],
+      "brokenImages": [],
+      "gaps": {
+        "imageToDots": 10,
+        "dotsToNext": 62,
+        "photo": {
+          "x": 13,
+          "y": 3280.390625,
+          "w": 364,
+          "h": 260,
+          "right": 377,
+          "bottom": 3540.390625
+        },
+        "count": 61
+      },
+      "specific": {
+        "pricingFonts": [
+          "700 16px / 20px IBM Plex Sans, Arial, sans-serif"
+        ],
+        "profileHeights": [],
+        "premiumColor": null
+      }
+    },
+    {
+      "name": "about",
+      "width": 430,
+      "status": 200,
+      "errors": [],
+      "brokenImages": [],
+      "gaps": {
+        "imageToDots": 10,
+        "dotsToNext": 62,
+        "photo": {
+          "x": 13,
+          "y": 3311.015625,
+          "w": 404,
+          "h": 288.5625,
+          "right": 417,
+          "bottom": 3599.578125
+        },
+        "count": 61
+      },
+      "specific": {
+        "pricingFonts": [
+          "700 16px / 20px IBM Plex Sans, Arial, sans-serif"
+        ],
+        "profileHeights": [],
+        "premiumColor": null
+      }
+    },
+    {
+      "name": "career",
+      "width": 320,
+      "status": 200,
+      "errors": [],
+      "brokenImages": [],
+      "gaps": {
+        "imageToDots": 10,
+        "dotsToNext": 62,
+        "photo": {
+          "x": 13,
+          "y": 6970.1875,
+          "w": 294,
+          "h": 210,
+          "right": 307,
+          "bottom": 7180.1875
+        },
+        "count": 21
+      },
+      "specific": {
+        "suitableHeight": 40,
+        "pricingFonts": [
+          "700 16px / 20px IBM Plex Sans, Arial, sans-serif"
+        ],
+        "profileHeights": [],
+        "premiumColor": "rgb(133, 92, 172)"
+      },
+      "reviews": [
+        {
+          "name": "Andrea Scherer",
+          "expands": true,
+          "heightBefore": 378,
+          "heightAfter": 531,
+          "allTextVisible": true,
+          "textToDivider": 27,
+          "closes": true
+        },
+        {
+          "name": "Sayazhan Tuyakova",
+          "expands": true,
+          "heightBefore": 378,
+          "heightAfter": 627,
+          "allTextVisible": true,
+          "textToDivider": 27,
+          "closes": true
+        },
+        {
+          "name": "Fernand Gouveia",
+          "expands": true,
+          "heightBefore": 378,
+          "heightAfter": 671,
+          "allTextVisible": true,
+          "textToDivider": 27,
+          "closes": true
+        },
+        {
+          "name": "Ekaterina Li",
+          "expands": true,
+          "heightBefore": 378,
+          "heightAfter": 755,
+          "allTextVisible": true,
+          "textToDivider": 27,
+          "closes": true
+        },
+        {
+          "name": "Zuura Adanova",
+          "expands": true,
+          "heightBefore": 378,
+          "heightAfter": 387,
+          "allTextVisible": true,
+          "textToDivider": 27,
+          "closes": true
+        },
+        {
+          "name": "Yuliya Selivanova",
+          "expands": true,
+          "heightBefore": 378,
+          "heightAfter": 735,
+          "allTextVisible": true,
+          "textToDivider": 27,
+          "closes": true
+        }
+      ]
+    },
+    {
+      "name": "career",
+      "width": 375,
+      "status": 200,
+      "errors": [],
+      "brokenImages": [],
+      "gaps": {
+        "imageToDots": 10,
+        "dotsToNext": 62,
+        "photo": {
+          "x": 13,
+          "y": 6821.265625,
+          "w": 349,
+          "h": 249.28125,
+          "right": 362,
+          "bottom": 7070.546875
+        },
+        "count": 21
+      },
+      "specific": {
+        "suitableHeight": 40,
+        "pricingFonts": [
+          "700 16px / 20px IBM Plex Sans, Arial, sans-serif"
+        ],
+        "profileHeights": [],
+        "premiumColor": "rgb(133, 92, 172)"
+      },
+      "reviews": [
+        {
+          "name": "Andrea Scherer",
+          "expands": true,
+          "heightBefore": 378,
+          "heightAfter": 467,
+          "allTextVisible": true,
+          "textToDivider": 19,
+          "closes": true
+        },
+        {
+          "name": "Sayazhan Tuyakova",
+          "expands": true,
+          "heightBefore": 378,
+          "heightAfter": 547,
+          "allTextVisible": true,
+          "textToDivider": 19,
+          "closes": true
+        },
+        {
+          "name": "Fernand Gouveia",
+          "expands": true,
+          "heightBefore": 378,
+          "heightAfter": 575,
+          "allTextVisible": true,
+          "textToDivider": 19,
+          "closes": true
+        },
+        {
+          "name": "Ekaterina Li",
+          "expands": true,
+          "heightBefore": 378,
+          "heightAfter": 627,
+          "allTextVisible": true,
+          "textToDivider": 19,
+          "closes": true
+        },
+        {
+          "name": "Zuura Adanova",
+          "expands": true,
+          "heightBefore": 378,
+          "heightAfter": 378,
+          "allTextVisible": true,
+          "textToDivider": 42,
+          "closes": true
+        },
+        {
+          "name": "Yuliya Selivanova",
+          "expands": true,
+          "heightBefore": 378,
+          "heightAfter": 655,
+          "allTextVisible": true,
+          "textToDivider": 19,
+          "closes": true
+        }
+      ]
+    },
+    {
+      "name": "career",
+      "width": 390,
+      "status": 200,
+      "errors": [],
+      "brokenImages": [],
+      "gaps": {
+        "imageToDots": 10,
+        "dotsToNext": 62,
+        "photo": {
+          "x": 13,
+          "y": 6810.59375,
+          "w": 364,
+          "h": 260,
+          "right": 377,
+          "bottom": 7070.59375
+        },
+        "count": 21
+      },
+      "specific": {
+        "suitableHeight": 40,
+        "pricingFonts": [
+          "700 16px / 20px IBM Plex Sans, Arial, sans-serif"
+        ],
+        "profileHeights": [],
+        "premiumColor": "rgb(133, 92, 172)"
+      },
+      "reviews": [
+        {
+          "name": "Andrea Scherer",
+          "expands": true,
+          "heightBefore": 378,
+          "heightAfter": 467,
+          "allTextVisible": true,
+          "textToDivider": 19,
+          "closes": true
+        },
+        {
+          "name": "Sayazhan Tuyakova",
+          "expands": true,
+          "heightBefore": 378,
+          "heightAfter": 547,
+          "allTextVisible": true,
+          "textToDivider": 19,
+          "closes": true
+        },
+        {
+          "name": "Fernand Gouveia",
+          "expands": true,
+          "heightBefore": 378,
+          "heightAfter": 575,
+          "allTextVisible": true,
+          "textToDivider": 19,
+          "closes": true
+        },
+        {
+          "name": "Ekaterina Li",
+          "expands": true,
+          "heightBefore": 378,
+          "heightAfter": 627,
+          "allTextVisible": true,
+          "textToDivider": 19,
+          "closes": true
+        },
+        {
+          "name": "Zuura Adanova",
+          "expands": true,
+          "heightBefore": 378,
+          "heightAfter": 378,
+          "allTextVisible": true,
+          "textToDivider": 42,
+          "closes": true
+        },
+        {
+          "name": "Yuliya Selivanova",
+          "expands": true,
+          "heightBefore": 378,
+          "heightAfter": 655,
+          "allTextVisible": true,
+          "textToDivider": 19,
+          "closes": true
+        }
+      ]
+    },
+    {
+      "name": "career",
+      "width": 430,
+      "status": 200,
+      "errors": [],
+      "brokenImages": [],
+      "gaps": {
+        "imageToDots": 10,
+        "dotsToNext": 62,
+        "photo": {
+          "x": 13,
+          "y": 6812.75,
+          "w": 404,
+          "h": 288.5625,
+          "right": 417,
+          "bottom": 7101.3125
+        },
+        "count": 21
+      },
+      "specific": {
+        "suitableHeight": 40,
+        "pricingFonts": [
+          "700 16px / 20px IBM Plex Sans, Arial, sans-serif"
+        ],
+        "profileHeights": [],
+        "premiumColor": "rgb(133, 92, 172)"
+      },
+      "reviews": [
+        {
+          "name": "Andrea Scherer",
+          "expands": true,
+          "heightBefore": 378,
+          "heightAfter": 467,
+          "allTextVisible": true,
+          "textToDivider": 19,
+          "closes": true
+        },
+        {
+          "name": "Sayazhan Tuyakova",
+          "expands": true,
+          "heightBefore": 378,
+          "heightAfter": 547,
+          "allTextVisible": true,
+          "textToDivider": 19,
+          "closes": true
+        },
+        {
+          "name": "Fernand Gouveia",
+          "expands": true,
+          "heightBefore": 378,
+          "heightAfter": 575,
+          "allTextVisible": true,
+          "textToDivider": 19,
+          "closes": true
+        },
+        {
+          "name": "Ekaterina Li",
+          "expands": true,
+          "heightBefore": 378,
+          "heightAfter": 627,
+          "allTextVisible": true,
+          "textToDivider": 19,
+          "closes": true
+        },
+        {
+          "name": "Zuura Adanova",
+          "expands": true,
+          "heightBefore": 378,
+          "heightAfter": 378,
+          "allTextVisible": true,
+          "textToDivider": 42,
+          "closes": true
+        },
+        {
+          "name": "Yuliya Selivanova",
+          "expands": true,
+          "heightBefore": 378,
+          "heightAfter": 655,
+          "allTextVisible": true,
+          "textToDivider": 19,
+          "closes": true
+        }
+      ]
+    },
+    {
+      "name": "neuro",
+      "width": 320,
+      "status": 200,
+      "errors": [],
+      "brokenImages": [],
+      "gaps": {
+        "imageToDots": 10,
+        "dotsToNext": 62,
+        "photo": {
+          "x": 13,
+          "y": 9176.96875,
+          "w": 294,
+          "h": 210,
+          "right": 307,
+          "bottom": 9386.96875
+        },
+        "count": 15
+      },
+      "specific": {
+        "pricingFonts": [
+          "700 16px / 20px IBM Plex Sans, Arial, sans-serif"
+        ],
+        "profileHeights": [
+          16,
+          16,
+          16,
+          16
+        ],
+        "premiumColor": null
+      }
+    },
+    {
+      "name": "neuro",
+      "width": 375,
+      "status": 200,
+      "errors": [],
+      "brokenImages": [],
+      "gaps": {
+        "imageToDots": 10,
+        "dotsToNext": 62,
+        "photo": {
+          "x": 13,
+          "y": 9208.390625,
+          "w": 349,
+          "h": 249.28125,
+          "right": 362,
+          "bottom": 9457.671875
+        },
+        "count": 15
+      },
+      "specific": {
+        "pricingFonts": [
+          "700 16px / 20px IBM Plex Sans, Arial, sans-serif"
+        ],
+        "profileHeights": [
+          16,
+          16,
+          16,
+          16
+        ],
+        "premiumColor": null
+      }
+    },
+    {
+      "name": "neuro",
+      "width": 390,
+      "status": 200,
+      "errors": [],
+      "brokenImages": [],
+      "gaps": {
+        "imageToDots": 10,
+        "dotsToNext": 62,
+        "photo": {
+          "x": 13,
+          "y": 9124.25,
+          "w": 364,
+          "h": 260,
+          "right": 377,
+          "bottom": 9384.25
+        },
+        "count": 15
+      },
+      "specific": {
+        "pricingFonts": [
+          "700 16px / 20px IBM Plex Sans, Arial, sans-serif"
+        ],
+        "profileHeights": [
+          16,
+          16,
+          16,
+          16
+        ],
+        "premiumColor": null
+      }
+    },
+    {
+      "name": "neuro",
+      "width": 430,
+      "status": 200,
+      "errors": [],
+      "brokenImages": [],
+      "gaps": {
+        "imageToDots": 10,
+        "dotsToNext": 62,
+        "photo": {
+          "x": 13,
+          "y": 8955.734375,
+          "w": 404,
+          "h": 288.5625,
+          "right": 417,
+          "bottom": 9244.296875
+        },
+        "count": 15
+      },
+      "specific": {
+        "pricingFonts": [
+          "700 16px / 20px IBM Plex Sans, Arial, sans-serif"
+        ],
+        "profileHeights": [
+          16,
+          16,
+          16,
+          16
+        ],
+        "premiumColor": null
+      }
+    }
+  ]
+}

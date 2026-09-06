@@ -1,0 +1,230 @@
+[
+  {
+    "page": "about",
+    "width": 320,
+    "errors": [],
+    "brokenImages": [],
+    "gaps": {
+      "imageToDots": 10,
+      "dotsToNext": 62,
+      "photo": {
+        "x": 13,
+        "y": 3324.796875,
+        "w": 294,
+        "h": 210,
+        "right": 307,
+        "bottom": 3534.796875
+      },
+      "count": 61
+    }
+  },
+  {
+    "page": "about",
+    "width": 375,
+    "errors": [],
+    "brokenImages": [],
+    "gaps": {
+      "imageToDots": 10,
+      "dotsToNext": 62,
+      "photo": {
+        "x": 13,
+        "y": 3260.40625,
+        "w": 349,
+        "h": 249.28125,
+        "right": 362,
+        "bottom": 3509.6875
+      },
+      "count": 61
+    }
+  },
+  {
+    "page": "about",
+    "width": 390,
+    "errors": [],
+    "brokenImages": [],
+    "gaps": {
+      "imageToDots": 10,
+      "dotsToNext": 62,
+      "photo": {
+        "x": 13,
+        "y": 3259.390625,
+        "w": 364,
+        "h": 260,
+        "right": 377,
+        "bottom": 3519.390625
+      },
+      "count": 61
+    }
+  },
+  {
+    "page": "about",
+    "width": 430,
+    "errors": [],
+    "brokenImages": [],
+    "gaps": {
+      "imageToDots": 10,
+      "dotsToNext": 62,
+      "photo": {
+        "x": 13,
+        "y": 3290.015625,
+        "w": 404,
+        "h": 288.5625,
+        "right": 417,
+        "bottom": 3578.578125
+      },
+      "count": 61
+    }
+  },
+  {
+    "page": "career",
+    "width": 320,
+    "errors": [],
+    "brokenImages": [],
+    "gaps": {
+      "imageToDots": 10,
+      "dotsToNext": 62,
+      "photo": {
+        "x": 13,
+        "y": 6970.15625,
+        "w": 294,
+        "h": 210,
+        "right": 307,
+        "bottom": 7180.15625
+      },
+      "count": 21
+    }
+  },
+  {
+    "page": "career",
+    "width": 375,
+    "errors": [],
+    "brokenImages": [],
+    "gaps": {
+      "imageToDots": 10,
+      "dotsToNext": 62,
+      "photo": {
+        "x": 13,
+        "y": 6821.265625,
+        "w": 349,
+        "h": 249.28125,
+        "right": 362,
+        "bottom": 7070.546875
+      },
+      "count": 21
+    }
+  },
+  {
+    "page": "career",
+    "width": 390,
+    "errors": [],
+    "brokenImages": [],
+    "gaps": {
+      "imageToDots": 10,
+      "dotsToNext": 62,
+      "photo": {
+        "x": 13,
+        "y": 6790.59375,
+        "w": 364,
+        "h": 260,
+        "right": 377,
+        "bottom": 7050.59375
+      },
+      "count": 21
+    }
+  },
+  {
+    "page": "career",
+    "width": 430,
+    "errors": [],
+    "brokenImages": [],
+    "gaps": {
+      "imageToDots": 10,
+      "dotsToNext": 62,
+      "photo": {
+        "x": 13,
+        "y": 6792.75,
+        "w": 404,
+        "h": 288.5625,
+        "right": 417,
+        "bottom": 7081.3125
+      },
+      "count": 21
+    }
+  },
+  {
+    "page": "neuro",
+    "width": 320,
+    "errors": [],
+    "brokenImages": [],
+    "gaps": {
+      "imageToDots": 10,
+      "dotsToNext": 62,
+      "photo": {
+        "x": 13,
+        "y": 9176.96875,
+        "w": 294,
+        "h": 210,
+        "right": 307,
+        "bottom": 9386.96875
+      },
+      "count": 15
+    }
+  },
+  {
+    "page": "neuro",
+    "width": 375,
+    "errors": [],
+    "brokenImages": [],
+    "gaps": {
+      "imageToDots": 10,
+      "dotsToNext": 62,
+      "photo": {
+        "x": 13,
+        "y": 9208.390625,
+        "w": 349,
+        "h": 249.28125,
+        "right": 362,
+        "bottom": 9457.671875
+      },
+      "count": 15
+    }
+  },
+  {
+    "page": "neuro",
+    "width": 390,
+    "errors": [],
+    "brokenImages": [],
+    "gaps": {
+      "imageToDots": 10,
+      "dotsToNext": 62,
+      "photo": {
+        "x": 13,
+        "y": 9104.25,
+        "w": 364,
+        "h": 260,
+        "right": 377,
+        "bottom": 9364.25
+      },
+      "count": 15
+    }
+  },
+  {
+    "page": "neuro",
+    "width": 430,
+    "errors": [],
+    "brokenImages": [],
+    "gaps": {
+      "imageToDots": 10,
+      "dotsToNext": 62,
+      "photo": {
+        "x": 13,
+        "y": 8930.734375,
+        "w": 404,
+        "h": 288.5625,
+        "right": 417,
+        "bottom": 9219.296875
+      },
+      "count": 15
+    }
+  }
+]
