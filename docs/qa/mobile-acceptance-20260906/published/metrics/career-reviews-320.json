@@ -1,0 +1,61 @@
+{
+  "version": "1.0.23",
+  "width": 320,
+  "reviews": [
+    {
+      "name": "Andrea Scherer",
+      "expands": true,
+      "heightBefore": 378,
+      "heightAfter": 531,
+      "allTextVisible": true,
+      "textToDivider": 27,
+      "closes": true
+    },
+    {
+      "name": "Sayazhan Tuyakova",
+      "expands": true,
+      "heightBefore": 378,
+      "heightAfter": 627,
+      "allTextVisible": true,
+      "textToDivider": 27,
+      "closes": true
+    },
+    {
+      "name": "Fernand Gouveia",
+      "expands": true,
+      "heightBefore": 378,
+      "heightAfter": 671,
+      "allTextVisible": true,
+      "textToDivider": 27,
+      "closes": true
+    },
+    {
+      "name": "Ekaterina Li",
+      "expands": true,
+      "heightBefore": 378,
+      "heightAfter": 755,
+      "allTextVisible": true,
+      "textToDivider": 27,
+      "closes": true
+    },
+    {
+      "name": "Zuura Adanova",
+      "expands": true,
+      "heightBefore": 378,
+      "heightAfter": 387,
+      "allTextVisible": true,
+      "textToDivider": 27,
+      "closes": true
+    },
+    {
+      "name": "Yuliya Selivanova",
+      "expands": true,
+      "heightBefore": 378,
+      "heightAfter": 847,
+      "allTextVisible": true,
+      "textToDivider": 27,
+      "closes": true
+    }
+  ],
+  "errors": []
+}

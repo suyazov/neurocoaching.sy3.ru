@@ -12,7 +12,7 @@
 
 ## Protected shared components
 
-- Latest direct production release: `1.0.21` (2026-09-04): mobile Career Flagship is 32px high and centred on 4 SESSIONS; see `docs/qa/flagship-20260904/README.md`. Native PSD comparisons, later-client-overrides and unresolved source conflicts are recorded in `docs/qa/full-mobile-20260904/README.md`; do not describe this as unconditional 100% PSD equivalence.
+- Latest direct production release: `1.0.23` (2026-09-06): fresh 29-block PSD/mobile acceptance at 320/375/390/430; corrected Career suitable-title wrapping, premium button colour, review divider/link/expanded spacing and Neuro review header colours/link wrapping. All six expanded Career reviews pass on all four widths in Chrome and WebKit. Keep Corporate-reference pricing typography 16/20, Career Flagship 32px, shared gallery 10/62 gaps. Full report, production evidence and remaining source conflicts: `docs/qa/mobile-acceptance-20260906/README.md`. Do not describe this as unconditional 100% PSD equivalence. Fresh backup before final delivery: `digitalbelka.com-20260906-053554-rtju4p.wpress`; published CSS SHA-256 `13b3075cd86b414cf070b09559ed3d69613824dce5f128c17d6597c0c99716bc`.
 - `page-privacy-policy.php` only renders the existing WordPress legal content. Do not move or rewrite that content into the theme as part of visual maintenance.
 
 - `/`, `/career-services/`, and `/neurocoaching/` use one shared header and canonical `Education & Experience`, credentials, `In real life`, CTA, and FAQ components.

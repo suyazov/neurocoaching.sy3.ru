@@ -22,8 +22,9 @@ async()=>{
  dots[0].click();await frame();
  result.faq=[];
  for(const detail of document.querySelectorAll('.site-faq details')){const was=detail.open;if(was)detail.querySelector('summary').click();detail.querySelector('summary').click();let p=detail.querySelector('p');result.faq.push({text:detail.querySelector('summary').innerText,opens:detail.open&&p.offsetHeight>0});detail.querySelector('summary').click();if(was)detail.querySelector('summary').click();}
- const button=document.querySelector('.career-review-more');
- if(button){const c=button.closest('blockquote'),h=c.offsetHeight;button.click();await frame();result.review={expands:button.getAttribute('aria-expanded')==='true',heightBefore:h,heightAfter:c.offsetHeight,allTextVisible:c.querySelector('p').scrollHeight<=c.querySelector('p').clientHeight+1};button.click();result.review.closes=button.getAttribute('aria-expanded')==='false';}
+ result.reviews=[];
+ for(const button of document.querySelectorAll('.career-review-more')){const c=button.closest('blockquote'),h=c.offsetHeight;button.click();await frame();const p=c.querySelector('p'),review={name:c.querySelector('strong').innerText,expands:button.getAttribute('aria-expanded')==='true',heightBefore:h,heightAfter:c.offsetHeight,allTextVisible:p.scrollHeight<=p.clientHeight+1,textToDivider:button.getBoundingClientRect().top-p.getBoundingClientRect().bottom};button.click();review.closes=button.getAttribute('aria-expanded')==='false';result.reviews.push(review);}
+ if(result.reviews.length)result.review=result.reviews[0];
  if(Object.values(result.menu).some(v=>v===false))errors.push('menu');
  if(result.certificates.some(c=>!c.loaded||!c.transparent||!c.fits||c.ratioError>.015))errors.push('certificate');
  if(!result.certificateNext||!result.certificateEscape)errors.push('certificate controls');
@@ -31,6 +32,6 @@ async()=>{
  // ratio: the pixels retain their ratio and portrait photos have side space.
  if(result.gallery.some(g=>!g.active||!g.loaded||!g.dot)||(getComputedStyle(gallery.querySelector('img')).objectFit!=='contain'&&result.gallery.some(g=>g.ratioError>.015)))errors.push('gallery');
  if(result.faq.some(f=>!f.opens))errors.push('FAQ');
- if(result.review&&(!result.review.expands||!result.review.allTextVisible||!result.review.closes))errors.push('review expansion');
+ if(result.reviews.some(r=>!r.expands||!r.allTextVisible||!r.closes||r.textToDivider<8))errors.push('review expansion / divider spacing');
  result.errors=errors;scrollTo({top:0,behavior:'instant'});return result;
 }
