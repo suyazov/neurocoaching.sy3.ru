@@ -2516,17 +2516,20 @@ body.has-certificate-lightbox { overflow:hidden; }
 	.site-page .career-suitable li { font-size:14px; line-height:16px; font-weight:700; margin-bottom:16px; }
 	.site-page .career-suitable p { font-size:14px; line-height:20px; }
 	.site-page .career-suitable img { width:100%; margin:0; height:auto; max-height:none; }
-	.site-page .neuro-difference { width:100%; height:auto; min-height:0; margin:0; }
+	.site-page .neuro-difference { --neuro-difference-gap:24px; width:100%; height:auto; min-height:0; margin:0; }
 	.site-page .neuro-difference>div { padding-right:15px; padding-left:15px; }
-	.site-page .neuro-difference>.neuro-difference__intro { height:auto; min-height:355px; padding-top:28px; padding-bottom:30px; }
-	.site-page .neuro-difference__intro::after { height:2px; }
-	.site-page .neuro-difference__intro h2 { margin-bottom:18px; font-size:20px; line-height:24px; }
+	.site-page .neuro-difference>.neuro-difference__intro { position:relative; display:flex; flex-direction:column; gap:var(--neuro-difference-gap); height:auto; min-height:0; padding-top:28px; padding-bottom:calc(var(--neuro-difference-gap) + 2px); border-bottom:0; }
+	.site-page .neuro-difference__intro::after { content:''; position:absolute; inset:auto 15px 0; height:2px; background:#f8f1ee; }
+	.site-page .neuro-difference__intro h2 { margin-bottom:0; font-size:20px; line-height:24px; }
 	.site-page .neuro-difference__intro h2 br { display:none; }
-	.site-page .neuro-difference__intro p { width:auto; font-family:"Lato PSD Light",Lato,Arial,sans-serif; font-weight:300; font-size:14px; line-height:16.8px; }
-	.site-page .neuro-difference__intro .neuro-waves { display:block; margin:25px 0; }
+	.site-page .neuro-difference__intro p { width:auto; margin:0; font-family:"Lato PSD Light",Lato,Arial,sans-serif; font-weight:300; font-size:14px; line-height:16.8px; }
+	/* The motif must remain light at every mobile width, not only <=360px. */
+	.site-page .neuro-difference__intro .neuro-waves { display:block; flex:none; margin:0; color:#f8f1ee; }
 	.site-page .neuro-difference__intro>strong { width:auto; margin:0; font-size:14px; line-height:16px; }
-	.site-page .neuro-difference__process { height:auto; padding:18px 15px 30px!important; }
-	.site-page .neuro-difference__process h2 { font-size:36px; line-height:40px; }
+	.site-page .neuro-difference__process { height:auto; padding:var(--neuro-difference-gap) 15px 30px!important; }
+	.site-page .neuro-difference__process h2 { margin-bottom:var(--neuro-difference-gap); font-size:36px; line-height:40px; }
+	.site-page .neuro-difference dl { display:grid; grid-template-columns:minmax(0,1fr); gap:var(--neuro-difference-gap); margin:0; }
+	.site-page .neuro-difference dl>div { width:auto; margin:0; }
 	.site-page .neuro-difference dt { font:800 14px/16.8px "Belka Heavy",Lato,Arial,sans-serif; margin-bottom:0; }
 	.site-page .neuro-difference dd { font:300 14px/16.8px "Lato PSD Light",Lato,Arial,sans-serif; }
 	.site-page .neuro-story { background:#3d1e6e; }

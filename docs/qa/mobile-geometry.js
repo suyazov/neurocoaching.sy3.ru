@@ -30,5 +30,15 @@ async () => {
   positioningGaps={beforeZig:rect(zig).y-rect(first).bottom,afterZig:rect(last).y-rect(zig).bottom,beforeLine:rect(statement).bottom-dividerHeight-rect(last).bottom};
   for(const [gap,actual] of Object.entries(positioningGaps))if(Math.abs(actual-32)>1)errors.push({kind:'career statement spacing',gap,expected:32,actual});
  }
- return {url:location.href,width:innerWidth,errors,brokenImages,gaps,cards,headings,heroGaps,positioningGaps};
+ let differenceGaps=null,differenceMotif=null;
+ const difference=document.querySelector('.neuro-difference');
+ if(difference&&innerWidth<=850){
+  const intro=difference.querySelector('.neuro-difference__intro'),process=difference.querySelector('.neuro-difference__process'),h=intro.querySelector('h2'),[p,q]=intro.querySelectorAll('p'),zig=intro.querySelector('.neuro-waves'),strong=intro.querySelector('strong'),h2=process.querySelector('h2'),dl=process.querySelector('dl'),steps=[...dl.children],gap=(a,b)=>rect(b).y-rect(a).bottom,dividerHeight=parseFloat(getComputedStyle(intro,'::after').height)||parseFloat(getComputedStyle(intro).borderBottomWidth)||0;
+  differenceGaps={titleToBody:gap(h,p),betweenParagraphs:gap(p,q),beforeZig:gap(q,zig),afterZig:gap(zig,strong),beforeLine:rect(intro).bottom-dividerHeight-rect(strong).bottom,afterLine:rect(h2).y-rect(intro).bottom,titleToSteps:gap(h2,dl),betweenStep1And2:gap(steps[0],steps[1]),betweenStep2And3:gap(steps[1],steps[2])};
+  for(const [gap,actual] of Object.entries(differenceGaps))if(Math.abs(actual-24)>1)errors.push({kind:'neuro difference spacing',gap,expected:24,actual});
+  const motifStyle=getComputedStyle(zig,'::before');
+  differenceMotif={fill:motifStyle.backgroundColor,mask:motifStyle.maskImage,display:getComputedStyle(zig).display,width:rect(zig).w,height:rect(zig).h};
+  if(differenceMotif.fill!=='rgb(248, 241, 238)'||differenceMotif.mask==='none'||differenceMotif.display==='none'||differenceMotif.width<1||differenceMotif.height<1)errors.push({kind:'neuro difference motif invisible',actual:differenceMotif});
+ }
+ return {url:location.href,width:innerWidth,errors,brokenImages,gaps,cards,headings,heroGaps,positioningGaps,differenceGaps,differenceMotif};
 }
