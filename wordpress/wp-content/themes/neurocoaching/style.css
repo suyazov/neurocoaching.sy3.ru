@@ -2489,10 +2489,15 @@ body.has-certificate-lightbox { overflow:hidden; }
 	.site-page .nc-about__programmes .nc-about__button { margin-top:29px; }
 	.site-page .career-hero__checklist li { font-weight:700; }
 	.site-page .career-positioning { height:auto; min-height:0; }
-	.site-page .career-positioning__statement { position:relative; height:auto; min-height:420px; padding:32px 15px 30px; border-bottom:0; }
+	.site-page .career-positioning__statement { --career-statement-gap:32px; position:relative; height:auto; min-height:0; padding:32px 15px calc(var(--career-statement-gap) + 2px); border-bottom:0; }
 	.site-page .career-positioning__statement::after { content:''; display:block; position:absolute; inset:auto 15px 0; width:auto; height:2px; background:#f8f1ee; }
 	.site-page .career-positioning__statement h2 { margin-bottom:18px; font-size:20px; line-height:24px; }
 	.site-page .career-positioning__statement p { font-family:"Lato PSD Light",Lato,Arial,sans-serif; font-weight:300; font-size:14px; line-height:16.8px; }
+	/* Equal client-marked gaps: paragraph / motif / paragraph / divider.
+	 * Desktop auto spacing must not stretch the mobile statement. */
+	.site-page .career-positioning__statement p:first-of-type { margin-bottom:0; }
+	.site-page .career-positioning__zigzag { margin:var(--career-statement-gap) 0; }
+	.site-page .career-positioning__statement p:last-child { margin-top:0; }
 	.site-page .career-positioning__help { height:auto; min-height:430px; }
 	.site-page .career-positioning__help h2 { font-size:36px; line-height:40px; }
 	.site-page .career-positioning li { font-size:14px; line-height:16px; font-weight:700; margin-bottom:14px; }

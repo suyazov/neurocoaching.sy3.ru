@@ -23,5 +23,12 @@ async () => {
   // The client's latest annotated example explicitly makes all five gaps equal.
   for(const [gap,actual] of Object.entries(heroGaps))if(Math.abs(actual-32)>1)errors.push({kind:'neuro hero spacing',gap,expected:32,actual});
  }
- return {url:location.href,width:innerWidth,errors,brokenImages,gaps,cards,headings,heroGaps};
+ let positioningGaps=null;
+ const statement=document.querySelector('.career-positioning__statement');
+ if(statement&&innerWidth<=850){
+  const first=statement.querySelector('p'),zig=statement.querySelector('.career-positioning__zigzag'),last=statement.querySelector('p:last-child'),dividerHeight=parseFloat(getComputedStyle(statement,'::after').height);
+  positioningGaps={beforeZig:rect(zig).y-rect(first).bottom,afterZig:rect(last).y-rect(zig).bottom,beforeLine:rect(statement).bottom-dividerHeight-rect(last).bottom};
+  for(const [gap,actual] of Object.entries(positioningGaps))if(Math.abs(actual-32)>1)errors.push({kind:'career statement spacing',gap,expected:32,actual});
+ }
+ return {url:location.href,width:innerWidth,errors,brokenImages,gaps,cards,headings,heroGaps,positioningGaps};
 }
