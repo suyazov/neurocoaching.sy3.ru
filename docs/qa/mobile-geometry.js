@@ -15,5 +15,13 @@ async () => {
  if(copy){const last=copy.lastElementChild;if(rect(last).bottom>rect(copy).bottom+12)errors.push({kind:'story copy exceeds panel',by:rect(last).bottom-rect(copy).bottom});}
  const overflow=document.documentElement.scrollWidth>innerWidth;
  if(overflow)errors.push({kind:'page overflow'});
- return {url:location.href,width:innerWidth,errors,brokenImages,gaps,cards,headings};
+ const heroCopy=document.querySelector('.neuro-hero__copy');
+ let heroGaps=null;
+ if(heroCopy&&innerWidth<=850){
+  const profile=heroCopy.querySelector('.neuro-profile-link'),h=heroCopy.querySelector('h1'),p=heroCopy.querySelector('h1+p'),lead=heroCopy.querySelector('.neuro-lead'),button=heroCopy.querySelector('.neuro-button');
+  heroGaps={profileToTitle:rect(h).y-rect(profile).bottom,titleToBody:rect(p).y-rect(h).bottom,bodyToLead:rect(lead).y-rect(p).bottom,leadToButton:rect(button).y-rect(lead).bottom,buttonToNext:rect(heroCopy.closest('.neuro-hero').nextElementSibling).y-rect(button).bottom};
+  // The client's latest annotated example explicitly makes all five gaps equal.
+  for(const [gap,actual] of Object.entries(heroGaps))if(Math.abs(actual-32)>1)errors.push({kind:'neuro hero spacing',gap,expected:32,actual});
+ }
+ return {url:location.href,width:innerWidth,errors,brokenImages,gaps,cards,headings,heroGaps};
 }

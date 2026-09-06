@@ -12,6 +12,7 @@
 
 ## Protected shared components
 
+- Pending staging candidate `1.0.24` (2026-09-06 follow-up): owner supplied a new annotated Neuro hero example requiring all five mobile intervals equal, including profile-to-title and button-to-next-section. One `--neuro-hero-gap:32px` token now controls all five. Staging verified at320/375/390/430; desktop untouched. Production remains1.0.23: WP admin session expired, canonical WordPress access file absent. Do not claim published until a renewed owner login, fresh backup and public read-back. Evidence: `docs/qa/neuro-hero-spacing-20260906/README.md`.
 - Latest direct production release: `1.0.23` (2026-09-06): fresh 29-block PSD/mobile acceptance at 320/375/390/430; corrected Career suitable-title wrapping, premium button colour, review divider/link/expanded spacing and Neuro review header colours/link wrapping. All six expanded Career reviews pass on all four widths in Chrome and WebKit. Keep Corporate-reference pricing typography 16/20, Career Flagship 32px, shared gallery 10/62 gaps. Full report, production evidence and remaining source conflicts: `docs/qa/mobile-acceptance-20260906/README.md`. Do not describe this as unconditional 100% PSD equivalence. Fresh backup before final delivery: `digitalbelka.com-20260906-053554-rtju4p.wpress`; published CSS SHA-256 `13b3075cd86b414cf070b09559ed3d69613824dce5f128c17d6597c0c99716bc`.
 - `page-privacy-policy.php` only renders the existing WordPress legal content. Do not move or rewrite that content into the theme as part of visual maintenance.
 
