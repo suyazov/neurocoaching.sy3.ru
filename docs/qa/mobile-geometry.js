@@ -15,6 +15,13 @@ async () => {
  if(copy){const last=copy.lastElementChild;if(rect(last).bottom>rect(copy).bottom+12)errors.push({kind:'story copy exceeds panel',by:rect(last).bottom-rect(copy).bottom});}
  const overflow=document.documentElement.scrollWidth>innerWidth;
  if(overflow)errors.push({kind:'page overflow'});
+ let neuroServicesTopGap=null;
+ const neuroServices=document.querySelector('.neuro-services');
+ if(neuroServices&&innerWidth<=850){
+  const servicesTitle=neuroServices.querySelector('.site-section-title'),previous=neuroServices.previousElementSibling;
+  neuroServicesTopGap=rect(servicesTitle).y-rect(previous).bottom;
+  if(Math.abs(neuroServicesTopGap-52)>1)errors.push({kind:'neuro services top spacing',expected:52,actual:neuroServicesTopGap});
+ }
  let aboutCardBottomGap=null;
  const aboutCard=document.querySelector('.nc-about__service-card');
  if(aboutCard&&innerWidth<=850){
@@ -48,5 +55,5 @@ async () => {
   differenceMotif={fill:motifStyle.backgroundColor,mask:motifStyle.maskImage,display:getComputedStyle(zig).display,width:rect(zig).w,height:rect(zig).h};
   if(differenceMotif.fill!=='rgb(248, 241, 238)'||differenceMotif.mask==='none'||differenceMotif.display==='none'||differenceMotif.width<1||differenceMotif.height<1)errors.push({kind:'neuro difference motif invisible',actual:differenceMotif});
  }
- return {url:location.href,width:innerWidth,errors,brokenImages,gaps,cards,headings,aboutCardBottomGap,heroGaps,positioningGaps,differenceGaps,differenceMotif};
+ return {url:location.href,width:innerWidth,errors,brokenImages,gaps,cards,headings,neuroServicesTopGap,aboutCardBottomGap,heroGaps,positioningGaps,differenceGaps,differenceMotif};
 }
