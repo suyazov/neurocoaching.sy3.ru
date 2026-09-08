@@ -15,6 +15,14 @@ async () => {
  if(copy){const last=copy.lastElementChild;if(rect(last).bottom>rect(copy).bottom+12)errors.push({kind:'story copy exceeds panel',by:rect(last).bottom-rect(copy).bottom});}
  const overflow=document.documentElement.scrollWidth>innerWidth;
  if(overflow)errors.push({kind:'page overflow'});
+ let aboutCardBottomGap=null;
+ const aboutCard=document.querySelector('.nc-about__service-card');
+ if(aboutCard&&innerWidth<=850){
+  const button=aboutCard.querySelector('.nc-about__button');
+  aboutCardBottomGap=rect(aboutCard).bottom-rect(button).bottom;
+  // Match the compact button-to-border spacing used by the accepted Career card.
+  if(Math.abs(aboutCardBottomGap-33)>1)errors.push({kind:'about card bottom spacing',expected:33,actual:aboutCardBottomGap});
+ }
  const heroCopy=document.querySelector('.neuro-hero__copy');
  let heroGaps=null;
  if(heroCopy&&innerWidth<=850){
@@ -40,5 +48,5 @@ async () => {
   differenceMotif={fill:motifStyle.backgroundColor,mask:motifStyle.maskImage,display:getComputedStyle(zig).display,width:rect(zig).w,height:rect(zig).h};
   if(differenceMotif.fill!=='rgb(248, 241, 238)'||differenceMotif.mask==='none'||differenceMotif.display==='none'||differenceMotif.width<1||differenceMotif.height<1)errors.push({kind:'neuro difference motif invisible',actual:differenceMotif});
  }
- return {url:location.href,width:innerWidth,errors,brokenImages,gaps,cards,headings,heroGaps,positioningGaps,differenceGaps,differenceMotif};
+ return {url:location.href,width:innerWidth,errors,brokenImages,gaps,cards,headings,aboutCardBottomGap,heroGaps,positioningGaps,differenceGaps,differenceMotif};
 }
