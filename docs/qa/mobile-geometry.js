@@ -15,12 +15,15 @@ async () => {
  if(copy){const last=copy.lastElementChild;if(rect(last).bottom>rect(copy).bottom+12)errors.push({kind:'story copy exceeds panel',by:rect(last).bottom-rect(copy).bottom});}
  const overflow=document.documentElement.scrollWidth>innerWidth;
  if(overflow)errors.push({kind:'page overflow'});
- let neuroServicesTopGap=null;
- const neuroServices=document.querySelector('.neuro-services');
- if(neuroServices&&innerWidth<=850){
-  const servicesTitle=neuroServices.querySelector('.site-section-title'),previous=neuroServices.previousElementSibling;
-  neuroServicesTopGap=rect(servicesTitle).y-rect(previous).bottom;
-  if(Math.abs(neuroServicesTopGap-52)>1)errors.push({kind:'neuro services top spacing',expected:52,actual:neuroServicesTopGap});
+ let serviceSectionGaps=null,neuroServicesTopGap=null;
+ const services=document.querySelector('.site-services');
+ if(services&&innerWidth<=850){
+  const servicesTitle=services.querySelector('.site-section-title'),firstCard=services.querySelector('.site-service-card'),previous=services.previousElementSibling,previousItems=previous.matches('.site-credentials')?[...previous.querySelectorAll('li')]:[];
+  const previousVisualBottom=previousItems.length?Math.max(...previousItems.map(item=>rect(item).bottom)):rect(previous).bottom;
+  serviceSectionGaps={beforeTitle:rect(servicesTitle).y-previousVisualBottom,beforeCard:rect(firstCard).y-rect(servicesTitle).bottom};
+  if(services.classList.contains('neuro-services'))neuroServicesTopGap=serviceSectionGaps.beforeTitle;
+  if(Math.abs(serviceSectionGaps.beforeTitle-55)>1)errors.push({kind:'services spacing before title',expected:55,actual:serviceSectionGaps.beforeTitle});
+  if(Math.abs(serviceSectionGaps.beforeCard-35)>1)errors.push({kind:'services spacing before card',expected:35,actual:serviceSectionGaps.beforeCard});
  }
  let aboutCardBottomGap=null;
  const aboutCard=document.querySelector('.nc-about__service-card');
@@ -55,5 +58,5 @@ async () => {
   differenceMotif={fill:motifStyle.backgroundColor,mask:motifStyle.maskImage,display:getComputedStyle(zig).display,width:rect(zig).w,height:rect(zig).h};
   if(differenceMotif.fill!=='rgb(248, 241, 238)'||differenceMotif.mask==='none'||differenceMotif.display==='none'||differenceMotif.width<1||differenceMotif.height<1)errors.push({kind:'neuro difference motif invisible',actual:differenceMotif});
  }
- return {url:location.href,width:innerWidth,errors,brokenImages,gaps,cards,headings,neuroServicesTopGap,aboutCardBottomGap,heroGaps,positioningGaps,differenceGaps,differenceMotif};
+ return {url:location.href,width:innerWidth,errors,brokenImages,gaps,cards,headings,serviceSectionGaps,neuroServicesTopGap,aboutCardBottomGap,heroGaps,positioningGaps,differenceGaps,differenceMotif};
 }
