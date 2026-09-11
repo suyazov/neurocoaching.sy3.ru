@@ -1,5 +1,7 @@
 # Agent scope
 
+- 2026-09-11: Published 1.0.28. About mobile hero CTA gaps must remain 27px above and below; mobile hero-copy bottom padding35px accounts for button relative top8px. Live320/375/390/430 verified; desktop1440 unchanged. See `docs/qa/about-button-gap-20260911.md`.
+
 - Read the current canonical regulation before work: `/var/lib/bridge-sy9/affine-pages-backup/affine/infrastructure/Регламент/1. Архитектура AFFiNE GitHub Bridge.md`.
 - Current capability includes direct WordPress application-code maintenance explicitly authorized by the project owner.
 - Direct maintenance uses a scoped `codex/*` branch, reviewable pull request, staging delivery, and browser verification; Bridge orchestration is not required when the owner explicitly requests direct work.
