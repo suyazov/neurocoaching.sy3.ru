@@ -1,5 +1,7 @@
 # Project Context
 
+- 2026-09-11: Production theme 1.0.28 equalizes About mobile intro CTA spacing to 27px above/below (previously 27/16). Verified live at320/375/390/430 and unchanged desktop1440. Full backup completed; evidence: `docs/qa/about-button-gap-20260911.md`.
+
 ## Identity
 
 - Project: Digital Belka — Neurocoaching
