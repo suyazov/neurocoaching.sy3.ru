@@ -1,5 +1,10 @@
 # Project Context
 
+<!-- bridge:project-context-current task=CODEX-TASK-BRIDGE-MINIMAL-I2492-86D047D70850 -->
+- Result: Подготовлен owner-review пакет кейса Digital Belka — Neurocoaching: полный текст, короткие версии и четыре изображения из подтверждённых проектных материалов; пакет не опубликован и не импортирован в Portfolio.
+- Current state: Материалы ожидают проверки владельцем разрешений на публичное использование названия, домена, фотографий и иных клиентских данных.
+- Next action: Владелец подтверждает допустимый режим публикации либо указывает, какие данные обезличить; после принятия пакет может пройти Portfolio intake.
+
 ## Identity
 
 - Project: Digital Belka — Neurocoaching
