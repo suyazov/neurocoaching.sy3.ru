@@ -112,14 +112,14 @@
     .callout span { display: block; margin-top: 8px; color: var(--muted); font-size: 17px; line-height: 1.35; }
     .proof { margin-top: 10px; padding: 22px; background: rgba(43,210,127,.08); border-color: rgba(43,210,127,.5); }
     .proof strong { color: #8ef0ba; font-size: 21px; }
-    .result-grid { position: relative; z-index: 2; display: grid; grid-template-columns: 540px 884px; gap: 28px; height: 900px; }
-    .result-mobile { height: 850px; width: 455px; justify-self: center; padding: 10px; background: #0b1c31; }
-    .result-mobile img { object-fit: contain; border-radius: 15px; }
-    .result-side { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; align-content: start; padding-top: 24px; }
-    .result-side .panel { padding: 26px; min-height: 180px; }
-    .result-side .wide { grid-column: 1 / -1; min-height: 160px; }
-    .result-side .panel b { display: block; font-size: 27px; line-height: 1.15; }
-    .result-side .panel span { display: block; margin-top: 10px; color: var(--muted); font-size: 18px; line-height: 1.35; }
+    .result-grid { position: relative; z-index: 2; display: grid; grid-template-columns: 1080px 344px; gap: 28px; height: 900px; }
+    .result-main { position: relative; height: 760px; align-self: center; }
+    .result-main .screen { position: absolute; inset: 0; }
+    .result-main .phone { width: 210px; height: 455px; right: 22px; bottom: 22px; }
+    .result-side { display: flex; flex-direction: column; gap: 16px; padding-top: 50px; }
+    .result-side .panel { padding: 22px; }
+    .result-side .panel b { display: block; font-size: 25px; line-height: 1.15; }
+    .result-side .panel span { display: block; margin-top: 8px; color: var(--muted); font-size: 17px; line-height: 1.35; }
     .release { border-color: rgba(43,210,127,.55); background: linear-gradient(135deg, rgba(18,74,59,.92), rgba(11,52,49,.92)); }
     .release .big { font-size: 34px; color: #92f1bd; }
     .route-strip { display: flex; gap: 10px; flex-wrap: wrap; margin-top: 18px; }
@@ -168,15 +168,14 @@
   </section>
 
   <section class="slide" data-slide="result">
-    <div class="topline"><div class="num">04</div><div><div class="eyebrow">Проверенный результат</div><h1>Contact — mobile</h1><div class="subtitle">Отдельная страница и реальное состояние формы</div></div></div>
+    <div class="topline"><div class="num">04</div><div><div class="eyebrow">Проверенный результат</div><h1>Contact</h1><div class="subtitle">Отдельная страница и реальные desktop/mobile состояния</div></div></div>
     <div class="result-grid">
-      <div class="screen result-mobile"><img src="sources/contact-live-430x900.png" alt="Contact mobile"><div class="screen-label">Contact · 430 px</div></div>
+      <div class="result-main"><div class="screen"><img src="sources/contact-live-1440x900.png" alt="Contact desktop"><div class="screen-label">Contact · desktop</div></div><div class="phone"><img src="sources/contact-live-430x900.png" alt="Contact mobile"></div></div>
       <div class="result-side">
-        <div class="panel"><div class="icon">↔</div><b>Desktop + mobile</b><span>Ключевые ширины проверялись отдельно, а не по одному макету.</span></div>
-        <div class="panel"><div class="icon">☰</div><b>Навигация и формы</b><span>Меню и состояние формы входят в целевой smoke-сценарий.</span></div>
-        <div class="panel"><div class="icon">▣</div><b>Галереи и FAQ</b><span>Интерактивные элементы проверялись после доставки.</span></div>
-        <div class="panel"><div class="icon">⟲</div><b>Сохранён откат</b><span>OceanWP оставлена установленной как резервная тема.</span></div>
-        <div class="panel wide release"><div class="eyebrow">ПОДТВЕРЖДЁННЫЙ РЕЛИЗ</div><b class="big">Тема 1.0.20</b><span>Staging + production QA. WordPress core, плагины, DNS и юридический текст не менялись.</span><div class="route-strip"><span class="chip"><i></i>About</span><span class="chip"><i></i>Career services</span><span class="chip"><i></i>Neurocoaching</span><span class="chip"><i></i>Contact</span></div></div>
+        <div class="panel"><div class="icon">↔</div><b>Desktop + mobile</b><span>Ключевые ширины проверялись отдельно.</span></div>
+        <div class="panel"><div class="icon">☰</div><b>Навигация и формы</b><span>Меню и состояние формы вошли в smoke-проверку.</span></div>
+        <div class="panel"><div class="icon">⟲</div><b>Сохранён откат</b><span>OceanWP оставлена резервной темой.</span></div>
+        <div class="panel release"><div class="eyebrow">ПОДТВЕРЖДЁННЫЙ РЕЛИЗ</div><b class="big">Тема 1.0.20</b><span>Staging + production QA без правок core, плагинов и DNS.</span></div>
       </div>
     </div>
     <div class="footer"><span class="brand">ИТ-Бизнес-партнер · Суязов Артем</span><span>Результат без выдуманных метрик</span></div>
