@@ -1,0 +1,190 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=1600, initial-scale=1">
+  <title>Digital Belka — Portfolio visuals</title>
+  <style>
+    :root {
+      --ink: #f5f7ff;
+      --muted: #9fb0ca;
+      --navy: #071426;
+      --card: #102947;
+      --line: #2b4f75;
+      --purple: #9559c8;
+      --purple-2: #6b3aa0;
+      --mint: #2bd27f;
+      --cyan: #2cc9e8;
+      --cream: #fbf5f2;
+    }
+    * { box-sizing: border-box; }
+    html, body { width: 1600px; height: 1200px; margin: 0; overflow: hidden; }
+    body { font-family: Inter, "DejaVu Sans", Arial, sans-serif; background: var(--navy); color: var(--ink); }
+    .slide {
+      display: none;
+      position: relative;
+      width: 1600px;
+      height: 1200px;
+      padding: 68px 72px 54px;
+      overflow: hidden;
+      background:
+        radial-gradient(circle at 94% 8%, rgba(149,89,200,.18), transparent 28%),
+        radial-gradient(circle at 4% 92%, rgba(44,201,232,.10), transparent 27%),
+        var(--navy);
+    }
+    .slide.active { display: block; }
+    .slide::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+      background-image: radial-gradient(rgba(82,129,174,.18) 1px, transparent 1px);
+      background-size: 28px 28px;
+      mask-image: linear-gradient(90deg, transparent 48%, #000 100%);
+    }
+    .topline { position: relative; z-index: 2; display: flex; align-items: flex-start; gap: 22px; height: 118px; }
+    .num {
+      display: grid; place-items: center; width: 82px; height: 66px; border-radius: 20px;
+      background: linear-gradient(135deg, var(--purple), var(--purple-2));
+      font-size: 31px; font-weight: 850; letter-spacing: .02em; box-shadow: 0 15px 35px rgba(0,0,0,.28);
+    }
+    h1 { margin: -4px 0 5px; font-size: 52px; line-height: 1; letter-spacing: -.035em; }
+    .subtitle { color: var(--muted); font-size: 25px; line-height: 1.25; }
+    .eyebrow { color: var(--cyan); font-size: 17px; font-weight: 800; letter-spacing: .16em; text-transform: uppercase; }
+    .footer {
+      position: absolute; z-index: 3; left: 72px; right: 72px; bottom: 28px;
+      display: flex; justify-content: space-between; align-items: center;
+      color: #8fa2bd; font-size: 16px; letter-spacing: .02em;
+    }
+    .footer::before { content: ""; position: absolute; left: 0; right: 0; top: -17px; height: 1px; background: #264865; }
+    .brand { color: #c5d2e7; font-weight: 700; }
+    .screen {
+      position: relative; overflow: hidden; border-radius: 24px; background: var(--cream);
+      border: 1px solid #31597e; box-shadow: 0 26px 60px rgba(0,0,0,.36);
+    }
+    .screen img { width: 100%; height: 100%; object-fit: contain; display: block; background: var(--cream); }
+    .screen-label {
+      position: absolute; left: 18px; top: 18px; padding: 10px 14px; border-radius: 12px;
+      background: rgba(7,20,38,.9); color: white; font-size: 15px; font-weight: 750;
+      border: 1px solid rgba(255,255,255,.18); backdrop-filter: blur(7px);
+    }
+    .chip { display: inline-flex; align-items: center; gap: 8px; padding: 10px 14px; border-radius: 999px; border: 1px solid #3a6389; background: #102947; color: #d8e6f8; font-size: 16px; font-weight: 700; }
+    .chip i { width: 8px; height: 8px; border-radius: 50%; background: var(--cyan); }
+    .panel { border: 1px solid #31597e; border-radius: 24px; background: rgba(16,41,71,.94); box-shadow: 0 20px 45px rgba(0,0,0,.22); }
+    .panel h2 { margin: 0; font-size: 26px; line-height: 1.1; }
+    .panel p { margin: 8px 0 0; color: var(--muted); font-size: 18px; line-height: 1.35; }
+    .icon {
+      flex: 0 0 auto; width: 46px; height: 46px; border-radius: 14px; display: grid; place-items: center;
+      background: rgba(149,89,200,.15); border: 1px solid rgba(149,89,200,.55); color: #d6aafa; font-size: 22px; font-weight: 900;
+    }
+    .kpi { display: flex; gap: 14px; align-items: center; padding: 19px; }
+    .accent { color: var(--mint); }
+    .cover-grid { position: relative; z-index: 2; display: grid; grid-template-columns: 1080px 344px; gap: 28px; height: 900px; }
+    .cover-grid .screen { height: 760px; align-self: center; }
+    .cover-side { display: flex; flex-direction: column; gap: 16px; padding-top: 55px; }
+    .cover-title { padding: 26px 24px 24px; border-top: 4px solid var(--purple); }
+    .cover-title h2 { font-size: 34px; line-height: 1.12; }
+    .cover-title p { margin-top: 14px; }
+    .cover-tags { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 18px; }
+    .cover-side .kpi { min-height: 104px; }
+    .scene-grid { position: relative; z-index: 2; display: grid; grid-template-columns: 1110px 314px; gap: 28px; height: 900px; }
+    .scene-main { position: relative; height: 815px; }
+    .scene-main .screen { position: absolute; inset: 0; }
+    .phone {
+      position: absolute; z-index: 4; right: 22px; bottom: 22px; width: 245px; height: 530px;
+      padding: 9px; border-radius: 28px; background: #081526; border: 1px solid #567497;
+      box-shadow: 0 25px 55px rgba(0,0,0,.5);
+    }
+    .phone::before { content: ""; position: absolute; z-index: 2; left: 84px; top: 8px; width: 76px; height: 10px; border-radius: 0 0 9px 9px; background: #081526; }
+    .phone img { width: 100%; height: 100%; object-fit: cover; object-position: top; border-radius: 20px; }
+    .rail { display: flex; flex-direction: column; gap: 16px; padding-top: 20px; }
+    .rail .panel { padding: 22px 20px; }
+    .rail .step { color: var(--cyan); font-size: 13px; font-weight: 850; letter-spacing: .15em; margin-bottom: 10px; }
+    .rail .panel strong { display: block; font-size: 25px; line-height: 1.15; }
+    .rail .panel span { display: block; margin-top: 8px; color: var(--muted); font-size: 17px; line-height: 1.35; }
+    .work-grid { position: relative; z-index: 2; display: grid; grid-template-columns: 1050px 374px; gap: 28px; height: 900px; }
+    .work-grid .screen { height: 815px; }
+    .callouts { display: flex; flex-direction: column; gap: 18px; padding-top: 18px; }
+    .callout { position: relative; padding: 22px 20px 22px 24px; border-left: 4px solid var(--purple); }
+    .callout:nth-child(2) { border-left-color: var(--cyan); }
+    .callout:nth-child(3) { border-left-color: var(--mint); }
+    .callout b { display: block; font-size: 23px; line-height: 1.2; }
+    .callout span { display: block; margin-top: 8px; color: var(--muted); font-size: 17px; line-height: 1.35; }
+    .proof { margin-top: 10px; padding: 22px; background: rgba(43,210,127,.08); border-color: rgba(43,210,127,.5); }
+    .proof strong { color: #8ef0ba; font-size: 21px; }
+    .result-grid { position: relative; z-index: 2; display: grid; grid-template-columns: 540px 884px; gap: 28px; height: 900px; }
+    .result-mobile { height: 850px; width: 455px; justify-self: center; padding: 10px; background: #0b1c31; }
+    .result-mobile img { object-fit: contain; border-radius: 15px; }
+    .result-side { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; align-content: start; padding-top: 24px; }
+    .result-side .panel { padding: 26px; min-height: 180px; }
+    .result-side .wide { grid-column: 1 / -1; min-height: 160px; }
+    .result-side .panel b { display: block; font-size: 27px; line-height: 1.15; }
+    .result-side .panel span { display: block; margin-top: 10px; color: var(--muted); font-size: 18px; line-height: 1.35; }
+    .release { border-color: rgba(43,210,127,.55); background: linear-gradient(135deg, rgba(18,74,59,.92), rgba(11,52,49,.92)); }
+    .release .big { font-size: 34px; color: #92f1bd; }
+    .route-strip { display: flex; gap: 10px; flex-wrap: wrap; margin-top: 18px; }
+  </style>
+</head>
+<body>
+  <section class="slide" data-slide="cover">
+    <div class="topline"><div class="num">01</div><div><div class="eyebrow">Кейс сайта</div><h1>Digital Belka</h1><div class="subtitle">Поддержка и развитие WordPress-сайта</div></div></div>
+    <div class="cover-grid">
+      <div class="screen"><img src="../../../acceptance/visual/about-desktop-1440x900.png" alt="About desktop"><div class="screen-label">digitalbelka.com · About</div></div>
+      <div class="cover-side">
+        <div class="panel cover-title"><h2>Действующий сайт — системная доработка</h2><p>Не редизайн «с нуля», а аккуратная работа с общей темой, контентом и релизами.</p><div class="cover-tags"><span class="chip"><i></i>WordPress</span><span class="chip"><i></i>PHP</span><span class="chip"><i></i>CSS / JS</span></div></div>
+        <div class="panel kpi"><div class="icon">↔</div><div><h2>Адаптивность</h2><p>Mobile и desktop</p></div></div>
+        <div class="panel kpi"><div class="icon">⚙</div><div><h2>Общий UI</h2><p>Единые компоненты темы</p></div></div>
+        <div class="panel kpi"><div class="icon">✓</div><div><h2>Проверка</h2><p>Staging и production QA</p></div></div>
+      </div>
+    </div>
+    <div class="footer"><span class="brand">ИТ-Бизнес-партнер · Суязов Артем</span><span>digitalbelka.com</span></div>
+  </section>
+
+  <section class="slide" data-slide="start">
+    <div class="topline"><div class="num">02</div><div><div class="eyebrow">Исходная система</div><h1>Career services</h1><div class="subtitle">Один из трёх ключевых маршрутов сайта</div></div></div>
+    <div class="scene-grid">
+      <div class="scene-main"><div class="screen"><img src="../../../acceptance/visual/career-desktop-1440x900.png" alt="Career services desktop"><div class="screen-label">Career services · desktop</div></div><div class="phone"><img src="../../../acceptance/visual/career-mobile-390x844.png" alt="Career services mobile"></div></div>
+      <div class="rail">
+        <div class="panel"><div class="step">01 · КОНТЕКСТ</div><strong>Работа внутри существующей темы</strong><span>Сохраняем контент, маршруты и возможность отката.</span></div>
+        <div class="panel"><div class="step">02 · ЗАДАЧА</div><strong>Свести desktop и mobile</strong><span>Геометрия, типографика, карточки, CTA и навигация.</span></div>
+        <div class="panel"><div class="step">03 · ОГРАНИЧЕНИЕ</div><strong>Без правок WordPress core</strong><span>Изменения ограничены пользовательской темой.</span></div>
+      </div>
+    </div>
+    <div class="footer"><span class="brand">ИТ-Бизнес-партнер · Суязов Артем</span><span>Реальные desktop/mobile экраны</span></div>
+  </section>
+
+  <section class="slide" data-slide="work">
+    <div class="topline"><div class="num">03</div><div><div class="eyebrow">Реализация</div><h1>Neurocoaching</h1><div class="subtitle">Правки в общем компонентном слое темы</div></div></div>
+    <div class="work-grid">
+      <div class="screen"><img src="../../../acceptance/visual/neurocoaching-desktop-1440x900.png" alt="Neurocoaching desktop"><div class="screen-label">Neurocoaching · desktop</div></div>
+      <div class="callouts">
+        <div class="panel callout"><b>Общие компоненты</b><span>Header, CTA, FAQ, галереи и повторяемые секции не форкались по страницам.</span></div>
+        <div class="panel callout"><b>Адаптивная геометрия</b><span>Проверены мобильные и desktop-состояния без горизонтального переполнения.</span></div>
+        <div class="panel callout"><b>Локальная типографика</b><span>Публичные шаблоны используют файлы шрифтов темы вместо исторических frontend-зависимостей.</span></div>
+        <div class="panel proof"><strong>Доказательство — сам интерфейс</strong><p>Скриншот не перерисован и не закрыт декоративной плашкой.</p></div>
+      </div>
+    </div>
+    <div class="footer"><span class="brand">ИТ-Бизнес-партнер · Суязов Артем</span><span>WordPress · PHP · HTML/CSS · JavaScript</span></div>
+  </section>
+
+  <section class="slide" data-slide="result">
+    <div class="topline"><div class="num">04</div><div><div class="eyebrow">Проверенный результат</div><h1>Contact — mobile</h1><div class="subtitle">Отдельная страница и реальное состояние формы</div></div></div>
+    <div class="result-grid">
+      <div class="screen result-mobile"><img src="../../qa/full-mobile-20260904/evidence/contact-430.png" alt="Contact mobile"><div class="screen-label">Contact · 430 px</div></div>
+      <div class="result-side">
+        <div class="panel"><div class="icon">↔</div><b>Desktop + mobile</b><span>Ключевые ширины проверялись отдельно, а не по одному макету.</span></div>
+        <div class="panel"><div class="icon">☰</div><b>Навигация и формы</b><span>Меню и состояние формы входят в целевой smoke-сценарий.</span></div>
+        <div class="panel"><div class="icon">▣</div><b>Галереи и FAQ</b><span>Интерактивные элементы проверялись после доставки.</span></div>
+        <div class="panel"><div class="icon">⟲</div><b>Сохранён откат</b><span>OceanWP оставлена установленной как резервная тема.</span></div>
+        <div class="panel wide release"><div class="eyebrow">ПОДТВЕРЖДЁННЫЙ РЕЛИЗ</div><b class="big">Тема 1.0.20</b><span>Staging + production QA. WordPress core, плагины, DNS и юридический текст не менялись.</span><div class="route-strip"><span class="chip"><i></i>About</span><span class="chip"><i></i>Career services</span><span class="chip"><i></i>Neurocoaching</span><span class="chip"><i></i>Contact</span></div></div>
+      </div>
+    </div>
+    <div class="footer"><span class="brand">ИТ-Бизнес-партнер · Суязов Артем</span><span>Результат без выдуманных метрик</span></div>
+  </section>
+
+  <script>
+    const requested = new URLSearchParams(location.search).get('slide') || 'cover';
+    document.querySelector(`[data-slide="${requested}"]`)?.classList.add('active');
+  </script>
+</body>
+</html>
