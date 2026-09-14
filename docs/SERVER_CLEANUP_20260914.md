@@ -1,5 +1,9 @@
 # Server cleanup / recovery — 2026-09-14
 
+## Final code-copy cleanup
+
+Six temporary theme build directories (3,142 files,297,510,949 bytes) were checked against objects reachable from the verified remote production archive tag and removed. Six installation ZIPs for1.0.25–1.0.28 are preserved as private release assets alongside original sources; GitHub SHA256 digests match all local packages. Local ZIP copies are approved for deletion. The clean primary checkout `/opt/projects/neurocoaching.sy3.ru` is approved for removal after this record is pushed and exact remote commit read back; no unique commits or untracked/ignored files were found. Restore by cloning GitHub; production archive tag and cleanup branch are retained remotely. Staging, credentials and ambiguous attachments remain outside this cleanup.
+
 ## Follow-up completed
 
 All nine linked worktrees removed successfully. Owner then approved private source storage: `https://github.com/suyazov/neurocoaching-private-archive`, release `sources-20260914`. Fifteen positively identified original files (940,079,178 bytes) archived with individual SHA-256 manifest. Release was downloaded again, archive SHA matched, tar listing passed and each original hash revalidated before source deletion. Temporary archive copies removed. Latest Neuro PSD and September3 video are now recoverable from that private release, not the historical local paths below. Ambiguous attachments and unlocated About/Career original PSD remain unresolved; do not claim full source coverage. Primary checkout, staging and credentials retained.

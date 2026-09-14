@@ -1,5 +1,7 @@
 # Project Context
 
+- 2026-09-14 continued cleanup: six temporary build trees verified against the remote archive tag and removed; six runtime ZIPs archived privately with matching GitHub SHA256 digests. Clean primary checkout and local ZIPs scheduled for deletion immediately after this record is pushed/read back. Recover code via GitHub clone and `archive/production-1.0.28-20260914`; staging and access store remain untouched. No production deployment or PR integration performed.
+
 - 2026-09-14 archival cleanup: production1.0.28 preserved at remote tag `archive/production-1.0.28-20260914`; nine clean linked worktrees removed. Fifteen original materials preserved in owner-approved private repository `suyazov/neurocoaching-private-archive`, release `sources-20260914`; downloaded archive and source hashes verified before deleting 940,079,178 bytes of originals. Access store, primary checkout and staging retained. About/Career original PSD location and PR186–192 integration remain unresolved. See `docs/SERVER_CLEANUP_20260914.md`.
 
 - 2026-09-11: Production theme 1.0.28 equalizes About mobile intro CTA spacing to 27px above/below (previously 27/16). Verified live at320/375/390/430 and unchanged desktop1440. Full backup completed; evidence: `docs/qa/about-button-gap-20260911.md`.
