@@ -1,5 +1,9 @@
 # Server cleanup / recovery — 2026-09-14
 
+## Follow-up completed
+
+All nine linked worktrees removed successfully. Owner then approved private source storage: `https://github.com/suyazov/neurocoaching-private-archive`, release `sources-20260914`. Fifteen positively identified original files (940,079,178 bytes) archived with individual SHA-256 manifest. Release was downloaded again, archive SHA matched, tar listing passed and each original hash revalidated before source deletion. Temporary archive copies removed. Latest Neuro PSD and September3 video are now recoverable from that private release, not the historical local paths below. Ambiguous attachments and unlocated About/Career original PSD remain unresolved; do not claim full source coverage. Primary checkout, staging and credentials retained.
+
 Owner requested preservation followed by removal of local project copies; credentials must remain.
 
 ## Recovery source

@@ -1,5 +1,7 @@
 # Project Context
 
+- 2026-09-14 archival cleanup: production1.0.28 preserved at remote tag `archive/production-1.0.28-20260914`; nine clean linked worktrees removed. Fifteen original materials preserved in owner-approved private repository `suyazov/neurocoaching-private-archive`, release `sources-20260914`; downloaded archive and source hashes verified before deleting 940,079,178 bytes of originals. Access store, primary checkout and staging retained. About/Career original PSD location and PR186–192 integration remain unresolved. See `docs/SERVER_CLEANUP_20260914.md`.
+
 - 2026-09-11: Production theme 1.0.28 equalizes About mobile intro CTA spacing to 27px above/below (previously 27/16). Verified live at320/375/390/430 and unchanged desktop1440. Full backup completed; evidence: `docs/qa/about-button-gap-20260911.md`.
 
 ## Identity
