@@ -1,5 +1,11 @@
 # Project Context
 
+## 2026-09-14 handoff — production ahead of GitHub main
+
+- The last session reported customer production `digitalbelka.com` on theme `1.0.28` after mobile corrections through 11.09.2026. This has not been rechecked live during the present context transfer. Current GitHub `main` still contains theme `1.0.20`; [PRs #186–#192](https://github.com/suyazov/neurocoaching.sy3.ru/pulls?q=is%3Apr+is%3Aopen) with the later changes are open. Do not treat `main` as a deployable copy of the current customer theme until those exact diffs are reconciled and reviewed.
+- The former staging site `neurocoaching.sy3.ru` was removed on 14.09.2026; the session's read-back returned HTTP 410 there and HTTP 200 on `digitalbelka.com`. Staging files, database and PHP pool were removed. Any new staging environment needs a separate setup; earlier staging instructions below are historical.
+- Source materials needed for restoration were saved as a checked private [release `sources-20260914`](https://github.com/suyazov/neurocoaching-private-archive/releases/tag/sources-20260914). Do not store archives, access keys or customer data in this repository. Before any new maintenance, compare current production with the accepted code and preserve a rollback path.
+
 <!-- bridge:project-context-current task=CODEX-TASK-BRIDGE-MINIMAL-I2492-86D047D70850 -->
 - Result: После отклонения генеративной визуальной версии пакет Digital Belka — Neurocoaching пересобран из четырёх разных реальных экранов; продуктовый UI сохранён без перерисовки, инфографика добавлена отдельным детерминированным слоем.
 - Current state: Отклонённая версия снята с публичного доступа в AFFiNE (`Share=false`); исправленная версия подготовлена для замены в существующем кейсе `mJLszQpIRD` без создания дубликата.
@@ -9,11 +15,11 @@
 
 - Project: Digital Belka — Neurocoaching
 - Production domain: digitalbelka.com
-- Staging domain: neurocoaching.sy3.ru
+- Former staging domain: neurocoaching.sy3.ru (removed 14.09.2026)
 - Type: website
 - Stack: WordPress, PHP, HTML/CSS, JavaScript
-- Active capability profile: direct WordPress theme maintenance, staging, and owner-authorized production delivery
-- Environment identity: `neurocoaching.sy3.ru` staging plus `digitalbelka.com` production
+- Active capability profile: direct WordPress theme maintenance and exactly owner-authorized production delivery; staging is absent
+- Environment identity: `digitalbelka.com` customer production; former `neurocoaching.sy3.ru` staging returns 410 as of 14.09.2026
 - Production: active
 
 ## State
